@@ -22,8 +22,8 @@ repository               : "academicpages/kristinap09.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/IMG_0527.JPG"
-  name             : "Kristina Sinaga"
+  avatar           : "kristina.JPG"
+  name             : "Kristina P. Sinaga"
   #pronouns         : # example: "she/her"  
   bio              : "PhD in Applied Mathematics"
   #location         : "Earth"
