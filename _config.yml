@@ -11,18 +11,18 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "My personal homepage"
 title_separator          : "-"
-name                     : Kristina "Your Name"
+name                     : Kristina P. Sinaga
 description              : &description "personal description"
 url                      : https://kristinap09.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 #baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/kristinap09.github.io"
+repository               : "kristinap09/kristinap09.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/kristinaps.jpg"
+  avatar           : "kristinaps.jpg"
   name             : "Kristina P. Sinaga"
   #pronouns         : # example: "she/her"  
   bio              : "Postdoc Researcher"
@@ -34,46 +34,15 @@ author:
   # Academic websites
   arxiv            : "http://arxiv.org/a/sinaga_k_1 "
   googlescholar    : "https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en"
-  impactstory      : # URL
   orcid            : "https://orcid.org/0009-0000-6184-829Xl"
-  semantic         : # URL
-  #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : "https://www.researchgate.net/profile/Kristina-Sinaga-3"
   scopus           : "https://www.scopus.com/authid/detail.uri?authorId=57202362864"
 
   # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
-  github           : "kristinap09"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  github           : "kristinap09"    
 
   # Social media
-  #bluesky          : "bsky.app" # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
   linkedin         : # Username
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
