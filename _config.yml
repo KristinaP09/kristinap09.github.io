@@ -17,19 +17,8 @@ avatar:
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
-  email: kristinasinaga57@yahoo.co.id
-  facebook:
-  flickr:
-  github: kpnaga08
-  instagram:
-  linkedin: kristina-p-sinaga-007925245
-  pinterest:
-  rss: # just type anything here for a working RSS icon
+  github: KristinaP09
   twitter: KristinaPS7
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
@@ -41,7 +30,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: http://kpnaga08.github.io
+url: http://kristinap09.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
