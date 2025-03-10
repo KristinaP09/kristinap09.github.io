@@ -13,7 +13,7 @@ permalink: /publications/
 
 
 I have reviewed for the following journals/conferences:
-
+* [Qeios](https://www.qeios.com/)
 * [IEEE Access](https://ieeeaccess.ieee.org)
 * [IEEE transactions on knowledge and data engineering](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=69)
 * [Information fusion](https://www.sciencedirect.com/journal/information-fusion)
