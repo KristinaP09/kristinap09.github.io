@@ -22,14 +22,14 @@ repository               : "academicpages/kristinap09.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/IMG_0527.JPG"
+  avatar           : "IMG_0527.JPG"
   name             : "Kristina Sinaga"
-  pronouns         : # example: "she/her"  
+  #pronouns         : # example: "she/her"  
   bio              : "PhD in Applied Mathematics"
-  location         : "Earth"
+  #location         : "Earth"
   employer         : "ISTI-CNR"
   uri              : # URL
-  email            : "none@example.org" 
+  #email            : "none@example.org" 
 
   # Academic websites
   arxiv            : "http://arxiv.org/a/sinaga_k_1 "
