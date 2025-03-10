@@ -11,10 +11,10 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "My personal homepage"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : Kristina "Your Name"
 description              : &description "personal description"
 url                      : https://kristinap09.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+#baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/kristinap09.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -294,7 +294,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: CET/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
