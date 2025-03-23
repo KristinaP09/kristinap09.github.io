@@ -30,7 +30,7 @@ permalink: /publications/
      
 ---
 
-## Peer-review activity
+## <span style="color: #FF33D1;">Peer-review activity</span>
 ---
 
 
