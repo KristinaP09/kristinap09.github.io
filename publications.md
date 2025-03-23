@@ -7,8 +7,10 @@ permalink: /publications/
 
 <i class="ai ai-google-scholar ai-2x"></i> Full list available on [Google Scholar](https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao).
 
+---
 
-## Selected Publications
+## <span style="color: #FF33D1;">Selected Publications</span>
+---
 
 1. **Federated Multi-View K-Means Clustering**, **[IEEE TPAMI (IF: 20.8), 2025](https://ieeexplore.ieee.org/abstract/document/10810504)**.
    
