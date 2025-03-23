@@ -12,9 +12,9 @@ permalink: /news/
 
 **<span style="color: red;">Notice:</span>** 
 
-1. My <code style="color : red">old personal webpages</code>, <code style="color : Orangered">hosted via two forgotten and inaccessible GitHub accounts</code>, <code style="color : magenta">are still viewable</code> [here](https://patternkps.github.io) and [here](https://kpnaga08.github.io/about/). <code style="color : Greenyellow">For my latest work and updates, please continue browsing this new site</code>.
+1. My <code style="color : red">old personal webpages</code>, hosted via two forgotten and inaccessible GitHub accounts, <code style="color : magenta">are still viewable</code> [here](https://patternkps.github.io) and [here](https://kpnaga08.github.io/about/). For my latest work and updates, please continue browsing this new site.
 
-2. <code style="color : red">My old Yahoo account (kristinasinaga57@yahoo.co.id)</code> and <code style="color : Orangered" Gmail account (krist.p.sinaga@gmail.com)</code> are <code style="color : red">officially retired</code> -- I forgot my passwords, and apparently, I'm too suspicious to prove I'm me 😉.</p>
+2. My old Yahoo account (<code style="color : red">kristinasinaga57@yahoo.co.id</code>) and Gmail account (<code style="color : Orangered">krist.p.sinaga@gmail.com</code>) are <code style="color : Green">officially retired</code> -- I forgot my passwords, and apparently, I'm too suspicious to prove I'm me 😉.</p>
 
 ---
 
