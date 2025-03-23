@@ -24,6 +24,8 @@ permalink: /publications/
 
    - Cited over **2,000 times**.
    - Introduced an **efficient k-means variant** with improved **convergence and clustering accuracy**.
+
+     
 ---
 
 ## Peer-review activity
