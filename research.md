@@ -9,6 +9,6 @@ permalink: /research/
 
 - **Federated & Distributed Learning**: Privacy-preserving AI models for decentralized and collaborative learning.
 
-- **Edfe AI & Cyber-Physical Systems**: Optimizing AI models for real-time decision-making in constrained environments.
+- **Edge AI & Cyber-Physical Systems**: Optimizing AI models for real-time decision-making in constrained environments.
 
 - **Trustworthy AI**: Ensuring robustness, explainability, and security in AI-driven systems.
