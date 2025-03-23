@@ -10,7 +10,7 @@ permalink: /news/
 ## <span style="color: #2FC10B;">[Update]</span>
 ---
 
-**<span style="color: red;">Notice:</span>** My old personal webpage, hosted via two forgotten and inaccessible GitHub accounts, are still viewable [here](https://patternkps.github.io) and [here](https://kpnaga08.github.io/about/). For my latest work and updates, please continue browsing this new site. 
+**<span style="color: red;">Notice:</span>** My old personal webpages, hosted via two forgotten and inaccessible GitHub accounts, are still viewable [here](https://patternkps.github.io) and [here](https://kpnaga08.github.io/about/). For my latest work and updates, please continue browsing this new site. 
 
 ---
 
