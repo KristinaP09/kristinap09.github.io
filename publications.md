@@ -5,8 +5,26 @@ permalink: /publications/
 
 ---
 
-<i class="ai ai-google-scholar ai-2x"></i> See [Google Scholar](https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao) for a list of my publications and citations.
+<i class="ai ai-google-scholar ai-2x"></i> Full list available on [Google Scholar](https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao).
 
+
+## Selected Publications
+
+1. **Federated Multi-View K-Means Clustering**, **[IEEE TPAMI (IF: 20.8), 2025](https://ieeexplore.ieee.org/abstract/document/10810504)**.
+   
+   - Introduced a **federated clustering approach** for multi-view learning in decentralized AI environments.
+   - Validated across **large-scale datasets** with theoretical convergence guarantees.
+     
+2. **Collaborative Feature-Weighted Multi-View Fuzzy C-Means Clustering**, **[Pattern Recognition (IF: 7.5), 2021](https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X)**
+
+   - Developed a **feature-weighted fuzzy clustering method** for heterogeneous data.
+   - Demonstrated superior performance in **unsupervised learning and AI-driven decision-making**.
+  
+4. **Unsupervised K-Means Clustering Algorithm**, **[IEEE Access (IF: 3.4), 2020](https://ieeexplore.ieee.org/abstract/document/9072123)**
+
+   - Cited over **2,000 times**.
+   - Introduced an **efficient k-means variant** with improved **convergence and clustering accuracy**.
+---
 
 ## Peer-review activity
 ---
