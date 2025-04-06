@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<div class="posts">
+<div class="Archived Nonsense">
   {% for post in site.posts %}
-    <article class="post">    
+    <article class="Archived Nonsense">    
       
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
