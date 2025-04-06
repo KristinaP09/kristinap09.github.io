@@ -78,7 +78,7 @@ All while pretending it's normal.
 
 For future reference—because apparently it must be said:
 
-![Drag your chair sticker](/images/)
+![Drag your chair sticker](/images/5EC6544C-A619-47DB-B06E-D12AE1E24263.png)
 
 > **“Drag your chair. But don’t drag my family into it.”**
 
