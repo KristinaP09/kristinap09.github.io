@@ -8,6 +8,7 @@ tags: [rental-irony, sarcasm, clown-network, housing-satire]
 
 ![Clown Network Visualized](/images/215D09E3-02A9-42B9-BAF4-16E92E664190.png)
 
+
 ## Chairs Drag Freely, Adults Need Permission: The Paradox of Renting in a Proudly 'Progressive' Place
 
 You would think that in a country waving flags of freedom, modernity, and “youth empowerment,” a college student could rent a room without parental endorsement.
@@ -72,6 +73,23 @@ This isn’t satire. This is the system.
 All while pretending it's normal.
 
 ---
+
+### And One More Thing...
+
+For future reference—because apparently it must be said:
+
+![Drag your chair sticker](/images/)
+
+> **“Drag your chair. But don’t drag my family into it.”**
+
+Yes, that’s a real sticker now.  
+Because one kind of noise is annoying—but dragging unrelated people into your bad behavior?  
+That’s where the line was drawn, blogged, and stickered for your convenience.
+
+Let this serve as a visual warning to all unauthorized clowns:  
+**Your drama ends where my boundaries begin.**
+
+
 
 ### Closing Note
 
