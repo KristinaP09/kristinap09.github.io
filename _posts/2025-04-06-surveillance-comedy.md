@@ -6,7 +6,7 @@ author: Anonymous Observer
 tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
 ---
 
-![Clown Network Visualized](images/ABFD11DA-2910-45BA-89F2-4A0908BB0BC0.png)
+![Clown Network Visualized](/images/ABFD11DA-2910-45BA-89F2-4A0908BB0BC0.png)
 
 ## Living in the Surveillance Comedy: A Real-Life Academic Parody
 
