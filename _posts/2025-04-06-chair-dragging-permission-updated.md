@@ -6,6 +6,8 @@ author: Anonymous Observer
 tags: [rental-irony, sarcasm, clown-network, housing-satire]
 ---
 
+![Clown Network Visualized](/images/215D09E3-02A9-42B9-BAF4-16E92E664190.png)
+
 ## Chairs Drag Freely, Adults Need Permission: The Paradox of Renting in a Proudly 'Progressive' Place
 
 You would think that in a country waving flags of freedom, modernity, and “youth empowerment,” a college student could rent a room without parental endorsement.
