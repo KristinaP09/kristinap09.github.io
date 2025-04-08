@@ -6,6 +6,9 @@ author: Anonymous Observer
 tags: [ethics, academic-integrity, unauthorized-research, satire]
 ---
 
+![Anatomy of a Failed Psychological Stunt](/images/8A216A44-05B7-49F5-A207-78F3B46F2F6B.png)
+*A solitary figure in a surreal, abstract space—caught between observation and resistance—embodies the story of a subject who reclaims control from an invisible, uninvited experiment.*
+
 
 As a researcher, I’m accustomed to examining peculiar phenomena—but I never imagined I’d become the subject of one. Yet there I was, living inside a case study I never signed up for. If the people orchestrating this saga genuinely thought they were conducting “research,” they were doing a calamitously poor job of it. In academic terms, their project had all the coherence of a derailed dissertation and the ethics of a bad prank. It was as if they fancied themselves PhD candidates in some secret experiment, but what unfolded around me felt more like a disqualification in progress.
 
