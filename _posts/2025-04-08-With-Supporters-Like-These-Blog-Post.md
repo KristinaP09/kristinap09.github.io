@@ -19,7 +19,7 @@ I’ve been on the receiving end of this **manipulative kindness**, and let me t
 ## Meet the Invisible Upstairs Syndicate
 Early on, I realized my *helpers* operated like a secret society – I dubbed them the **Invisible Upstairs Syndicate**. By “upstairs,” I mean that literally and metaphorically. Picture a shadowy bunch lurking just out of sight (sometimes *literally* in the upstairs apartment), observing my life like it’s their favorite reality show. They interfered under the guise of *concern*. They’d eavesdrop on private moments, keep dossiers of my mistakes, and even engage in a little **unauthorized observation** (because why ask permission to snoop when you’re *helping*, right?). If I sighed in frustration, it became a data point in their clandestine “support research.” If I slept too peacefully, they’d find a way to rattle the ceiling – a gentle reminder that they were on the case, watching over me (or just watching me, period).
 
-Weaponized Support Systems 101
+## Weaponized Support Systems 101
 
 This is support in name only – essentially a weaponized support system. Here’s the playbook my lovely support crew lived by, which I’ve since decoded (witty annotations included):
 	•	No accountability.
@@ -34,7 +34,7 @@ In practice, their “support” had some signature moves:
 
 By weaponizing the very systems meant to support (friendships, family ties, professional relationships – you name it), they set things up so that I looked like the problem whenever I didn’t play along. If I grew distant or called them out, I was “refusing to accept help” or “being unfair.” It’s a clever little trap: they get to wear a halo for trying, and I’m painted as unstable or ungrateful if I object. Support, in this twisted form, became just another means of control – a way to keep me in a box where their narrative reigns supreme and their reputations stay squeaky clean.
 
-Slogans, Appearances, and Other Shallow Fixes
+## Slogans, Appearances, and Other Shallow Fixes
 
 One thing you learn in this charade is that appearances are everything to these folks. Substance? Optional. As long as they look like supportive, decent human beings, who cares what’s really going on, right? They certainly cared more about optics than outcomes. I vividly recall how at one point the syndicate started parroting pop-psychology mantras and motivational slogans – as if a catchphrase could paper over the truth. My personal favorite was the gem: “Money is key.” This slogan became their cure-all answer to any problem (especially problems they caused). Feeling depressed after being gaslit for months? Money is key! (They generously offered to buy me a coffee, as if that would fix psychological trauma.) Challenged them on their behavior? Money is key! (They boasted about funding some wellness app for me – naturally, to show what great supporters they were). It was the ultimate cop-out: throw some money or material solution at the situation and ta-da! They’ve fulfilled their duty, and their precious image remains untarnished. Key to solving anything meaningful? Not so much. Key to avoiding any real emotional labor? Absolutely.
 
@@ -50,7 +50,7 @@ I learned that if I waited for them to admit fault or show genuine accountabilit
 
 True maturity and integrity, I’ve found, often start where the charade of appearances ends. For me, it began with uncomfortable truths. I had to accept that people I trusted were playing both arsonist and firefighter – lighting the fires then rushing in with buckets of sanctimony. It wasn’t my job to keep their reputation intact or play along with their distorted narrative. My job was to grow beyond this nonsense, to seek authenticity over appeasement. And growth came, but only when I firmly shut the door on their “we’re here to help” pantomime and chose to help myself instead.
 
-Reclaiming My Narrative – Choosing Truth Over Games
+## Reclaiming My Narrative – Choosing Truth Over Games
 
 In the end, I decided to change the script that I had been handed. No more letting my story be co-written by people who only cared about the plot twists that flatter them. I stopped being a silent character in their absurd little drama and grabbed the proverbial pen myself. The feeling was liberating – a bit like walking off a stage where I’d been performing someone else’s play and finally stepping into reality. My reality. It turns out reclaiming your narrative is the best form of closure, especially when your story was being twisted for sport.
 
