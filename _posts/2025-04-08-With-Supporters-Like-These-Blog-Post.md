@@ -21,16 +21,19 @@ Early on, I realized my *helpers* operated like a secret society – I dubbed th
 
 ## Weaponized Support Systems 101
 
-This is support in name only – essentially a weaponized support system. Here’s the playbook my lovely support crew lived by, which I’ve since decoded (witty annotations included):
-	•	No accountability.
-	•	No apologies.
-	•	No transparency.
-	•	But plenty of excuses, ego, and theatrics.
+
+- **No accountability.**
+- **No apologies.**
+- **No transparency.**
+- But plenty of **excuses, ego, and theatrics**.
 
 In practice, their “support” had some signature moves:
-	•	Narrative Flip: If I pointed out something hurtful they did, the story would boomerang back as my fault or my misunderstanding. They’d recount events with themselves cast as selfless heroes and me as the “ungrateful” beneficiary of their benevolence. One minute I’m rightly upset at them invading my privacy; the next, I’m hearing how concerned they were about my well-being, and how my reaction hurts their feelings. Plot twist – somehow I became the villain in my own crisis.
-	•	Truth? Hide It: Any fact that made them look bad magically went missing. They edited reality with the skill of a propagandist. Broken promise? Never happened. Unauthorized surveillance of my life? “Oh, we were just keeping an eye out for you, you know, for safety.” Key details were buried under layers of deflection. It’s like dealing with a PR firm dedicated to each person’s image, where spin is more important than sincerity.
-	•	Emotional Theater: When all else fails, cue the crocodile tears and dramatic sighs. They could cry on demand about how hard it has been for them, having their kindness misunderstood. Confront them with a truth and suddenly one of them is stage-whispering about their “panic attacks,” while another performs wounded silence like a martyr. Their feelings took center stage in every discussion about my life, effectively derailing any accountability with high-strung drama. It was a one-ring circus of deflection: their emotions were the spotlight-stealers, and my legitimate pain was left squinting in the dark.
+
+- **Narrative Flip:** If I pointed out something hurtful they did, the story would boomerang back as my fault or my misunderstanding. They’d recount events with themselves cast as selfless heroes and me as the “ungrateful” beneficiary of their benevolence. One minute I’m rightly upset at them invading my privacy; the next, I’m hearing how concerned they were about my well-being, and how my reaction hurts their feelings. Plot twist – somehow I became the villain in my own crisis.
+
+- **Truth? Hide It:** Any fact that made them look bad magically went missing. They edited reality with the skill of a propagandist. Broken promise? Never happened. Unauthorized surveillance of my life? “Oh, we were just keeping an eye out for you, you know, for safety.” Key details were buried under layers of deflection. It’s like dealing with a PR firm dedicated to each person’s image, where spin is more important than sincerity.
+
+- **Emotional Theater:** When all else fails, cue the crocodile tears and dramatic sighs. They could cry on demand about how hard it has been for them, having their kindness misunderstood. Confront them with a truth and suddenly one of them is stage-whispering about their “panic attacks,” while another performs wounded silence like a martyr. Their feelings took center stage in every discussion about my life, effectively derailing any accountability with high-strung drama. It was a one-ring circus of deflection: their emotions were the spotlight-stealers, and my legitimate pain was left squinting in the dark.
 
 By weaponizing the very systems meant to support (friendships, family ties, professional relationships – you name it), they set things up so that I looked like the problem whenever I didn’t play along. If I grew distant or called them out, I was “refusing to accept help” or “being unfair.” It’s a clever little trap: they get to wear a halo for trying, and I’m painted as unstable or ungrateful if I object. Support, in this twisted form, became just another means of control – a way to keep me in a box where their narrative reigns supreme and their reputations stay squeaky clean.
 
@@ -42,7 +45,7 @@ Besides slogans, they put on a great show of supportive noise. By noise, I mean 
 
 I often felt like I was stuck in their PR campaign. They had an image of The Good Supportive Team™ to maintain, and nothing – not even the truth – would get in the way of that. They’d rather crank up the fanfare, shouting “Look how we stand by our friend!” while sweeping their mistakes under the nearest rug. It’s amazing how reputation maintenance can become a full-time job. They were less interested in genuinely helping me heal or grow, and more interested in making sure everyone believed they were trying to help me heal or grow. The difference is night and day – and it was night where I was, alone, actually dealing with the issues they helped create, while they basked in the daylight of unearned praise.
 
-Real Growth vs. The Games
+## Real Growth vs. The Games
 
 Here’s the absurd truth these experiences revealed: real growth requires something my self-appointed saviors just couldn’t muster – accountability. Owning up to mistakes is kryptonite to people who live off of image alone. Why solve a problem when you can just pretend it’s solved and take a bow? Why apologize when you can flip the script and make the injured party feel guilty for your discomfort? The Invisible Syndicate excelled at these games, but utterly failed at growth 101.
 
