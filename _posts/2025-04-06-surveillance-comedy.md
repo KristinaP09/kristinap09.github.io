@@ -6,7 +6,8 @@ author: Anonymous Observer
 tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
 ---
 
-![Clown Network Visualized](/images/ABFD11DA-2910-45BA-89F2-4A0908BB0BC0.png)
+![Clown Network Visualized](/images/E3475E20-534C-4458-B7E7-B45E83BF18D1.png)
+*A solitary writer documents life under surveillance, transforming noise and manipulation from above into quiet resistance and personal narrative power.*
 
 I used to joke that if my life were a TV show, it would be a sitcom with bad lighting and no moral compass. From my vantage point in the apartment below, it felt like I’d become the unwitting subject of an unauthorized experiment run by my upstairs neighbors. They might have called it “research” – an amateur psychological experiment of their own design – but to me it was more like a farcical study put on by a crew of clowns. Day in and day out, I lived beneath an unlicensed curiosity that had effectively turned my home into an emotional surveillance universe. Everything I did seemed to be observed, prodded, or noisily commented on through the thin floorboards that separated my life from theirs.
 
