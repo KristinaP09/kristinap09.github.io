@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "The Echo Chamber Upstairs: A Reflective Survival Guide to Invisible Surveillance and Circus Logic”
-date: 2025-04-10
+title: "The Echo Chamber Upstairs: A Reflective Survival Guide to Invisible Surveillance and Circus Logic"
+date: 2025-04-19
 author: Anonymous Observer
-tags: [rental-irony, sarcasm, clown-network, housing-satire]
+tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
 ---
 
 ![Clown standard time visualization](/images/BFC674A6-4287-4D28-A51C-5CF6AE116853.png)
