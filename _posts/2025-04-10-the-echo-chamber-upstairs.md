@@ -6,6 +6,10 @@ author: Anonymous Observer
 tags: [rental-irony, sarcasm, clown-network, housing-satire]
 ---
 
+![Clown standard time visualization](/images/BFC674A6-4287-4D28-A51C-5CF6AE116853.png)
+* A chaotic clown control room mirrors the absurdity of invisible surveillance—an amateur syndicate orchestrating disruption with delusion, captured in a satirical portrait of misplaced power and circus logic.*
+
+
 Some people live upstairs. Others *perform*.
 
 You begin to notice the difference when the footsteps aren’t just footsteps, when the dragging of chairs feels like punctuation in someone else's story about you—one you never agreed to be in. It starts as noise. Then it becomes *pattern*. Then it becomes *strategy*—albeit the most dysfunctional one imaginable. A kind of psychological flatulence, disguised as subtle surveillance, carried out by a group that believes it’s orchestrating your downfall by moving IKEA furniture around on cue.
