@@ -35,6 +35,7 @@ permalink: /publications/
 
 
 I have reviewed for the following journals/conferences:
+* [MDPI Electronics](https://www.mdpi.com/journal/electronics)
 * [MDPI Mathematics](https://www.mdpi.com/journal/mathematics)
 * [Qeios](https://www.qeios.com/)
 * [IEEE Access](https://ieeeaccess.ieee.org)
