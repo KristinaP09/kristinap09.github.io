@@ -66,7 +66,7 @@ One thing you learn in this charade is that <strong>appearances are everything</
 </p>
 
 <p align="justify">
-Besides slogans, they put on a great show of <strong>supportive noise</strong>. By noise, I mean literal and figurative. Literal, like I mentioned: the not-so-inconspicuous <em>noises in the night</em> that they’d later deny making, all “for my sake.” And figurative, as in a whole lot of loud posturing. They’d speak in <em>grand terms</em> about how “we’re all here for you” to anyone who’d listen, making sure the world knew just how *devoted* they were. They turned up the volume on public declarations of support – social media posts oozing with concern, group chats buzzing with performative check-ins – but when it came to quiet, private honesty, they fell silent. <strong>All optics, zero integrity</strong>. In their minds, if they *sounded* like the good guys, that was as good as actually being good. Noise over nuance, appearance over actuality.
+Besides slogans, they put on a great show of <strong>supportive noise</strong>. By noise, I mean literal and figurative. Literal, like I mentioned: the not-so-inconspicuous <em>noises in the night</em> that they’d later deny making, all “for my sake.” And figurative, as in a whole lot of loud posturing. They’d speak in <em>grand terms</em> about how “we’re all here for you” to anyone who’d listen, making sure the world knew just how <em>devoted</em> they were. They turned up the volume on public declarations of support – social media posts oozing with concern, group chats buzzing with performative check-ins – but when it came to quiet, private honesty, they fell silent. <strong>All optics, zero integrity</strong>. In their minds, if they <em>sounded</em> like the good guys, that was as good as actually being good. Noise over nuance, appearance over actuality.
 </p>
 
 <p align="justify">
@@ -109,5 +109,5 @@ As for my invisible upstairs do-gooders, well, I wish them the best – especial
 </p>
 
 <p align="justify">
-In choosing truth over their games, I didn’t just escape the toxicity – I reclaimed my voice. And this post, my friends, is me **hitting publish** on a chapter of truth they never wanted read. Here’s to moving forward untangled, unbeaten, and unapologetically real.
+In choosing truth over their games, I didn’t just escape the toxicity – I reclaimed my voice. And this post, my friends, is me <strong>hitting publish</strong> on a chapter of truth they never wanted read. Here’s to moving forward untangled, unbeaten, and unapologetically real.
 </p>
