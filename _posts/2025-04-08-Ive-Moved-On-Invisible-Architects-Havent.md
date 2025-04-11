@@ -50,5 +50,5 @@ I’ll admit, I do feel something almost like pity when I think of them now. How
 </p>
 
 <p align="justify">
-I’ve stepped out of the shadows and into my own light. As for them, they’re left on that stage, speaking lines to ghosts. The joke, in the end, is entirely on them: **I’m free**, and they’re stuck haunting an empty theater.
+I’ve stepped out of the shadows and into my own light. As for them, they’re left on that stage, speaking lines to ghosts. The joke, in the end, is entirely on them: <strong>I’m free</strong>, and they’re stuck haunting an empty theater.
 </p>
