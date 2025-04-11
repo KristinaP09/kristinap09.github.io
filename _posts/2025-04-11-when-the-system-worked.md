@@ -25,11 +25,11 @@ It started with a form.
 No big announcement. No sense of urgency. Just a standard message from the tax department in the country I’d been living in peacefully for four years. They asked me to fill out a few documents. I complied without much thought. I wasn’t chasing refunds, questioning motives, or expecting anything in return.
 </p>
 
-<p align="justify">
-Then they said, plainly:  <br>
+
+Then they said, plainly: <br>
 > “This amount will be transferred to your account this month.”
 
-</p>
+
 <p align="justify">
 I didn’t question it. I wasn’t even curious. It was one of those small, quiet things that happen in the background of life when you're part of a well-functioning system. I assumed it was some bureaucratic adjustment, a routine payment, a checkbox ticked. I accepted it, moved on, and didn’t give it a second thought.
 </p>
@@ -41,8 +41,9 @@ Of course—where else do modern epiphanies begin?
 
 <p align="justify">
 It explained the concept of a <strong>tax refund</strong>—how if you overpay taxes, the government returns the extra at the end of the fiscal year, assuming you file your paperwork correctly. I blinked. Replayed it.  <br>
-> Wait… is that what happened to me?
 </p>
+
+> Wait… is that what happened to me?
 
 <p align="justify">
 Suddenly the dots connected.  <br>
@@ -66,12 +67,12 @@ But it didn’t last long.
 You see, when your mind is at peace, there are always forces—intruders, manipulators, whispering opportunists—ready to poke holes in it.  <br>
 They don’t confront directly. That would be too easy to spot.  <br>
 Instead, they prefer the slow drip of doubt:  <br>
-> “Are you sure you were supposed to get that money?”  
-  <br>
-> “What if it was an error?”  
-  <br>
-> “Maybe you did something wrong without realizing it…”
 </p>
+
+> “Are you sure you were supposed to get that money?”  
+> “What if it was an error?”  
+> “Maybe you did something wrong without realizing it…”
+
 
 <p align="justify">
 And just like that, what was a clear and functional process became coated in noise—manufactured noise. Not from the system, but from those who couldn’t stand the fact that **I didn’t question it**. That I trusted it. That it worked.
