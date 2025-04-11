@@ -8,7 +8,7 @@ tags: [tax-refund-surprise, clowns-vs-clarity, bureaucracy-but-make-it-work, acc
 
 ![Tax refund visualization](/images/3987BB44-D5FF-4197-844A-3ADAA9E4651F.png)
 <p align="justify">
-A calm, composed figure stands in quiet defiance, holding a tax refund notice—symbol of clarity and fairness—while chaotic clown-like figures loom in the background, representing manipulation, doubt, and noise. The contrast reflects the heart of the blog: how peace, trust, and a functioning system triumphed over confusion and absurdity.
+<em>A calm, composed figure stands in quiet defiance, holding a tax refund notice—symbol of clarity and fairness—while chaotic clown-like figures loom in the background, representing manipulation, doubt, and noise. The contrast reflects the heart of the blog: how peace, trust, and a functioning system triumphed over confusion and absurdity.</em>
 </p> <br>
 
 > “I executed a routine administrative task, received a precise fiscal correction, and—without lifting my voice—shattered the fragile delusions of an entire clown-operated misinformation machine. All before the first sip of coffee cooled.”
@@ -75,7 +75,7 @@ Instead, they prefer the slow drip of doubt:  <br>
 
 
 <p align="justify">
-And just like that, what was a clear and functional process became coated in noise—manufactured noise. Not from the system, but from those who couldn’t stand the fact that **I didn’t question it**. That I trusted it. That it worked.
+And just like that, what was a clear and functional process became coated in noise—manufactured noise. Not from the system, but from those who couldn’t stand the fact that <strong>I didn’t question it</strong>. That I trusted it. That it worked.
 </p>
 
 <p align="justify">
