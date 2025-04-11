@@ -21,14 +21,22 @@ It began with a dispute over utility charges. Not a dramatic one—there were no
 </p>
 
 <p align="justify">
-The response I received was anything but. <br>
+The response I received was anything but. 
+</p>
 
+<p align="justify">
 Rather than a correction, I was met with a pivot—an unexpected message alleging that cigarette butts had been found near the building and that perhaps, by virtue of the fact that I “often open my window,” I could be responsible. <br>
+</p>
 
+<p align="justify">
 It was a curious leap of logic. There was no proof offered, no explanation of how the deduction had been made—only an implicit accusation, and a tone that suggested the matter was already settled.<br>
+</p>
 
+<p align="justify">
 The attempt, intentional or not, was to redirect the narrative. To shift attention from contractual violations to behavioral suspicion. To make my window—not their miscalculation—the story. <br>
+</p>
 
+<p align="justify">
 But what they failed to understand is that my open window isn’t a confession. It’s a consequence.
 </p>
 
