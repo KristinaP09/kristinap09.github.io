@@ -8,7 +8,9 @@ tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
 
 ![Reclaiming truth amid situation visualization](/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png)
 
-
+<br>
+<br>
+<br>
 
 
 ## Introduction – The Help That Hurts
@@ -41,11 +43,11 @@ Early on, I realized my <em>helpers</em> operated like a secret society – I du
 
 <p align="justify">
   
-In practice, their “support” had some signature moves: <br>
+In practice, their “support” had some signature moves: <br> <br>
 
-- <strong> Narrative Flip:</strong> If I pointed out something hurtful they did, the story would boomerang back as my fault or my misunderstanding. They’d recount events with themselves cast as selfless heroes and me as the “ungrateful” beneficiary of their benevolence. One minute I’m rightly upset at them invading my privacy; the next, I’m hearing how concerned they were about my well-being, and how my reaction hurts their feelings. Plot twist – somehow I became the villain in my own crisis. <br>
+- <strong> Narrative Flip:</strong> If I pointed out something hurtful they did, the story would boomerang back as my fault or my misunderstanding. They’d recount events with themselves cast as selfless heroes and me as the “ungrateful” beneficiary of their benevolence. One minute I’m rightly upset at them invading my privacy; the next, I’m hearing how concerned they were about my well-being, and how my reaction hurts their feelings. Plot twist – somehow I became the villain in my own crisis. <br> <br>
 
-- <strong>Truth? Hide It:</strong> Any fact that made them look bad magically went missing. They edited reality with the skill of a propagandist. Broken promise? Never happened. Unauthorized surveillance of my life? “Oh, we were just keeping an eye out for you, you know, for safety.” Key details were buried under layers of deflection. It’s like dealing with a PR firm dedicated to each person’s image, where spin is more important than sincerity.<br>
+- <strong>Truth? Hide It:</strong> Any fact that made them look bad magically went missing. They edited reality with the skill of a propagandist. Broken promise? Never happened. Unauthorized surveillance of my life? “Oh, we were just keeping an eye out for you, you know, for safety.” Key details were buried under layers of deflection. It’s like dealing with a PR firm dedicated to each person’s image, where spin is more important than sincerity.<br> <br>
 
 - <strong>Emotional Theater:</strong> When all else fails, cue the <strong>crocodile tears and dramatic sighs</strong>. They could cry on demand about how hard it has been for <strong>them</strong>, having their <em>kindness misunderstood</em>. Confront them with a truth and suddenly one of them is stage-whispering about their “panic attacks,” while another performs wounded silence like a martyr. Their feelings took center stage in every discussion about my life, effectively derailing any accountability with high-strung drama. It was a one-ring circus of deflection: their emotions were the spotlight-stealers, and my legitimate pain was left squinting in the dark.
 
