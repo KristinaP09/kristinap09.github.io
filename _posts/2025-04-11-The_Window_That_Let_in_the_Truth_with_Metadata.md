@@ -9,6 +9,10 @@ tags: [tenants-rights, landlord-logic, rental-stories, satire, truth]
 # The Window That Let in the Truth
 *By Kristina*
 
+![The Window That Let in the Truth visualization](/images/8E8F23DF-0307-40C1-A24B-E373F57D196F.png)
+*An open window lets in calm light and fresh air, contrasting a dim, heavy interior—symbolizing truth quietly entering a space clouded by noise, control, and misdirection.*
+
+
 In a modest apartment building tucked into the folds of Corridoni 48, a story unfolded—one not about rent, or bills, or noise, but about something far quieter: the slow unraveling of illusion.
 
 It began with a dispute over utility charges. Not a dramatic one—there were no raised voices or threats—just the kind of careful, contractual accountability expected in any civilized rental agreement. I had reviewed the bills. I had done the math. I had referenced the terms we had all signed. What I asked for was simple: accuracy.
