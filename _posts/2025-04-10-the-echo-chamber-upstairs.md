@@ -7,7 +7,9 @@ tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
 ---
 
 ![Clown standard time visualization](/images/BFC674A6-4287-4D28-A51C-5CF6AE116853.png)
-*A chaotic clown control room mirrors the absurdity of invisible surveillance—an amateur syndicate orchestrating disruption with delusion, captured in a satirical portrait of misplaced power and circus logic.*
+<p align="justify">
+<em>A chaotic clown control room mirrors the absurdity of invisible surveillance—an amateur syndicate orchestrating disruption with delusion, captured in a satirical portrait of misplaced power and circus logic.</em>
+</p>
 
 
 
