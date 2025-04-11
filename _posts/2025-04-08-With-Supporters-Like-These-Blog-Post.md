@@ -24,7 +24,7 @@ I’ve been on the receiving end of this <strong>manipulative kindness</strong>,
 ## Meet the Invisible Upstairs Syndicate
 
 <p align="justify">
-Early on, I realized my <em>helpers</em> operated like a secret society – I dubbed them the <strong>Invisible Upstairs Syndicate</strong>. By “upstairs,” I mean that literally and metaphorically. Picture a shadowy bunch lurking just out of sight (sometimes *literally* in the upstairs apartment), observing my life like it’s their favorite reality show. They interfered under the guise of <em>concern</em>. They’d eavesdrop on private moments, keep dossiers of my mistakes, and even engage in a little <strong>unauthorized observation</strong> (because why ask permission to snoop when you’re <em>helping</em>, right?). If I sighed in frustration, it became a data point in their clandestine “support research.” If I slept too peacefully, they’d find a way to rattle the ceiling – a gentle reminder that they were on the case, watching over me (or just watching me, period).
+Early on, I realized my <em>helpers</em> operated like a secret society – I dubbed them the <strong>Invisible Upstairs Syndicate</strong>. By “upstairs,” I mean that literally and metaphorically. Picture a shadowy bunch lurking just out of sight (sometimes <em>literally</em> in the upstairs apartment), observing my life like it’s their favorite reality show. They interfered under the guise of <em>concern</em>. They’d eavesdrop on private moments, keep dossiers of my mistakes, and even engage in a little <strong>unauthorized observation</strong> (because why ask permission to snoop when you’re <em>helping</em>, right?). If I sighed in frustration, it became a data point in their clandestine “support research.” If I slept too peacefully, they’d find a way to rattle the ceiling – a gentle reminder that they were on the case, watching over me (or just watching me, period).
 </p>
 
 
@@ -41,11 +41,11 @@ Early on, I realized my <em>helpers</em> operated like a secret society – I du
 
 <p align="justify">
   
-In practice, their “support” had some signature moves:
+In practice, their “support” had some signature moves: <br>
 
-- <strong> Narrative Flip:</strong> If I pointed out something hurtful they did, the story would boomerang back as my fault or my misunderstanding. They’d recount events with themselves cast as selfless heroes and me as the “ungrateful” beneficiary of their benevolence. One minute I’m rightly upset at them invading my privacy; the next, I’m hearing how concerned they were about my well-being, and how my reaction hurts their feelings. Plot twist – somehow I became the villain in my own crisis.
+- <strong> Narrative Flip:</strong> If I pointed out something hurtful they did, the story would boomerang back as my fault or my misunderstanding. They’d recount events with themselves cast as selfless heroes and me as the “ungrateful” beneficiary of their benevolence. One minute I’m rightly upset at them invading my privacy; the next, I’m hearing how concerned they were about my well-being, and how my reaction hurts their feelings. Plot twist – somehow I became the villain in my own crisis. <br>
 
-- <strong>Truth? Hide It:</strong> Any fact that made them look bad magically went missing. They edited reality with the skill of a propagandist. Broken promise? Never happened. Unauthorized surveillance of my life? “Oh, we were just keeping an eye out for you, you know, for safety.” Key details were buried under layers of deflection. It’s like dealing with a PR firm dedicated to each person’s image, where spin is more important than sincerity.
+- <strong>Truth? Hide It:</strong> Any fact that made them look bad magically went missing. They edited reality with the skill of a propagandist. Broken promise? Never happened. Unauthorized surveillance of my life? “Oh, we were just keeping an eye out for you, you know, for safety.” Key details were buried under layers of deflection. It’s like dealing with a PR firm dedicated to each person’s image, where spin is more important than sincerity.<br>
 
 - <strong>Emotional Theater:</strong> When all else fails, cue the <strong>crocodile tears and dramatic sighs</strong>. They could cry on demand about how hard it has been for <strong>them</strong>, having their <em>kindness misunderstood</em>. Confront them with a truth and suddenly one of them is stage-whispering about their “panic attacks,” while another performs wounded silence like a martyr. Their feelings took center stage in every discussion about my life, effectively derailing any accountability with high-strung drama. It was a one-ring circus of deflection: their emotions were the spotlight-stealers, and my legitimate pain was left squinting in the dark.
 
