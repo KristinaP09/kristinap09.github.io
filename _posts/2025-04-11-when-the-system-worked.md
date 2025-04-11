@@ -14,9 +14,6 @@ tags: [tax-refund-surprise, clowns-vs-clarity, bureaucracy-but-make-it-work, acc
 > “I executed a routine administrative task, received a precise fiscal correction, and—without lifting my voice—shattered the fragile delusions of an entire clown-operated misinformation machine. All before the first sip of coffee cooled.”
 
 
-
-# When the System Worked—and the Clowns Couldn’t Handle It
-
 <p align="justify">
 It started with a form.
 </p>
