@@ -7,7 +7,9 @@ tags: [dream-manipulation, clown-network, resilience, psychological-strength, sa
 ---
 
 ![Toddler tantrum visualization](/images/87C60570-BDBA-4CC3-86E5-C2A5E0CCE325.png)
-*A surreal clown control room captures the chaotic mindset of emotional manipulation—where unstable energy poses as authority, and subconscious disruption is disguised as a misguided performance of control.*
+<p align="justify">
+<em>A surreal clown control room captures the chaotic mindset of emotional manipulation—where unstable energy poses as authority, and subconscious disruption is disguised as a misguided performance of control.</em>
+</p>
 
 
 <p align="justify">
@@ -53,14 +55,16 @@ Because what they’ve underestimated is that psychological resilience doesn’t
 
 <p align="justify">
 What they offer is not insight.  
+  
 It’s noise.  
+
 And I’ve learned to filter it out with precision.
 
 </p>
 
 <p align="justify">
 They don’t need analysis. They need boundaries, snacks, and someone to finally tell them:
-</p>p>
+</p>
 
 <p align="justify">
 <strong>“No, you don’t get to manipulate someone’s subconscious just because you’re emotionally hungry.”</strong>
@@ -72,5 +76,6 @@ So let them hum in the corner of my dreams. Let them script chaos with finger pa
 
 <p align="justify">
 Let them have their daycare.  
+  
 I’ve got a life to live—with clarity, calm, and complete autonomy.
 </p>
