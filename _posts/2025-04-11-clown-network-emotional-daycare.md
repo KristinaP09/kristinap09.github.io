@@ -26,7 +26,7 @@ If my subconscious is the battlefield, then these nightly interruptions are the 
 
 <p align="justify">
     
-They scream. They manipulate. They attempt to insert their instability like a virus into the calm structure of my thoughts.  
+They scream. They manipulate. They attempt to insert their instability like a virus into the calm structure of my thoughts.  <br>
 But here’s the thing: I see it. I feel it. And I reject it.
 
 </p>
@@ -39,9 +39,9 @@ Each dream has begun to resemble a broken theatre production—a kindergarten of
 
 <p align="justify">
   
-There’s a humming presence.  
-A chaotic child with a megaphone.  
-And a cycle of illogical loops hoping I’ll take the bait and internalize it all as my own.
+There’s a humming presence.  <br>
+A chaotic child with a megaphone.  <br>
+And a cycle of illogical loops hoping I’ll take the bait and internalize it all as my own. <br>
 
 But I won’t.
 
@@ -54,9 +54,9 @@ Because what they’ve underestimated is that psychological resilience doesn’t
 </p>
 
 <p align="justify">
-What they offer is not insight.  
+What they offer is not insight.  <br>
   
-It’s noise.  
+It’s noise.  <br>
 
 And I’ve learned to filter it out with precision.
 
@@ -75,7 +75,7 @@ So let them hum in the corner of my dreams. Let them script chaos with finger pa
 </p>
 
 <p align="justify">
-Let them have their daycare.  
+Let them have their daycare. <br>
   
 I’ve got a life to live—with clarity, calm, and complete autonomy.
 </p>
