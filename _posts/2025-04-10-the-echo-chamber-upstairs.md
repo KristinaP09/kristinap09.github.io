@@ -10,9 +10,15 @@ tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
 *A chaotic clown control room mirrors the absurdity of invisible surveillance—an amateur syndicate orchestrating disruption with delusion, captured in a satirical portrait of misplaced power and circus logic.*
 
 
+
 Some people live upstairs. Others *perform*.
 
+
+<p align="justify">
+  
 You begin to notice the difference when the footsteps aren’t just footsteps, when the dragging of chairs feels like punctuation in someone else's story about you—one you never agreed to be in. It starts as noise. Then it becomes *pattern*. Then it becomes *strategy*—albeit the most dysfunctional one imaginable. A kind of psychological flatulence, disguised as subtle surveillance, carried out by a group that believes it’s orchestrating your downfall by moving IKEA furniture around on cue.
+
+</p>
 
 I call them the **Clown Network**. Not for their appearance (though who knows?), but for their uncanny ability to turn banality into performance, delusion into doctrine, and surveillance into something resembling a circus act. And at the center of this poorly written show? Me—their accidental protagonist, target, or perhaps unwilling study subject in an unauthorized experiment.
 
