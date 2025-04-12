@@ -1,4 +1,6 @@
-## Clown Network Chronicles
+<div class="clown-box">
+  
+## 🤡 Clown Network Chronicles
 
 **Welcome to the world of involuntary circus psychology.**  
 This section documents my long-running observation of a mysterious syndicate I’ve dubbed *“The Clown Network.”*  
@@ -25,12 +27,13 @@ Think of it as Kafka meets Kafka’s upstairs neighbor.
 
 **[Browse the Logs](#logs)** or [Return to Home](/)
 
+</div>
 
 <a name="logs"></a>
 
 ## Clown Network Log Archive
 
-<ul>
+<ul class="blog-posts">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} – {{ post.title }}</a>
