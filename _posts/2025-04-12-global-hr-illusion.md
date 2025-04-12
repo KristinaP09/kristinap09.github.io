@@ -6,6 +6,12 @@ author: Anonymous Observer
 tags: [HR, Corporate Satire, Workplace Culture, Psychological Safety, Burnout, Global Illusion]
 ---
 
+![global unqualified HRVisualized](/images/4A9EF9B2-7965-4ED2-B6F3-BAF9FF0E0944.png)
+<p align="justify">
+<em> When HR says ‘We care about your wellbeing’—and hands you a stress ball while ignoring your burnout, gaslighting your feedback, and planning the next team-building bingo night.</em>
+</p>
+
+
 <p align="justify">Welcome to the world of Human Resources—where “people-first” is a tagline, not a practice. Where policies are plentiful, but actual humanity is… well, lost somewhere between the diversity dashboard and the sixth compliance training this quarter.</p>
 
 <p align="justify">Let’s break it down, shall we?</p>
