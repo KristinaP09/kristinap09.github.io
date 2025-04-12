@@ -16,6 +16,8 @@ Operating mainly from upstairs apartments and the corners of dreams, these perfo
 While most researchers seek funding for *controlled* experiments, these clowns cut out the middleman (ethics committees).  
 Consider this my attempt at documenting what happens when the circus forgets to pack up and leave your ceiling.
 
+</div>
+
 ### Current Experiments in Progress
 
 - **April 2025**: *"Furniture Around Bathrooms: A Sonic Inquiry"*  
@@ -27,9 +29,6 @@ Think of it as Kafka meets Kafka’s upstairs neighbor.
 
 **[Browse the Logs](#logs)** or [Return to Home](/)
 
-</div>
-
-<a name="logs"></a>
 
 ## Clown Network Log Archive
 
