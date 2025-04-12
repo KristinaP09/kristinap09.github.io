@@ -2,7 +2,7 @@
   
 <h2>🤡 Clown Network Chronicles</h2>
 
-<p><strong>Welcome to the world of involuntary circus psychology.  </strong> ,br.
+<p><strong>Welcome to the world of involuntary circus psychology.  </strong> <br>
 This section documents my long-running observation of a mysterious syndicate I’ve dubbed <em>“The Clown Network.”</em> <br> 
 No, it’s not a joke. Yes, they are allegedly human. No, they don’t knock.</p>
 
