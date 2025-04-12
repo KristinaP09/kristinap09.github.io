@@ -1,0 +1,29 @@
+/* === Clown Network Styling === */
+.clown-box {
+  background-color: #2b0a2f;
+  color: #ffe6f0;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ff66b2;
+  line-height: 1.7;
+  margin-bottom: 2em;
+}
+
+ul.blog-posts {
+  list-style: none;
+  padding: 0;
+}
+
+ul.blog-posts li {
+  padding: 0.5em 0;
+  border-bottom: 1px dashed #ff99cc;
+}
+
+ul.blog-posts a {
+  color: #ff66b2;
+  text-decoration: none;
+}
+
+ul.blog-posts a:hover {
+  text-decoration: underline;
+}
