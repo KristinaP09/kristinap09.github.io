@@ -6,6 +6,13 @@ author: Anonymous Observer
 tags: [Workplace Culture, Corporate Satire, Nepotism, Emotional Manipulation, HR, Power Dynamics]
 ---
 
+![workplace family visualization](/images/024AB721-5943-41ED-8555-EFC6664B1376.png)
+<p align="justify">
+<em> “Welcome to the Workplace Family: Where hugs come with hidden hierarchies, and loyalty means never questioning the cousin who got promoted over you.”</em>
+</p>
+
+<br>
+
 <p align="justify"><strong>“We’re like a family here.”</strong>  
 That phrase is the workplace equivalent of a red flag wrapped in a Hallmark card.</p>
 
