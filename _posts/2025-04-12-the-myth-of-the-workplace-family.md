@@ -84,3 +84,13 @@ If a job tells you they’re your family, ask them where the inheritance is. If 
 <p align="justify"><strong>Let families be families.  
 Let companies be professional.  
 And let the myths finally die in peace.</strong></p>
+
+
+---
+
+## Final Note
+
+<p align="justify"><strong>This isn’t a book about bitterness. It’s a record of reality. A guide to surviving systems built on charisma instead of clarity, and sentiment instead of structure.</strong></p>
+
+<p align="justify">Let families be families. Let companies be professional. And let the myths finally die in peace.</p>
+
