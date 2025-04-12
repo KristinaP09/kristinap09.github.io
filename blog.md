@@ -21,7 +21,7 @@ Consider this my attempt at documenting what happens when the circus forgets to 
 
 ### Current Experiments in Progress
 
-- **April 2025**: *"Furniture Around Bathrooms: A Sonic Inquiry"*  
+- **November 2024 - February 2025**: *"Furniture Around Bathrooms: A Sonic Inquiry"*  
 - **March 2025**: *"Can One Slam a Door Without Moving? A Quantum Study"*  
 - **Ongoing**: *"Mapping Silent Mode: Tactical Stillness in Apartment Warfare"*
 
