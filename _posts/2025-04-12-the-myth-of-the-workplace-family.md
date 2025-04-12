@@ -94,3 +94,23 @@ And let the myths finally die in peace.</strong></p>
 
 <p align="justify">Let families be families. Let companies be professional. And let the myths finally die in peace.</p>
 
+
+---
+
+## Postscript: One Last Thing
+
+<p align="justify"><strong>And before you ask for trust, commitment, or overtime loyalty—don’t forget to pay your employees. Not with pizza. Not with birthday cards. Not with vague promises of “future opportunity.”</strong></p>
+
+<p align="justify">Real work deserves real compensation. And real integrity means respecting people’s time, skills, and dignity. Especially when your organization is built on borrowed emotional language from families and friendships.</p>
+
+<p align="justify">If you can afford branded mugs, a ping pong table, or another LinkedIn brag post—you can afford payroll justice. Your reputation doesn’t matter if your payment schedule belongs in a mystery novel.</p>
+
+<p align="justify"><strong>And while we’re here—give a clear answer when employees ask about their salary and incentives.</strong>  
+They’re not asking for a treasure hunt. They’re asking for transparency. You want them to commit to your system, pay penalties if they leave, follow your rules?</p>
+
+<p align="justify">Then start by following your own. Start by paying on time. Start by acting like a real organization, not a family-run guilt machine wrapped in empty buzzwords.</p>
+
+<p align="justify"><strong>You want loyalty? Start with a payslip.  
+You want trust? Try accountability.  
+You want respect? Earn it.  
+With action—not adjectives.</strong></p>
