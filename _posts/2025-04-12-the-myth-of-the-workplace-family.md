@@ -132,3 +132,27 @@ And let the myths finally die in peace.</strong></p>
 
 <p align="justify">Let families be families. Let companies be professional. And let the myths finally die in peace.</p>
 
+---
+
+## Epilogue: A Message to Governments and Institutions
+
+<p align="justify"><strong>To the institutions reading this: the employee is not always the source of the problem.</strong></p>
+
+<p align="justify">In many cases, they are the final link in a chain of deception they never built. They didn’t falsify tax reports. They didn’t hide incentive structures. They didn’t design systems to be opaque, manipulative, or self-serving. They simply followed the information they were given—information that was often wrong by design.</p>
+
+<p align="justify">When another country’s transparency model exposes the lie, it doesn’t mean the employee betrayed a system. It means the truth finally surfaced despite every attempt to bury it.</p>
+
+<p align="justify">If governments want accountability, start at the source:</p>
+
+<ul>
+<li>Audit the institutions that claim compliance but operate in silence.</li>
+<li>Demand full disclosure from employers, not retroactive guilt from workers.</li>
+<li>And protect the whistleblowers—not the performers of corporate theater.</li>
+</ul>
+
+<p align="justify">When an employee doesn’t know how their own salary is deducted, that’s not negligence.  
+That’s deliberate obfuscation.</p>
+
+<p align="justify"><strong>Real integrity doesn’t hide behind paperwork. It welcomes daylight.  
+Let the light in—and stop mistaking silence for consent.</strong></p>
+
