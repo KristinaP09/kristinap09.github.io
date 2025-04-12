@@ -6,7 +6,7 @@ author: Anonymous Observer
 tags: [Clown Network, Mental Intrusion, Psychological Defense, Surveillance Culture, Satire, Reflections]
 ---
 
-![Carousel of Clowns Visualization](/images/8F1E00A9-0787-4B7C-83CE-D9C51F6C8E92.png.png)
+![Carousel of Clowns Visualization](/images/8F1E00A9-0787-4B7C-83CE-D9C51F6C8E92.png)
 <p align="justify">
 <em> “Welcome to the Carousel of Clowns-where chaos spins in circles, narratives wear makeup, and the only thing consistent is the absurdity.”
 </em>
