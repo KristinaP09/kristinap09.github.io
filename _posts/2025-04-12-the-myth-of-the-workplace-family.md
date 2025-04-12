@@ -95,11 +95,11 @@ And let the myths finally die in peace.</strong></p>
 
 ## The Art of Corporate Blame-Shifting
 
-<p align="justify">If deception were a business model, some organizations would already be unicorns. Among the most dangerous practices in the workplace is the carefully orchestrated act of **blame-shifting**—a method where those in power manipulate not just people, but systems themselves.</p>
+<p align="justify">If deception were a business model, some organizations would already be unicorns. Among the most dangerous practices in the workplace is the carefully orchestrated act of <strong>blame-shifting</strong>-a method where those in power manipulate not just people, but systems themselves.</p>
 
 <p align="justify">It often begins with a quiet act: misreporting tax details, obscuring incentive structures, or underdeclaring salaries to government agencies. But when the issue inevitably surfaces—through audits, employee inquiries, or legal discrepancies—the response is rarely accountability.</p>
 
-<p align="justify">Instead, the organization turns defense into performance. They manufacture a narrative where **the employee becomes the problem** for asking questions. Where **the government is the villain** for enforcing clarity. And where they themselves? Merely misunderstood bystanders in a bureaucratic tragedy.</p>
+<p align="justify">Instead, the organization turns defense into performance. They manufacture a narrative where <strong>the employee becomes the problem</strong> for asking questions. Where <strong>the government is the villain</strong> for enforcing clarity. And where they themselves? Merely misunderstood bystanders in a bureaucratic tragedy.</p>
 
 <p align="justify"><strong>This is not error. This is strategy.</strong></p>
 
