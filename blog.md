@@ -1,21 +1,22 @@
 <div class="clown-box">
   
-## 🤡 Clown Network Chronicles
+<h2>🤡 Clown Network Chronicles</h2>
 
-**Welcome to the world of involuntary circus psychology.**  
-This section documents my long-running observation of a mysterious syndicate I’ve dubbed *“The Clown Network.”*  
-No, it’s not a joke. Yes, they are allegedly human. No, they don’t knock.
+<p><strong>Welcome to the world of involuntary circus psychology.  </strong> ,br.
+This section documents my long-running observation of a mysterious syndicate I’ve dubbed <em>“The Clown Network.”</em> <br> 
+No, it’s not a joke. Yes, they are allegedly human. No, they don’t knock.</p>
 
-Operating mainly from upstairs apartments and the corners of dreams, these performers specialize in:
+<p>Operating mainly from upstairs apartments and the corners of dreams, these performers specialize in:</p>
 
-- Midnight chair-dragging rituals  
-- Psychological manipulation via amateur acoustics  
-- Noise-fueled behavior mapping (uninvited)  
-- Being both deaf and loud — simultaneously  
+<ul>
+  <li>Midnight chair-dragging rituals </li> 
+  <li>Psychological manipulation via amateur acoustics </li> 
+  <li>Noise-fueled behavior mapping (uninvited)  </li>
+  <li>Being both deaf and loud — simultaneously </li> 
+</ul>
 
-While most researchers seek funding for *controlled* experiments, these clowns cut out the middleman (ethics committees).  
-Consider this my attempt at documenting what happens when the circus forgets to pack up and leave your ceiling.
-
+<p>While most researchers seek funding for <em>controlled</em> experiments, these clowns cut out the middleman (ethics committees). <br> 
+Consider this my attempt at documenting what happens when the circus forgets to pack up and leave your ceiling.</p>
 </div>
 
 ### Current Experiments in Progress
