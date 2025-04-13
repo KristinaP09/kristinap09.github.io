@@ -27,7 +27,7 @@ This paper introduces a federated clustering approach for decentralized multi-vi
 
 ---
 
-### <img src="https://img.icons8.com/color/48/000000/clustering.png" width="26" style="vertical-align: middle;"/> Collaborative Feature-Weighted Multi-View Fuzzy C-Means Clustering  
+### <img src="https://img.icons8.com/color/48/000000/data-configuration.png" width="26" style="vertical-align: middle;"/> Collaborative Feature-Weighted Multi-View Fuzzy C-Means Clustering  
 **<a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" style="color: #1E7509;">Pattern Recognition</a> (IF: 7.5), 2021**  
 <img src="https://img.shields.io/badge/Topic-Multi_View_Clustering-teal" />  
 <img src="https://img.shields.io/badge/Method-Fuzzy_C_Means-orange" />  
