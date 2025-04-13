@@ -164,20 +164,22 @@ They don’t evolve because evolution requires thought. Instead, they weaponize 
 
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
-“Pathetically beneath even the lowest bar.” 
+  <strong>Signature Line:</strong>  <br>
+  “Pathetically beneath even the lowest bar.” 
 </div>
 
-<strong>Expanded Commentary:</strong>  
-You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing.  
-Their actions consistently lack boundaries, accountability, and respect — all wrapped in the delusion that they’re in control.
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+  <strong>Expanded Commentary:</strong>  <br>
+  You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing. Their actions consistently lack boundaries, accountability, and respect — all wrapped in the delusion that they’re in control.
+</div>
 
-<div style="background-color:#b30059; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<div style="background-color:#ffe6f0; border: 1px dashed #b30059; padding: 10px; margin: 10px 0;">
 <strong>Example Usage:</strong>  
 “This kind of chaotic, disrespectful behavior? Definitely a case of Professionalism Not Found.”
 </div>
 
 
-<div style="background-color:#b30059; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<div style="background-color:#ffe6f0; border: 1px dashed #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Filed under <em>“System Error: Decency Not Installed.”</em>
 </div>
 
@@ -193,16 +195,19 @@ Their actions consistently lack boundaries, accountability, and respect — all 
 <strong>Definition:</strong> The inability of external manipulators to rewrite, overwrite, or infect what’s deeply rooted in a self-aware individual. A condition observed when the Clown Network attempts to alter someone’s essence — and fails, spectacularly.
 </div>
 
-<div style="text-align: justify">
-<strong>Signature Line:</strong>  <br>
-“They can’t rewrite something that’s rooted deep within me.”  <br>
-<em>All they’ll hear is the echo of their own failure.</em><br>
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+  <strong>Signature Line:</strong>  <br>
+  “They can’t rewrite something that’s rooted deep within me.”  <br>
+  <em>All they’ll hear is the echo of their own failure.</em><br>
 </div>
 
 
-<strong>Expanded Commentary:</strong>  
-They can bang, push, whisper, and rerun their manipulative dream scripts — but truth carved into character doesn’t bend to outside noise. Identity forged through clarity, pain, and self-awareness can’t be rewritten by circus clowns holding crayons.  
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+  <strong>Expanded Commentary:</strong>  <br>
+  They can bang, push, whisper, and rerun their manipulative dream scripts — but truth carved into character doesn’t bend to outside noise. Identity forged through clarity, pain, and self-awareness can’t be rewritten by circus clowns holding crayons.  
 Their failure isn’t just expected — it’s inevitable.
+</div>
 
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
