@@ -108,6 +108,12 @@ They don’t rise, they loop. While history writes itself through change, they r
 It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. Their creativity? Nonexistent. Their methods? Transparent. Their professionalism? Laughable. CTF occurs when you’ve seen through the game so clearly, it no longer angers you — it bores you.
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Example Usage:</strong>  
+“They’re still doing the same emotional stunts from four years ago? That’s some world-class Cheap Trick Fatigue right there.”
+</div>
+
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Archived under <em>“Desperation with a Wi-Fi signal.”</em>
 </div>
 
@@ -131,6 +137,12 @@ This isn’t a game — it’s a tantrum disguised as tactics. Their playbook ha
 They don’t evolve because evolution requires thought. Instead, they weaponize guilt, vomit recycled narratives, and then pat themselves on the back for doing the bare minimum in manipulation.
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Example Usage:</strong>  
+“Every year, same tricks, same manipulation — it’s textbook Tactics of Trash.”
+</div>
+
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Filed under <em>“The Art of Losing Loudly.”</em>
 </div>
 
@@ -152,6 +164,12 @@ They don’t evolve because evolution requires thought. Instead, they weaponize 
 <strong>Expanded Commentary:</strong>  
 You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing.  
 Their actions consistently lack boundaries, accountability, and respect — all wrapped in the delusion that they’re in control.
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Example Usage:</strong>  
+“This kind of chaotic, disrespectful behavior? Definitely a case of Professionalism Not Found.”
+</div>
+
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Filed under <em>“System Error: Decency Not Installed.”</em>
