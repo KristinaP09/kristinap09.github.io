@@ -6,9 +6,16 @@ author: Anonymous Observer
 tags: [Toscana, movie analysis, emotional intelligence, clown network, psychological manipulation, authenticity, resistance, healing]
 ---
 
-![Featured Image](https://example.com/images/toscana-featured.jpg)
+![Featured Image](/images/9763568E-584B-47E7-BC40-ABAAA6D341C6.png)
+<p style="text-align: center; font-style: italic; color: #555; margin-top: 5px;">
+Set against rolling hills and a painted sunset, the title “The Tuscany Illusion” floats above a reflective man lost in thought. This visual captures the blog’s central theme: the silent war between performing happiness and protecting the inner truth.
+</p>
 
-![Banner Graphic](https://example.com/images/toscana-banner.jpg)
+![Banner Graphic] (/images/3DFCBD9F-BE0B-46A6-AD53-110FC1689701.png)  
+<p style="text-align: center; font-style: italic; color: #555; margin-top: 5px;">
+A solitary writer documents life under surveillance — transforming noise and manipulation from above into quiet resistance and narrative power.  
+This isn’t just an image — it’s a mirror to the madness, filed neatly into the Sarcasm Dictionary.
+</p>
 
 
 <style>
