@@ -30,10 +30,10 @@ This isn’t just an image — it’s a mirror to the madness, filed neatly into
 <strong>Definition:</strong> A signature move of the Clown Network involving dragging someone who has already died back into dream narratives. This act, cloaked as psychological manipulation, reflects a total lack of boundaries and originality. Rather than letting souls rest in peace, they summon them into low-quality, bizarre dream scripts.
 </div>
 
-<strong>Synonyms:</strong>  
-- Graveyard Gossip  
-- Spiritual Spam  
-- Beyond-the-Grave Bullsh*t
+<strong>Synonyms:</strong>  <br>
+- Graveyard Gossip  <br>
+- Spiritual Spam  <br>
+- Beyond-the-Grave Bullsh*t <br>
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Example Usage:</strong>  
