@@ -60,7 +60,12 @@ hr {
 </style>
 
 
+
 ## Introduction: The Performance Behind the Smile
+
+<div class="highlight-box">
+Meta Description: Toscana (2022) isn't just a romantic escape to Italy-it's a quiet psychological drama about pretending to be happy, chasing validation, and the consequences of falling in love without knowing yourself.
+</div>
 
 On the surface, *Toscana* is a feel-good romance set in the warm, olive-toned landscapes of Italy. It follows Theo, a Michelin-star chef, who travels to Tuscany to sell his late father’s estate, only to find unexpected connections and unresolved grief. But beyond its soft lighting and slow-burn love story lies something deeper—and darker.
 
