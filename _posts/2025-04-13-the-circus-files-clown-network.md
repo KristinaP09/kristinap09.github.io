@@ -77,21 +77,20 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 <strong>Definition:</strong> A condition affecting groups like the Clown Network, characterized by an inability to create anything meaningful, innovate, or evolve — resulting in complete exclusion from the historical timeline of progress.
 </div>
 
-<div style="text-align: justify">
-<strong>Signature Line:</strong>  <br>
-“This Clown Network will never reach a peak point in history.”<br>
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Signature Line:</strong>  
+“This Clown Network will never reach a peak point in history.”
 </div>
 
-<div style="text-align: justify">
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Expanded Commentary:</strong> They don’t rise, they loop. While history writes itself through change, they rehearse tired manipulations. Their contribution? Noise. Their reward? Erasure. They won’t be remembered — they’ll be <em>cleaned up</em>.
 </div>
+
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Archived under <em>“Delusions of Influence.”</em>
 </div>
-
-</div>
-
 
 
 <h3 style="color:#b30059; border-bottom: 2px solid #b30059; padding-bottom: 4px;">Entry 4: Cheap Trick Fatigue (CTF)</h3>
