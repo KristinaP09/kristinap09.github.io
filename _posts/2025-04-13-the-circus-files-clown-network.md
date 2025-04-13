@@ -77,11 +77,14 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 <strong>Definition:</strong> A condition affecting groups like the Clown Network, characterized by an inability to create anything meaningful, innovate, or evolve — resulting in complete exclusion from the historical timeline of progress.
 </div>
 
+<div style="text-align: justify">
 <strong>Signature Line:</strong>  <br>
-> “This Clown Network will never reach a peak point in history.”
+“This Clown Network will never reach a peak point in history.”<br>
+</div>
 
-<strong>Expanded Commentary:</strong>  
-They don’t rise, they loop. While history writes itself through change, they rehearse tired manipulations. Their contribution? Noise. Their reward? Erasure. They won’t be remembered — they’ll be <em>cleaned up</em>.
+<div style="text-align: justify">
+<strong>Expanded Commentary:</strong> They don’t rise, they loop. While history writes itself through change, they rehearse tired manipulations. Their contribution? Noise. Their reward? Erasure. They won’t be remembered — they’ll be <em>cleaned up</em>.
+</div>
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Archived under <em>“Delusions of Influence.”</em>
@@ -100,7 +103,7 @@ They don’t rise, they loop. While history writes itself through change, they r
 </div>
 
 <strong>Signature Line:</strong>  <br>
-> “Their trick never changed! Too cheap, not professional. Disgusting.”
+> “Their trick never changed! Too cheap, not professional. Disgusting.”<br>
 
 <strong>Expanded Commentary:</strong>  <br>
 It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. Their creativity? Nonexistent. Their methods? Transparent. Their professionalism? Laughable. CTF occurs when you’ve seen through the game so clearly, it no longer angers you — it bores you.
@@ -128,9 +131,9 @@ It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. T
 </div>
 
 <strong>Signature Line:</strong>  <br>
-> “The way they play their game is so cheap and disgusting.”
+> “The way they play their game is so cheap and disgusting.” <br>
 
-<strong>Expanded Commentary:</strong>  
+<strong>Expanded Commentary:</strong>  <br>
 This isn’t a game — it’s a tantrum disguised as tactics. Their playbook hasn’t changed in four years. Whether it was last year or four years ago, their method is always the same: recycle pain, exploit emotion, and hope no one notices the script never evolves.  
 They don’t evolve because evolution requires thought. Instead, they weaponize guilt, vomit recycled narratives, and then pat themselves on the back for doing the bare minimum in manipulation.
 
@@ -157,7 +160,7 @@ They don’t evolve because evolution requires thought. Instead, they weaponize 
 </div>
 
 <strong>Signature Line:</strong>  <br>
-> “Pathetically beneath even the lowest bar.”
+> “Pathetically beneath even the lowest bar.” <br>
 
 <strong>Expanded Commentary:</strong>  
 You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing.  
@@ -185,9 +188,12 @@ Their actions consistently lack boundaries, accountability, and respect — all 
 <strong>Definition:</strong> The inability of external manipulators to rewrite, overwrite, or infect what’s deeply rooted in a self-aware individual. A condition observed when the Clown Network attempts to alter someone’s essence — and fails, spectacularly.
 </div>
 
-<strong>Signature Line:</strong>  
-> “They can’t rewrite something that’s rooted deep within me.”  
-> <em>All they’ll hear is the echo of their own failure.</em>
+<div style="text-align: justify">
+<strong>Signature Line:</strong>  <br>
+“They can’t rewrite something that’s rooted deep within me.”  <br>
+<em>All they’ll hear is the echo of their own failure.</em><br>
+</div>
+
 
 <strong>Expanded Commentary:</strong>  
 They can bang, push, whisper, and rerun their manipulative dream scripts — but truth carved into character doesn’t bend to outside noise. Identity forged through clarity, pain, and self-awareness can’t be rewritten by circus clowns holding crayons.  
