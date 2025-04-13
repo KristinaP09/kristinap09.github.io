@@ -1,31 +1,41 @@
 ---
 layout: page
-title: ""
+title: News
 permalink: /news/
+---
+
+## Latest Updates
 
 ---
 
+### **Important Notice**
+
+1. My <span style="color: red;"><strong>old personal webpages</strong></span>, previously hosted under two now-inaccessible GitHub accounts, are still viewable for archival purposes:
+   - [patternkps.github.io](https://patternkps.github.io)
+   - [kpnaga08.github.io/about/](https://kpnaga08.github.io/about/)
+
+   For the most up-to-date content, please refer to this new website.
+
+2. My previous email accounts are now **officially retired**:
+   - Yahoo: <code style="color: red;">kristinasinaga57@yahoo.co.id</code>
+   - Gmail: <code style="color: red;">krist.p.sinaga@gmail.com</code>
+
+   Unfortunately, I forgot the passwords and couldn’t prove I’m me (apparently I’m suspicious—but in a cool way).
+
 ---
 
-## <span style="color: #2FC10B;">[Update]</span>
+### **Exciting News: New Publication in IEEE TPAMI**
+
+I'm thrilled to announce that my latest research paper,  
+<span style="color: red;"><strong>“Federated Multi-View K-Means Clustering”</strong></span>,  
+has been accepted and published in **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)**, one of the top journals in the field.
+
+Stay tuned for a simplified explainer and blog post coming soon!
+
 ---
 
-**<span style="color: red;">Notice:</span>** 
+### **More to Come**
 
-1. My <code style="color : red">old personal webpages</code>, hosted via two forgotten and inaccessible GitHub accounts, <code style="color : magenta">are still viewable</code> [here](https://patternkps.github.io) and [here](https://kpnaga08.github.io/about/). For my latest work and updates, please continue browsing this new site.
-
-2. My old Yahoo account (<code style="color : red">kristinasinaga57@yahoo.co.id</code>) and Gmail account (<code style="color : red">krist.p.sinaga@gmail.com</code>) are <code style="color : Fuchsia">officially retired</code> -- I forgot my passwords, and apparently, I'm too suspicious to prove I'm me 😉.
+This page will be regularly updated with publications, project milestones, and other life updates worth celebrating or laughing about.
 
 ---
-
-## <span style="color: #2FC10B;">Exciting News: New Publication in IEEE TPAMI!</span>
----
-
-I am delighted to share my latest research, <span style="color: red;">"Federated Multi-View K-Means Clustering,"</span> recently published in the prestigious journal <span style="color: #1E7509;">[IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2025](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)</span>.
-
-This paper introduces an innovative federated multi-view clustering algorithm designed to enhance scalable, decentralized AI applications. Our method effectively handles diverse and distributed data sources, addressing critical challenges such as privacy, computational efficiency, and robustness.
-
-I am particularly proud of this work as it is significantly advances federated learning and clustering techniques, opening new avenues for trustworthy AI in cyber-physical systems and edge computing.
-
-
-Read more about the paper <span style="color: #B31E9A;">[here](https://ieeexplore.ieee.org/abstract/document/10810504)
