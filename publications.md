@@ -56,7 +56,7 @@ Cited over <strong>2,000 times</strong>, this paper improves traditional k-means
 
 ## <span style="color: #FF33D1;">Citation Fireworks: Research Impact Over the Years</span>
 
-![Citation Graph](https://scholar.googleusercontent.com/citations?view_op=graph&hl=en&user=yNWQLYAAAAAJ&citpid=1)
+![Citation Graph](/images/IMG_1260.jpeg)
 
 <p align="justify">
 Above is a snapshot of the citation fireworks from my research—each bar a spark of curiosity, collaboration, or (let’s be honest) someone scrambling to finish their thesis at 3 a.m.  
