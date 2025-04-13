@@ -106,8 +106,10 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 “Their trick never changed! Too cheap, not professional. Disgusting.”
 </div>
 
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Expanded Commentary:</strong>  <br>
 It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. Their creativity? Nonexistent. Their methods? Transparent. Their professionalism? Laughable. CTF occurs when you’ve seen through the game so clearly, it no longer angers you — it bores you.
+</div>
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Example Usage:</strong>  <br>
@@ -136,9 +138,12 @@ It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. T
   “The way they play their game is so cheap and disgusting.”
 </div>
 
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Expanded Commentary:</strong>  <br>
 This isn’t a game — it’s a tantrum disguised as tactics. Their playbook hasn’t changed in four years. Whether it was last year or four years ago, their method is always the same: recycle pain, exploit emotion, and hope no one notices the script never evolves.  
 They don’t evolve because evolution requires thought. Instead, they weaponize guilt, vomit recycled narratives, and then pat themselves on the back for doing the bare minimum in manipulation.
+</div>
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Example Usage:</strong>  <br>
