@@ -51,6 +51,25 @@ Cited over <strong>2,000 times</strong>, this paper improves traditional k-means
 
 ---
 
+
+---
+
+## <span style="color: #FF33D1;">Citation Fireworks: Research Impact Over the Years</span>
+
+![Citation Graph](https://scholar.googleusercontent.com/citations?view_op=graph&hl=en&user=yNWQLYAAAAAJ&citpid=1)
+
+<p align="justify">
+Above is a snapshot of the citation fireworks from my research—each bar a spark of curiosity, collaboration, or (let’s be honest) someone scrambling to finish their thesis at 3 a.m.  
+</p>
+
+<p align="justify">
+This graph is auto-generated from <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color: #8A2BE2;"><strong>Google Scholar</strong></a> and reflects how my work has been cited in the academic wild. The peaks? Likely post-conference buzz. The dips? Possibly vacation time. Or global chaos. Hard to say.
+</p>
+
+<p align="justify">
+Export your citation data from Google Scholar, toss it into a chart wizard (Google Sheets, Excel, or Tableau), and voilà—instant ego boost. Then embed it right into your website to impress yourself, your peers, and maybe even your cat.
+</p>
+
 ## <span style="color: #FF33D1;">Peer-Review Activity</span>
 
 ---
