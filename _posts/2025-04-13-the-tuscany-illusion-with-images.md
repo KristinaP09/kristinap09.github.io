@@ -12,11 +12,6 @@ tags: [Toscana, movie analysis, emotional intelligence, clown network, psycholog
 Set against rolling hills and a painted sunset, the title “The Tuscany Illusion” floats above a reflective man lost in thought. This visual captures the blog’s central theme: the silent war between performing happiness and protecting the inner truth.
 </p>
 
-![Banner Graphic](/images/9763568E-584B-47E7-BC40-ABAAA6D341C6.png)  
-<p style="text-align: center; font-style: italic; color: #555; margin-top: 5px;">
-A contemplative figure sits alone at a wooden table, framed by the golden twilight of the Tuscan countryside. Behind him, ghostly silhouettes suggest the lingering presence of unspoken emotions and invisible influence—echoing the quiet psychological conflict at the heart of Toscana.
-</p>
-
 ---
 
 <style>
@@ -64,7 +59,6 @@ hr {
 }
 </style>
 
-# The Tuscany Illusion: Performing Happiness and the War on Inner Truth
 
 ## Introduction: The Performance Behind the Smile
 
