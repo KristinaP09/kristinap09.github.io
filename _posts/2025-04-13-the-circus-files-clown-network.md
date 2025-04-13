@@ -137,6 +137,29 @@ They don’t evolve because evolution requires thought. Instead, they weaponize 
 </div>
 
 
+
+<h3 style="color:#b30059; border-bottom: 2px solid #b30059; padding-bottom: 4px;">Entry 6: Professionalism Not Found (PNF)</h3>
+
+<div style="text-align: justify">
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Definition:</strong> The complete absence of basic standards, maturity, or ethical conduct — commonly observed in entities like the Clown Network, where professionalism is not just missing… it was never downloaded.
+</div>
+
+<strong>Signature Line:</strong>  
+> “Pathetically beneath even the lowest bar.”
+
+<strong>Expanded Commentary:</strong>  
+You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing.  
+Their actions consistently lack boundaries, accountability, and respect — all wrapped in the delusion that they’re in control.
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Status:</strong> Filed under <em>“System Error: Decency Not Installed.”</em>
+</div>
+
+</div>
+
+
 <h3 style="color:#b30059;">Conclusion</h3>
 <p>When a network becomes so creatively bankrupt that it turns to the deceased for narrative fuel, it’s no longer just unethical — it’s a full-blown spectacle of absurdity. These entries aren’t just roasts; they are professional documentation of clown-level behavior so profoundly stupid, it deserves permanent residency in the Sarcasm Dictionary.</p>
 
