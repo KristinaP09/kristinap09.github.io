@@ -49,25 +49,3 @@
   }
 }
 
-/* === Custom Reading Mode === */
-.reading-mode #main {
-  font-family: Georgia, serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  font-size: 18px;
-  line-height: 1.8;
-  background: #fefefe;
-  color: #333;
-}
-
-.reading-mode #main p {
-  text-align: justify;
-}
-
-.reading-mode nav,
-.reading-mode header,
-.reading-mode footer,
-.reading-mode .site-info {
-  display: none !important;
-}
