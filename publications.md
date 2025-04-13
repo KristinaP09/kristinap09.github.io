@@ -27,7 +27,7 @@ This paper introduces a federated clustering approach for decentralized multi-vi
 
 ---
 
-### <img src="https://github.com/PatternKPS/patternkps.github.io/blob/master/asset/Co-FL-MV-FCM.png" width="26" style="vertical-align: middle;"/> Collaborative Feature-Weighted Multi-View Fuzzy C-Means Clustering  
+### <img src="https://img.icons8.com/color/48/000000/clustering.png" width="26" style="vertical-align: middle;"/> Collaborative Feature-Weighted Multi-View Fuzzy C-Means Clustering  
 **<a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" style="color: #1E7509;">Pattern Recognition</a> (IF: 7.5), 2021**  
 <img src="https://img.shields.io/badge/Topic-Multi_View_Clustering-teal" />  
 <img src="https://img.shields.io/badge/Method-Fuzzy_C_Means-orange" />  
@@ -39,7 +39,7 @@ This work presents a fuzzy clustering algorithm with feature weighting across he
 
 ---
 
-### <img src="https://github.com/PatternKPS/patternkps.github.io/blob/master/asset/U-k-means.png" width="26" style="vertical-align: middle;"/> Unsupervised K-Means Clustering Algorithm  
+### <img src="https://img.icons8.com/color/48/000000/data-configuration.png" width="26" style="vertical-align: middle;"/> Unsupervised K-Means Clustering Algorithm  
 **<a href="https://ieeexplore.ieee.org/abstract/document/9072123" style="color: #1E7509;">IEEE Access</a> (IF: 3.4), 2020**  
 <img src="https://img.shields.io/badge/Citations-2000+_Highly_Cited-blueviolet" />  
 <img src="https://img.shields.io/badge/Algorithm-K_Means-red" />  
