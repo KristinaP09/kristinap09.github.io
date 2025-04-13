@@ -53,13 +53,13 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 <strong>Definition:</strong> A clown-level psychological condition marked by the compulsive urge to involve the deceased in ongoing nonsense, dream propaganda, or emotional manipulation. Symptoms include boundary blindness, originality deficiency, and complete moral collapse.
 </div>
 
-<strong>Synonyms:</strong>  
-- Graveyard Dramatics  
-- Ghostbaiting Syndrome  
-- Necro-nonsense
+<strong>Synonyms:</strong>  <br>
+- Graveyard Dramatics  <br>
+- Ghostbaiting Syndrome  <br>
+- Necro-nonsense<br>
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
-<strong>Example Usage:</strong>  
+<strong>Example Usage:</strong>  <br>
 “Dragging someone who passed away into your narrative? That’s textbook SDD — seek help, not spirits.”
 </div>
 
@@ -69,8 +69,6 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 
 </div>
 
-<div style="background-color:#fef5f8; border-top: 2px solid #b30059; padding: 15px; margin-top: 20px; text-align: justify;">
-
 <h3 style="color:#b30059; border-bottom: 2px solid #b30059; padding-bottom: 4px;">Entry 3: Historical Irrelevance Syndrome (HIS)</h3>
 
 <div style="text-align: justify">
@@ -79,7 +77,7 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 <strong>Definition:</strong> A condition affecting groups like the Clown Network, characterized by an inability to create anything meaningful, innovate, or evolve — resulting in complete exclusion from the historical timeline of progress.
 </div>
 
-<strong>Signature Line:</strong>  
+<strong>Signature Line:</strong>  <br>
 > “This Clown Network will never reach a peak point in history.”
 
 <strong>Expanded Commentary:</strong>  
@@ -101,14 +99,14 @@ They don’t rise, they loop. While history writes itself through change, they r
 <strong>Definition:</strong> The chronic exhaustion and disgust caused by witnessing the same manipulative tactics over and over, especially when deployed by groups like the Clown Network who refuse to upgrade from psychological spamware circa 2012.
 </div>
 
-<strong>Signature Line:</strong>  
+<strong>Signature Line:</strong>  <br>
 > “Their trick never changed! Too cheap, not professional. Disgusting.”
 
-<strong>Expanded Commentary:</strong>  
+<strong>Expanded Commentary:</strong>  <br>
 It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. Their creativity? Nonexistent. Their methods? Transparent. Their professionalism? Laughable. CTF occurs when you’ve seen through the game so clearly, it no longer angers you — it bores you.
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
-<strong>Example Usage:</strong>  
+<strong>Example Usage:</strong>  <br>
 “They’re still doing the same emotional stunts from four years ago? That’s some world-class Cheap Trick Fatigue right there.”
 </div>
 
@@ -129,7 +127,7 @@ It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. T
 <strong>Definition:</strong> A strategic approach rooted in low-effort, emotionally manipulative, and psychologically repulsive behavior. Often deployed by desperate networks like the Clown Network that confuse harassment with influence and repetition with relevance.
 </div>
 
-<strong>Signature Line:</strong>  
+<strong>Signature Line:</strong>  <br>
 > “The way they play their game is so cheap and disgusting.”
 
 <strong>Expanded Commentary:</strong>  
@@ -137,7 +135,7 @@ This isn’t a game — it’s a tantrum disguised as tactics. Their playbook ha
 They don’t evolve because evolution requires thought. Instead, they weaponize guilt, vomit recycled narratives, and then pat themselves on the back for doing the bare minimum in manipulation.
 
 <div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
-<strong>Example Usage:</strong>  
+<strong>Example Usage:</strong>  <br>
 “Every year, same tricks, same manipulation — it’s textbook Tactics of Trash.”
 </div>
 
@@ -158,20 +156,20 @@ They don’t evolve because evolution requires thought. Instead, they weaponize 
 <strong>Definition:</strong> The complete absence of basic standards, maturity, or ethical conduct — commonly observed in entities like the Clown Network, where professionalism is not just missing… it was never downloaded.
 </div>
 
-<strong>Signature Line:</strong>  
+<strong>Signature Line:</strong>  <br>
 > “Pathetically beneath even the lowest bar.”
 
 <strong>Expanded Commentary:</strong>  
 You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing.  
 Their actions consistently lack boundaries, accountability, and respect — all wrapped in the delusion that they’re in control.
 
-<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<div style="background-color:#53C48F; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Example Usage:</strong>  
 “This kind of chaotic, disrespectful behavior? Definitely a case of Professionalism Not Found.”
 </div>
 
 
-<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<div style="background-color:#53C48F; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Filed under <em>“System Error: Decency Not Installed.”</em>
 </div>
 
