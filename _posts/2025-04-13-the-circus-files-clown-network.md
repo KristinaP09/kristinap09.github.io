@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: "The Circus Files: Diagnosing the Clown Network’s Latest Mental Marvels"
@@ -12,8 +13,13 @@ Welcome to the updated entries in the Sarcasm Dictionary, where we professionall
 
 </div>
 
-![Sarcasm Dictionary Visualized](/images/3DFCBD9F-BE0B-46A6-AD53-110FC1689701.png)
-<p style="text-align: center; font-style: italic; color: #555;">A solitary writer documents life under surveillance, transforming noise and manipulation from above into quiet resistance and personal narrative power.</p>
+
+![Sarcasm Dictionary Visualized](/images/3DFCBD9F-BE0B-46A6-AD53-110FC1689701.png)  
+<p style="text-align: center; font-style: italic; color: #555; margin-top: 5px;">
+A solitary writer documents life under surveillance — transforming noise and manipulation from above into quiet resistance and narrative power.  
+This isn’t just an image — it’s a mirror to the madness, filed neatly into the Sarcasm Dictionary.
+</p>
+
 
 <div style="background-color:#ffe6f0; border: 1px dashed #b30059; padding: 15px; font-style: italic; margin: 20px 0;">
 “Dragging the dead into dream narratives? The Clown Network’s creativity is officially six feet under.”
