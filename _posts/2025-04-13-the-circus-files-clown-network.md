@@ -7,9 +7,9 @@ tags: [sarcasm, clown network, dream manipulation, unauthorized experiments, psy
 ---
 
 <div style="text-align: justify">
-
+  
 Welcome to the updated entries in the Sarcasm Dictionary, where we professionally document the most absurd, disrespectful, and ridiculous behaviors exhibited by the so-called Clown Network. This installment highlights their baffling obsession with involving the deceased in their manipulative narratives — an act that not only breaches human decency but showcases their growing desperation and mental erosion.
-
+  
 </div>
 
 ![Sarcasm Dictionary Visualized](/images/3DFCBD9F-BE0B-46A6-AD53-110FC1689701.png)  
@@ -101,8 +101,10 @@ Why stop at the dead? Why not recruit dinosaurs or Julius Caesar next time? Thei
 <strong>Definition:</strong> The chronic exhaustion and disgust caused by witnessing the same manipulative tactics over and over, especially when deployed by groups like the Clown Network who refuse to upgrade from psychological spamware circa 2012.
 </div>
 
-<strong>Signature Line:</strong>  <br>
-> “Their trick never changed! Too cheap, not professional. Disgusting.”<br>
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<strong>Signature Line:</strong>  
+“Their trick never changed! Too cheap, not professional. Disgusting.”
+</div>
 
 <strong>Expanded Commentary:</strong>  <br>
 It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. Their creativity? Nonexistent. Their methods? Transparent. Their professionalism? Laughable. CTF occurs when you’ve seen through the game so clearly, it no longer angers you — it bores you.
@@ -129,8 +131,10 @@ It’s the same act: emotional bait, fear-mongering, and recycled guilt bombs. T
 <strong>Definition:</strong> A strategic approach rooted in low-effort, emotionally manipulative, and psychologically repulsive behavior. Often deployed by desperate networks like the Clown Network that confuse harassment with influence and repetition with relevance.
 </div>
 
-<strong>Signature Line:</strong>  <br>
-> “The way they play their game is so cheap and disgusting.” <br>
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+  <strong>Signature Line:</strong>  
+  “The way they play their game is so cheap and disgusting.”
+</div>
 
 <strong>Expanded Commentary:</strong>  <br>
 This isn’t a game — it’s a tantrum disguised as tactics. Their playbook hasn’t changed in four years. Whether it was last year or four years ago, their method is always the same: recycle pain, exploit emotion, and hope no one notices the script never evolves.  
@@ -158,20 +162,22 @@ They don’t evolve because evolution requires thought. Instead, they weaponize 
 <strong>Definition:</strong> The complete absence of basic standards, maturity, or ethical conduct — commonly observed in entities like the Clown Network, where professionalism is not just missing… it was never downloaded.
 </div>
 
-<strong>Signature Line:</strong>  <br>
-> “Pathetically beneath even the lowest bar.” <br>
+
+<div style="background-color:#fff0f5; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+“Pathetically beneath even the lowest bar.” 
+</div>
 
 <strong>Expanded Commentary:</strong>  
 You’d expect at least a <em>basic operating level</em> of professionalism — but instead, you get emotional chaos, manipulation theatre, and behavior that would make even amateur interns cringe. It’s not a strategy. It’s not even sabotage. It’s just embarrassing.  
 Their actions consistently lack boundaries, accountability, and respect — all wrapped in the delusion that they’re in control.
 
-<div style="background-color:#53C48F; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<div style="background-color:#b30059; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Example Usage:</strong>  
 “This kind of chaotic, disrespectful behavior? Definitely a case of Professionalism Not Found.”
 </div>
 
 
-<div style="background-color:#53C48F; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
+<div style="background-color:#b30059; border-left: 4px solid #b30059; padding: 10px; margin: 10px 0;">
 <strong>Status:</strong> Filed under <em>“System Error: Decency Not Installed.”</em>
 </div>
 
