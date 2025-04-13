@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "The Circus Files: Diagnosing the Clown Network’s Latest Mental Marvels"
