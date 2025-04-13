@@ -7,9 +7,7 @@ tags: [sarcasm, clown network, dream manipulation, unauthorized experiments, psy
 ---
 
 ![Sarcasm Dictionary Visualized](/images/3DFCBD9F-BE0B-46A6-AD53-110FC1689701.png)
-<p align="justify">
-<em>A solitary writer documents life under surveillance, transforming noise and manipulation from above into quiet resistance and personal narrative power.</em>
-</p>
+*A solitary writer documents life under surveillance, transforming noise and manipulation from above into quiet resistance and personal narrative power.*
 
 
 <div style="text-align: justify">
