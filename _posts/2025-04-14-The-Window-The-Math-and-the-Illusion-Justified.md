@@ -9,67 +9,67 @@ tags: [tenants-rights, truth, rental-chaos, housing-experience, perspective]
 ![The Window, the Math, and the Madness](/images/F016B3F2-A015-4A3C-BC4B-E8E4032BF288.png)
 
 <div align="justify">
-In a modest apartment building tucked into the folds of Corridoni 48, a story unfolded—one not about rent, or bills, or noise, but about something far quieter: the slow unraveling of illusion.
+In a modest apartment building tucked into the folds of Corridoni 48, a story unfolded—one not about rent, or bills, or noise, but about something far quieter: the slow unraveling of illusion.<br>
 </div>
-<br>
+
 <div align="justify">
-It began with a dispute over utility charges. Not a dramatic one—there were no raised voices or threats—just the kind of careful, contractual accountability expected in any civilized rental agreement. I had reviewed the bills. I had done the math. I had referenced the terms we had all signed. What I asked for was simple: accuracy.
+It began with a dispute over utility charges. Not a dramatic one—there were no raised voices or threats—just the kind of careful, contractual accountability expected in any civilized rental agreement. I had reviewed the bills. I had done the math. I had referenced the terms we had all signed. What I asked for was simple: accuracy.<br>
 </div>
-<br>
+
 <div align="justify">
 The response I received was anything but.<br>
-Rather than a correction, I was met with a pivot—an unexpected message alleging that cigarette butts had been found near the building and that perhaps, by virtue of the fact that I “often open my window,” I could be responsible.
+Rather than a correction, I was met with a pivot—an unexpected message alleging that cigarette butts had been found near the building and that perhaps, by virtue of the fact that I “often open my window,” I could be responsible.<br>
 </div>
-<br>
+
 <div align="justify">
-It was a curious leap of logic. There was no proof offered, no explanation of how the deduction had been made—only an implicit accusation, and a tone that suggested the matter was already settled.
+It was a curious leap of logic. There was no proof offered, no explanation of how the deduction had been made—only an implicit accusation, and a tone that suggested the matter was already settled.<br>
 </div>
-<br>
+
 <div align="justify">
-The attempt, intentional or not, was to redirect the narrative. To shift attention from contractual violations to behavioral suspicion. To make my window—not their miscalculation—the story.
+The attempt, intentional or not, was to redirect the narrative. To shift attention from contractual violations to behavioral suspicion. To make my window—not their miscalculation—the story.<br>
 </div>
-<br>
+
 <div align="justify">
-But what they failed to understand is that my open window isn’t a confession. It’s a consequence.
+But what they failed to understand is that my open window isn’t a confession. It’s a consequence.<br>
 </div>
-<br>
+
 <div align="justify">
-I open my window because the air inside is stale. Because the noise is constant. Because the atmosphere—physically and otherwise—is heavy. In a building where clarity is rare and boundaries are frequently bent, the window is one of the few openings to reason. To light. To fresh, verifiable air.
+I open my window because the air inside is stale. Because the noise is constant. Because the atmosphere—physically and otherwise—is heavy. In a building where clarity is rare and boundaries are frequently bent, the window is one of the few openings to reason. To light. To fresh, verifiable air.<br>
 </div>
-<br>
+
 <div align="justify">
-And therein lies the discomfort.
+And therein lies the discomfort.<br>
 </div>
-<br>
+
 <div align="justify">
-Because when a system relies on confusion, on blurred lines and unspoken assumptions, even the smallest exposure to the outside world feels like a threat. The outside, after all, is measurable. Quiet. Honest. If anyone were to stand on the street below and compare, they’d hear it too: the inside is louder than it should be.
+Because when a system relies on confusion, on blurred lines and unspoken assumptions, even the smallest exposure to the outside world feels like a threat. The outside, after all, is measurable. Quiet. Honest. If anyone were to stand on the street below and compare, they’d hear it too: the inside is louder than it should be.<br>
 </div>
-<br>
+
 <div align="justify">
 What followed next was predictable. Where silence failed, suspicion stepped in.  <br>
 Cigarette butts. Windows. <strong>“Other landlords.”</strong>  <br>
-All of it unverified. None of it new.
+All of it unverified. None of it new.<br>
 </div>
-<br>
+
 <div align="justify">
-This is what systems do when confronted with evidence they can’t refute. They pivot. They project. They discredit the observer rather than confront the observation.
+This is what systems do when confronted with evidence they can’t refute. They pivot. They project. They discredit the observer rather than confront the observation.<br>
 </div>
-<br>
+
 <div align="justify">
-But I have no interest in blame. Only in clarity.
+But I have no interest in blame. Only in clarity.<br>
 </div>
-<br>
+
 <div align="justify">
 And so I continue to open my window—not to make a statement, not to prove a point, but because I prefer to live where the air is clean.  <br>
-And if, in doing so, a little truth escapes—so be it.
+And if, in doing so, a little truth escapes—so be it.<br>
 </div>
-<br>
+
 <div align="justify">
 Because sometimes, all it takes to collapse illusion is not a confrontation or a lawsuit—but a breath.  
 One window. Open.  <br>
 Long enough to let someone outside hear the difference.
 </div>
-<br>
+
 ---
 
 ## A Follow-Up: The Window, the Math, and the Madness
