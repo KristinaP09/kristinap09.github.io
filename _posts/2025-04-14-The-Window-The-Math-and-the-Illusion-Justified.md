@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "The Window, the Math, and the Illusion"
-date: 2025-04-11
+date: 2025-04-14
 author: Anonymous Observer
 tags: [tenants-rights, truth, rental-chaos, housing-experience, perspective]
 ---
 
+![The Window, the Math, and the Madness](/images/F016B3F2-A015-4A3C-BC4B-E8E4032BF288.png)
+
 <div align="justify">
-# The Window That Let in the Truth
-*By Kristina*
 
 In a modest apartment building tucked into the folds of Corridoni 48, a story unfolded—one not about rent, or bills, or noise, but about something far quieter: the slow unraveling of illusion.
 
