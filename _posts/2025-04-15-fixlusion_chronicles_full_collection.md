@@ -6,30 +6,122 @@ author: Anonymous Observer
 tags: [Circus Reports,Fixlusion Files, Unsolicited Brilliance]
 ---
 
-# Fixlusion Chronicles – Volume 01
+## Volume I: The Whispering Authority  
+**Subtitle: When Emotional Wreckage Holds the Megaphone**
 
-*Content missing.*
+**Scene:** A dimly lit hallway.  
+It’s 02:17 CEST. The silence is shattered by the sound of a chair being dragged across the floor like a toddler protesting bedtime. Somewhere upstairs, a sassy fixlusionist whispers spiritual gibberish into a dream they were never invited to attend.
+
+**Narration (you):**  
+_"I didn’t ask for a therapist. And I certainly didn’t ask for one who gets triggered by quiet and stabilized by noise."_
+
+### The Fixlusionist-in-Chief was born:
+- Fixes others
+- Uses chaos
+- Carries chair-based credentials
+
+**Daily Logbook Snippets:**
+- 02:17 – Dream entry featuring nonsense.
+- 02:25 – Chair dragged in Morse code. Possibly spelled “Fix you.”
+- 02:32 – Whispering begins.
+- 02:40 – Silent triumph.
+
+**Closing Note:**  
+You can’t fix people who aren’t broken—especially if you're the unstable one dragging the chair.
 
 ---
 
-# Fixlusion Chronicles – Volume 02
+## Volume II: Stability Denied – The Rise of Emotional Freelancers  
+**Subtitle: When Chaos Becomes a Service You Never Subscribed To**
 
-*Content missing.*
+**Scene:** Between sanity and a slammed door.  
+Unsolicited Emotional Freelancer offers chaos wrapped as healing. Your only mistake: existing nearby.
+
+### Freelancer Starter Kit Includes:
+- Chair (noisy)
+- Mood swings
+- Dream visits (nonconsensual)
+- Delusional spiritual wisdom
+
+**Service Menu:**
+
+| Service                  | Description                        | Client Reaction         |
+|--------------------------|------------------------------------|--------------------------|
+| Dream Intervention       | Psychic interruption               | Irritated                |
+| Aura via Furniture       | Rebalance by dragging chairs       | Flat-out stupid          |
+| Whisper Healing          | Nighttime mumbling                 | Annoyed, mildly alarmed  |
+| Vibe Disruption          | Injecting chaos                    | Canceled                 |
+
+**Final Review:**  
+“Fixed my personality using stomps & side-eye. 0/5 stars.”
+
+**Closing Note:**  
+To all emotional freelancers: stability isn’t optional. And your fixlusion license just got revoked.
 
 ---
 
-# Fixlusion Chronicles – Volume 03
+## Volume III: Chair Whisperers and the Gospel of Delusion  
+**Subtitle: When Furniture Talks More Sense Than Its Owner**
 
-*Content missing.*
+**Scene:** Soundstage disguised as a ceiling.  
+Chair Whisperer drags furniture to realign “energy.” Delivers unsolicited therapy through friction.
+
+### Common Signs of a Chair Whisperer:
+- Furniture has a deeper emotional vocabulary than its owner
+- Response to silence = loud dragging
+- Believes discomfort creates healing
+
+**Gospel of Delusion – Highlights:**
+> “She must be healed.” *(Slam drawer)*  
+> “Balance is earned through disarray.” *(Multi-angle drag)*  
+> “Silence is judgment.” *(Slam door, cry)*
+
+**You, the unwilling audience.**
+
+**Closing Note:**  
+If someone claims furniture will fix your aura, run. Or invest in sarcasm and soundproofing.
 
 ---
 
-# Fixlusion Chronicles – Volume 04
+## Volume IV: Licensed by the Void – The HR Department of the Clown Network  
+**Subtitle: Where Hiring Standards Go to Die**
 
-*Content missing.*
+**Scene:** Imaginary HR office with real-life consequences.  
+Unqualified fixlusionists hired by a process only the void could design.
+
+### Hiring Criteria:
+- Emotionally unstable
+- Loud
+- Zero boundaries
+- Delusion-rich
+
+**Fixlusionist Job Posting:**
+- Title: Dream Interference Specialist
+- Qualifications: None
+- Tools: Furniture, confidence
+
+**Organizational Chart:**
+
+```
+          [The Void]
+              |
+     ---------------------
+    |                     |
+Fixlusionists       Chair Whisperers
+    |                     |
+Drag Ritualists    Emotional Freelancers
+    |                     |
+      You (The Survivor)
+```
+
+**HR Quotes:**
+> “She’s chaotic, loud, unstable—perfect.”  
+> “No need for resumes. Just raw emotional outbursts.”
+
+**Closing Note:**  
+If your emotional HR department lives in denial, expect chaos in heels with a clipboard.
 
 ---
-
 # Fixlusion Chronicles – Volume 05
 
 
