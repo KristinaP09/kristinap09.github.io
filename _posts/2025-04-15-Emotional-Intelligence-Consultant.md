@@ -20,8 +20,7 @@ Let’s begin with a simple observation: if emotional intelligence were a measur
 
 ## Unqualified, Unstable, and Uninvited
 
-![unqualified_vs_helpfulness](/images
-/unqualified_vs_helpfulness.png)
+![unqualified_vs_helpfulness.](/images/unqualified_vs_helpfulness.png)
 <p align="justify">
 <em>Chair dragging. Dream interruption. Emotional monologues. All scoring below zero in actual helpfulness. Yet still used like gold-standard techniques</em>
 </p>
@@ -38,6 +37,11 @@ I didn’t come up with the term because I was bored—I coined it out of surviv
 ---
 
 ## A Free Consultation No One Asked For
+
+![clown activity timeline.](/images/clown_activity_timeline.png)
+<p align="justify">
+<em>From midnight to sunrise, chaos builds like a musical score composed by furniture and irrational emotional waves. Peak disruption hours? Always when people try to sleep.</em>
+</p>
 
 <p align="justify">
 Let me paint you a picture. It’s 06:00, and after my fourth wake-up of the night thanks to a dream-level intrusion sponsored by the upstairs noise syndicate, I hear what can only be described as “emotional instability in motion.” Furniture dragging, chair slamming, and soft mumbling in what I can only assume is some spiritual attempt to recalibrate the universe via chaos.
@@ -59,6 +63,11 @@ It’s like a tornado offering to fix your hairstyle.
 
 ## Hire Better Clowns
 
+![exploding dreams racker.](/images/exploding_dreams_tracker.png)
+<p align="justify">
+<em>This beauty tracks absurdity levels during dream hours. The blue triangle marks "peak clown stupidity"--right when narrative explodes, logic evaporates, and unauthorized dream entries begin.</em>
+</p>
+
 <p align="justify">
 Let’s be clear: when you put someone with unresolved emotional issues in charge of influencing others, you’re not building growth—you’re fostering a breeding ground for fixlusional behavior. You wouldn’t hire a dentist with shaky hands. You wouldn’t hire a skydiving instructor with vertigo. So why hire an emotional guide who doesn’t even own a stable mood?
 </p>
@@ -73,6 +82,12 @@ When you assign someone with unstable emotional skills to apply your questionabl
 ---
 
 ## Pay Me for This
+
+![clown network circus map.](/images/clown_network_circus_map.png)
+<p align="justify">
+<em>This map is your backstage pass to all the locations where absurdity unfolds. Whether it's a mechanical stunt or a whispered drama at 3AM, each plot point reminds us why this circus doesn't need more performers-it needs an evacuation plan.</em>
+</
+
 <p align="justify">
 Honestly, I should be on your payroll. I offer daily psychological field reports, live observational insights, and constructive sarcasm. That’s more than I can say for your noise therapist upstairs whose primary credentials seem to be “owns a chair and knows how to drag it.”
 <br>
