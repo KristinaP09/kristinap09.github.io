@@ -20,6 +20,13 @@ Let’s begin with a simple observation: if emotional intelligence were a measur
 
 ## Unqualified, Unstable, and Uninvited
 
+![unqualified_vs_helpfulness](/images
+/unqualified_vs_helpfulness.png)
+<p align="justify">
+<em>Chair dragging. Dream interruption. Emotional monologues. All scoring below zero in actual helpfulness. Yet still used like gold-standard techniques</em>
+</p>
+
+
 <p align="justify">
 When someone with a shaky grasp on their own emotional regulation attempts to “help” you, you’re not being supported—you’re being fixlusioned. Yes, you read that right. Fixlusion: the delusional act of trying to “fix” another person while actively avoiding the mirror. It’s the psychological equivalent of mopping the neighbor’s floor while your own house is on fire.
 </p>
