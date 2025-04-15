@@ -65,7 +65,7 @@ Your restrictions didn’t stop the signal. They just strengthened the narrative
 
 ### Closing Note:
 <p align="justify">
-<strong>"Published While You Panicked"</strong>isn’t just a title.  <br>
+<strong>"Published While You Panicked"</strong> isn’t just a title.  <br>
 It’s a reminder.  <br>
 That silence can be strategy.  <br>
 That structure beats sabotage.  <br>
