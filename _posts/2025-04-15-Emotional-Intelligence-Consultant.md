@@ -9,11 +9,14 @@ tags: [Circus Reports,Fixlusion Files, Unsolicited Brilliance]
 
 ![emotional vs fixlusion.](/images/emotional_vs_fixlusion.png)
 <p align="justify">
-<em>The less emotional stability a person has, the more fixlusionist performances they give. Coincidence? No. That's just data wearing a red nose.</p>
+<em>The less emotional stability a person has, the more fixlusionist performances they give. Coincidence? No. That's just data wearing a red nose.</em>
+</p>
 
 <p align="justify">
 Let’s begin with a simple observation: if emotional intelligence were a measurable commodity, some people would still be making monthly payments on their down payment. And yet, astonishingly, these very individuals are often handed the imaginary clipboard titled “Fix Other People”—as if they’ve passed an exam that never existed.
 </p>
+
+---
 
 ## Unqualified, Unstable, and Uninvited
 
@@ -25,11 +28,15 @@ When someone with a shaky grasp on their own emotional regulation attempts to �
 I didn’t come up with the term because I was bored—I coined it out of survival. When you’re surrounded by a Clown Network of sassy-yet-unstable self-proclaimed healers, you have two options: go insane or build a sarcasm dictionary.
 </p>
 
+---
+
 ## A Free Consultation No One Asked For
 
 <p align="justify">
 Let me paint you a picture. It’s 06:00, and after my fourth wake-up of the night thanks to a dream-level intrusion sponsored by the upstairs noise syndicate, I hear what can only be described as “emotional instability in motion.” Furniture dragging, chair slamming, and soft mumbling in what I can only assume is some spiritual attempt to recalibrate the universe via chaos.
 </p>
+
+---
 
 ## Encore in an Empty Theater
 
@@ -41,16 +48,22 @@ And yet—and yet—this very person seems to believe I need “fixing.” Their
 It’s like a tornado offering to fix your hairstyle.
 </p>
 
+---
+
 ## Hire Better Clowns
 
 <p align="justify">
 Let’s be clear: when you put someone with unresolved emotional issues in charge of influencing others, you’re not building growth—you’re fostering a breeding ground for fixlusional behavior. You wouldn’t hire a dentist with shaky hands. You wouldn’t hire a skydiving instructor with vertigo. So why hire an emotional guide who doesn’t even own a stable mood?
 </p>
 
+---
+
 ## Important note for the Universe:
 <p align="justify">
 When you assign someone with unstable emotional skills to apply your questionable “fix” strategy on someone else—without consent or qualification—don’t expect healing. Expect chaos, confusion, and a trail of slammed doors.
 </p>
+
+---
 
 ## Pay Me for This
 <p align="justify">
