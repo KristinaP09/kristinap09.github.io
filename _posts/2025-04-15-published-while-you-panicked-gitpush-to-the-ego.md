@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Published While You Panicked: A GitPush to the Ego*"
+title: "Published While You Panicked: A GitPush to the Ego"
 date: 2025-04-15
 author: Anonymous Observer
 tags: [Circus Reports,Fixlusion Files, Unsolicited Brilliance]
