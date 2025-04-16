@@ -51,7 +51,7 @@ Behavioral signaling through symbolic colors, staged noise (e.g., dragging furni
 </p>
 
 <p align="justify">
-Furthermore, the imitation of these signals by others (e.g., unrelated residents or landlords) suggests potential contagion of behavioral mimicry—what we refer to here as **distributed stupidity**. This spread is not merely accidental but appears to mimic the original instigators’ performance-based logic.
+Furthermore, the imitation of these signals by others (e.g., unrelated residents or landlords) suggests potential contagion of behavioral mimicry—what we refer to here as <strong>distributed stupidity</strong>. This spread is not merely accidental but appears to mimic the original instigators’ performance-based logic.
 </p>
 
 <p align="justify">
