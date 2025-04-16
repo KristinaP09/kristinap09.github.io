@@ -6,7 +6,7 @@ author: Anonymous Observer
 tags: [pattern-analysis, symbolic-behavior, surveillance, psychological-signals, clown-network]
 ---
 
-![Clown Juggling Stability, Performance, and Silence](A_digital_photograph_features_a_clown_dressed_in_a.png)
+![Clown Juggling Stability, Performance, and Silence](/images/F0B44215-90C9-4CEA-AEC2-03F8572A3C20.png)
 
 ## Abstract
 
