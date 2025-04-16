@@ -63,7 +63,7 @@ The quote from a prior blog post remains relevant and empirically supported:
 ## Conclusion
 
 <p align="justify">
-The data suggest ongoing, deliberate disruption consistent with psychological performance behaviors. Symbolic manipulation, auditory cues, and dream narrative intrusions reflect a pattern worth further observation and classification. 
+The data suggest ongoing, deliberate disruption consistent with psychological performance behaviors. Symbolic manipulation, auditory cues, and dream narrative intrusions reflect a pattern worth further observation and classification. As a next step, we propose developing a spatial diffusion model to map the distributed behavior of the Clown Network across different buildings in the Corridoni area, capturing patterns of symbolic signaling, noise propagation, and inter-building mimicry—tentatively titled <em>Clown Syndicate Diffusion Model (CSDM)</em>.
 </p>
 
 
