@@ -72,7 +72,7 @@ There is a fundamental difference between acts done intentionally and those done
   <footer style="margin-top: 5px; font-size: 0.85em; color: #777;">— Through the Layers, 2025</footer>
 </blockquote>
 
-## 05:24 CEST — Third Wake-Up: Nature vs. Network </strong><br>  
+## 05:24 CEST — Third Wake-Up: Nature vs. Network  
 <p align="justify">
 My third wake-up was again tied to the same thematic narrative loop—undeniably not originating from me. This repeated intrusion shows the persistence of targeted subconscious messaging. <br>
 </p>
@@ -118,7 +118,7 @@ The documentation continues—not for retaliation, but for clarity. What happens
 </p>
 ---
 
-*Filed under: Sound Studies, Behavioral Tracking, Unauthorized Psychological Influence, Natural Resilience*
+<em>Filed under: Sound Studies, Behavioral Tracking, Unauthorized Psychological Influence, Natural Resilienc</em>*
 
 
 
