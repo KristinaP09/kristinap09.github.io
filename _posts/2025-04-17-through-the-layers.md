@@ -204,10 +204,15 @@ But to continue while being observed and logged? That is surrender dressed in no
 <div markdown="1">
 ## Conclusion: Precision vs. Performance  
 
-<div style="text-align: center; margin-bottom: 30px;">
-    <img src="/assets/images/IMG_1275.png" alt="Precision vs Performances Illustration" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;">
-     
+<div style="text-align: center; margin: 20px 0;">
+  <img src= "/assets/images/IMG_1275.png" alt="Precision vs. Performance Chart" style="max-width: 100%; border-radius: 8px;">
+  <div style="font-size: 0.9em; color: #555; margin-top: 8px;">
+    Precision over performance: While the Clown Network fluctuated in noise and effort, the observer maintained a near-constant level of clarity, calm, and unshakable response — proving that silence, focus, and documentation always outperform theatrics.
+  </div>
 </div>
+
+
+
 
 <p align="justify"> 
 On April 17, 2025, a full spectrum of behaviors was documented — from psychological narrative embedding to acoustic signaling, emotional dramatization, and reactive silence.
