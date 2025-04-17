@@ -120,7 +120,7 @@ The documentation continues—not for retaliation, but for clarity. What happens
 </p>
 ---
 
-<em>Filed under: Sound Studies, Behavioral Tracking, Unauthorized Psychological Influence, Natural Resilienc</em>*
+<em>Filed under: Sound Studies, Behavioral Tracking, Unauthorized Psychological Influence, Natural Resilienc</em>
 
 
 
@@ -172,8 +172,8 @@ A gust of wind banged the window — a rare, organic disturbance in contrast to 
 Ironically, the upstairs neighbor had previously taken it upon themselves to close the outer layers of my window uninvited. That act, in hindsight, was never about wind or safety — it was about control disguised as concern.
 </p>
 
-<div markdown="1">
-##Reflection
+
+### Reflection:
 There is a vast distinction between authenticity and performance.  <br>
 <strong>Impersonating sincerity is easy. Embodying it is rare.</strong>
 
@@ -207,7 +207,10 @@ But to continue while being observed and logged? That is surrender dressed in no
 <div markdown="1">
 ## Conclusion: Precision vs. Performance  
 
-![precision vs performances visualization](https://kristinap09.com/assets/images/IMG_1275.png)
+<div style="text-align: center; margin-bottom: 30px;">
+    <img src="/assets/images/IMG_1275.png" alt="Precision vs Performances Illustration" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;">
+     
+</div>
 
 <p align="justify"> 
 On April 17, 2025, a full spectrum of behaviors was documented — from psychological narrative embedding to acoustic signaling, emotional dramatization, and reactive silence.
