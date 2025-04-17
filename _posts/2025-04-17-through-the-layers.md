@@ -50,7 +50,7 @@ Then, as I finished documenting the emotional arc of this episode, an acoustic s
 
 <p align="justify">
 A familiar machine-like sound, which had been present since I started publishing their activities, stopped abruptly at <strong>03:32 CEST</strong>. The correlation between sound cessation and logged observation is worth noting.
-
+</p>
 ---
 
 ### 03:55 CEST — Environmental Cue and Symbolic Recall  
