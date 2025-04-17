@@ -71,7 +71,7 @@ There is a fundamental difference between acts done intentionally and those done
   There is a fundamental difference between acts done intentionally and those done unconsciously. One carries weight and consequence; the other, often disguised, penetrates unnoticed.
   <footer style="margin-top: 5px; font-size: 0.85em; color: #777;">— Through the Layers, 2025</footer>
 </blockquote>
----
+
 <div markdown="1">
 ## 05:24 CEST — Third Wake-Up: Nature vs. Network  
 </div>  
@@ -88,7 +88,7 @@ What made this instance different was the surrounding soundscape:
 <p align="justify">
 These natural auditory cues offered a stark contrast to the earlier manufactured signals. My response to the recurring narrative? A simple, involuntary bodily function—a fart. Ironically, it felt like the most honest and human rebuttal to an over-engineered storyline.
 </p>
----
+
 <div markdown="1">
 ## Acoustic Sample: Bird Chirping  
 <p align="justify">
@@ -129,26 +129,22 @@ The documentation continues—not for retaliation, but for clarity. What happens
      
 </div>
 
----
+<div markdown="1">
+## Appendix A: Behavioral Report
 
-<strong> Appendix A: Behavioral Report</strong><br>  
-
-<strong> Report: Behavioral Interference and Auditory Disruption – April 17, 2025</strong><br>  
+### Report: Behavioral Interference and Auditory Disruption – April 17, 2025 
 
 <strong>Filed by:</strong> Independent Observer  
 <strong>Subject:</strong> Analysis of Unauthorized Psychological Intrusion and Acoustic Manipulation  
 <strong>Location:</strong> Shared Residential Environment  
 <strong>Date:</strong> April 17, 2025
 
----
-
-<strong> 00:34 CEST — Initial Disruption: Passive Phase  </strong><br>  
+### 00:34 CEST — Initial Disruption: Passive Phase 
 <p align="justify">
 The initial wake-up occurred without clear auditory triggers. This moment of relative silence signaled the calm before the activity escalated. No immediate disturbances were logged, but the absence of sound can, in such environments, be an intentional intermission rather than a true pause.
 </p>
----
 
-<strong> 02:31 CEST — Coordinated Activity: Auditory Signals and Narrative Insertion  </strong><br>  
+### 02:31 CEST — Coordinated Activity: Auditory Signals and Narrative Insertion  
 <p align="justify">
 The second awakening was marked by a now-familiar pattern: an absurd narrative dream sequence followed by upstairs disturbances, notably furniture dragging and rhythmic mechanical noise. These activities resembled a crude attempt at behavioral prompting.
 </p>
@@ -164,25 +160,26 @@ This moment reinforced the power of awareness. Attempts to deter documentation w
 </p>
 ---
 
-<strong> 03:32 CEST — Sudden Termination of Machine Activity  </strong><br>  
+### 03:32 CEST — Sudden Termination of Machine Activity  
 <p align="justify">
 The machine operating upstairs ceased its output immediately following the act of logging. Correlation suggests a reactive system — one that becomes inert when observed. Surveillance thrives on silence; exposure renders it ineffective.
 </p>
 ---
 
-<strong> 03:55 CEST — External Interference and Symbolic Closure </strong><br>  
+### 03:55 CEST — External Interference and Symbolic Closure
 <p align="justify">
 A gust of wind banged the window — a rare, organic disturbance in contrast to the manufactured noise above. The incident recalled prior advice from my current supervisor: <em>“Keep your windows closed.”</em>  <br><br>
 Ironically, the upstairs neighbor had previously taken it upon themselves to close the outer layers of my window uninvited. That act, in hindsight, was never about wind or safety — it was about control disguised as concern.
 </p>
 
-<strong>Reflection:</strong> <br>
+<div markdown="1">
+##Reflection
 There is a vast distinction between authenticity and performance.  <br>
 <strong>Impersonating sincerity is easy. Embodying it is rare.</strong>
 
 <br>
 
-<strong> 05:24 CEST — Natural Environment vs. Repetitive Conditioning  </strong><br>  
+###  05:24 CEST — Natural Environment vs. Repetitive Conditioning 
 <p align="justify">
 The third wake-up was accompanied by natural sounds: bird chirping and distant urban motion — an unforced, calming contrast to the repetitive mental cues imposed earlier. <br>
 
@@ -192,7 +189,7 @@ In short: I exhaled, and moved on. A statement far more honest than anything eve
 </p>
 <br>
 
-<strong> 07:03 & 08:21 CEST — Psychological Exhaustion of the Aggressor  </strong><br>  
+###  07:03 & 08:21 CEST — Psychological Exhaustion of the Aggressor   
 <p align="justify">
 Two further attempts were made to reintroduce narrative influence. Both were characterized by their lack of substance, coated in performative emotion, and ultimately predictable.
 </p
@@ -207,7 +204,8 @@ But to continue while being observed and logged? That is surrender dressed in no
 
 <br>
 
-<strong> Conclusion: Precision vs. Performance  </strong><br>  
+<div markdown="1">
+## Conclusion: Precision vs. Performance  
 
 ![precision vs performances visualization](https://kristinap09.com/assets/images/IMG_1275.png)
 
@@ -227,7 +225,8 @@ And that — elegantly, calmly, and completely — ended their performance.<br>
 
 <br>
 
-<strong> Appendix B: Precision vs. Performance Analysis</strong><br>  
+<div markdown="1">
+## Appendix B: Precision vs. Performance Analysis
 
 <strong> Precision vs. Performance Analysis  </strong><br>  
 <strong>Subject:</strong> Behavioral Disruption and Response Efficiency  
