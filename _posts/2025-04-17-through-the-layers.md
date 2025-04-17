@@ -168,6 +168,10 @@ But to continue while being observed and logged? That is surrender dressed in no
 ---
 
 ## Conclusion: Precision vs. Performance  
+
+![precision vs performances visualization](/assets/images/IMG_1275.png)
+<p align="justify">
+
 On April 17, 2025, a full spectrum of behaviors was documented — from psychological narrative embedding to acoustic signaling, emotional dramatization, and reactive silence.
 
 The entity referred to as the *Clown Network* has demonstrated a consistent commitment to distraction, manipulation, and attention-seeking through non-physical means. Their tools are not instruments of harm, but echoes of irrelevance. And like all irrelevant things, they fade once you stop feeding them.
