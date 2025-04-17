@@ -7,15 +7,13 @@ tags: [sound-analysis, behavioral-tracking, clown-network, bird-chronicles, slee
 ---
 
 <div style="text-align: center; margin-bottom: 30px;">
-    <img src="/assets/images/clown-network-illustration.png" alt="Clown Network Chaos Illustration" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;">
+    <img src="/assets/images/FACB0C62-4AAC-4BCC-8454-6D53521861A7.png" alt="Clown Network Chaos Illustration" style="max-width: 100%; border-radius: 8px; margin-bottom: 20px;">
     <blockquote style="text-align: center; font-style: italic; background-color: #f2f2f2; padding: 15px; border-left: 4px solid #888; margin: 0 auto; max-width: 800px; border-radius: 5px;">
-        “They tried to open a scar — we turned it into a creature and ignored all their nonsense narratives.”
+        “They sought to rend a scar anew — yet lo, I shaped it into a beast of mine own making, and cast aside their foolish tongues. Whilst they did proclaim to others that I hath forsaken duty, know this: I now forsake all that springs from their lips, most keenly those laced with suspicion.”
     </blockquote>
 </div>
 
 
-
-> **“They tried to open a scar — we turned it into a creature and ignored all their nonsense narratives.”**
 
 ![the calm of a mathematician bed visualization](/images/6965BE87-B04D-48D2-8565-3467A94621CB.png)
 <p align="justify">
