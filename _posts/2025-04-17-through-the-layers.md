@@ -182,11 +182,9 @@ There is a vast distinction between authenticity and performance.  <br>
 <p align="justify">
 The third wake-up was accompanied by natural sounds: bird chirping and distant urban motion — an unforced, calming contrast to the repetitive mental cues imposed earlier. <br>
 
-Despite another recycled narrative, clearly not originating from me, I chose to respond not with resistance but with natural dismissal<br>
-— a simple, involuntary physiological cue.  <br>
+Despite another recycled narrative, clearly not originating from me, I chose to respond not with resistance but with natural dismissal— a simple, involuntary physiological cue.  <br>
 In short: I exhaled, and moved on. A statement far more honest than anything ever transmitted through the Clown Network’s channels.
 </p>
-<br>
 
 ###  07:03 & 08:21 CEST — Psychological Exhaustion of the Aggressor   
 <p align="justify">
