@@ -51,8 +51,7 @@ Then, as I finished documenting the emotional arc of this episode, an acoustic s
 <p align="justify">
 A familiar machine-like sound, which had been present since I started publishing their activities, stopped abruptly at <strong>03:32 CEST</strong>. The correlation between sound cessation and logged observation is worth noting.
 
----
-
+<div markdown="1">
 ### 03:55 CEST — Environmental Cue and Symbolic Recall  
 <p align="justify">
 A brief but powerful gust of wind caused the window to bang. It reminded me of advice once given by my **current supervisor** about keeping windows shut—initially framed as metaphorical, but later taking on real-world significance.
