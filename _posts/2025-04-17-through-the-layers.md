@@ -189,7 +189,7 @@ In short: I exhaled, and moved on. A statement far more honest than anything eve
 ###  07:03 & 08:21 CEST — Psychological Exhaustion of the Aggressor   
 <p align="justify">
 Two further attempts were made to reintroduce narrative influence. Both were characterized by their lack of substance, coated in performative emotion, and ultimately predictable.
-</p
+</p>
 
 <p align="justify">
 My response remained unchanged: non-engagement.  <br>
