@@ -71,6 +71,7 @@ There is a fundamental difference between acts done intentionally and those done
   There is a fundamental difference between acts done intentionally and those done unconsciously. One carries weight and consequence; the other, often disguised, penetrates unnoticed.
   <footer style="margin-top: 5px; font-size: 0.85em; color: #777;">— Through the Layers, 2025</footer>
 </blockquote>
+---
 <div markdown="1">
 ## 05:24 CEST — Third Wake-Up: Nature vs. Network  
 </div>  
@@ -88,8 +89,8 @@ What made this instance different was the surrounding soundscape:
 These natural auditory cues offered a stark contrast to the earlier manufactured signals. My response to the recurring narrative? A simple, involuntary bodily function—a fart. Ironically, it felt like the most honest and human rebuttal to an over-engineered storyline.
 </p>
 ---
-
-<strong> Acoustic Sample: Bird Chirping </strong><br>   
+<div markdown="1">
+## Acoustic Sample: Bird Chirping  
 <p align="justify">
 As part of the night's documentation, I’ve isolated and cleaned a recording of the ambient bird sounds from this timeframe. You can listen here:
 <br><br>
@@ -108,8 +109,8 @@ As part of the night's documentation, I’ve isolated and cleaned a recording of
 This sample serves as both a timestamp and a symbolic counterbalance to synthetic interference. The birds continue, unaware—untainted.
 </p>
 ---
-
-<strong> Conclusion  </strong><br>  
+<div markdown="1">
+## Conclusion  
 <p align="justify">
 This night reflected more than interrupted sleep. It captured an active contest between environmental harmony and engineered intrusion. Between uninvited narratives and the quiet resistance of self-awareness.
 </p>
