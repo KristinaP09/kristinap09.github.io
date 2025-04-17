@@ -54,7 +54,7 @@ A familiar machine-like sound, which had been present since I started publishing
 <div markdown="1">
 ### 03:55 CEST — Environmental Cue and Symbolic Recall  
 <p align="justify">
-A brief but powerful gust of wind caused the window to bang. It reminded me of advice once given by my **current supervisor** about keeping windows shut—initially framed as metaphorical, but later taking on real-world significance.
+A brief but powerful gust of wind caused the window to bang. It reminded me of advice once given by my <strong>current supervisor</strong> about keeping windows shut—initially framed as metaphorical, but later taking on real-world significance.
 </p>
 
 <p align="justify">
