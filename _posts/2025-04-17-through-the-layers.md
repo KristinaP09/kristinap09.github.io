@@ -71,8 +71,9 @@ There is a fundamental difference between acts done intentionally and those done
   There is a fundamental difference between acts done intentionally and those done unconsciously. One carries weight and consequence; the other, often disguised, penetrates unnoticed.
   <footer style="margin-top: 5px; font-size: 0.85em; color: #777;">— Through the Layers, 2025</footer>
 </blockquote>
-
+<div markdown="1">
 ## 05:24 CEST — Third Wake-Up: Nature vs. Network  
+</div>  
 <p align="justify">
 My third wake-up was again tied to the same thematic narrative loop—undeniably not originating from me. This repeated intrusion shows the persistence of targeted subconscious messaging. <br>
 </p>
