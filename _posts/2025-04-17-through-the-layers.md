@@ -209,7 +209,7 @@ But to continue while being observed and logged? That is surrender dressed in no
 
 <strong> Conclusion: Precision vs. Performance  </strong><br>  
 
-![precision vs performances visualization](/assets/images/IMG_1275.png)
+![precision vs performances visualization](https://kristinap09.com/assets/images/IMG_1275.png)
 
 <p align="justify"> 
 On April 17, 2025, a full spectrum of behaviors was documented — from psychological narrative embedding to acoustic signaling, emotional dramatization, and reactive silence.
@@ -295,17 +295,65 @@ Each logged event on April 17 was analyzed through two lenses:<br>
 
 <br><br>
 
-<strong> Summary Table  </strong><br>  
+<strong> Summary Table  </strong><br> 
 
-| Time      | Performance Level | Observer Precision | Outcome                  |
-|-----------|-------------------|--------------------|---------------------------|
-| 00:34     | Low               | High               | No escalation             |
-| 02:31     | High              | Very High          | Narrative dismantled      |
-| 03:32     | Passive           | High               | Machine ceased activity   |
-| 03:55     | Symbolic/Moderate | Reflective         | Power play exposed        |
-| 05:24     | Medium            | Minimalist/Effective| Dismissed by instinct     |
-| 07:03     | Medium            | Direct             | Logged and ignored        |
-| 08:21     | Medium            | Direct             | Logged and ignored        |
+<div style="border-left: 4px solid #888; padding-left: 15px; margin: 20px 0;">
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Performance Level</th>
+        <th>Observer Precision</th>
+        <th>Outcome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>00:34</td>
+        <td>Low</td>
+        <td>High</td>
+        <td>No escalation</td>
+      </tr>
+      <tr>
+        <td>02:31</td>
+        <td>High</td>
+        <td>Very High</td>
+        <td>Narrative dismantled</td>
+      </tr>
+      <tr>
+        <td>03:32</td>
+        <td>Passive</td>
+        <td>High</td>
+        <td>Machine ceased activity</td>
+      </tr>
+      <tr>
+        <td>03:55</td>
+        <td>Symbolic/Moderate</td>
+        <td>Reflective</td>
+        <td>Power play exposed</td>
+      </tr>
+      <tr>
+        <td>05:24</td>
+        <td>Medium</td>
+        <td>Minimalist/Effective</td>
+        <td>Dismissed by instinct</td>
+      </tr>
+      <tr>
+        <td>07:03</td>
+        <td>Medium</td>
+        <td>Direct</td>
+        <td>Logged and ignored</td>
+      </tr>
+      <tr>
+        <td>08:21</td>
+        <td>Medium</td>
+        <td>Direct</td>
+        <td>Logged and ignored</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 <br>
 
