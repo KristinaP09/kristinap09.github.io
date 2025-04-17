@@ -16,6 +16,15 @@ tags: [sound-analysis, behavioral-tracking, clown-network, bird-chronicles, slee
 
 
 
+![the calm of a mathematician bed visualization](/images/6965BE87-B04D-48D2-8565-3467A94621CB.png)
+<p align="justify">
+<em> Documenting chaos from the calm of a mathematician’s bed — as the Clown Network performs unauthorized midnight experiments and birds provide the only honest soundtrack. The only research lab where the subjects slam doors, drag chairs, and get outwitted by a guy in a MATHS shirt 
+</em>
+</p>
+
+
+
+
 Overnight, I recorded and analyzed a sequence of wake-ups that, while seemingly trivial, revealed persistent patterns in external behavioral signals, acoustic stimuli, and psychological intrusion—particularly from a known cluster of upstairs neighbors I refer to as the *Clown Network*. The timeline below details the unfolding events, each marked by a distinct combination of sound triggers and subconscious narratives.
 
 ---
