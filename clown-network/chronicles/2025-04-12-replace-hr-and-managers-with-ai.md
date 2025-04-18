@@ -2,7 +2,7 @@
 layout: page
 title: "Replace HR and Managers: Install AI, Uninstall Stupidity"
 permalink: /clown-network/chronicles/Replace-HR-and-Managers-Install-AI-Uninstall-Stupidity/
--
+---
 
 ![Replace HR and Managers wit AI Visualization](/images/2CFFF885-DBE4-4B99-9B4E-6CC77D36C84C.png)
 <p align="justify">
