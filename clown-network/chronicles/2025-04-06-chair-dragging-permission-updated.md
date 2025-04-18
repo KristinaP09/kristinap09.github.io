@@ -1,11 +1,8 @@
 ---
-layout: post
+layout: page
 title: "Adults Need Permission, Chairs Do Not: A Housing Satire"
-date: 2025-04-06
-author: Anonymous Observer
-tags: [rental-irony, sarcasm, clown-network, housing-satire]
+permalink: /clown-network/chronicles/chair-dragging-permission-updated/
 ---
-
 
 ![A Reflection on the Bureaucratic Circus Visualized](/images/3B8E0A36-504E-4A47-8607-D2432F29F229.png)
 *A Reflection on the Bureaucratic Circus Behind European Rentals*
