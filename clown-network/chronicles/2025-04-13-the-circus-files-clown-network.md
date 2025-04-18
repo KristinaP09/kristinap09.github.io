@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Circus Files: Diagnosing the Clown Network’s Latest Mental Marvels"
-date: 2025-04-13
-author: Anonymous Observer
-tags: [sarcasm, clown network, dream manipulation, unauthorized experiments, psychological circus]
+permalink: /clown-network/chronicles/The-Circus-Files-Diagnosing-the-Clown-Networks-Latest-Mental-Marvels/
 ---
 
 <div style="text-align: justify">
