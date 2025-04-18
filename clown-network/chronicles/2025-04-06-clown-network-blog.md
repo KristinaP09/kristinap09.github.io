@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Without a License to Care"
-date: 2025-04-06
-author: Anonymous Observer
-tags: [clown-network, unauthorized-experiment, sarcasm, ethics]
+permalink: /clown-network/chronicles/Without-a-License-to-Care/
 ---
 
 ![Reflective deviance visualization](/images/1AF96AE9-7C7F-4ACD-9212-495618FC3E77.png)
