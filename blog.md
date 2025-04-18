@@ -1,3 +1,4 @@
+
 ---
 layout: page
 title: Blog
@@ -10,7 +11,6 @@ permalink: /blog/
   }
 
   body {
-    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.6), rgba(0, 0, 0, 0.7)), url('/assets/images/95faf3bfc267a9548cc775ef2a30d4a0.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     overflow-x: hidden;
@@ -84,7 +84,6 @@ permalink: /blog/
     margin: 2px;
     padding: 0.4em 0.8em;
     font-size: 0.85em;
-    background: #b30059;
     color: white;
     border: none;
     border-radius: 4px;
@@ -146,4 +145,59 @@ A must-read for lovers of noise, nuance, and nonsense.
 
 <footer>
   &copy; 2025 KristinaP09 &mdash; Powered by quiet frustration and accidental brilliance.
+
+<style>
+  body.dark-mode {
+    color: #ddd;
+  }
+
+  body.dark-mode footer {
+    color: #aaa;
+    border-top: 1px solid #444;
+  }
+
+  .dark-mode .cta-button {
+    background-color: #444 !important;
+    color: #fff;
+  }
+
+  .dark-mode .cta-button:hover {
+    background-color: #555 !important;
+  }
+
+  .dark-toggle {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    z-index: 9999;
+  }
+
+  .dark-toggle button {
+    margin: 2px;
+    padding: 0.4em 0.8em;
+    font-size: 0.85em;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="dark-toggle">
+  <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  window.onload = () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  }
+</script>
+
 </footer>
