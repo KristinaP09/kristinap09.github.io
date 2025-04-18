@@ -9,7 +9,8 @@ Ever wondered what happens when chaos meets documentation?
 We proudly present the **Clown Network Archive** — a full HTML breakdown of chair drags, machine hums, and psychological gymnastics.
 
 **Check it out here**:  
-[Visit the Full HTML Archive »](/clown-network/)
+[Visit the Full HTML Archive »](/clown-network/)<br>
+
 [Here are the documented chronicles](/clown-network/chronicles/)
 
 ![Clown Chart Preview](/clown-network/extended_clown_network_activity_summary.png)
