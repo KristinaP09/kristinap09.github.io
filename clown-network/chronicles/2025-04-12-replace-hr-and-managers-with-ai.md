@@ -1,10 +1,8 @@
 ---
-layout: post
+layout: page
 title: "Replace HR and Managers: Install AI, Uninstall Stupidity"
-date: 2025-04-12
-author: Anonymous Observer
-tags: [AI Leadership, Workplace Satire, Corporate Culture, Anti-Favoritism, HR Roast, Management Drama, Clown Network, Inherited Incompetence]
----
+permalink: /clown-network/chronicles/Replace-HR-and-Managers-Install-AI-Uninstall-Stupidity/
+-
 
 ![Replace HR and Managers wit AI Visualization](/images/2CFFF885-DBE4-4B99-9B4E-6CC77D36C84C.png)
 <p align="justify">
