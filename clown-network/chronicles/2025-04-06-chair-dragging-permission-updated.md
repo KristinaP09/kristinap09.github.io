@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Adults Need Permission, Chairs Do Not: A Housing Satire"
-permalink: /clown-network/chronicles/chair-dragging-permission-updated/
+permalink: /clown-network/chronicles/Adults-Need-Permission-Chairs-Do-Not-A-Housing-Satire/
 ---
 
 ![A Reflection on the Bureaucratic Circus Visualized](/images/3B8E0A36-504E-4A47-8607-D2432F29F229.png)
