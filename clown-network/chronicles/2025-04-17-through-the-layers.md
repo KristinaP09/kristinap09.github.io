@@ -1,11 +1,8 @@
 ---
-layout: post
+layout: page
 title: "Through the Layers: A Night of Stimuli, Response, and Uninvited Narratives"
-date: 2025-04-17
-author: Research Observer
-tags: [sound-analysis, behavioral-tracking, clown-network, bird-chronicles, sleep-study]
+permalink: /clown-network/chronicles/Through-the-Layers-A-Night-of-Stimuli-Response-and-Uninvited-Narratives/
 ---
-
 
 
 ![the calm of a mathematician bed visualization](/images/6965BE87-B04D-48D2-8565-3467A94621CB.png)
