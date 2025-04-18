@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Beneath the Noise: Reflections from the Ceiling of Madness"
-date: 2025-04-12
-author: Anonymous Observer
-tags: [Clown Network, Surveillance, Dream Manipulation, Satire, Noise, Psychological Defense]
+permalink: /clown-network/chronicles/Beneath-the-Noise-Reflections-from-the-Ceiling-of-Madness/
 ---
 
 <p align="justify">There’s a certain art to absurdity—an orchestration of chaos that demands not only audacity but consistency. And if there were ever a syndicate committed to the performance of nonsense, it is the invisible one that lives above my ceiling. A network so theatrically unqualified that their very existence reads like satire.</p>
