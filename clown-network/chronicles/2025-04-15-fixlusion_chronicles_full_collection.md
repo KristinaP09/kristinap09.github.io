@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Fixlusion Chronicles"
-date: 2025-04-15
-author: Anonymous Observer
-tags: [Circus Reports,Fixlusion Files, Unsolicited Brilliance]
+permalink: /clown-network/chronicles/Fixlusion-Chronicles/
 ---
 
 ## Volume I: The Whispering Authority  
