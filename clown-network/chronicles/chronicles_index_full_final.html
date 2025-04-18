@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clown Network Chronicles Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2em;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.7;
+    }
+    h1 {
+      color: #b30059;
+    }
+    .intro {
+      background: #fff4f8;
+      padding: 1em;
+      border-left: 5px solid #ff66a3;
+      margin-bottom: 2em;
+    }
+    input[type="text"], select {
+      width: 100%;
+      padding: 0.8em;
+      font-size: 1em;
+      margin-bottom: 1.5em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    details {
+      margin-bottom: 1em;
+      background: #f8f8f8;
+      padding: 0.5em 1em;
+      border-left: 4px solid #b30059;
+      border-radius: 4px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #b30059;
+    }
+    li {
+      margin-bottom: 0.6em;
+      list-style: none;
+    }
+    li::before {
+      content: "🎪";
+      margin-right: 0.5em;
+    }
+    .tag {
+      background: #e6e6e6;
+      border-radius: 4px;
+      padding: 0.2em 0.6em;
+      font-size: 0.9em;
+      margin-left: 1em;
+      color: #555;
+    }
+    .timestamp {
+      font-size: 0.8em;
+      color: #888;
+      margin-left: 0.5em;
+    }
+    a {
+      color: #b30059;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function filterChronicles() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const tagFilter = document.getElementById("tagFilter").value;
+      const sections = document.querySelectorAll("details");
+
+      sections.forEach(section => {
+        const items = section.querySelectorAll("li");
+        let sectionMatch = false;
+
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const hasTag = tagFilter === "all" || item.dataset.tags.includes(tagFilter);
+          const matchesSearch = text.includes(input);
+          const visible = matchesSearch && hasTag;
+          item.style.display = visible ? "" : "none";
+          if (visible) sectionMatch = true;
+        });
+
+        section.open = sectionMatch;
+        section.style.display = sectionMatch ? "" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Clown Network Chronicles</h1>
+  <div class="intro">
+    Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.<br>
+    Filter by keyword or tag to explore the full range of documented dysfunction.
+  </div>
+
+  <input type="text" id="searchInput" onkeyup="filterChronicles()" placeholder="Search chronicles...">
+  <select id="tagFilter" onchange="filterChronicles()">
+    <option value="all">Filter by Tag</option>
+    <option value="psychology">psychology</option>
+    <option value="noise">noise</option>
+    <option value="HR">HR</option>
+    <option value="satire">satire</option>
+    <option value="workplace">workplace</option>
+    <option value="symbolism">symbolism</option>
+    <option value="surveillance">surveillance</option>
+    <option value="illusion">illusion</option>
+    <option value="housing">housing</option>
+    <option value="existential">existential</option>
+    <option value="ethics">ethics</option>
+    <option value="accountability">accountability</option>
+    <option value="institutions">institutions</option>
+    <option value="diversity">diversity</option>
+    <option value="communication">communication</option>
+  </select>
+
+  <details><summary>🧠 Psychological Themes</summary><ul><li data-tags="psychology,noise"><a href="/clown-network/chronicles/Clown-Networks-Emotional-Daycare-A-Reflective-Survival-Tale-from-the-Frontlines-of-Subconscious-Interference/">Emotional Daycare</a> <span class="tag">psychology</span> <span class="tag">noise</span><span class="timestamp">Updated: 2025-04-10</span></li>
+<li data-tags="psychology,ethics"><a href="/clown-network/chronicles/The-Experiment-I-Never-Signed-Up-For/">The Experiment I Never Signed Up For</a> <span class="tag">psychology</span> <span class="tag">ethics</span><span class="timestamp">Updated: 2025-04-12</span></li>
+<li data-tags="psychology,surveillance"><a href="/clown-network/chronicles/The-Echo-Chamber-Upstairs-A-Reflective-Survival-Guide-to-Invisible-Surveillance-and-Circus-Logic/">The Echo Chamber Upstairs</a> <span class="tag">psychology</span> <span class="tag">surveillance</span><span class="timestamp">Updated: 2025-04-08</span></li>
+<li data-tags="psychology,noise"><a href="/clown-network/chronicles/Beneath-the-Noise-Reflections-from-the-Ceiling-of-Madness/">Beneath the Noise</a> <span class="tag">psychology</span> <span class="tag">noise</span><span class="timestamp">Updated: 2025-04-11</span></li></ul></details>
+<details><summary>💼 Social & Workplace Satire</summary><ul><li data-tags="workplace,satire"><a href="/clown-network/chronicles/The-Myth-of-the-Workplace-Family/">The Myth of the Workplace Family</a> <span class="tag">workplace</span> <span class="tag">satire</span><span class="timestamp">Updated: 2025-04-11</span></li>
+<li data-tags="satire,HR"><a href="/clown-network/chronicles/Replace-HR-and-Managers-Install-AI-Uninstall-Stupidity/">Replace HR and Managers</a> <span class="tag">satire</span> <span class="tag">HR</span><span class="timestamp">Updated: 2025-04-10</span></li>
+<li data-tags="HR,satire"><a href="/clown-network/chronicles/The-Global-HR-Illusion-Where-Empathy-Goes-to-Die-in-Bullet-Points/">Global HR Illusion</a> <span class="tag">HR</span> <span class="tag">satire</span><span class="timestamp">Updated: 2025-04-13</span></li>
+<li data-tags="workplace,diversity"><a href="/clown-network/chronicles/Fixlusion-Chronicles/">Fixlusion Chronicles</a> <span class="tag">workplace</span> <span class="tag">diversity</span><span class="timestamp">Updated: 2025-04-12</span></li>
+<li data-tags="trust,HR"><a href="/clown-network/chronicles/With-Supporters-Like-These-Who-Needs-Saboteurs/">With 'Supporters' Like These</a> <span class="tag">trust</span> <span class="tag">HR</span><span class="timestamp">Updated: 2025-04-14</span></li></ul></details>
+<details><summary>🔊 Noise & Surveillance Logs</summary><ul><li data-tags="noise,revelation"><a href="/clown-network/chronicles/The-Window-That-Let-in-the-Truth/">The Window That Let in the Truth</a> <span class="tag">noise</span> <span class="tag">revelation</span><span class="timestamp">Updated: 2025-04-05</span></li>
+<li data-tags="noise,surveillance"><a href="/clown-network/chronicles/Living-in-a-Surveillance-Parody-Notes-from-the-Apartment-Below/">Surveillance Parody</a> <span class="tag">noise</span> <span class="tag">surveillance</span><span class="timestamp">Updated: 2025-04-07</span></li>
+<li data-tags="noise,persistence"><a href="/clown-network/chronicles/Ive-Moved-On-The-Invisible-Architects-of-Noise-Havent/">I've Moved On</a> <span class="tag">noise</span> <span class="tag">persistence</span><span class="timestamp">Updated: 2025-04-09</span></li>
+<li data-tags="neglect,system"><a href="/clown-network/chronicles/Without-a-License-to-Care/">Without a License to Care</a> <span class="tag">neglect</span> <span class="tag">system</span><span class="timestamp">Updated: 2025-04-06</span></li>
+<li data-tags="housing,satire"><a href="/clown-network/chronicles/Adults-Need-Permission-Chairs-Do-Not-A-Housing-Satire/">Chairs Don’t Need Permission</a> <span class="tag">housing</span> <span class="tag">satire</span><span class="timestamp">Updated: 2025-04-15</span></li>
+<li data-tags="system,resistance"><a href="/clown-network/chronicles/When-the-System-Worked—and-the-Clowns-Couldnt-Handle-It/">When the System Worked</a> <span class="tag">system</span> <span class="tag">resistance</span><span class="timestamp">Updated: 2025-04-04</span></li></ul></details>
+<details><summary>🎭 Symbolic & Cultural Analysis</summary><ul><li data-tags="symbolism,communication"><a href="/clown-network/chronicles/Clown-Signaling-and-Symbolic-Disturbance-A-Pattern-Analysis/">Symbolic Disturbance</a> <span class="tag">symbolism</span> <span class="tag">communication</span><span class="timestamp">Updated: 2025-04-05</span></li>
+<li data-tags="symbolism,diagnosis"><a href="/clown-network/chronicles/The-Circus-Files-Diagnosing-the-Clown-Networks-Latest-Mental-Marvels/">The Circus Files</a> <span class="tag">symbolism</span> <span class="tag">diagnosis</span><span class="timestamp">Updated: 2025-04-13</span></li>
+<li data-tags="symbolism,cycles"><a href="/clown-network/chronicles/Carousel-of-Clowns/">Carousel of Clowns</a> <span class="tag">symbolism</span> <span class="tag">cycles</span><span class="timestamp">Updated: 2025-04-14</span></li>
+<li data-tags="illusion,performance"><a href="/clown-network/chronicles/The-Tuscany-Illusion-Performing-Happiness-and-the-War-on-Inner-Truth/">The Tuscany Illusion</a> <span class="tag">illusion</span> <span class="tag">performance</span><span class="timestamp">Updated: 2025-04-09</span></li>
+<li data-tags="perception,illusion"><a href="/clown-network/chronicles/The-Window-the-Math-and-the-Illusion/">The Window, the Math, and the Illusion</a> <span class="tag">perception</span> <span class="tag">illusion</span><span class="timestamp">Updated: 2025-04-12</span></li></ul></details>
+<details><summary>🌪️ Existential Reflection</summary><ul><li data-tags="existential,psychology"><a href="/clown-network/chronicles/Through-the-Layers-A-Night-of-Stimuli-Response-and-Uninvited-Narratives/">Through the Layers</a> <span class="tag">existential</span> <span class="tag">psychology</span><span class="timestamp">Updated: 2025-04-06</span></li>
+<li data-tags="tech,identity"><a href="/clown-network/chronicles/Published-While-You-Panicked-A-GitPush-to-the-Ego/">GitPush to the Ego</a> <span class="tag">tech</span> <span class="tag">identity</span><span class="timestamp">Updated: 2025-04-11</span></li>
+<li data-tags="accountability,institutions"><a href="/clown-network/chronicles/From-Blame-to-Backfire-Institutional-Reckoning-in-the-Age-of-Invisible-Oversight/">From Blame to Backfire</a> <span class="tag">accountability</span> <span class="tag">institutions</span><span class="timestamp">Updated: 2025-04-10</span></li></ul></details>
+
+</body>
+</html>
