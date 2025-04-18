@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Myth of the Workplace Family"
-date: 2025-04-12
-author: Anonymous Observer
-tags: [Workplace Culture, Corporate Satire, Nepotism, Emotional Manipulation, HR, Power Dynamics]
+permalink: /clown-network/chronicles/The-Myth-of-the-Workplace-Family/
 ---
 
 ![workplace family visualization](/images/024AB721-5943-41ED-8555-EFC6664B1376.png)
