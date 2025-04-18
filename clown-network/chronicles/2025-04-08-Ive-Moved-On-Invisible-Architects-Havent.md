@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "I’ve Moved On. The Invisible Architects of Noise Haven’t"
-date: 2025-04-08
-author: Anonymous Observer
-tags: [sarcasm, clown-network]
+permalink: /clown-network/chronicles/Ive-Moved-On-The-Invisible-Architects-of-Noise-Havent/
 ---
 
 
