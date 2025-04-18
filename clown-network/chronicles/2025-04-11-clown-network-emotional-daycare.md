@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Clown Network’s Emotional Daycare: A Reflective Survival Tale from the Frontlines of Subconscious Interference"
-date: 2025-04-11
-author: Anonymous Observer
-tags: [dream-manipulation, clown-network, resilience, psychological-strength, satire]
+permalink: /clown-network/chronicles/Clown-Networks-Emotional-Daycare-A-Reflective-Survival-Tale-from-the-Frontlines-of-Subconscious-Interference/
 ---
 
 ![Toddler tantrum visualization](/images/87C60570-BDBA-4CC3-86E5-C2A5E0CCE325.png)
