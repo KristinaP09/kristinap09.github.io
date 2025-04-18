@@ -1,11 +1,8 @@
 ---
-layout: post
+layout: page
 title: "Emotional Intelligence Consultant – Level: Earth to Basic"
-date: 2025-04-15
-author: Anonymous Observer
-tags: [Circus Reports,Fixlusion Files, Unsolicited Brilliance]
+permalink: /clown-network/chronicles/Emotional-Intelligence-Consultant–Level-Earth-to-Basic/
 ---
-
 
 ![emotional vs fixlusion.](/images/emotional_vs_fixlusion.png)
 <p align="justify">
