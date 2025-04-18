@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Living in a Surveillance Parody: Notes from the Apartment Below"
-date: 2025-04-06
-author: Anonymous Observer
-tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
+permalink: /clown-network/chronicles/Living-in-a-Surveillance-Parody-Notes-from-the-Apartment-Below/
 ---
 
 ![Clown Network Visualized](/images/E3475E20-534C-4458-B7E7-B45E83BF18D1.png)
