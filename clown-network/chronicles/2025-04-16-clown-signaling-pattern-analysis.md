@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Clown Signaling and Symbolic Disturbance: A Pattern Analysis"
-date: 2025-04-16
-author: Anonymous Observer
-tags: [pattern-analysis, symbolic-behavior, surveillance, psychological-signals, clown-network]
+permalink: /clown-network/chronicles/Clown-Signaling-and-Symbolic-Disturbance-A-Pattern-Analysis/
 ---
 
 ![Clown Juggling Stability, Performance, and Silence](/images/F0B44215-90C9-4CEA-AEC2-03F8572A3C20.png)
