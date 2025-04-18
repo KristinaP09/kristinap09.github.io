@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Experiment I Never Signed Up For"
-date: 2025-04-06
-author: Anonymous Observer
-tags: [ethics, academic-integrity, unauthorized-research, satire]
+permalink: /clown-network/chronicles/The-Experiment-I-Never-Signed-Up-For/
 ---
 
 ![Anatomy of a Failed Psychological Stunt](/images/8A216A44-05B7-49F5-A207-78F3B46F2F6B.png)
