@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Blog
@@ -11,7 +10,7 @@ permalink: /blog/
   }
 
   body {
-    background: url('/assets/images/95faf3bfc267a9548cc775ef2a30d4a0.jpg') no-repeat center center fixed;
+    background: linear-gradient(to bottom, rgba(20, 20, 20, 0.6), rgba(0, 0, 0, 0.7)), url('/assets/images/95faf3bfc267a9548cc775ef2a30d4a0.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
     overflow-x: hidden;
