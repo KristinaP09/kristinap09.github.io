@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "From Blame to Backfire: Institutional Reckoning in the Age of Invisible Oversight"
-date: 2025-04-12
-author: Anonymous Observer
-tags: [Institutional Ethics, Surveillance Accountability, Professional Journal, Systemic Abuse, Transparency]
+permalink: /clown-network/chronicles/From-Blame-to-Backfire-Institutional-Reckoning-in-the-Age-of-Invisible-Oversight/
 ---
 
 ![From Blame to Backfire Visualization](/images/17497679-1616-40A9-A4D1-68072DD0E109.png)
