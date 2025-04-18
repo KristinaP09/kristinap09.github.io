@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Global HR Illusion: Where Empathy Goes to Die (in Bullet Points)"
-date: 2025-04-12
-author: Anonymous Observer
-tags: [HR, Corporate Satire, Workplace Culture, Psychological Safety, Burnout, Global Illusion]
+permalink: /clown-network/chronicles/The-Global-HR-Illusion-Where-Empathy-Goes-to-Die-in-Bullet-Points/
 ---
 
 ![global unqualified HRVisualized](/images/4A9EF9B2-7965-4ED2-B6F3-BAF9FF0E0944.png)
