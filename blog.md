@@ -64,8 +64,6 @@ permalink: /blog/
 <div class="float-emoji" style="left: 60%;">🎪</div>
 <div class="float-emoji" style="left: 80%;">🎪</div>
 
-# Blog
-
 Welcome to the blog section. Here you’ll find insights, satire, reflections, and notes from the field — with a strong focus on patterns, psychology, and systems.
 
 ---
