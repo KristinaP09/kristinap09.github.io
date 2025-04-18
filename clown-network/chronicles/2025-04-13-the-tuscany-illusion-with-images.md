@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Tuscany Illusion: Performing Happiness and the War on Inner Truth"
-date: 2025-04-13
-author: Anonymous Observer
-tags: [Toscana, movie analysis, emotional intelligence, clown network, psychological manipulation, authenticity, resistance, healing]
+permalink: /clown-network/chronicles/The-Tuscany-Illusion-Performing-Happiness-and-the-War-on-Inner-Truth/
 ---
 
 
