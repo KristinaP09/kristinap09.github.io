@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Introducing the Clown Network Archive"
-date: 2025-04-18
-author: Research Observer
-tags: [clown network, logs, humor, disruption]
+permalink: /clown-network/chronicles/Introducing-the-Clown-Network-Archive/
 ---
 
 Ever wondered what happens when chaos meets documentation?
