@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: "Introducing the Clown Network Archive"
-permalink: /clown-network/chronicles/Introducing-the-Clown-Network-Archive/
+date: 2025-04-18
+author: Research Observer
+tags: [clown network, logs, humor, disruption]
 ---
 
 Ever wondered what happens when chaos meets documentation?
@@ -9,9 +11,7 @@ Ever wondered what happens when chaos meets documentation?
 We proudly present the **Clown Network Archive** — a full HTML breakdown of chair drags, machine hums, and psychological gymnastics.
 
 **Check it out here**:  
-[Visit the Full HTML Archive »](/clown-network/)<br>
-
-[Here are the documented chronicles](/clown-network/chronicles/)
+[Visit the Full HTML Archive »](/clown-network/)
 
 ![Clown Chart Preview](/clown-network/extended_clown_network_activity_summary.png)
 
