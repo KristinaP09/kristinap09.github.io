@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "When the System Worked—and the Clowns Couldn’t Handle It"
-date: 2025-04-11
-author: Anonymous Observer
-tags: [tax-refund-surprise, clowns-vs-clarity, bureaucracy-but-make-it-work, accidental-tax-wisdom, form-filled-funds-returned, calm-vs-chaos, quiet-people-win, system-shocked-me, facebook-reel-realization, refund-and-roast]
+permalink: /clown-network/chronicles/When-the-System-Worked—and-the-Clowns-Couldnt-Handle-It/
 ---
 
 ![Tax refund visualization](/images/3987BB44-D5FF-4197-844A-3ADAA9E4651F.png)
