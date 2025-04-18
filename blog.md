@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Introducing the Clown Network Archive"
-permalink: /clown-network/chronicles/Introducing-the-Clown-Network-Archive/
+title: "Blog"
+permalink: /blog/
 ---
 
 Ever wondered what happens when chaos meets documentation?
