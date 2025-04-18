@@ -24,6 +24,5 @@ Consider this my attempt at documenting what happens when the circus forgets to 
 
 ## Entries
 
-- [Machine Madness at Midnight](/clown-network/chronicles/machine-madness-at-midnight/)
-- [Selective Deafness Incident](/clown-network/chronicles/selective-deafness-incident/)
 - [Adults Need Permission, Chairs Do Not: A Housing Satire](/clown-network/chronicles/Adults-Need-Permission-Chairs-Do-Not-A-Housing-Satire/)
+- [Without a License to Care](/clown-network/chronicles/Without-a-License-to-Care/)
