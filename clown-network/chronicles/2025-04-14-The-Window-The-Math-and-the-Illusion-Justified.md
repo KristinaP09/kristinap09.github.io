@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Window, the Math, and the Illusion"
-date: 2025-04-14
-author: Anonymous Observer
-tags: [tenants-rights, truth, rental-chaos, housing-experience, perspective]
+permalink: /clown-network/chronicles/The-Window-the-Math-and-the-Illusion/
 ---
 
 ![The Window, the Math, and the Madness](/images/F016B3F2-A015-4A3C-BC4B-E8E4032BF288.png)
