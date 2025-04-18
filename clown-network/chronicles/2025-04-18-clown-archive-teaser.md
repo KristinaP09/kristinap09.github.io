@@ -10,6 +10,7 @@ We proudly present the **Clown Network Archive** — a full HTML breakdown of ch
 
 **Check it out here**:  
 [Visit the Full HTML Archive »](/clown-network/)
+[Here are the documented chronicles](/clown-network/chronicles/)
 
 ![Clown Chart Preview](/clown-network/extended_clown_network_activity_summary.png)
 
