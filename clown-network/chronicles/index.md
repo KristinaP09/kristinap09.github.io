@@ -3,6 +3,9 @@ layout: page
 title: Clown Network Chronicles
 permalink: /clown-network/chronicles/
 ---
+<div class="clown-box">
+  
+<h2>🤡 Clown Network Chronicles</h2>
 
 <p><strong>Welcome to the world of involuntary circus psychology.  </strong> <br><br>
 This section documents my long-running observation of a mysterious syndicate I’ve dubbed <em>“The Clown Network.”</em> <br> 
