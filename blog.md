@@ -120,7 +120,6 @@ permalink: /blog/
   }
 </script>
 
-# Blog
 
 Welcome to the blog section. Here you’ll find insights, satire, reflections, and notes from the field — with a strong focus on patterns, psychology, and systems.
 
