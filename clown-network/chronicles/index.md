@@ -12,3 +12,4 @@ Welcome to the official archive of clown behavior — the daily logbook of stomp
 
 - [Machine Madness at Midnight](/clown-network/chronicles/machine-madness-at-midnight/)
 - [Selective Deafness Incident](/clown-network/chronicles/selective-deafness-incident/)
+- [Adults Need Permission, Chairs Do Not: A Housing Satire](/clown-network/chronicles/Adults-Need-Permission-Chairs-Do-Not-A-Housing-Satire/)
