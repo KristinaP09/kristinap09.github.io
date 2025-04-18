@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "With “Supporters” Like These, Who Needs Saboteurs?"
-date: 2025-04-08
-author: Anonymous Observer
-tags: [unauthorized-research, surveillance, satire, clown-network, blog-series]
+permalink: /clown-network/chronicles/With-Supporters-Like-These-Who-Needs-Saboteurs/
 ---
 
 ![Reclaiming truth amid situation visualization](/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png)
