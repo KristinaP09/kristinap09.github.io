@@ -1,9 +1,7 @@
 ---
-layout: post
+layout: page
 title: "The Window That Let in the Truth"
-date: 2025-04-11
-author: Anonymous Observer
-tags: [tenants-rights, landlord-logic, rental-stories, satire, truth]
+permalink: /clown-network/chronicles/The-Window-That-Let-in-the-Truth/
 ---
 
 ![The Window That Let in the Truth visualization](/images/8E8F23DF-0307-40C1-A24B-E373F57D196F.png)
