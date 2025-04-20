@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Daily Incident Report – Coordinated Multi-Tier Acoustic Disruption"
+permalink: /clown-network/chronicles/Daily-Incident-Report/
+---
+
 
 <style>
 body {
@@ -45,7 +51,6 @@ blockquote {
 }
 </style>
 
-# Daily Incident Report – Coordinated Multi-Tier Acoustic Disruption
 
 **Date:** 20 April 2025  
 **Time Window:** 14:30–18:30 CEST  
