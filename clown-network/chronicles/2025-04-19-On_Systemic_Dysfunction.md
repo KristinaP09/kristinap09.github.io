@@ -14,4 +14,5 @@ From bureaucratic delays to institutional blind spots, we often find ourselves a
 
 ...
 
-[**Read this entry on the web**](https://kristinap09.github.io/clown-network/chronicles/2025-04-19-on-systemic-dysfunction.html)
+**Check it out here**:  
+[Visit the Full HTML Archive »](https://kristinap09.github.io/clown-network/chronicles/2025-04-19-on-systemic-dysfunction.html)
