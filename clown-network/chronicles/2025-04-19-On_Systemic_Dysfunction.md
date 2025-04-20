@@ -1,11 +1,10 @@
 ---
 layout: page
-title: "On Systemic Dysfunction: A Metaphor for Cognitive Failure"
+title: "On Systemic Dysfunction: A Metaphor for Cognitive Failure in Coordinated Disturbance Networks"
 permalink: /clown-network/chronicles/on-systemic-dysfunction/
 ---
 
 <div class="clown-network-preview">
-<h1>On Systemic Dysfunction: A Metaphor for Cognitive Failure in Coordinated Disturbance Networks</h1>
 <p><strong>Date:</strong> 2025-04-19 | <strong>Section:</strong> The Universe Has Jokes Too</p>
 <div class="section">
 <h2>Abstract</h2>
