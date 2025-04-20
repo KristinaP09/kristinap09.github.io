@@ -5,14 +5,24 @@ permalink: /clown-network/chronicles/on-systemic-dysfunction/
 ---
 
 <div class="clown-network-preview">
-<p><strong>Date:</strong> 2025-04-19 | <strong>Section:</strong> The Universe Has Jokes Too</p>
+  <p><strong>Date:</strong> 2025-04-19 | <strong>Section:</strong> The Universe Has Jokes Too</p>
+</div>
+
 <div class="section">
 
+<p><strong>Systemic dysfunction</strong> is not just a bug in the system—it <em>is</em> the system.  
+From bureaucratic delays to institutional blind spots, we often find ourselves adapting not because the system works, but because it fails predictably.</p>
 
-Systemic dysfunction is not just a bug in the system—it <em>is</em> the system.  
-From bureaucratic delays to institutional blind spots, we often find ourselves adapting not because the system works, but because it fails predictably.
+<p>...</p>
 
-...
+<p><strong>Check it out here</strong>:  
+<a href="/clown-network/chronicles/2025-04-19-on-systemic-dysfunction/">Visit the Full HTML Archive »</a></p>
 
-<strong>Check it out here</strong>:  
-[Visit the Full HTML Archive »](/clown-network/chronicles/2025-04-19-on-systemic-dysfunction/)
+<div class="illustration">
+  <img src="/assets/images/CBC2D1A0-6261-4C95-A070-C855BB80DAEB.png" alt="Systemic Dysfunction" style="max-width: 100%; margin-top: 20px; border: 1px solid #ccc;">
+  <p style="font-style: italic; margin-top: 5px; text-align: center;">
+    Systemic Dysfunction: Held together by denial, cracked by incompetence, and proudly maintained by clowns.
+  </p>
+</div>
+
+</div>
