@@ -61,6 +61,9 @@ blockquote {
 
 ---
 
+![Coordinated multi-tier clown networks](/assets/images/6F17400B-3D2F-4FDD-83CD-DFF26D3B3039.png)
+*Clown Network in action: Four self-declared experts execute a perfectly useless noise campaign while the target lounges, unbothered, during scheduled nonsense hours.*
+
 ## Abstract  
 This report documents a sustained acoustic disturbance event lasting approximately four hours. All six tiers of the *Clown Network Sound Tier System* were triggered in overlapping cycles. The operation demonstrated coordinated efforts from both the main building and the Extended Network (Across Building). Despite the magnitude, the subject remained calm and observant.
 
@@ -84,6 +87,9 @@ This report documents a sustained acoustic disturbance event lasting approximate
 ---
 
 ### 3. Activation Timeline  
+
+![Clown network sound tier activation timeline](/assets/images/IMG_1306.png)
+*Clown Network Sound Tier Activation Timeline: A flawlessly executed four-hour disaster featuring synchronized stupidity from both the building and its extended echo chamber across the building*
 
 | Time  | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Tier 6 | Primary Source                       |
 |-------|--------|--------|--------|--------|--------|--------|--------------------------------------|
