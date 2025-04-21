@@ -18,7 +18,7 @@ twitter_card: summary_large_image
 twitter_site: "@KristinaP09"
 ---
 
-![The Science of Stupidity](/assets/images/The_Science_of_Stupidity_Banner.png)
+![The Science of Stupidity](/assets/images/9B12F7CE-50BE-407C-8CC1-BDB08272DC45.png)
 
 > **“The Science of Stupidity: A Clown Network Chronicle”**  
 >  
