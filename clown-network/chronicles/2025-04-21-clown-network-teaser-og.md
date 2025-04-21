@@ -5,14 +5,14 @@ date: 2025-04-21
 author: KristinaP09
 categories: clown-network teaser
 tags: [sarcasm, satire, blog, clown-network, stupidity, sound-tracking, resistance]
-image: /assets/images/The_Science_of_Stupidity_Banner.png
+image: /assets/images/9B12F7CE-50BE-407C-8CC1-BDB08272DC45.png
 summary: "A sarcastic, data-backed teaser for a blog post chronicling the absurd behavior of the Clown Network."
 permalink: /clown-network/chronicles/2025-04-21-clown-network-teaser/
 
 # Open Graph / Twitter Card Metadata
 og_title: "The Science of Stupidity — A Clown Network Chronicle"
 og_description: "Chairs. Machines. Bathroom rituals. A satirical data-driven investigation of loud people doing nothing useful — ever."
-og_image: /assets/images/The_Science_of_Stupidity_Banner.png
+og_image: /assets/images/9B12F7CE-50BE-407C-8CC1-BDB08272DC45.png
 og_url: https://kristinap09.github.io/clown-network/chronicles/2025-04-21-clown-network-teaser/
 twitter_card: summary_large_image
 twitter_site: "@KristinaP09"
