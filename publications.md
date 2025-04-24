@@ -7,11 +7,11 @@ redirect_from: /index.html
 
 <i class="ai ai-google-scholar ai-2x"></i>  
 Explore my full list of publications on  
-<a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color: #8A2BE2;"><strong>Google Scholar</strong></a>.
+<a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color: #e63e62;"><strong>Google Scholar</strong></a>.
 
 ---
 
-## <span style="color: #FF33D1;">Selected Publications</span>
+## <span style="color: #db7093;">Selected Publications</span>
 
 ---
 
@@ -54,7 +54,7 @@ Cited over <strong>2,000 times</strong>, this paper improves traditional k-means
 
 ---
 
-## <span style="color: #FF33D1;">Citation Fireworks: Research Impact Over the Years</span>
+## <span style="color: #db7093;">Citation Fireworks: Research Impact Over the Years</span>
 
 ![Citation Graph](/images/IMG_1260.jpeg)
 
@@ -70,7 +70,7 @@ This graph is auto-generated from <a href="https://scholar.google.com/citations?
 Export your citation data from Google Scholar, toss it into a chart wizard (Google Sheets, Excel, or Tableau), and voilà—instant ego boost. Then embed it right into your website to impress yourself, your peers, and maybe even your cat.
 </p>
 
-## <span style="color: #FF33D1;">Peer-Review Activity</span>
+## <span style="color: #db7093;">Peer-Review Activity</span>
 
 ---
 
@@ -78,10 +78,11 @@ Export your citation data from Google Scholar, toss it into a chart wizard (Goog
 I actively contribute as a reviewer to top-tier journals and conferences in AI and applied computing:
 </p>
 
-- <a href="https://www.mdpi.com/journal/electronics" style="color: #0D5E7C;">MDPI Electronics</a>  
-- <a href="https://www.qeios.com/" style="color: #0D5E7C;">Qeios</a>  
-- <a href="https://www.mdpi.com/journal/mathematics" style="color: #0D5E7C;">MDPI Mathematics</a>  
-- <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036" style="color: #0D5E7C;">IEEE Access</a>  
+- <a href="[https://www.mdpi.com/journal/electronics](https://www.mdpi.com/journal/futureinternet)" style="color: #db7093;">MDPI Future Internet</a>  
+- <a href="https://www.mdpi.com/journal/electronics" style="color: #db7093;">MDPI Electronics</a>  
+- <a href="https://www.qeios.com/" style="color: #db7093;">Qeios</a>  
+- <a href="https://www.mdpi.com/journal/mathematics" style="color: #db7093;">MDPI Mathematics</a>  
+- <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036" style="color: #db7093;">IEEE Access</a>  
 - ...and others as the academic chaos calls!
 
 ---
