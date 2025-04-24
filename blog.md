@@ -16,7 +16,7 @@ permalink: /blog/
   }
 
   .cta-button {
-    background-color: #b30059;
+    background-color: #fc8eac;
     color: white;
     padding: 0.8em 1.5em;
     border-radius: 6px;
@@ -91,11 +91,11 @@ permalink: /blog/
 </style>
 
 <!-- Floating clown emojis with glitch -->
-<div class="float-emoji" style="left: 10%;">🎪</div>
-<div class="float-emoji" style="left: 25%;">🎪</div>
-<div class="float-emoji" style="left: 40%;">🎪</div>
-<div class="float-emoji" style="left: 60%;">🎪</div>
-<div class="float-emoji" style="left: 80%;">🎪</div>
+<div class="float-emoji" style="left: 10%;">👽</div>
+<div class="float-emoji" style="left: 25%;">👽</div>
+<div class="float-emoji" style="left: 40%;">👽</div>
+<div class="float-emoji" style="left: 60%;">👽</div>
+<div class="float-emoji" style="left: 80%;">👽</div>
 
 <!-- Background Music Audio Player -->
 <audio id="background-music" loop>
