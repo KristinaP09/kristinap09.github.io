@@ -143,7 +143,7 @@ This collection blends data, sarcasm, and surreal observation into one central h
 A must-read for lovers of noise, nuance, and nonsense.
 
 <footer>
-  &copy; 2025 KristinaP09 &mdash; Powered by quiet frustration and accidental brilliance.
+  &copy; 2025 KristinaP09 &mdash; Powered by accidental brilliance.
 
 <style>
   body.dark-mode {
