@@ -10,17 +10,29 @@ permalink: /news/
 ## <span style="color: #2FC10B;">[Update]</span>
 
 ---
+### <span style="color: blue;">New Blog Post: “I Predicted This Chaos, and Now I’m Sipping Tea While the System Auto-Completes Itself"</span>
 
 
-**April 29, 2025**  
-**New Blog Post: “I Predicted This Chaos, and Now I’m Sipping Tea While the System Auto-Completes Itself”**  
 I said coding would become accessible to everyone — no CS degree required — and now the world is catching up.  
 My latest post dives into the rise of GitHub Copilot, the fall of gatekeeping, and the comedic beauty of watching the tech world panic.  
 Read it here: [Copilot Chaos](./clown-network/chronicles/2025-4-29-copilot-chaos.html)
 
 ---
 
-(You’re welcome, future.)
+
+   <!--### <span style="color: blue;">Announcement</span>
+
+1. A new feature has been added to the site:  
+   - **Interactive Blog Navigation**: Easily browse through blog posts with a new, user-friendly interface.
+
+2. Upcoming events:  
+   - **Webinar on Federated Learning**:  
+     Date: <span style="color: green;">May 15, 2025</span>  
+     Topic: <span style="color: purple;">"Privacy-Preserving AI in Decentralized Systems"</span>  
+     Registration link: [Sign Up Here](https://example.com/webinar)
+
+3. Stay tuned for more updates and exciting content!-->
+
 
 ### <span style="color: red;">Notice</span>
 
