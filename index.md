@@ -7,13 +7,14 @@ title: Kristina
 
 <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Kristina P. Sinaga</h1>
 
-<p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin-top: 0; margin-bottom: 20px;">
+<p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin: 0 0 20px;">
   “I said coding would change. Then I watched it happen with tea.”
 </p>
 
 <p style="text-align: center; font-size: 1em; color: #fdfdfd;">
-  Welcome to my personal webpage!
+  Welcome to my world of innovation and clarity!
 </p>
+
 
 <!-- Featured Blog Post Section -->
 <div style="background: linear-gradient(135deg, #ff66a6, #ff99cc); color: white; padding: 30px 20px; text-align: center; font-family: 'Inter', sans-serif; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); margin: 40px 0;">
