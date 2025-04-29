@@ -7,6 +7,19 @@ title: Blog
 
 <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Kristina's Blog</h1>
 
+<img src="/assets/images/mobius_blog_spinning.png" alt="Mobius Blog Spinner" class="mobius-spin" style="width: 120px; margin: 20px auto; display: block;" />
+
+<style>
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .mobius-spin {
+    animation: spin 5s linear infinite;
+  }
+</style>
+
+
 <p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin-top: 0; margin-bottom: 20px;">
   Insights, satire, reflections, and notes from the fields of chaos and clarity.
 </p>
