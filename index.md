@@ -2,7 +2,7 @@
 layout: default
 title: Kristina
 ---
-
+<img src="/assets/images/mobius_banner.png" alt="Mobius Banner" style="width: 120px; float: right; margin-left: 20px;" />
 <h1 style="text-align: center; font-size: 2.2em; margin-bottom: 0;">Kristina P. Sinaga</h1>
 <p style="text-align: center; font-style: italic; font-size: 1.1em; color: #ff99cc; margin-top: 0;">“I said coding would change. Then I watched it happen with tea.”</p>
 <p style="text-align: center;">Welcome to my personal webpage!</p>
