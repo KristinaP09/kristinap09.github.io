@@ -4,6 +4,63 @@ title: Kristina
 ---
 
 
+<!-- mobile-friendly scripts (meta tag and styles)-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  h1, h2, p {
+    margin: 0 10px;
+    text-align: center;
+  }
+
+  div {
+    padding: 10px;
+  }
+
+  .cta-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #ff66a6;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #ff99cc;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .cta-button {
+      font-size: 0.9em;
+    }
+  }
+</style>
+
 <!-- <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Innovative Journey</h1>
 
 <p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin: 0 0 20px;">
