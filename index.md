@@ -5,7 +5,7 @@ title: Kristina
 
 <img src="/assets/images/mobius_banner.png" alt="Mobius Banner" style="width: 120px; float: right; margin: 20px;" />
 
-<h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Kristina P. Sinaga</h1>
+<h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Innovative Journey</h1>
 
 <p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin: 0 0 20px;">
   “I said coding would change. Then I watched it happen with tea.”
