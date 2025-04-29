@@ -12,7 +12,7 @@ title: Kristina
 </p>
 
 <p style="text-align: center; font-size: 1em; color: #fdfdfd;">
-  Welcome to my world of innovation and clarity!
+  Where mathematics meets elegance.
 </p>
 
 
