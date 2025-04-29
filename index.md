@@ -4,7 +4,7 @@ title: Kristina
 ---
 
 
-<h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Innovative Journey</h1>
+<!-- <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Innovative Journey</h1>
 
 <p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin: 0 0 20px;">
   “I said coding would change. Then I watched it happen with tea.”
@@ -12,6 +12,16 @@ title: Kristina
 
 <p style="text-align: center; font-size: 1em; color: #fdfdfd;">
   Where mathematics meets elegance.
+</p>-->
+
+<h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">A Journey Through Innovation</h1>
+
+<p style="text-align: center; font-style: italic; font-size: 1.2em; color: #ff99cc; margin: 0 0 20px;">
+  “Coding evolves, and I evolve with it — one cup of tea at a time.”
+</p>
+
+<p style="text-align: center; font-size: 1em; color: #fdfdfd;">
+  Where mathematics and creativity converge.
 </p>
 
 
