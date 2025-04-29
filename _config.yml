@@ -6,7 +6,7 @@
 name: Kristina P. Sinaga
 
 # Short bio or description (displayed in the header)
-description: Personal website
+# description: Personal website
 theme: minima
 markdown: kramdown
 
