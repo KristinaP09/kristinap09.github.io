@@ -11,7 +11,26 @@ title: Blog
   Insights, satire, reflections, and notes from the fields of chaos and clarity.
 </p>
 
-<!-- Your cool floating aliens, music player, dark mode toggle, and all custom scripts start here -->
+<!-- Blinking Möbius SVG placed here -->
+<svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display: block; margin: 30px auto;">
+  <title>Möbius: Engineered Logic, Sprinkled with Irony</title>
+  <defs>
+    <radialGradient id="mobiusGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff99cc" />
+      <stop offset="100%" stop-color="#1f1f2e" />
+    </radialGradient>
+  </defs>
+  <g>
+    <ellipse cx="50" cy="50" rx="35" ry="20" fill="url(#mobiusGlow)" stroke="#ff66a6" stroke-width="2">
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+    <circle cx="65" cy="45" r="4" fill="#ff66a6">
+      <animate attributeName="r" values="4;1;4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
+
+<!-- Blog Visuals and Scripts -->
 
 <style>
   html { scroll-behavior: smooth; }
@@ -57,8 +76,6 @@ title: Blog
   }
 </script>
 
-<!-- Blog Content -->
-
 ## Welcome to the Blog
 
 Here you’ll find insights, satire, reflections, and notes from the field — with a strong focus on patterns, psychology, and systems.
@@ -81,12 +98,11 @@ Explore the full **Clown Network Chronicles** — a live archive of chair-draggi
 This collection blends data, sarcasm, and surreal observation into one central hub.  
 A must-read for lovers of noise, nuance, and nonsense.
 
-<!-- Footer Section -->
 <footer>
   &copy; 2025 Kristina P09 &mdash; Powered by accidental brilliance.
 </footer>
 
-<!-- Dark Mode Controls -->
+<!-- Dark Mode Toggle -->
 <div class="dark-toggle">
   <button onclick="toggleDarkMode()">🌓 Toggle Dark Mode</button>
 </div>
