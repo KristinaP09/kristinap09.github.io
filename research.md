@@ -3,36 +3,24 @@ layout: default
 title: Research
 ---
 
-# Research
+<h1 style="text-align: center; font-size: 2.2em;">Research</h1>
 
-<p align="justify">
-
-Welcome to my research hub. My work lies at the intersection of machine learning theory and practical AI deployment—especially in decentralized and resource-constrained environments. I focus on developing robust, interpretable, and scalable models tailored to real-world challenges.
-
-You can explore my full list of publications on  
-<a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" target="_blank"><strong>Google Scholar</strong></a>.
-
+<p style="text-align: center; font-size: 1.1em; color: #ff99cc;">
+  “Scalable. Interpretable. Trustworthy.”
 </p>
 
----
+<p>
+My research lies at the intersection of artificial intelligence, optimization, and systems theory — with a strong emphasis on clean design and explainability.  
+</p>
 
-### **Research Areas**
+<ul>
+  <li><strong>Multi-View Clustering:</strong> Developing efficient clustering algorithms that integrate heterogeneous feature spaces (views).</li>
+  <li><strong>Federated Learning:</strong> Training models across distributed networks without compromising privacy or introducing chaos.</li>
+  <li><strong>Edge AI:</strong> Designing lightweight models suitable for real-time, low-resource environments.</li>
+  <li><strong>Anomaly Detection:</strong> Identifying patterns that don’t belong — from machines to behavior.</li>
+</ul>
 
-- **<span style="color: #0D7C2B;">Clustering & Multi-View Learning</span>**  
-  <p align="justify">Designing scalable and interpretable clustering algorithms to handle heterogeneous and high-dimensional data across multiple views or feature spaces. Applications include anomaly detection, customer segmentation, and multi-sensor fusion.</p>
-
-- **<span style="color: #0D5E7C;">Federated & Distributed Learning</span>**  
-  <p align="justify">Building privacy-preserving AI models for collaborative learning across distributed devices or nodes without centralizing data. Emphasis on scalability, communication efficiency, and trustworthiness.</p>
-
-- **<span style="color: #78A70D;">Edge AI & Cyber-Physical Systems</span>**  
-  <p align="justify">Developing lightweight and energy-efficient AI algorithms suitable for embedded systems, industrial monitoring, and autonomous environments. My work focuses on balancing performance with hardware constraints.</p>
-
-- **<span style="color: #D24E07;">Trustworthy AI</span>**  
-  <p align="justify">Focusing on explainability, robustness, fairness, and security of AI systems. I aim to make machine learning models more accountable and reliable in sensitive or high-stakes domains.</p>
-
----
-
-### **Want to Collaborate?**
-
-If you're working on problems in clustering, Edge AI, or decentralized learning—or just want to discuss trustworthy AI systems—feel free to connect.
-
+<p>
+I value clarity in implementation and reproducibility in results. My research balances theoretical foundation with practical deployment —  
+ensuring what I publish is not just elegant on paper, but robust in the real world.
+</p>
