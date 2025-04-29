@@ -33,6 +33,6 @@ My research focuses on developing scalable, interpretable, and trustworthy AI mo
 Contact
 -------
 
-You can reach me at kristina41@gmail.com.
+You can reach me at kristinasinaga41@gmail.com.
 
 
