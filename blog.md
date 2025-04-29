@@ -81,9 +81,6 @@ Explore the full **Clown Network Chronicles** — a live archive of chair-draggi
 This collection blends data, sarcasm, and surreal observation into one central hub.  
 A must-read for lovers of noise, nuance, and nonsense.
 
-<footer>
-  &copy; 2025 Kristina P09 &mdash; Powered by accidental brilliance.
-</footer>
 
 <!-- Dark Mode Toggle -->
 <div class="dark-toggle">
