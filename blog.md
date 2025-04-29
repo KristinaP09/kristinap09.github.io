@@ -3,7 +3,7 @@ layout: default
 title: Blog
 ---
 
-<img src="/assets/images/mobius_blog.png" alt="Mobius Blog Banner" style="width: 120px; float: right; margin: 20px;" />
+<!--<img src="/assets/images/mobius_blog.png" alt="Mobius Blog Banner" style="width: 120px; float: right; margin: 20px;" />-->
 
 <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Kristina's Blog</h1>
 
