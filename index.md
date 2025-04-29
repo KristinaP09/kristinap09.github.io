@@ -3,7 +3,6 @@ layout: default
 title: Kristina
 ---
 
-<img src="/assets/images/mobius_banner.png" alt="Mobius Banner" style="width: 120px; float: right; margin: 20px;" />
 
 <h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Innovative Journey</h1>
 
