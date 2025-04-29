@@ -18,7 +18,7 @@
   <meta name="twitter:image" content="https://kristinap09.github.io/assets/images/Kris.jpeg" />
 </head>
 <body>
-  <!-- Homepage Splash Animation -->
+<!-- Homepage Splash Animation (Once Per Day) -->
 <div id="splash" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
   background: linear-gradient(135deg, #1f1f2e, #ff66a6); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column;
   color: white; font-family: 'Inter', sans-serif; font-size: 1.8em;">
@@ -34,17 +34,20 @@
 </div>
 
 <script>
-  // Only show splash if not shown this session
-  if (sessionStorage.getItem('mobiusSplashShown')) {
-    document.getElementById('splash').style.display = 'none';
-  } else {
-    sessionStorage.setItem('mobiusSplashShown', 'true');
+  const splash = document.getElementById('splash');
+  const now = new Date();
+  const lastShown = localStorage.getItem('mobiusSplashLastShown');
+  const showSplash = !lastShown || (now - new Date(lastShown)) > 86400000; // 24 hrs
+
+  if (showSplash) {
+    localStorage.setItem('mobiusSplashLastShown', now.toISOString());
     setTimeout(() => {
-      const splash = document.getElementById('splash');
       splash.style.transition = 'opacity 1.5s ease-out';
       splash.style.opacity = '0';
       setTimeout(() => splash.style.display = 'none', 1500);
     }, 2500);
+  } else {
+    splash.style.display = 'none';
   }
 </script>
 
