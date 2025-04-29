@@ -5,5 +5,25 @@ body {
   margin: 0;
   padding: 0;
 }
-a { color: #ff66a6; text-decoration: none; }
-main { padding: 20px; }
+
+a {
+  color: #ff66a6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffb3d9;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  background: #1f1f2e;
+  color: #ff99cc;
+}
