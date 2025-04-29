@@ -6,7 +6,9 @@
 name: Kristina P. Sinaga
 
 # Short bio or description (displayed in the header)
-description: 
+description: Personal website
+theme: minima
+markdown: kramdown
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: 
