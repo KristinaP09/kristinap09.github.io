@@ -3,7 +3,7 @@ layout: default
 title: Kristina
 ---
 
-<h1 style="text-align: center; font-size: 2.2em; margin-bottom: 0;">Kristina</h1>
+<h1 style="text-align: center; font-size: 2.2em; margin-bottom: 0;">Kristina P. Sinaga</h1>
 <p style="text-align: center; font-style: italic; font-size: 1.1em; color: #ff99cc; margin-top: 0;">“I said coding would change. Then I watched it happen with tea.”</p>
 <p style="text-align: center;">Welcome to my personal webpage!</p>
 
