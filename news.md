@@ -4,9 +4,23 @@ title: News
 permalink: /news/
 ---
 
+
+
+
 ## <span style="color: #2FC10B;">[Update]</span>
 
 ---
+
+
+**April 29, 2025**  
+**New Blog Post: “I Predicted This Chaos, and Now I’m Sipping Tea While the System Auto-Completes Itself”**  
+I said coding would become accessible to everyone — no CS degree required — and now the world is catching up.  
+My latest post dives into the rise of GitHub Copilot, the fall of gatekeeping, and the comedic beauty of watching the tech world panic.  
+Read it here: [Copilot Chaos](./clown-network/chronicles/2025-4-29-copilot-chaos.html)
+
+---
+
+(You’re welcome, future.)
 
 ### <span style="color: red;">Notice</span>
 
