@@ -1,12 +1,11 @@
 ---
-layout: page
+layout: default
 title: News
-permalink: /news/
 ---
 
+# News
 
----
-### <span style="color: blue;">[Update] New Blog Post</span>
+## <span style="color: blue;">[Update] New Blog Post</span>
 
 
 I said coding would become accessible to everyone — no CS degree required — and now the world is catching up.  
@@ -61,3 +60,4 @@ This page will serve as an evolving space for sharing major updates, surprising 
 
 Stay tuned—and if you’re curious about my publications,  
 you can always visit my <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color: #8A2BE2;"><strong>Google Scholar</strong></a> profile.
+

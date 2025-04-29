@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: default
 title: Blog
-permalink: /blog/
 ---
 
 <style>
@@ -200,3 +199,4 @@ A must-read for lovers of noise, nuance, and nonsense.
 </script>
 
 </footer>
+

@@ -7,6 +7,8 @@ title: Kristina
 
 Welcome to my personal webpage!
 
+<!-- Featured blog post banner here (optional) -->
+
 <div style="background: linear-gradient(135deg, #ff66a6, #ff99cc); color: white; padding: 30px 20px; text-align: center; font-family: 'Inter', sans-serif; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); margin: 30px 0;">
   <h2 style="margin: 0 0 10px 0; font-size: 1.8em;">Latest Brainwave</h2>
   <p style="font-size: 1.2em; margin: 0 0 15px 0;">
@@ -17,19 +19,20 @@ Welcome to my personal webpage!
   </a>
 </div>
 
+
 About Me
 --------
 
-I am passionate about exploring the beauty of mathematics and its applications in the world.  
-...
+I am Kristina P. Sinaga, a lifelong learner and researcher with a passion for building innovative AI solutions. With a Ph.D. in Applied Mathematics from Chung Yuan Christian University (CYCU), Taiwan, I focus on bridging theoretical foundations with practical applications to address real-world challenges. I value clarity, clean documentation, and meaningful contributions, thriving on structure and innovation while staying true to my principles.
 
 Research
 --------
 
-My research focuses on mathematical modeling, data analysis, and algorithm development.  
-...
+My research focuses on developing scalable, interpretable, and trustworthy AI models for decentralized and resource-constrained environments. I specialize in clustering, multi-view learning, federated learning, and Edge AI, with applications in anomaly detection, industrial monitoring, and privacy-preserving systems. My work emphasizes balancing theoretical foundations with practical deployment to address real-world challenges.
 
 Contact
 -------
 
-You can reach me at kristina@example.com.
+You can reach me at kristina41@gmail.com.
+
+

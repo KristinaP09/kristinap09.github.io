@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: default
 title: Research
-permalink: /research/
 ---
+
+# Research
 
 <p align="justify">
 
@@ -34,3 +35,4 @@ You can explore my full list of publications on
 ### **Want to Collaborate?**
 
 If you're working on problems in clustering, Edge AI, or decentralized learning—or just want to discuss trustworthy AI systems—feel free to connect.
+
