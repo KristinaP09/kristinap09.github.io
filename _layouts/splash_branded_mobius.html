@@ -1,0 +1,48 @@
+<!-- Möbius-Branded Daily Splash -->
+<div id="splash" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #1f1f2e, #ff66a6); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column;
+  color: white; font-family: 'Inter', sans-serif; font-size: 1.8em; text-align: center;">
+
+  <div style="animation: pulse 2s infinite;">
+    Möbius Loop Activated...
+  </div>
+
+  <div style="font-size: 0.9em; margin-top: 10px; color: #ffccf2;">
+    Where logic folds and sarcasm loads.
+  </div>
+
+  <div style="font-size: 2em; margin-top: 25px; animation: spinEmoji 1.5s linear infinite;">
+    ♾️
+  </div>
+</div>
+
+<script>
+  const splash = document.getElementById('splash');
+  const now = new Date();
+  const lastShown = localStorage.getItem('mobiusSplashLastShown');
+  const showSplash = !lastShown || (now - new Date(lastShown)) > 86400000;
+
+  if (showSplash) {
+    localStorage.setItem('mobiusSplashLastShown', now.toISOString());
+    setTimeout(() => {
+      splash.style.transition = 'opacity 1.5s ease-out';
+      splash.style.opacity = '0';
+      setTimeout(() => splash.style.display = 'none', 1500);
+    }, 2500);
+  } else {
+    splash.style.display = 'none';
+  }
+</script>
+
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes spinEmoji {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
