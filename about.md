@@ -386,44 +386,42 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 ## Recent Publications
 
 <div class="publication-list">
-  <div class="publication-item">
-    <span class="pub-year">2023</span>
+
+<div class="publication-item">
+    <span class="pub-year">2024</span>
     <div class="pub-details">
-      <p class="pub-title">Heat-Kernel Enhanced Multi-View Clustering with Exponential Distance Metrics</p>
-      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>Journal of Machine Learning Research</em></p>
+      <p class="pub-title">Rectified Gaussian kernel multi-view k-means clustering</p>
+      <p class="pub-authors">Sinaga, K.P.</p>
+      <p class="pub-journal"><em>arXiv preprint arXiv:2405.05619</em></p>
       <div class="pub-links">
-        <a href="https://jmlr.org/papers/" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/EB-MVFCM" target="_blank" class="code-link">Code</a>
-        <a href="https://doi.org/10.xxxx/xxxx" target="_blank" class="doi-link">DOI</a>
+        <a href="https://arxiv.org/abs/2405.05619" target="_blank" class="journal-link">arXiv</a>
+        <a href="https://github.com/KristinaP09/RectifiedMVKM" target="_blank" class="code-link">Code</a>
       </div>
     </div>
   </div>
 
 <div class="publication-item">
-    <span class="pub-year">2022</span>
+    <span class="pub-year">2024</span>
     <div class="pub-details">
-      <p class="pub-title">Bi-Level Weighted Clustering for Multi-View Data Analysis</p>
+      <p class="pub-title">Federated Multi-View K-Means Clustering</p>
       <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
       <p class="pub-journal"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em></p>
       <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/bi-level-clustering" target="_blank" class="code-link">Code</a>
-        <a href="https://doi.org/10.1109/TPAMI.2022" target="_blank" class="doi-link">DOI</a>
+        <a href="https://ieeexplore.ieee.org/document/10499999" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/EB-MVFCM" target="_blank" class="code-link">Code</a>
       </div>
     </div>
   </div>
 
 <div class="publication-item">
-    <span class="pub-year">2022</span>
+    <span class="pub-year">2023</span>
     <div class="pub-details">
-      <p class="pub-title">Rectified Multi-View Non-Negative Matrix Factorization with Comprehensive Constraints</p>
-      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>Information Sciences</em></p>
+      <p class="pub-title">Unsupervised multiview fuzzy c-means clustering algorithm</p>
+      <p class="pub-authors">Hussain, I., Sinaga, K.P., Yang, M.S.</p>
+      <p class="pub-journal"><em>Electronics 12(21), 4467</em></p>
       <div class="pub-links">
-        <a href="https://www.sciencedirect.com/journal/information-sciences" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/rectified-mv-nmf" target="_blank" class="code-link">Code</a>
-        <a href="https://doi.org/10.1016/j.ins.2022" target="_blank" class="doi-link">DOI</a>
+        <a href="https://github.com/KristinaP09/U-MV-FCM" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/multiview-fcm" target="_blank" class="code-link">Code</a>
       </div>
     </div>
   </div>
@@ -431,12 +429,25 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 <div class="publication-item">
     <span class="pub-year">2021</span>
     <div class="pub-details">
-      <p class="pub-title">Federated Learning Approaches for Edge AI Applications</p>
-      <p class="pub-authors">Sinaga, K.P.</p>
-      <p class="pub-journal"><em>International Conference on Machine Learning</em></p>
+      <p class="pub-title">Entropy K-means clustering with feature reduction under unknown number of clusters</p>
+      <p class="pub-authors">Sinaga, K.P., Hussain, I., Yang, M.S.</p>
+      <p class="pub-journal"><em>IEEE Access 9, 67736-67751</em></p>
       <div class="pub-links">
-        <a href="https://icml.cc/Conferences/2021/Schedule" target="_blank" class="journal-link">Conference</a>
-        <a href="https://github.com/KristinaP09/federated-edge-ai" target="_blank" class="code-link">Code</a>
+        <a href="https://ieeexplore.ieee.org/document/9442662" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/Entropy-k-means" target="_blank" class="code-link">Code</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2021</span>
+    <div class="pub-details">
+      <p class="pub-title">Collaborative feature-weighted multi-view fuzzy c-means clustering</p>
+      <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
+      <p class="pub-journal"><em>Pattern Recognition 119, 108064</em></p>
+      <div class="pub-links">
+        <a href="https://www.sciencedirect.com/science/article/pii/S0031320321003073" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/Co-FW-MVFCM" target="_blank" class="code-link">Code</a>
       </div>
     </div>
   </div>
@@ -444,16 +455,53 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 <div class="publication-item">
     <span class="pub-year">2020</span>
     <div class="pub-details">
-      <p class="pub-title">Unsupervised K-means Clustering Algorithm</p>
+      <p class="pub-title">Unsupervised K-means clustering algorithm</p>
       <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>IEEE Access</em></p>
+      <p class="pub-journal"><em>IEEE Access 8, 80716-80727</em></p>
       <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/unsupervised-kmeans" target="_blank" class="code-link">Code</a>
-        <a href="https://doi.org/10.1109/ACCESS.2020" target="_blank" class="doi-link">DOI</a>
+        <a href="https://ieeexplore.ieee.org/document/9099048" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/Unsupervised-k-means" target="_blank" class="code-link">Code</a>
       </div>
     </div>
   </div>
+
+<div class="publication-item">
+    <span class="pub-year">2019</span>
+    <div class="pub-details">
+      <p class="pub-title">A feature-reduction multi-view k-means clustering algorithm</p>
+      <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
+      <p class="pub-journal"><em>IEEE Access 7, 114472-114486</em></p>
+      <div class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/8765632" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/FRMVK" target="_blank" class="code-link">Code</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2018</span>
+    <div class="pub-details">
+      <p class="pub-title">Modified relational mountain clustering method</p>
+      <p class="pub-authors">Sinaga, K.P., Hsieh, J.N., Benjamin, J.B.M., Yang, M.S.</p>
+      <p class="pub-journal"><em>Artificial Intelligence and Soft Computing: 17th International Conference</em></p>
+      <div class="pub-links">
+        <a href="https://link.springer.com/chapter/10.1007/978-3-319-91253-0_36" target="_blank" class="journal-link">Conference</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2017</span>
+    <div class="pub-details">
+      <p class="pub-title">A review of multi-view clustering algorithms</p>
+      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
+      <p class="pub-journal"><em>IEEE Access 6, 62356-62370</em></p>
+      <div class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/8477150" target="_blank" class="journal-link">Journal</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 ## Opportunities
