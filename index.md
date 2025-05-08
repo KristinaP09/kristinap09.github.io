@@ -277,10 +277,10 @@ title: Kristina
       <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kristinasinaga41@gmail.com">kristinasinaga41@gmail.com</a></p>
     </div>
     <div class="social-links">
-      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      <a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309?" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/KristinaP09" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/NeuralGlowAI" title="X"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=it&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
     </div>
   </section>
 </div>
