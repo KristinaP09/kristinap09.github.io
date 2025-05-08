@@ -1,7 +1,34 @@
 ---
 layout: default
 title: Research
+description: "Explore Kristina P. Sinaga's research in artificial intelligence, optimization, and systems theory, focusing on multi-view clustering, federated learning, edge AI, and anomaly detection. View selected publications, technical skills, and current projects."
+keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view clustering, federated learning, edge AI, anomaly detection, machine learning, data science, publications, technical skills, optimization, systems theory, explainable AI"
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "headline": "Research - Kristina P. Sinaga",
+  "description": "Explore Kristina P. Sinaga's research at the intersection of artificial intelligence, optimization, and systems theory. Focus areas include multi-view clustering, federated learning, edge AI, and anomaly detection. Discover selected publications, technical skills, and current projects.",
+  "keywords": "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view clustering, federated learning, edge AI, anomaly detection, machine learning, data science, publications, technical skills, optimization, systems theory, explainable AI",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Kristina P. Sinaga",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Optimization",
+      "Systems Theory",
+      "Multi-View Clustering",
+      "Federated Learning",
+      "Edge AI",
+      "Anomaly Detection",
+      "Explainable AI",
+      "Privacy-Preserving Machine Learning"
+    ]
+  }
+}
+</script>
+
 <h1 style="text-align: center; font-size: 2.2em;">Research</h1>
 
 <p style="text-align: center; font-size: 1.1em; color: #ff99cc;">
@@ -40,7 +67,7 @@ title: Research
   <!-- Article 1 -->
   <article class="publication-card">
     <div class="publication-icon">
-      <img src="https://via.placeholder.com/150?text=Federated+KMeans" alt="Federated Multi-View K-Means Clustering">
+      <!-- Removed img tag -->
     </div>
     <div class="publication-content">
       <h3>
@@ -48,7 +75,7 @@ title: Research
           Federated Multi-View K-Means Clustering
         </a>
       </h3>
-      <p class="publication-authors">Miin-Shen Yang, Kristina P. Sinaga</p>
+      <p class="publication-authors">Kristina P. Sinaga, Miin-Shen Yang</p>
       <p class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024
         <span class="impact-factor">
           Impact Factor: 20.8
@@ -82,7 +109,7 @@ title: Research
 
 <article class="publication-card">
     <div class="publication-icon">
-      <img src="https://via.placeholder.com/150?text=KMeans" alt="Unsupervised K-means clustering algorithm">
+      <!-- Removed img tag -->
     </div>
     <div class="publication-content">
       <h3>
@@ -123,7 +150,7 @@ title: Research
         <a href="https://ieeexplore.ieee.org/abstract/document/9072123" target="_blank" class="pub-link">
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/Unsupervised-k-means" class="pub-link">
+        <a href="https://github.com/KristinaP09/KMeans-Clustering" class="pub-link">
           <i class="fab fa-github"></i> Code
         </a>
         <a href="/research/2020-Unsupervised_K-means_clustering_algorithm.pdf" target="_blank" class="pub-link">
@@ -137,7 +164,7 @@ title: Research
 
 <article class="publication-card">
     <div class="publication-icon">
-      <img src="https://via.placeholder.com/150?text=Co-FW-MVFCM" alt="Collaborative Feature-Weighted Multi-View Fuzzy C-Means Clustering">
+      <!-- Removed img tag -->
     </div>
     <div class="publication-content">
       <h3>
@@ -145,7 +172,7 @@ title: Research
           Collaborative feature-weighted multi-view fuzzy c-means clustering.
         </a>
       </h3>
-      <p class="publication-authors">Miin-Shen Yang, Kristina P. Sinaga</p>
+      <p class="publication-authors">Kristina P. Sinaga, Miin-Shen Yang</p>
       <p class="publication-venue">Pattern Recognition, 2021 <!-- Placeholder for Journal Name, Year -->
         <span class="impact-factor">
           Impact Factor: 7.5
@@ -165,7 +192,7 @@ title: Research
         <a href="#" target="_blank" class="pub-link"> <!-- Placeholder for article link -->
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/Co-FW-MVFCM" target="_blank" class="pub-link"> <!-- Placeholder for code link -->
+        <a href="#" target="_blank" class="pub-link"> <!-- Placeholder for code link -->
           <i class="fab fa-github"></i> Code
         </a>
         <a href="/research/2021_co-fw-mvfcm.pdf" target="_blank" class="pub-link">
@@ -381,12 +408,8 @@ title: Research
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  
-  .publication-icon img {
-    max-width: 100%;
-    max-height: 150px;
-    object-fit: cover;
+    /* Ensure the div still takes up space if needed, or adjust flex/height as desired */
+    min-height: 100px; /* Example: maintain a minimum height */
   }
   
   .publication-content {
@@ -612,7 +635,9 @@ title: Research
     }
   
     .publication-icon {
-      height: 150px;
+      height: auto; /* Adjust if a fixed height is no longer desired */
+      min-height: 50px; /* Example: smaller min-height for mobile */
+      flex-basis: auto; /* Allow it to shrink if content is removed */
     }
   
     .skills-expertise-container {
