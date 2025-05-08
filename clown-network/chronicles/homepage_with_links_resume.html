@@ -1,128 +1,598 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Forget the Clock-In: The Future of Work Is Value-First</title>
-<style>
-    body {
-      background-color: #fdf9f9;
-      font-family: 'Segoe UI', sans-serif;
-      color: #222;
-      line-height: 1.6;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      color: #b30059;
-    }
-    blockquote {
-      font-style: italic;
-      border-left: 4px solid #b30059;
-      padding-left: 1rem;
-      margin: 1.5rem 0;
-      color: #555;
-    }
-    .highlight {
-      background-color: #ffe6f0;
-      padding: 0.5rem;
-      display: block;
-      margin: 1rem 0;
-      border-left: 4px solid #b30059;
-    }
-    code {
-      background-color: #f2f2f2;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-    }
-  
-    h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-    h2 {
-      margin-top: 2.5rem;
-    }
-    p, li {
-      font-size: 1.05rem;
-    }
-    </style>
-</head>
-<body>
-<h1>Value Over Hours: My Work Philosophy</h1>
-<p>
-In today’s evolving world of work, performance is no longer defined by the number of hours you sit at a desk. It’s defined by clarity of thought, autonomy in execution, and the ability to create lasting value.
-</p>
-<p>
-I don’t subscribe to outdated models of productivity rooted in clock-ins, noise, and endless meetings. I believe in intentional, outcome-driven work guided by deep focus and systems thinking.
-</p>
-<p>
-Real work happens when distractions are minimized, and purpose is clear. I strive to build meaningful solutions that align with long-term impact rather than short-term visibility.
-</p>
-<blockquote>
-“It's not about being seen working—it's about delivering something worth seeing.”
-</blockquote>
-<p>
-If you're someone who values sharp thinking over surface performance, results over rituals, and depth over noise—we’re probably aligned.
-</p>
-
-
+<title>Value-Driven Work: Delivering Impact Beyond Hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <style>
-  .contact-button {
-    background-color: #005a87;
-    color: white;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 4px 14px rgba(0, 90, 135, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-  }
-
-  .contact-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 90, 135, 0.4);
-  }
-
-  .contact-icon {
-    animation: pulse 1.5s infinite;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.9; }
-    50% { transform: scale(1.1); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.9; }
-  }
+    :root {
+      --primary-color: #b30059;
+      --primary-light: #ffe6f0;
+      --secondary-color: #005a87;
+      --text-color: #333;
+      --light-bg: #fdf9f9;
+      --accent-color: #4CAF50;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: var(--light-bg);
+      font-family: 'Open Sans', sans-serif;
+      color: var(--text-color);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 60px;
+      background-color: var(--primary-color);
+    }
+    
+    p, li {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+      color: var(--text-color);
+    }
+    
+    /* Header and Navigation */
+    header {
+      background-color: white;
+      box-shadow: var(--box-shadow);
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 600;
+      transition: color 0.3s;
+      padding: 0.5rem 0;
+      position: relative;
+    }
+    
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+    
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transition: width 0.3s;
+    }
+    
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 8rem 0 4rem;
+      text-align: center;
+      background-color: white;
+      position: relative;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(179,0,89,0.05) 0%, rgba(0,90,135,0.05) 100%);
+      z-index: 0;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .tagline {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+    
+    /* Main Sections */
+    .section {
+      padding: 4rem 0;
+    }
+    
+    .section:nth-child(even) {
+      background-color: white;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    
+    .section-title h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* Philosophy Section */
+    .philosophy {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid var(--primary-color);
+      padding: 1rem 2rem;
+      margin: 2rem 0;
+      background-color: white;
+      box-shadow: var(--box-shadow);
+      position: relative;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+      border-radius: var(--border-radius);
+    }
+    
+    blockquote::before {
+      content: '"';
+      font-size: 4rem;
+      position: absolute;
+      left: 10px;
+      top: -20px;
+      color: var(--primary-light);
+      font-family: Georgia, serif;
+    }
+    
+    .highlight {
+      background-color: var(--primary-light);
+      padding: 1rem;
+      display: block;
+      margin: 1.5rem 0;
+      border-left: 4px solid var(--primary-color);
+      border-radius: var(--border-radius);
+    }
+    
+    /* Principles Section */
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .principle-card {
+      background-color: white;
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .principle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .principle-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    
+    .principle-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      text-align: center;
+      padding: 5rem 0;
+      background-color: var(--primary-light);
+    }
+    
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    .contact-button {
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 14px 28px;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 14px rgba(0, 90, 135, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+    
+    .contact-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 90, 135, 0.4);
+    }
+    
+    .primary-button {
+      background-color: var(--primary-color);
+      box-shadow: 0 4px 14px rgba(179, 0, 89, 0.3);
+    }
+    
+    .primary-button:hover {
+      box-shadow: 0 6px 20px rgba(179, 0, 89, 0.4);
+    }
+    
+    .contact-icon {
+      animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+    
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .social-link {
+      color: white;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.1);
+      transition: background-color 0.3s;
+    }
+    
+    .social-link:hover {
+      background-color: var(--primary-color);
+    }
+    
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--box-shadow);
+      }
+      
+      nav.active ul {
+        display: flex;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hero {
+        padding: 6rem 0 3rem;
+      }
+    }
 </style>
-<div style="margin-top: 2.5rem; text-align: center;">
-<a class="contact-button" href="mailto:you@example.com">
-<i class="fas fa-envelope contact-icon"></i> Contact Me
-  </a>
-</div>
+</head>
+<body>
 
-<div style="margin-top: 1.5rem; text-align: center; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-<a class="contact-button" href="https://www.linkedin.com/in/your-profile" style="background-color: #0a66c2;" target="_blank">
-<i class="fab fa-linkedin contact-icon"></i> LinkedIn
-  </a>
-<a class="contact-button" href="resume.pdf" style="background-color: #333;">
-<i class="fas fa-file-alt contact-icon"></i> Download Résumé
-  </a>
-</div>
+<!-- Header and Navigation -->
+<header>
+  <div class="container">
+    <div class="header-content">
+      <a href="#" class="logo">Kristina P.</a>
+      <nav id="main-nav">
+        <button class="mobile-menu-btn" id="mobile-menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#principles">Principles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <p class="tagline">A Modern Approach to Professional Growth</p>
+      <h1>Value-Driven Work: Delivering Impact Beyond Hours</h1>
+      <p>In today's evolving workplace, success is measured by outcomes, not time spent at a desk. I focus on creating tangible value through purposeful work and strategic thinking.</p>
+      <div class="contact-buttons">
+        <a class="contact-button primary-button" href="#contact">
+          <i class="fas fa-handshake contact-icon"></i> Work With Me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="philosophy">
+      <p>I'm a strategic thinker and problem-solver passionate about creating systems that deliver lasting value. With experience across multiple domains, I bring a unique perspective to complex challenges.</p>
+      <p>My approach combines analytical thinking with creative solutions to develop strategies that focus on what truly matters: meaningful results that drive growth and innovation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Philosophy Section -->
+<section class="section" id="philosophy">
+  <div class="container">
+    <div class="section-title">
+      <h2>My Work Philosophy</h2>
+    </div>
+    <div class="philosophy">
+      <p>
+      In today's evolving world of work, performance is no longer defined by the number of hours you sit at a desk. It's defined by clarity of thought, autonomy in execution, and the ability to create lasting value.
+      </p>
+      
+      <blockquote>
+      "It's not about being seen working—it's about delivering something worth seeing."
+      </blockquote>
+      
+      <p>
+      I don't subscribe to outdated models of productivity rooted in clock-ins, noise, and endless meetings. I believe in intentional, outcome-driven work guided by deep focus and systems thinking.
+      </p>
+      
+      <div class="highlight">
+        Real work happens when distractions are minimized, and purpose is clear. I strive to build meaningful solutions that align with long-term impact rather than short-term visibility.
+      </div>
+      
+      <p>
+      If you're someone who values sharp thinking over surface performance, results over rituals, and depth over noise—we're probably aligned.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Principles Section -->
+<section class="section" id="principles">
+  <div class="container">
+    <div class="section-title">
+      <h2>Core Principles</h2>
+    </div>
+    <div class="principles">
+      <div class="principle-card">
+        <div class="principle-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3 class="principle-title">Outcome-Focused</h3>
+        <p>I measure success by tangible results and impact, not by hours logged or tasks completed.</p>
+      </div>
+      
+      <div class="principle-card">
+        <div class="principle-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3 class="principle-title">Deep Focus</h3>
+        <p>Quality work requires uninterrupted concentration and deliberate thinking without constant distractions.</p>
+      </div>
+      
+      <div class="principle-card">
+        <div class="principle-icon">
+          <i class="fas fa-sitemap"></i>
+        </div>
+        <h3 class="principle-title">Systems Approach</h3>
+        <p>I build scalable systems and frameworks rather than one-off solutions to create lasting value.</p>
+      </div>
+      
+      <div class="principle-card">
+        <div class="principle-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3 class="principle-title">Continuous Innovation</h3>
+        <p>Staying ahead requires constant learning, adaptation, and willingness to challenge the status quo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Let's Connect</h2>
+    </div>
+    <p>Interested in collaborating or learning more about my approach? Reach out through any of these channels.</p>
+    
+    <div class="contact-buttons">
+      <a class="contact-button primary-button" href="mailto:you@example.com">
+        <i class="fas fa-envelope contact-icon"></i> Email Me
+      </a>
+      <a class="contact-button" href="https://www.linkedin.com/in/your-profile" target="_blank">
+        <i class="fab fa-linkedin contact-icon"></i> LinkedIn
+      </a>
+      <a class="contact-button" href="resume.pdf" style="background-color: #333;">
+        <i class="fas fa-file-alt contact-icon"></i> Download Résumé
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+      </div>
+      <p class="copyright">&copy; <span id="current-year">2023</span> Kristina P. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  document.getElementById('mobile-menu').addEventListener('click', function() {
+    document.getElementById('main-nav').classList.toggle('active');
+  });
+  
+  // Set current year in copyright
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+  
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if(targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if(targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+        
+        // Close mobile menu if open
+        document.getElementById('main-nav').classList.remove('active');
+      }
+    });
+  });
+</script>
 </body>
 </html>
