@@ -205,6 +205,77 @@ body.dark-mode .highlight-box {
   opacity: 0.9;
   transform: translateY(-2px);
 }
+
+.publication-list {
+  margin: 2rem 0;
+}
+
+.publication-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-year {
+  font-weight: bold;
+  min-width: 60px;
+  color: var(--accent);
+  font-size: 1.1rem;
+  padding-top: 0.2rem;
+}
+
+.pub-details {
+  flex: 1;
+}
+
+.pub-title {
+  font-weight: bold;
+  margin: 0 0 0.3rem 0;
+}
+
+.pub-authors {
+  margin: 0 0 0.3rem 0;
+}
+
+.pub-journal {
+  margin: 0 0 0.5rem 0;
+}
+
+.pub-links {
+  display: flex;
+  gap: 10px;
+}
+
+.pub-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: none;
+  text-transform: uppercase;
+}
+
+.journal-link {
+  background-color: var(--accent);
+  color: white !important;
+}
+
+.code-link {
+  background-color: #333;
+  color: white !important;
+}
+
+body.dark-mode .code-link {
+  background-color: #555;
+}
+
+.doi-link {
+  background-color: #e67e22;
+  color: white !important;
+}
 </style>
 
 <script>
@@ -253,7 +324,7 @@ function updateThemeStatus(text) {
 </script>
 
 <div class="profile-container">
-  <img src="assets/images/9C25DC27-CDCA-4B6A-A4F2-3AB8347AED28.jpg" alt="Kristina P. Sinaga" class="profile-image">
+  <img src="assets/images/DSC03661.JPG" alt="Kristina P. Sinaga" class="profile-image">
   <div class="profile-info">
     <h1>Kristina P. Sinaga</h1>
     <div class="profile-title">Ph.D. in Applied Mathematics, Chung Yuan Christian University (CYCU), Taiwan</div>
@@ -314,11 +385,76 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 
 ## Recent Publications
 
-- Sinaga, K.P., Yang, M.S. (2023). "Heat-Kernel Enhanced Multi-View Clustering with Exponential Distance Metrics." *Journal of Machine Learning Research*.
-- Yang, M.S., Sinaga, K.P. (2022). "Bi-Level Weighted Clustering for Multi-View Data Analysis." *IEEE Transactions on Pattern Analysis and Machine Intelligence*.
-- Sinaga, K.P., Yang, M.S. (2022). "Rectified Multi-View Non-Negative Matrix Factorization with Comprehensive Constraints." *Information Sciences*.
-- Sinaga, K.P. (2021). "Federated Learning Approaches for Edge AI Applications." *International Conference on Machine Learning*.
-- Sinaga, K.P., Yang, M.S. (2020). "Unsupervised K-means Clustering Algorithm." *IEEE Access*.
+<div class="publication-list">
+  <div class="publication-item">
+    <span class="pub-year">2023</span>
+    <div class="pub-details">
+      <p class="pub-title">Heat-Kernel Enhanced Multi-View Clustering with Exponential Distance Metrics</p>
+      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
+      <p class="pub-journal"><em>Journal of Machine Learning Research</em></p>
+      <div class="pub-links">
+        <a href="https://jmlr.org/papers/" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/EB-MVFCM" target="_blank" class="code-link">Code</a>
+        <a href="https://doi.org/10.xxxx/xxxx" target="_blank" class="doi-link">DOI</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2022</span>
+    <div class="pub-details">
+      <p class="pub-title">Bi-Level Weighted Clustering for Multi-View Data Analysis</p>
+      <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
+      <p class="pub-journal"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em></p>
+      <div class="pub-links">
+        <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/bi-level-clustering" target="_blank" class="code-link">Code</a>
+        <a href="https://doi.org/10.1109/TPAMI.2022" target="_blank" class="doi-link">DOI</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2022</span>
+    <div class="pub-details">
+      <p class="pub-title">Rectified Multi-View Non-Negative Matrix Factorization with Comprehensive Constraints</p>
+      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
+      <p class="pub-journal"><em>Information Sciences</em></p>
+      <div class="pub-links">
+        <a href="https://www.sciencedirect.com/journal/information-sciences" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/rectified-mv-nmf" target="_blank" class="code-link">Code</a>
+        <a href="https://doi.org/10.1016/j.ins.2022" target="_blank" class="doi-link">DOI</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2021</span>
+    <div class="pub-details">
+      <p class="pub-title">Federated Learning Approaches for Edge AI Applications</p>
+      <p class="pub-authors">Sinaga, K.P.</p>
+      <p class="pub-journal"><em>International Conference on Machine Learning</em></p>
+      <div class="pub-links">
+        <a href="https://icml.cc/Conferences/2021/Schedule" target="_blank" class="journal-link">Conference</a>
+        <a href="https://github.com/KristinaP09/federated-edge-ai" target="_blank" class="code-link">Code</a>
+      </div>
+    </div>
+  </div>
+
+<div class="publication-item">
+    <span class="pub-year">2020</span>
+    <div class="pub-details">
+      <p class="pub-title">Unsupervised K-means Clustering Algorithm</p>
+      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
+      <p class="pub-journal"><em>IEEE Access</em></p>
+      <div class="pub-links">
+        <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/unsupervised-kmeans" target="_blank" class="code-link">Code</a>
+        <a href="https://doi.org/10.1109/ACCESS.2020" target="_blank" class="doi-link">DOI</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## Opportunities
 
@@ -340,5 +476,5 @@ Feel free to reach out if you're interested in collaboration, research opportuni
 ---
 
 <p style="text-align: center; color: var(--muted); font-size: 0.9em;">
-© 2024 Kristina P. Sinaga | Last updated: June 2024
+© 2025 Kristina P. Sinaga | Last updated: May 2025
 </p>
