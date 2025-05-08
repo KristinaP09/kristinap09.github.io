@@ -253,7 +253,7 @@ function updateThemeStatus(text) {
 </script>
 
 <div class="profile-container">
-  <img src="https://via.placeholder.com/150" alt="Kristina P. Sinaga" class="profile-image">
+  <img src="assets/images/9C25DC27-CDCA-4B6A-A4F2-3AB8347AED28.jpg" alt="Kristina P. Sinaga" class="profile-image">
   <div class="profile-info">
     <h1>Kristina P. Sinaga</h1>
     <div class="profile-title">Ph.D. in Applied Mathematics, Chung Yuan Christian University (CYCU), Taiwan</div>
@@ -341,3 +341,4 @@ Feel free to reach out if you're interested in collaboration, research opportuni
 
 <p style="text-align: center; color: var(--muted); font-size: 0.9em;">
 © 2024 Kristina P. Sinaga | Last updated: June 2024
+</p>
