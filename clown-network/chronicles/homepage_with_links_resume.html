@@ -4,7 +4,30 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Value-Driven Work: Delivering Impact Beyond Hours</title>
+<title>Value-Driven Work: Delivering Impact Beyond Hours | Kristina P.</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Learn how clarity of thought, autonomy in execution, and creating lasting value defines success in today's workplace. A modern approach to professional growth focused on outcomes, not hours.">
+<meta name="keywords" content="value-driven work, professional growth, productivity, deep work, outcome-focused, systems thinking, work philosophy">
+<meta name="author" content="Kristina P.">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://kristinap09.github.io/homepage_with_links_resume.html">
+
+<!-- Open Graph / Facebook Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kristinap09.github.io/homepage_with_links_resume.html">
+<meta property="og:title" content="Value-Driven Work: Delivering Impact Beyond Hours">
+<meta property="og:description" content="Learn how clarity of thought, autonomy in execution, and creating lasting value defines success in today's workplace.">
+<meta property="og:image" content="https://kristinap09.github.io/assets/images/BEE5D2F8-D3D7-4082-99E7-0E435B8C51C6.png">
+
+<!-- Twitter Meta Tags -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://kristinap09.github.io/homepage_with_links_resume.html">
+<meta property="twitter:title" content="Value-Driven Work: Delivering Impact Beyond Hours">
+<meta property="twitter:description" content="Learn how clarity of thought, autonomy in execution, and creating lasting value defines success in today's workplace.">
+<meta property="twitter:image" content="https://kristinap09.github.io/assets/images/BEE5D2F8-D3D7-4082-99E7-0E435B8C51C6.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -177,6 +200,33 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 1rem;
+    }
+    
+    /* Image Styling */
+    .hero-image {
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      display: block;
+    }
+    
+    .hero-image.animate {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
     }
     
     /* Main Sections */
@@ -389,6 +439,17 @@
         flex-direction: column;
         padding: 1rem;
         box-shadow: var(--box-shadow);
+        z-index: 200;
+      }
+      
+      nav ul li {
+        margin: 0.8rem 0;
+      }
+      
+      nav ul li a {
+        display: block;
+        padding: 0.8rem 1rem;
+        font-size: 1.1rem;
       }
       
       nav.active ul {
@@ -397,11 +458,97 @@
       
       .mobile-menu-btn {
         display: block;
+        padding: 0.5rem;
+        margin: -0.5rem;
       }
       
       .hero {
         padding: 6rem 0 3rem;
       }
+      
+      .hero-content {
+        padding: 0 1rem;
+      }
+      
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .contact-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+      
+      .principle-card {
+        padding: 1.2rem;
+      }
+      
+      /* Improve touch targets */
+      .social-link {
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+      }
+      
+      /* Improve readability */
+      p, li {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+    }
+    
+    /* Improved scrollbar for mobile */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--light-bg);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--secondary-color);
+      border-radius: 10px;
+    }
+    
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--primary-color);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 99;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    /* Loading optimization */
+    .lazy-load {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+    
+    .lazy-load.loaded {
+      opacity: 1;
     }
 </style>
 </head>
@@ -411,9 +558,9 @@
 <header>
   <div class="container">
     <div class="header-content">
-      <a href="#" class="logo">Kristina P.</a>
-      <nav id="main-nav">
-        <button class="mobile-menu-btn" id="mobile-menu">
+      <a href="#" class="logo" aria-label="Home">Kristina P.</a>
+      <nav id="main-nav" aria-label="Main navigation">
+        <button class="mobile-menu-btn" id="mobile-menu" aria-label="Toggle menu">
           <i class="fas fa-bars"></i>
         </button>
         <ul>
@@ -427,106 +574,114 @@
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <p class="tagline">A Modern Approach to Professional Growth</p>
-      <h1>Value-Driven Work: Delivering Impact Beyond Hours</h1>
-      <p>In today's evolving workplace, success is measured by outcomes, not time spent at a desk. I focus on creating tangible value through purposeful work and strategic thinking.</p>
-      <div class="contact-buttons">
-        <a class="contact-button primary-button" href="#contact">
-          <i class="fas fa-handshake contact-icon"></i> Work With Me
-        </a>
+<main itemscope itemtype="http://schema.org/Article">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="tagline">A Modern Approach to Professional Growth</p>
+        <h1 itemprop="headline">Value-Driven Work: Delivering Impact Beyond Hours</h1>
+        <p itemprop="description">In today's evolving workplace, success is measured by outcomes, not time spent at a desk. I focus on creating tangible value through purposeful work and strategic thinking.</p>
+        
+        <!-- Hero Image -->
+        <div class="hero-image animate lazy-load">
+          <img src="assets/images/BEE5D2F8-D3D7-4082-99E7-0E435B8C51C6.png" alt="Value-driven work concept illustration showing focus on outcomes rather than hours" loading="lazy" itemprop="image">
+        </div>
+        
+        <div class="contact-buttons">
+          <a class="contact-button primary-button" href="#contact">
+            <i class="fas fa-handshake contact-icon"></i> Work With Me
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About Section -->
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-title">
-      <h2>About Me</h2>
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Me</h2>
+      </div>
+      <div class="philosophy" itemprop="articleBody">
+        <p>I'm a strategic thinker and problem-solver passionate about creating systems that deliver lasting value. With experience across multiple domains, I bring a unique perspective to complex challenges.</p>
+        <p>My approach combines analytical thinking with creative solutions to develop strategies that focus on what truly matters: meaningful results that drive growth and innovation.</p>
+      </div>
     </div>
-    <div class="philosophy">
-      <p>I'm a strategic thinker and problem-solver passionate about creating systems that deliver lasting value. With experience across multiple domains, I bring a unique perspective to complex challenges.</p>
-      <p>My approach combines analytical thinking with creative solutions to develop strategies that focus on what truly matters: meaningful results that drive growth and innovation.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Philosophy Section -->
-<section class="section" id="philosophy">
-  <div class="container">
-    <div class="section-title">
-      <h2>My Work Philosophy</h2>
-    </div>
-    <div class="philosophy">
-      <p>
-      In today's evolving world of work, performance is no longer defined by the number of hours you sit at a desk. It's defined by clarity of thought, autonomy in execution, and the ability to create lasting value.
-      </p>
-      
-      <blockquote>
-      "It's not about being seen working—it's about delivering something worth seeing."
-      </blockquote>
-      
-      <p>
-      I don't subscribe to outdated models of productivity rooted in clock-ins, noise, and endless meetings. I believe in intentional, outcome-driven work guided by deep focus and systems thinking.
-      </p>
-      
-      <div class="highlight">
-        Real work happens when distractions are minimized, and purpose is clear. I strive to build meaningful solutions that align with long-term impact rather than short-term visibility.
+  <!-- Philosophy Section -->
+  <section class="section" id="philosophy">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Work Philosophy</h2>
       </div>
-      
-      <p>
-      If you're someone who values sharp thinking over surface performance, results over rituals, and depth over noise—we're probably aligned.
-      </p>
+      <div class="philosophy" itemprop="articleSection">
+        <p>
+        In today's evolving world of work, performance is no longer defined by the number of hours you sit at a desk. It's defined by clarity of thought, autonomy in execution, and the ability to create lasting value.
+        </p>
+        
+        <blockquote itemprop="citation">
+        "It's not about being seen working—it's about delivering something worth seeing."
+        </blockquote>
+        
+        <p>
+        I don't subscribe to outdated models of productivity rooted in clock-ins, noise, and endless meetings. I believe in intentional, outcome-driven work guided by deep focus and systems thinking.
+        </p>
+        
+        <div class="highlight">
+          Real work happens when distractions are minimized, and purpose is clear. I strive to build meaningful solutions that align with long-term impact rather than short-term visibility.
+        </div>
+        
+        <p>
+        If you're someone who values sharp thinking over surface performance, results over rituals, and depth over noise—we're probably aligned.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Principles Section -->
-<section class="section" id="principles">
-  <div class="container">
-    <div class="section-title">
-      <h2>Core Principles</h2>
+  <!-- Principles Section -->
+  <section class="section" id="principles">
+    <div class="container">
+      <div class="section-title">
+        <h2>Core Principles</h2>
+      </div>
+      <div class="principles" itemprop="articleSection">
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="principle-title">Outcome-Focused</h3>
+          <p>I measure success by tangible results and impact, not by hours logged or tasks completed.</p>
+        </div>
+        
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="principle-title">Deep Focus</h3>
+          <p>Quality work requires uninterrupted concentration and deliberate thinking without constant distractions.</p>
+        </div>
+        
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <h3 class="principle-title">Systems Approach</h3>
+          <p>I build scalable systems and frameworks rather than one-off solutions to create lasting value.</p>
+        </div>
+        
+        <div class="principle-card">
+          <div class="principle-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="principle-title">Continuous Innovation</h3>
+          <p>Staying ahead requires constant learning, adaptation, and willingness to challenge the status quo.</p>
+        </div>
+      </div>
     </div>
-    <div class="principles">
-      <div class="principle-card">
-        <div class="principle-icon">
-          <i class="fas fa-bullseye"></i>
-        </div>
-        <h3 class="principle-title">Outcome-Focused</h3>
-        <p>I measure success by tangible results and impact, not by hours logged or tasks completed.</p>
-      </div>
-      
-      <div class="principle-card">
-        <div class="principle-icon">
-          <i class="fas fa-brain"></i>
-        </div>
-        <h3 class="principle-title">Deep Focus</h3>
-        <p>Quality work requires uninterrupted concentration and deliberate thinking without constant distractions.</p>
-      </div>
-      
-      <div class="principle-card">
-        <div class="principle-icon">
-          <i class="fas fa-sitemap"></i>
-        </div>
-        <h3 class="principle-title">Systems Approach</h3>
-        <p>I build scalable systems and frameworks rather than one-off solutions to create lasting value.</p>
-      </div>
-      
-      <div class="principle-card">
-        <div class="principle-icon">
-          <i class="fas fa-lightbulb"></i>
-        </div>
-        <h3 class="principle-title">Continuous Innovation</h3>
-        <p>Staying ahead requires constant learning, adaptation, and willingness to challenge the status quo.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- Contact Section -->
 <section class="contact-section" id="contact">
@@ -537,13 +692,13 @@
     <p>Interested in collaborating or learning more about my approach? Reach out through any of these channels.</p>
     
     <div class="contact-buttons">
-      <a class="contact-button primary-button" href="mailto:you@example.com">
+      <a class="contact-button primary-button" href="mailto:you@example.com" aria-label="Email me">
         <i class="fas fa-envelope contact-icon"></i> Email Me
       </a>
-      <a class="contact-button" href="https://www.linkedin.com/in/your-profile" target="_blank">
+      <a class="contact-button" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile">
         <i class="fab fa-linkedin contact-icon"></i> LinkedIn
       </a>
-      <a class="contact-button" href="resume.pdf" style="background-color: #333;">
+      <a class="contact-button" href="resume.pdf" style="background-color: #333;" aria-label="Download resume">
         <i class="fas fa-file-alt contact-icon"></i> Download Résumé
       </a>
     </div>
@@ -555,14 +710,45 @@
   <div class="container">
     <div class="footer-content">
       <div class="social-links">
-        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-        <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="Medium"><i class="fab fa-medium"></i></a>
       </div>
       <p class="copyright">&copy; <span id="current-year">2023</span> Kristina P. All Rights Reserved.</p>
+      <p><a href="sitemap.xml">Sitemap</a></p>
     </div>
   </div>
 </footer>
+
+<!-- Back to top button -->
+<a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Value-Driven Work: Delivering Impact Beyond Hours",
+  "description": "Learn how clarity of thought, autonomy in execution, and creating lasting value defines success in today's workplace.",
+  "image": "https://kristinap09.github.io/assets/images/BEE5D2F8-D3D7-4082-99E7-0E435B8C51C6.png",
+  "author": {
+    "@type": "Person",
+    "name": "Kristina P."
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Kristina P.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kristinap09.github.io/assets/images/logo.png"
+    }
+  },
+  "datePublished": "2023-11-01",
+  "dateModified": "2023-11-01"
+}
+</script>
 
 <script>
   // Mobile menu toggle
@@ -593,6 +779,53 @@
       }
     });
   });
+  
+  // Back to top button functionality
+  const backToTopButton = document.getElementById('back-to-top');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+  
+  backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  // Lazy loading images
+  document.addEventListener('DOMContentLoaded', function() {
+    const lazyElements = document.querySelectorAll('.lazy-load');
+    
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('loaded');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '50px'
+      });
+      
+      lazyElements.forEach(element => {
+        observer.observe(element);
+      });
+    } else {
+      // Fallback for browsers without IntersectionObserver
+      lazyElements.forEach(element => {
+        element.classList.add('loaded');
+      });
+    }
+  });
 </script>
 </body>
 </html>
+``` 
