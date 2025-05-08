@@ -3,38 +3,98 @@ layout: default
 title: Projects
 ---
 
-<h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Selected Projects</h1>
+<style>
+  body {
+    font-family: 'Inter', sans-serif; /* Assuming Inter font is loaded via layout or CDN */
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6;
+  }
+  .page-title {
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    color: #2c3e50; /* A more professional deep blue/grey */
+  }
+  .page-subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #7f8c8d; /* Subdued grey for subtitle */
+    margin-bottom: 40px;
+  }
+  .projects-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  .project-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .project-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+  .project-item h3 {
+    font-size: 1.5em;
+    color: #3498db; /* A professional blue */
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .project-item p {
+    font-size: 1em;
+    color: #555; /* Slightly lighter than body text for description */
+    margin-bottom: 0;
+  }
+</style>
 
-<p style="text-align: center; font-style: italic; font-size: 1.1em; color: #ff99cc; margin-bottom: 30px;">
+<h1 class="page-title">Selected Projects</h1>
+
+<p class="page-subtitle">
   “Proof of clarity. Logic that lives.”
 </p>
 
-<div style="max-width: 800px; margin: auto; font-size: 1.05em; color: #fdfdfd;">
+<div class="projects-container">
 
-  <h3 style="color: #ff99cc;">1. Multi-View Clustering Framework</h3>
-  <p>
-    Designed and implemented a modular, scalable framework for multi-view clustering algorithms.
-    Built to support dynamic feature integration, interpretability, and performance tracking across federated environments.
-  </p>
+  <div class="project-item">
+    <h3>1. Multi-View Clustering Framework</h3>
+    <p>
+      Designed and implemented a modular, scalable framework for multi-view clustering algorithms.
+      Built to support dynamic feature integration, interpretability, and performance tracking across federated environments.
+    </p>
+  </div>
 
-  <h3 style="color: #ff99cc;">2. Decentralized Anomaly Detection System</h3>
-  <p>
-    Led the development of a privacy-preserving anomaly detection model optimized for industrial edge devices. Deployed models across simulated sensor networks with minimal communication cost.
-  </p>
+  <div class="project-item">
+    <h3>2. Decentralized Anomaly Detection System</h3>
+    <p>
+      Led the development of a privacy-preserving anomaly detection model optimized for industrial edge devices. Deployed models across simulated sensor networks with minimal communication cost.
+    </p>
+  </div>
 
-  <h3 style="color: #ff99cc;">3. Clown Network Chronicles (Observational Series)</h3>
-  <p>
-    A satirical-analytical blog project that documents the absurdities of shared spaces, noise patterns, and unauthorized psychological phenomena through poetic sarcasm and digital logging.
-  </p>
+  <div class="project-item">
+    <h3>3. Clown Network Chronicles (Observational Series)</h3>
+    <p>
+      A satirical-analytical blog project that documents the absurdities of shared spaces, noise patterns, and unauthorized psychological phenomena through poetic sarcasm and digital logging.
+    </p>
+  </div>
 
-  <h3 style="color: #ff99cc;">4. Visualization of Federated Learning Topologies</h3>
-  <p>
-    Created animated visual models of peer-to-peer learning dynamics across edge devices, using real-time traffic simulation data and graph overlays.
-  </p>
+  <div class="project-item">
+    <h3>4. Visualization of Federated Learning Topologies</h3>
+    <p>
+      Created animated visual models of peer-to-peer learning dynamics across edge devices, using real-time traffic simulation data and graph overlays.
+    </p>
+  </div>
 
-  <h3 style="color: #ff99cc;">5. Personal Website Infrastructure (2025)</h3>
-  <p>
-    Built and deployed a modular, animated personal homepage and blog system powered by GitHub Pages, HTML, inline SVG, sarcasm, and Inter font — featuring Clown-resistant logic and Möbius charm.
-  </p>
+  <div class="project-item">
+    <h3>5. Personal Website Infrastructure (2025)</h3>
+    <p>
+      Built and deployed a modular, animated personal homepage and blog system powered by GitHub Pages, HTML, inline SVG, sarcasm, and Inter font — featuring Clown-resistant logic and Möbius charm.
+    </p>
+  </div>
 
 </div>
