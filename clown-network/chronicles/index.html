@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -6,74 +5,280 @@
 <meta charset="utf-8"/>
 <title>Clown Network Chronicles Archive</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <style>
+    :root {
+      --primary-color: #b30059;
+      --secondary-color: #005a87;
+      --background-light: #f8f9fa;
+      --background-accent: #fff4f8;
+      --text-dark: #333;
+      --text-muted: #6c757d;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: Georgia, serif;
+      font-family: 'Source Sans Pro', sans-serif;
       max-width: 960px;
       margin: 0 auto;
       padding: 2em;
-      background: #eafae1;
-      color: #333;
+      background: #f8f9fa;
+      color: var(--text-dark);
       line-height: 1.7;
     }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      margin-bottom: 0.8em;
+    }
+    
     h1 {
-      color: #b30059;
+      font-size: 2.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 0.5rem;
     }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3em;
+    }
+    
     .intro {
-      background: #fff4f8;
-      padding: 1em;
-      border-left: 5px solid #ff66a3;
+      background: var(--background-accent);
+      padding: 1.5em;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
       margin-bottom: 2em;
+      text-align: center;
+      border-left: 5px solid var(--primary-color);
     }
+    
+    .filter-section {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
     input[type="text"], select {
       width: 100%;
       padding: 0.8em;
       font-size: 1em;
       margin-bottom: 1.5em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
     }
+    
+    input[type="text"]:focus, select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(179, 0, 89, 0.2);
+    }
+    
     details {
       margin-bottom: 1em;
-      background: #f8f8f8;
-      padding: 0.5em 1em;
-      border-left: 4px solid #b30059;
-      border-radius: 4px;
+      background: white;
+      padding: 1em 1.5em;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: all 0.3s ease;
     }
+    
+    details:hover {
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
     summary {
       font-weight: bold;
       cursor: pointer;
-      color: #b30059;
+      color: var(--primary-color);
+      padding: 0.5em 0;
+      font-size: 1.2rem;
+      user-select: none;
     }
+    
+    ul {
+      padding-left: 1.5em;
+    }
+    
     li {
-      margin-bottom: 0.6em;
+      margin-bottom: 1em;
       list-style: none;
+      position: relative;
+      padding-left: 2em;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid #f5f5f5;
+      padding-bottom: 1em;
     }
+    
+    li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
     li::before {
       content: "🎪";
-      margin-right: 0.5em;
+      position: absolute;
+      left: 0;
+      top: 0.2em;
     }
+    
+    li:hover {
+      transform: translateX(5px);
+    }
+    
+    .featured-teaser {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.5em;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 2em;
+    }
+    
+    .featured-teaser h2 {
+      margin-top: 0;
+      border-bottom: none;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .featured-teaser h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
     .tag {
       background: #e6e6e6;
-      border-radius: 4px;
-      padding: 0.2em 0.6em;
-      font-size: 0.9em;
-      margin-left: 1em;
-      color: #555;
-    }
-    .timestamp {
-      font-size: 0.8em;
-      color: #888;
+      border-radius: 20px;
+      padding: 0.2em 0.8em;
+      font-size: 0.85em;
       margin-left: 0.5em;
+      color: #555;
+      display: inline-block;
+      transition: background 0.2s;
     }
+    
+    .tag:hover {
+      background: #d6d6d6;
+    }
+    
+    .timestamp {
+      font-size: 0.9em;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 0.3em;
+    }
+    
     a {
-      color: #b30059;
+      color: var(--primary-color);
       text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
     }
+    
     a:hover {
-      text-decoration: underline;
+      color: #8c0045;
     }
-  </style>
+    
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .social-button {
+      display: flex;
+      align-items: center;
+      padding: 0.8em 1.2em;
+      color: white;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    
+    .social-button:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+      color: white;
+    }
+    
+    .facebook {
+      background: #3b5998;
+    }
+    
+    .linkedin {
+      background: #0077b5;
+    }
+    
+    .twitter {
+      background: #1da1f2;
+    }
+    
+    .social-button i {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 1em;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .social-buttons {
+        flex-direction: column;
+      }
+      
+      .social-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+</style>
 <script>
     function filterChronicles() {
       const input = document.getElementById("searchInput").value.toLowerCase();
@@ -97,57 +302,86 @@
         section.style.display = sectionMatch ? "" : "none";
       });
     }
-  </script>
+</script>
 </head>
 <body>
 <h1>Clown Network Chronicles</h1>
-<div style="margin: 1em 0; text-align: center;">
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" onmouseout="this.style.opacity=1" onmouseover="this.style.opacity=0.85" style="display: inline-block; padding: 0.5em 1em; background: #3b5998; color: white; border-radius: 5px; margin: 0 0.5em; text-decoration: none;" target="_blank">
-    Share on Facebook
+
+<div class="social-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" class="social-button facebook" target="_blank">
+    <i class="fab fa-facebook-f"></i> Share on Facebook
   </a>
-<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" onmouseout="this.style.opacity=1" onmouseover="this.style.opacity=0.85" style="display: inline-block; padding: 0.5em 1em; background: #0077b5; color: white; border-radius: 5px; margin: 0 0.5em; text-decoration: none;" target="_blank">
-    Share on LinkedIn
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" class="social-button linkedin" target="_blank">
+    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+  </a>
+  <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/clown-network/chronicles/&text=Check out the Clown Network Chronicles!" class="social-button twitter" target="_blank">
+    <i class="fab fa-twitter"></i> Tweet
   </a>
 </div>
 
 <div class="intro">
-    Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.<br/>
-    Filter by keyword or tag to explore the full range of documented dysfunction.
-  </div>
+  <p>Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.</p>
+  <p>Filter by keyword or tag to explore the full range of documented dysfunction.</p>
+</div>
 
-<section>
-  <hr/>
+<div class="featured-teaser">
   <h2>Featured Teasers</h2>
   <ul>
+    <li>
+      <a href="/clown-network/chronicles/homepage_with_links_resume.html">Value-Driven Work: Delivering Impact Beyond Hours</a>
+      <span class="timestamp">2025-05-08</span>
+      <div>
+        <span class="tag">productivity</span>
+        <span class="tag">work-culture</span>
+        <span class="tag">professional-growth</span>
+      </div>
+    </li>
 
     <li>
       <a href="/clown-network/chronicles/2025-05-03-Even-in-Dreams-They-Lose-Enriched.html">Even in Dreams, They Lose</a>
-      <small>2025-05-03 · Tags: Loser, blog, clown-network</small>
+      <span class="timestamp">2025-05-03</span>
+      <div>
+        <span class="tag">Loser</span>
+        <span class="tag">blog</span>
+        <span class="tag">clown-network</span>
+      </div>
     </li> 
+
     <li>
       <a href="/clown-network/chronicles/2025-05-02-Complete_Best_Time_to_Mow_Grass_Guide.html">Best Times to Mow Grass: A Regional and Seasonal Guide</a>
-      <small>2025-05-02 · Tags: Mowing, blog, clown-network</small>
+      <span class="timestamp">2025-05-02</span>
+      <div>
+        <span class="tag">Mowing</span>
+        <span class="tag">blog</span>
+        <span class="tag">clown-network</span>
+      </div>
     </li> 
+
     <li>
       <a href="/clown-network/chronicles/2025-4-29-copilot-chaos.html">I Predicted This Chaos — Copilot Chronicles</a>
-      <small>2025-04-29 · Tags: AI, blog, copilot</small>
+      <span class="timestamp">2025-04-29</span>
+      <div>
+        <span class="tag">AI</span>
+        <span class="tag">blog</span>
+        <span class="tag">copilot</span>
+      </div>
     </li>    
+
     <li>
       <a href="/clown-network/chronicles/2025-4-21-Clown_Network_Science_of_Stupidity_GitHub_Ready.html">Clown Network Teaser — The Science of Stupidity</a>
-      <small>2025-04-21 · Tags: satire, blog, clown-network</small>
+      <span class="timestamp">2025-04-21</span>
+      <div>
+        <span class="tag">satire</span>
+        <span class="tag">blog</span>
+        <span class="tag">clown-network</span>
+      </div>
     </li>
-      
-    <!-- Add the new blog post here -->
   </ul>
-</section>
-
-<div style="margin: 1em 0; text-align: center;">
-<a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" onmouseout="this.style.opacity=1" onmouseover="this.style.opacity=0.85" style="display: inline-block; padding: 0.5em 1em; background: #3b5998; color: white; border-radius: 5px; margin: 0 0.5em; text-decoration: none;" target="_blank">
-    Share on Facebook
-  </a>
-<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" onmouseout="this.style.opacity=1" onmouseover="this.style.opacity=0.85" style="display: inline-block; padding: 0.5em 1em; background: #0077b5; color: white; border-radius: 5px; margin: 0 0.5em; text-decoration: none;" target="_blank">
-    Share on LinkedIn
-  </a>
 </div>
+
+<footer>
+  <p>© 2025 Clown Network Chronicles. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
