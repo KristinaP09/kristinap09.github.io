@@ -32,7 +32,245 @@ twitter_creator: "@kristinap09"
 
 # Reading time (calculated but can be manually set)
 reading_time: 8
+
+# Custom styling
+custom_css: true
 ---
+
+<style>
+/* Professional color scheme */
+:root {
+  --bg-color: #f7f9fc;
+  --text-color: #2c3e50;
+  --heading-color: #34495e;
+  --accent-color: #3498db;
+  --quote-bg: #eef2f7;
+  --card-bg: #ffffff;
+  --card-border: #e1e8ed;
+  --link-color: #2980b9;
+}
+
+/* Apply professional styling */
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.post-content {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Text justification */
+.post-content p {
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+/* Headings styling */
+.post-content h2 {
+  color: var(--heading-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+/* Blockquote styling */
+.highlight-quote {
+  background-color: var(--quote-bg);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  text-align: justify;
+}
+
+/* Card styling */
+.tactic-card, .example-highlight, .insight-box, .message-box, .turning-point {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tactic-card h3, .example-highlight h4 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+/* Table styling */
+.truth-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.truth-table th, .truth-table td {
+  border: 1px solid var(--card-border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.truth-table th {
+  background-color: var(--quote-bg);
+  font-weight: bold;
+}
+
+/* TOC styling */
+.toc-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.toc-header {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 0.5rem;
+}
+
+.toc-list {
+  padding-left: 1.5rem;
+}
+
+.toc-list a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.toc-list a:hover {
+  text-decoration: underline;
+}
+
+/* Social sharing section */
+.social-share-container {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+  border: 1px solid var(--card-border);
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.share-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.share-button:hover {
+  background-color: #2574a9;
+}
+
+.share-button i {
+  margin-right: 0.5rem;
+}
+
+/* Author bio section */
+.author-bio {
+  display: flex;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 1px solid var(--card-border);
+}
+
+.author-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-info p {
+  text-align: justify;
+}
+
+.author-social a {
+  color: var(--accent-color);
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Related posts section */
+.related-posts {
+  margin-top: 2rem;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.related-post {
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.related-post img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.related-post h4 {
+  padding: 1rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .post-content {
+    padding: 1.5rem;
+  }
+  
+  .author-bio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .author-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+</style>
 
 ![Reclaiming truth amid manipulative support systems](/assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png)
 *Image: Breaking free from the chains of false support*
@@ -72,7 +310,6 @@ I've been on the receiving end of this <strong>manipulative kindness</strong>, a
 <blockquote class="highlight-quote">
   When someone's "help" comes with an agenda, it's not help—it's a transaction.
 </blockquote>
-
 <h2 id="meet-the-syndicate">Meet the Invisible Upstairs Syndicate</h2>
 
 <div class="post-section">
