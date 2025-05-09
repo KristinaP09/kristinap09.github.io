@@ -7,7 +7,7 @@ date: 2025-04-08
 author: Kristina P
 categories: [Personal Growth, Relationships, Boundaries]
 tags: [toxic relationships, manipulation, personal development, authenticity, emotional abuse, gaslighting, support systems, healing]
-image: /images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png
+image: /assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png
 image_alt: "Reclaiming truth amid manipulative support systems"
 featured: true
 comments: true
@@ -20,7 +20,7 @@ canonical_url: https://kristinap09.github.io/clown-network/chronicles/toxic-supp
 # Open Graph data for social media sharing
 og_title: "Toxic Support: When 'Help' Is Actually Harmful"
 og_description: "Learn how to identify and escape from manipulative support systems that claim to help but actually hold you back."
-og_image: /images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png
+og_image: assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png
 og_type: article
 
 # Twitter Card data
@@ -34,7 +34,7 @@ twitter_creator: "@kristinap09"
 reading_time: 8
 ---
 
-![Reclaiming truth amid manipulative support systems](/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png)
+![Reclaiming truth amid manipulative support systems](/assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png)
 *Image: Breaking free from the chains of false support*
 
 <div class="post-intro">
@@ -373,7 +373,7 @@ In choosing truth over their games, I didn't just escape the toxicity – I recl
   <img src="/images/kristina-profile.jpg" alt="Kristina P" class="author-image">
   <div class="author-info">
     <h3>About Kristina P</h3>
-    <p>Kristina is a writer, speaker, and advocate for authentic relationships. Through her "Clown Network" blog series, she explores the often absurd dynamics of toxic relationships with wit and wisdom. Having navigated her own journey from manipulation to liberation, she now helps others recognize and break free from similar patterns. When she's not writing, you can find her hiking with her rescue dog or perfecting her recipe for the world's spiciest chili.</p>
+    <p>Kristina is a researcher, writer, speaker, and advocate for authentic relationships. Through her "Clown Network" blog series, she explores the often absurd dynamics of toxic relationships with wit and wisdom. Having navigated her own journey from manipulation to liberation, she now helps others recognize and break free from similar patterns. When she's not writing, you can find her hiking with her rescue dog or perfecting her recipe for the world's spiciest chili.</p>
     <div class="author-social">
       <a href="https://twitter.com/kristinap09"><i class="fab fa-twitter"></i></a>
       <a href="https://instagram.com/kristinap09"><i class="fab fa-instagram"></i></a>
