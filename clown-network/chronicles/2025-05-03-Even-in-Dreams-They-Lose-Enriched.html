@@ -259,6 +259,77 @@
             color: var(--accent-color);
         }
 
+        .featured-image-container {
+            margin-block: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-image {
+            inline-size: 100%;
+            max-block-size: 500px;
+            object-fit: cover;
+        }
+
+        .image-caption {
+            padding: 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-block-start: 1px solid #e2e8f0;
+        }
+
+        .image-attribution {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .image-attribution a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .image-attribution a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright-footer {
+            margin-block-start: 4rem;
+            padding-block: 2rem;
+            background: white;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .copyright-container {
+            max-inline-size: 760px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .footer-links {
+            margin-block: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright-text {
+            font-size: 0.8rem;
+            line-height: 1.6;
+        }
+
         @media (max-inline-size: 768px) {
             .container {
                 padding: 1rem;
@@ -315,6 +386,20 @@
                 </ul>
             </div>
 
+            <div class="featured-image-container">
+                <img src="https://images.unsplash.com/photo-1532883130017-1a9c41c9d1ec?auto=format&fit=crop&w=1600&h=900" 
+                     alt="A person sleeping peacefully under dim blue light, with dream-like elements floating above" 
+                     class="featured-image">
+                <div class="image-caption">
+                    The human mind remains sovereign in sleep, creating its own narrative despite external influences.
+                    <div class="image-attribution">
+                        Photo by <a href="https://unsplash.com/@josephyates_?utm_source=unsplash&utm_medium=referral" target="_blank">Joseph Yates</a> on 
+                        <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral" target="_blank">Unsplash</a>. 
+                        Licensed under the <a href="https://unsplash.com/license" target="_blank">Unsplash License</a>.
+                    </div>
+                </div>
+            </div>
+
             <h2>Dreams: A Private Narrative</h2>
             <p>When we drift into sleep, consciousness follows its own course. Experiments show that the sleeping brain largely shuts out the external world, so dreams tend to arise from our own memories and emotions. Psychologists note that in dreams “people regularly think, feel, and behave in ways that are consistent with their tendencies while awake,” meaning our nightly scenes often mirror daytime concerns. Most healthy adults can recall their dreams clearly, and those dream narratives are generally coherent and personal. In other words, the stories we live by begin to rewrite themselves in sleep – based on our own truth, not some puppet master’s script.</p>
 
@@ -359,6 +444,23 @@
             </div>
         </article>
     </div>
+
+    <footer class="copyright-footer">
+        <div class="copyright-container">
+            <div class="footer-links">
+                <a href="/terms">Terms of Use</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <div class="copyright-text">
+                <p>© 2025 Clown Network Chronicles. All rights reserved.</p>
+                <p>This article and its contents are protected by copyright law. Any unauthorized reproduction or distribution is prohibited.</p>
+                <p>Published on May 3, 2025 | Last updated: May 10, 2025</p>
+                <p>Dream Warriors is a trademark of Clown Network Chronicles.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Simulated visitor data
