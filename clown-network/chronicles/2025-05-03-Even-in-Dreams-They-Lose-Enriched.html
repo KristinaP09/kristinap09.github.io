@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An analysis of dream manipulation and psychological resilience in the digital age">
-    <meta name="keywords" content="dreams, psychology, digital surveillance, manipulation, resilience">
-    <title>Even in Dreams, They Lose | Clown Network Chronicles</title>
+    <meta name="description" content="An in-depth exploration of dream consciousness, digital manipulation, and the triumph of human resilience in the age of surveillance">
+    <meta name="keywords" content="dream manipulation, psychological resilience, digital surveillance, mind control, sleep science, consciousness, dream research">
+    <title>Dream Warriors: Why Digital Manipulation Fails in Our Subconscious Mind | Clown Network Chronicles</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/TextureLoader.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -54,8 +56,54 @@
         }
 
         .globe-container {
-            block-size: 200px;
+            block-size: 300px;
             margin-block-end: 1rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .globe-overlay {
+            position: absolute;
+            inset-block-start: 10px;
+            inset-inline-start: 10px;
+            color: white;
+            font-size: 0.8rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        .visitor-point {
+            position: absolute;
+            inline-size: 8px;
+            block-size: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .visitor-point::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
         }
 
         .visitor-stats {
@@ -109,33 +157,78 @@
         }
 
         .social-share {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             margin-block: 2rem;
+            padding: 1.5rem;
+            background: var(--background-light);
+            border-radius: 8px;
         }
 
         .share-button {
             display: inline-flex;
             align-items: center;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
+            justify-content: center;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
             color: white;
             text-decoration: none;
             font-size: 0.9rem;
-            transition: opacity 0.2s;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
 
         .share-button:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .share-button i {
             margin-inline-end: 0.5rem;
+            font-size: 1.1rem;
         }
 
         .facebook { background: #1877f2; }
         .twitter { background: #1da1f2; }
         .linkedin { background: #0a66c2; }
+        .reddit { background: #ff4500; }
+        .whatsapp { background: #25d366; }
+        .telegram { background: #0088cc; }
+        .pinterest { background: #e60023; }
+        .email { background: #718096; }
+
+        .copy-link {
+            display: flex;
+            align-items: center;
+            margin-block-start: 1rem;
+            padding: 0.8rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .copy-link input {
+            flex: 1;
+            border: none;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .copy-link button {
+            padding: 0.5rem 1rem;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .copy-link button:hover {
+            opacity: 0.9;
+        }
 
         .key-takeaways {
             background: #ebf8ff;
@@ -205,7 +298,7 @@
 
     <div class="container">
         <article>
-            <h1>Even in Dreams, They Lose</h1>
+            <h1>Dream Warriors: Why Digital Manipulation Fails in Our Subconscious Mind</h1>
             <div class="meta">
                 <span class="date">Published: May 3, 2025</span>
                 <span class="read-time">• 6 min read</span>
@@ -236,14 +329,33 @@
 
             <div class="social-share">
                 <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-button facebook">
-                    <i class="fab fa-facebook-f"></i> Share
+                    <i class="fab fa-facebook-f"></i> Facebook
                 </a>
                 <a href="https://twitter.com/intent/tweet?url=" class="share-button twitter">
-                    <i class="fab fa-twitter"></i> Tweet
+                    <i class="fab fa-twitter"></i> Twitter
                 </a>
                 <a href="https://www.linkedin.com/shareArticle?mini=true&url=" class="share-button linkedin">
-                    <i class="fab fa-linkedin-in"></i> Share
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
                 </a>
+                <a href="https://reddit.com/submit?url=" class="share-button reddit">
+                    <i class="fab fa-reddit-alien"></i> Reddit
+                </a>
+                <a href="https://wa.me/?text=" class="share-button whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/share/url?url=" class="share-button telegram">
+                    <i class="fab fa-telegram-plane"></i> Telegram
+                </a>
+                <a href="https://pinterest.com/pin/create/button/?url=" class="share-button pinterest">
+                    <i class="fab fa-pinterest"></i> Pinterest
+                </a>
+                <a href="mailto:?subject=Check this article&body=" class="share-button email">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <div class="copy-link">
+                    <input type="text" id="shareUrl" readonly>
+                    <button onclick="copyShareLink()">Copy Link</button>
+                </div>
             </div>
         </article>
     </div>
@@ -267,42 +379,168 @@
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(200, 200);
+        renderer.setSize(300, 300);
         document.getElementById('globe').appendChild(renderer.domElement);
 
-        // Create globe
-        const geometry = new THREE.SphereGeometry(5, 32, 32);
+        // Add OrbitControls
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.rotateSpeed = 0.5;
+        controls.enableZoom = true;
+        controls.minDistance = 8;
+        controls.maxDistance = 15;
+
+        // Create globe with Earth texture
+        const textureLoader = new THREE.TextureLoader();
+        const geometry = new THREE.SphereGeometry(5, 64, 64);
         const material = new THREE.MeshPhongMaterial({
-            color: 0x4299e1,
-            emissive: 0x072534,
-            side: THREE.DoubleSide,
-            flatShading: false
+            map: textureLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg'),
+            bumpMap: textureLoader.load('https://threejs.org/examples/textures/planets/earth_normal_2048.jpg'),
+            bumpScale: 0.05,
+            specularMap: textureLoader.load('https://threejs.org/examples/textures/planets/earth_specular_2048.jpg'),
+            specular: new THREE.Color('grey'),
+            shininess: 10
         });
+
         const sphere = new THREE.Mesh(geometry, material);
         scene.add(sphere);
 
+        // Add clouds
+        const cloudGeometry = new THREE.SphereGeometry(5.1, 64, 64);
+        const cloudMaterial = new THREE.MeshPhongMaterial({
+            map: textureLoader.load('https://threejs.org/examples/textures/planets/earth_clouds_1024.png'),
+            transparent: true,
+            opacity: 0.4
+        });
+        const clouds = new THREE.Mesh(cloudGeometry, cloudMaterial);
+        scene.add(clouds);
+
+        // Add atmosphere glow
+        const atmosphereGeometry = new THREE.SphereGeometry(5.2, 64, 64);
+        const atmosphereMaterial = new THREE.MeshPhongMaterial({
+            color: 0x4299e1,
+            transparent: true,
+            opacity: 0.1,
+            side: THREE.BackSide
+        });
+        const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
+        scene.add(atmosphere);
+
         // Add lighting
-        const light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(5, 3, 5);
-        scene.add(light);
-        scene.add(new THREE.AmbientLight(0x404040));
+        const ambientLight = new THREE.AmbientLight(0x404040);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(5, 3, 5);
+        scene.add(directionalLight);
 
         camera.position.z = 10;
 
         // Animation
         function animate() {
             requestAnimationFrame(animate);
-            sphere.rotation.y += 0.005;
+            sphere.rotation.y += 0.001;
+            clouds.rotation.y += 0.0015;
+            controls.update();
             renderer.render(scene, camera);
         }
         animate();
 
         // Update share buttons with current URL
-        const currentUrl = encodeURIComponent(window.location.href);
-        const shareButtons = document.querySelectorAll('.share-button');
-        shareButtons.forEach(button => {
-            button.href += currentUrl;
+        const currentUrl = window.location.href;
+        const shareUrl = encodeURIComponent(currentUrl);
+        const shareTitle = encodeURIComponent(document.title);
+        const shareText = encodeURIComponent('Check out this fascinating article about dream consciousness and digital manipulation!');
+
+        document.querySelectorAll('.share-button').forEach(button => {
+            if (button.classList.contains('facebook')) {
+                button.href += shareUrl;
+            } else if (button.classList.contains('twitter')) {
+                button.href += shareUrl + '&text=' + shareText;
+            } else if (button.classList.contains('linkedin')) {
+                button.href += shareUrl + '&title=' + shareTitle;
+            } else if (button.classList.contains('reddit')) {
+                button.href += shareUrl + '&title=' + shareTitle;
+            } else if (button.classList.contains('whatsapp')) {
+                button.href += shareText + ' ' + shareUrl;
+            } else if (button.classList.contains('telegram')) {
+                button.href += shareUrl + '&text=' + shareText;
+            } else if (button.classList.contains('pinterest')) {
+                button.href += shareUrl + '&description=' + shareText;
+            } else if (button.classList.contains('email')) {
+                button.href += shareText + '\n\n' + currentUrl;
+            }
         });
+
+        // Copy share link functionality
+        document.getElementById('shareUrl').value = currentUrl;
+        function copyShareLink() {
+            const shareUrlInput = document.getElementById('shareUrl');
+            shareUrlInput.select();
+            document.execCommand('copy');
+            const button = shareUrlInput.nextElementSibling;
+            const originalText = button.textContent;
+            button.textContent = 'Copied!';
+            setTimeout(() => button.textContent = originalText, 2000);
+        }
+
+        // Simulated visitor locations
+        function addVisitorPoint() {
+            const lat = (Math.random() * 180) - 90;
+            const lng = (Math.random() * 360) - 180;
+            const phi = (90 - lat) * (Math.PI / 180);
+            const theta = (180 - lng) * (Math.PI / 180);
+            const x = 5 * Math.sin(phi) * Math.cos(theta);
+            const y = 5 * Math.cos(phi);
+            const z = 5 * Math.sin(phi) * Math.sin(theta);
+
+            const point = new THREE.Mesh(
+                new THREE.SphereGeometry(0.05, 8, 8),
+                new THREE.MeshBasicMaterial({ color: 0x4299e1 })
+            );
+            point.position.set(x, y, z);
+            scene.add(point);
+
+            // Add ping animation
+            const ping = new THREE.Mesh(
+                new THREE.SphereGeometry(0.05, 8, 8),
+                new THREE.MeshBasicMaterial({
+                    color: 0x4299e1,
+                    transparent: true,
+                    opacity: 1
+                })
+            );
+            ping.position.copy(point.position);
+            scene.add(ping);
+
+            // Animate ping
+            const startScale = 1;
+            const endScale = 2;
+            const duration = 1;
+            let elapsed = 0;
+
+            function animatePing() {
+                elapsed += 0.016;
+                const progress = elapsed / duration;
+                const scale = startScale + (endScale - startScale) * progress;
+                ping.scale.set(scale, scale, scale);
+                ping.material.opacity = 1 - progress;
+
+                if (progress < 1) {
+                    requestAnimationFrame(animatePing);
+                } else {
+                    scene.remove(ping);
+                }
+            }
+            animatePing();
+
+            // Remove point after animation
+            setTimeout(() => scene.remove(point), 2000);
+        }
+
+        // Add new visitor points periodically
+        setInterval(addVisitorPoint, 3000);
 
         // Simulated live visitor updates
         setInterval(() => {
