@@ -151,14 +151,17 @@
         border-inline-start: 4px solid var(--quote-border);
         border-radius: 0 8px 8px 0;
         font-style: italic;
-      }
-
-      .featured-image {
+      }      .featured-image {
+        display: block;
         inline-size: 100%;
-        max-inline-size: 1000px;
+        max-inline-size: 760px;
+        max-block-size: 428px; /* 16:9 aspect ratio */
         block-size: auto;
         border-radius: 8px;
         margin-block: 2rem;
+        margin-inline: auto;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
       .image-caption {
@@ -167,6 +170,8 @@
         color: var(--secondary-color);
         text-align: center;
         margin-block-start: 1rem;
+        margin-inline: auto;
+        max-inline-size: 760px;
         font-style: italic;
       }      /* Social sharing section */
       .social-share-container {
@@ -345,9 +350,7 @@
       .author-description {
         font-size: 0.9rem;
         color: var(--secondary-color);
-      }
-
-      @media (max-width: 768px) {
+      }      @media (max-width: 768px) {
         body {
           padding: 1rem;
         }
@@ -362,6 +365,16 @@
 
         .lead {
           font-size: 1.1rem;
+        }
+
+        .featured-image {
+          max-block-size: 300px;
+          margin-block: 1.5rem;
+        }
+
+        .image-caption {
+          font-size: 0.85rem;
+          margin-inline: 1rem;
         }
 
         .share-buttons {
@@ -521,7 +534,7 @@
       </blockquote>
       
       <p>And sometimes, that unraveling begins with something as mundane as a tax refund notice, proving that in a world of manufactured chaos, the most revolutionary act can be simply letting a system work as intended.</p>
-      // ...existing code...      <div class="article-footer">
+    <div class="article-footer">
         <div class="article-tags">
           <a href="#" class="tag">#SystematicExposure</a>
           <a href="#" class="tag">#BureaucraticJustice</a>
