@@ -1,103 +1,408 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Clowns at Work: A Sarcastically Serious Chronicle of Micro-Terrorism from Above</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Georgia, serif;
-            line-height: 1.7;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2em;
-            background-color: #fff;
-            color: #2c2c2c;
-        }
-        h1 {
-            color: #b30059;
-            font-size: 2.2em;
-        }
-        h2 {
-            color: #a0004a;
-            margin-top: 2em;
-            font-size: 1.5em;
-        }
-        p, li {
-            font-size: 1.1em;
-        }
-        ul {
-            margin-bottom: 2em;
-        }
-        img {
-            display: block;
-            margin: 2em auto;
-            max-width: 100%;
-            border: 1px solid #ccc;
-            padding: 4px;
-            border-radius: 6px;
-        }
-        blockquote {
-            border-left: 4px solid #b30059;
-            padding-left: 1em;
-            color: #555;
-            font-style: italic;
-            margin: 1.5em 0;
-        }
-        .note {
-            background: #fff4f8;
-            border-left: 5px solid #ff66a3;
-            padding: 1em;
-            margin: 2em 0;
-        }
-    </style>
+<meta charset="utf-8"/>
+<title>Clown Network Chronicles Archive</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    :root {
+      --primary-color: #b30059;
+      --secondary-color: #005a87;
+      --background-light: #f8f9fa;
+      --background-accent: #fff4f8;
+      --text-dark: #333;
+      --text-muted: #6c757d;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2em;
+      background: #f8f9fa;
+      color: var(--text-dark);
+      line-height: 1.7;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      margin-bottom: 0.8em;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.3em;
+    }
+    
+    .intro {
+      background: var(--background-accent);
+      padding: 1.5em;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      margin-bottom: 2em;
+      text-align: center;
+      border-left: 5px solid var(--primary-color);
+    }
+    
+    .filter-section {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    input[type="text"], select {
+      width: 100%;
+      padding: 0.8em;
+      font-size: 1em;
+      margin-bottom: 1.5em;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    input[type="text"]:focus, select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(179, 0, 89, 0.2);
+    }
+    
+    details {
+      margin-bottom: 1em;
+      background: white;
+      padding: 1em 1.5em;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: all 0.3s ease;
+    }
+    
+    details:hover {
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+    
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--primary-color);
+      padding: 0.5em 0;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+    
+    ul {
+      padding-left: 1.5em;
+    }
+    
+    li {
+      margin-bottom: 1em;
+      list-style: none;
+      position: relative;
+      padding-left: 2em;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid #f5f5f5;
+      padding-bottom: 1em;
+    }
+    
+    li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    li::before {
+      content: "🎪";
+      position: absolute;
+      left: 0;
+      top: 0.2em;
+    }
+    
+    li:hover {
+      transform: translateX(5px);
+    }
+    
+    .featured-teaser {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 1.5em;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 2em;
+    }
+    
+    .featured-teaser h2 {
+      margin-top: 0;
+      border-bottom: none;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .featured-teaser h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    .tag {
+      background: #e6e6e6;
+      border-radius: 20px;
+      padding: 0.2em 0.8em;
+      font-size: 0.85em;
+      margin-left: 0.5em;
+      color: #555;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    
+    .tag:hover {
+      background: #d6d6d6;
+    }
+    
+    .timestamp {
+      font-size: 0.9em;
+      color: var(--text-muted);
+      display: block;
+      margin-top: 0.3em;
+    }
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    
+    a:hover {
+      color: #8c0045;
+    }
+    
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .social-button {
+      display: flex;
+      align-items: center;
+      padding: 0.8em 1.2em;
+      color: white;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    
+    .social-button:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+      color: white;
+    }
+    
+    .facebook {
+      background: #3b5998;
+    }
+    
+    .linkedin {
+      background: #0077b5;
+    }
+    
+    .twitter {
+      background: #1da1f2;
+    }
+    
+    .social-button i {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 1em;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .social-buttons {
+        flex-direction: column;
+      }
+      
+      .social-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+</style>
+<script>
+    function filterChronicles() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const tagFilter = document.getElementById("tagFilter").value;
+      const sections = document.querySelectorAll("details");
+
+      sections.forEach(section => {
+        const items = section.querySelectorAll("li");
+        let sectionMatch = false;
+
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          const hasTag = tagFilter === "all" || item.dataset.tags.includes(tagFilter);
+          const matchesSearch = text.includes(input);
+          const visible = matchesSearch && hasTag;
+          item.style.display = visible ? "" : "none";
+          if (visible) sectionMatch = true;
+        });
+
+        section.open = sectionMatch;
+        section.style.display = sectionMatch ? "" : "none";
+      });
+    }
+</script>
 </head>
 <body>
-    <h1>Clowns at Work: A Sarcastically Serious Chronicle of Micro-Terrorism from Above</h1>
+<h1>Clown Network Chronicles</h1>
 
-    <p><strong>Author’s Note:</strong> This is not a satire. It only sounds like one.</p>
+<div class="social-buttons">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" class="social-button facebook" target="_blank">
+    <i class="fab fa-facebook-f"></i> Share on Facebook
+  </a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" class="social-button linkedin" target="_blank">
+    <i class="fab fa-linkedin-in"></i> Share on LinkedIn
+  </a>
+  <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/clown-network/chronicles/&text=Check out the Clown Network Chronicles!" class="social-button twitter" target="_blank">
+    <i class="fab fa-twitter"></i> Tweet
+  </a>
+</div>
 
-    <p>Welcome to the most meticulously recorded silent war you never asked to be part of. This investigation documents the peculiar, persistent, and spectacularly pointless behavior of what we’ve come to identify as the <em>Clown Network</em> — a secret syndicate of upstairs performers practicing noisecraft, psychological poking, and operatic levels of uninvited presence.</p>
+<div class="intro">
+  <p>Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.</p>
+  <p>Filter by keyword or tag to explore the full range of documented dysfunction.</p>
+</div>
 
-    <p>What follows is not just noise. It's noise with a mission. A documented, timestamped pattern of chaos and passive-aggressive acrobatics.</p>
+<div class="featured-teaser">
+  <h2>Featured Teasers</h2>
+  <ul>
+    <li>
+      <a href="/clown-network/chronicles/homepage_with_links_resume.html">Value-Driven Work: Delivering Impact Beyond Hours</a>
+      <span class="timestamp">2025-05-08</span>
+      <div>
+        <span class="tag">productivity</span>
+        <span class="tag">work-culture</span>
+        <span class="tag">professional-growth</span>
+      </div>
+    </li>
 
-    <h2>The Performers: Clown Network</h2>
-    <p>Not your average neighbors. This highly unqualified ensemble executes what appears to be an unauthorized psychological experiment involving:</p>
-    <ul>
-        <li><strong>Long-running machine operations</strong> — humming like a failed sci-fi machine trying to open portals to deeper nonsense.</li>
-        <li><strong>Chair dragging</strong> — a cultural ritual performed daily, usually timed with sleep or focus sessions.</li>
-        <li><strong>Silent Mode</strong> — a tactic used to make their presence louder through absolute absence.</li>
-        <li><strong>Furniture rearrangement</strong> — spatial confusion as a performance art.</li>
-        <li><strong>Unidentified activity</strong> — also known as “doing stuff loudly without any purpose, probably.”</li>
-    </ul>
+    <li>
+      <a href="/clown-network/chronicles/toxic-support-when-help-becomes-harm/">Toxic Support: When Help Becomes Harm</a>
+      <span class="timestamp">2025-04-08</span>
+      <div>
+        <span class="tag">Toxicity</span>
+        <span class="tag">Fake support</span>
+        <span class="tag">Truth</span>
+      </div>
+    </li>      
 
-    <h2>Data-Driven Ridiculousness</h2>
-    <p>We observed, logged, and visualized every suspiciously recurring behavior. Here’s a summary chart of the chaos:</p>
+    <li>
+      <a href="/clown-network/chronicles/2025-05-03-Even-in-Dreams-They-Lose-Enriched.html">Even in Dreams, They Lose</a>
+      <span class="timestamp">2025-05-03</span>
+      <div>
+        <span class="tag">Loser</span>
+        <span class="tag">blog</span>
+        <span class="tag">clown-network</span>
+      </div>
+    </li> 
 
-    <img src="extended_clown_network_activity_summary.png" alt="Clown Network Chart">
+    <li>
+      <a href="/clown-network/chronicles/2025-05-02-Complete_Best_Time_to_Mow_Grass_Guide.html">Best Times to Mow Grass: A Regional and Seasonal Guide</a>
+      <span class="timestamp">2025-05-02</span>
+      <div>
+        <span class="tag">Mowing</span>
+        <span class="tag">blog</span>
+        <span class="tag">clown-network</span>
+      </div>
+    </li> 
 
-    <p>As seen, <strong>machine operations</strong> top the chart, which isn’t surprising considering how often this “budget portal generator” hums in the background. Second place goes to <strong>chair dragging</strong>, the backbone of the network's physical activity and cardio. Close contenders include <strong>unidentified activities</strong> and occasional <strong>chatting/laughing</strong>, because even clowns need breaks.</p>
+    <li>
+      <a href="/clown-network/chronicles/2025-4-29-copilot-chaos.html">I Predicted This Chaos: The Rise of AI-Driven Coding</a>
+      <span class="timestamp">2025-04-29</span>
+      <div>
+        <span class="tag">AI</span>
+        <span class="tag">blog</span>
+        <span class="tag">copilot</span>
+      </div>
+    </li>
+      
+    <li>
+      <a href="/clown-network/chronicles/2025-04-11-when-the-system-worked.html">The Silent Revolution: How a Tax Refund Shattered a Misinformation Empire</a>
+      <span class="timestamp">2025-04-11</span>
+      <div>
+        <span class="tag">Systematic Exposure</span>
+        <span class="tag">Bureaucratic Justice</span>
+        <span class="tag">Clown Network</span>
+      </div>
+    </li> 
 
-    <h2>Highlight Reels</h2>
-    <ul>
-        <li><strong>April 6, 08:00 CEST:</strong> First documented “unidentified activity.” Think of it as a warm-up stretch.</li>
-        <li><strong>April 9, 12:55 CEST:</strong> Favorite new sport? Dragging furniture around the bathroom. We’re guessing it’s a test of acoustic persistence.</li>
-        <li><strong>April 10, 15:00 CEST:</strong> Full Clown Mode: Machine hum, footsteps, and dead silence — a dance of absurdity.</li>
-        <li><strong>April 15, 08:45 CEST:</strong> Heard a yawn. Because even agents of chaos need rest in a building where soundproofing is more theory than fact.</li>
-    </ul>
 
-    <h2>A Message to Future Researchers</h2>
-    <p>This isn’t just noise logging. It’s a case study in unearned authority, invisible harassment, and comically disturbing behavior patterns. The Clown Network shows us that when idiocy is paired with persistence, it evolves into a kind of ritual. An art. A menace with rhythm.</p>
+    <li>
+      <a href="/clown-network/chronicles/2025-4-21-Clown_Network_Science_of_Stupidity_GitHub_Ready.html">Clown Network Teaser — The Science of Stupidity</a>
+      <span class="timestamp">2025-04-21</span>
+      <div>
+        <span class="tag">satire</span>
+        <span class="tag">blog</span>
+        <span class="tag">clown-network</span>
+      </div>
+    </li>
+  </ul>
+</div>
 
-    <blockquote>
-        To all residents trapped under this invisible circus — document, mock, and rise above. And if the machine ever opens a portal, we recommend not stepping in.
-    </blockquote>
+<footer>
+  <p>© 2025 Clown Network Chronicles. All rights reserved.</p>
+</footer>
 
-    <div class="note">
-        <strong>Note:</strong> This is just a sample — a teaser trailer of the full clown documentary. The original log, if reconstructed from <strong>November 2024</strong> onward, would produce a symphony of data, a tragicomic opera of disruptions, an unintentional performance art piece by amateurs with passion but no skill.
-        <br><br>
-        With proper charting, cross-analysis, and a sprinkle of sarcasm, it would become nothing less than <em>a beautiful piece of digital art</em> — one that both data scientists and philosophers of noise would stand in awe of.
-    </div>
 </body>
 </html>
