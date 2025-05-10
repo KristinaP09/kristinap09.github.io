@@ -4,7 +4,7 @@ title: "Toxic Support: When Help Becomes Harm"
 subtitle: "Recognizing and Escaping Manipulative 'Support' Systems"
 permalink: /clown-network/chronicles/toxic-support-when-help-becomes-harm/
 date: 2025-04-08
-author: Kristina P
+author: Kristina P. Sinaga
 categories: [Personal Growth, Relationships, Boundaries]
 tags: [toxic relationships, manipulation, personal development, authenticity, emotional abuse, gaslighting, support systems, healing]
 image: /assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png
@@ -716,21 +716,21 @@ In choosing truth over their games, I didn't just escape the toxicity – I recl
   <h3>You might also enjoy:</h3>
   <div class="related-posts-grid">
     <div class="related-post">
-      <a href="/clown-network/chronicles/setting-boundaries/">
+      <a href="/clown-network/chronicles/2025-4-29-copilot-chaos.html">
         <img src="/images/setting-boundaries.jpg" alt="Setting Boundaries">
-        <h4>Setting Boundaries: The Art of Saying No</h4>
+        <h4>I Predicted This Chaos, and Now I’m Sipping Tea While the System Auto-Completes Itself</h4>
       </a>
     </div>
     <div class="related-post">
-      <a href="/clown-network/chronicles/authentic-support/">
+      <a href="/clown-network/chronicles/homepage_with_links_resume.html">
         <img src="/images/authentic-support.jpg" alt="Authentic Support">
-        <h4>What Real Support Looks Like</h4>
+        <h4>Value-Driven Work: Delivering Impact Beyond Hours</h4>
       </a>
     </div>
     <div class="related-post">
-      <a href="/clown-network/chronicles/healing-from-toxicity/">
+      <a href="/clown-network/chronicles/toxic-support-when-help-becomes-harm/">
         <img src="/images/healing-journey.jpg" alt="Healing Journey">
-        <h4>The Path to Healing After Toxic Relationships</h4>
+        <h4>Toxic Support: When Help Becomes Harm</h4>
       </a>
     </div>
   </div>
