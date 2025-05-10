@@ -53,33 +53,44 @@ custom_css: true
 
 /* Featured image styling */
 .featured-image-container {
-  margin: 0 auto 2rem;
-  max-width: 85%;
+  margin: 2rem auto 3rem;
+  max-width: 90%;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 
+    0 5px 15px rgba(0, 0, 0, 0.1),
+    0 15px 35px rgba(0, 0, 0, 0.05);
   background-color: var(--card-bg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    0 20px 45px rgba(0, 0, 0, 0.06);
 }
 
 .featured-image {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .featured-image:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .image-caption {
   text-align: center;
-  padding: 0.8rem 1rem;
+  padding: 1.2rem 1.5rem;
   color: var(--text-color);
   font-style: italic;
-  font-size: 0.95rem;
+  font-size: 1rem;
   border-top: 1px solid var(--card-border);
   background-color: var(--quote-bg);
+  letter-spacing: 0.02em;
 }
 
 @media (min-width: 1200px) {
@@ -193,39 +204,118 @@ body {
 /* Social sharing section */
 .social-share-container {
   background-color: var(--card-bg);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-top: 2rem;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
   text-align: center;
   border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .share-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem 0;
+  gap: 1rem;
+  margin: 1.5rem 0;
 }
 
 .share-button {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background-color: var(--accent-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
   color: white;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
+/* Platform-specific styling */
+.share-button.twitter {
+  background-color: #1DA1F2;
+}
+
+.share-button.facebook {
+  background-color: #1877F2;
+}
+
+.share-button.linkedin {
+  background-color: #0A66C2;
+}
+
+.share-button.pinterest {
+  background-color: #E60023;
+}
+
+.share-button.whatsapp {
+  background-color: #25D366;
+}
+
+.share-button.email {
+  background-color: #EA4335;
+}
+
+.share-button.medium {
+  background-color: #000000;
+}
+
+/* Hover effects */
 .share-button:hover {
-  background-color: #2574a9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .share-button i {
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+}
+
+/* Share count styling */
+.share-count {
+  margin-top: 1.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Copy link button */
+.copy-link-button {
+  background-color: var(--heading-color);
+  position: relative;
+  cursor: pointer;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.copy-link-button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.copy-notification {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.copy-notification.show {
+  opacity: 1;
 }
 
 /* Author bio section */
@@ -518,12 +608,12 @@ In choosing truth over their games, I didn't just escape the toxicity – I recl
 
 <!-- Social Sharing Section -->
 <div class="social-share-container">
-  <h3>Share this article:</h3>
+  <h3>Share this article</h3>
   <p class="share-text">Did this resonate with you? Share it with others who might benefit.</p>
   <div class="share-buttons">
     <!-- Twitter/X Share -->
     <a href="https://twitter.com/intent/tweet?url={{site.url}}{{page.url | url_encode}}&text={{page.title | url_encode}}&via=kristinap09&hashtags=toxicrelationships,personalgrowth" target="_blank" rel="noopener" class="share-button twitter" aria-label="Share on Twitter">
-      <i class="fab fa-twitter"></i> Twitter
+      <i class="fab fa-twitter"></i> Share on X
     </a>
     
     <!-- Facebook Share -->
