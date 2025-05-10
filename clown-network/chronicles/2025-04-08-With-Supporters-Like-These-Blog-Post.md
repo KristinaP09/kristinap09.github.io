@@ -738,7 +738,7 @@ In choosing truth over their games, I didn't just escape the toxicity – I recl
 
 <!-- Author Bio Section -->
 <div class="author-bio">
-  <img src="/images/kristina-profile.jpg" alt="Kristina P" class="author-image">
+  <img src="/assets/images/Kris.jpeg" alt="Kristina P" class="author-image">
   <div class="author-info">
     <h3>About Kristina P</h3>
     <p>Kristina is a researcher, writer, speaker, and advocate for authentic relationships. Through her "Clown Network" blog series, she explores the often absurd dynamics of toxic relationships with wit and wisdom. Having navigated her own journey from manipulation to liberation, she now helps others recognize and break free from similar patterns. When she's not writing, you can find her hiking with her rescue dog or perfecting her recipe for the world's spiciest chili.</p>
