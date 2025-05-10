@@ -347,13 +347,52 @@
             margin-block-start: 2rem;
             padding-block-start: 2rem;
             border-block-start: 1px solid #e2e8f0;
-            text-align: center;
             font-size: 0.8rem;
             color: var(--text-muted);
         }
 
-        .copyright-bar p {
-            margin-block-end: 0.5rem;
+        .copyright-main {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-block-end: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .copyright-logo {
+            font-size: 2.5rem;
+            color: var(--primary-color); 
+        }
+
+        .copyright-logo img {
+            max-block-size: 40px;
+            inline-size: auto;
+        }
+
+        .copyright-text {
+            text-align: center;
+        }
+
+        .copyright-text p {
+            margin-block-end: 0.35rem; 
+        }
+
+        .copyright-text .publication-dates {
+            font-style: italic;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .copyright-notice {
+            font-size: 0.75rem;
+            text-align: center;
+            margin-block-end: 1.5rem;
+            max-inline-size: 700px;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            padding: 0 1rem;
+            line-height: 1.6;
         }
 
         .legal-links {
@@ -447,7 +486,7 @@
             </div>
 
             <div class="featured-image-container">
-                <img src="/images/0F474B9F-F7B7-4505-A7FD-E8526FC85580.png" 
+                <img src="/assets/images/0F474B9F-F7B7-4505-A7FD-E8526FC85580.png" 
                      alt="A person sleeping peacefully under dim blue light, with dream-like elements floating above" 
                      class="featured-image">
                 <div class="image-caption">
@@ -545,10 +584,18 @@
             </div>
         </div>
         <div class="copyright-bar">
-            <p>© 2025 Clown Network Chronicles. All rights reserved.</p>
-            <p>This article and its contents are protected by international copyright laws and treaties. Unauthorized reproduction or distribution of this article, or any portion of it, may result in severe civil and criminal penalties.</p>
-            <p>Published on May 3, 2025 | Last updated: May 10, 2025</p>
-            <p>"Dream Warriors" and "Clown Network Chronicles" are registered trademarks of Clown Network Media Group.</p>
+            <div class="copyright-main">
+                <div class="copyright-logo">
+                    <!-- If you have a logo image, replace the <i> tag with: <img src="path/to/your/logo.png" alt="Clown Network Logo"> -->
+                    <i class="fas fa-shield-alt"></i> 
+                </div>
+                <div class="copyright-text">
+                    <p>© 2025 Clown Network Chronicles. All rights reserved.</p>
+                    <p>"Dream Warriors" and "Clown Network Chronicles" are registered trademarks of Clown Network Media Group.</p>
+                    <p class="publication-dates">Published on May 3, 2025 | Last updated: May 10, 2025</p>
+                </div>
+            </div>
+            <p class="copyright-notice">This article and its contents are protected by international copyright laws and treaties. Unauthorized reproduction or distribution of this article, or any portion of it, may result in severe civil and criminal penalties.</p>
             <div class="legal-links">
                 <a href="/terms">Terms of Service</a>
                 <a href="/privacy">Privacy Policy</a>
