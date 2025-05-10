@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>I Predicted This Chaos: The Rise of AI-Driven Coding | Kristina P</title>
+    <title>I Predicted This Chaos: The Rise of AI-Driven Coding | Kristina P. Sinaga</title>
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="A witty take on the democratization of coding through AI tools like GitHub Copilot, and how it's reshaping the software development landscape.">
@@ -34,34 +34,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <base href="https://kristinap09.github.io/clown-network/chronicles/">
     <style>
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #3b82f6;
+        --accent-color: #60a5fa;
+        --text-color: #1f2937;
+        --bg-color: #f8fafc;
+        --card-bg: #ffffff;
+        --code-bg: #f1f5f9;
+        --quote-bg: #e0e7ff;
+      }
+
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #1f1f2e;
-        color: #fdfdfd;
-        line-height: 1.6;
-        max-width: 800px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.8;
+        max-width: 900px;
         margin: 40px auto;
         padding: 0 20px;
         text-align: justify;
       }
+
       h1, h2, h3 {
-        color: #ea9999;
+        color: var(--primary-color);
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
       }
+
       h1 {
-        font-size: 2.2em;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
+
       h2 {
         margin-top: 2em;
-        font-size: 1.6em;
+        font-size: 1.8em;
+        color: var(--secondary-color);
       }
+
       em {
-        color: #ffb3d1;
+        color: var(--primary-color);
+        font-style: italic;
       }
+
       code {
-        background: #2e2e3f;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-family: monospace;
+        background: var(--code-bg);
+        color: var(--primary-color);
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9em;
+        border: 1px solid #e2e8f0;
       }
       a {
         color: #ff66a6;
@@ -82,31 +110,34 @@
 
       /* Social sharing section */
       .social-share-container {
-        background: #2e2e3f;
-        border-radius: 12px;
-        padding: 2rem;
-        margin: 3rem 0;
+        background: var(--card-bg);
+        border-radius: 16px;
+        padding: 3rem;
+        margin: 4rem 0;
         text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
       }
 
       .share-buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
-        margin: 1.5rem 0;
+        gap: 1.2rem;
+        margin: 2rem 0;
       }
 
       .share-button {
         display: inline-flex;
         align-items: center;
-        padding: 0.8rem 1.5rem;
-        border-radius: 6px;
+        padding: 1rem 2rem;
+        border-radius: 8px;
         color: white;
         text-decoration: none;
-        font-size: 0.9rem;
-        font-weight: 500;
-        transition: all 0.2s ease;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
 
       .share-button i {
@@ -133,42 +164,59 @@
       /* Visitor tracking globe */
       .visitor-tracking {
         margin: 4rem 0;
-        padding: 2rem;
-        background: #2e2e3f;
-        border-radius: 12px;
+        padding: 3rem;
+        background: var(--card-bg);
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
       }
 
       #visitorGlobe {
         width: 100%;
-        height: 400px;
+        height: 500px;
         margin: 2rem 0;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       }
 
       .stats-container {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 2rem;
+        gap: 1.5rem;
+        margin-top: 3rem;
       }
 
       .stat-card {
-        background: #1f1f2e;
-        padding: 1rem;
-        border-radius: 8px;
-        min-width: 150px;
+        background: var(--bg-color);
+        padding: 1.5rem;
+        border-radius: 12px;
+        min-width: 180px;
         text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-5px);
       }
 
       .stat-number {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: #ff66a6;
+        font-size: 2rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
 
       .stat-label {
-        font-size: 0.9rem;
-        color: #ccc;
+        font-size: 1rem;
+        color: var(--text-color);
+        margin-top: 0.5rem;
+        font-weight: 500;
       }
     </style>
   </head>
@@ -359,23 +407,70 @@
       const Globe = Globe();
       const globeContainer = document.getElementById('visitorGlobe');
       
-      // Sample data points (in real implementation, these would come from your analytics)
-      const points = Array.from({length: 20}, () => ({
-        lat: (Math.random() - 0.5) * 180,
-        lng: (Math.random() - 0.5) * 360,
-        size: Math.random() * 2,
-        color: ['#ff66a6', '#ea9999', '#ffb3d1'][Math.floor(Math.random() * 3)]
-      }));
+      // Sample data points with more realistic locations
+      const majorCities = [
+        { lat: 40.7128, lng: -74.0060, name: 'New York' },
+        { lat: 51.5074, lng: -0.1278, name: 'London' },
+        { lat: 35.6762, lng: 139.6503, name: 'Tokyo' },
+        { lat: 1.3521, lng: 103.8198, name: 'Singapore' },
+        { lat: -33.8688, lng: 151.2093, name: 'Sydney' },
+        { lat: 48.8566, lng: 2.3522, name: 'Paris' },
+        { lat: 55.7558, lng: 37.6173, name: 'Moscow' },
+        { lat: -23.5505, lng: -46.6333, name: 'São Paulo' },
+        { lat: 19.4326, lng: -99.1332, name: 'Mexico City' },
+        { lat: 25.2048, lng: 55.2708, name: 'Dubai' }
+      ];
+
+      // Create animated arcs between cities
+      const arcsData = [];
+      majorCities.forEach((city, i) => {
+        const nextCity = majorCities[(i + 1) % majorCities.length];
+        arcsData.push({
+          startLat: city.lat,
+          startLng: city.lng,
+          endLat: nextCity.lat,
+          endLng: nextCity.lng,
+          color: [
+            'rgba(37, 99, 235, 0.6)',
+            'rgba(59, 130, 246, 0.6)',
+            'rgba(96, 165, 250, 0.6)'
+          ][Math.floor(Math.random() * 3)]
+        });
+      });
 
       // Configure the globe
-      Globe(globeContainer)
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-        .pointsData(points)
-        .pointAltitude('size')
-        .pointColor('color')
-        .backgroundColor('#1f1f2e')
+      const globeInstance = Globe(globeContainer)
+        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+        .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+        .pointsData(majorCities)
+        .pointAltitude(0.1)
+        .pointRadius(0.5)
+        .pointColor(() => 'var(--primary-color)')
+        .pointsMerge(true)
+        .arcsData(arcsData)
+        .arcColor('color')
+        .arcDashLength(0.6)
+        .arcDashGap(0.2)
+        .arcDashAnimateTime(2000)
+        .backgroundColor('rgba(0,0,0,0)')
         .width(globeContainer.clientWidth)
-        .height(400);
+        .height(500);
+
+      // Add glow effect
+      globeInstance.controls().autoRotate = true;
+      globeInstance.controls().autoRotateSpeed = 0.5;
+      
+      // Add points periodically
+      setInterval(() => {
+        const city = majorCities[Math.floor(Math.random() * majorCities.length)];
+        const point = {
+          lat: city.lat + (Math.random() - 0.5) * 5,
+          lng: city.lng + (Math.random() - 0.5) * 5,
+          size: 0.5,
+          color: 'var(--accent-color)'
+        };
+        globeInstance.pointsData([...globeInstance.pointsData(), point]);
+      }, 2000);
 
       // Simulate real-time stats
       function updateStats() {
@@ -406,7 +501,7 @@
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Kristina P's Blog",
+      "name": "Kristina's Blog",
       "logo": {
         "@type": "ImageObject",
         "url": "https://kristinap09.github.io/logo.png"
