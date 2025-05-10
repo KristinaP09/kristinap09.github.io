@@ -717,20 +717,20 @@ In choosing truth over their games, I didn't just escape the toxicity – I recl
   <div class="related-posts-grid">
     <div class="related-post">
       <a href="/clown-network/chronicles/2025-4-29-copilot-chaos.html">
-        <img src="/images/setting-boundaries.jpg" alt="Setting Boundaries">
+        <img src="/assets/images/3C6A7B56-3668-4985-9F1C-53F42C90BD3B.png" alt="Setting Boundaries">
         <h4>I Predicted This Chaos, and Now I’m Sipping Tea While the System Auto-Completes Itself</h4>
       </a>
     </div>
     <div class="related-post">
       <a href="/clown-network/chronicles/homepage_with_links_resume.html">
-        <img src="/images/authentic-support.jpg" alt="Authentic Support">
-        <h4>Value-Driven Work: Delivering Impact Beyond Hours</h4>
+        <img src="/assets/images/0F474B9F-F7B7-4505-A7FD-E8526FC85580.png" alt="Authentic Support">
+        <h4>Dream Warriors: Why Digital Manipulation Fails in Our Subconscious Mind</h4>
       </a>
     </div>
     <div class="related-post">
-      <a href="/clown-network/chronicles/toxic-support-when-help-becomes-harm/">
-        <img src="/images/healing-journey.jpg" alt="Healing Journey">
-        <h4>Toxic Support: When Help Becomes Harm</h4>
+      <a href="/clown-network/chronicles/2025-04-11-when-the-system-worked.html">
+        <img src="/assets/images/3987BB44-D5FF-4197-844A-3ADAA9E4651F.png" alt="Healing Journey">
+        <h4>The Silent Revolution: How a Tax Refund Shattered a Misinformation Empire</h4>
       </a>
     </div>
   </div>
