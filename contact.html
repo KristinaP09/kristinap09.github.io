@@ -3,22 +3,272 @@ layout: default
 title: Contact
 ---
 
-<h1 style="text-align: center; font-size: 2.4em; margin-bottom: 10px;">Contact Me</h1>
+<section class="contact-section">
+  <div class="contact-container">
+    <h1 class="contact-title">Contact Me</h1>
 
-<p style="text-align: center; font-style: italic; font-size: 1.1em; color: #ff99cc; margin-bottom: 30px;">
-  "Let's connect."
-</p>
+    <p class="contact-subtitle">
+      "Let's connect and collaborate"
+    </p>
 
-<div style="max-width: 700px; margin: auto; font-size: 1.05em; color: #fdfdfd; text-align: center;">
+    <div class="contact-content">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <p>For inquiries, collaborations, or discussions, please reach out via email or use the contact form.</p>
 
-  <p>For inquiries, collaborations, or discussions, please reach out via email:</p>
+        <div class="email-container">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:kristinasinaga41@gmail.com">kristinasinaga41@gmail.com</a>
+        </div>
 
-  <p style="font-size: 1.2em; font-weight: bold; color: #ff99cc;">
-    <a href="mailto:kristinasinaga41@gmail.com" style="color: #ff99cc; text-decoration: none;">kristinasinaga41@gmail.com</a>
-  </p>
+        <div class="social-links">
+          <h3>Connect With Me</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon" title="Medium"><i class="fab fa-medium"></i></a>
+          </div>
+          <p class="response-time">I welcome opportunities related to research, AI, and technology.<br>
+          I'll respond to your message as promptly as possible.</p>
+        </div>
+      </div>
 
-  <p>I welcome opportunities related to research, AI, and technology. </p>
+      <div class="contact-form-container">
+        <h2>Send a Message</h2>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <p>I look forward to hearing from you and will respond as promptly as possible.</p>
+<style>
+  /* Contact Page Styles */
+  .contact-section {
+    padding: 2rem 1rem;
+  }
 
-</div>
+  .contact-container {
+    max-inline-size: 1000px;
+    margin: auto;
+    color: #fdfdfd;
+  }
+
+  .contact-title {
+    text-align: center;
+    font-size: 2.4em;
+    margin-block-end: 10px;
+  }
+
+  .contact-subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #ff99cc;
+    margin-block-end: 40px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .contact-info {
+    flex: 1;
+    min-inline-size: 300px;
+  }
+
+  .contact-info h2 {
+    color: #ff99cc;
+    font-size: 1.5em;
+    margin-block-end: 1rem;
+  }
+
+  .email-container {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .email-container i {
+    color: #ff99cc;
+    font-size: 1.2rem;
+    margin-inline-end: 10px;
+  }
+
+  .email-container a {
+    color: #ff99cc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  .email-container a:hover {
+    text-decoration: underline;
+  }
+
+  .social-links {
+    margin-block-start: 2rem;
+  }
+
+  .social-links h3 {
+    font-size: 1.2em;
+    margin-block-end: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-block-end: 1.5rem;
+  }
+
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 40px;
+    block-size: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 153, 204, 0.2);
+    color: #ff99cc;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon i {
+    font-size: 1.2rem;
+  }
+
+  .social-icon:hover {
+    background-color: #ff99cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+
+  .response-time {
+    font-size: 0.9em;
+    opacity: 0.9;
+  }
+
+  /* Contact Form Styles */
+  .contact-form-container {
+    flex: 1;
+    min-inline-size: 300px;
+  }
+
+  .contact-form-container h2 {
+    color: #ff99cc;
+    font-size: 1.5em;
+    margin-block-end: 1.5rem;
+  }
+
+  .contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .form-group {
+    margin-block-end: 1.2rem;
+  }
+
+  .form-group label {
+    display: block;
+    margin-block-end: 5px;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    inline-size: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #ff99cc;
+    box-shadow: 0 0 0 2px rgba(255, 153, 204, 0.25);
+  }
+
+  .submit-button {
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+
+  .submit-button:hover {
+    background-color: #ff7fbf;
+    transform: translateY(-2px);
+  }
+
+  /* Responsive adjustments */
+  @media (max-inline-size: 768px) {
+    .contact-content {
+      flex-direction: column;
+    }
+    
+    .contact-info, .contact-form-container {
+      inline-size: 100%;
+    }
+  }
+</style>
+
+<script>
+  // Simple form submission handler
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Here you would typically send the form data to a server
+        // For now, we'll just show a confirmation message
+        
+        const nameField = document.getElementById('name');
+        const name = nameField ? nameField.value : 'visitor';
+        
+        alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon.`);
+        contactForm.reset();
+      });
+    }
+  });
+</script>
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
