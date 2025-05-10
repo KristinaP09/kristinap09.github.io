@@ -38,6 +38,7 @@ custom_css: true
 ---
 
 <style>
+
 /* Professional color scheme */
 :root {
   --bg-color: #f7f9fc;
@@ -48,6 +49,43 @@ custom_css: true
   --card-bg: #ffffff;
   --card-border: #e1e8ed;
   --link-color: #2980b9;
+}
+
+/* Featured image styling */
+.featured-image-container {
+  margin: 0 auto 2rem;
+  max-width: 85%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.featured-image:hover {
+  transform: scale(1.02);
+}
+
+.image-caption {
+  text-align: center;
+  padding: 0.8rem 1rem;
+  color: var(--text-color);
+  font-style: italic;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--card-border);
+  background-color: var(--quote-bg);
+}
+
+@media (min-width: 1200px) {
+  .featured-image-container {
+    max-width: 75%;
+  }
 }
 
 /* Apply professional styling */
@@ -272,8 +310,10 @@ body {
 }
 </style>
 
-![Reclaiming truth amid manipulative support systems](/assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png)
-*Image: Breaking free from the chains of false support*
+<div class="featured-image-container">
+  <img class="featured-image" src="/assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png" alt="Reclaiming truth amid manipulative support systems">
+  <div class="image-caption">Breaking free from the chains of false support</div>
+</div>
 
 <div class="post-intro">
   <p><em>When the people who claim to help you are actually holding you back, it's time to rewrite your own story. This candid account explores the maze of manipulative support and the path to authentic growth.</em></p>
@@ -310,6 +350,7 @@ I've been on the receiving end of this <strong>manipulative kindness</strong>, a
 <blockquote class="highlight-quote">
   When someone's "help" comes with an agenda, it's not help—it's a transaction.
 </blockquote>
+
 <h2 id="meet-the-syndicate">Meet the Invisible Upstairs Syndicate</h2>
 
 <div class="post-section">
