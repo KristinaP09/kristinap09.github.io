@@ -1,4 +1,26 @@
-title: ""
-description: Personal website
-theme: minima
+# Site settings
+title: "Kristina P. Sinaga | AI Researcher & Applied Mathematics Ph.D."
+description: "Expert in scalable AI models, federated learning, and Edge AI"
+baseurl: ""
+url: "https://kristinap09.github.io/"
+
+# API Keys (Replace with your actual API key from ipapi.com)
+ipapi_key: "YOUR_API_KEY_HERE"
+
+# Theme settings
+theme: jekyll-theme-minimal
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+# Author information
+author:
+  name: Kristina P. Sinaga
+  email: kristinasinaga41@gmail.com
+
+# Social links
+social:
+  linkedin: kristina-p-sinaga-0ba152309
+  github: KristinaP09
+  twitter: NeuralGlowAI
+  scholar: yNWQLYAAAAAJ
