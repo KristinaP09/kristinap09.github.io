@@ -462,40 +462,84 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
   .globe-section {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin: 40px 0;
-    background: rgba(31, 31, 46, 0.03);
+    background: linear-gradient(135deg, rgba(255, 102, 166, 0.03), rgba(255, 153, 204, 0.05));
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 102, 166, 0.1);
+    border: 1px solid rgba(255, 102, 166, 0.1);
+  }
+
+  .globe-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 102, 166, 0.2), transparent);
   }
 
   #globeViz {
     width: 100%;
     height: 100%;
     position: relative;
+    backdrop-filter: blur(5px);
   }
 
   .visitor-stats {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 102, 166, 0.15);
     z-index: 1000;
-    font-size: 0.9em;
+    border: 1px solid rgba(255, 102, 166, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .visitor-stats:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 102, 166, 0.2);
   }
 
   .visitor-stats h4 {
     color: #ff66a6;
     margin: 0 0 10px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
   }
 
   .visitor-count {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: bold;
     color: #1f1f2e;
+    text-align: center;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .visitor-tooltip {
+    position: absolute;
+    background: linear-gradient(135deg, #ff66a6, #ff99cc);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    box-shadow: 0 4px 15px rgba(255, 102, 166, 0.3);
+    pointer-events: none;
+    transform: translateY(-5px);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .visitor-tooltip.visible {
+    transform: translateY(0);
+    opacity: 1;
   }
 
   @media (max-width: 768px) {
@@ -508,14 +552,19 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
     }
 
     .globe-section {
-      height: 300px;
+      height: 400px;
+      margin: 20px 0;
     }
-  
+
     .visitor-stats {
       top: 10px;
       right: 10px;
-      padding: 10px;
-      font-size: 0.8em;
+      padding: 15px 20px;
+      font-size: 0.9em;
+    }
+
+    .visitor-count {
+      font-size: 1.4em;
     }
   }
 </style>
@@ -542,39 +591,37 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Scene setup
     const container = document.getElementById('globeViz');
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xf8f9fa);
-    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
-  
+    scene.background = new THREE.Color(0xffffff);
+    
+    // Enhanced camera settings
+    const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ 
+        antialias: true,
+        alpha: true,
+        powerPreference: "high-performance"
+    });
+    
+    renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
-  
+    
     // Enhanced globe with better textures
-    const globeGeometry = new THREE.SphereGeometry(5, 64, 64); // Increased segments for smoother sphere
+    const globeGeometry = new THREE.SphereGeometry(5, 64, 64);
     const globeMaterial = new THREE.MeshPhongMaterial({
         map: new THREE.TextureLoader().load('https://raw.githubusercontent.com/turban/webgl-earth/master/images/2_no_clouds_4k.jpg'),
         bumpMap: new THREE.TextureLoader().load('https://raw.githubusercontent.com/turban/webgl-earth/master/images/elev_bump_4k.jpg'),
         bumpScale: 0.005,
         specularMap: new THREE.TextureLoader().load('https://raw.githubusercontent.com/turban/webgl-earth/master/images/water_4k.png'),
-        specular: new THREE.Color('grey'),
-        shininess: 10
+        specular: new THREE.Color('#ff99cc'),
+        shininess: 5
     });
-  
+    
     const globe = new THREE.Mesh(globeGeometry, globeMaterial);
     scene.add(globe);
-  
-    // Enhanced lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-    scene.add(ambientLight);
-  
-    const pointLight = new THREE.PointLight(0xffffff, 0.8);
-    pointLight.position.set(50, 50, 50);
-    scene.add(pointLight);
-  
-    // Add subtle atmosphere effect
+    
+    // Elegant pink atmosphere
     const atmosphereGeometry = new THREE.SphereGeometry(5.3, 64, 64);
     const atmosphereMaterial = new THREE.ShaderMaterial({
         transparent: true,
@@ -593,179 +640,166 @@ document.addEventListener('DOMContentLoaded', function() {
             uniform float coefficients;
             void main() {
                 float intensity = pow(0.7 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
-                gl_FragColor = vec4(0.3, 0.6, 1.0, intensity * 0.3);
+                gl_FragColor = vec4(1.0, 0.4, 0.6, intensity * 0.2);
             }
         `
     });
-  
+    
     const atmosphere = new THREE.Mesh(atmosphereGeometry, atmosphereMaterial);
     scene.add(atmosphere);
-  
-    // Camera position and controls
+    
+    // Enhanced lighting
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambientLight);
+    
+    const pointLight = new THREE.PointLight(0xff99cc, 1);
+    pointLight.position.set(50, 50, 50);
+    scene.add(pointLight);
+    
+    const hemisphereLight = new THREE.HemisphereLight(0xff66a6, 0xffffff, 0.3);
+    scene.add(hemisphereLight);
+    
     camera.position.z = 15;
-  
+    
+    // Smoother controls with momentum
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.rotateSpeed = 0.5;
     controls.minDistance = 7;
-    controls.maxDistance = 25;
-  
-    // Visitor tracking with enhanced visualization
-    let visitors = {};
-    const markerGroup = new THREE.Group();
-    scene.add(markerGroup);
-  
-    function updateVisitorCount() {
-        const visitorCount = document.querySelector('.visitor-count');
-        const count = Object.keys(visitors).length;
-        visitorCount.textContent = count.toString();
+    controls.maxDistance = 20;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 0.3; // Slower, more elegant rotation
+    
+    // Enhanced visitor markers with better effects
+    function addVisitorMarker(lat, lng, country) {
+        const markerGeometry = new THREE.SphereGeometry(0.08, 16, 16);
+        const markerMaterial = new THREE.MeshPhongMaterial({
+            color: 0xff66a6,
+            emissive: 0xff66a6,
+            emissiveIntensity: 0.4,
+            transparent: true,
+            opacity: 0.9
+        });
+        const marker = new THREE.Mesh(markerGeometry, markerMaterial);
+        
+        // Position calculation
+        const phi = (90 - lat) * (Math.PI / 180);
+        const theta = (lng + 180) * (Math.PI / 180);
+        const radius = 5.1;
+        
+        marker.position.x = -(radius * Math.sin(phi) * Math.cos(theta));
+        marker.position.z = (radius * Math.sin(phi) * Math.sin(theta));
+        marker.position.y = (radius * Math.cos(phi));
+        
+        // Enhanced pulse effect
+        const pulseGeometry = new THREE.SphereGeometry(0.08, 16, 16);
+        const pulseMaterial = new THREE.MeshBasicMaterial({
+            color: 0xff66a6,
+            transparent: true,
+            opacity: 0.4
+        });
+        const pulse = new THREE.Mesh(pulseGeometry, pulseMaterial);
+        pulse.position.copy(marker.position);
+        
+        // More elegant animations
+        gsap.to(pulse.scale, {
+            x: 4,
+            y: 4,
+            z: 4,
+            duration: 2.5,
+            repeat: -1,
+            ease: "power1.inOut",
+            yoyo: true
+        });
+        
+        gsap.from(marker.scale, {
+            x: 0,
+            y: 0,
+            z: 0,
+            duration: 1.5,
+            ease: "elastic.out(1, 0.5)"
+        });
+        
+        scene.add(marker);
+        scene.add(pulse);
+        
+        // Enhanced tooltip with fade effect
+        const tooltipDiv = document.createElement('div');
+        tooltipDiv.className = 'visitor-tooltip';
+        tooltipDiv.textContent = country;
+        container.appendChild(tooltipDiv);
+        
+        // Mouse interaction
+        container.addEventListener('mousemove', (event) => {
+            const rect = container.getBoundingClientRect();
+            const mouse = new THREE.Vector2(
+                ((event.clientX - rect.left) / container.clientWidth) * 2 - 1,
+                -((event.clientY - rect.top) / container.clientHeight) * 2 + 1
+            );
+            
+            const raycaster = new THREE.Raycaster();
+            raycaster.setFromCamera(mouse, camera);
+            
+            const intersects = raycaster.intersectObject(marker);
+            
+            if (intersects.length > 0) {
+                tooltipDiv.style.left = event.clientX - rect.left + 10 + 'px';
+                tooltipDiv.style.top = event.clientY - rect.top + 10 + 'px';
+                tooltipDiv.classList.add('visible');
+            } else {
+                tooltipDiv.classList.remove('visible');
+            }
+        });
+        
+        return { marker, pulse, tooltip: tooltipDiv };
     }
-  
-    // Get API key from Jekyll config
+    
+    // Smooth animation loop with performance optimization
+    function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+    }
+    
+    animate();
+    
+    // Enhanced responsive handling with debouncing
+    let resizeTimeout;
+    function onWindowResize() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+        }, 250);
+    }
+    
+    window.addEventListener('resize', onWindowResize);
+    
+    // Initialize visitor tracking with error handling
     const apiKey = '{{ site.ipapi_key }}';
-  
-    // Get visitor's location with enhanced error handling
     fetch(`https://api.ipapi.com/api/check?access_key=${apiKey}`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            if (data.error) {
-                console.error('API Error:', data.error);
-                return;
+            if (!data.error) {
+                const visitor = addVisitorMarker(data.latitude, data.longitude, data.country_name);
+                document.querySelector('.visitor-count').textContent = '1';
+                
+                // Add subtle entrance animation for visitor stats
+                gsap.from('.visitor-stats', {
+                    y: -20,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    delay: 0.5
+                });
             }
-          
-            const visitorId = Date.now().toString();
-            visitors[visitorId] = {
-                lat: data.latitude,
-                lng: data.longitude,
-                country: data.country_name
-            };
-          
-            addVisitorMarker(data.latitude, data.longitude, data.country_name);
-            updateVisitorCount();
         })
         .catch(error => {
             console.error('Error:', error);
             document.querySelector('.visitor-count').textContent = 'Error loading data';
         });
-  
-    function addVisitorMarker(lat, lng, country) {
-        // Create marker with pulsing effect
-        const markerGeometry = new THREE.SphereGeometry(0.1, 16, 16);
-        const markerMaterial = new THREE.MeshBasicMaterial({
-            color: 0xff66a6,
-            transparent: true,
-            opacity: 0.8
-        });
-        const marker = new THREE.Mesh(markerGeometry, markerMaterial);
-      
-        // Convert lat/lng to 3D position
-        const phi = (90 - lat) * (Math.PI / 180);
-        const theta = (lng + 180) * (Math.PI / 180);
-        const radius = 5.1; // Slightly above globe surface
-      
-        marker.position.x = -(radius * Math.sin(phi) * Math.cos(theta));
-        marker.position.z = (radius * Math.sin(phi) * Math.sin(theta));
-        marker.position.y = (radius * Math.cos(phi));
-      
-        // Add pulsing animation
-        const pulse = new THREE.Mesh(
-            new THREE.SphereGeometry(0.1, 16, 16),
-            new THREE.MeshBasicMaterial({
-                color: 0xff66a6,
-                transparent: true,
-                opacity: 0.4
-            })
-        );
-        pulse.position.copy(marker.position);
-      
-        // Animation
-        gsap.to(pulse.scale, {
-            x: 2,
-            y: 2,
-            z: 2,
-            duration: 1.5,
-            repeat: -1,
-            ease: "power1.out",
-            yoyo: true
-        });
-      
-        gsap.from(marker.scale, {
-            x: 0,
-            y: 0,
-            z: 0,
-            duration: 1,
-            ease: "elastic.out(1, 0.5)"
-        });
-      
-        markerGroup.add(marker);
-        markerGroup.add(pulse);
-      
-        // Add tooltip
-        const tooltipDiv = document.createElement('div');
-        tooltipDiv.className = 'visitor-tooltip';
-        tooltipDiv.textContent = country;
-        tooltipDiv.style.position = 'absolute';
-        tooltipDiv.style.display = 'none';
-        tooltipDiv.style.backgroundColor = 'rgba(255, 102, 166, 0.9)';
-        tooltipDiv.style.color = 'white';
-        tooltipDiv.style.padding = '5px 10px';
-        tooltipDiv.style.borderRadius = '4px';
-        tooltipDiv.style.fontSize = '12px';
-        container.appendChild(tooltipDiv);
-      
-        marker.userData = { tooltip: tooltipDiv, country: country };
-      
-        // Hover effects
-        const raycaster = new THREE.Raycaster();
-        const mouse = new THREE.Vector2();
-      
-        container.addEventListener('mousemove', (event) => {
-            mouse.x = (event.clientX - container.offsetLeft) / container.clientWidth * 2 - 1;
-            mouse.y = -((event.clientY - container.offsetTop) / container.clientHeight) * 2 + 1;
-          
-            raycaster.setFromCamera(mouse, camera);
-            const intersects = raycaster.intersectObject(marker);
-          
-            if (intersects.length > 0) {
-                tooltipDiv.style.display = 'block';
-                tooltipDiv.style.left = event.clientX + 10 + 'px';
-                tooltipDiv.style.top = event.clientY + 10 + 'px';
-            } else {
-                tooltipDiv.style.display = 'none';
-            }
-        });
-    }
-  
-    // Enhanced animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-      
-        // Smooth globe rotation
-        globe.rotation.y += 0.001;
-        atmosphere.rotation.y += 0.001;
-      
-        // Update controls
-        controls.update();
-      
-        // Render scene
-        renderer.render(scene, camera);
-    }
-  
-    animate();
-  
-    // Responsive handling
-    window.addEventListener('resize', onWindowResize, false);
-  
-    function onWindowResize() {
-        camera.aspect = container.clientWidth / container.clientHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.clientWidth, container.clientHeight);
-    }
 });
 </script>
