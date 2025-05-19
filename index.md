@@ -583,7 +583,7 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
     "sameAs": [
         "https://www.linkedin.com/in/kristina-p-sinaga-0ba152309",
         "https://github.com/KristinaP09",
-        "https://x.com/NeuralGlowAI",
+        "https://x.com/Kristina57040",
         "https://scholar.google.com/citations?user=yNWQLYAAAAAJ"
     ]
 }
