@@ -30,15 +30,16 @@
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <style>
-        :root {
-            --primary-dark: #2c3e50;
-            --primary-light: #f5f5f5;
-            --accent-color: #3498db;
-            --accent-secondary: #2980b9;
-            --text-primary: #333333;
-            --text-secondary: #7f8c8d;
+    <style>        :root {
+            --primary-dark: #1e2c39; /* Darker for better contrast */
+            --primary-light: #ffffff; /* Pure white for better contrast */
+            --accent-color: #2980b9; /* Slightly darker accent for better readability */
+            --accent-secondary: #1f6797; /* Darker secondary for better contrast */
+            --text-primary: #222222; /* Darker text for better readability */
+            --text-secondary: #5d6b6c; /* Darker secondary text for better contrast */
             --quote-bg: #f9f9f9;
+            --section-spacing: 4rem; /* Consistent spacing between sections */
+            --divider-color: rgba(0,0,0,0.08); /* Subtle divider color */
         }
         
         body {
@@ -55,13 +56,16 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
-        header {
+          header {
             text-align: center;
-            padding: 60px 0;
-            background-color: var(--primary-dark);
+            padding: 70px 0;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #34495e 100%);
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"), linear-gradient(135deg, var(--primary-dark) 0%, #34495e 100%);
             color: var(--primary-light);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
         }
         
         h1 {
@@ -77,13 +81,25 @@
             max-width: 600px;
             margin: 0 auto;
         }
-        
-        h2 {
+          h2 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary-dark);
-            margin-top: 2.5rem;
+            margin-top: 3.5rem;
             margin-bottom: 1.5rem;
             font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            border-radius: 3px;
         }
         
         blockquote {
@@ -161,12 +177,24 @@
             color: var(--text-secondary);
             margin-bottom: 2rem;
         }
-        
-        .social-share {
-            margin: 3rem 0;
+          .social-share {
+            margin: var(--section-spacing) 0;
             padding: 1.5rem 0;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
+            border-top: 1px solid var(--divider-color);
+            border-bottom: 1px solid var(--divider-color);
+            position: relative;
+        }
+        
+        .social-share::before, 
+        .newsletter::before,
+        .related-articles::before {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 60px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            margin-bottom: 1.5rem;
+            border-radius: 3px;
         }
         
         .social-share h3 {
@@ -249,8 +277,7 @@
             color: var(--accent-secondary);
             text-decoration: underline;
         }
-        
-        @media (max-width: 768px) {
+          @media (max-width: 768px) {
             header {
                 padding: 40px 0;
             }
@@ -270,6 +297,42 @@
             .image-caption {
                 max-width: 100%;
             }
+            
+            .newsletter {
+                padding: 1.5rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .newsletter-form input[type="email"] {
+                width: 100%;
+                min-width: unset;
+            }
+            
+            .newsletter-form button {
+                width: 100%;
+            }
+            
+            .tags {
+                justify-content: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .author-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .author-avatar {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
         }
     </style>
     
@@ -284,17 +347,16 @@
       "author": {
         "@type": "Person",
         "name": "Kristina P. Sinaga"
-      },
-      "publisher": {
+      },      "publisher": {
         "@type": "Organization",
         "name": "Clown Network Chronicles",
         "logo": {
-          "@type": "MobiusBlog",
+          "@type": "ImageObject",
           "url": "https://kristinap09.github.io/assets/images/mobius_banner.png"
         }
       },
-      "datePublished": "2025-05-19",
-      "dateModified": "2025-05-19"
+      "datePublished": "2023-05-19",
+      "dateModified": "2023-05-19"
     }
     </script>
 </head>
@@ -373,20 +435,20 @@
 
         <p>When one withdraws belief, the entire framework collapses. No purported curse, subliminal message, or manufactured dream narrative can maintain influence over a mind that fundamentally rejects the premise.</p>        <p>Consequently, when attempts are made to introduce constructed narratives into my unconscious state, or when dream-state warnings advise against discussing these organizational structures publicly, my response is neither anxiety nor compliance—but rather documentation and analytical detachment.</p>
 
-        <p>I acknowledge that these experiences, which some might call "enhanced dreams," occasionally lead to rumination upon waking. Initially, I lacked effective strategies for managing their psychological residue. Over time, however, I've developed practical countermeasures—immersing myself in music with pronounced rhythmic patterns and enjoying hot or warm showers provides remarkably effective cognitive reset mechanisms, even if you feel like your upstairs neighbor watching your movement when showering. These simple interventions help dispel lingering impressions from these inconsequential mental constructs.</p>
-
-        <p>As belief constitutes the foundation of their influence, deliberate skepticism becomes my most effective countermeasure.</p>
+        <p>I acknowledge that these experiences, which some might call "enhanced dreams," occasionally lead to rumination upon waking. Initially, I lacked effective strategies for managing their psychological residue. Over time, however, I've developed practical countermeasures—immersing myself in music with pronounced rhythmic patterns and enjoying hot or warm showers provides remarkably effective cognitive reset mechanisms, even when I sense the presence of observers above me during these private moments. These simple interventions help dispel lingering impressions from these inconsequential mental constructs.</p>        <p>As belief constitutes the foundation of their influence, deliberate skepticism becomes my most effective countermeasure.</p>
 
         <p>This principle guides my daily approach to information processing and cognitive autonomy.</p>
+        
+        <p>In conclusion, what appears supernatural often reveals itself as engineered when subjected to rigorous skepticism. By recognizing these attempted intrusions for what they are—human systems requiring our belief to function—we reclaim power over our perceptions and psychological sovereignty. The path forward isn't through fear or compliance, but through continuous critical analysis and the courage to document what others might prefer remains hidden. Our greatest defense against such manipulation remains our capacity to question, to observe dispassionately, and ultimately, to withhold belief from systems designed to control through deception.</p>
         
         <!-- Social Sharing Section -->
         <div class="social-share">
             <h3>Share this insight</h3>
-            <div class="social-icons">                <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/supernatural-engineered&text=Beyond Perception: When Engineered Systems Require Belief" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/supernatural-engineered" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kristinap09.github.io/supernatural-engineered&title=Beyond Perception: When Engineered Systems Require Belief" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://reddit.com/submit?url=https://kristinap09.github.io/supernatural-engineered&title=Beyond Perception: When Engineered Systems Require Belief" target="_blank"><i class="fab fa-reddit-alien"></i></a>
-                <a href="mailto:?subject=Beyond Perception: When Engineered Systems Require Belief&body=I thought you might find this article interesting: https://kristinap09.github.io/supernatural-engineered" target="_blank"><i class="fas fa-envelope"></i></a>
+            <div class="social-icons">                <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/supernatural-engineered&text=Beyond Perception: When Engineered Systems Require Belief" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/supernatural-engineered" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kristinap09.github.io/supernatural-engineered&title=Beyond Perception: When Engineered Systems Require Belief" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://reddit.com/submit?url=https://kristinap09.github.io/supernatural-engineered&title=Beyond Perception: When Engineered Systems Require Belief" target="_blank" aria-label="Share on Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i></a>
+                <a href="mailto:?subject=Beyond Perception: When Engineered Systems Require Belief&body=I thought you might find this article interesting: https://kristinap09.github.io/supernatural-engineered" target="_blank" aria-label="Share via Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
         </div>
           <!-- Related Articles -->
@@ -406,10 +468,11 @@
             </div>
         </div>
         
-        <style>
-            .related-articles {
-                margin: 3rem 0;
-            }
+        <style>        .related-articles {
+            margin: var(--section-spacing) 0;
+            position: relative;
+            padding-top: 1rem;
+        }
             
             .article-cards {
                 display: grid;
@@ -417,13 +480,26 @@
                 gap: 1.5rem;
                 margin-top: 1.5rem;
             }
-            
-            .article-card {
+              .article-card {
                 padding: 1.5rem;
-                border-radius: 8px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                border-radius: 10px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.06);
                 background-color: white;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-left: 3px solid var(--accent-color);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .article-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, transparent 70%, rgba(41, 128, 185, 0.1) 100%);
+                border-radius: 0 0 0 60px;
             }
             
             .article-card:hover {
@@ -468,14 +544,16 @@
             <p class="privacy-note"><small>We respect your privacy. Your information will never be shared.</small></p>
         </div>
         
-        <style>
-            .newsletter {
-                background-color: rgba(52, 152, 219, 0.05);
-                padding: 2rem;
-                border-radius: 8px;
-                margin: 3rem 0;
-                text-align: center;
-            }
+        <style>        .newsletter {
+            background: linear-gradient(to right, rgba(41, 128, 185, 0.05), rgba(52, 152, 219, 0.1));
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: var(--section-spacing) 0;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            position: relative;
+            border-left: 4px solid var(--accent-color);
+        }
             
             .newsletter h3 {
                 color: var(--primary-dark);
