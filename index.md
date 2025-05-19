@@ -107,7 +107,7 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
         <div class="research-icon">
           <i class="fas fa-project-diagram"></i>
         </div>
-        <h3 class="research-title">Multi-view Learning</h3>
+        <h3 class="research-title">Multi-view (MV) Learning</h3>
         <p class="research-desc">Innovative approaches to combining multiple data perspectives for enhanced model performance.</p>
         <div class="skill-tags">
           <span class="skill-tag">Clustering</span>
