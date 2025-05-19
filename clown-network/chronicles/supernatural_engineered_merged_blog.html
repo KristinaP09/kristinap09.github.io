@@ -483,7 +483,7 @@
         
         <span class="reading-time"><i class="far fa-clock"></i> 5 min read</span>
         
-        <div class="tags">
+        <
             <a href="#" class="tag">Perception</a>
             <a href="#" class="tag">Critical Thinking</a>
             <a href="#" class="tag">Psychological Analysis</a>
@@ -715,7 +715,7 @@
                 <p class="disclaimer"><small>The views expressed are based on personal analysis and don't constitute professional advice.</small></p>
             </div>
         </footer>
-    </div>      <!-- Script for newsletter functionality with email forwarding -->
+    </div>    <!-- Script for newsletter functionality with email forwarding -->
     <script>
         document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
             // Don't prevent default - let the form submit to Formspree
@@ -725,6 +725,14 @@
             }, 200);
         });
     </script>
+    
+    <!-- Alternative Google Translate Widget -->
+    <div id="google_translate_widget">
+        <div class="skiptranslate goog-te-gadget" style="position: absolute; left: -1000px; top: -1000px;">
+            <div id="google_translate_element"></div>
+        </div>
+    </div>
+      
       <!-- Google Translate API Integration -->
     <script>
         // Function to show translation notification
@@ -752,28 +760,37 @@
                 notification.classList.remove('active');
             }, 5000);
         }
-        
-        // Function to load Google Translate API script dynamically
+          // Function to load Google Translate API script dynamically
         function loadGoogleTranslateAPI() {
+            // Check if script is already loaded
+            if (document.querySelector('script[src*="translate.google.com/translate_a/element.js"]')) {
+                return;
+            }
+            
+            // Create script element
             const script = document.createElement('script');
             script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
             script.async = true;
+            script.onerror = function() {
+                console.error('Failed to load Google Translate API');
+                // Show error notification
+                showTranslationNotification('Failed to load translation service. Please try again later.', true);
+            };
             document.body.appendChild(script);
         }
-        
-        // Initialize Google Translate        window.googleTranslateElementInit = function() {
+          // Initialize Google Translate
+        window.googleTranslateElementInit = function() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
                 includedLanguages: 'ar,de,es,fr,hi,id,ja,ko,pt,ru,zh-CN',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false
-            });
-        };
-        
-        // Get language name from code
+            }, 'google_translate_element');
+        };        // Get language name from code
         function getLanguageName(code) {
             const languages = {
                 'en': 'English',
+                'id': 'Bahasa Indonesia',
                 'es': 'Spanish',
                 'fr': 'French',
                 'de': 'German',
@@ -788,7 +805,55 @@
             return languages[code] || code;
         }
         
-        // Handle manual language selection
+        // Function to translate using Google Translate API
+        function translateWithGoogle(language, languageName) {
+            try {
+                // Create translate element if it doesn't exist
+                if (!document.getElementById('google_translate_element')) {
+                    const translateDiv = document.createElement('div');
+                    translateDiv.id = 'google_translate_element';
+                    translateDiv.style.position = 'absolute';
+                    translateDiv.style.left = '-9999px';
+                    document.body.appendChild(translateDiv);
+                }
+                
+                // Initialize translate element with the language
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: language,
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: true
+                }, 'google_translate_element');
+                
+                // Try to force translation
+                setTimeout(() => {
+                    const gtCombo = document.querySelector('.goog-te-combo');
+                    if (gtCombo) {
+                        gtCombo.value = language;
+                        gtCombo.dispatchEvent(new Event('change'));
+                        
+                        // Show success notification after a delay
+                        setTimeout(() => {
+                            showTranslationNotification(`Translated to ${languageName}`, true);
+                        }, 1500);
+                    } else {
+                        throw new Error('Translation dropdown not found');
+                    }
+                }, 1000);
+            } catch (err) {
+                console.error('Translation error:', err);
+                showTranslationNotification(`Translation failed. Trying alternative method...`, false);
+                
+                // Fallback to direct URL
+                setTimeout(() => {
+                    const currentUrl = window.location.href;
+                    const translateUrl = `https://translate.google.com/translate?sl=en&tl=${language}&u=${encodeURIComponent(currentUrl)}`;
+                    window.open(translateUrl, '_blank');
+                    showTranslationNotification(`Opening Google Translate in new tab`, true);
+                }, 1000);
+            }
+        }
+          // Handle manual language selection
         document.getElementById('language-selector').addEventListener('change', function(e) {
             const language = e.target.value;
             const languageName = getLanguageName(language);
@@ -802,13 +867,27 @@
             
             // Show notification for translation in progress
             showTranslationNotification(`Translating to ${languageName}...`);
-            
-            // Use the Google Translate API to translate the page
+              
+            // First check if Google Translate is already loaded
+            if (window.google && window.google.translate) {
+                // Use existing loaded Google Translate
+                translateWithGoogle(language, languageName);
+                return;
+            }
+              
+            // Otherwise load the script
             const translateApiScript = document.createElement('script');
-            translateApiScript.src = `https://translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit2&tl=${language}`;
+            translateApiScript.src = `https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2&tl=${language}`;
+            translateApiScript.onerror = function() {
+                console.error('Failed to load Google Translate API');
+                // Fallback to direct Google Translate URL
+                const currentUrl = window.location.href;
+                const translateUrl = `https://translate.google.com/translate?sl=en&tl=${language}&u=${encodeURIComponent(currentUrl)}`;
+                window.open(translateUrl, '_blank');
+                showTranslationNotification(`Opening translation in new window...`, true);
+            };
             document.body.appendChild(translateApiScript);
-            
-            // Initialize with selected language
+              // Initialize with selected language
             window.googleTranslateElementInit2 = function() {
                 new google.translate.TranslateElement({
                     pageLanguage: 'en',
@@ -818,28 +897,99 @@
                     multilanguagePage: true
                 }, 'google_translate_element');
                 
-                // Force translation
-                const gtCombo = document.querySelector('.goog-te-combo');
-                if (gtCombo) {
-                    gtCombo.value = language;
-                    gtCombo.dispatchEvent(new Event('change'));
-                    
-                    // Show completion notification after a delay
-                    setTimeout(() => {
-                        showTranslationNotification(`Translated to ${languageName}`, true);
-                    }, 2000);
-                }
+                // Force translation using Google's API
+                setTimeout(() => {
+                    try {
+                        // First approach: Try using the combo
+                        const gtCombo = document.querySelector('.goog-te-combo');
+                        if (gtCombo) {
+                            gtCombo.value = language;
+                            gtCombo.dispatchEvent(new Event('change'));
+                        } 
+                        // Second approach: Try using the translation API directly
+                        else if (google.translate && google.translate.TranslateElement) {
+                            const translateElement = document.getElementById('google_translate_element');
+                            // Translate the page content
+                            if (translateElement) {
+                                translateElement.innerHTML = '';
+                                new google.translate.TranslateElement({
+                                    pageLanguage: 'en',
+                                    includedLanguages: language,
+                                    autoDisplay: true
+                                }, 'google_translate_element');
+                            }
+                        }
+                        
+                        // Show completion notification
+                        setTimeout(() => {
+                            showTranslationNotification(`Translated to ${languageName}`, true);
+                        }, 1000);
+                    } catch (err) {
+                        console.error('Translation error:', err);
+                        showTranslationNotification(`Translation error. Please try again.`, true);
+                    }
+                }, 1000);
             };
         });
-        
-        // Create hidden Google Translate Element
+          // Create Google Translate Element
         const translateDiv = document.createElement('div');
         translateDiv.id = 'google_translate_element';
-        translateDiv.style.display = 'none';
+        translateDiv.style.position = 'absolute';  // Position it off-screen instead of display: none
+        translateDiv.style.left = '-9999px';
+        translateDiv.setAttribute('aria-hidden', 'true');  // Better for accessibility
         document.body.appendChild(translateDiv);
         
         // Load Translation API on page load
         window.addEventListener('load', loadGoogleTranslateAPI);
+        
+        // Add a fallback approach if the translation doesn't work after 5 seconds
+        document.getElementById('language-selector').addEventListener('click', function() {
+            // Create translation interface if it doesn't exist yet
+            if (!document.querySelector('.goog-te-combo') && !document.querySelector('.skiptranslate')) {
+                loadGoogleTranslateAPI();
+            }        });
+    </script>
+    
+    <!-- Fixed Translation Script -->
+    <script>
+        // Additional fallback for Google Translate
+        document.addEventListener('DOMContentLoaded', function() {
+            // Direct translation approach
+            function directTranslate(languageCode) {
+                // Double-check if normal translation failed
+                setTimeout(function() {
+                    const translatedElements = document.querySelectorAll('.goog-te-banner-frame, .skiptranslate');
+                    if (translatedElements.length === 0) {
+                        console.log('Using direct translation fallback');
+                        const currentUrl = window.location.href;
+                        const translateUrl = `https://translate.google.com/translate?sl=en&tl=${languageCode}&u=${encodeURIComponent(currentUrl)}`;
+                        window.open(translateUrl, '_blank');
+                        
+                        // Show notification
+                        const notification = document.getElementById('translation-notification');
+                        const status = document.getElementById('translation-status');
+                        if (notification && status) {
+                            status.textContent = "Opening Google Translate in new window...";
+                            notification.querySelector('i').classList.remove('fa-spinner', 'fa-spin');
+                            notification.querySelector('i').classList.add('fa-external-link-alt');
+                            notification.classList.add('active');
+                        }
+                    }
+                }, 3000);
+            }
+            
+            // Add direct translate event
+            const langSelector = document.getElementById('language-selector');
+            if (langSelector) {
+                const origOnChange = langSelector.onchange;
+                langSelector.addEventListener('change', function(e) {
+                    const language = e.target.value;
+                    if (language !== 'en') {
+                        directTranslate(language);
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
