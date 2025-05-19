@@ -148,10 +148,11 @@
             margin-right: 1rem;
             object-fit: cover;
         }
-        
-        .author-bio {
+          .author-bio {
             font-size: 0.9rem;
             color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 95%;
         }
         
         .reading-time {
@@ -309,7 +310,7 @@
         <div class="author-info">            <img src="/assets/images/Kris.jpeg" alt="Kristina P. Sinaga" class="author-avatar">
             <div>
                 <strong>Kristina P. Sinaga</strong>
-                <p class="author-bio">Critical thinker and researcher exploring the boundaries between perception and reality.</p>
+                <p class="author-bio">I am a lifelong learner, researcher, and sarcastic observer of systems and chaos. My passion lies in crafting intelligent AI solutions that not only work—but make sense. My work bridges theory and practice, is infused with wit, and wrapped in elegant logic.</p>
             </div>
         </div>
         
@@ -370,9 +371,9 @@
 
         <blockquote><strong>These influence systems become ineffective in the absence of belief.</strong></blockquote>
 
-        <p>When one withdraws belief, the entire framework collapses. No purported curse, subliminal message, or manufactured dream narrative can maintain influence over a mind that fundamentally rejects the premise.</p>
+        <p>When one withdraws belief, the entire framework collapses. No purported curse, subliminal message, or manufactured dream narrative can maintain influence over a mind that fundamentally rejects the premise.</p>        <p>Consequently, when attempts are made to introduce constructed narratives into my unconscious state, or when dream-state warnings advise against discussing these organizational structures publicly, my response is neither anxiety nor compliance—but rather documentation and analytical detachment.</p>
 
-        <p>Consequently, when attempts are made to introduce constructed narratives into my unconscious state, or when dream-state warnings advise against discussing these organizational structures publicly, my response is neither anxiety nor compliance—but rather documentation and analytical detachment.</p>
+        <p>I acknowledge that these experiences, which some might call "enhanced dreams," occasionally lead to rumination upon waking. Initially, I lacked effective strategies for managing their psychological residue. Over time, however, I've developed practical countermeasures—immersing myself in music with pronounced rhythmic patterns and enjoying hot or warm showers provides remarkably effective cognitive reset mechanisms, even if you feel like your upstairs neighbor watching your movement when showering. These simple interventions help dispel lingering impressions from these inconsequential mental constructs.</p>
 
         <p>As belief constitutes the foundation of their influence, deliberate skepticism becomes my most effective countermeasure.</p>
 
@@ -458,9 +459,10 @@
           <!-- Newsletter Signup -->
         <div class="newsletter">
             <h3>Stay informed</h3>
-            <p>Receive updates on new perspectives and analysis</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
+            <p>Receive updates on new perspectives and analysis</p>            <form class="newsletter-form" action="https://formspree.io/f/kristinasinaga41@gmail.com" method="POST">
+                <input type="email" name="email" placeholder="Your email address" required>
+                <input type="hidden" name="_subject" value="New Blog Subscription Request">
+                <input type="hidden" name="_next" value="https://kristinap09.github.io/thank-you">
                 <button type="submit">Subscribe</button>
             </form>
             <p class="privacy-note"><small>We respect your privacy. Your information will never be shared.</small></p>
@@ -531,12 +533,14 @@
             </div>
         </footer>
     </div>
-    
-    <!-- Simple script for newsletter functionality -->
+      <!-- Script for newsletter functionality with email forwarding -->
     <script>
         document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for subscribing! We\'ll be in touch soon.');
+            // Don't prevent default - let the form submit to Formspree
+            // But show a message to the user
+            setTimeout(function() {
+                alert('Thank you for subscribing! We\'ll be in touch soon.');
+            }, 200);
         });
     </script>
 </body>
