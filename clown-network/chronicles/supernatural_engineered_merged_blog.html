@@ -261,8 +261,7 @@
             letter-spacing: 0.5px;
             margin-bottom: 0.5rem;
         }
-        
-        .disclaimer {
+          .disclaimer {
             font-size: 0.8rem;
             opacity: 0.8;
         }
@@ -277,7 +276,74 @@
             color: var(--accent-secondary);
             text-decoration: underline;
         }
-          @media (max-width: 768px) {
+          /* Language Selector Styles */
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: var(--primary-light);
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .language-selector:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        
+        .language-selector select {
+            border: none;
+            background: transparent;
+            padding: 0.3rem 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        .language-selector .globe-icon {
+            margin-right: 0.3rem;
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+        
+        /* Translation notification styles */
+        .translation-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-dark);
+            color: var(--primary-light);
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .translation-notification.active {
+            display: flex;
+            animation: fadeInOut 5s ease-in-out forwards;
+        }
+        
+        .translation-notification i {
+            margin-right: 8px;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }@media (max-width: 768px) {
             header {
                 padding: 40px 0;
             }
@@ -333,6 +399,22 @@
                 margin-right: 0;
                 margin-bottom: 1rem;
             }
+            
+            /* Mobile Language Selector */
+            .language-selector {
+                top: 10px;
+                right: 10px;
+                padding: 0.3rem;
+            }
+            
+            .language-selector select {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.3rem;
+            }
+            
+            .language-selector .globe-icon {
+                font-size: 0.9rem;
+            }
         }
     </style>
     
@@ -360,7 +442,30 @@
     }
     </script>
 </head>
-<body>
+<body>    <!-- Language Selector -->    <div class="language-selector">
+        <span class="globe-icon"><i class="fas fa-globe"></i></span>
+        <select id="language-selector" aria-label="Select language">
+            <option value="en" selected>English</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="ar">العربية</option>
+            <option value="hi">हिन्दी</option>
+            <option value="pt">Português</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
+    
+    <!-- Translation Notification -->
+    <div id="translation-notification" class="translation-notification">
+        <i class="fas fa-spinner fa-spin"></i>
+        <span id="translation-status">Translating content...</span>
+    </div>
+    
     <header>
         <div class="container">
             <h1>Beyond Perception: When Engineered Systems Require Belief</h1>
@@ -610,8 +715,7 @@
                 <p class="disclaimer"><small>The views expressed are based on personal analysis and don't constitute professional advice.</small></p>
             </div>
         </footer>
-    </div>
-      <!-- Script for newsletter functionality with email forwarding -->
+    </div>      <!-- Script for newsletter functionality with email forwarding -->
     <script>
         document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
             // Don't prevent default - let the form submit to Formspree
@@ -620,6 +724,122 @@
                 alert('Thank you for subscribing! We\'ll be in touch soon.');
             }, 200);
         });
+    </script>
+      <!-- Google Translate API Integration -->
+    <script>
+        // Function to show translation notification
+        function showTranslationNotification(message, isComplete = false) {
+            const notification = document.getElementById('translation-notification');
+            const status = document.getElementById('translation-status');
+            
+            // Update message and icon
+            status.textContent = message;
+            
+            // Change icon if complete
+            if (isComplete) {
+                notification.querySelector('i').classList.remove('fa-spinner', 'fa-spin');
+                notification.querySelector('i').classList.add('fa-check');
+            } else {
+                notification.querySelector('i').classList.remove('fa-check');
+                notification.querySelector('i').classList.add('fa-spinner', 'fa-spin');
+            }
+            
+            // Show notification
+            notification.classList.add('active');
+            
+            // Hide after animation completes
+            setTimeout(() => {
+                notification.classList.remove('active');
+            }, 5000);
+        }
+        
+        // Function to load Google Translate API script dynamically
+        function loadGoogleTranslateAPI() {
+            const script = document.createElement('script');
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            script.async = true;
+            document.body.appendChild(script);
+        }
+        
+        // Initialize Google Translate        window.googleTranslateElementInit = function() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ar,de,es,fr,hi,id,ja,ko,pt,ru,zh-CN',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            });
+        };
+        
+        // Get language name from code
+        function getLanguageName(code) {
+            const languages = {
+                'en': 'English',
+                'es': 'Spanish',
+                'fr': 'French',
+                'de': 'German',
+                'zh': 'Chinese',
+                'ja': 'Japanese',
+                'ko': 'Korean',
+                'ar': 'Arabic',
+                'hi': 'Hindi',
+                'pt': 'Portuguese',
+                'ru': 'Russian'
+            };
+            return languages[code] || code;
+        }
+        
+        // Handle manual language selection
+        document.getElementById('language-selector').addEventListener('change', function(e) {
+            const language = e.target.value;
+            const languageName = getLanguageName(language);
+            
+            // Skip translation if English is selected (default language)
+            if (language === 'en') {
+                // Reload the page to remove any translations
+                window.location.reload();
+                return;
+            }
+            
+            // Show notification for translation in progress
+            showTranslationNotification(`Translating to ${languageName}...`);
+            
+            // Use the Google Translate API to translate the page
+            const translateApiScript = document.createElement('script');
+            translateApiScript.src = `https://translate.googleapis.com/translate_a/element.js?cb=googleTranslateElementInit2&tl=${language}`;
+            document.body.appendChild(translateApiScript);
+            
+            // Initialize with selected language
+            window.googleTranslateElementInit2 = function() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    includedLanguages: language,
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: true,
+                    multilanguagePage: true
+                }, 'google_translate_element');
+                
+                // Force translation
+                const gtCombo = document.querySelector('.goog-te-combo');
+                if (gtCombo) {
+                    gtCombo.value = language;
+                    gtCombo.dispatchEvent(new Event('change'));
+                    
+                    // Show completion notification after a delay
+                    setTimeout(() => {
+                        showTranslationNotification(`Translated to ${languageName}`, true);
+                    }, 2000);
+                }
+            };
+        });
+        
+        // Create hidden Google Translate Element
+        const translateDiv = document.createElement('div');
+        translateDiv.id = 'google_translate_element';
+        translateDiv.style.display = 'none';
+        document.body.appendChild(translateDiv);
+        
+        // Load Translation API on page load
+        window.addEventListener('load', loadGoogleTranslateAPI);
     </script>
 </body>
 </html>
