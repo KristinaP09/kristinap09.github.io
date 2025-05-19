@@ -1,650 +1,561 @@
+---
+layout: default
+title: Publications
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Kristina P. Sinaga - Publications Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #0F3057;
-            --accent-color: #7B1113;
-            --secondary-color: #00587A;
-            --text-color: #333333;
-            --light-gray: #F5F5F5;
-            --medium-gray: #E0E0E0;
-            --background-color: #FFFFFF;
-            --sans-font: 'Cabin', Arial, sans-serif;
-            --serif-font: 'Lora', Georgia, serif;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: var(--serif-font);
-            color: var(--text-color);
-            background-color: var(--background-color);
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        header h1 {
-            font-family: var(--sans-font);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        .profile-info {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .profile-info a {
-            color: white;
-            margin: 0.5rem 1rem;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
-        
-        .profile-info a:hover {
-            text-decoration: underline;
-        }
-        
-        .profile-info i {
-            margin-right: 0.5rem;
-        }
-        
-        .filters {
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .filter-btn {
-            background-color: var(--light-gray);
-            border: none;
-            padding: 0.5rem 1rem;
-            margin: 0.25rem;
-            border-radius: 4px;
-            font-family: var(--sans-font);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        section {
-            margin-bottom: 3rem;
-        }
-        
-        h2 {
-            font-family: var(--sans-font);
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--light-gray);
-        }
-        
-        .pub-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .pub-card {
-            background-color: var(--light-gray);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .pub-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transform: translateY(-3px);
-        }
-        
-        .pub-card h3 {
-            font-family: var(--serif-font);
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-            color: var(--secondary-color);
-        }
-        
-        .pub-meta {
-            color: var(--accent-color);
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .pub-authors {
-            font-style: italic;
-            margin-bottom: 0.75rem;
-            font-size: 0.95rem;
-        }
-        
-        .pub-venue {
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        
-        .pub-links {
-            margin-top: auto;
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-        
-        .pub-link {
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-family: var(--sans-font);
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        
-        .pub-link:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        .pub-link i {
-            margin-right: 0.4rem;
-        }
-        
-        .year-section {
-            margin-bottom: 2.5rem;
-        }
-        
-        .year-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        
-        .year-header h2 {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        
-        .year-line {
-            flex-grow: 1;
-            height: 2px;
-            background-color: var(--light-gray);
-            margin-left: 1rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            background-color: var(--primary-color);
-            color: white;
-            margin-top: 3rem;
-        }
-        
-        .highlight-author {
-            font-weight: bold;
-            color: var(--accent-color);
-        }
-        
-        @media (max-width: 768px) {
-            .pub-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
-        }
-        
-        /* Category badges */
-        .category-badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            color: white;
-            font-family: var(--sans-font);
-        }
-        
-        .category-journal {
-            background-color: #2E86C1;
-        }
-        
-        .category-conference {
-            background-color: #28B463;
-        }
-        
-        .category-preprint {
-            background-color: #EB984E;
-        }
-        
-        /* Citation count */
-        .citation-badge {
-            display: inline-flex;
-            align-items: center;
-            background-color: #F1C40F;
-            color: #333;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-left: 0.5rem;
-        }
-          .citation-badge i {
-            margin-right: 0.3rem;
-            font-size: 0.75rem;
-        }
-        
-        /* DOI Link */
-        .doi-link {
-            display: inline-flex;
-            align-items: center;
-            background-color: #3498DB;
-            color: white;
-            text-decoration: none;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-family: var(--sans-font);
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        
-        .doi-link:hover {
-            background-color: #2874A6;
-        }
-        
-        .doi-link i {
-            margin-right: 0.4rem;
-        }
-    </style>
+    <title>Dr. Kristina P. Sinaga - Publications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Dr. Kristina P. Sinaga</h1>
-            <p>Publication Portfolio</p>
-            <div class="profile-info">
-                <a href="mailto:kristinasinaga41@gmail.com"><i class="fas fa-envelope"></i> kristinasinaga41@gmail.com</a>
-                <a href="https://kristinap09.github.io/" target="_blank"><i class="fas fa-globe"></i> kristinap09.github.io</a>
-                <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=it&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-            </div>
+
+<section class="publications-section">
+  <div class="publications-container">
+    <h1 class="publications-title">Publication Portfolio</h1>
+
+    <p class="publications-subtitle">
+      "Research contributions in machine learning and clustering algorithms"
+    </p>
+
+    <div class="publications-controls">
+      <div class="filter-container">
+        <h2>Filter Publications</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All Publications</button>
+          <button class="filter-btn" data-filter="journal">Journal Articles</button>
+          <button class="filter-btn" data-filter="conference">Conference Papers</button>
+          <button class="filter-btn" data-filter="preprint">Preprints</button>
         </div>
-    </header>
-    
-    <div class="container">
-        <div class="filters">            <button class="filter-btn active" data-filter="all">All Publications</button>
-            <button class="filter-btn" data-filter="journal">Journal Articles</button>
-            <button class="filter-btn" data-filter="conference">Conference Papers</button>
-            <button class="filter-btn" data-filter="preprint">Preprints</button>
-        </div>
-        
-        <div class="info-banner" style="text-align: center; margin-bottom: 2rem; padding: 0.75rem; background-color: var(--light-gray); border-radius: 6px;">
-            <p style="margin: 0; font-size: 0.9rem;">
-                <i class="fas fa-info-circle" style="color: var(--secondary-color);"></i>
-                Each publication includes links to <span style="color: var(--primary-color);">PDF</span>, <span style="color: var(--primary-color);">Code</span>, and 
-                <span style="color: #3498DB;">DOI</span> (Digital Object Identifier) for persistent citation.
-            </p>
-        </div>
-        
-        <!-- 2025 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2025</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card preprint">
-                    <span class="category-badge category-preprint">Preprint</span>
-                    <h3>Bi-Level Multi-View fuzzy Clustering with Exponential Distance</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina P.</span>
-                    </div>
-                    <div class="pub-venue">arXiv preprint arXiv:2503.22932</div>                    <div class="pub-links">
-                        <a href="https://arxiv.org/pdf/2503.22932" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/KristinaP09/EB-MVFCM" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.48550/arXiv.2503.22932" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2024 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2024</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Federated Multi-View K-Means Clustering</h3>
-                    <div class="pub-authors">
-                        Yang, Miin-Shen and <span class="highlight-author">Sinaga, Kristina P.</span>
-                    </div>
-                    <div class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence</div>
-                    <div class="pub-meta">IEEE</div>                    <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/10810504" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/kristinap09/federated-mview-kmeans" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1109/TPAMI.2024.3520708" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-                
-                <div class="pub-card preprint">
-                    <span class="category-badge category-preprint">Preprint</span>
-                    <h3>Rectified Gaussian kernel multi-view k-means clustering</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina P.</span>
-                    </div>
-                    <div class="pub-venue">arXiv preprint arXiv:2405.05619</div>                    <div class="pub-links">
-                        <a href="https://arxiv.org/pdf/2405.05619" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/KristinaP09/RectifiedMVKM" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.48550/arXiv.2405.05619" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2023 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2023</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Unsupervised multiview fuzzy c-means clustering algorithm</h3>
-                    <div class="pub-authors">
-                        Hussain, Ishtiaq, <span class="highlight-author">Sinaga, Kristina P.</span>, and Yang, Miin-Shen
-                    </div>
-                    <div class="pub-venue">Electronics</div>
-                    <div class="pub-meta">Vol. 12, No. 21, pp. 4467</div>                    <div class="pub-links">
-                        <a href="https://www.mdpi.com/2079-9292/12/21/4467" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/kristinap09/unsupervised-mview-fcm" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.3390/electronics12214467" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2021 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2021</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Collaborative feature-weighted multi-view fuzzy c-means clustering</h3>
-                    <div class="pub-authors">
-                        Yang, Miin-Shen and <span class="highlight-author">Sinaga, Kristina P.</span>
-                    </div>
-                    <div class="pub-venue">Pattern Recognition</div>
-                    <div class="pub-meta">Vol. 119, pp. 108064</div>                    <div class="pub-links">
-                        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/kristinap09/collaborative-feature-weighted-fcm" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1016/j.patcog.2021.108064" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-                
-                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Entropy K-means clustering with feature reduction under unknown number of clusters</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina P.</span>, Hussain, Ishtiaq, and Yang, Miin-Shen
-                    </div>
-                    <div class="pub-venue">IEEE Access</div>
-                    <div class="pub-meta">Vol. 9, pp. 67736–67751</div>                    <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9423951" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/kristinap09/entropy-kmeans-feature-reduction" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1109/ACCESS.2021.3077622" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-                
-                <div class="pub-card conference">
-                    <span class="category-badge category-conference">Conference</span>
-                    <h3>Analytics-Based on Classification and Clustering Methods for Local Community Empowerment in Indonesia</h3>
-                    <div class="pub-authors">
-                        Yuniati, Dyah and <span class="highlight-author">Sinaga, Kristina Pestaria</span>
-                    </div>
-                    <div class="pub-venue">International Conference on Soft Computing in Data Science</div>
-                    <div class="pub-meta">pp. 133–145</div>                    <div class="pub-links">
-                        <a href="https://link.springer.com/chapter/10.1007/978-981-16-7334-4_10" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1007/978-981-16-7334-4_10" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-                
-                <div class="pub-card conference">
-                    <span class="category-badge category-conference">Conference</span>
-                    <h3>Telecommunication analytics based on customer segmentation using unsupervised algorithms</h3>
-                    <div class="pub-authors">
-                        Wibowo, Henwy and <span class="highlight-author">Sinaga, Kristina Pestaria</span>
-                    </div>
-                    <div class="pub-venue">2021 3rd International Conference on Cybernetics and Intelligent System (ICORIS)</div>
-                    <div class="pub-meta">pp. 1–6</div>                    <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/9649598" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1109/ICORIS52787.2021.9649598" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-                
-                <div class="pub-card conference">
-                    <span class="category-badge category-conference">Conference</span>
-                    <h3>Machine learning approaches for marketing campaign in portuguese banks</h3>
-                    <div class="pub-authors">
-                        Alexandra, Jennifer and <span class="highlight-author">Sinaga, Kristina Pestaria</span>
-                    </div>
-                    <div class="pub-venue">2021 3rd International Conference on Cybernetics and Intelligent System (ICORIS)</div>
-                    <div class="pub-meta">pp. 1–6</div>                    <div class="pub-links">
-                        <a href="https://ieeexplore.ieee.org/abstract/document/9649623" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1109/ICORIS52787.2021.9649623" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2020 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2020</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Unsupervised K-means clustering algorithm</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina P.</span> and Yang, Miin-Shen
-                    </div>
-                    <div class="pub-venue">IEEE Access</div>
-                    <div class="pub-meta">Vol. 8, pp. 80716–80727</div>                    <div class="pub-links">
-                        <a href="https://xplorestaging.ieee.org/ielx7/6287639/8948470/09072123.pdf?arnumber=9072123" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/kristinap09/unsupervised-kmeans" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1109/access.2020.2988796" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                        <span class="citation-badge"><i class="fas fa-quote-right"></i> 2000+ citations</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2019 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2019</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>A feature-reduction multi-view k-means clustering algorithm</h3>
-                    <div class="pub-authors">
-                        Yang, Miin-Shen and <span class="highlight-author">Sinaga, Kristina P.</span>
-                    </div>
-                    <div class="pub-venue">IEEE Access</div>
-                    <div class="pub-meta">Vol. 7, pp. 114472–114486</div>                    <div class="pub-links">
-                        <a href="https://xplorestaging.ieee.org/ielx7/6287639/8600701/08793138.pdf?arnumber=8793138" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="https://github.com/kristinap09/feature-reduction-kmeans" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1109/access.2019.2934179" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                        <span class="citation-badge"><i class="fas fa-quote-right"></i> 130+ citations</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2018 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2018</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">
-                <div class="pub-card conference">
-                    <span class="category-badge category-conference">Conference</span>
-                    <h3>Modified relational mountain clustering method</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina P.</span>, Hsieh, June-Nan, Benjamin, Josephine BM, and Yang, Miin-Shen
-                    </div>
-                    <div class="pub-venue">Artificial Intelligence and Soft Computing: 17th International Conference, ICAISC 2018</div>
-                    <div class="pub-meta">pp. 690–701</div>                    <div class="pub-links">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-319-91253-0_64" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="https://doi.org/10.1007/978-3-319-91253-0_64" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2016 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2016</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Spatial Variation in Infant Mortality with Geographically Weighted Poisson Regression (GWPR) Approach</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina Pestaria</span>, Hutahaean, Manuntun, and Gea, Petrus
-                    </div>
-                    <div class="pub-venue">Journal Publication</div>
-                    <div class="pub-links">
-                        <a href="https://www.ijsr.net/archive/v5i3/NOV161741.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 2015 Publications -->
-        <div class="year-section">
-            <div class="year-header">
-                <h2>2015</h2>
-                <div class="year-line"></div>
-            </div>
-            <div class="pub-grid">                <div class="pub-card journal">
-                    <span class="category-badge category-journal">Journal</span>
-                    <h3>Poverty data modeling in north Sumatera province using geographically weighted regression (GWR) method</h3>
-                    <div class="pub-authors">
-                        <span class="highlight-author">Sinaga, Kristina Pestaria</span>
-                    </div>
-                    <div class="pub-venue">Journal Publication</div>
-                    <div class="pub-links">
-                        <a href="https://www.ijsr.net/archive/v4i2/SUB151577.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                        <a href="" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </div>
+
+      <div class="info-banner">
+        <h3>Publication Information</h3>
+        <p>Each publication includes links to the PDF, code repository (when available), and DOI for persistent citation.</p>
+        <p>Highly-cited papers are marked with citation counts.</p>
+      </div>
     </div>
-      <footer>
-        <div class="container">
-            <p>© 2025 Dr. Kristina P. Sinaga | Last Updated: May 19, 2025</p>
-            <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">All publications include DOI links for permanent reference and citation</p>
+
+    <div class="publications-content">
+      <!-- 2025 Publications -->
+      <div class="year-container">
+        <h2 class="year-header">2025</h2>
+        <div class="publications-list">
+          <div class="pub-card preprint">
+            <span class="category-badge preprint">Preprint</span>
+            <h3>Bi-Level Multi-View fuzzy Clustering with Exponential Distance</h3>
+            <div class="pub-authors">
+              <span class="highlight-author">Sinaga, Kristina P.</span>
+            </div>
+            <div class="pub-venue">arXiv preprint arXiv:2503.22932</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/pdf/2503.22932" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/KristinaP09/EB-MVFCM" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.48550/arXiv.2503.22932" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+
+      <!-- 2024 Publications -->
+      <div class="year-container">
+        <h2 class="year-header">2024</h2>
+        <div class="publications-list">
+          <div class="pub-card journal">
+            <span class="category-badge journal">Journal</span>
+            <h3>Federated Multi-View K-Means Clustering</h3>
+            <div class="pub-authors">
+              Yang, Miin-Shen and <span class="highlight-author">Sinaga, Kristina P.</span>
+            </div>
+            <div class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence</div>
+            <div class="pub-meta">IEEE</div>
+            <div class="pub-links">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10810504" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/kristinap09/federated-mview-kmeans" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.1109/TPAMI.2024.3520708" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
+          
+          <div class="pub-card preprint">
+            <span class="category-badge preprint">Preprint</span>
+            <h3>Rectified Gaussian kernel multi-view k-means clustering</h3>
+            <div class="pub-authors">
+              <span class="highlight-author">Sinaga, Kristina P.</span>
+            </div>
+            <div class="pub-venue">arXiv preprint arXiv:2405.05619</div>
+            <div class="pub-links">
+              <a href="https://arxiv.org/pdf/2405.05619" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/KristinaP09/RectifiedMVKM" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.48550/arXiv.2405.05619" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 Publications -->
+      <div class="year-container">
+        <h2 class="year-header">2023</h2>
+        <div class="publications-list">
+          <div class="pub-card journal">
+            <span class="category-badge journal">Journal</span>
+            <h3>Unsupervised multiview fuzzy c-means clustering algorithm</h3>
+            <div class="pub-authors">
+              Hussain, Ishtiaq, <span class="highlight-author">Sinaga, Kristina P.</span>, and Yang, Miin-Shen
+            </div>
+            <div class="pub-venue">Electronics</div>
+            <div class="pub-meta">Vol. 12, No. 21, pp. 4467</div>
+            <div class="pub-links">
+              <a href="https://www.mdpi.com/2079-9292/12/21/4467" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/kristinap09/unsupervised-mview-fcm" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.3390/electronics12214467" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 Publications -->
+      <div class="year-container">
+        <h2 class="year-header">2021</h2>
+        <div class="publications-list">
+          <div class="pub-card journal">
+            <span class="category-badge journal">Journal</span>
+            <h3>Collaborative feature-weighted multi-view fuzzy c-means clustering</h3>
+            <div class="pub-authors">
+              Yang, Miin-Shen and <span class="highlight-author">Sinaga, Kristina P.</span>
+            </div>
+            <div class="pub-venue">Pattern Recognition</div>
+            <div class="pub-meta">Vol. 119, pp. 108064</div>
+            <div class="pub-links">
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/kristinap09/collaborative-feature-weighted-fcm" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.1016/j.patcog.2021.108064" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
+          
+          <div class="pub-card journal">
+            <span class="category-badge journal">Journal</span>
+            <h3>Entropy K-means clustering with feature reduction under unknown number of clusters</h3>
+            <div class="pub-authors">
+              <span class="highlight-author">Sinaga, Kristina P.</span>, Hussain, Ishtiaq, and Yang, Miin-Shen
+            </div>
+            <div class="pub-venue">IEEE Access</div>
+            <div class="pub-meta">Vol. 9, pp. 67736–67751</div>
+            <div class="pub-links">
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9423951" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/kristinap09/entropy-kmeans-feature-reduction" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.1109/ACCESS.2021.3077622" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
+          
+          <div class="pub-card conference">
+            <span class="category-badge conference">Conference</span>
+            <h3>Analytics-Based on Classification and Clustering Methods for Local Community Empowerment in Indonesia</h3>
+            <div class="pub-authors">
+              Yuniati, Dyah and <span class="highlight-author">Sinaga, Kristina Pestaria</span>
+            </div>
+            <div class="pub-venue">International Conference on Soft Computing in Data Science</div>
+            <div class="pub-meta">pp. 133–145</div>
+            <div class="pub-links">
+              <a href="https://link.springer.com/chapter/10.1007/978-981-16-7334-4_10" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://doi.org/10.1007/978-981-16-7334-4_10" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 Publications -->
+      <div class="year-container">
+        <h2 class="year-header">2020</h2>
+        <div class="publications-list">
+          <div class="pub-card journal">
+            <span class="category-badge journal">Journal</span>
+            <h3>Unsupervised K-means clustering algorithm</h3>
+            <div class="pub-authors">
+              <span class="highlight-author">Sinaga, Kristina P.</span> and Yang, Miin-Shen
+            </div>
+            <div class="pub-venue">IEEE Access</div>
+            <div class="pub-meta">Vol. 8, pp. 80716–80727</div>
+            <div class="pub-links">
+              <a href="https://xplorestaging.ieee.org/ielx7/6287639/8948470/09072123.pdf?arnumber=9072123" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/kristinap09/unsupervised-kmeans" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.1109/access.2020.2988796" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 2000+ citations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2019 Publications -->
+      <div class="year-container">
+        <h2 class="year-header">2019</h2>
+        <div class="publications-list">
+          <div class="pub-card journal">
+            <span class="category-badge journal">Journal</span>
+            <h3>A feature-reduction multi-view k-means clustering algorithm</h3>
+            <div class="pub-authors">
+              Yang, Miin-Shen and <span class="highlight-author">Sinaga, Kristina P.</span>
+            </div>
+            <div class="pub-venue">IEEE Access</div>
+            <div class="pub-meta">Vol. 7, pp. 114472–114486</div>
+            <div class="pub-links">
+              <a href="https://xplorestaging.ieee.org/ielx7/6287639/8600701/08793138.pdf?arnumber=8793138" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/kristinap09/feature-reduction-kmeans" class="pub-link" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="https://doi.org/10.1109/access.2019.2934179" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+              <span class="citation-badge"><i class="fas fa-quote-right"></i> 130+ citations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="connect-section">
+      <h3>Connect With Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309?" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/NeuralGlowAI" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/KristinaP09" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://neuralglow-ai.medium.com/" class="social-icon" title="Medium"><i class="fab fa-medium"></i></a>
+      </div>
+      <p class="response-time">For inquiries about my research or potential collaborations,<br>
+      please <a href="contact.html">contact me</a> directly.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Publications Page Styles */
+  .publications-section {
+    padding: 2rem 1rem;
+  }
+
+  .publications-container {
+    max-width: 1000px;
+    margin: auto;
+    color: #fdfdfd;
+  }
+
+  .publications-title {
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 10px;
+  }
+
+  .publications-subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #ff99cc;
+    margin-bottom: 40px;
+  }
+
+  .publications-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .filter-container {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .filter-container h2 {
+    color: #ff99cc;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+
+  .filter-btn.active, .filter-btn:hover {
+    background-color: #ff99cc;
+    color: #111111;
+  }
+
+  .info-banner {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .info-banner h3 {
+    color: #ff99cc;
+    margin-bottom: 1rem;
+    font-size: 1.3em;
+  }
+
+  .info-banner p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .publications-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .year-container {
+    margin-bottom: 3rem;
+  }
+
+  .year-header {
+    color: #ff99cc;
+    font-size: 1.8em;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+  }
+
+  .publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .pub-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .pub-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .category-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .category-badge.journal {
+    background-color: #ff99cc;
+    color: #111111;
+  }
+
+  .category-badge.conference {
+    background-color: #ff7fbf;
+    color: #111111;
+  }
+
+  .category-badge.preprint {
+    background-color: rgba(255, 153, 204, 0.7);
+    color: #111111;
+  }
+
+  .pub-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+    padding-right: 80px;
+  }
+
+  .pub-authors {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .highlight-author {
+    color: #ff99cc;
+    font-weight: bold;
+  }
+
+  .pub-venue {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-meta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+
+  .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1rem;
+  }
+
+  .pub-link, .doi-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+
+  .pub-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  .doi-link {
+    background-color: rgba(52, 152, 219, 0.7);
+    color: #ffffff;
+  }
+
+  .pub-link:hover, .doi-link:hover {
+    transform: translateY(-2px);
+  }
+
+  .pub-link i, .doi-link i {
+    margin-right: 6px;
+  }
+
+  .citation-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  .citation-badge i {
+    margin-right: 6px;
+  }
+
+  .connect-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+  }
+
+  .connect-section h3 {
+    color: #ff99cc;
+    font-size: 1.5em;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 153, 204, 0.2);
+    color: #ff99cc;
+    transition: all 0.3s ease;
+  }
+
+  .social-icon i {
+    font-size: 1.2rem;
+  }
+
+  .social-icon:hover {
+    background-color: #ff99cc;
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+
+  .response-time {
+    font-size: 0.95rem;
+    opacity: 0.9;
+  }
+
+  .response-time a {
+    color: #ff99cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .response-time a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .publications-controls {
+      flex-direction: column;
+    }
     
-    <script>
-        // Filter publications by type
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Update active button
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Filter publications
-                    const pubCards = document.querySelectorAll('.pub-card');
-                    
-                    pubCards.forEach(card => {                            if (filter === 'all') {
-                            card.style.display = 'block';
-                        } else {
-                            if (card.classList.contains(filter)) {
-                                card.style.display = 'block';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        }
-                        
-                        // Show or hide DOI links based on availability
-                        const doiLinks = document.querySelectorAll('.doi-link');
-                        doiLinks.forEach(link => {
-                            if (link.getAttribute('href') === '#' || link.getAttribute('href') === '') {
-                                link.style.display = 'none';
-                            }
-                    });
-                });
-            });
+    .pub-card h3 {
+      padding-right: 0;
+      padding-top: 20px;
+    }
+    
+    .category-badge {
+      right: 10px;
+    }
+  }
+</style>
+
+<script>
+  // Filter publications
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const pubCards = document.querySelectorAll('.pub-card');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // Get filter value
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Show/hide publications based on filter
+        pubCards.forEach(card => {
+          if (filterValue === 'all') {
+            card.style.display = 'block';
+          } else {
+            if (card.classList.contains(filterValue)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
         });
-    </script>
+      });
+    });
+  });
+</script>
 </body>
 </html>
