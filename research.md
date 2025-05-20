@@ -95,7 +95,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         <a href="https://ieeexplore.ieee.org/abstract/document/10810504" target="_blank" class="pub-link">
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/FedMVKM" target="_blank" class="pub-link">
+        <a href="https://github.com/KristinaP09/federated-mview-kmeans" target="_blank" class="pub-link">
           <i class="fab fa-github"></i> Code
         </a>
         <a href="/research/2025-Federated_Multi-View_K-Means_Clustering.pdf" target="_blank" class="pub-link">
@@ -150,7 +150,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         <a href="https://ieeexplore.ieee.org/abstract/document/9072123" target="_blank" class="pub-link">
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/KMeans-Clustering" class="pub-link">
+        <a href="https://github.com/KristinaP09/unsupervised-kmeans" class="pub-link">
           <i class="fab fa-github"></i> Code
         </a>
         <a href="/research/2020-Unsupervised_K-means_clustering_algorithm.pdf" target="_blank" class="pub-link">
