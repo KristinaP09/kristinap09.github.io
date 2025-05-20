@@ -156,7 +156,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         <a href="https://github.com/KristinaP09/unsupervised-kmeans" class="pub-link">
           <i class="fab fa-github"></i> Code
         </a>
-        <a href="/research/2020-Unsupervised_K-means_clustering_algorithm.pdf" target="_blank" class="pub-link">
+        <a href="https://xplorestaging.ieee.org/ielx7/6287639/8948470/09072123.pdf?arnumber=9072123" target="_blank" class="pub-link">
           <i class="fas fa-file-pdf"></i> PDF
         </a>
       </div>
