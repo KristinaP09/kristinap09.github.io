@@ -5,7 +5,7 @@ baseurl: ""
 url: "https://kristinap09.github.io/"
 
 # API Keys (Replace with your actual API key from ipapi.com)
-ipapi_key: "dfa0986de9b5b2b65d2d2b9d5827c623"
+ipapi_key: "1326909e838d78fd155b218a4b805fd9"
 
 # Theme settings
 theme: jekyll-theme-minimal
