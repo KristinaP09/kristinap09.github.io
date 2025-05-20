@@ -385,6 +385,12 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 
 ## Recent Publications
 
+<div style="text-align: center; margin-bottom: 2rem; padding: 1rem; background: rgba(255, 153, 204, 0.1); border-radius: 8px;">
+  <p style="margin: 0; font-size: 1.1em;">
+    <i class="fas fa-book"></i> Browse my <a href="https://kristinap09.github.io/publications.html" style="color: #ff99cc; font-weight: bold; border-bottom: 1px dotted;">complete publication list</a> with full citations and impact metrics
+  </p>
+</div>
+
 <div class="publication-list">
 
 <div class="publication-item">
