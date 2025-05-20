@@ -400,12 +400,11 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
       <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
       <p class="pub-journal"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em></p>
       <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/document/10499999" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/EB-MVFCM" target="_blank" class="code-link">Code</a>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10810504" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/Fed-MVKM" target="_blank" class="code-link">Code</a>
       </div>
     </div>
   </div>
-
 
 </div>
 
