@@ -396,19 +396,6 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 <div class="publication-item">
     <span class="pub-year">2024</span>
     <div class="pub-details">
-      <p class="pub-title">Rectified Gaussian kernel multi-view k-means clustering</p>
-      <p class="pub-authors">Sinaga, K.P.</p>
-      <p class="pub-journal"><em>arXiv preprint arXiv:2405.05619</em></p>
-      <div class="pub-links">
-        <a href="https://arxiv.org/abs/2405.05619" target="_blank" class="journal-link">arXiv</a>
-        <a href="https://github.com/KristinaP09/RectifiedMVKM" target="_blank" class="code-link">Code</a>
-      </div>
-    </div>
-  </div>
-
-<div class="publication-item">
-    <span class="pub-year">2024</span>
-    <div class="pub-details">
       <p class="pub-title">Federated Multi-View K-Means Clustering</p>
       <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
       <p class="pub-journal"><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em></p>
@@ -432,42 +419,6 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
     </div>
   </div>
 
-<div class="publication-item">
-    <span class="pub-year">2019</span>
-    <div class="pub-details">
-      <p class="pub-title">A feature-reduction multi-view k-means clustering algorithm</p>
-      <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
-      <p class="pub-journal"><em>IEEE Access 7, 114472-114486</em></p>
-      <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/document/8765632" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/FRMVK" target="_blank" class="code-link">Code</a>
-      </div>
-    </div>
-  </div>
-
-<div class="publication-item">
-    <span class="pub-year">2018</span>
-    <div class="pub-details">
-      <p class="pub-title">Modified relational mountain clustering method</p>
-      <p class="pub-authors">Sinaga, K.P., Hsieh, J.N., Benjamin, J.B.M., Yang, M.S.</p>
-      <p class="pub-journal"><em>Artificial Intelligence and Soft Computing: 17th International Conference</em></p>
-      <div class="pub-links">
-        <a href="https://link.springer.com/chapter/10.1007/978-3-319-91253-0_36" target="_blank" class="journal-link">Conference</a>
-      </div>
-    </div>
-  </div>
-
-<div class="publication-item">
-    <span class="pub-year">2017</span>
-    <div class="pub-details">
-      <p class="pub-title">A review of multi-view clustering algorithms</p>
-      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>IEEE Access 6, 62356-62370</em></p>
-      <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/document/8477150" target="_blank" class="journal-link">Journal</a>
-      </div>
-    </div>
-  </div>
 
 </div>
 
