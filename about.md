@@ -406,19 +406,6 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
     </div>
   </div>
 
-<div class="publication-item">
-    <span class="pub-year">2020</span>
-    <div class="pub-details">
-      <p class="pub-title">Unsupervised K-means clustering algorithm</p>
-      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>IEEE Access 8, 80716-80727</em></p>
-      <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/document/9099048" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/Unsupervised-k-means" target="_blank" class="code-link">Code</a>
-      </div>
-    </div>
-  </div>
-
 
 </div>
 
