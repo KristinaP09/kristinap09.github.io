@@ -96,7 +96,10 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
           <i class="fas fa-external-link-alt"></i> Article
         </a>
         <a href="https://github.com/KristinaP09/federated-mview-kmeans" target="_blank" class="pub-link">
-          <i class="fab fa-github"></i> Code
+          <i class="fab fa-github"></i> Matlab Functions
+        </a>
+        <a href="https://github.com/KristinaP09/Fed-MVKM" target="_blank" class="pub-link">
+          <i class="fa-brands fa-python"></i> Python Package
         </a>
         <a href="/research/2025-Federated_Multi-View_K-Means_Clustering.pdf" target="_blank" class="pub-link">
           <i class="fas fa-file-pdf"></i> PDF
@@ -189,13 +192,13 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         <em>Impact:</em> This method provides a more nuanced approach to multi-view clustering by allowing for fine-grained control over feature importance, leading to better discovery of underlying data structures in complex, heterogeneous datasets.
       </p>
       <div class="publication-links">
-        <a href="#" target="_blank" class="pub-link"> <!-- Placeholder for article link -->
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" target="_blank" class="pub-link"> <!-- Placeholder for article link -->
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="#" target="_blank" class="pub-link"> <!-- Placeholder for code link -->
+        <a href="https://github.com/KristinaP09/collaborative-feature-weighted-fcm" target="_blank" class="pub-link"> <!-- Placeholder for code link -->
           <i class="fab fa-github"></i> Code
         </a>
-        <a href="/research/2021_co-fw-mvfcm.pdf" target="_blank" class="pub-link">
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" target="_blank" class="pub-link">
           <i class="fas fa-file-pdf"></i> PDF
         </a>
       </div>
@@ -257,18 +260,21 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
     </div>
 
     `<div class="project-item">`
-      `<h3><i class="fas fa-network-wired">``</i>` Distributed Optimization for Edge Computing`</h3>`
+      `<h3><i class="fas fa-network-wired">``</i>` Distributed Optimization for Edge Computing `</h3>`
       `<p>`Creating novel optimization algorithms that enable efficient distributed computation across edge devices with heterogeneous capabilities and unreliable connectivity.`</p>`
     `</div>`
 
     `<div class="project-item">`
-      `<h3><i class="fas fa-shield-alt">``</i>` Privacy-Preserving Machine Learning`</h3>`
+      `<h3><i class="fas fa-shield-alt">``</i>` Privacy-Preserving Machine Learning `</h3>`
       `<p>`Building learning frameworks that maintain data privacy while enabling collaborative model development across organizations and institutions.`</p>`
     `</div>`
 
 </div>
 </div>
 
+https://github.com/KristinaP09/collaborative-feature-weighted-fcm
+
+https://github.com/KristinaP09/Fed-MVKM
 
 <div class="collaboration">
   <h2 style="text-align: center; margin-top: 2em;">Research Opportunities</h2>
