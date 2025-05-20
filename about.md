@@ -420,45 +420,6 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
   </div>
 
 <div class="publication-item">
-    <span class="pub-year">2023</span>
-    <div class="pub-details">
-      <p class="pub-title">Unsupervised multiview fuzzy c-means clustering algorithm</p>
-      <p class="pub-authors">Hussain, I., Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>Electronics 12(21), 4467</em></p>
-      <div class="pub-links">
-        <a href="https://github.com/KristinaP09/U-MV-FCM" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/multiview-fcm" target="_blank" class="code-link">Code</a>
-      </div>
-    </div>
-  </div>
-
-<div class="publication-item">
-    <span class="pub-year">2021</span>
-    <div class="pub-details">
-      <p class="pub-title">Entropy K-means clustering with feature reduction under unknown number of clusters</p>
-      <p class="pub-authors">Sinaga, K.P., Hussain, I., Yang, M.S.</p>
-      <p class="pub-journal"><em>IEEE Access 9, 67736-67751</em></p>
-      <div class="pub-links">
-        <a href="https://ieeexplore.ieee.org/document/9442662" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/Entropy-k-means" target="_blank" class="code-link">Code</a>
-      </div>
-    </div>
-  </div>
-
-<div class="publication-item">
-    <span class="pub-year">2021</span>
-    <div class="pub-details">
-      <p class="pub-title">Collaborative feature-weighted multi-view fuzzy c-means clustering</p>
-      <p class="pub-authors">Yang, M.S., Sinaga, K.P.</p>
-      <p class="pub-journal"><em>Pattern Recognition 119, 108064</em></p>
-      <div class="pub-links">
-        <a href="https://www.sciencedirect.com/science/article/pii/S0031320321003073" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/Co-FW-MVFCM" target="_blank" class="code-link">Code</a>
-      </div>
-    </div>
-  </div>
-
-<div class="publication-item">
     <span class="pub-year">2020</span>
     <div class="pub-details">
       <p class="pub-title">Unsupervised K-means clustering algorithm</p>
