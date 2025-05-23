@@ -360,6 +360,14 @@
         // Article data
         const articles = [
             {
+                title: "Reflections from the Quiet Lane",
+                description: "A thoughtful reflection on fast-paced cultures, spontaneous living, and the wisdom of slowing down.",
+                url: "reflections-from-the-quiet-lane-mobile.html",
+                date: "2025-05-23",
+                imageUrl: "https://kristinap09.github.io/assets/images/E9303DC0-9830-4393-AF35-8768B5289DA0.png",
+                tags: ["mindfulness", "work-culture", "professional-growth", "blog"]
+            },
+            {
                 title: "Beyond Perception: When Engineered Systems Require Belief",
                 url: "/clown-network/chronicles/supernatural_engineered_merged_blog.html",
                 date: "2025-05-19",
@@ -425,11 +433,13 @@
                 articleElement.className = 'article-card';
                 
                 articleElement.innerHTML = `
+                    ${article.imageUrl ? `<img src="${article.imageUrl}" alt="${article.title}" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--border-radius) var(--border-radius) 0 0; margin-bottom: 1em;">` : ''}
                     <h3><a href="${article.url}">${article.title}</a></h3>
-                    <div class="timestamp">${article.date}</div>
+                    <p>${article.description}</p>
                     <div class="tags">
                         ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                     </div>
+                    <div class="timestamp">${article.date}</div>
                 `;
                 
                 container.appendChild(articleElement);
@@ -442,8 +452,12 @@
             const tagFilter = document.getElementById('tagFilter').value.toLowerCase();
             
             const filtered = articles.filter(article => {
-                const matchesSearch = article.title.toLowerCase().includes(searchTerm);
+                const matchesSearch = article.title.toLowerCase().includes(searchTerm) || 
+                                   article.description.toLowerCase().includes(searchTerm) ||
+                                   article.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                
                 const matchesTag = tagFilter === 'all' || article.tags.some(tag => tag.toLowerCase() === tagFilter);
+                
                 return matchesSearch && matchesTag;
             });
             
