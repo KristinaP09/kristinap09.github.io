@@ -394,6 +394,16 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 <div class="publication-list">
 
 <div class="publication-item">
+    <span class="pub-year">2025</span>
+    <div class="pub-details">
+      <p class="pub-title">A Globally Collaborative Multi-View k-Means Clustering</p>
+      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
+      <p class="pub-journal"><em>MDPI on Electronics</em></p>
+      <div class="pub-links">
+        <a href="https://www.mdpi.com/2079-9292/14/11/2129" target="_blank" class="journal-link">Journal</a>
+        <a href="https://github.com/KristinaP09/G-CoMVKM" target="_blank" class="code-link">Code</a>
+      </div>
+    </div>
     <span class="pub-year">2024</span>
     <div class="pub-details">
       <p class="pub-title">Federated Multi-View K-Means Clustering</p>
