@@ -298,6 +298,10 @@
         <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="filterArticles()">
         <select id="tagFilter" onchange="filterArticles()">
             <option value="all">All Tags</option>
+            <option value="clarity">Clarity</option>
+            <option value="social-conformity">Social Conformity</option>
+            <option value="boundaries">Boundaries</option>
+            <option value="psychological-resistance">Psychological Resistance</option>
             <option value="productivity">Productivity</option>
             <option value="work-culture">Work Culture</option>
             <option value="professional-growth">Professional Growth</option>
@@ -359,6 +363,14 @@
 
         // Article data
         const articles = [
+            {
+                title: "Modern Clarity: Navigating Social Conformity in the 21st Century",
+                description: "What happens when maintaining personal boundaries and refusing to participate in social scripts leads to being labeled as 'dangerous' or 'problematic'?",
+                url: "2025-06-08-Modern_Clarity_Professional_Blog.html",
+                date: "2025-06-08",
+                imageUrl: "https://kristinap09.github.io/assets/images/IMG_1504.png",
+                tags: ["clarity", "social-conformity", "boundaries", "psychological-resistance", "clown-network"]
+            },
             {
                 title: "Reflections from the Quiet Lane",
                 description: "A thoughtful reflection on fast-paced cultures, spontaneous living, and the wisdom of slowing down.",
