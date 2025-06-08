@@ -82,9 +82,14 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
     <h2>About Me</h2>
     <img src="assets/images/IMG_1512.png" alt="Kristina P. Sinaga" class="profile-image">
     <div class="profile-text">
-      <p>I am a strategic thinker and problem-solver with a Ph.D. in Applied Mathematics from Chung Yuan Christian University (CYCU), Taiwan. My passion lies in building innovative AI solutions that bridge theoretical foundations with practical applications.</p>
-      <p>I specialize in developing scalable, interpretable, and trustworthy AI models for decentralized and resource-constrained environments, focusing on clustering, multi-view learning, federated learning, and Edge AI.</p>
-      <p>My approach combines rigorous academic research with practical implementation, ensuring solutions that are not just theoretically sound but also deliver real-world value.</p>
+     <p> I’m a strategic thinker, problem-solver, and someone who doesn’t entertain clown logic. I hold a Ph.D. in Applied Mathematics from Chung Yuan Christian University (CYCU), Taiwan — but I don’t wear that title like a costume. I use it.</p>
+
+<p>My passion? Building AI solutions that don’t just float in theory — they land, perform, and endure. I specialize in designing scalable, interpretable, and trustworthy models that work in decentralized, real-world environments — especially where resources are limited but expectations are high.</p>
+
+<p>I work across clustering, multi-view learning, federated learning, and Edge AI — bridging theory and application like it’s second nature.</p>
+
+<p>My approach is simple:
+No noise. No fluff. Just precision that performs.</p>
     </div>
   </section>
 
