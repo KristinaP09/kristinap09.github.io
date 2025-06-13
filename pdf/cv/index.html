@@ -2,711 +2,429 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dr. Kristina P. Sinaga - Academic CV | Postdoctoral Researcher | Machine Learning & Data Science</title>
+  <title>Kristina P. Sinaga, Ph.D. – CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dr. Kristina P. Sinaga - Academic CV, Postdoctoral Researcher in Machine Learning, Applied Mathematics PhD, Research Publications, Teaching Excellence">
-  <meta name="keywords" content="machine learning, data science, federated learning, multi-view clustering, applied mathematics, postdoctoral researcher, academic research, artificial intelligence, statistical modeling">
   <!-- FontAwesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --primary-blue: #1e3a8a;
-      --accent-blue: #3b82f6;
-      --dark-text: #1f2937;
-      --medium-text: #4b5563;
-      --light-gray: #e5e7eb;
-      --success-green: #10b981;
-      --sans: 'Inter', 'Segoe UI', Arial, sans-serif;
-      --serif: 'Charter', Georgia, serif;
+      --swish-blue: #0F3057;
+      --accent: #7B1113;
+      --header-rule: #DDDDDD;
+      --bullet: #0F3057;
+      --sans: 'Cabin', Arial, sans-serif;
+      --serif: 'Cochineal', Georgia, serif;
     }
-    
-    * {
-      box-sizing: border-box;
-    }
-    
     body {
       font-family: var(--serif);
-      color: var(--dark-text);
+      color: #222;
       background: #fff;
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      font-size: 16px;
     }
-    
     .container {
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 2em auto;
       background: #fff;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      padding: 2em 2.5em;
+      border-radius: 10px;
     }
-    
-    /* ATS-Friendly Header */
-    .header-section {
-      text-align: center;
-      border-bottom: 3px solid var(--primary-blue);
-      padding-bottom: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .name {
-      font-family: var(--sans);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-blue);
-      margin: 0 0 0.5rem 0;
-      letter-spacing: -0.5px;
-    }
-    
-    .title {
-      font-size: 1.4rem;
-      color: var(--medium-text);
-      font-weight: 500;
-      margin: 0 0 1rem 0;
-      font-family: var(--sans);
-    }
-    
-    .contact-info {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    
-    .contact-item {
+    header {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      color: var(--medium-text);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-    
-    .contact-item:hover {
-      color: var(--accent-blue);
-    }
-    
-    /* Section Headers - ATS Friendly */
-    .section {
-      margin: 2.5rem 0;
-    }
-    
-    .section-title {
-      font-family: var(--sans);
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary-blue);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 0 0 1rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent-blue);
-    }
-    
-    /* Experience Entries */
-    .experience-item, .education-item {
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      border-left: 4px solid var(--accent-blue);
-      background: #f8fafc;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    .position-header {
-      display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 0.5rem;
       flex-wrap: wrap;
+      border-bottom: 1px solid var(--header-rule);
+      padding-bottom: 1.2em;
+      margin-bottom: 1.2em;
     }
-    
-    .position-title {
+    .profile-info {
+      flex: 1 1 60%;
+    }
+    .profile-info h1 {
       font-family: var(--sans);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--dark-text);
-      margin: 0;
-    }
-    
-    .date-range {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--accent-blue);
-      white-space: nowrap;
-    }
-    
-    .institution {
-      font-size: 1.1rem;
-      color: var(--medium-text);
-      font-weight: 500;
-      margin: 0.25rem 0 1rem 0;
-    }
-    
-    .achievements {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .achievements li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
-      line-height: 1.6;
-    }
-    
-    .achievements li:before {
-      content: '▶';
-      position: absolute;
-      left: 0;
-      color: var(--accent-blue);
+      font-size: 2.1em;
+      color: var(--swish-blue);
+      margin: 0 0 0.2em 0;
       font-weight: bold;
     }
-    
-    /* Skills Grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-    
-    .skill-category {
-      background: #f8fafc;
-      padding: 1.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--light-gray);
-    }
-    
-    .skill-category h3 {
-      font-family: var(--sans);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary-blue);
-      margin: 0 0 1rem 0;
-    }
-    
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-    
-    .skill-tag {
-      background: var(--accent-blue);
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-    
-    /* Publications */
-    .publication-item {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background: #f8fafc;
-      border-radius: 6px;
-      border-left: 3px solid var(--success-green);
-    }
-    
-    .publication-title {
-      font-weight: 700;
-      color: var(--dark-text);
-      margin-bottom: 0.5rem;
-    }
-    
-    .publication-details {
-      color: var(--medium-text);
+    .profile-info .subtitle {
+      font-size: 1.15em;
+      color: var(--swish-blue);
       font-style: italic;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.7em;
     }
-    
-    .publication-metrics {
-      font-size: 0.9rem;
-      color: var(--success-green);
-      font-weight: 600;
+    .contact-icons a {
+      color: var(--swish-blue);
+      margin-right: 1.1em;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: color 0.2s;
     }
-    
-    /* Research Interests - Keywords for ATS */
-    .keywords-section {
-      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-      padding: 2rem;
-      border-radius: 10px;
-      margin: 2rem 0;
+    .contact-icons a:hover {
+      color: var(--accent);
     }
-    
-    .keywords-grid {
+    .profile-photo {
+      flex: 0 0 120px;
+      margin-left: 2em;
+      border: 2px solid var(--header-rule);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      max-width: 120px;
+      max-height: 120px;
       display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--header-rule);
+      margin: 1.2em 0;
+    }
+    section {
+      margin-bottom: 1.7em;
+    }
+    .cvsection {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5em;
+    }
+    .cvsection-bar {
+      width: 0.6em;
+      height: 2.1em;
+      background: var(--swish-blue);
+      margin-right: 0.7em;
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .cvsection-title {
+      font-family: var(--sans);
+      font-size: 1.25em;
+      color: var(--swish-blue);
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .section-rule {
+      border: none;
+      border-top: 2px solid var(--swish-blue);
+      margin: 0.2em 0 1em 0;
+      width: 100%;
+    }
+    ul {
+      padding-left: 1.2em;
+      margin: 0.5em 0 0.5em 0;
+    }
+    ul li {
+      margin-bottom: 0.3em;
+      list-style: none;
+      position: relative;
+      padding-left: 1.2em;
+    }
+    ul li:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 0.7em;
+      height: 0.7em;
+      background: var(--bullet);
+      border-radius: 2px;
+      display: inline-block;
+    }
+    .twocols {
+      display: flex;
+      gap: 2em;
       flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
     }
-    
-    .keyword {
-      background: white;
-      color: var(--primary-blue);
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: 2px solid var(--accent-blue);
+    .twocols > div {
+      flex: 1 1 300px;
+      min-width: 220px;
     }
-    
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .container {
-        padding: 1rem;
-      }
-      
-      .name {
-        font-size: 2rem;
-      }
-      
-      .contact-info {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .position-header {
-        flex-direction: column;
-      }
-      
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
+    .tabular-section {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 0.5em;
     }
-    
-    /* Print Styles for PDF */
-    @media print {
-      .container {
-        box-shadow: none;
-        max-width: none;
-        padding: 0;
-      }
-      
-      body {
-        font-size: 12pt;
-        line-height: 1.4;
-      }
-      
-      .section {
-        page-break-inside: avoid;
-      }
+    .tabular-section td {
+      vertical-align: top;
+      padding-bottom: 0.7em;
+      border: none;
+    }
+    .tabular-section .date {
+      font-family: var(--sans);
+      color: var(--swish-blue);
+      font-weight: bold;
+      width: 4.5em;
+      white-space: nowrap;
+      padding-right: 1.2em;
+    }
+    .tabular-section .role {
+      font-weight: bold;
+      color: #222;
+    }
+    .tabular-section .institution {
+      color: #444;
+    }
+    .languages-table {
+      width: 100%;
+      margin: 0.5em 0;
+      border-collapse: collapse;
+    }
+    .languages-table td {
+      padding: 0.3em 0.7em 0.3em 0;
+      border: none;
+      font-size: 1em;
+    }
+    .references {
+      color: var(--accent);
+      font-style: italic;
+      text-align: center;
+      margin-top: 1.2em;
+      font-size: 1.05em;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 1em 0.5em; }
+      header { flex-direction: column; align-items: flex-start; }
+      .profile-photo { margin: 1em 0 0 0; }
+      .twocols { flex-direction: column; gap: 0.5em; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header Section - ATS Optimized -->
-    <header class="header-section">
-      <h1 class="name">Dr. Kristina P. Sinaga</h1>
-      <div class="title">Postdoctoral Researcher | Applied Mathematics Ph.D. | Machine Learning & AI Specialist</div>
-      
-      <div class="contact-info">
-        <a href="mailto:kristinasinaga41@gmail.com" class="contact-item">
-          <i class="fa-solid fa-envelope"></i>
-          <span>kristinasinaga41@gmail.com</span>
-        </a>
-        <a href="https://github.com/Kristinap09" class="contact-item">
-          <i class="fa-brands fa-github"></i>
-          <span>github.com/Kristinap09</span>
-        </a>
-        <a href="https://kristinap09.github.io/" class="contact-item">
-          <i class="fa-solid fa-globe"></i>
-          <span>kristinap09.github.io</span>
-        </a>
-        <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ" class="contact-item">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <span>Google Scholar Profile</span>
-        </a>
-        <div class="contact-item">
-          <i class="fa-solid fa-map-marker-alt"></i>
-          <span>ISTI-CNR, Pisa, Italy</span>
-        </div>
+<div class="container">
+  <header>
+    <div class="profile-info">
+      <h1>Kristina P. Sinaga, Ph.D.</h1>
+      <div class="subtitle">Postdoctoral Researcher | ISTI-CNR | Founder, <a href="http://neuralglow.ai/" style="color:var(--swish-blue);font-weight:bold;" target="_blank">NeuralGlow.AI</a></div>
+      <div class="contact-icons">
+        <a href="mailto:kristinasinaga41@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/Kristinap09" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://kristinap09.github.io/" title="Website"><i class="fa-solid fa-globe"></i></a>
+        <a href="https://www.isti.cnr.it/en/" title="Institution"><i class="fa-solid fa-university"></i></a>
       </div>
-    </header>
+    </div>
+    <div class="profile-photo">
+      <img src="/assets/images/107665417.jpeg" alt="Kristina P. Sinaga portrait">
+    </div>
+  </header>
 
-    <!-- Research Interests & Keywords Section for ATS -->
-    <section class="keywords-section">
-      <h2 class="section-title">Research Expertise & Keywords</h2>
-      <div class="keywords-grid">
-        <span class="keyword">Machine Learning</span>
-        <span class="keyword">Federated Learning</span>
-        <span class="keyword">Multi-View Clustering</span>
-        <span class="keyword">Data Science</span>
-        <span class="keyword">Applied Mathematics</span>
-        <span class="keyword">Statistical Modeling</span>
-        <span class="keyword">Algorithm Development</span>
-        <span class="keyword">Privacy-Preserving AI</span>
-        <span class="keyword">Dimensionality Reduction</span>
-        <span class="keyword">Unsupervised Learning</span>
-        <span class="keyword">Data Integration</span>
-        <span class="keyword">Computational Mathematics</span>
-        <span class="keyword">Research Leadership</span>
-        <span class="keyword">Academic Publishing</span>
-        <span class="keyword">International Collaboration</span>
-      </div>
-    </section>
+  <hr class="divider">
 
-    <!-- Professional Summary -->
-    <section class="section">
-      <h2 class="section-title">Professional Summary</h2>
-      <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--success-green);">
-        <p style="margin: 0 0 1rem 0; font-size: 1.1rem; line-height: 1.7;">
-          <strong>Accomplished Applied Mathematics Ph.D.</strong> and <strong>Postdoctoral Researcher</strong> with <strong>8+ years of academic research experience</strong> in machine learning, data science, and artificial intelligence. Proven track record of leading cutting-edge research in <strong>federated learning</strong>, <strong>multi-view clustering</strong>, and <strong>privacy-preserving machine learning</strong> with <strong>15+ peer-reviewed publications</strong> in top-tier journals (IEEE, Elsevier, MDPI) and <strong>2,500+ citations</strong>.
-        </p>
-        <p style="margin: 0; font-size: 1.1rem; line-height: 1.7;">
-          <strong>Research Impact:</strong> Developed novel algorithms that improved clustering accuracy by 20-30% in benchmark datasets. <strong>Teaching Excellence:</strong> Delivered advanced mathematics and data analysis courses to 200+ students with 35% improvement in engagement metrics. <strong>Leadership:</strong> Coordinated international research collaborations and supervised 10+ graduate students. Seeking <strong>tenure-track faculty positions</strong> or <strong>senior research roles</strong> in academia to advance AI/ML research and contribute to educational excellence.
-        </p>
-      </div>
-    </section>
+  <!-- Enhanced Professional Summary with Career Objective and Keywords -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Professional Summary</span>
+    </div>
+    <hr class="section-rule">
+    <ul>
+      <li>Results-driven <b>Applied Mathematics Ph.D.</b> and <b>Postdoctoral Researcher</b> with 7+ years of experience in <b>machine learning</b>, <b>data science</b>, <b>multi-view clustering</b>, and <b>federated learning</b> for heterogeneous data systems.</li>
+      <li>Expert in <b>privacy-preserving machine learning</b>, <b>algorithm development</b>, and <b>statistical modeling</b> for large-scale, multi-client environments.</li>
+      <li>Proven track record of publishing in top-tier journals (IEEE, Elsevier, MDPI) and leading international research collaborations.</li>
+      <li>Career Objective: To leverage advanced mathematical and AI expertise to drive innovation in data-driven organizations, focusing on <b>AI research</b>, <b>data science</b>, and <b>applied machine learning</b> roles.</li>
+    </ul>
+  </section>
 
-    <!-- Education Section -->
-    <section class="section">
-      <h2 class="section-title">Education</h2>
-      
-      <div class="education-item">
-        <div class="position-header">
-          <h3 class="position-title">Ph.D. in Applied Mathematics</h3>
-          <div class="date-range">2016 - 2020</div>
-        </div>
-        <div class="institution">Chung Yuan Christian University, Taiwan</div>
-        <ul class="achievements">
-          <li><strong>Dissertation:</strong> "Advanced Multi-View Clustering Algorithms for Heterogeneous Data Integration"</li>
-          <li><strong>Research Focus:</strong> Machine learning, multi-view clustering, dimensionality reduction, algorithmic optimization</li>
-          <li><strong>Academic Excellence:</strong> Graduated with Honors | Published 6 journal articles during doctoral studies</li>
-          <li><strong>International Impact:</strong> Research cited 2,500+ times | Featured in IEEE Access Popular Documents</li>
-          <li><strong>Conference Presentations:</strong> 2 international conferences with global academic networking</li>
-        </ul>
-      </div>
+  <!-- Core Competencies / Keywords Section for LLM/ATS -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Core Competencies</span>
+    </div>
+    <hr class="section-rule">
+    <ul style="columns:2;-webkit-columns:2;-moz-columns:2;">
+      <li>Machine Learning</li>
+      <li>Data Science</li>
+      <li>Federated Learning</li>
+      <li>Multi-View Clustering</li>
+      <li>Algorithm Development</li>
+      <li>Statistical Analysis</li>
+      <li>Dimensionality Reduction</li>
+      <li>Python, R, MATLAB</li>
+      <li>TensorFlow, PyTorch, scikit-learn</li>
+      <li>Cloud Computing</li>
+      <li>Docker, Git</li>
+      <li>Data Integration</li>
+      <li>Privacy-Preserving AI</li>
+      <li>Research Leadership</li>
+    </ul>
+  </section>
 
-      <div class="education-item">
-        <div class="position-header">
-          <h3 class="position-title">Master of Science in Mathematics</h3>
-          <div class="date-range">2013 - 2015</div>
-        </div>
-        <div class="institution">University of Sumatera Utara, Indonesia</div>
-        <ul class="achievements">
-          <li><strong>Thesis:</strong> "Stochastic Optimization Models for Emergency Service Location Problems"</li>
-          <li><strong>Research Area:</strong> Operations research, optimization theory, mathematical modeling</li>
-          <li><strong>Achievement:</strong> Developed novel stochastic optimization frameworks for real-world applications</li>
-        </ul>
-      </div>
-
-      <div class="education-item">
-        <div class="position-header">
-          <h3 class="position-title">Bachelor of Science in Mathematics</h3>
-          <div class="date-range">2008 - 2013</div>
-        </div>
-        <div class="institution">University of Sumatera Utara, Indonesia</div>
-        <ul class="achievements">
-          <li><strong>Academic Distinction:</strong> Graduated with high honors</li>
-          <li><strong>Research Project:</strong> Regional economic analysis using mathematical modeling</li>
-          <li><strong>Foundation:</strong> Strong mathematical foundation in analysis, algebra, and applied mathematics</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Academic Experience -->
-    <section class="section">
-      <h2 class="section-title">Academic & Research Experience</h2>
-      
-      <div class="experience-item">
-        <div class="position-header">
-          <h3 class="position-title">Postdoctoral Researcher</h3>
-          <div class="date-range">October 2024 - Present</div>
-        </div>
-        <div class="institution">Institute of Information Science and Technologies (ISTI-CNR), Italy</div>
-        <ul class="achievements">
-          <li><strong>Research Leadership:</strong> Leading cutting-edge research in federated learning for multi-view data analysis with €150K+ research funding</li>
-          <li><strong>Algorithm Development:</strong> Designed and implemented novel clustering algorithms for heterogeneous data, achieving 20-30% improvement in clustering accuracy on benchmark datasets</li>
-          <li><strong>Publication Impact:</strong> Authored 3+ high-impact papers in federated learning and privacy-preserving machine learning (under review/accepted)</li>
-          <li><strong>International Collaboration:</strong> Coordinating multi-institutional research projects across Europe and Asia with 15+ international researchers</li>
-          <li><strong>Grant Writing:</strong> Co-authored successful research proposals for EU Horizon Europe and Italian national funding programs</li>
-          <li><strong>Mentorship:</strong> Supervising 3 PhD students and 2 postdoctoral researchers in advanced machine learning techniques</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="position-header">
-          <h3 class="position-title">Lecturer Specialist S3 (Assistant Professor Level)</h3>
-          <div class="date-range">November 2020 - April 2022</div>
-        </div>
-        <div class="institution">Bina Nusantara University, Indonesia</div>
-        <ul class="achievements">
-          <li><strong>Teaching Excellence:</strong> Delivered advanced courses in Mathematics, Statistics, and Data Analysis to 200+ undergraduate and graduate students</li>
-          <li><strong>Student Engagement:</strong> Achieved 35% increase in student engagement and 90%+ course completion rates through innovative teaching methodologies</li>
-          <li><strong>Curriculum Development:</strong> Designed and updated 5+ curriculum modules to align with industry 4.0 standards and emerging AI/ML technologies</li>
-          <li><strong>Research Supervision:</strong> Supervised 12 student research projects in data science and mathematical modeling</li>
-          <li><strong>Assessment Innovation:</strong> Implemented project-based learning and real-world case studies, improving critical thinking skills by 40%</li>
-          <li><strong>Faculty Leadership:</strong> Served on curriculum committee and academic standards review board</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="position-header">
-          <h3 class="position-title">Doctoral Research Assistant</h3>
-          <div class="date-range">September 2016 - June 2020</div>
-        </div>
-        <div class="institution">Chung Yuan Christian University, Taiwan</div>
-        <ul class="achievements">
-          <li><strong>Research Innovation:</strong> Developed groundbreaking multi-view fuzzy clustering algorithms with applications in biomedical data analysis</li>
-          <li><strong>Publication Record:</strong> Published 6 journal articles, 2 preprints, and 4 conference papers during doctoral studies</li>
-          <li><strong>Citation Impact:</strong> Research cited 2,500+ times with h-index of 12, demonstrating significant academic impact</li>
-          <li><strong>International Recognition:</strong> Presented research at 2 prestigious international conferences (ICML, NeurIPS workshops)</li>
-          <li><strong>Interdisciplinary Collaboration:</strong> Collaborated with computer science, biomedical engineering, and statistics departments</li>
-          <li><strong>Research Tools:</strong> Mastered advanced mathematical software and developed open-source implementations of novel algorithms</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Technical Skills & Competencies -->
-    <section class="section">
-      <h2 class="section-title">Technical Skills & Research Competencies</h2>
-      
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Programming & Development</h3>
-          <div class="skill-list">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">R</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">Julia</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">LaTeX</span>
-            <span class="skill-tag">Git/GitHub</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Linux/Unix</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Machine Learning & AI</h3>
-          <div class="skill-list">
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">scikit-learn</span>
-            <span class="skill-tag">Keras</span>
-            <span class="skill-tag">NumPy</span>
-            <span class="skill-tag">Pandas</span>
-            <span class="skill-tag">SciPy</span>
-            <span class="skill-tag">Jupyter</span>
-            <span class="skill-tag">Matplotlib</span>
-            <span class="skill-tag">Seaborn</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Research Specializations</h3>
-          <div class="skill-list">
-            <span class="skill-tag">Federated Learning</span>
-            <span class="skill-tag">Multi-View Clustering</span>
-            <span class="skill-tag">Privacy-Preserving ML</span>
-            <span class="skill-tag">Dimensionality Reduction</span>
-            <span class="skill-tag">Statistical Modeling</span>
-            <span class="skill-tag">Optimization Theory</span>
-            <span class="skill-tag">Algorithm Design</span>
-            <span class="skill-tag">Data Integration</span>
-          </div>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Cloud & Infrastructure</h3>
-          <div class="skill-list">
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Google Cloud</span>
-            <span class="skill-tag">Azure</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Apache Spark</span>
-            <span class="skill-tag">Hadoop</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">PostgreSQL</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Selected Publications -->
-    <section class="section">
-      <h2 class="section-title">Selected Publications & Research Impact</h2>
-      
-      <div style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
-        <h3 style="margin: 0 0 1rem 0; color: var(--success-green); font-family: var(--sans);">Publication Metrics</h3>
-        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
-          <div><strong>Total Citations:</strong> 2,500+</div>
-          <div><strong>h-index:</strong> 12</div>
-          <div><strong>Journal Articles:</strong> 15+</div>
-          <div><strong>Conference Papers:</strong> 8+</div>
-          <div><strong>Impact Factor Journals:</strong> IEEE, Elsevier, MDPI</div>
-        </div>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">Federated Multi-View K-Means Clustering with Privacy Preservation</div>
-        <div class="publication-details">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2025 (Under Review)</div>
-        <div class="publication-metrics">Impact Factor: 24.3 | Tier 1 Journal | Novel federated learning framework</div>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">Unsupervised k-means clustering algorithm</div>
-        <div class="publication-details">IEEE Access, Vol. 8, pp. 80716-80727, 2020</div>
-        <div class="publication-metrics">Citations: 1,800+ | Featured in IEEE Access Popular Documents | Open Access</div>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">A feature-reduction multi-view k-means clustering algorithm</div>
-        <div class="publication-details">IEEE Access, Vol. 7, pp. 114472-114486, 2019</div>
-        <div class="publication-metrics">Citations: 450+ | Novel dimensionality reduction approach | High impact</div>
-      </div>
-
-      <div class="publication-item">
-        <div class="publication-title">Enhanced Multi-View Spectral Clustering with Optimal Graph Learning</div>
-        <div class="publication-details">Pattern Recognition Letters, Elsevier, 2021</div>
-        <div class="publication-metrics">Citations: 280+ | Advanced spectral clustering methodology</div>
-      </div>
-
-      <div style="text-align: center; margin-top: 1.5rem;">
-        <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" 
-           style="color: var(--accent-blue); font-weight: 600; text-decoration: none; font-size: 1.1rem;">
-          <i class="fa-solid fa-external-link-alt"></i> Complete Publication List on Google Scholar
-        </a>
-      </div>
-    </section>
-
-    <!-- Awards & Recognition -->
-    <section class="section">
-      <h2 class="section-title">Awards & Professional Recognition</h2>
-      
-      <div class="experience-item">
-        <div class="position-header">
-          <h3 class="position-title">Mathematics Exceptional Reviewers List 2025</h3>
-          <div class="date-range">2025</div>
-        </div>
-        <div class="institution">MDPI Publishers</div>
-        <ul class="achievements">
-          <li>Selected among top peer reviewers worldwide for outstanding contributions to mathematics journals</li>
-          <li>Recognized for expertise in machine learning, applied mathematics, and data science publications</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="position-header">
-          <h3 class="position-title">Featured Popular Document - IEEE Access</h3>
-          <div class="date-range">2020 - Present</div>
-        </div>
-        <div class="institution">IEEE</div>
-        <ul class="achievements">
-          <li>Research paper featured as one of the most-read documents in IEEE Access journal</li>
-          <li>Recognized for significant readership impact and contribution to machine learning field</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="position-header">
-          <h3 class="position-title">Ph.D. with Academic Honors</h3>
-          <div class="date-range">2020</div>
-        </div>
-        <div class="institution">Chung Yuan Christian University</div>
-        <ul class="achievements">
-          <li>Graduated with highest academic distinction for exceptional research contributions</li>
-          <li>Dissertation recognized for novel contributions to multi-view clustering algorithms</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Professional Service -->
-    <section class="section">
-      <h2 class="section-title">Professional Service & Leadership</h2>
-      
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Editorial & Review Service</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Peer Reviewer:</strong> IEEE Transactions on Pattern Analysis and Machine Intelligence
-            </li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Peer Reviewer:</strong> Pattern Recognition (Elsevier)
-            </li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Peer Reviewer:</strong> IEEE Access
-            </li>
-            <li style="padding: 0.5rem 0;">
-              <strong>Reviewer:</strong> Multiple MDPI Mathematics journals
-            </li>
+  <!-- Standardized Experience Section -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Professional Experience</span>
+    </div>
+    <hr class="section-rule">
+    <table class="tabular-section">
+      <tr>
+        <td class="date">Oct 2024 –<br>Present</td>
+        <td>
+          <span class="role">Postdoctoral Researcher</span>, <span class="institution">ISTI-CNR, Italy</span>
+          <ul>
+            <li>Designed and implemented advanced clustering algorithms for heterogeneous data, improving clustering accuracy by 20% in benchmark datasets.</li>
+            <li>Led research on federated learning for multi-view data, resulting in 2+ publications and new privacy-preserving frameworks.</li>
+            <li>Coordinated international research teams, enhancing project delivery and cross-institutional collaboration.</li>
           </ul>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Research Leadership</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Project Coordinator:</strong> EU Horizon Europe research proposals
-            </li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Research Mentor:</strong> 15+ graduate students and postdocs
-            </li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>International Collaborator:</strong> 10+ institutions across Europe and Asia
-            </li>
-            <li style="padding: 0.5rem 0;">
-              <strong>Conference Organizer:</strong> Workshop on Federated Learning (2024)
-            </li>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Nov 2020 –<br>Apr 2022</td>
+        <td>
+          <span class="role">Lecturer Specialist S3</span>, <span class="institution">Bina Nusantara University, Indonesia</span>
+          <ul>
+            <li>Delivered courses in Mathematics and Data Analysis to 200+ students, achieving a 35% increase in student engagement and improved completion rates.</li>
+            <li>Supervised 10+ student research projects, fostering critical thinking and innovative problem-solving.</li>
+            <li>Developed and updated curriculum materials to align with industry standards and emerging technologies.</li>
           </ul>
-        </div>
-      </div>
-    </section>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Sep 2016 –<br>Jun 2020</td>
+        <td>
+          <span class="role">PhD Research Student</span>, <span class="institution">Chung Yuan Christian University, Taiwan</span>
+          <ul>
+            <li>Developed novel multi-view fuzzy clustering algorithms, published 6 journal articles, 2 preprints, and 4 conference papers (2,500+ citations).</li>
+            <li>Presented research at 2 international conferences, building global academic networks.</li>
+            <li>Collaborated with interdisciplinary teams to advance algorithmic optimization and data integration methods.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
 
-    <!-- Languages -->
-    <section class="section">
-      <h2 class="section-title">Languages</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Language Proficiency</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between;">
-              <strong>English</strong> <span style="color: var(--success-green); font-weight: 600;">Advanced Professional (C1)</span>
-            </li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between;">
-              <strong>Bahasa Indonesia</strong> <span style="color: var(--success-green); font-weight: 600;">Native (C2)</span>
-            </li>
-            <li style="padding: 0.5rem 0; display: flex; justify-content: space-between;">
-              <strong>Mandarin Chinese</strong> <span style="color: var(--medium-text); font-weight: 600;">Basic (A1)</span>
-            </li>
+  <!-- Education Section (standardized heading) -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Education</span>
+    </div>
+    <hr class="section-rule">
+    <table class="tabular-section">
+      <tr>
+        <td class="date">2016 –<br>2020</td>
+        <td>
+          <span class="role">Ph.D., Applied Mathematics</span>, <span class="institution">Chung Yuan Christian University, Taiwan</span>
+          <ul>
+            <li><b>Research Focus:</b> Multi-view clustering, dimensionality reduction, and algorithmic optimization</li>
+            <li><b>Distinction:</b> Graduated with honors; research published in multiple high-impact journals</li>
           </ul>
-        </div>
-        
-        <div class="skill-category">
-          <h3>Research Communication</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Academic Writing:</strong> 15+ peer-reviewed publications
-            </li>
-            <li style="padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;">
-              <strong>Conference Presentations:</strong> International venues
-            </li>
-            <li style="padding: 0.5rem 0;">
-              <strong>Grant Writing:</strong> EU and national funding proposals
-            </li>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">2013 –<br>2015</td>
+        <td>
+          <span class="role">M.Sc., Mathematics</span>, <span class="institution">University of Sumatera Utara, Indonesia</span>
+          <ul>
+            <li><b>Achievement:</b> Developed novel stochastic optimization model for emergency service location problems</li>
           </ul>
-        </div>
-      </div>
-    </section>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">2008 –<br>2013</td>
+        <td>
+          <span class="role">B.Sc., Mathematics</span>, <span class="institution">University of Sumatera Utara, Indonesia</span>
+          <ul>
+            <li><b>Achievement:</b> Graduation with academic distinction; regional economic analysis research</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
 
-    <!-- Footer -->
-    <footer style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--light-gray); color: var(--medium-text);">
-      <p style="margin: 0; font-style: italic; font-size: 1.1rem;">
-        <strong>References and detailed research portfolio available upon request</strong>
-      </p>
-      <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">
-        Last Updated: June 2025 | Version: Academic-ATS-Optimized
-      </p>
-    </footer>
+  <!-- Technical Skills Section (explicit listing) -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Technical Skills</span>
+    </div>
+    <hr class="section-rule">
+    <div class="twocols">
+      <div>
+        <b style="font-family:var(--sans);">Programming &amp; Tools</b>
+        <ul>
+          <li>Python (NumPy, Pandas, SciPy, scikit-learn, TensorFlow, PyTorch)</li>
+          <li>MATLAB, R, LaTeX</li>
+          <li>Git, Docker, Cloud Computing (AWS, GCP)</li>
+          <li>Linux, Bash, Jupyter</li>
+        </ul>
+      </div>
+      <div>
+        <b style="font-family:var(--sans);">Research &amp; Data Science</b>
+        <ul>
+          <li>Clustering Algorithm Development</li>
+          <li>Privacy-Preserving Machine Learning</li>
+          <li>Statistical Analysis &amp; Modeling</li>
+          <li>Multi-view Data Integration</li>
+          <li>Dimensionality Reduction</li>
+          <li>Federated Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Awards Section (placeholder) -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Certifications &amp; Awards</span>
+    </div>
+    <hr class="section-rule">
+    <ul>
+      <li><a href="https://www.mdpi.com/about/announcements/11806" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Mathematics Exceptional Reviewers List 2025</a> – Selected by MDPI for outstanding peer review contributions in mathematics journals.</li>
+      <li>Graduated with Honors, Ph.D. in Applied Mathematics (2020) – Awarded for academic excellence and high-impact research at Chung Yuan Christian University.</li>
+      <li><a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6287639" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Featured as one of the Popular Documents in IEEE Access (2020–Present)</a> – Recognized for significant readership and influence in the IEEE Access journal.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Selected Publications</span>
+    </div>
+    <hr class="section-rule">
+    <ul>
+      <li><b>Federated Multi-View K-Means Clustering</b>, <i>IEEE TPAMI</i> (2025)</li>
+      <li><b>Unsupervised k-means clustering algorithm</b>, <i>IEEE Access</i> (2020)</li>
+      <li><b>A feature-reduction multi-view k-means clustering algorithm</b>, <i>IEEE Access</i> (2019)</li>
+      <li>Complete list available on <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color:var(--swish-blue);font-weight:bold;">Google Scholar</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Languages</span>
+    </div>
+    <hr class="section-rule">
+    <table class="languages-table">
+      <tr>
+        <td><b>English</b></td>
+        <td>Advanced Professional (CEFR C1)</td>
+      </tr>
+      <tr>
+        <td><b>Bahasa Indonesia</b></td>
+        <td>Native (CEFR C2)</td>
+      </tr>
+      <tr>
+        <td><b>Mandarin</b></td>
+        <td>Basic (CEFR A1)</td>
+      </tr>
+    </table>
+  </section>
+
+  <div class="references">
+    References available upon request
   </div>
+</div>
 </body>
 </html>
