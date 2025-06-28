@@ -6,20 +6,29 @@
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --primary-color: #2c5282;
-            --secondary-color: #2d3748;
-            --accent-color: #4299e1;
-            --background-light: #f7fafc;
-            --background-accent: #ebf8ff;
-            --text-dark: #1a202c;
-            --text-muted: #4a5568;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --primary-color: #0f172a;
+            --secondary-color: #334155;
+            --accent-color: #6366f1;
+            --accent-light: #8b5cf6;
+            --background: #ffffff;
+            --background-light: #f8fafc;
+            --background-dark: #1e293b;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --gradient-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         }
         
         * {
@@ -29,213 +38,452 @@
         }
         
         body {
-            font-family: 'Source Sans Pro', sans-serif;
-            max-inline-size: 1200px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--gradient-bg);
+            font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2em;
+            padding: 0 1.5rem;
+        }
+
+        /* Header & Navigation */
+        .main-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
             background: var(--background-light);
-            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--background);
+            margin-bottom: 3rem;
+        }
+
+        .hero-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
             line-height: 1.7;
         }
-        
+
+        .hero-description {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Analytics Dashboard */
+        .analytics-section {
+            margin-bottom: 3rem;
+        }
+
         .analytics-dashboard {
-            background: white;
-            padding: 2em;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-bottom: 2em;
+            background: var(--background);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
         }
 
         .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5em;
-            margin-bottom: 2em;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .metric-card {
-            background: var(--background-accent);
-            padding: 1.5em;
-            border-radius: var(--border-radius);
+            background: var(--gradient-accent);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
         }
 
         .metric-card h3 {
-            color: var(--secondary-color);
-            font-size: 1.1em;
-            margin-bottom: 0.5em;
+            font-size: 0.875rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .metric-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-change {
+            font-size: 0.875rem;
+            opacity: 0.8;
         }
 
         .chart-container {
-            position: relative;
-            block-size: 300px;
-            margin-block-start: 2em;
-        }            h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            margin-block-end: 0.8em;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-            position: relative;
-            padding-block-end: 0.5rem;
-            margin-block-end: 1.5em;
-        }            h1::after {
-            content: '';
-            position: absolute;
-            inset-block-end: 0;
-            inset-inline-start: 50%;
-            transform: translateX(-50%);
-            inline-size: 100px;
-            block-size: 3px;
-            background-color: var(--primary-color);
-        }
-        
-        .intro {
-            background: white;
-            padding: 2em;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            margin-bottom: 2em;
-            text-align: center;
-            border-inline-start: 5px solid var(--primary-color);
-        }
-        
-        .filter-section {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            background: white;
-            padding: 1.5em;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-        
-        input[type="text"], select {
-            padding: 0.8em;
-            font-size: 1em;
-            border: 1px solid #e2e8f0;
-            border-radius: var(--border-radius);
             background: var(--background-light);
-        }
-        
-        input[type="text"]:focus, select:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            height: 350px;
+            position: relative;
         }
 
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2em;
-            margin-top: 2em;
+        /* Social Sharing */
+        .social-section {
+            margin-bottom: 3rem;
         }
-        
-        .article-card {
-            background: white;
-            padding: 1.5em;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            transition: transform 0.2s ease;
-        }
-        
-        .article-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5em;
-            margin-block-start: 1em;
-        }
-        
-        .tag {
-            background: var(--background-accent);
-            color: var(--primary-color);
-            padding: 0.2em 0.8em;
-            border-radius: 20px;
-            font-size: 0.85em;
-            transition: background 0.2s;
-        }
-        
-        .tag:hover {
-            background: var(--accent-color);
-            color: white;
-        }
-        
-        .timestamp {
-            font-size: 0.9em;
-            color: var(--text-muted);
-            margin-top: 0.5em;
-        }
-        
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-        
-        a:hover {
-            color: var(--accent-color);
-        }
-        
+
         .social-buttons {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem 0;
+            flex-wrap: wrap;
         }
-        
+
         .social-button {
             display: flex;
             align-items: center;
-            padding: 0.8em 1.2em;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
             color: white;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            transition: transform 0.2s;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-md);
         }
-        
+
         .social-button:hover {
-            transform: translateY(-3px);
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
             color: white;
         }
-        
-        .facebook { background: #1e3a8a; }
-        .linkedin { background: #0369a1; }
-        .twitter { background: #0284c7; }
-        
-        .social-button i {
-            margin-right: 0.5em;
+
+        .facebook { background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%); }
+        .linkedin { background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%); }
+        .twitter { background: linear-gradient(135deg, #1da1f2 0%, #0084b4 100%); }
+
+        /* Filter Section */
+        .filter-section {
+            background: var(--background);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
         }
-        
-        footer {
-            margin-top: 3rem;
+
+        .filter-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-controls {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: end;
+        }
+
+        .search-input {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 0.75rem;
+            background: var(--background-light);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            background: var(--background);
+        }
+
+        .tag-filter {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 0.75rem;
+            background: var(--background-light);
+            color: var(--text-primary);
+            font-family: inherit;
+            min-width: 200px;
+            transition: all 0.2s ease;
+        }
+
+        .tag-filter:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            background: var(--background);
+        }
+
+        /* Articles Grid */
+        .articles-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
             text-align: center;
-            color: var(--text-muted);
-            padding: 2rem 0;
-            border-top: 1px solid #e2e8f0;
         }
-        
-        @media (max-inline-size: 768px) {
-            body {
-                padding: 1em;
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--background);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--background-light);
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .article-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .article-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .article-date {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--background-light);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--background-dark);
+            color: var(--text-muted);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-menu {
+                gap: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
             }
             
             .metrics-grid {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .filter-controls {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
             
             .articles-grid {
@@ -247,75 +495,148 @@
             }
             
             .social-button {
-                inline-size: 100%;
+                width: 100%;
                 justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+            
+            .analytics-dashboard,
+            .filter-section {
+                padding: 1.5rem;
+            }
+            
+            .article-content {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Clown Network Chronicles</h1>
-
-    <div class="analytics-dashboard">
-        <h2>Visitor Analytics</h2>
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <h3>Today's Visitors</h3>
-                <div class="metric-value" id="daily-visitors">0</div>
-            </div>
-            <div class="metric-card">
-                <h3>This Week</h3>
-                <div class="metric-value" id="weekly-visitors">0</div>
-            </div>
-            <div class="metric-card">
-                <h3>This Year</h3>
-                <div class="metric-value" id="yearly-visitors">0</div>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Clown Network Chronicles</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                        <li><a href="#articles" class="nav-link">Articles</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <div class="chart-container">
-            <canvas id="visitorChart"></canvas>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Clown Network Chronicles</h1>
+            <p class="hero-subtitle">Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.</p>
+            <p class="hero-description">Filter by keyword or tag to explore the full range of documented dysfunction.</p>
         </div>
+    </section>
+
+    <div class="container">
+        <!-- Analytics Dashboard -->
+        <section class="analytics-section" id="analytics">
+            <div class="analytics-dashboard">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">Visitor Analytics</h2>
+                    <span class="dashboard-subtitle">Real-time insights</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Today's Visitors</h3>
+                        <div class="metric-value" id="daily-visitors">0</div>
+                        <div class="metric-change">+12% from yesterday</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>This Week</h3>
+                        <div class="metric-value" id="weekly-visitors">0</div>
+                        <div class="metric-change">+8% from last week</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>This Year</h3>
+                        <div class="metric-value" id="yearly-visitors">0</div>
+                        <div class="metric-change">+23% from last year</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="visitorChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Sharing -->
+        <section class="social-section">
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" class="social-button facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Share on Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>Share on LinkedIn</span>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/clown-network/chronicles/&text=Check out the Clown Network Chronicles!" class="social-button twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Tweet</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-header">
+                <h3 class="filter-title">Explore Articles</h3>
+                <p>Search and filter through our collection of insights and commentary.</p>
+            </div>
+            <div class="filter-controls">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search articles, topics, or keywords..." onkeyup="filterArticles()">
+                <select id="tagFilter" class="tag-filter" onchange="filterArticles()">
+                    <option value="all">All Categories</option>
+                    <option value="resilience">Resilience</option>
+                    <option value="storytelling">Storytelling</option>
+                    <option value="personal-growth">Personal Growth</option>
+                    <option value="triumph">Triumph</option>
+                    <option value="self-mastery">Self-Mastery</option>
+                    <option value="clarity">Clarity</option>
+                    <option value="social-conformity">Social Conformity</option>
+                    <option value="boundaries">Boundaries</option>
+                    <option value="psychological-resistance">Psychological Resistance</option>
+                    <option value="productivity">Productivity</option>
+                    <option value="work-culture">Work Culture</option>
+                    <option value="professional-growth">Professional Growth</option>
+                    <option value="blog">Blog</option>
+                    <option value="clown-network">Clown Network</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles-section" id="articles">
+            <h2 class="section-title">Latest Chronicles</h2>
+            <div class="articles-grid" id="articles-container">
+                <!-- Articles will be dynamically populated here -->
+            </div>
+        </section>
     </div>
 
-    <div class="social-buttons">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" class="social-button facebook" target="_blank">
-            <i class="fab fa-facebook-f"></i> Share on Facebook
-        </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" class="social-button linkedin" target="_blank">
-            <i class="fab fa-linkedin-in"></i> Share on LinkedIn
-        </a>
-        <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/clown-network/chronicles/&text=Check out the Clown Network Chronicles!" class="social-button twitter" target="_blank">
-            <i class="fab fa-twitter"></i> Tweet
-        </a>
-    </div>
-
-    <div class="intro">
-        <p>Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.</p>
-        <p>Filter by keyword or tag to explore the full range of documented dysfunction.</p>
-    </div>
-
-    <div class="filter-section">
-        <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="filterArticles()">
-        <select id="tagFilter" onchange="filterArticles()">
-            <option value="all">All Tags</option>
-            <option value="clarity">Clarity</option>
-            <option value="social-conformity">Social Conformity</option>
-            <option value="boundaries">Boundaries</option>
-            <option value="psychological-resistance">Psychological Resistance</option>
-            <option value="productivity">Productivity</option>
-            <option value="work-culture">Work Culture</option>
-            <option value="professional-growth">Professional Growth</option>
-            <option value="blog">Blog</option>
-            <option value="clown-network">Clown Network</option>
-        </select>
-    </div>
-
-    <div class="articles-grid" id="articles-container">
-        <!-- Articles will be dynamically populated here -->
-    </div>
-
-    <footer>
-        <p>© 2025 Clown Network Chronicles. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Clown Network Chronicles. All rights reserved.</p>
+                <p>Documenting the beautiful chaos of modern culture, one chronicle at a time.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
@@ -363,6 +684,14 @@
 
         // Article data
         const articles = [
+            {
+                title: "The Unbreakable: A Story of Learning, Power, and Rising Above",
+                description: "A powerful story of resilience, learning, and triumph over those who sought to break an unbreakable spirit. Sometimes the most powerful stories are born from the deepest struggles.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/2025-06-28-cracked_never_storyteller.html",
+                date: "2025-06-28",
+                imageUrl: "https://kristinap09.github.io/assets/images/cracked_never.PNG",
+                tags: ["resilience", "storytelling", "personal-growth", "triumph", "self-mastery", "blog"]
+            },
             {
                 title: "Modern Clarity: Navigating Social Conformity in the 21st Century",
                 description: "What happens when maintaining personal boundaries and refusing to participate in social scripts leads to being labeled as 'dangerous' or 'problematic'?",
@@ -453,13 +782,23 @@
                 articleElement.className = 'article-card';
                 
                 articleElement.innerHTML = `
-                    ${article.imageUrl ? `<img src="${article.imageUrl}" alt="${article.title}" style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--border-radius) var(--border-radius) 0 0; margin-bottom: 1em;">` : ''}
-                    <h3><a href="${article.url}">${article.title}</a></h3>
-                    <p>${article.description}</p>
-                    <div class="tags">
-                        ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    ${article.imageUrl ? `<img src="${article.imageUrl}" alt="${article.title}" class="article-image">` : ''}
+                    <div class="article-content">
+                        <h3 class="article-title">
+                            <a href="${article.url}">${article.title}</a>
+                        </h3>
+                        ${article.description ? `<p class="article-description">${article.description}</p>` : ''}
+                        <div class="article-meta">
+                            <span class="article-date">${new Date(article.date).toLocaleDateString('en-US', { 
+                                year: 'numeric', 
+                                month: 'long', 
+                                day: 'numeric' 
+                            })}</span>
+                        </div>
+                        <div class="article-tags">
+                            ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
                     </div>
-                    <div class="timestamp">${article.date}</div>
                 `;
                 
                 container.appendChild(articleElement);
