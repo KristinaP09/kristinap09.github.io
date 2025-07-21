@@ -862,7 +862,8 @@ title: Contact
   }
 </style>
 
-<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
     // Animated counter for hero stats
     const animateCounters = () => {
       const counters = document.querySelectorAll('.stat-number');
@@ -1132,8 +1133,9 @@ Email: kristinapestaria.sinaga@isti.cnr.it`);
     }
   }
 
-
-<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
+  // Call the theme function on page load
+  initTimeBasedTheme();
+</script>
 
 <!-- Include Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
