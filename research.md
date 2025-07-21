@@ -270,7 +270,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
     `</div>`
 
 </div>
-</div
+</div>
 
 
 
