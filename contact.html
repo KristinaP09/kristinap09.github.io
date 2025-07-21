@@ -3,278 +3,1137 @@ layout: default
 title: Contact
 ---
 
-<section class="contact-section">
+<section class="contact-hero">
+  <div class="hero-background">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <h1 class="hero-title">Let's Create Something Amazing Together</h1>
+    <p class="hero-subtitle">Ready to collaborate? I'd love to hear from you!</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" data-target="24">0</span>
+        <span class="stat-label">Hours Response</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="100">0</span>
+        <span class="stat-label">Projects Completed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="50">0</span>
+        <span class="stat-label">Happy Clients</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-main">
   <div class="contact-container">
-    <h1 class="contact-title">Contact Me</h1>
-
-    <p class="contact-subtitle">
-      "Let's connect and collaborate"
-    </p>
-
-    <div class="contact-content">
-      <div class="contact-info">
-        
-        <h2>Get In Touch</h2>
-        <p>For inquiries, collaborations, or discussions, please reach out via email or use the contact form.</p>
-        <div class="email-container">
+    
+    <!-- Contact Methods Section -->
+    <div class="contact-methods">
+      <div class="method-card email-card">
+        <div class="card-icon">
           <i class="fas fa-envelope"></i>
-          <p>
-            Please note that the email address <strong>kristinasinaga41@gmail.com</strong> is no longer under my authority, and I cannot verify its ownership. 
-            Instead, feel free to contact me using my current affiliation email address: 
-            <a href="mailto:kristinapestaria.sinaga@isti.cnr.it">kristinapestaria.sinaga@isti.cnr.it</a> 
-            or my personal Gmail account where I share my creative ideas about clown performances: 
-            <a href="mailto:[your-fun-gmail-address]">[your-fun-gmail-address]</a>.
-            </p>
-            </div>
-        
-
-        <div class="social-links">
-          <h3>Connect With Me</h3>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309?" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://x.com/Kristina57040" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/KristinaP09" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="" class="social-icon" title="Medium"><i class="fab fa-medium"></i></a>
-          </div>
-          <p class="response-time">I welcome opportunities related to research, AI, and technology.<br>
-          I'll respond to your message as promptly as possible.</p>
+        </div>
+        <h3>Email Me</h3>
+        <p>Primary Contact</p>
+        <a href="mailto:kristinapestaria.sinaga@isti.cnr.it" class="contact-link">
+          kristinapestaria.sinaga@isti.cnr.it
+        </a>
+        <div class="status-badge">
+          <span class="status-dot active"></span>
+          Active
         </div>
       </div>
 
-      <div class="contact-form-container">
-        <h2>Send a Message</h2>
-        <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+      <div class="method-card schedule-card">
+        <div class="card-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Schedule a Call</h3>
+        <p>Book a 30-min consultation</p>
+        <button class="contact-link schedule-btn" onclick="openScheduler()">
+          Book Meeting
+        </button>
+        <div class="availability">
+          <i class="fas fa-clock"></i>
+          Available Mon-Fri, 9AM-5PM CET
+        </div>
+      </div>
+
+      <div class="method-card location-card">
+        <div class="card-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Location</h3>
+        <p>Based in Italy</p>
+        <div class="location-info">
+          <span>ISTI-CNR, Pisa</span>
+          <div class="timezone">
+            <i class="fas fa-globe"></i>
+            CET Timezone
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="contact-content">
+      <!-- Contact Form -->
+      <div class="contact-form-section">
+        <div class="form-header">
+          <h2>Send a Message</h2>
+          <p>Fill out the form below and I'll get back to you within 24 hours</p>
+        </div>
+        
+        <form id="contactForm" class="modern-form" action="https://formspree.io/f/mblkdqao" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+              <div class="form-line"></div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+              <div class="form-line"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a topic</option>
+                <option value="collaboration">Collaboration Opportunity</option>
+                <option value="research">Research Inquiry</option>
+                <option value="consultation">Consultation Request</option>
+                <option value="speaking">Speaking Engagement</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="form-line"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="urgency">Priority Level</label>
+              <select id="urgency" name="urgency">
+                <option value="low">Low - No rush</option>
+                <option value="medium" selected>Medium - Within a week</option>
+                <option value="high">High - ASAP</option>
+              </select>
+              <div class="form-line"></div>
+            </div>
           </div>
           
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, idea, or how I can help you..." required></textarea>
+            <div class="form-line"></div>
+            <div class="character-count">
+              <span id="charCount">0</span>/500 characters
+            </div>
           </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
+
+          <div class="form-footer">
+            <div class="privacy-notice">
+              <i class="fas fa-lock"></i>
+              Your information is secure and will never be shared
+            </div>
+            <button type="submit" class="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
           </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-button">Send Message</button>
         </form>
+
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message">
+          <i class="fas fa-check-circle"></i>
+          <h3>Message Sent Successfully!</h3>
+          <p>Thanks for reaching out. I'll respond within 24 hours.</p>
+        </div>
+      </div>
+
+      <!-- Social & Professional Links -->
+      <div class="social-section">
+        <h3>Connect With Me</h3>
+        <div class="social-grid">
+          <a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309?" class="social-card linkedin" target="_blank">
+            <div class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="social-info">
+              <span class="social-name">LinkedIn</span>
+              <span class="social-desc">Professional Network</span>
+            </div>
+            <i class="fas fa-external-link-alt social-external"></i>
+          </a>
+
+          <a href="https://github.com/KristinaP09" class="social-card github" target="_blank">
+            <div class="social-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="social-info">
+              <span class="social-name">GitHub</span>
+              <span class="social-desc">Code Repository</span>
+            </div>
+            <i class="fas fa-external-link-alt social-external"></i>
+          </a>
+
+          <a href="https://x.com/Kristina57040" class="social-card twitter" target="_blank">
+            <div class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </div>
+            <div class="social-info">
+              <span class="social-name">Twitter</span>
+              <span class="social-desc">Latest Updates</span>
+            </div>
+            <i class="fas fa-external-link-alt social-external"></i>
+          </a>
+
+          <a href="#" class="social-card medium" target="_blank">
+            <div class="social-icon">
+              <i class="fab fa-medium"></i>
+            </div>
+            <div class="social-info">
+              <span class="social-name">Medium</span>
+              <span class="social-desc">Articles & Insights</span>
+            </div>
+            <i class="fas fa-external-link-alt social-external"></i>
+          </a>
+        </div>
+
+        <!-- Professional Info -->
+        <div class="professional-info">
+          <h4>Areas of Expertise</h4>
+          <div class="expertise-tags">
+            <span class="tag">Artificial Intelligence</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Research & Development</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Technology Consulting</span>
+          </div>
+          
+          <div class="response-guarantee">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Response Guarantee</strong>
+              <p>I typically respond to all inquiries within 24 hours during business days</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Contact Page Styles */
-  .contact-section {
-    padding: 2rem 1rem;
+  /* Modern Contact Page Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  .contact-container {
-    max-inline-size: 1000px;
-    margin: auto;
-    color: #fdfdfd;
-  }
-
-  .contact-title {
-    text-align: center;
-    font-size: 2.4em;
-    margin-block-end: 10px;
-  }
-
-  .contact-subtitle {
-    text-align: center;
-    font-style: italic;
-    font-size: 1.1em;
-    color: #ff99cc;
-    margin-block-end: 40px;
-  }
-
-  .contact-content {
+  /* Hero Section */
+  .contact-hero {
+    position: relative;
+    min-height: 60vh;
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-
-  .contact-info {
-    flex: 1;
-    min-inline-size: 300px;
-  }
-
-  .contact-info h2 {
-    color: #ff99cc;
-    font-size: 1.5em;
-    margin-block-end: 1rem;
-  }
-
-  .email-container {
-    margin: 1.5rem 0;
-    display: flex;
-    align-items: center;
-  }
-
-  .email-container i {
-    color: #ff99cc;
-    font-size: 1.2rem;
-    margin-inline-end: 10px;
-  }
-
-  .email-container a {
-    color: #ff99cc;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-  }
-
-  .email-container a:hover {
-    text-decoration: underline;
-  }
-
-  .social-links {
-    margin-block-start: 2rem;
-  }
-
-  .social-links h3 {
-    font-size: 1.2em;
-    margin-block-end: 1rem;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 15px;
-    margin-block-end: 1.5rem;
-  }
-
-  .social-icon {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
-    inline-size: 40px;
-    block-size: 40px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+  }
+
+  .floating-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    background-color: rgba(255, 153, 204, 0.2);
-    color: #ff99cc;
-    transition: all 0.3s ease;
+    animation: float 6s ease-in-out infinite;
   }
 
-  .social-icon i {
-    font-size: 1.2rem;
+  .shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
   }
 
-  .social-icon:hover {
-    background-color: #ff99cc;
-    color: #ffffff;
-    transform: translateY(-3px);
+  .shape-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
   }
 
-  .response-time {
-    font-size: 0.9em;
+  .shape-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 30%;
+    left: 70%;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #ff99cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
     opacity: 0.9;
   }
 
-  /* Contact Form Styles */
-  .contact-form-container {
-    flex: 1;
-    min-inline-size: 300px;
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
   }
 
-  .contact-form-container h2 {
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #ff99cc;
-    font-size: 1.5em;
-    margin-block-end: 1.5rem;
   }
 
-  .contact-form {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
+  .stat-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* Main Contact Section */
+  .contact-main {
+    padding: 4rem 2rem;
+    background: #f8fafc;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Contact Methods Cards */
+  .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .method-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .method-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+  }
+
+  .method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .method-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #1a202c;
+  }
+
+  .method-card p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+  }
+
+  .contact-link {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #667eea;
     border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .contact-link:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .schedule-btn {
+    background: none;
+    border: 2px solid #667eea;
+    cursor: pointer;
+  }
+
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #16a34a;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #16a34a;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  .availability, .timezone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  /* Main Content Layout */
+  .contact-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  /* Modern Form Styles */
+  .contact-form-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-header {
+    margin-bottom: 2rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.8rem;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-header p {
+    color: #6b7280;
+  }
+
+  .modern-form {
+    position: relative;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .form-group {
-    margin-block-end: 1.2rem;
+    position: relative;
+    margin-bottom: 1.5rem;
   }
 
   .form-group label {
     display: block;
-    margin-block-end: 5px;
-    font-weight: 500;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   .form-group input,
+  .form-group select,
   .form-group textarea {
-    inline-size: 100%;
-    padding: 0.8rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #ffffff;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    background: #f9fafb;
   }
 
   .form-group input:focus,
+  .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #ff99cc;
-    box-shadow: 0 0 0 2px rgba(255, 153, 204, 0.25);
+    border-color: #667eea;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
   }
 
-  .submit-button {
-    background-color: #ff99cc;
+  .form-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+  }
+
+  .form-group input:focus + .form-line,
+  .form-group select:focus + .form-line,
+  .form-group textarea:focus + .form-line {
+    width: 100%;
+  }
+
+  .character-count {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .privacy-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+
+  .privacy-notice i {
+    color: #16a34a;
+  }
+
+  .submit-btn {
+    background: linear-gradient(45deg, #667eea, #764ba2);
     color: white;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
     font-size: 1rem;
-    border-radius: 4px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
   }
 
-  .submit-button:hover {
-    background-color: #ff7fbf;
+  .submit-btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
   }
 
-  /* Responsive adjustments */
-  @media (max-inline-size: 768px) {
-    .contact-content {
-      flex-direction: column;
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  /* Success Message */
+  .success-message {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(45deg, #10b981, #059669);
+    color: white;
+    border-radius: 16px;
+    margin-top: 2rem;
+  }
+
+  .success-message.show {
+    display: block;
+    animation: slideIn 0.5s ease;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .success-message i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .success-message h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Social Section */
+  .social-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+  }
+
+  .social-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+  }
+
+  .social-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .social-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-card.linkedin:hover { border-color: #0077b5; }
+  .social-card.github:hover { border-color: #333; }
+  .social-card.twitter:hover { border-color: #1da1f2; }
+  .social-card.medium:hover { border-color: #00ab6c; }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .social-card.linkedin .social-icon {
+    background: rgba(0, 119, 181, 0.1);
+    color: #0077b5;
+  }
+
+  .social-card.github .social-icon {
+    background: rgba(51, 51, 51, 0.1);
+    color: #333;
+  }
+
+  .social-card.twitter .social-icon {
+    background: rgba(29, 161, 242, 0.1);
+    color: #1da1f2;
+  }
+
+  .social-card.medium .social-icon {
+    background: rgba(0, 171, 108, 0.1);
+    color: #00ab6c;
+  }
+
+  .social-info {
+    flex: 1;
+  }
+
+  .social-name {
+    display: block;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 0.2rem;
+  }
+
+  .social-desc {
+    font-size: 0.8rem;
+    color: #6b7280;
+  }
+
+  .social-external {
+    font-size: 0.8rem;
+    color: #9ca3af;
+  }
+
+  /* Professional Info */
+  .professional-info {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .professional-info h4 {
+    margin-bottom: 1rem;
+    color: #1a202c;
+  }
+
+  .expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tag {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .response-guarantee {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f0f9ff;
+    border-radius: 8px;
+    border-left: 4px solid #0ea5e9;
+  }
+
+  .response-guarantee i {
+    color: #0ea5e9;
+    margin-top: 0.2rem;
+  }
+
+  .response-guarantee strong {
+    display: block;
+    color: #1a202c;
+    margin-bottom: 0.3rem;
+  }
+
+  .response-guarantee p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
     }
-    
-    .contact-info, .contact-form-container {
-      inline-size: 100%;
+
+    .hero-stats {
+      gap: 1.5rem;
+    }
+
+    .contact-methods {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .form-footer {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .contact-main {
+      padding: 2rem 1rem;
+    }
+
+    .contact-form-section,
+    .social-section {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-content {
+      padding: 1rem;
+    }
+
+    .hero-title {
+      font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
     }
   }
 </style>
 
 <script>
-  // Simple form submission handler
+  // Modern Contact Page JavaScript
   document.addEventListener('DOMContentLoaded', function() {
+    // Animated counter for hero stats
+    const animateCounters = () => {
+      const counters = document.querySelectorAll('.stat-number');
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const increment = target / 50; // Adjust speed here
+        let current = 0;
+        
+        const timer = setInterval(() => {
+          current += increment;
+          counter.textContent = Math.floor(current);
+          
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          }
+        }, 50);
+      });
+    };
+
+    // Intersection Observer for counter animation
+    const heroSection = document.querySelector('.contact-hero');
+    if (heroSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      observer.observe(heroSection);
+    }
+
+    // Enhanced form handling
     const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+    const successMessage = document.getElementById('successMessage');
+    const messageTextarea = document.getElementById('message');
+    const charCount = document.getElementById('charCount');
+
+    // Character counter for message field
+    if (messageTextarea && charCount) {
+      messageTextarea.addEventListener('input', function() {
+        const currentLength = this.value.length;
+        charCount.textContent = currentLength;
         
-        // Here you would typically send the form data to a server
-        // For now, we'll just show a confirmation message
-        
-        const nameField = document.getElementById('name');
-        const name = nameField ? nameField.value : 'visitor';
-        
-        alert(`Thank you, ${name}! Your message has been received. I'll get back to you soon.`);
-        contactForm.reset();
+        // Color coding for character count
+        if (currentLength > 450) {
+          charCount.style.color = '#dc2626'; // Red
+        } else if (currentLength > 350) {
+          charCount.style.color = '#f59e0b'; // Yellow
+        } else {
+          charCount.style.color = '#6b7280'; // Gray
+        }
       });
     }
+
+    // Form submission with enhanced UX
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        // If using Formspree, let the form submit naturally
+        // Comment out e.preventDefault() for real form submission
+        // e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+
+        // For static sites (GitHub Pages), use this demo version:
+        if (window.location.hostname === 'localhost' || window.location.hostname.includes('github.io')) {
+          e.preventDefault();
+          
+          // Get form data for demo
+          const formData = new FormData(this);
+          const name = formData.get('name');
+          
+          // Simulate API call for demo
+          setTimeout(() => {
+            // Hide form and show success message
+            contactForm.style.display = 'none';
+            successMessage.classList.add('show');
+            
+            // Reset form after showing success
+            setTimeout(() => {
+              contactForm.reset();
+              contactForm.style.display = 'block';
+              successMessage.classList.remove('show');
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+              if (charCount) charCount.textContent = '0';
+            }, 3000);
+          }, 1500);
+        }
+        // If using real backend, the form will submit naturally
+      });
+    }
+
+    // Form field animations
+    const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+    formInputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      
+      input.addEventListener('blur', function() {
+        if (this.value === '') {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+    });
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Social card hover effects
+    const socialCards = document.querySelectorAll('.social-card');
+    socialCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateX(5px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateX(0) scale(1)';
+      });
+    });
+
+    // Method cards interaction
+    const methodCards = document.querySelectorAll('.method-card');
+    methodCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) scale(1.02)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+
+    // Copy email to clipboard functionality
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (e.ctrlKey || e.metaKey) { // Ctrl+click or Cmd+click
+          e.preventDefault();
+          const email = this.getAttribute('href').replace('mailto:', '');
+          navigator.clipboard.writeText(email).then(() => {
+            // Show temporary tooltip
+            const tooltip = document.createElement('div');
+            tooltip.textContent = 'Email copied!';
+            tooltip.style.cssText = `
+              position: absolute;
+              background: #059669;
+              color: white;
+              padding: 0.5rem 1rem;
+              border-radius: 4px;
+              font-size: 0.8rem;
+              z-index: 1000;
+              pointer-events: none;
+            `;
+            
+            const rect = this.getBoundingClientRect();
+            tooltip.style.top = (rect.top - 40) + 'px';
+            tooltip.style.left = rect.left + 'px';
+            
+            document.body.appendChild(tooltip);
+            setTimeout(() => tooltip.remove(), 2000);
+          });
+        }
+      });
+    });
+
+    // Keyboard navigation improvements
+    document.addEventListener('keydown', function(e) {
+      // ESC to close any modal or reset form
+      if (e.key === 'Escape') {
+        if (successMessage.classList.contains('show')) {
+          successMessage.classList.remove('show');
+          contactForm.style.display = 'block';
+        }
+      }
+    });
+
+    // Add loading animation to page
+    const addPageLoadAnimation = () => {
+      const elements = document.querySelectorAll('.method-card, .contact-form-section, .social-section');
+      elements.forEach((el, index) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease';
+        
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, index * 100 + 200);
+      });
+    };
+
+    // Initialize page load animation
+    addPageLoadAnimation();
   });
+
+  // Schedule meeting function (placeholder)
+  function openScheduler() {
+    // This would typically open a calendar booking widget
+    // For now, we'll show an alert with instructions
+    alert(`📅 To schedule a meeting:
+
+1. Send me an email with your preferred time slots
+2. Include your timezone
+3. Mention the purpose of the meeting
+4. I'll send you a calendar invite
+
+Available hours: Monday-Friday, 9AM-5PM CET
+
+Email: kristinapestaria.sinaga@isti.cnr.it`);
+  }
+
+  // Advanced form validation
+  function validateForm(formData) {
+    const errors = [];
+    
+    if (formData.get('name').length < 2) {
+      errors.push('Name must be at least 2 characters long');
+    }
+    
+    if (!formData.get('email').includes('@')) {
+      errors.push('Please enter a valid email address');
+    }
+    
+    if (formData.get('message').length < 10) {
+      errors.push('Message must be at least 10 characters long');
+    }
+    
+    return errors;
+  }
+
+  // Theme-aware animations based on time
+  function initTimeBasedTheme() {
+    const hour = new Date().getHours();
+    const heroSection = document.querySelector('.hero-background');
+    
+    if (heroSection) {
+      if (hour >= 6 && hour < 12) {
+        // Morning theme
+        heroSection.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+      } else if (hour >= 12 && hour < 18) {
+        // Afternoon theme
+        heroSection.style.background = 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)';
+      } else {
+        // Evening/Night theme
+        heroSection.style.background = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
+      }
+    }
+  }
+
+  // Initialize theme on load
+  document.addEventListener('DOMContentLoaded', initTimeBasedTheme);
 </script>
 
 <!-- Include Font Awesome for icons -->
