@@ -161,7 +161,12 @@ No noise. No fluff. Just precision that performs.</p>
 <section id="contact">
     <h2>Contact</h2>
     <div class="contact-card">
-      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kristinasinaga41@gmail.com">kristinasinaga41@gmail.com</a></p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kristinapestaria.sinaga@isti.cnr.it">kristinapestaria.sinaga@isti.cnr.it</a></p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:neuralglowai@gmail.com">neuralglowai@gmail.com</a></p>
+      <p style="color: #e74c3c; font-weight: bold; margin-top: 15px;">
+        <i class="fas fa-exclamation-triangle"></i> 
+        Note: The email address <strong>kristinasinaga41@gmail.com</strong> is no longer under my authority. Please do not use it to contact me.
+      </p>
     </div>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309?" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -169,7 +174,7 @@ No noise. No fluff. Just precision that performs.</p>
       <a href="https://x.com/Kristina57040" title="Twitter"><i class="fab fa-twitter"></i></a>
       <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=it&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
     </div>
-  </section>
+</section>
 </div>
 
 <style>
