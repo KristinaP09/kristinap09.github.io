@@ -10,191 +10,453 @@
     :root {
       --swish-blue: #0F3057;
       --accent: #7B1113;
-      --header-rule: #DDDDDD;
+      --header-rule: #E5E7EB;
       --bullet: #0F3057;
-      --sans: 'Cabin', Arial, sans-serif;
-      --serif: 'Cochineal', Georgia, serif;
+      --sans: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      --shadow-light: 0 1px 3px rgba(0,0,0,0.1);
+      --shadow-medium: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.1);
+      --border-radius: 12px;
+      --section-spacing: 2.5em;
     }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: var(--serif);
-      color: #222;
-      background: #fff;
+      color: #1f2937;
+      background: var(--bg-gradient);
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      padding: 1em;
+      line-height: 1.7;
+      font-size: 16px;
     }
+    
     .container {
       max-width: 900px;
-      margin: 2em auto;
-      background: #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-      padding: 2em 2.5em;
-      border-radius: 10px;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: var(--shadow-medium);
+      padding: 3em 3.5em;
+      border-radius: var(--border-radius);
+      position: relative;
+      overflow: hidden;
     }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--swish-blue) 0%, var(--accent) 100%);
+    }
+    
     header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--header-rule);
-      padding-bottom: 1.2em;
-      margin-bottom: 1.2em;
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+      position: relative;
     }
+    
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--header-rule) 20%, var(--header-rule) 80%, transparent 100%);
+    }
+    
     .profile-info {
       flex: 1 1 60%;
+      padding-right: 2em;
     }
+    
     .profile-info h1 {
       font-family: var(--sans);
-      font-size: 2.1em;
+      font-size: 2.5em;
       color: var(--swish-blue);
-      margin: 0 0 0.2em 0;
-      font-weight: bold;
+      margin: 0 0 0.3em 0;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--swish-blue) 0%, #1e40af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
+    
     .profile-info .subtitle {
-      font-size: 1.15em;
-      color: var(--swish-blue);
-      font-style: italic;
-      margin-bottom: 0.7em;
+      font-family: var(--sans);
+      font-size: 1.2em;
+      color: #64748b;
+      font-weight: 500;
+      margin-bottom: 1.2em;
+      line-height: 1.5;
     }
+    
+    .contact-icons {
+      display: flex;
+      gap: 1.5em;
+      margin-top: 1em;
+    }
+    
     .contact-icons a {
       color: var(--swish-blue);
-      margin-right: 1.1em;
-      font-size: 1.2em;
+      font-size: 1.4em;
       text-decoration: none;
-      transition: color 0.2s;
-    }
-    .contact-icons a:hover {
-      color: var(--accent);
-    }
-    .profile-photo {
-      flex: 0 0 120px;
-      margin-left: 2em;
-      border: 2px solid var(--header-rule);
+      transition: all 0.3s ease;
+      padding: 0.5em;
       border-radius: 8px;
-      overflow: hidden;
-      background: #fff;
-      max-width: 120px;
-      max-height: 120px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 44px;
+      height: 44px;
     }
+    
+    .contact-icons a:hover {
+      color: #ffffff;
+      background: var(--swish-blue);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-light);
+      border-color: var(--swish-blue);
+    }
+    
+    .profile-photo {
+      flex: 0 0 140px;
+      border: 3px solid #e2e8f0;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+      max-width: 140px;
+      max-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-photo:hover {
+      transform: scale(1.02);
+    }
+    
     .profile-photo img {
       width: 100%;
       height: auto;
       display: block;
     }
+    
     hr.divider {
-      border: none;
-      border-top: 1px solid var(--header-rule);
-      margin: 1.2em 0;
+      display: none;
     }
+    
+    .quote-section {
+      text-align: center;
+      margin: 2em 0;
+      padding: 1.5em 2em;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-left: 4px solid var(--swish-blue);
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .quote-section blockquote {
+      font-family: var(--serif);
+      font-size: 1.1em;
+      font-style: italic;
+      color: #374151;
+      margin: 0 0 0.5em 0;
+      line-height: 1.6;
+      position: relative;
+    }
+    
+    .quote-section blockquote:before {
+      content: '"';
+      font-size: 3em;
+      color: var(--swish-blue);
+      position: absolute;
+      left: -0.3em;
+      top: -0.2em;
+      opacity: 0.3;
+      font-family: Georgia, serif;
+    }
+    
+    .quote-section cite {
+      font-family: var(--sans);
+      font-size: 0.9em;
+      color: #64748b;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
     section {
-      margin-bottom: 1.7em;
+      margin-bottom: var(--section-spacing);
     }
+    
     .cvsection {
       display: flex;
       align-items: center;
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
+    
     .cvsection-bar {
-      width: 0.6em;
-      height: 2.1em;
-      background: var(--swish-blue);
-      margin-right: 0.7em;
-      border-radius: 2px;
+      width: 5px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--swish-blue) 0%, var(--accent) 100%);
+      margin-right: 1em;
+      border-radius: 3px;
       display: inline-block;
     }
+    
     .cvsection-title {
       font-family: var(--sans);
-      font-size: 1.25em;
+      font-size: 1.4em;
       color: var(--swish-blue);
-      font-weight: bold;
-      letter-spacing: 0.5px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
     }
+    
     .section-rule {
       border: none;
-      border-top: 2px solid var(--swish-blue);
-      margin: 0.2em 0 1em 0;
+      border-top: 2px solid #f1f5f9;
+      margin: 0.5em 0 1.5em 0;
       width: 100%;
     }
+    
     ul {
-      padding-left: 1.2em;
-      margin: 0.5em 0 0.5em 0;
+      padding-left: 0;
+      margin: 1em 0;
     }
+    
     ul li {
-      margin-bottom: 0.3em;
+      margin-bottom: 0.8em;
       list-style: none;
       position: relative;
-      padding-left: 1.2em;
+      padding-left: 2em;
+      line-height: 1.6;
     }
+    
     ul li:before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0.5em;
-      width: 0.7em;
-      height: 0.7em;
-      background: var(--bullet);
-      border-radius: 2px;
+      left: 0.5em;
+      top: 0.7em;
+      width: 6px;
+      height: 6px;
+      background: var(--swish-blue);
+      border-radius: 50%;
       display: inline-block;
     }
+    
     .twocols {
-      display: flex;
-      gap: 2em;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+      margin-top: 1em;
     }
-    .twocols > div {
-      flex: 1 1 300px;
-      min-width: 220px;
-    }
+    
     .tabular-section {
       width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 0.5em;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 1em;
     }
+    
     .tabular-section td {
       vertical-align: top;
-      padding-bottom: 0.7em;
+      padding-bottom: 2em;
       border: none;
     }
+    
     .tabular-section .date {
       font-family: var(--sans);
       color: var(--swish-blue);
-      font-weight: bold;
-      width: 4.5em;
+      font-weight: 600;
+      width: 5em;
       white-space: nowrap;
-      padding-right: 1.2em;
+      padding-right: 2em;
+      font-size: 0.95em;
+      background: #f8fafc;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      margin-right: 2em;
+      text-align: center;
+      line-height: 1.3;
     }
+    
     .tabular-section .role {
-      font-weight: bold;
-      color: #222;
+      font-family: var(--sans);
+      font-weight: 600;
+      color: #1f2937;
+      font-size: 1.1em;
+      margin-bottom: 0.3em;
+      display: block;
     }
+    
     .tabular-section .institution {
-      color: #444;
+      color: #64748b;
+      font-weight: 500;
+      font-size: 1em;
+      margin-bottom: 0.8em;
+      display: block;
     }
+    
     .languages-table {
       width: 100%;
-      margin: 0.5em 0;
-      border-collapse: collapse;
+      margin: 1em 0;
+      border-collapse: separate;
+      border-spacing: 0;
     }
+    
     .languages-table td {
-      padding: 0.3em 0.7em 0.3em 0;
+      padding: 0.8em 1em;
       border: none;
       font-size: 1em;
+      background: #f8fafc;
+      border-radius: 8px;
     }
+    
+    .languages-table tr:not(:last-child) td {
+      margin-bottom: 0.5em;
+    }
+    
+    .languages-table td:first-child {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--swish-blue);
+      width: 30%;
+    }
+    
+    .languages-grid {
+      display: grid;
+      gap: 1em;
+      margin-top: 1em;
+    }
+    
+    .language-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.2em;
+      transition: all 0.3s ease;
+    }
+    
+    .language-item:hover {
+      background: #ffffff;
+      border-color: var(--swish-blue);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-light);
+    }
+    
+    .language-name {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--swish-blue);
+      font-size: 1.1em;
+      margin-bottom: 0.3em;
+    }
+    
+    .language-level {
+      color: #64748b;
+      font-size: 0.95em;
+    }
+    
     .references {
       color: var(--accent);
       font-style: italic;
       text-align: center;
-      margin-top: 1.2em;
-      font-size: 1.05em;
+      margin-top: 2em;
+      font-size: 1.1em;
+      font-family: var(--sans);
+      font-weight: 500;
     }
-    @media (max-width: 700px) {
-      .container { padding: 1em 0.5em; }
-      header { flex-direction: column; align-items: flex-start; }
-      .profile-photo { margin: 1em 0 0 0; }
-      .twocols { flex-direction: column; gap: 0.5em; }
+    
+    /* Enhanced link styling */
+    a {
+      color: var(--swish-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    
+    /* Improved responsive design */
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5em;
+      }
+      
+      .container { 
+        padding: 2em 1.5em;
+        margin: 0;
+      }
+      
+      header { 
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 2em;
+      }
+      
+      .profile-info {
+        padding-right: 0;
+      }
+      
+      .profile-info h1 {
+        font-size: 2em;
+      }
+      
+      .profile-photo { 
+        margin: 0;
+        align-self: center;
+      }
+      
+      .twocols { 
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+      }
+      
+      .contact-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .tabular-section .date {
+        width: auto;
+        margin-bottom: 0.5em;
+        display: block;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .profile-info h1 {
+        font-size: 1.8em;
+      }
+      
+      .cvsection-title {
+        font-size: 1.2em;
+      }
+      
+      .container {
+        padding: 1.5em 1em;
+      }
     }
   </style>
 </head>
@@ -205,7 +467,7 @@
       <h1>Kristina P. Sinaga, Ph.D.</h1>
       <div class="subtitle">Postdoctoral Researcher | ISTI-CNR | Founder, <a href="http://neuralglow.ai/" style="color:var(--swish-blue);font-weight:bold;" target="_blank">NeuralGlow.AI</a></div>
       <div class="contact-icons">
-        <a href="mailto:kristinasinaga41@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="mailto:kristinapestaria.sinaga@isti.cnr.it" title="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="https://github.com/Kristinap09" title="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="https://kristinap09.github.io/" title="Website"><i class="fa-solid fa-globe"></i></a>
         <a href="https://www.isti.cnr.it/en/" title="Institution"><i class="fa-solid fa-university"></i></a>
@@ -215,6 +477,14 @@
       <img src="/assets/images/107665417.jpeg" alt="Kristina P. Sinaga portrait">
     </div>
   </header>
+
+  <!-- Inspirational Quote -->
+  <div class="quote-section">
+    <blockquote>
+      "Better to be hated for telling the truth than loved for living in a lie. Integrity in research and life builds lasting foundations."
+    </blockquote>
+    <cite>— Personal Philosophy</cite>
+  </div>
 
   <hr class="divider">
 
@@ -271,14 +541,48 @@
         <td>
           <span class="role">Postdoctoral Researcher</span>, <span class="institution">ISTI-CNR, Italy</span>
           <ul>
-            <li>Designed and implemented advanced clustering algorithms for heterogeneous data, improving clustering accuracy by 20% in benchmark datasets.</li>
-            <li>Led research on federated learning for multi-view data, resulting in 2+ publications and new privacy-preserving frameworks.</li>
-            <li>Coordinated international research teams, enhancing project delivery and cross-institutional collaboration.</li>
+            <li>Currently developing advanced clustering algorithms for heterogeneous data analysis and privacy-preserving machine learning frameworks.</li>
+            <li>Leading research on federated learning for multi-view data with focus on novel algorithmic approaches and theoretical foundations.</li>
+            <li>Actively collaborating with international research teams on cutting-edge projects in machine learning and data science.</li>
           </ul>
         </td>
       </tr>
       <tr>
-        <td class="date">Nov 2020 –<br>Apr 2022</td>
+        <td class="date">Apr 2024 –<br>Sep 2024</td>
+        <td>
+          <span class="role">Independent Researcher</span>, <span class="institution">Self-Directed Research</span>
+          <ul>
+            <li>Conducted independent research in machine learning and clustering algorithms, demonstrating self-motivation and research autonomy.</li>
+            <li>Successfully secured arXiv endorsement and published preprint, showcasing ability to produce quality research without institutional support.</li>
+            <li>Maintained active research productivity during career transition, contributing to the advancement of algorithmic methodologies.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Mar 2023 –<br>Mar 2024</td>
+        <td>
+          <span class="role">Postdoctoral Fellow</span>, <span class="institution">Department of Applied Mathematics, Chung Yuan Christian University (CYCU), Taiwan</span>
+          <ul>
+            <li>Developed breakthrough single and multi-view clustering algorithms in both federated and non-federated environments, resulting in publication in IEEE TPAMI.</li>
+            <li>Advanced theoretical foundations of privacy-preserving machine learning and federated clustering methodologies.</li>
+            <li>Established novel algorithmic frameworks that significantly improved clustering performance in heterogeneous data environments.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Apr 2022 –<br>Feb 2023</td>
+        <td>
+          <span class="role">Professional Development & Continuous Learning</span>, <span class="institution">Self-Directed Professional Development</span>
+          <ul>
+            <li>Completed Machine Learning Specialization and DeepLearning.AI TensorFlow Developer Specialization on Coursera, strengthening foundation in modern AI frameworks.</li>
+            <li>Pursued multiple specialized courses in machine learning, data science, and emerging technologies through continuous online learning.</li>
+            <li>Engaged in strategic career planning and professional development, preparing for transition to advanced research positions.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+
+        <td class="date">Nov 2020 –<br>March 2022</td>
         <td>
           <span class="role">Lecturer Specialist S3</span>, <span class="institution">Bina Nusantara University, Indonesia</span>
           <ul>
@@ -289,6 +593,7 @@
         </td>
       </tr>
       <tr>
+
         <td class="date">Sep 2016 –<br>Jun 2020</td>
         <td>
           <span class="role">PhD Research Student</span>, <span class="institution">Chung Yuan Christian University, Taiwan</span>
@@ -381,6 +686,8 @@
     <hr class="section-rule">
     <ul>
       <li><a href="https://www.mdpi.com/about/announcements/11806" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Mathematics Exceptional Reviewers List 2025</a> – Selected by MDPI for outstanding peer review contributions in mathematics journals.</li>
+      <li><b>Machine Learning Specialization</b> – Coursera (2022-2023) – Comprehensive certification in machine learning fundamentals and applications.</li>
+      <li><b>DeepLearning.AI TensorFlow Developer Specialization</b> – Coursera (2022-2023) – Advanced certification in TensorFlow and deep learning implementation.</li>
       <li>Graduated with Honors, Ph.D. in Applied Mathematics (2020) – Awarded for academic excellence and high-impact research at Chung Yuan Christian University.</li>
       <li><a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6287639" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Featured as one of the Popular Documents in IEEE Access (2020–Present)</a> – Recognized for significant readership and influence in the IEEE Access journal.</li>
     </ul>
@@ -393,9 +700,12 @@
     </div>
     <hr class="section-rule">
     <ul>
-      <li><b>Federated Multi-View K-Means Clustering</b>, <i>IEEE TPAMI</i> (2025)</li>
+      <li><b>Federated Multi-View K-Means Clustering</b>, <i>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</i> (2024)</li>
       <li><b>Unsupervised k-means clustering algorithm</b>, <i>IEEE Access</i> (2020)</li>
       <li><b>A feature-reduction multi-view k-means clustering algorithm</b>, <i>IEEE Access</i> (2019)</li>
+      <li><b>Parameter-free entropy-regularized multi-view clustering with hierarchical feature selection</b>, <i>Under review</i> (2025)</li>
+      <li><b>Soft Clustering Algorithms: A Systematic Review with Comparisons</b>, <i>Under review</i> (2025)</li>
+      <li><b>Heat-Kernel Enhanced Multi-View Learning: A Unified Framework for Heterogeneous Data Analysis and Pattern Recognition</b>, <i>Under review</i> (2025)</li>
       <li>Complete list available on <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color:var(--swish-blue);font-weight:bold;">Google Scholar</a></li>
     </ul>
   </section>
@@ -406,20 +716,20 @@
       <span class="cvsection-title">Languages</span>
     </div>
     <hr class="section-rule">
-    <table class="languages-table">
-      <tr>
-        <td><b>English</b></td>
-        <td>Advanced Professional (CEFR C1)</td>
-      </tr>
-      <tr>
-        <td><b>Bahasa Indonesia</b></td>
-        <td>Native (CEFR C2)</td>
-      </tr>
-      <tr>
-        <td><b>Mandarin</b></td>
-        <td>Basic (CEFR A1)</td>
-      </tr>
-    </table>
+    <div class="languages-grid">
+      <div class="language-item">
+        <div class="language-name">English</div>
+        <div class="language-level">Advanced Professional (CEFR C1)</div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">Bahasa Indonesia</div>
+        <div class="language-level">Native (CEFR C2)</div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">Mandarin</div>
+        <div class="language-level">Basic (CEFR A1)</div>
+      </div>
+    </div>
   </section>
 
   <div class="references">
