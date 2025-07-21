@@ -3,6 +3,8 @@ layout: default
 title: Contact
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/contact.css' | relative_url }}">
+
 <section class="contact-hero">
   <div class="hero-background">
     <div class="floating-shapes">
@@ -860,9 +862,7 @@ title: Contact
   }
 </style>
 
-<script>
-  // Modern Contact Page JavaScript
-  document.addEventListener('DOMContentLoaded', function() {
+<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
     // Animated counter for hero stats
     const animateCounters = () => {
       const counters = document.querySelectorAll('.stat-number');
@@ -1132,9 +1132,8 @@ Email: kristinapestaria.sinaga@isti.cnr.it`);
     }
   }
 
-  // Initialize theme on load
-  document.addEventListener('DOMContentLoaded', initTimeBasedTheme);
-</script>
+
+<script src="{{ '/assets/js/contact.js' | relative_url }}"></script>
 
 <!-- Include Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
