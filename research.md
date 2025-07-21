@@ -270,11 +270,10 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
     `</div>`
 
 </div>
-</div>
+</div
 
-https://github.com/KristinaP09/collaborative-feature-weighted-fcm
 
-https://github.com/KristinaP09/Fed-MVKM
+
 
 <div class="collaboration">
   <h2 style="text-align: center; margin-top: 2em;">Research Opportunities</h2>
