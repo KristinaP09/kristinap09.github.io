@@ -74,6 +74,24 @@
             border-radius: 15px;
         }
 
+        .featured-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin: 30px 0 10px 0;
+            box-shadow: var(--card-shadow);
+        }
+
+        .image-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
         .content {
             padding: 40px 30px;
         }
@@ -168,6 +186,15 @@
             .content, .header {
                 padding: 25px 20px;
             }
+
+            .featured-image {
+                height: 200px;
+                margin: 20px 0 10px 0;
+            }
+
+            .image-caption {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
@@ -187,6 +214,9 @@
                 <p><strong>They say moving to a new city is an adventure</strong>—but no one warned me that the real adventure would begin after I unpacked my suitcase. This is exactly what I experienced when I relocated to Italy.</p>
                 <p>Previously, I had enjoyed the independence of my own tiny apartment in Taiwan—sure, the neighbors could be challenging at times, but at least I had my own space and autonomy. However, my Italian experience of shared living would prove to be an entirely different challenge, teaching me valuable lessons about patience, boundaries, and the art of maintaining inner peace.</p>
             </div>
+
+            <img src="https://picsum.photos/1000/300?random=42" alt="Cozy shared apartment living room with natural light" class="featured-image">
+            <p class="image-caption">Sometimes home is about learning to find peace in shared spaces, even when the mosquitoes have other plans.</p>
 
             <div class="section">
                 <h2><span class="emoji">🏠</span> The Setup: When Legal Expertise Doesn't Equal Clarity</h2>
