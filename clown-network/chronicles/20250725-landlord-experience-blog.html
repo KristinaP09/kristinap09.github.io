@@ -9,8 +9,37 @@
     <meta property="og:title" content="My Experience with a 'Senior Lawyer' Landlord in Pisa">
     <meta property="og:description" content="A cautionary tale about rental fraud and professional misconduct">
     <meta property="og:type" content="article">
+    <meta property="og:image" content="https://kristinap09.github.io/assets/images/20250725-image.png">
+    <meta property="og:url" content="https://kristinap09.github.io/clown-network/chronicles/20250725-landlord-experience-blog.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Experience with a 'Senior Lawyer' Landlord in Pisa">
+    <meta name="twitter:description" content="A cautionary tale about rental fraud and professional misconduct">
+    <meta name="twitter:image" content="https://kristinap09.github.io/assets/images/20250725-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <title>My Experience with a "Senior Lawyer" Landlord in Pisa</title>
     <style>
+        :root {
+            --primary-color: #1a202c;
+            --secondary-color: #2d3748;
+            --accent-color: #3182ce;
+            --accent-light: #63b3ed;
+            --text-primary: #1a202c;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --background: #ffffff;
+            --background-light: #f7fafc;
+            --background-gradient: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --gradient-accent: linear-gradient(135deg, #3182ce 0%, #63b3ed 100%);
+            --quote-gradient: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+            --warning-gradient: linear-gradient(135deg, #fef5f5 0%, #fed7d7 100%);
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -18,418 +47,614 @@
         }
         
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            color: #2c3e50;
-            background-color: #fdfdfd;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--background-gradient);
+            font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        
+
         .container {
-            background: white;
-            padding: 60px 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid #e8e9ea;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .article {
+            background: var(--background);
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
         }
         
-        .header {
+        .article-header {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 4rem 3rem 3rem;
             text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e8e9ea;
+            position: relative;
+        }
+
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .article-header > * {
+            position: relative;
+            z-index: 1;
         }
         
         h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.3;
+            font-family: 'Crimson Text', serif;
+            font-size: 2.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.2;
         }
         
-        .date {
-            color: #7f8c8d;
+        .article-date {
             font-size: 1rem;
-            font-style: italic;
-            margin-bottom: 15px;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
         
-        .lead {
+        .article-lead {
             font-size: 1.2rem;
-            color: #34495e;
-            font-weight: 400;
-            margin-bottom: 40px;
             line-height: 1.6;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        
-        h2 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin: 40px 0 20px 0;
-            font-weight: 600;
-            border-left: 4px solid #3498db;
-            padding-left: 20px;
+
+        .article-content {
+            padding: 3rem;
         }
-        
-        p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            text-align: justify;
-        }
-        
-        .quote {
-            font-style: italic;
-            color: #5d6d7e;
-            margin: 30px 0;
-            padding: 25px 30px;
-            border-left: 4px solid #e74c3c;
-            background: linear-gradient(135deg, #fdf2f2 0%, #fcf3f3 100%);
-            border-radius: 0 8px 8px 0;
-            font-size: 1.15rem;
-            position: relative;
-        }
-        
-        .quote::before {
-            content: '"';
-            font-size: 4rem;
-            color: #e74c3c;
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-family: Georgia, serif;
-        }
-        
-        .highlight {
-            background: linear-gradient(120deg, #f39c12 0%, #f1c40f 100%);
-            padding: 3px 8px;
-            border-radius: 4px;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-        
-        ul {
-            margin: 20px 0;
-            padding-left: 30px;
-        }
-        
-        li {
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        strong {
-            color: #2c3e50;
-            font-weight: 700;
-        }
-        
-        .emphasis {
-            background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
-            padding: 25px 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border-left: 4px solid #95a5a6;
-            font-style: italic;
-            font-size: 1.15rem;
-            color: #2c3e50;
-        }
-        
-        .warning-box {
-            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
-            border: 1px solid #feb2b2;
-            border-radius: 8px;
-            padding: 25px 30px;
-            margin: 30px 0;
-            border-left: 4px solid #e53e3e;
-        }
-        
-        .warning-box p {
-            margin-bottom: 0;
-            font-weight: 600;
-            color: #742a2a;
-        }
-        
-        .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #e8e9ea;
-            text-align: center;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-        
-        /* Improved styles as an editor */
+
         .timeline {
             position: relative;
-            margin: 30px 0 50px 20px;
-            padding-left: 30px;
-            border-left: 2px solid #3498db;
+            margin: 2rem 0 3rem 2rem;
+            padding-left: 2rem;
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
         }
         
         .timeline-item {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
         }
         
         .timeline-item::before {
             content: '';
             position: absolute;
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            background: #3498db;
-            left: -39px;
-            top: 5px;
+            background: var(--accent-color);
+            left: -2.4rem;
+            top: 0.5rem;
+            border: 3px solid var(--background);
+            box-shadow: var(--shadow-sm);
         }
         
         .timeline-date {
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
             font-size: 1.1rem;
+            letter-spacing: -0.025em;
+        }
+
+        h2 {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin: 3rem 0 1.5rem 0;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
         }
         
-        .sharing-section {
-            background: linear-gradient(135deg, #f6f9fc 0%, #eef2f7 100%);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 40px 0 20px 0;
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 2rem 0;
+            padding: 2rem;
+            border-left: 4px solid #f6ad55;
+            background: var(--quote-gradient);
+            border-radius: 0 12px 12px 0;
+            font-size: 1.2rem;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: #f6ad55;
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            font-family: 'Crimson Text', serif;
+            line-height: 1;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #fbb6ce 0%, #f687b3 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .callout {
+            border-left: 4px solid var(--accent-color);
+            background: var(--background-light);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .callout-title {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .emphasis {
+            background: var(--background-light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
             text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .warning-box {
+            background: var(--warning-gradient);
+            border: 1px solid #fed7d7;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #e53e3e;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .warning-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #742a2a;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        figure {
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+
+        figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        figcaption {
+            font-style: italic;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .sharing-section {
+            background: var(--background-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
         }
         
         .sharing-section h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #2c3e50;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
         
         .social-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
         }
         
         .social-button {
-            background: #3498db;
+            background: var(--gradient-accent);
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.2s ease;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-sm);
         }
         
         .social-button:hover {
-            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: white;
         }
-        
-        .callout {
-            border-left: 4px solid #3498db;
-            background-color: #eaf4fc;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .callout-title {
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-        
-        figure {
-            margin: 30px 0;
-        }
-        
-        figcaption {
-            font-style: italic;
-            color: #7f8c8d;
+
+        .article-footer {
+            background: var(--background-light);
+            padding: 2.5rem 3rem;
             text-align: center;
-            margin-top: 10px;
-            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            border-top: 1px solid var(--border-color);
         }
-        
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            body {
-                padding: 20px 15px;
+            .container {
+                padding: 1rem;
             }
             
-            .container {
-                padding: 30px 20px;
+            .article-header {
+                padding: 3rem 2rem 2rem;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
+            }
+            
+            .article-content {
+                padding: 2rem;
+            }
+            
+            .timeline {
+                margin-left: 1rem;
+                padding-left: 1.5rem;
+            }
+            
+            .timeline-item::before {
+                left: -2rem;
             }
             
             h2 {
-                font-size: 1.5rem;
-            }
-            
-            .lead {
-                font-size: 1.1rem;
+                font-size: 1.75rem;
             }
             
             p, li {
                 font-size: 1rem;
             }
             
+            .quote {
+                padding: 1.5rem;
+                font-size: 1.1rem;
+            }
+            
             .social-buttons {
                 flex-direction: column;
                 align-items: center;
-                gap: 10px;
+            }
+            
+            .social-button {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .article-footer {
+                padding: 2rem;
             }
         }
-        
+
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
-            h2 {
-                font-size: 1.3rem;
-                padding-left: 15px;
+            .article-content {
+                padding: 1.5rem;
             }
             
-            .quote {
-                padding: 20px 15px;
-                margin-left: 0;
+            .article-header {
+                padding: 2.5rem 1.5rem 2rem;
+            }
+
+            .article-footer {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .back-to-top,
+            .sharing-section {
+                display: none;
             }
             
-            ul {
-                padding-left: 20px;
-            }
-            
-            .timeline {
-                margin-left: 10px;
-                padding-left: 20px;
-            }
-            
-            .timeline-item::before {
-                left: -29px;
+            .article {
+                box-shadow: none;
+                border: 1px solid #ddd;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>My Experience with a "Senior Lawyer" Landlord in Pisa</h1>
-            <div class="date">Published on July 25, 2025</div>
-            <p class="lead">A cautionary tale of rental negligence, legal double standards, and the danger of mistaking credentials for integrity. Over the course of 31 days, I dealt with a landlord who collected €1,200, failed to deliver a legally registered contract, ignored basic obligations, and acted as if the law didn’t apply to him — all while parading a title of “senior lawyer.”</p>
-        </div>
+        <article class="article">
+            <header class="article-header">
+                <h1>My Experience with a "Senior Lawyer" Landlord in Pisa</h1>
+                <div class="article-date">Published on July 25, 2025 • Updated July 26, 2025</div>
+                <p class="article-lead">A cautionary tale of rental negligence, legal double standards, and the danger of mistaking credentials for integrity. Over the course of 31+ days, I dealt with a landlord who collected €1,200, failed to deliver a legally registered contract, ignored basic obligations, and acted as if the law didn't apply to him — all while parading a title of "senior lawyer."</p>
+            </header>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">June 24, 2025</div>
-                <p>I paid <strong>€900 in advance</strong> to secure a rental room in Pisa from a landlord who proudly wears the title of “senior lawyer” and compliance expert. One might assume someone with such credentials could manage basic legal paperwork — like, say, a <strong>registered rental contract</strong>.
-Spoiler: he didn’t.</p>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">July 12, 2025</div>
-                <p>Move-in day — or so I thought. The landlord requested a one-day delay to “clean the room,” which turned out to be code for <strong>frantically removing his own belongings</strong>. I booked a hotel at my own expense. Because nothing says “welcome home” like <strong>paying extra to stay elsewhere</strong>.</p>
-                
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">July 13, 2025</div>
-                <p></p>I finally moved in, armed with optimism and €300 more in cash (bringing the total to <strong>€1,200</strong>).</p>
-                <p>What I <em>didn’t</em> get? A properly registered rental contract.</p>
-                <p>What I <em>did</em> get? A room that still doubled as the landlord’s personal storage closet.</p>
-            </div>
-            
-            <div class="timeline-item">
-                <div class="timeline-date">July 25, 2025</div>
-                <p>It’s been over <strong>a month since I paid</strong>— still no properly registered rental contract, despite the <strong>30-day legal deadline</strong> in Italy.</p> 
-                    <p>But wait, there’s more: The landlord also felt free to <strong>enter the room in my absence</strong> to grab more of his things. Because boundaries are optional when you believe the law is your side hustle. And when I politely asked for the <strong>TV remote</strong>, he responded:</p>
-                    <div class="quote">
-                        “Figure it out by yourself.”
+            <div class="article-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">June 24, 2025</div>
+                        <p>I paid <strong>€900 in advance</strong> to secure a rental room in Pisa from a landlord who proudly wears the title of "senior lawyer" and compliance expert. One might assume someone with such credentials could manage basic legal paperwork — like, say, a <strong>registered rental contract</strong>.</p>
+                        <p><em>Spoiler: he didn't.</em></p>
                     </div>
-                    <p>Truly a shining example of <strong>customer service and legal excellence</strong>.</p>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 12, 2025</div>
+                        <p>Move-in day — or so I thought. The landlord requested a one-day delay to "clean the room," which turned out to be code for <strong>frantically removing his own belongings</strong>. I booked a hotel at my own expense. Because nothing says "welcome home" like <strong>paying extra to stay elsewhere</strong>.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 13, 2025</div>
+                        <p>I finally moved in, armed with optimism and €300 more in cash (bringing the total to <strong>€1,200</strong>).</p>
+                        <p>What I <em>didn't</em> get? A properly registered rental contract.</p>
+                        <p>What I <em>did</em> get? A room that still doubled as the landlord's personal storage closet.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 25, 2025</div>
+                        <p>It's been over <strong>a month since I paid</strong>— still no properly registered rental contract, despite the <strong>30-day legal deadline</strong> in Italy.</p>
+                        <p>But wait, there's more: The landlord also felt free to <strong>enter the room in my absence</strong> to grab more of his things. Because boundaries are optional when you believe the law is your side hustle. And when I politely asked for the <strong>TV remote</strong>, he responded:</p>
+                        <div class="quote">
+                            "Figure it out by yourself."
+                        </div>
+                        <p>Truly a shining example of <strong>customer service and legal excellence</strong>.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 26, 2025</div>
+                        <p>The landlord finally sent me a "modified" contract — with the original justification <em>still unchanged</em> as "studio-ricerca" instead of our agreed version: "lavoro temporaneo in ambito di ricerca."</p>
+                        <p>He also left in Clause 14, referencing registration costs, even though he opted for <strong>cedolare secca</strong>, which legally exempts both parties from such fees.</p>
+                        <p>I replied, professionally but firmly, requesting both corrections and reminding him that no amount of credentials can override the law.</p>
+                        <p>Naturally, he sent the contract at <strong>21:55</strong> — because nothing says professionalism like ignoring your own afternoon deadline by nearly 8 hours.</p>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <div class="callout-title">The Long Wait</div>
+                    <p>From June 24 to July 26 — that's <strong>32+ days</strong> of waiting, uncertainty, and frustration. A total of <strong>€1,200 paid</strong> (€900 in advance plus €300 in cash at move-in) with minimal legal protection in return. This is what dealing with a "professional" who disregards legal requirements looks like in practice.</p>
+                </div>
+
+                <p>What followed was a series of evasive WhatsApp messages filled with contradictions, laughing emojis, and tone-deaf responses. I asked for the lease to reflect my actual purpose in Italy — <span class="highlight">research</span> — as I am a postdoctoral researcher. He repeatedly refused or avoided making this simple correction, suggesting bizarre alternatives like "temporary job in researching areas," and warning me that making the wrong change might "risk the contract turning into a 3-year one."</p>
+
+                <div class="callout">
+                    <div class="callout-title">Did You Know?</div>
+                    <p>In Italy, rental contracts must be registered with the Agenzia delle Entrate (Italian Revenue Agency) within 30 days of signing. This isn't just a formality — it's a legal requirement that protects both tenant and landlord. Without registration, the contract isn't officially recognized, which can cause serious issues for the tenant (especially with residency permits) — and potential fines for the landlord.</p>
+                </div>
+
+                <p>And yet, when I simply asked for my contract to reflect the <strong>truth of my research position</strong>, the landlord's response was:</p>
+
+                <div class="quote">
+                    Thanks for your strange behaviour: never meet someone with this peculiarities.
+                </div>
+
+                <p>Yes — that was his actual message. Apparently, <strong>asking for legal compliance and basic transparency now qualifies as a 'peculiarity.'</strong></p>
+
+                <figure>
+                    <img src="https://kristinap09.github.io/assets/images/20250725-image.png" alt="Senior lawyer in the streets, emoji landlord in the chats" loading="lazy">
+                    <figcaption>Senior lawyer in the streets, emoji landlord in the chats</figcaption>
+                </figure>
+
+                <h2>The Irony of His Professional Claims</h2>
+                <p>This man proudly lists himself online as a legal expert in:</p>
+                <ul>
+                    <li>Cybersecurity compliance</li>
+                    <li>GDPR and data protection</li>
+                    <li>AI, IoT, and digital governance</li>
+                    <li>Mentorship for startups and innovation hubs</li>
+                </ul>
+                
+                <p>Yet his actions tell a different story:</p>
+                <ul>
+                    <li>Ignored contract registration requirements under Italian law</li>
+                    <li>Failed to meet basic professional deadlines</li>
+                    <li>Attempted unauthorized access to the rented room</li>
+                    <li>Engaged in gaslighting behavior when confronted about tenant rights</li>
+                </ul>
+
+                <div class="emphasis">
+                    The irony of someone who claims to be an expert in compliance while actively avoiding legal requirements is not lost on me.
+                </div>
+
+                <h2>The Real Lesson</h2>
+                <p>This wasn't just a bad rental experience — it was a masterclass in how <strong>impressive titles and polished résumés can hide deeply unprofessional behavior</strong>. Legal expertise means nothing when the person behind it ignores basic responsibilities.</p>
+
+                <p>What began on <strong>June 24 with a €900 payment</strong> has spiraled into <strong>over a month of unanswered obligations, legal uncertainty, and constant stress</strong> — all while I've now paid <strong>€1,200 in total</strong>.</p>
+                
+                <p>Meanwhile, the landlord behaves as if <strong>the rules don't apply to him</strong>, even though he claims to be an expert in the very laws he's breaking.</p>
+
+                <div class="warning-box">
+                    <p><strong>To anyone renting in Italy — or anywhere else:</strong> know your rights, document everything, and never be afraid to speak up — even if the person you're dealing with has a dozen degrees and a LinkedIn profile full of buzzwords. Because in the end, credentials don't mean credibility. Trust behavior, not branding — and always, always get everything in writing.</p>
+                </div>
+
+                <div class="emphasis">
+                    It's time we stop settling for landlords who <strong>lecture on legality, yet can't follow the basics themselves</strong>.
+                </div>
+
+                <div class="sharing-section">
+                    <h3>Have You Experienced Something Similar?</h3>
+                    <p>If you've dealt with rental fraud or unprofessional landlords, share your story. Your experience could help others avoid similar situations.</p>
+                    <div class="social-buttons">
+                        <a href="https://twitter.com/intent/tweet?text=Check out this cautionary tale about rental fraud in Italy&url=https://kristinap09.github.io/clown-network/chronicles/20250725-landlord-experience-blog.html" class="social-button" target="_blank" rel="noopener">
+                            <span>Share on Twitter</span>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/20250725-landlord-experience-blog.html" class="social-button" target="_blank" rel="noopener">
+                            <span>Share on Facebook</span>
+                        </a>
+                        <a href="mailto:?subject=Rental Fraud Experience in Italy&body=I thought you might find this story interesting: https://kristinap09.github.io/clown-network/chronicles/20250725-landlord-experience-blog.html" class="social-button">
+                            <span>Email This Story</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="callout">
-            <div class="callout-title">The Long Wait</div>
-            <p>From June 24 to July 25 — that's <strong>31 days</strong> of waiting, uncertainty, and frustration. A total of <strong>€1,200 paid</strong> (€900 in advance plus €300 in cash at move-in) with minimal legal protection in return. This is what dealing with a "professional" who disregards legal requirements looks like in practice.</p>
-        </div>
-        <p>What followed was a series of evasive WhatsApp messages filled with contradictions, laughing emojis, and tone-deaf responses. I asked for the lease to reflect my actual purpose in Italy — <span class="highlight">research</span> — as I am a postdoctoral researcher. He repeatedly refused or avoided making this simple correction, suggesting bizarre alternatives like "temporary job in researching areas," and warning me that making the wrong change might "risk the contract turning into a 3-year one."</p>
-
-        <div class="callout">
-            <div class="callout-title">Did You Know?</div>
-            <p>In Italy, rental contracts must be registered with the Agenzia delle Entrate (Italian Revenue Agency) within 30 days of signing. This isn’t just a formality — it’s a legal requirement that protects both tenant and landlord. Without registration, the contract isn’t officially recognized, which can cause serious issues for the tenant (especially with residency permits) — and potential fines for the landlord.</p>
-        </div>
-
-        <p>And yet, when I simply asked for my contract to reflect the <strong>truth of my research position</strong>, the landlord’s response was:</p>
-
-        <div class="quote">
-            Thanks for your strange behaviour: never meet someone with this peculiarities.
-        </div>
-
-        <p>Yes — that was his actual message. Apparently, <strong>asking for legal compliance and basic transparency now qualifies as a ‘peculiarity.’</strong></p>
-
-        <h2>The Irony of His Professional Claims</h2>
-        <p>This man proudly lists himself online as a legal expert in:</p>
-        <ul>
-            <li>Cybersecurity compliance</li>
-            <li>GDPR and data protection</li>
-            <li>AI, IoT, and digital governance</li>
-            <li>Mentorship for startups and innovation hubs</li>
-        </ul>
-        
-        <p>Yet his actions tell a different story:</p>
-        <ul>
-            <li>Ignored contract registration requirements under Italian law</li>
-            <li>Failed to meet basic professional deadlines</li>
-            <li>Attempted unauthorized access to the rented room</li>
-            <li>Engaged in gaslighting behavior when confronted about tenant rights</li>
-        </ul>
-
-        <figure>
-            <div class="emphasis">
-                The irony of someone who claims to be an expert in compliance while actively avoiding legal requirements is not lost on me.
-            </div>
-            <figcaption>— My journal entry after two weeks of dealing with this situation</figcaption>
-        </figure>
-
-        <h2>The Real Lesson</h2>
-        <p>This wasn’t just a bad rental experience — it was a masterclass in how <strong>impressive titles and polished résumés can hide deeply unprofessional behavior</strong>. Legal expertise means nothing when the person behind it ignores basic responsibilities.</p>
-
-        <p>What began on <strong>June 24 with a €900 payment</strong> has spiraled into <strong>a month of unanswered obligations, legal uncertainty, and constant stress</strong> — all while I’ve now paid <strong>€1,200 in total</strong>.</p>
-        
-        <p>Meanwhile, the landlord behaves as if <strong>the rules don’t apply to him</strong>, even though he claims to be an expert in the very laws he’s breaking.</p>
-
-        <div class="warning-box">
-            <p><strong>To anyone renting in Italy — or anywhere else:</strong> know your rights, document everything, and never be afraid to speak up — even if the person you're dealing with has a dozen degrees and a LinkedIn profile full of buzzwords. Because in the end, credentials don’t mean credibility. Trust behavior, not branding — and always, always get everything in writing.</p>
-        </div>
-
-        <div class="emphasis">
-            It’s time we stop settling for landlords who <strong>lecture on legality, yet can’t follow the basics themselves</strong>.
-        </div>
-
-        <div class="sharing-section">
-            <h3>Have You Experienced Something Similar?</h3>
-            <p>If you've dealt with rental fraud or unprofessional landlords, share your story. Your experience could help others avoid similar situations.</p>
-            <div class="social-buttons">
-                <a href="#" class="social-button">Share on Twitter</a>
-                <a href="#" class="social-button">Share on Facebook</a>
-                <a href="#" class="social-button">Email This Story</a>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Have you experienced similar issues with rental fraud or unprofessional landlords? Your rights as a tenant matter, regardless of who you're dealing with.</p>
-            <p>© 2025 Kristina P. Sinaga | Last Updated: July 25, 2025</p>
-        </div>
+            <footer class="article-footer">
+                <p>Have you experienced similar issues with rental fraud or unprofessional landlords? Your rights as a tenant matter, regardless of who you're dealing with.</p>
+                <p><strong>© 2025 Kristina P. Sinaga</strong> | Last Updated: July 26, 2025</p>
+            </footer>
+        </article>
     </div>
+
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script>
+        // Back to top functionality
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
