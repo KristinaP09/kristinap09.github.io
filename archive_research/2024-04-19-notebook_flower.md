@@ -13,7 +13,7 @@ tags:
   - Distributed Computing
   - Privacy-Preserving ML
 ---
-# ## 🚀 **Getting Started: Environment Setup**
+# `<font color='blue'>`🌼🌸F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R 🌼🌸`</font>`
 
 ## A Comprehensive Tutorial on Federated Learning with the Flower Framework
 
@@ -66,9 +66,9 @@ tags:
 
 ---
 
-## `<font color='blue'>`&#x1F33C;&#127800;F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R &#x1F33C;&#127800;`</font>`
+## `<font color='blue'>`&#x1F33C;&#127800;F `</font><font color='orange'>`L `</font><font color='magenta'>`O `</font><font color='yellow'>`W `</font><font color='green'>`E `</font><font color='black'>`R &#x1F33C;&#127800;`</font>`
 
-`<font color='black'>` The idea behind Federated Learning is to train a model between multiple clients and a server without having to share any data. This is done by letting each client train the model locally on its data and send its parameters back to the server, which then aggregates all the clients’ parameters together using a predefined strategy. This process is made very simple by`</font>` `<font color='green'>`using the Flower framework &#128512;.`</font>`
+`<font color='black'>` The idea behind Federated Learning is to train a model between multiple clients and a server without having to share any data. This is done by letting each client train the model locally on its data and send its parameters back to the server, which then aggregates all the clients’ parameters together using a predefined strategy. This process is made very simple by `</font>` `<font color='green'>`using the Flower framework &#128512;.`</font>`
 
 ### `<font color='orange'>`Flower: A Friendly Federated Learning Research Framework on MNIST Data.`</font>`
 
@@ -131,13 +131,13 @@ class Net(nn.Module):
     """
     def __init__(self, num_classes: int = 10) -> None:
         super(Net, self).__init__()
-      
+    
         # Convolutional Feature Extractor
         self.conv1 = nn.Conv2d(1, 6, 5)      # 28x28 -> 24x24
         self.pool = nn.MaxPool2d(2, 2)       # 24x24 -> 12x12
         self.conv2 = nn.Conv2d(6, 16, 5)     # 12x12 -> 8x8
                                             # After pooling: 4x4
-      
+    
         # Classifier Head
         self.fc1 = nn.Linear(16 * 4 * 4, 120)
         self.fc2 = nn.Linear(120, 84)
@@ -147,10 +147,10 @@ class Net(nn.Module):
         # Feature extraction
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
-      
+    
         # Flatten for classifier
         x = x.view(-1, 16 * 4 * 4)
-      
+    
         # Classification
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
@@ -275,7 +275,7 @@ def train(net, trainloader, optimizer, epochs: int = 1):
         trainloader: Training data loader
         optimizer: Optimizer (SGD, Adam, etc.)
         epochs: Number of training epochs
-      
+    
     Returns:
         Trained network
     """
@@ -289,19 +289,19 @@ def train(net, trainloader, optimizer, epochs: int = 1):
         epoch_loss = 0.0
         for batch_idx, (images, labels) in enumerate(trainloader):
             images, labels = images.to(DEVICE), labels.to(DEVICE)
-          
+        
             # Forward pass
             optimizer.zero_grad()
             outputs = net(images)
             loss = criterion(outputs, labels)
-          
+        
             # Backward pass
             loss.backward()
             optimizer.step()
-          
+        
             epoch_loss += loss.item()
             total_samples += labels.size(0)
-          
+        
         total_loss += epoch_loss
         print(f"   Epoch {epoch+1}/{epochs}: Loss = {epoch_loss/len(trainloader):.4f}")
   
@@ -317,7 +317,7 @@ def test(net, testloader):
     Args:
         net: Trained neural network
         testloader: Test data loader
-      
+    
     Returns:
         tuple: (average_loss, accuracy)
     """
@@ -329,11 +329,11 @@ def test(net, testloader):
         for images, labels in testloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             outputs = net(images)
-          
+        
             # Calculate loss
             loss = criterion(outputs, labels)
             total_loss += loss.item()
-          
+        
             # Calculate accuracy
             _, predicted = torch.max(outputs.data, 1)
             correct += (predicted == labels).sum().item()
@@ -402,7 +402,7 @@ def prepare_dataset(num_partitions: int, batch_size: int = 32, val_ratio: float 
         num_partitions: Number of clients/partitions
         batch_size: Batch size for data loaders
         val_ratio: Fraction of data for validation
-      
+    
     Returns:
         tuple: (trainloaders, valloaders, testloader)
     """
@@ -578,14 +578,14 @@ class FlowerClient(fl.client.NumPyClient):
   
     def __init__(self, trainloader, valloader) -> None:
         super().__init__()
-      
+    
         # Store client's private data
         self.trainloader = trainloader
         self.valloader = valloader
-      
+    
         # Initialize local model
         self.model = Net(num_classes=10).to(DEVICE)
-      
+    
         print(f"🌸 Flower Client initialized:")
         print(f"   • Training samples: {len(trainloader.dataset)}")
         print(f"   • Validation samples: {len(valloader.dataset)}")
@@ -594,24 +594,24 @@ class FlowerClient(fl.client.NumPyClient):
     def set_parameters(self, parameters: NDArrays) -> None:
         """
         Load parameters received from the server into the local model
-      
+    
         Args:
             parameters: List of NumPy arrays representing model weights
         """
         # Convert NumPy arrays back to PyTorch tensors
         params_dict = zip(self.model.state_dict().keys(), parameters)
         state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
-      
+    
         # Load parameters into the model
         self.model.load_state_dict(state_dict, strict=True)
 
     def get_parameters(self, config: Dict[str, Scalar]) -> NDArrays:
         """
         Extract model parameters and convert to NumPy arrays
-      
+    
         Args:
             config: Configuration dictionary (unused in this implementation)
-          
+        
         Returns:
             List of NumPy arrays representing model weights
         """
@@ -620,16 +620,16 @@ class FlowerClient(fl.client.NumPyClient):
     def fit(self, parameters: NDArrays, config: Dict[str, Scalar]) -> Tuple[NDArrays, int, Dict]:
         """
         Perform local training using the global model parameters
-      
+    
         Args:
             parameters: Global model parameters from server
             config: Training configuration
-          
+        
         Returns:
             tuple: (updated_parameters, num_samples, metrics)
         """
         print(f"🏋️ Starting local training...")
-      
+    
         # Load global model parameters
         self.set_parameters(parameters)
 
@@ -647,33 +647,33 @@ class FlowerClient(fl.client.NumPyClient):
         # Return updated parameters
         updated_parameters = self.get_parameters({})
         num_samples = len(self.trainloader.dataset)
-      
+    
         print(f"✅ Local training completed ({num_samples} samples)")
-      
+    
         return updated_parameters, num_samples, {}
 
     def evaluate(self, parameters: NDArrays, config: Dict[str, Scalar]) -> Tuple[float, int, Dict[str, Scalar]]:
         """
         Evaluate the global model on local validation data
-      
+    
         Args:
             parameters: Global model parameters
             config: Evaluation configuration
-          
+        
         Returns:
             tuple: (loss, num_samples, metrics)
         """
         print(f"📊 Evaluating global model locally...")
-      
+    
         # Load global model parameters
         self.set_parameters(parameters)
-      
+    
         # Evaluate on local validation set
         loss, accuracy = test(self.model, self.valloader)
         num_samples = len(self.valloader.dataset)
-      
+    
         print(f"📈 Local evaluation: Loss={loss:.4f}, Accuracy={accuracy:.4f}")
-      
+    
         return float(loss), num_samples, {"accuracy": accuracy}
 
 
@@ -721,24 +721,24 @@ def get_evaluate_fn(testloader):
   
     Args:
         testloader: DataLoader for the test dataset
-      
+    
     Returns:
         evaluate_fn: Function that evaluates global model
     """
     def evaluate_fn(server_round: int, parameters: NDArrays, config: Dict[str, Scalar]):
         """
         Evaluate the global model on the centralized test set
-      
+    
         Args:
             server_round: Current federated learning round
             parameters: Global model parameters
             config: Evaluation configuration
-          
+        
         Returns:
             tuple: (loss, metrics_dict)
         """
         print(f"🌍 Round {server_round}: Evaluating global model...")
-      
+    
         # Create a fresh model for evaluation
         model = Net(num_classes=10).to(DEVICE)
 
@@ -749,11 +749,11 @@ def get_evaluate_fn(testloader):
 
         # Evaluate on the global test set
         loss, accuracy = test(model, testloader)
-      
+    
         print(f"🏆 Global Model Performance:")
         print(f"   • Test Loss: {loss:.4f}")
         print(f"   • Test Accuracy: {accuracy:.4f} ({accuracy*100:.2f}%)")
-      
+    
         return loss, {"accuracy": accuracy}
 
     return evaluate_fn
@@ -808,23 +808,23 @@ def generate_client_fn(trainloaders, valloaders):
     Args:
         trainloaders: List of training data loaders (one per client)
         valloaders: List of validation data loaders (one per client)
-      
+    
     Returns:
         client_fn: Function that creates FlowerClient instances
     """
     def client_fn(cid: str) -> FlowerClient:
         """
         Create a FlowerClient instance for a given client ID
-      
+    
         Args:
             cid: Client ID (string representation of client index)
-          
+        
         Returns:
             FlowerClient instance with the client's data partition
         """
         client_id = int(cid)
         print(f"🌸 Creating client {client_id} with {len(trainloaders[client_id].dataset)} training samples")
-      
+    
         return FlowerClient(
             trainloader=trainloaders[client_id], 
             valloader=valloaders[client_id]
@@ -1016,15 +1016,15 @@ def run_scalability_test(client_counts: List[int] = [50, 100, 200]):
   
     for num_clients_test in client_counts:
         print(f"\n🧪 Testing with {num_clients_test} clients...")
-      
+    
         # Prepare dataset for this client count
         train_loaders_test, val_loaders_test, test_loader_test = prepare_dataset(
             num_partitions=num_clients_test, batch_size=32
         )
-      
+    
         # Create client factory
         client_fn_test = generate_client_fn(train_loaders_test, val_loaders_test)
-      
+    
         # Configure strategy for this test
         strategy_test = fl.server.strategy.FedAvg(
             fraction_fit=0.1,
@@ -1033,7 +1033,7 @@ def run_scalability_test(client_counts: List[int] = [50, 100, 200]):
             evaluate_fn=get_evaluate_fn(test_loader_test),
             fit_config_fn=lambda server_round: {"lr": 0.01, "momentum": 0.9, "epochs": 1}
         )
-      
+    
         # Run simulation
         start_time = time.time()
         history_test = fl.simulation.start_simulation(
@@ -1044,18 +1044,18 @@ def run_scalability_test(client_counts: List[int] = [50, 100, 200]):
             client_resources={"num_cpus": 1, "num_gpus": 0}
         )
         end_time = time.time()
-      
+    
         # Extract results
         if "accuracy" in history_test.metrics_centralized:
             accuracies = [data[1] for data in history_test.metrics_centralized["accuracy"]]
             final_accuracy = accuracies[-1] * 100
-          
+        
             results[num_clients_test] = {
                 'final_accuracy': final_accuracy,
                 'training_time': end_time - start_time,
                 'rounds': len(accuracies) - 1
             }
-          
+        
             print(f"✅ {num_clients_test} clients: {final_accuracy:.2f}% accuracy in {end_time - start_time:.1f}s")
         else:
             print(f"❌ No results for {num_clients_test} clients")
@@ -1137,7 +1137,7 @@ if scalability_results:
 
 ## 🌟 **Conclusion**
 
-**<font color='blue'>🌼🌸F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R 🌼🌸</font>** has proven to be an exceptional framework for federated learning research and deployment. Its elegant design makes complex distributed ML accessible while maintaining the flexibility needed for cutting-edge research.
+**`<font color='blue'>`&#x1F33C;&#127800;F `</font><font color='orange'>`L `</font><font color='magenta'>`O `</font><font color='yellow'>`W `</font><font color='green'>`E `</font><font color='black'>`R &#x1F33C;&#127800;`</font>`** has proven to be an exceptional framework for federated learning research and deployment. Its elegant design makes complex distributed ML accessible while maintaining the flexibility needed for cutting-edge research.
 
 > **"Federated learning isn't just about distributing computation—it's about democratizing AI while preserving privacy. Flower makes this vision achievable."** 🌸
 
