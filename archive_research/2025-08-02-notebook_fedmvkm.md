@@ -464,16 +464,17 @@ Now let's implement the federated learning extension of our MVKM-ED algorithm. T
 
 ## Fed-MVKM-ED Implementation
 
-<strong>FedMVKMED Class Overview</strong>
+<details open>
+<summary><strong>FedMVKMED Class Definition</strong></summary>
 
 ```python
 class FedMVKMED:
     """
     Federated Multi-View K-Means with Enhanced Distance (Fed-MVKM-ED)
-  
+
     This class implements the federated learning extension of MVKM-ED, enabling
     privacy-preserving clustering across distributed sites without sharing raw data.
-  
+
     Key Features:
     - Privacy-preserving parameter sharing
     - Weighted model aggregation based on data quantities
@@ -481,72 +482,44 @@ class FedMVKMED:
     - Convergence monitoring across federation rounds
     """
 
+</details> <details> <summary><strong>__init__ Method</strong></summary>
 
-    def __init__(self, params: FedMVKMEDParams):
-        """
-        Initialize the federated learning model
-      
-        Args:
-            params: Configuration parameters for the federated clustering
-        """
-        self.params = params
-        self.clients = {}
-        self.global_centers = None  # Global cluster centers
-        self.global_weights = None  # Global view weights
-        self.global_objective_values = []  # Track convergence
-      
-    def _initialize_global_model(self, sample_data: List[np.ndarray]):
-        """Initialize global model parameters."""
-        # Initialize global centers randomly
-        data_shapes = [x.shape[1] for x in sample_data]
-        self.global_centers = []
-        for view_dim in data_shapes:
-            centers = np.random.randn(self.params.cluster_num, view_dim)
-            self.global_centers.append(centers)
-      
-        # Initialize global view weights
-        self.global_weights = np.ones(self.params.points_view) / self.params.points_view
-      
-    def _add_privacy_noise(self, data: np.ndarray, privacy_level: float) -> np.ndarray:
-        """Add differential privacy noise to data."""
-        noise_scale = (1 - privacy_level) * 0.1
-        noise = np.random.laplace(0, noise_scale, data.shape)
-        return data + noise
+def __init__(self, params: FedMVKMEDParams):
+    """
+    Initialize the federated learning model
 
+    Args:
+        params: Configuration parameters for the federated clustering
+    """
+    self.params = params
+    self.clients = {}
+    self.global_centers = None  # Global cluster centers
+    self.global_weights = None  # Global view weights
+    self.global_objective_values = []  # Track convergence
 
-</details> <details open> <summary><strong>Model Aggregation Logic</strong></summary>
+</details> <details> <summary><strong>_initialize_global_model Method</strong></summary>
 
-```python
-    def _aggregate_models(self, client_models: Dict) -> None:
-        """Aggregate client models to update global model."""
-        # Aggregate centers
-        new_global_centers = []
-        for view_idx in range(self.params.points_view):
-            view_centers = np.zeros_like(self.global_centers[view_idx])
-            total_weight = 0
-          
-            for client_id, model in client_models.items():
-                client_weight = len(self.clients[client_id]['data'][0])  # Data size as weight
-                view_centers += client_weight * model.A[view_idx]
-                total_weight += client_weight
-              
-            view_centers /= total_weight
-            new_global_centers.append(view_centers)
-          
-        self.global_centers = new_global_centers
-      
-        # Aggregate view weights
-        new_global_weights = np.zeros(self.params.points_view)
-        total_clients = len(client_models)
-      
-        for client_id, model in client_models.items():
-            new_global_weights += model.V
-          
-        self.global_weights = new_global_weights / total_clients
+def _initialize_global_model(self, sample_data: List[np.ndarray]):
+    """Initialize global model parameters."""
+    # Initialize global centers randomly
+    data_shapes = [x.shape[1] for x in sample_data]
+    self.global_centers = []
+    for view_dim in data_shapes:
+        centers = np.random.randn(self.params.cluster_num, view_dim)
+        self.global_centers.append(centers)
 
-```
+    # Initialize global view weights
+    self.global_weights = np.ones(self.params.points_view) / self.params.points_view
 
-</details>
+</details> <details> <summary><strong>_add_privacy_noise Method</strong></summary>
+
+def _add_privacy_noise(self, data: np.ndarray, privacy_level: float) -> np.ndarray:
+    """Add differential privacy noise to data."""
+    noise_scale = (1 - privacy_level) * 0.1
+    noise = np.random.laplace(0, noise_scale, data.shape)
+    return data + noise
+
+</details> ```
 
 <details open>
 <summary><strong>Federated Training Process</strong></summary>
