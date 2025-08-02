@@ -13,7 +13,7 @@ tags:
   - Distributed Computing
   - Privacy-Preserving ML
 ---
-# `<font color='blue'>`&#x1F33C;&#127800;F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R &#x1F33C;&#127800;`</font>`
+# <font color='blue'>&#x1F33C;&#127800;F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R &#x1F33C;&#127800;</font>
 
 ## A Comprehensive Tutorial on Federated Learning with the Flower Framework
 
