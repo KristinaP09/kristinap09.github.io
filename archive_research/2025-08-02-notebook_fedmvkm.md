@@ -1302,8 +1302,6 @@ This Fed-MVKM-ED approach is particularly valuable for:
 }
 ```
 
-```
-
 # Acknowledgments
 
 <div class="acknowledgments" style="background-color: #f7f7ff; padding: 20px; border-radius: 8px; margin: 30px 0;">
@@ -1327,4 +1325,4 @@ This Fed-MVKM-ED approach is particularly valuable for:
 <div style="text-align: center; margin: 30px 0;">
   <a href="#" style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Top ↑</a>
 </div>
-```
+
