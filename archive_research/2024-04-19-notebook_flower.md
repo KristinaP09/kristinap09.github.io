@@ -256,7 +256,7 @@ visualise_n_random_examples(trainset, n=64)
 <div align="center">
   <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/846f6833-5345-480c-b829-8f1ba7e5bb6f" alt="MNIST Sample Grid" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
-  <em>Figure: 8x8 grid of random MNIST handwritten digit samples from the training dataset</em>
+  <em>Figure: 4x16 grid of random MNIST handwritten digit samples from the training dataset</em>
 </div>
 
 ---
