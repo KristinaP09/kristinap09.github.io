@@ -660,7 +660,7 @@ print(f"📊 Original dataset size: {len(y_true)}")
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/453f1dd3-6c07-49a7-9de9-5f1b30f7e76a" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/a784658e-228d-4fb5-a76d-709cebacf9b7.png" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Data distribution across three federated sites showing heterogeneous action category availability</em>
 </div>
@@ -845,10 +845,50 @@ print(f"   - ARI: {results['ari'] - avg_local_ari:+.4f} ({100*(results['ari'] - 
 print("\n✅ Evaluation completed!")
 ```
 
-<div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/b8271a94-7f31-4fd4-8119-b673a618ddc7" alt="Performance Comparison" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <br>
-  <em>Figure: Performance comparison between federated model and individual site models</em>
+A critical question in federated learning is whether the collaborative approach outperforms individual local models. Let's compare our federated model's performance with individual site-specific models to quantify the benefits of collaboration.
+
+<div class="comparison-table" style="margin: 20px 0;">
+<table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+  <thead style="background-color: #f0f0f0;">
+    <tr>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Method</th>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: center;">NMI</th>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: center;">ARI</th>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: center;">Privacy Preservation</th>
+      <th style="padding: 10px; border: 1px solid #ddd; text-align: center;">Communication Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd;">Centralized K-Means</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">0.652</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">0.487</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">❌ None</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⭐⭐⭐⭐⭐ Very High</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd;">Local Single-View</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">0.613</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">0.428</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⭐⭐⭐⭐⭐ Maximum</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">❌ None</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd;">Local Multi-View</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">0.673</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">0.527</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⭐⭐⭐⭐⭐ Maximum</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">❌ None</td>
+    </tr>
+    <tr style="background-color: #e7f3ff;">
+      <td style="padding: 10px; border: 1px solid #ddd;"><strong>Fed-MVKM (Ours)</strong></td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;"><strong>0.893</strong></td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;"><strong>0.699</strong></td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⭐⭐⭐⭐ High</td>
+      <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">⭐⭐ Low</td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 ---
@@ -914,7 +954,7 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/e079d5bb-85e2-489d-93c2-ef7248e3ce1a" alt="Comprehensive Results" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/34b4f997-a8f7-44b0-9c2c-ada6aa468b8c.png" alt="Comprehensive Results" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Comprehensive analysis of Fed-MVKM performance with multiple visualizations</em>
 </div>
