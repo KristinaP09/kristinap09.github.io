@@ -462,8 +462,10 @@ Now let's implement the federated learning extension of our MVKM-ED algorithm. T
 </ol>
 </div>
 
-<details>
-<summary>Click to expand: Full FedMVKMED Implementation</summary>
+## Fed-MVKM-ED Implementation
+
+<details open>
+<summary><strong>FedMVKMED Class Overview</strong></summary>
 
 ```python
 class FedMVKMED:
@@ -479,7 +481,12 @@ class FedMVKMED:
     - Adaptive view importance learning
     - Convergence monitoring across federation rounds
     """
-  
+</details>
+
+<details open>
+<summary><strong>Initialization and Privacy Methods</strong></summary>
+
+```python
     def __init__(self, params: FedMVKMEDParams):
         """
         Initialize the federated learning model
@@ -510,7 +517,13 @@ class FedMVKMED:
         noise_scale = (1 - privacy_level) * 0.1
         noise = np.random.laplace(0, noise_scale, data.shape)
         return data + noise
-      
+```
+</details>
+
+<details open>
+<summary><strong>Model Aggregation Logic</strong></summary>
+
+```python    
     def _aggregate_models(self, client_models: Dict) -> None:
         """Aggregate client models to update global model."""
         # Aggregate centers
@@ -537,7 +550,13 @@ class FedMVKMED:
             new_global_weights += model.V
           
         self.global_weights = new_global_weights / total_clients
-      
+```
+</details>
+
+<details open>
+<summary><strong>Federated Training Process</strong></summary>
+
+```python
     def fit(self, client_data: Dict[str, List[np.ndarray]]) -> 'FedMVKMED':
         """
         Fit the federated model using client data.
@@ -613,7 +632,13 @@ class FedMVKMED:
                   
         logger.info("✅ Federated training completed!")
         return self
-  
+```
+</details>
+
+<details open>
+<summary><strong>Prediction and Evaluation Methods</strong></summary>
+
+```python  
     def get_global_labels(self, X: List[np.ndarray] = None) -> np.ndarray:
         """Get cluster labels using the global model."""
         if X is None:
@@ -658,6 +683,7 @@ class FedMVKMED:
             results['ari'] = adjusted_rand_score(y_true, labels_pred)
           
         return results
+```
 
 print("✅ Federated MVKM-ED class implemented successfully!")
 ```
@@ -697,6 +723,8 @@ The **DHA (Depth-included Human Action)** dataset is ideal for multi-view cluste
   </div>
 </div>
 
+<details open>
+<summary><strong>DHA Dataset Simulation Code</strong></summary>
 
 ```python
 def load_dha_simulation():
@@ -793,6 +821,8 @@ print(f"\n📈 Sample statistics:")
 print(f"   - Depth features range: [{X_dha[0].min():.3f}, {X_dha[0].max():.3f}]")
 print(f"   - RGB features range: [{X_dha[1].min():.3f}, {X_dha[1].max():.3f}]")
 print(f"   - Label distribution: {np.bincount(y_true)[:10]}... (showing first 10 classes)")
+```
+</details>
 ```
 
 <div align="center">
