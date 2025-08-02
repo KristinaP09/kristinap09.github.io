@@ -5,10 +5,6 @@ date: 2025-08-02 09:30
 author: "Kristina P. Sinaga"
 mathjax: true
 last_modified_at: 2025-08-02 14:45 CEST
-css: 
-  - /assets/css/fedmvkm-styles.css
-js:
-  - /assets/js/fedmvkm-scripts.js
 tags:
   - Federated Learning
   - Multi-View Clustering
@@ -16,72 +12,54 @@ tags:
   - DHA Dataset
   - Privacy-Preserving ML
   - Python
+head:
+  - <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  - <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+      });
+    </script>
 ---
-<div class="title-container">
-  <h1>🌟 Fed-MVKM: Federated Multi-View K-Means</h1>
-  <h2>A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel</h2>
-</div>
+# `<font color='purple'>`🌟F`</font><font color='blue'>`e`</font><font color='green'>`d`</font><font color='red'>`-`</font><font color='orange'>`M`</font><font color='teal'>`V`</font><font color='magenta'>`K`</font><font color='navy'>`M`</font>`
 
-> **📅 Last Updated**: August 2nd, 2025  
-> **📝 Original Publication**: August 2nd, 2025  
+## A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel
+
+> **📅 Last Updated**: August 2nd, 2025
+> **📝 Original Publication**: August 2nd, 2025
 > **✨ Status**: Complete implementation with comprehensive analysis
 
-<div class="executive-summary">
+<div class="executive-summary" style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin-bottom: 20px;">
 <h3>Executive Summary</h3>
 <p>Fed-MVKM is a privacy-preserving clustering algorithm that enables multiple organizations to collaboratively analyze multi-view data without sharing raw information. This implementation achieves 32.7% better clustering quality than local-only approaches while maintaining strong privacy guarantees.</p>
 </div>
 
 ## Table of Contents
 
-<div class="toc">
-<ul>
-<li><a href="#introduction">Introduction</a>
-  <ul>
-    <li><a href="#the-problem-privacy-in-multi-view-clustering">The Problem: Privacy in Multi-View Clustering</a></li>
-    <li><a href="#our-solution-fed-mvkm-framework">Our Solution: Fed-MVKM Framework</a></li>
-  </ul>
-</li>
-<li><a href="#what-youll-learn">What You'll Learn</a></li>
-<li><a href="#technical-stack">Technical Stack</a></li>
-<li><a href="#theoretical-foundation">Theoretical Foundation</a>
-  <ul>
-    <li><a href="#multi-view-clustering-fundamentals">Multi-View Clustering Fundamentals</a></li>
-    <li><a href="#rectified-gaussian-kernel-enhancement">Rectified Gaussian Kernel Enhancement</a></li>
-    <li><a href="#mvkm-ed-objective-function">MVKM-ED Objective Function</a></li>
-    <li><a href="#federated-extension">Federated Extension</a></li>
-  </ul>
-</li>
-<li><a href="#implementation-guide">Implementation Guide</a>
-  <ul>
-    <li><a href="#getting-started-environment-setup">Environment Setup</a></li>
-    <li><a href="#core-algorithm-implementation">Core Algorithm Implementation</a></li>
-    <li><a href="#federated-extension-1">Federated Extension</a></li>
-  </ul>
-</li>
-<li><a href="#experimental-results">Experimental Results</a>
-  <ul>
-    <li><a href="#dha-dataset-simulation">Dataset Simulation</a></li>
-    <li><a href="#prepare-data-for-federated-setup">Federated Setup</a></li>
-    <li><a href="#evaluate-clustering-results">Performance Evaluation</a></li>
-  </ul>
-</li>
-<li><a href="#applications-and-deployment">Applications and Deployment</a></li>
-<li><a href="#conclusions">Conclusions and Key Findings</a></li>
-<li><a href="#future-directions">Future Directions</a></li>
-<li><a href="#references">References</a></li>
-<li><a href="#acknowledgments">Acknowledgments</a></li>
-</ul>
-</div>
+- [Introduction](#introduction)
+  - [The Problem: Privacy in Multi-View Clustering](#the-problem-privacy-in-multi-view-clustering)
+  - [Our Solution: Fed-MVKM Framework](#our-solution-fed-mvkm-framework)
+- [What You&#39;ll Learn](#what-youll-learn)
+- [Technical Stack](#technical-stack)
+- [Getting Started: Environment Setup](#getting-started-environment-setup)
+- [Implementation Guide](#implementation-guide)
+  - [Core Algorithm](#implement-mvkm-ed-core-classes)
+  - [Federated Extension](#implementing-the-federated-multi-view-k-means)
+- [Experimental Results](#prepare-data-for-federated-setup)
+  - [Dataset Description](#load-and-simulate-dha-dataset)
+  - [Performance Evaluation](#evaluate-clustering-results)
+- [Conclusions and Key Findings](#conclusions-and-key-findings)
+- [References](#references)
 
-<div class="section-nav">
+<div class="section-nav" style="display: flex; justify-content: space-between; background-color: #f8f9fa; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
   <a href="#introduction">Introduction</a>
-  <a href="#theoretical-foundation">Theory</a>
-  <a href="#implementation-guide">Implementation</a>
-  <a href="#experimental-results">Results</a>
-  <a href="#applications-and-deployment">Applications</a>
-  <a href="#conclusions">Conclusions</a>
-  <a href="#future-directions">Future Work</a>
-  <a href="#references">References</a>
+  <a href="#what-youll-learn">Learning Path</a>
+  <a href="#getting-started-environment-setup">Implementation</a>
+  <a href="#evaluate-clustering-results">Results</a>
+  <a href="#conclusions-and-key-findings">Conclusions</a>
 </div>
 
 ---
@@ -115,7 +93,7 @@ Traditional clustering approaches require centralizing all this data, creating s
   <em>Figure: Fed-MVKM enables privacy-preserving collaborative clustering across distributed sites and multiple data views</em>
 </div>
 
-This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework `</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
+This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework`</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
 
 ---
 
@@ -185,11 +163,7 @@ Multi-view clustering aims to discover data patterns by leveraging complementary
 
 Our approach uses **rectified Gaussian kernels** to enhance distance measurements:
 
-<div class="math-container">
-$$
-D(x_i^h, a_k^h) = 1 - e^{-\beta_h \|x_i^h - a_k^h\|^2}
-$$
-</div>
+$$ D(x_i^h, a_k^h) = 1 - e^{-\beta_h \|x_i^h - a_k^h\|^2} $$
 
 Where:
 
@@ -207,11 +181,7 @@ This formulation provides **three key advantages**:
 
 The core MVKM-ED algorithm minimizes:
 
-<div class="math-container">
-$$
-J_{\text{MVKM-ED}} = \sum_{h=1}^{m} \left( v_h^{\alpha} \sum_{k=1}^{c} \sum_{i=1}^{n} \mu_{ik} \cdot (1 - e^{-\beta_h \|x_i^h - a_k^h\|^2}) \right)
-$$
-</div>
+$$ J_{\text{MVKM-ED}} = \sum_{h=1}^{m} \left( v_h^{\alpha} \sum_{k=1}^{c} \sum_{i=1}^{n} \mu_{ik} \cdot (1 - e^{-\beta_h \|x_i^h - a_k^h\|^2}) \right) $$
 
 Where:
 
@@ -224,14 +194,9 @@ Where:
 
 The federated extension aggregates models across sites while preserving privacy:
 
-<div class="math-container">
-$$
-J_{\text{Fed-MVKM}} = \sum_{m=1}^{M} \sum_{h=1}^{s(m)} v_{[m]h}^{\alpha} \sum_{i=1}^{n(m)} \sum_{k=1}^{c(m)} \mu_{[m]ik} \big( 1 - e^{-\beta_{[m]}^h \|x_{[m]i}^h - a_{[m]k}^h \|^2} \big)
-$$
-</div>
+$$ J_{\text{Fed-MVKM}} = \sum_{m=1}^{M} \sum_{h=1}^{s(m)} v_{[m]h}^{\alpha} \sum_{i=1}^{n(m)} \sum_{k=1}^{c(m)} \mu_{[m]ik} \big( 1 - e^{-\beta_{[m]}^h \|x_{[m]i}^h - a_{[m]k}^h \|^2} \big) $$
 
 Where:
-
 - $M$ is the number of participating clients (federated sites)
 - $s(m)$ refers to the number of views client $m$ holds
 - $n(m)$ is the number of samples or data points held by client $m$
@@ -244,16 +209,15 @@ Where:
 
 The notation $[m]$ indicates parameters specific to client $m$. This federated objective function enables each client to optimize its local clustering while contributing to the global model without sharing raw data.
 
-<div class="center-image">
-  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/fed_mvkm_algorithm_flowchart.png" alt="Fed-MVKM Algorithm Flowchart" width="700">
-  <div class="image-caption">Figure: Fed-MVKM workflow showing data distribution, local computation, and model aggregation</div>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/fed_mvkm_algorithm_flowchart.png" alt="Fed-MVKM Algorithm Flowchart" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <br>
+  <em>Figure: Fed-MVKM workflow showing data distribution, local computation, and model aggregation</em>
 </div>
 
 ---
 
-# Implementation Guide {#implementation-guide}
-
-## Environment Setup {#getting-started-environment-setup}
+## 🚀 **Getting Started: Environment Setup**
 
 Let's begin by importing all necessary libraries and modules for our federated multi-view clustering implementation.
 
@@ -348,7 +312,7 @@ class MVKMED:
         self.index = None  # Cluster assignments
         self.param_beta = None
         self.objective_values = []
-  
+      
     def _initialize_centers(self, X: List[np.ndarray]) -> List[np.ndarray]:
         """Initialize cluster centers using random selection."""
         data_n = X[0].shape[0]
@@ -394,14 +358,14 @@ class MVKMED:
             for k in range(self.params.cluster_num):
                 numerator = np.zeros(X[h].shape[1])
                 denominator = 0
-          
+              
                 dist = np.sum((X[h] - self.A[h][k])**2, axis=1)
                 kernel_val = np.exp(-self.param_beta[h] * dist)
                 weighted_kernel = (self.V[h]**self.params.alpha) * kernel_val
-          
+              
                 numerator = np.sum(weighted_kernel[:, None] * self.U[:, k][:, None] * X[h], axis=0)
                 denominator = np.sum(weighted_kernel * self.U[:, k])
-          
+              
                 if denominator > 0:
                     centers[k] = numerator / denominator
                 else:
@@ -443,29 +407,29 @@ class MVKMED:
     def fit(self, X: List[np.ndarray]) -> 'MVKMED':
         """Fit the MVKM-ED model to the data."""
         logger.info("Starting MVKM-ED algorithm...")
-  
+      
         # Initialize parameters
         self.A = self._initialize_centers(X)
         self.V = np.ones(self.params.points_view) / self.params.points_view
-  
+      
         for time in range(1, self.params.max_iterations + 1):
             # Update parameters
             self.param_beta = self._compute_beta(X, time)
             self.U = self._update_memberships(X)
             self.A = self._update_centers(X)
             self.V = self._update_weights(X)
-      
+          
             # Compute objective
             obj = self._compute_objective(X)
             self.objective_values.append(obj)
-      
+          
             # Check convergence
             if time > 1:
                 diff = abs(self.objective_values[-1] - self.objective_values[-2])
                 if diff <= self.params.convergence_threshold:
                     logger.info(f"Algorithm converged after {time} iterations")
                     break
-  
+      
         # Get final cluster assignments
         self.index = np.argmax(self.U, axis=1)
         return self
@@ -497,7 +461,8 @@ Now let's implement the federated learning extension of our MVKM-ED algorithm. T
 </ol>
 </div>
 
-<h3>Full FedMVKMED Implementation</h3>
+<details>
+<summary>Click to expand: Full FedMVKMED Implementation</summary>
 
 ```python
 class FedMVKMED:
@@ -517,7 +482,7 @@ class FedMVKMED:
     def __init__(self, params: FedMVKMEDParams):
         """
         Initialize the federated learning model
-  
+      
         Args:
             params: Configuration parameters for the federated clustering
         """
@@ -526,7 +491,7 @@ class FedMVKMED:
         self.global_centers = None  # Global cluster centers
         self.global_weights = None  # Global view weights
         self.global_objective_values = []  # Track convergence
-  
+      
     def _initialize_global_model(self, sample_data: List[np.ndarray]):
         """Initialize global model parameters."""
         # Initialize global centers randomly
@@ -535,16 +500,16 @@ class FedMVKMED:
         for view_dim in data_shapes:
             centers = np.random.randn(self.params.cluster_num, view_dim)
             self.global_centers.append(centers)
-  
+      
         # Initialize global view weights
         self.global_weights = np.ones(self.params.points_view) / self.params.points_view
-  
+      
     def _add_privacy_noise(self, data: np.ndarray, privacy_level: float) -> np.ndarray:
         """Add differential privacy noise to data."""
         noise_scale = (1 - privacy_level) * 0.1
         noise = np.random.laplace(0, noise_scale, data.shape)
         return data + noise
-  
+      
     def _aggregate_models(self, client_models: Dict) -> None:
         """Aggregate client models to update global model."""
         # Aggregate centers
@@ -552,54 +517,54 @@ class FedMVKMED:
         for view_idx in range(self.params.points_view):
             view_centers = np.zeros_like(self.global_centers[view_idx])
             total_weight = 0
-      
+          
             for client_id, model in client_models.items():
                 client_weight = len(self.clients[client_id]['data'][0])  # Data size as weight
                 view_centers += client_weight * model.A[view_idx]
                 total_weight += client_weight
-          
+              
             view_centers /= total_weight
             new_global_centers.append(view_centers)
-      
+          
         self.global_centers = new_global_centers
-  
+      
         # Aggregate view weights
         new_global_weights = np.zeros(self.params.points_view)
         total_clients = len(client_models)
-  
+      
         for client_id, model in client_models.items():
             new_global_weights += model.V
-      
+          
         self.global_weights = new_global_weights / total_clients
-  
+      
     def fit(self, client_data: Dict[str, List[np.ndarray]]) -> 'FedMVKMED':
         """
         Fit the federated model using client data.
-  
+      
         Parameters
         ----------
         client_data : Dict[str, List[np.ndarray]]
             Dictionary mapping client IDs to their multi-view data
         """
         logger.info("Starting Federated MVKM-ED training...")
-  
+      
         # Store client data
         self.clients = {client_id: {'data': data} for client_id, data in client_data.items()}
-  
+      
         # Initialize global model with first client's data structure
         sample_data = list(client_data.values())[0]
         self._initialize_global_model(sample_data)
-  
+      
         # Federated training rounds
         for round_num in range(self.params.communication_rounds):
             logger.info(f"📡 Communication Round {round_num + 1}/{self.params.communication_rounds}")
-      
+          
             client_models = {}
-      
+          
             # Train each client locally
             for client_id, client_info in self.clients.items():
                 logger.info(f"Training client: {client_id}")
-          
+              
                 # Create local model with current global parameters
                 local_params = MVKMEDParams(
                     cluster_num=self.params.cluster_num,
@@ -609,34 +574,34 @@ class FedMVKMED:
                     max_iterations=10,  # Fewer iterations for federated setting
                     convergence_threshold=self.params.client_tolerance
                 )
-          
+              
                 local_model = MVKMED(local_params)
-          
+              
                 # Initialize with global parameters
                 local_model.A = [center.copy() for center in self.global_centers]
                 local_model.V = self.global_weights.copy()
-          
+              
                 # Apply privacy noise to local data
                 private_data = [
                     self._add_privacy_noise(view_data, self.params.privacy_level)
                     for view_data in client_info['data']
                 ]
-          
+              
                 # Local training
                 local_model.fit(private_data)
                 client_models[client_id] = local_model
-          
+              
             # Aggregate client models
             self._aggregate_models(client_models)
-      
+          
             # Compute global objective (approximate)
             global_obj = 0
             for client_id, model in client_models.items():
                 if model.objective_values:
                     global_obj += model.objective_values[-1]
-      
+          
             self.global_objective_values.append(global_obj / len(client_models))
-      
+          
             # Check global convergence
             if round_num > 0:
                 obj_diff = abs(self.global_objective_values[-1] - self.global_objective_values[-2])
@@ -644,7 +609,7 @@ class FedMVKMED:
                 if obj_diff <= self.params.convergence_threshold:
                     logger.info(f"Federated training converged after {round_num + 1} rounds")
                     break
-              
+                  
         logger.info("✅ Federated training completed!")
         return self
   
@@ -660,7 +625,7 @@ class FedMVKMED:
                     else:
                         all_data[view_idx] = np.vstack([all_data[view_idx], client_info['data'][view_idx]])
             X = all_data
-      
+          
         # Create a temporary model for prediction
         temp_params = MVKMEDParams(
             cluster_num=self.params.cluster_num,
@@ -672,7 +637,7 @@ class FedMVKMED:
         temp_model.A = self.global_centers
         temp_model.V = self.global_weights
         temp_model.param_beta = np.ones(self.params.points_view) * 0.1  # Default beta
-  
+      
         # Get predictions
         U = temp_model._update_memberships(X)
         return np.argmax(U, axis=1)
@@ -682,15 +647,15 @@ class FedMVKMED:
         if y_true is None:
             logger.warning("No ground truth labels provided. Skipping evaluation.")
             return {}
-      
+          
         labels_pred = self.get_global_labels()
         results = {}
-  
+      
         if 'nmi' in metrics:
             results['nmi'] = normalized_mutual_info_score(y_true, labels_pred)
         if 'ari' in metrics:
             results['ari'] = adjusted_rand_score(y_true, labels_pred)
-      
+          
         return results
 
 print("✅ Federated MVKM-ED class implemented successfully!")
@@ -731,11 +696,6 @@ The **DHA (Depth-included Human Action)** dataset is ideal for multi-view cluste
   </div>
 </div>
 
-<div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/93a47d55-5f22-48f1-b7f3-e1b3c9dc50ac" alt="DHA Dataset Visualization" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <br>
-  <em>Figure: Sample visualization of DHA dataset action categories after PCA reduction</em>
-</div>
 
 ```python
 def load_dha_simulation():
@@ -835,7 +795,7 @@ print(f"   - Label distribution: {np.bincount(y_true)[:10]}... (showing first 10
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/93a47d55-5f22-48f1-b7f3-e1b3c9dc50ac" alt="DHA Dataset Visualization" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/DHA_PCA_visualized.png" alt="DHA Dataset Visualization" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Sample visualization of DHA dataset action categories after PCA reduction</em>
 </div>
@@ -860,7 +820,7 @@ def create_federated_splits(X_dha, y_true, n_sites=3):
         True labels
     n_sites : int
         Number of federated sites
-  
+      
     Returns:
     --------
     client_data : Dict[str, List[np.ndarray]]
@@ -916,7 +876,7 @@ def create_federated_splits(X_dha, y_true, n_sites=3):
         redistribute_from_site1 = site1_indices[:additional_needed]
         site1_indices = site1_indices[additional_needed:]
         site3_indices = np.concatenate([site3_indices, redistribute_from_site1])
-  
+      
         # Update client data
         client_data['research_hospital'] = [X_dha[0][site1_indices], X_dha[1][site1_indices]]
         client_labels['research_hospital'] = y_true[site1_indices]
@@ -1007,7 +967,7 @@ print("\n✅ Parameters configured successfully!")
 
 ---
 
-## Training the Federated Model {#training-the-federated-model}
+## 🚀 **Initialize and Train Federated Model**
 
 Time to train our federated multi-view clustering model! This process involves multiple communication rounds where each client trains locally and then shares updates with the global model.
 
@@ -1062,9 +1022,7 @@ Now we'll evaluate the quality of our federated clustering algorithm using stand
   </ul>
 </div>
 
-# Experimental Results {#experimental-results}
-
-## Quantitative Performance Evaluation {#evaluate-clustering-results}
+### Quantitative Performance Evaluation
 
 ```python
 # Get global clustering results
@@ -1318,8 +1276,6 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
   </div>
 </div>
 
-# Applications and Deployment {#applications-and-deployment}
-
 ## Real-World Applications
 
 <div class="applications-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
@@ -1341,16 +1297,14 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
     <div style="margin-top: 10px; font-style: italic; font-size: 0.9em;">Example: Pharmaceutical research across multiple laboratories.</div>
   </div>
 
-  <div class="application-card" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #fff;">
+<div class="application-card" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #fff;">
     <h3 style="color: #6f42c1;">🎬 Action Recognition</h3>
     <p>Improve human activity recognition by combining multi-modal data (video, depth, motion) from different capture devices and locations.</p>
     <div style="margin-top: 10px; font-style: italic; font-size: 0.9em;">Example: Assistive technologies for elderly care across multiple facilities.</div>
   </div>
 </div>
 
-<div style="text-align: right; margin-top: 20px;">
-  <a href="#" style="display: inline-block; background-color: #f0f0f0; color: #333; padding: 5px 10px; text-decoration: none; border-radius: 5px; font-size: 0.8em;">↑ Back to Top</a>
-</div>## Practical Deployment Considerations {#deployment-considerations}
+## Practical Deployment Considerations
 
 <div class="deployment-considerations" style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
   <h3>Scaling to Larger Networks</h3>
@@ -1378,7 +1332,7 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
   </ul>
 </div>
 
-# Future Directions {#future-directions}
+## Future Directions
 
 <div class="future-research" style="display: flex; gap: 20px; margin-bottom: 30px;">
   <div style="flex-basis: 50%; background: linear-gradient(to right bottom, #f9f9f9, #f0f0ff); padding: 20px; border-radius: 8px;">
@@ -1438,7 +1392,7 @@ This Fed-MVKM-ED approach is particularly valuable for:
 
 ---
 
-# References {#references}
+# References
 
 <div class="references-container" style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
 
@@ -1496,32 +1450,11 @@ This Fed-MVKM-ED approach is particularly valuable for:
 }
 ```
 
-# Conclusions and Key Findings {#conclusions}
+```
 
-<div class="conclusions">
-  <h2>Key Findings:</h2>
-  
-  <ol style="padding-left: 25px;">
-    <li><strong>Privacy Preservation</strong>: Fed-MVKM enables collaborative model training without sharing raw data, addressing privacy concerns in sensitive applications.</li>
-    <li><strong>Enhanced Clustering Quality</strong>: By leveraging multiple views of data, Fed-MVKM achieves more robust clustering compared to single-view methods.</li>
-    <li><strong>Communication Efficiency</strong>: The algorithm minimizes communication overhead by sharing only cluster centers and membership matrices rather than raw data.</li>
-    <li><strong>Scalability</strong>: Our experiments demonstrate Fed-MVKM's ability to scale with increasing numbers of clients while maintaining performance.</li>
-    <li><strong>Practical Applicability</strong>: The diverse applications presented highlight Fed-MVKM's versatility across domains including healthcare, multimedia analysis, and network security.</li>
-  </ol>
+# Acknowledgments
 
-  <h2>Future Directions:</h2>
-  
-  <ul style="list-style-type: square; padding-left: 25px;">
-    <li>Integration with differential privacy techniques to provide stronger privacy guarantees</li>
-    <li>Extension to handle non-Euclidean distance metrics for specialized domains</li>
-    <li>Optimization for resource-constrained edge devices</li>
-    <li>Exploration of dynamic view weighting mechanisms to handle varying data quality</li>
-  </ul>
-</div>
-
-# Acknowledgments {#acknowledgments}
-
-<div class="acknowledgments">
+<div class="acknowledgments" style="background-color: #f7f7ff; padding: 20px; border-radius: 8px; margin: 30px 0;">
   <h3>Support and Funding</h3>
   <p>This work was supported by:</p>
   <ul>
@@ -1540,6 +1473,6 @@ This Fed-MVKM-ED approach is particularly valuable for:
 </div>
 
 <div style="text-align: center; margin: 30px 0;">
-  <a href="#" class="back-to-top">Back to Top ↑</a>
+  <a href="#" style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Top ↑</a>
 </div>
 ```
