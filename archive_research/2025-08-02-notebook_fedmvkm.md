@@ -251,10 +251,6 @@ The notation $[m]$ indicates parameters specific to client $m$. This federated o
 
 ---
 
-<div style="text-align: right; margin-top: 20px;">
-  <a href="#" class="back-to-top">↑ Back to Top</a>
-</div>
-
 # Implementation Guide {#implementation-guide}
 
 ## Environment Setup {#getting-started-environment-setup}
@@ -1524,10 +1520,6 @@ This Fed-MVKM-ED approach is particularly valuable for:
   </ul>
 </div>
 
-<div style="text-align: right; margin-top: 20px;">
-  <a href="#" style="display: inline-block; background-color: #f0f0f0; color: #333; padding: 5px 10px; text-decoration: none; border-radius: 5px; font-size: 0.8em;">↑ Back to Top</a>
-</div>
-
 # Acknowledgments {#acknowledgments}
 
 <div class="acknowledgments">
@@ -1549,6 +1541,6 @@ This Fed-MVKM-ED approach is particularly valuable for:
 </div>
 
 <div style="text-align: center; margin: 30px 0;">
-  <a href="#" class="back-to-top" style="background-color: #007bff; color: white; padding: 10px 20px; font-weight: bold;">Back to Top ↑</a>
+  <a href="#" class="back-to-top">Back to Top ↑</a>
 </div>
 ```
