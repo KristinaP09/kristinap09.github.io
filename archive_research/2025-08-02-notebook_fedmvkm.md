@@ -845,7 +845,7 @@ print("\n✅ Evaluation completed!")
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/34b4f997-a8f7-44b0-9c2c-ada6aa468b8c.png" alt="Performance Comparison" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/16c8f162-fd27-4a5c-b084-5d6368c36c67.png" alt="Performance Comparison" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Performance comparison between federated model and individual site models</em>
 </div>
