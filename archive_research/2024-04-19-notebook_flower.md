@@ -4,6 +4,7 @@ title: "🌸 Flower: A Comprehensive Guide to Federated Learning"
 date: 2024-04-19 07:00
 author: "Kristina"
 mathjax: true
+last_modified_at: 2025-08-02 11:23 CEST
 tags:
   - Federated Learning
   - Flower Framework
@@ -12,19 +13,23 @@ tags:
   - Distributed Computing
   - Privacy-Preserving ML
 ---
+# `<font color='blue'>`&#x1F33C;&#127800;F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R &#x1F33C;&#127800;`</font>`
 
-# <font color='blue'>&#x1F33C;&#127800;F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R &#x1F33C;&#127800;</font> 
 ## A Comprehensive Tutorial on Federated Learning with the Flower Framework
+
+> **📅 Last Updated**: August 2nd, 2025
+> **📝 Original Publication**: April 19th, 2024
+> **✨ Status**: Enhanced with improved documentation and comprehensive analysis
 
 ---
 
 ### 🎯 **Tutorial Overview**
 
-**Federated Learning** revolutionizes machine learning by enabling model training across multiple clients without centralizing sensitive data. Instead of moving data to the model, we bring the model to the data! 
+**Federated Learning** revolutionizes machine learning by enabling model training across multiple clients without centralizing sensitive data. Instead of moving data to the model, we bring the model to the data!
 
 > **Key Concept**: Each client trains locally on their private data, then shares only model parameters (not raw data) with a central server for aggregation.
 
-This tutorial demonstrates how the **<font color='green'>Flower framework &#128512;</font>** makes federated learning implementation surprisingly straightforward and scalable.
+This tutorial demonstrates how the **`<font color='green'>`Flower framework &#128512;`</font>`** makes federated learning implementation surprisingly straightforward and scalable.
 
 ---
 
@@ -40,6 +45,7 @@ This tutorial demonstrates how the **<font color='green'>Flower framework &#1285
 ---
 
 ### 🛠️ **Technical Stack**
+
 - **Framework**: Flower (Federated Learning)
 - **ML Library**: PyTorch
 - **Dataset**: MNIST (Handwritten Digits)
@@ -49,22 +55,22 @@ This tutorial demonstrates how the **<font color='green'>Flower framework &#1285
 ---
 
 ## 🚀 **Getting Started: Environment Setup**itle: "Flower"
+
 date: 2024-04-19 07:00
 author: "Kristina"
 mathjax: true
 tags:
-  - Federated learning
-  - Flower
+
+- Federated learning
+- Flower
+
 ---
 
+## `<font color='blue'>`&#x1F33C;&#127800;F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R &#x1F33C;&#127800;`</font>`
 
-## <font color='blue'>&#x1F33C;&#127800;F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R &#x1F33C;&#127800;</font> 
+`<font color='black'>` The idea behind Federated Learning is to train a model between multiple clients and a server without having to share any data. This is done by letting each client train the model locally on its data and send its parameters back to the server, which then aggregates all the clients’ parameters together using a predefined strategy. This process is made very simple by`</font>` `<font color='green'>`using the Flower framework &#128512;.`</font>`
 
-<font color='black'> The idea behind Federated Learning is to train a model between multiple clients and a server without having to share any data. This is done by letting each client train the model locally on its data and send its parameters back to the server, which then aggregates all the clients’ parameters together using a predefined strategy. This process is made very simple by</font> <font color='green'>using the Flower framework &#128512;.</font>
-
-
-### <font color='orange'>Flower: A Friendly Federated Learning Research Framework on MNIST Data.</font>
-
+### `<font color='orange'>`Flower: A Friendly Federated Learning Research Framework on MNIST Data.`</font>`
 
 ## 🚀 **Getting Started: Environment Setup**
 
@@ -125,13 +131,13 @@ class Net(nn.Module):
     """
     def __init__(self, num_classes: int = 10) -> None:
         super(Net, self).__init__()
-        
+      
         # Convolutional Feature Extractor
         self.conv1 = nn.Conv2d(1, 6, 5)      # 28x28 -> 24x24
         self.pool = nn.MaxPool2d(2, 2)       # 24x24 -> 12x12
         self.conv2 = nn.Conv2d(6, 16, 5)     # 12x12 -> 8x8
                                             # After pooling: 4x4
-        
+      
         # Classifier Head
         self.fc1 = nn.Linear(16 * 4 * 4, 120)
         self.fc2 = nn.Linear(120, 84)
@@ -141,10 +147,10 @@ class Net(nn.Module):
         # Feature extraction
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
-        
+      
         # Flatten for classifier
         x = x.view(-1, 16 * 4 * 4)
-        
+      
         # Classification
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
@@ -174,10 +180,10 @@ def get_mnist():
         transforms.ToTensor(),
         transforms.Normalize((0.1307,), (0.3081,))  # MNIST mean and std
     ])
-    
+  
     trainset = MNIST("./data", train=True, download=True, transform=transform)
     testset = MNIST("./data", train=False, download=True, transform=transform)
-    
+  
     return trainset, testset
 
 # Load dataset
@@ -197,7 +203,7 @@ Let's visualize some sample images to understand our dataset better:
 def visualise_n_random_examples(trainset_, n: int = 64, verbose: bool = True):
     """
     Visualize n random examples from the dataset in a grid layout
-    
+  
     Args:
         trainset_: MNIST training dataset
         n: Number of images to display
@@ -207,21 +213,21 @@ def visualise_n_random_examples(trainset_, n: int = 64, verbose: bool = True):
     idx = list(range(len(trainset_.data)))
     random.shuffle(idx)
     idx = idx[:n]
-    
+  
     if verbose:
         print(f"🎯 Displaying {n} random samples with indices: {idx[:10]}..." if n > 10 else f"🎯 Displaying samples with indices: {idx}")
 
     # Create visualization grid
     num_cols = 16
     num_rows = int(np.ceil(len(idx) / num_cols))
-    
+  
     fig, axs = plt.subplots(
         figsize=(16, num_rows * 1), 
         nrows=num_rows, 
         ncols=num_cols,
         gridspec_kw={'hspace': 0.1, 'wspace': 0.1}
     )
-    
+  
     # Ensure axs is always 2D for consistent indexing
     if num_rows == 1:
         axs = axs.reshape(1, -1)
@@ -232,12 +238,12 @@ def visualise_n_random_examples(trainset_, n: int = 64, verbose: bool = True):
         axs[row, col].imshow(trainset_.data[i], cmap="gray")
         axs[row, col].set_title(f'{trainset_.targets[i]}', fontsize=8)
         axs[row, col].axis('off')
-    
+  
     # Hide unused subplots
     for c_i in range(len(idx), num_rows * num_cols):
         row, col = c_i // num_cols, c_i % num_cols
         axs[row, col].axis('off')
-    
+  
     plt.suptitle('MNIST Dataset Sample - Random Handwritten Digits', fontsize=14, y=0.98)
     plt.tight_layout()
     plt.show()
@@ -263,42 +269,42 @@ Before diving into federated learning, let's define our core training and evalua
 def train(net, trainloader, optimizer, epochs: int = 1):
     """
     Train the network on the training set
-    
+  
     Args:
         net: Neural network model
         trainloader: Training data loader
         optimizer: Optimizer (SGD, Adam, etc.)
         epochs: Number of training epochs
-        
+      
     Returns:
         Trained network
     """
     criterion = torch.nn.CrossEntropyLoss()
     net.train()  # Set to training mode
-    
+  
     total_loss = 0.0
     total_samples = 0
-    
+  
     for epoch in range(epochs):
         epoch_loss = 0.0
         for batch_idx, (images, labels) in enumerate(trainloader):
             images, labels = images.to(DEVICE), labels.to(DEVICE)
-            
+          
             # Forward pass
             optimizer.zero_grad()
             outputs = net(images)
             loss = criterion(outputs, labels)
-            
+          
             # Backward pass
             loss.backward()
             optimizer.step()
-            
+          
             epoch_loss += loss.item()
             total_samples += labels.size(0)
-            
+          
         total_loss += epoch_loss
         print(f"   Epoch {epoch+1}/{epochs}: Loss = {epoch_loss/len(trainloader):.4f}")
-    
+  
     avg_loss = total_loss / (epochs * len(trainloader))
     print(f"📈 Training completed: Avg Loss = {avg_loss:.4f}")
     return net
@@ -307,48 +313,48 @@ def train(net, trainloader, optimizer, epochs: int = 1):
 def test(net, testloader):
     """
     Evaluate the network on the test set
-    
+  
     Args:
         net: Trained neural network
         testloader: Test data loader
-        
+      
     Returns:
         tuple: (average_loss, accuracy)
     """
     criterion = torch.nn.CrossEntropyLoss()
     correct, total_loss = 0, 0.0
     net.eval()  # Set to evaluation mode
-    
+  
     with torch.no_grad():
         for images, labels in testloader:
             images, labels = images.to(DEVICE), labels.to(DEVICE)
             outputs = net(images)
-            
+          
             # Calculate loss
             loss = criterion(outputs, labels)
             total_loss += loss.item()
-            
+          
             # Calculate accuracy
             _, predicted = torch.max(outputs.data, 1)
             correct += (predicted == labels).sum().item()
-    
+  
     accuracy = correct / len(testloader.dataset)
     avg_loss = total_loss / len(testloader)
-    
+  
     return avg_loss, accuracy
 
 
 def run_centralised(epochs: int = 5, lr: float = 0.01, momentum: float = 0.9):
     """
     Baseline: Traditional centralized training for comparison
-    
+  
     Args:
         epochs: Number of training epochs
         lr: Learning rate
         momentum: SGD momentum
     """
     print("🎯 Running Centralized Training (Baseline)")
-    
+  
     # Initialize model and optimizer
     model = Net(num_classes=10).to(DEVICE)
     optimizer = torch.optim.SGD(model.parameters(), lr=lr, momentum=momentum)
@@ -363,11 +369,11 @@ def run_centralised(epochs: int = 5, lr: float = 0.01, momentum: float = 0.9):
 
     # Evaluate performance
     loss, accuracy = test(trained_model, testloader)
-    
+  
     print(f"🏆 Centralized Results:")
     print(f"   • Test Loss: {loss:.4f}")
     print(f"   • Test Accuracy: {accuracy:.4f} ({accuracy*100:.2f}%)")
-    
+  
     return trained_model, loss, accuracy
 
 # Run baseline for comparison
@@ -391,32 +397,32 @@ In federated learning, we need to split our dataset among multiple clients. Let'
 def prepare_dataset(num_partitions: int, batch_size: int = 32, val_ratio: float = 0.1):
     """
     Partition the training set into N disjoint subsets for federated clients
-    
+  
     Args:
         num_partitions: Number of clients/partitions
         batch_size: Batch size for data loaders
         val_ratio: Fraction of data for validation
-        
+      
     Returns:
         tuple: (trainloaders, valloaders, testloader)
     """
     print(f"🔄 Preparing federated dataset for {num_partitions} clients...")
-    
+  
     # Load the dataset
     trainset, testset = get_mnist()
-    
+  
     # Split training set into equal partitions
     num_images = len(trainset) // num_partitions
     partition_lengths = [num_images] * num_partitions
-    
+  
     # Handle remainder samples
     remainder = len(trainset) % num_partitions
     for i in range(remainder):
         partition_lengths[i] += 1
-    
+  
     print(f"   • Total training samples: {len(trainset):,}")
     print(f"   • Samples per client: {num_images} (± {remainder} for some clients)")
-    
+  
     # Create partitions with reproducible random seed
     trainsets = random_split(
         trainset, partition_lengths, torch.Generator().manual_seed(2023)
@@ -425,7 +431,7 @@ def prepare_dataset(num_partitions: int, batch_size: int = 32, val_ratio: float 
     # Create data loaders with train/validation splits
     trainloaders = []
     valloaders = []
-    
+  
     for i, trainset_partition in enumerate(trainsets):
         num_total = len(trainset_partition)
         num_val = int(val_ratio * num_total)
@@ -444,22 +450,21 @@ def prepare_dataset(num_partitions: int, batch_size: int = 32, val_ratio: float 
         valloaders.append(
             DataLoader(for_val, batch_size=batch_size, shuffle=False, num_workers=2)
         )
-    
+  
     # Global test loader
     testloader = DataLoader(testset, batch_size=128, num_workers=2)
-    
+  
     print(f"✅ Dataset partitioning completed!")
     print(f"   • Training loaders: {len(trainloaders)}")
     print(f"   • Validation loaders: {len(valloaders)}")
     print(f"   • Test samples: {len(testset):,}")
-    
+  
     return trainloaders, valloaders, testloader
 ```
 
 ### 📊 **Analyzing Data Distribution**
 
 Let's examine how data is distributed across clients:
-
 
 ### 📊 **Analyzing Data Distribution**
 
@@ -532,12 +537,12 @@ Now comes the heart of federated learning - defining our Flower client! A Flower
 
 ### 🔑 **Core Client Methods**
 
-| Method | Purpose | Description |
-|--------|---------|-------------|
-| `fit()` | 🏋️ **Local Training** | Train model locally and return updated parameters |
-| `evaluate()` | 📊 **Local Evaluation** | Evaluate global model on local validation data |
-| `set_parameters()` | 📥 **Parameter Loading** | Load global model parameters from server |
-| `get_parameters()` | 📤 **Parameter Extraction** | Extract local model parameters for server |
+| Method               | Purpose                          | Description                                       |
+| -------------------- | -------------------------------- | ------------------------------------------------- |
+| `fit()`            | 🏋️**Local Training**     | Train model locally and return updated parameters |
+| `evaluate()`       | 📊**Local Evaluation**     | Evaluate global model on local validation data    |
+| `set_parameters()` | 📥**Parameter Loading**    | Load global model parameters from server          |
+| `get_parameters()` | 📤**Parameter Extraction** | Extract local model parameters for server         |
 
 > **Key Insight**: Federated learning is like having a distributed team where each member (client) works on their own data, but everyone shares their learnings (parameters) to build a better collective model! 🤝
 
@@ -563,24 +568,24 @@ print(f"   • Ready for federated learning!")
 class FlowerClient(fl.client.NumPyClient):
     """
     A Flower client for federated MNIST classification
-    
+  
     This client can:
     - Receive global model parameters from the server
     - Train locally on private data
     - Send updated parameters back to the server
     - Evaluate global model performance locally
     """
-    
+  
     def __init__(self, trainloader, valloader) -> None:
         super().__init__()
-        
+      
         # Store client's private data
         self.trainloader = trainloader
         self.valloader = valloader
-        
+      
         # Initialize local model
         self.model = Net(num_classes=10).to(DEVICE)
-        
+      
         print(f"🌸 Flower Client initialized:")
         print(f"   • Training samples: {len(trainloader.dataset)}")
         print(f"   • Validation samples: {len(valloader.dataset)}")
@@ -589,24 +594,24 @@ class FlowerClient(fl.client.NumPyClient):
     def set_parameters(self, parameters: NDArrays) -> None:
         """
         Load parameters received from the server into the local model
-        
+      
         Args:
             parameters: List of NumPy arrays representing model weights
         """
         # Convert NumPy arrays back to PyTorch tensors
         params_dict = zip(self.model.state_dict().keys(), parameters)
         state_dict = OrderedDict({k: torch.Tensor(v) for k, v in params_dict})
-        
+      
         # Load parameters into the model
         self.model.load_state_dict(state_dict, strict=True)
 
     def get_parameters(self, config: Dict[str, Scalar]) -> NDArrays:
         """
         Extract model parameters and convert to NumPy arrays
-        
+      
         Args:
             config: Configuration dictionary (unused in this implementation)
-            
+          
         Returns:
             List of NumPy arrays representing model weights
         """
@@ -615,16 +620,16 @@ class FlowerClient(fl.client.NumPyClient):
     def fit(self, parameters: NDArrays, config: Dict[str, Scalar]) -> Tuple[NDArrays, int, Dict]:
         """
         Perform local training using the global model parameters
-        
+      
         Args:
             parameters: Global model parameters from server
             config: Training configuration
-            
+          
         Returns:
             tuple: (updated_parameters, num_samples, metrics)
         """
         print(f"🏋️ Starting local training...")
-        
+      
         # Load global model parameters
         self.set_parameters(parameters)
 
@@ -642,33 +647,33 @@ class FlowerClient(fl.client.NumPyClient):
         # Return updated parameters
         updated_parameters = self.get_parameters({})
         num_samples = len(self.trainloader.dataset)
-        
+      
         print(f"✅ Local training completed ({num_samples} samples)")
-        
+      
         return updated_parameters, num_samples, {}
 
     def evaluate(self, parameters: NDArrays, config: Dict[str, Scalar]) -> Tuple[float, int, Dict[str, Scalar]]:
         """
         Evaluate the global model on local validation data
-        
+      
         Args:
             parameters: Global model parameters
             config: Evaluation configuration
-            
+          
         Returns:
             tuple: (loss, num_samples, metrics)
         """
         print(f"📊 Evaluating global model locally...")
-        
+      
         # Load global model parameters
         self.set_parameters(parameters)
-        
+      
         # Evaluate on local validation set
         loss, accuracy = test(self.model, self.valloader)
         num_samples = len(self.valloader.dataset)
-        
+      
         print(f"📈 Local evaluation: Loss={loss:.4f}, Accuracy={accuracy:.4f}")
-        
+      
         return float(loss), num_samples, {"accuracy": accuracy}
 
 
@@ -691,15 +696,17 @@ The **strategy** is the brain of federated learning! It orchestrates the entire 
 **Federated Averaging (FedAvg)** is simple yet powerful:
 
 1. **📤 Server** sends global model to selected clients
-2. **🏋️ Clients** train locally on their private data  
+2. **🏋️ Clients** train locally on their private data
 3. **📥 Server** receives updated model parameters
 4. **⚖️ Aggregation** averages all client updates (weighted by data size)
 5. **🔄 Repeat** for multiple rounds
 
-> **Mathematical Foundation**: 
+> **Mathematical Foundation**:
+>
 > ```
 > w_global = Σ(n_i * w_i) / Σ(n_i)
 > ```
+>
 > Where `w_i` are client weights and `n_i` are client data sizes
 
 ### 🔧 **Implementing FedAvg with Flower**
@@ -708,30 +715,30 @@ The **strategy** is the brain of federated learning! It orchestrates the entire 
 def get_evaluate_fn(testloader):
     """
     Create a centralized evaluation function for the global model
-    
+  
     This function will be called by the server after each round to assess
     global model performance on a held-out test set.
-    
+  
     Args:
         testloader: DataLoader for the test dataset
-        
+      
     Returns:
         evaluate_fn: Function that evaluates global model
     """
     def evaluate_fn(server_round: int, parameters: NDArrays, config: Dict[str, Scalar]):
         """
         Evaluate the global model on the centralized test set
-        
+      
         Args:
             server_round: Current federated learning round
             parameters: Global model parameters
             config: Evaluation configuration
-            
+          
         Returns:
             tuple: (loss, metrics_dict)
         """
         print(f"🌍 Round {server_round}: Evaluating global model...")
-        
+      
         # Create a fresh model for evaluation
         model = Net(num_classes=10).to(DEVICE)
 
@@ -742,11 +749,11 @@ def get_evaluate_fn(testloader):
 
         # Evaluate on the global test set
         loss, accuracy = test(model, testloader)
-        
+      
         print(f"🏆 Global Model Performance:")
         print(f"   • Test Loss: {loss:.4f}")
         print(f"   • Test Accuracy: {accuracy:.4f} ({accuracy*100:.2f}%)")
-        
+      
         return loss, {"accuracy": accuracy}
 
     return evaluate_fn
@@ -760,18 +767,18 @@ strategy = fl.server.strategy.FedAvg(
     fraction_evaluate=0.1,      # 10% of clients participate in evaluation  
     min_available_clients=50,   # Minimum clients needed to start training
     evaluate_fn=get_evaluate_fn(testloader),  # Centralized evaluation function
-    
+  
     # Optional: Configure client sampling and aggregation
     min_fit_clients=10,         # Minimum clients for training round
     min_evaluate_clients=5,     # Minimum clients for evaluation round
-    
+  
     # Training configuration sent to clients
     fit_config_fn=lambda server_round: {
         "lr": 0.01,            # Learning rate
         "momentum": 0.9,       # SGD momentum  
         "epochs": 1,           # Local training epochs
     },
-    
+  
     # Evaluation configuration sent to clients
     evaluate_config_fn=lambda server_round: {
         "batch_size": 64,      # Evaluation batch size
@@ -797,27 +804,27 @@ We need a factory function to create clients dynamically during simulation:
 def generate_client_fn(trainloaders, valloaders):
     """
     Generate a client factory function for Flower simulation
-    
+  
     Args:
         trainloaders: List of training data loaders (one per client)
         valloaders: List of validation data loaders (one per client)
-        
+      
     Returns:
         client_fn: Function that creates FlowerClient instances
     """
     def client_fn(cid: str) -> FlowerClient:
         """
         Create a FlowerClient instance for a given client ID
-        
+      
         Args:
             cid: Client ID (string representation of client index)
-            
+          
         Returns:
             FlowerClient instance with the client's data partition
         """
         client_id = int(cid)
         print(f"🌸 Creating client {client_id} with {len(trainloaders[client_id].dataset)} training samples")
-        
+      
         return FlowerClient(
             trainloader=trainloaders[client_id], 
             valloader=valloaders[client_id]
@@ -877,7 +884,8 @@ print(f"\n⏱️ Simulation completed in {simulation_time:.2f} seconds")
 print(f"🏆 Federated learning finished successfully!")
 ```
 
-> **⚡ Performance Note**: Flower simulation is remarkably fast! 
+> **⚡ Performance Note**: Flower simulation is remarkably fast!
+>
 > - **10 rounds**: ~2 minutes on CPU
 > - **20 rounds**: ~15 minutes on CPU
 > - Scales efficiently with more clients! 🚀
@@ -902,7 +910,7 @@ if "accuracy" in history.metrics_centralized:
     global_accuracy_centralized = history.metrics_centralized["accuracy"]
     rounds = [data[0] for data in global_accuracy_centralized]
     accuracies = [100.0 * data[1] for data in global_accuracy_centralized]
-    
+  
     # Print summary statistics
     print(f"\n🏆 Federated Learning Results Summary:")
     print(f"   • Initial accuracy: {accuracies[0]:.2f}%")
@@ -910,19 +918,19 @@ if "accuracy" in history.metrics_centralized:
     print(f"   • Improvement: {accuracies[-1] - accuracies[0]:+.2f}%")
     print(f"   • Best accuracy: {max(accuracies):.2f}%")
     print(f"   • Total rounds: {len(rounds)-1}")  # -1 because round 0 is initial
-    
+  
     # Compare with baseline
     federated_final_acc = accuracies[-1] / 100.0
     improvement_over_baseline = (federated_final_acc - baseline_acc) * 100
-    
+  
     print(f"\n🆚 Comparison with Centralized Baseline:")
     print(f"   • Centralized accuracy: {baseline_acc*100:.2f}%")
     print(f"   • Federated accuracy: {federated_final_acc*100:.2f}%")
     print(f"   • Difference: {improvement_over_baseline:+.2f}%")
-    
+  
     # Create comprehensive visualization
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 10))
-    
+  
     # Plot 1: Accuracy over rounds
     ax1.plot(rounds, accuracies, 'b-o', linewidth=2, markersize=6, label='Federated Learning')
     ax1.axhline(y=baseline_acc*100, color='r', linestyle='--', linewidth=2, label='Centralized Baseline')
@@ -932,7 +940,7 @@ if "accuracy" in history.metrics_centralized:
     ax1.set_title('Federated Learning: Global Model Accuracy')
     ax1.legend()
     ax1.set_ylim([min(accuracies) - 5, max(accuracies) + 5])
-    
+  
     # Plot 2: Accuracy improvement
     if len(accuracies) > 1:
         improvements = [acc - accuracies[0] for acc in accuracies[1:]]
@@ -941,7 +949,7 @@ if "accuracy" in history.metrics_centralized:
         ax2.set_xlabel('Round')
         ax2.set_ylabel('Accuracy Improvement (%)')
         ax2.set_title('Round-by-Round Improvement')
-    
+  
     # Plot 3: Learning curve
     ax3.plot(rounds, accuracies, 'g-', linewidth=3, alpha=0.7)
     ax3.fill_between(rounds, accuracies, alpha=0.3, color='green')
@@ -949,23 +957,23 @@ if "accuracy" in history.metrics_centralized:
     ax3.set_xlabel('Round')
     ax3.set_ylabel('Accuracy (%)')
     ax3.set_title('Learning Curve (Area Plot)')
-    
+  
     # Plot 4: Performance summary
     metrics = ['Initial', 'Final', 'Best', 'Baseline']
     values = [accuracies[0], accuracies[-1], max(accuracies), baseline_acc*100]
     colors = ['lightblue', 'lightgreen', 'gold', 'lightcoral']
-    
+  
     bars = ax4.bar(metrics, values, color=colors, alpha=0.8, edgecolor='black')
     ax4.set_ylabel('Accuracy (%)')
     ax4.set_title('Performance Comparison')
     ax4.grid(True, alpha=0.3, axis='y')
-    
+  
     # Add value labels on bars
     for bar, value in zip(bars, values):
         height = bar.get_height()
         ax4.text(bar.get_x() + bar.get_width()/2., height + 0.5,
                 f'{value:.1f}%', ha='center', va='bottom', fontweight='bold')
-    
+  
     plt.tight_layout()
     plt.suptitle(f'MNIST Federated Learning Results - {num_clients} Clients, {num_rounds} Rounds', 
                  fontsize=16, y=1.02)
@@ -998,25 +1006,25 @@ One of Flower's greatest strengths is scalability. Let's test with even more cli
 def run_scalability_test(client_counts: List[int] = [50, 100, 200]):
     """
     Test federated learning performance with different numbers of clients
-    
+  
     Args:
         client_counts: List of client counts to test
     """
     print("🔬 Running Scalability Analysis...")
-    
+  
     results = {}
-    
+  
     for num_clients_test in client_counts:
         print(f"\n🧪 Testing with {num_clients_test} clients...")
-        
+      
         # Prepare dataset for this client count
         train_loaders_test, val_loaders_test, test_loader_test = prepare_dataset(
             num_partitions=num_clients_test, batch_size=32
         )
-        
+      
         # Create client factory
         client_fn_test = generate_client_fn(train_loaders_test, val_loaders_test)
-        
+      
         # Configure strategy for this test
         strategy_test = fl.server.strategy.FedAvg(
             fraction_fit=0.1,
@@ -1025,7 +1033,7 @@ def run_scalability_test(client_counts: List[int] = [50, 100, 200]):
             evaluate_fn=get_evaluate_fn(test_loader_test),
             fit_config_fn=lambda server_round: {"lr": 0.01, "momentum": 0.9, "epochs": 1}
         )
-        
+      
         # Run simulation
         start_time = time.time()
         history_test = fl.simulation.start_simulation(
@@ -1036,22 +1044,22 @@ def run_scalability_test(client_counts: List[int] = [50, 100, 200]):
             client_resources={"num_cpus": 1, "num_gpus": 0}
         )
         end_time = time.time()
-        
+      
         # Extract results
         if "accuracy" in history_test.metrics_centralized:
             accuracies = [data[1] for data in history_test.metrics_centralized["accuracy"]]
             final_accuracy = accuracies[-1] * 100
-            
+          
             results[num_clients_test] = {
                 'final_accuracy': final_accuracy,
                 'training_time': end_time - start_time,
                 'rounds': len(accuracies) - 1
             }
-            
+          
             print(f"✅ {num_clients_test} clients: {final_accuracy:.2f}% accuracy in {end_time - start_time:.1f}s")
         else:
             print(f"❌ No results for {num_clients_test} clients")
-    
+  
     return results
 
 # Run scalability test
@@ -1061,25 +1069,25 @@ scalability_results = run_scalability_test([100, 200])
 # Visualize scalability results
 if scalability_results:
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
-    
+  
     client_counts = list(scalability_results.keys())
     accuracies = [scalability_results[c]['final_accuracy'] for c in client_counts]
     times = [scalability_results[c]['training_time'] for c in client_counts]
-    
+  
     # Accuracy vs Number of Clients
     ax1.plot(client_counts, accuracies, 'bo-', linewidth=2, markersize=8)
     ax1.grid(True, alpha=0.3)
     ax1.set_xlabel('Number of Clients')
     ax1.set_ylabel('Final Accuracy (%)')
     ax1.set_title('Accuracy vs Number of Clients')
-    
+  
     # Training Time vs Number of Clients
     ax2.plot(client_counts, times, 'ro-', linewidth=2, markersize=8)
     ax2.grid(True, alpha=0.3)
     ax2.set_xlabel('Number of Clients')
     ax2.set_ylabel('Training Time (seconds)')
     ax2.set_title('Training Time vs Number of Clients')
-    
+  
     plt.tight_layout()
     plt.suptitle('Flower Framework Scalability Analysis', fontsize=14, y=1.02)
     plt.show()
@@ -1094,7 +1102,7 @@ if scalability_results:
 ### 🏆 **What We Accomplished**
 
 ✅ **Implemented complete federated learning pipeline** with Flower
-✅ **Demonstrated privacy-preserving training** across 100+ clients  
+✅ **Demonstrated privacy-preserving training** across 100+ clients
 ✅ **Achieved competitive performance** compared to centralized training
 ✅ **Showcased remarkable scalability** with minimal overhead
 ✅ **Visualized learning dynamics** and performance metrics
@@ -1109,18 +1117,18 @@ if scalability_results:
 
 ### 🚀 **Next Steps & Extensions**
 
-| Enhancement | Description | Impact |
-|-------------|-------------|--------|
-| **Non-IID Data** | Simulate realistic heterogeneous data distributions | More realistic federated scenarios |
-| **Advanced Strategies** | Implement FedProx, FedNova, or custom aggregation | Better convergence properties |
-| **Differential Privacy** | Add noise for stronger privacy guarantees | Enhanced privacy protection |
-| **Cross-Device FL** | Simulate mobile devices with intermittent connectivity | Real-world deployment scenarios |
-| **Personalization** | Local model fine-tuning for client-specific tasks | Improved individual performance |
+| Enhancement                    | Description                                            | Impact                             |
+| ------------------------------ | ------------------------------------------------------ | ---------------------------------- |
+| **Non-IID Data**         | Simulate realistic heterogeneous data distributions    | More realistic federated scenarios |
+| **Advanced Strategies**  | Implement FedProx, FedNova, or custom aggregation      | Better convergence properties      |
+| **Differential Privacy** | Add noise for stronger privacy guarantees              | Enhanced privacy protection        |
+| **Cross-Device FL**      | Simulate mobile devices with intermittent connectivity | Real-world deployment scenarios    |
+| **Personalization**      | Local model fine-tuning for client-specific tasks      | Improved individual performance    |
 
 ### 💡 **Real-World Applications**
 
 - 🏥 **Healthcare**: Collaborative medical imaging without sharing patient data
-- 📱 **Mobile AI**: Keyboard prediction, voice recognition across devices  
+- 📱 **Mobile AI**: Keyboard prediction, voice recognition across devices
 - 🏦 **Finance**: Fraud detection across institutions
 - 🚗 **Autonomous Vehicles**: Shared learning from driving experiences
 - 🏭 **Industrial IoT**: Predictive maintenance across factories
@@ -1129,7 +1137,7 @@ if scalability_results:
 
 ## 🌟 **Conclusion**
 
-**<font color='blue'>&#x1F33C;&#127800;F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R &#x1F33C;&#127800;</font>** has proven to be an exceptional framework for federated learning research and deployment. Its elegant design makes complex distributed ML accessible while maintaining the flexibility needed for cutting-edge research.
+**`<font color='blue'>`&#x1F33C;&#127800;F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R &#x1F33C;&#127800;`</font>`** has proven to be an exceptional framework for federated learning research and deployment. Its elegant design makes complex distributed ML accessible while maintaining the flexibility needed for cutting-edge research.
 
 > **"Federated learning isn't just about distributing computation—it's about democratizing AI while preserving privacy. Flower makes this vision achievable."** 🌸
 
@@ -1144,3 +1152,16 @@ if scalability_results:
 
 *Thank you for joining this federated learning journey! Feel free to experiment, modify, and build upon this foundation. The future of privacy-preserving AI is blooming! 🌸🚀*
 
+---
+
+### 📋 **Document History**
+
+- **📝 Original Publication**: April 19th, 2024 - Initial Flower tutorial with basic implementation
+- **✨ Major Update**: August 2nd, 2025 - Comprehensive enhancement with:
+  - Improved code documentation and structure
+  - Advanced visualization and analysis
+  - Professional formatting and educational content
+  - Scalability testing and performance metrics
+  - Real-world applications and future directions
+
+*This tutorial continues to evolve as federated learning advances. Check back for future updates!* 🌟
