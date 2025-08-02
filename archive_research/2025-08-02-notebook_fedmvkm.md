@@ -482,7 +482,6 @@ class FedMVKMED:
     - Convergence monitoring across federation rounds
     """
 
-</details> <details open> <summary><strong>Initialization and Privacy Methods</strong></summary>
 
     def __init__(self, params: FedMVKMEDParams):
         """
@@ -546,8 +545,7 @@ class FedMVKMED:
           
         self.global_weights = new_global_weights / total_clients
 
-
-</details> ```
+```
 
 </details>
 
