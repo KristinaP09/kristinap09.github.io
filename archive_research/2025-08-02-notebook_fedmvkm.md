@@ -659,7 +659,7 @@ print(f"📊 Original dataset size: {len(y_true)}")
 ```
 
 <div align="center">
-  <img src="https://github.com/kristinap09/kristinap09.github.io/assets/images/a784658e-228d-4fb5-a76d-709cebacf9b7.png" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/KristinaP09/kristinap09.github.io/assets/images/ecb66a60-5689-4417-b8ea-33a34e026031.png" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Data distribution across three federated sites showing heterogeneous action category availability</em>
 </div>
