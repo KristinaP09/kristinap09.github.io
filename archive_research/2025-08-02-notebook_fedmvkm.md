@@ -34,29 +34,43 @@ tags:
 ## Table of Contents
 
 <div class="toc">
-- [Introduction](#introduction)
-  - [The Problem: Privacy in Multi-View Clustering](#the-problem-privacy-in-multi-view-clustering)
-  - [Our Solution: Fed-MVKM Framework](#our-solution-fed-mvkm-framework)
-- [What You'll Learn](#what-youll-learn)
-- [Technical Stack](#technical-stack)
-- [Theoretical Foundation](#theoretical-foundation)
-  - [Multi-View Clustering Fundamentals](#multi-view-clustering-fundamentals)
-  - [Rectified Gaussian Kernel Enhancement](#rectified-gaussian-kernel-enhancement)
-  - [MVKM-ED Objective Function](#mvkm-ed-objective-function)
-  - [Federated Extension](#federated-extension)
-- [Implementation Guide](#implementation-guide)
-  - [Environment Setup](#getting-started-environment-setup)
-  - [Core Algorithm Implementation](#core-algorithm-implementation)
-  - [Federated Extension](#federated-extension-1)
-- [Experimental Results](#experimental-results)
-  - [Dataset Simulation](#dha-dataset-simulation)
-  - [Federated Setup](#prepare-data-for-federated-setup)
-  - [Performance Evaluation](#evaluate-clustering-results)
-- [Applications and Deployment](#applications-and-deployment)
-- [Conclusions and Key Findings](#conclusions)
-- [Future Directions](#future-directions)
-- [References](#references)
-- [Acknowledgments](#acknowledgments)
+<ul>
+<li><a href="#introduction">Introduction</a>
+  <ul>
+    <li><a href="#the-problem-privacy-in-multi-view-clustering">The Problem: Privacy in Multi-View Clustering</a></li>
+    <li><a href="#our-solution-fed-mvkm-framework">Our Solution: Fed-MVKM Framework</a></li>
+  </ul>
+</li>
+<li><a href="#what-youll-learn">What You'll Learn</a></li>
+<li><a href="#technical-stack">Technical Stack</a></li>
+<li><a href="#theoretical-foundation">Theoretical Foundation</a>
+  <ul>
+    <li><a href="#multi-view-clustering-fundamentals">Multi-View Clustering Fundamentals</a></li>
+    <li><a href="#rectified-gaussian-kernel-enhancement">Rectified Gaussian Kernel Enhancement</a></li>
+    <li><a href="#mvkm-ed-objective-function">MVKM-ED Objective Function</a></li>
+    <li><a href="#federated-extension">Federated Extension</a></li>
+  </ul>
+</li>
+<li><a href="#implementation-guide">Implementation Guide</a>
+  <ul>
+    <li><a href="#getting-started-environment-setup">Environment Setup</a></li>
+    <li><a href="#core-algorithm-implementation">Core Algorithm Implementation</a></li>
+    <li><a href="#federated-extension-1">Federated Extension</a></li>
+  </ul>
+</li>
+<li><a href="#experimental-results">Experimental Results</a>
+  <ul>
+    <li><a href="#dha-dataset-simulation">Dataset Simulation</a></li>
+    <li><a href="#prepare-data-for-federated-setup">Federated Setup</a></li>
+    <li><a href="#evaluate-clustering-results">Performance Evaluation</a></li>
+  </ul>
+</li>
+<li><a href="#applications-and-deployment">Applications and Deployment</a></li>
+<li><a href="#conclusions">Conclusions and Key Findings</a></li>
+<li><a href="#future-directions">Future Directions</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#acknowledgments">Acknowledgments</a></li>
+</ul>
 </div>
 
 <div class="section-nav">
@@ -238,7 +252,7 @@ The notation $[m]$ indicates parameters specific to client $m$. This federated o
 ---
 
 <div style="text-align: right; margin-top: 20px;">
-  <a href="#" style="display: inline-block; background-color: #f0f0f0; color: #333; padding: 5px 10px; text-decoration: none; border-radius: 5px; font-size: 0.8em;">↑ Back to Top</a>
+  <a href="#" class="back-to-top">↑ Back to Top</a>
 </div>
 
 # Implementation Guide {#implementation-guide}
@@ -268,7 +282,6 @@ plt.rcParams['figure.figsize'] = (12, 8)
 
 ```python
 print("✅ Libraries imported successfully!")
-```
 print("Note: For this demonstration, we'll simulate the DHA dataset since the actual dataset")
 print("requires specific download and preprocessing steps.")
 ```
