@@ -464,8 +464,7 @@ Now let's implement the federated learning extension of our MVKM-ED algorithm. T
 
 ## Fed-MVKM-ED Implementation
 
-<details open>
-<summary><strong>FedMVKMED Class Overview</strong></summary>
+<strong>FedMVKMED Class Overview</strong>
 
 ```python
 class FedMVKMED:
@@ -517,7 +516,7 @@ class FedMVKMED:
 
 </details> <details open> <summary><strong>Model Aggregation Logic</strong></summary>
 
-
+```python
     def _aggregate_models(self, client_models: Dict) -> None:
         """Aggregate client models to update global model."""
         # Aggregate centers
