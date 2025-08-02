@@ -845,7 +845,6 @@ print(f"   - ARI: {results['ari'] - avg_local_ari:+.4f} ({100*(results['ari'] - 
 print("\n✅ Evaluation completed!")
 ```
 
-A critical question in federated learning is whether the collaborative approach outperforms individual local models. Let's compare our federated model's performance with individual site-specific models to quantify the benefits of collaboration.
 
 <div class="comparison-table" style="margin: 20px 0;">
 <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
