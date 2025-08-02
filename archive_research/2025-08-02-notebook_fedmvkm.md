@@ -24,7 +24,7 @@ head:
       });
     </script>
 ---
-# `<font color='purple'>`🌟F`</font><font color='blue'>`e`</font><font color='green'>`d`</font><font color='red'>`-`</font><font color='orange'>`M`</font><font color='teal'>`V`</font><font color='magenta'>`K`</font><font color='navy'>`M`</font>`
+# <font color='purple'>`🌟F`</font><font color='blue'>`e`</font><font color='green'>`d`</font><font color='red'>`-`</font><font color='orange'>`M`</font><font color='teal'>`V`</font><font color='magenta'>`K`</font><font color='navy'>`M`</font>
 
 ## A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel
 
