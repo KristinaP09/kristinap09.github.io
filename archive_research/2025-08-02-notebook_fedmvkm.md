@@ -52,7 +52,7 @@ Traditional clustering approaches require centralizing all this data, creating s
   <em>Figure: Fed-MVKM workflow showing data distribution, local computation, and model aggregation</em>
 </div>
 
-This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework`</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
+This tutorial demonstrates how our **<font color='green'>Fed-MVKM framework</font>** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
 
 ---
 
