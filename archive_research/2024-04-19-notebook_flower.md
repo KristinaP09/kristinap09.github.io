@@ -2,7 +2,7 @@
 layout: post
 title: "🌸 Flower: A Comprehensive Guide to Federated Learning"
 date: 2024-04-19 07:00
-author: "Kristina"
+author: "Kristina P. Sinaga"
 mathjax: true
 last_modified_at: 2025-08-02 11:23 CEST
 tags:
@@ -55,14 +55,6 @@ This tutorial demonstrates how the **`<font color='green'>`Flower framework &#12
 ---
 
 ## 🚀 **Getting Started: Environment Setup**itle: "Flower"
-
-date: 2024-04-19 07:00
-author: "Kristina"
-mathjax: true
-tags:
-
-- Federated learning
-- Flower
 
 ---
 
