@@ -481,12 +481,9 @@ class FedMVKMED:
     - Adaptive view importance learning
     - Convergence monitoring across federation rounds
     """
-</details>
 
-<details open>
-<summary><strong>Initialization and Privacy Methods</strong></summary>
+</details> <details open> <summary><strong>Initialization and Privacy Methods</strong></summary>
 
-```python
     def __init__(self, params: FedMVKMEDParams):
         """
         Initialize the federated learning model
@@ -517,13 +514,11 @@ class FedMVKMED:
         noise_scale = (1 - privacy_level) * 0.1
         noise = np.random.laplace(0, noise_scale, data.shape)
         return data + noise
-```
-</details>
 
-<details open>
-<summary><strong>Model Aggregation Logic</strong></summary>
 
-```python    
+</details> <details open> <summary><strong>Model Aggregation Logic</strong></summary>
+
+
     def _aggregate_models(self, client_models: Dict) -> None:
         """Aggregate client models to update global model."""
         # Aggregate centers
@@ -550,7 +545,10 @@ class FedMVKMED:
             new_global_weights += model.V
           
         self.global_weights = new_global_weights / total_clients
-```
+
+
+</details> ```
+
 </details>
 
 <details open>
