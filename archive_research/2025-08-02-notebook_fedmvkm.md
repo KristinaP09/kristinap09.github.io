@@ -23,37 +23,154 @@ tags:
 
 ---
 
-### 🎯 **Tutorial Overview**
+# Introduction
 
-**Federated Multi-View K-Means Clustering** represents a significant advancement in privacy-preserving machine learning, enabling collaborative clustering across distributed sites without centralizing sensitive data. This approach is particularly valuable for multi-view data where complementary information is stored across different feature spaces.
+## The Problem: Privacy Challenges in Multi-View Data Analysis
 
-> **Key Concept**: Multiple sites (clients) collaborate to learn a global clustering model while keeping their data private, sharing only model parameters rather than raw data.
+In many real-world scenarios, data exists in multiple complementary views across distributed locations:
 
-This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework `</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
+- **Medical imaging**: MRI, CT scans, and ultrasound data stored at different hospitals
+- **Sensor networks**: Multiple sensors capturing different aspects of the same phenomenon
+- **Action recognition**: Video, depth, and motion data distributed across research centers
+- **Social media**: Text, images, and interaction data across multiple platforms
+
+Traditional clustering approaches require centralizing all this data, creating serious **privacy concerns**, **legal obstacles**, and **technical challenges** for data transfer.
+
+## Our Solution: The Fed-MVKM Framework
+
+**Federated Multi-View K-Means Clustering** addresses these challenges by:
+
+1. **Preserving data privacy**: Raw data never leaves its original location
+2. **Leveraging all available views**: Combines insights from complementary data representations
+3. **Enhancing clustering quality**: Achieves better results than single-site or single-view approaches
+
+> 💡 **Key Innovation**: Fed-MVKM uses rectified Gaussian kernels to enhance distance measurements across federated sites, significantly improving clustering quality while maintaining strong privacy guarantees.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/fed_mvkm_algorithm_flowchart.png" alt="Fed-MVKM Algorithm Flowchart" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <br>
+  <em>Figure: Fed-MVKM workflow showing data distribution, local computation, and model aggregation</em>
+</div>
+
+This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework`</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
 
 ---
 
-### 📚 **What You'll Learn**
+# What You'll Learn
 
-- 🏗️ **Core Algorithm Architecture**: Multi-view clustering with privacy preservation
-- 🔍 **DHA Dataset Analysis**: Practical implementation with human action recognition data
-- 🧮 **MVKM-ED Algorithm**: Understanding rectified Gaussian kernel-based clustering
-- 🔄 **Federated Aggregation**: Parameter synchronization across distributed sites
-- 📈 **Performance Evaluation**: Comprehensive metrics and visualizations
-- 🔒 **Privacy-Performance Tradeoffs**: Balancing utility and data protection
+<div class="learning-path" style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 20px;">
+  <div style="flex-basis: 30%; background-color: #f0f8ff; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+    <h3>🏗️ Core Algorithm Architecture</h3>
+    <p>Multi-view clustering with privacy preservation mechanisms and distributed optimization</p>
+  </div>
+  <div style="flex-basis: 30%; background-color: #f0fff0; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+    <h3>🔍 DHA Dataset Analysis</h3>
+    <p>Practical implementation with human action recognition data across multiple feature spaces</p>
+  </div>
+  <div style="flex-basis: 30%; background-color: #fff0f5; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+    <h3>🧮 MVKM-ED Algorithm</h3>
+    <p>Understanding rectified Gaussian kernel-based clustering and distance enhancements</p>
+  </div>
+  <div style="flex-basis: 30%; background-color: #fffff0; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+    <h3>🔄 Federated Aggregation</h3>
+    <p>Parameter synchronization and model averaging across distributed sites</p>
+  </div>
+  <div style="flex-basis: 30%; background-color: #f5f5f5; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+    <h3>📈 Performance Evaluation</h3>
+    <p>Comprehensive metrics, visualizations, and comparative analysis</p>
+  </div>
+  <div style="flex-basis: 30%; background-color: #f0f0ff; padding: 15px; margin-bottom: 10px; border-radius: 8px;">
+    <h3>🔒 Privacy-Performance Tradeoffs</h3>
+    <p>Balancing utility and data protection in federated environments</p>
+  </div>
+</div>
 
 ---
 
-### 🛠️ **Technical Stack**
+# Technical Stack
 
-- **Framework**: Fed-MVKM (Federated Multi-View K-Means)
-- **Core Algorithm**: MVKM-ED (Multi-View K-Means with Enhanced Distance)
-- **Dataset**: DHA (Depth-included Human Action)
-- **Privacy Mechanism**: Differential privacy noise injection
-- **Evaluation Metrics**: NMI, ARI
-- **Visualization**: Matplotlib, Seaborn
+<div class="tech-stack-container" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px;">
+  <div style="flex-basis: 45%; background-color: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #28a745;">
+    <h3>🧩 Frameworks & Algorithms</h3>
+    <ul>
+      <li><strong>Framework</strong>: Fed-MVKM (Federated Multi-View K-Means)</li>
+      <li><strong>Core Algorithm</strong>: MVKM-ED (Multi-View K-Means with Enhanced Distance)</li>
+      <li><strong>Privacy Mechanism</strong>: Differential privacy noise injection</li>
+    </ul>
+  </div>
+  <div style="flex-basis: 45%; background-color: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid #007bff;">
+    <h3>📊 Data & Evaluation</h3>
+    <ul>
+      <li><strong>Dataset</strong>: DHA (Depth-included Human Action)</li>
+      <li><strong>Evaluation Metrics</strong>: NMI, ARI</li>
+      <li><strong>Visualization</strong>: Matplotlib, Seaborn</li>
+    </ul>
+  </div>
+</div>
+
+# Theoretical Foundation
+
+## Multi-View Clustering Fundamentals
+
+Multi-view clustering aims to discover data patterns by leveraging complementary information from multiple feature spaces or "views." Unlike traditional single-view approaches, multi-view methods can:
+
+1. **Capture complementary information** across different data representations
+2. **Improve clustering quality** by integrating diverse perspectives
+3. **Handle missing data** in individual views through complementarity
+
+## Rectified Gaussian Kernel Enhancement
+
+Our approach uses **rectified Gaussian kernels** to enhance distance measurements:
+
+$$ D(x_i^h, a_k^h) = 1 - e^{-\beta_h \|x_i^h - a_k^h\|^2} $$
+
+Where:
+
+- $x_i^h$ is the data point $i$ in view $h$
+- $a_k^h$ is the cluster center $k$ in view $h$
+- $\beta_h$ is an adaptive parameter controlling kernel width
+
+This formulation provides **three key advantages**:
+
+1. **Bounded distances**: All distances are normalized between 0 and 1
+2. **Non-linear transformations**: Better captures complex cluster structures
+3. **Adaptive scaling**: Adjusts to different feature spaces automatically
+
+## MVKM-ED Objective Function
+
+The core MVKM-ED algorithm minimizes:
+
+$$ J_{\text{MVKM-ED}} = \sum_{h=1}^{m} \left( v_h^{\alpha} \sum_{k=1}^{c} \sum_{i=1}^{n} \mu_{ik} \cdot (1 - e^{-\beta_h \|x_i^h - a_k^h\|^2}) \right) $$
+
+Where:
+
+- $v_h$ represents the weight for view $h$ (automatically learned)
+- $\mu_{ik}$ is the membership of point $i$ to cluster $k$
+- $\alpha$ controls the influence of view weights (typically $\alpha > 1$)
+- $\beta_h$ is the adaptive kernel parameter for view $h$
+
+## Federated Extension
+
+The federated extension aggregates models across sites while preserving privacy:
+
+$$ J_{\text{Fed-MVKM}} = \sum_{m=1}^{M} \sum_{h=1}^{s(m)} v_{[m]h}^{\alpha} \sum_{i=1}^{n(m)} \sum_{k=1}^{c(m)} \mu_{[m]ik} \big( 1 - e^{-\beta_{[m]}^h \|x_{[m]i}^h - a_{[m]k}^h \|^2} \big) $$
+
+Where:
+- $M$ is the number of participating clients (federated sites)
+- $s(m)$ refers to the number of views client $m$ holds
+- $n(m)$ is the number of samples or data points held by client $m$
+- $c(m)$ denotes the total clusters managed by client $m$
+- $v_{[m]h}^{\alpha}$ is the importance weight of view $h$ at client $m$
+- $\mu_{[m]ik}$ is the membership of point $i$ to cluster $k$ at client $m$
+- $\beta_{[m]}^h$ is the kernel parameter for view $h$ at client $m$
+- $x_{[m]i}^h$ represents data point $i$ in view $h$ at client $m$
+- $a_{[m]k}^h$ is the center of cluster $k$ in view $h$ at client $m$
+
+The notation $[m]$ indicates parameters specific to client $m$. This federated objective function enables each client to optimize its local clustering while contributing to the global model without sharing raw data.
+
 
 ---
+
 
 ## 🚀 **Getting Started: Environment Setup**
 
