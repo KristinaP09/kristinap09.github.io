@@ -1275,9 +1275,9 @@ This Fed-MVKM-ED approach is particularly valuable for:
 
 <div class="reference-item" style="padding: 15px; margin-bottom: 15px; border-left: 4px solid #6f42c1; background-color: white;">
   <div style="font-weight: bold;">Multi-View Clustering: A Survey</div>
-  <div>Chao, G., Sun, S., & Bi, J.</div>
-  <div><em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, 2021, 43(1):177-192</div>
-  <div>DOI: <a href="https://doi.org/10.1109/TPAMI.2021.3069534">10.1109/TPAMI.2021.3069534</a></div>
+  <div>Yang, Y. & Wang, H.</div>
+  <div><em>IEEE Big Data Mining and Analytics</em>, 2018, 1(2):83-107</div>
+  <div>DOI: <a href="https://ieeexplore.ieee.org/document/8336846">10.26599/BDMA.2018.9020003</a></div>
 </div>
 
 </div>
