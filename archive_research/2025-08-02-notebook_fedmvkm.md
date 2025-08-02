@@ -659,7 +659,7 @@ print(f"📊 Original dataset size: {len(y_true)}")
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/453f1dd3-6c07-49a7-9de9-5f1b30f7e76a" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/kristinap09/kristinap09.github.io/assets/images/a784658e-228d-4fb5-a76d-709cebacf9b7.png" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Data distribution across three federated sites showing heterogeneous action category availability</em>
 </div>
@@ -747,7 +747,7 @@ if fed_model.global_objective_values:
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/7e5bc930-9a65-43b7-b918-3a048521f627" alt="Training Convergence" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/kristinap09/kristinap09.github.io/assets/images/ecb66a60-5689-4417-b8ea-33a34e026031.png" alt="Training Convergence" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Federated training convergence showing objective function value and changes across communication rounds</em>
 </div>
@@ -845,7 +845,7 @@ print("\n✅ Evaluation completed!")
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/b8271a94-7f31-4fd4-8119-b673a618ddc7" alt="Performance Comparison" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/34b4f997-a8f7-44b0-9c2c-ada6aa468b8c.png" alt="Performance Comparison" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Performance comparison between federated model and individual site models</em>
 </div>
@@ -913,7 +913,7 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/e079d5bb-85e2-489d-93c2-ef7248e3ce1a" alt="Comprehensive Results" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://github.com/kristinap09/kristinap09.github.io/assets/images/34b4f997-a8f7-44b0-9c2c-ada6aa468b8c.png" alt="Comprehensive Results" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Comprehensive analysis of Fed-MVKM performance with multiple visualizations</em>
 </div>
