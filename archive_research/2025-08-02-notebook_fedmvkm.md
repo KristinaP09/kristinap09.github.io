@@ -659,7 +659,7 @@ print(f"📊 Original dataset size: {len(y_true)}")
 ```
 
 <div align="center">
-  <img src="https://github.com/KristinaP09/kristinap09.github.io/assets/images/ecb66a60-5689-4417-b8ea-33a34e026031.png" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/a784658e-228d-4fb5-a76d-709cebacf9b7.png" alt="Federated Data Distribution" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Data distribution across three federated sites showing heterogeneous action category availability</em>
 </div>
@@ -913,7 +913,7 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
 ```
 
 <div align="center">
-  <img src="https://github.com/kristinap09/kristinap09.github.io/assets/images/34b4f997-a8f7-44b0-9c2c-ada6aa468b8c.png" alt="Comprehensive Results" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/34b4f997-a8f7-44b0-9c2c-ada6aa468b8c.png" alt="Comprehensive Results" style="max-width: 100%; width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Comprehensive analysis of Fed-MVKM performance with multiple visualizations</em>
 </div>
