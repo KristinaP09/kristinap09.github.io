@@ -747,7 +747,7 @@ if fed_model.global_objective_values:
 ```
 
 <div align="center">
-  <img src="https://github.com/kristinap09/kristinap09.github.io/assets/images/ecb66a60-5689-4417-b8ea-33a34e026031.png" alt="Training Convergence" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/ecb66a60-5689-4417-b8ea-33a34e026031.png" alt="Training Convergence" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Federated training convergence showing objective function value and changes across communication rounds</em>
 </div>
