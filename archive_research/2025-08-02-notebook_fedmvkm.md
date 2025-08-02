@@ -13,7 +13,7 @@ tags:
   - Privacy-Preserving ML
   - Python
 ---
-# `<font color='purple'>`🌟F `</font><font color='blue'>`e `</font><font color='green'>`d `</font><font color='red'>`-`</font><font color='orange'>`M `</font><font color='teal'>`V `</font><font color='magenta'>`K `</font><font color='navy'>`M `</font>`
+# <font color='purple'>🌟F</font><font color='blue'>e</font><font color='green'>d</font><font color='red'>-</font><font color='orange'>M</font><font color='teal'>V</font><font color='magenta'>K</font><font color='navy'>M</font>
 
 ## A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel
 
@@ -544,7 +544,7 @@ print(f"   - Label distribution: {np.bincount(y_true)[:10]}... (showing first 10
 ```
 
 <div align="center">
-  <img src="https://github.com/PatternKPS/patternkps.github.io/assets/150363044/93a47d55-5f22-48f1-b7f3-e1b3c9dc50ac" alt="DHA Dataset Visualization" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/DHA_PCA_visualized.png" alt="DHA Dataset Visualization" style="max-width: 100%; width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <br>
   <em>Figure: Sample visualization of DHA dataset action categories after PCA reduction</em>
 </div>
