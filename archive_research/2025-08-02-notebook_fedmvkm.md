@@ -13,12 +13,13 @@ tags:
   - Privacy-Preserving ML
   - Python
 ---
-`<font color='purple'>`🌟F `</font><font color='blue'>`e `</font><font color='green'>`d `</font><font color='red'>`-`</font><font color='orange'>`M `</font><font color='teal'>`V `</font><font color='magenta'>`K `</font><font color='navy'>`M `</font>`
+<div style="background: linear-gradient(135deg, #6e8efb, #a777e3); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+  <h1 style="color: white; text-align: center; font-size: 2.5em; margin-bottom: 10px;">🌟 Fed-MVKM: Federated Multi-View K-Means</h1>
+  <h2 style="color: rgba(255,255,255,0.9); text-align: center; font-weight: 400; font-size: 1.3em;">A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel</h2>
+</div>
 
-## A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel
-
-> **📅 Last Updated**: August 2nd, 2025
-> **📝 Original Publication**: August 2nd, 2025
+> **📅 Last Updated**: August 2nd, 2025  
+> **📝 Original Publication**: August 2nd, 2025  
 > **✨ Status**: Complete implementation with comprehensive analysis
 
 <div class="executive-summary" style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin-bottom: 20px;">
@@ -31,24 +32,37 @@ tags:
 - [Introduction](#introduction)
   - [The Problem: Privacy in Multi-View Clustering](#the-problem-privacy-in-multi-view-clustering)
   - [Our Solution: Fed-MVKM Framework](#our-solution-fed-mvkm-framework)
-- [What You&#39;ll Learn](#what-youll-learn)
+- [What You'll Learn](#what-youll-learn)
 - [Technical Stack](#technical-stack)
-- [Getting Started: Environment Setup](#getting-started-environment-setup)
+- [Theoretical Foundation](#theoretical-foundation)
+  - [Multi-View Clustering Fundamentals](#multi-view-clustering-fundamentals)
+  - [Rectified Gaussian Kernel Enhancement](#rectified-gaussian-kernel-enhancement)
+  - [MVKM-ED Objective Function](#mvkm-ed-objective-function)
+  - [Federated Extension](#federated-extension)
 - [Implementation Guide](#implementation-guide)
-  - [Core Algorithm](#implement-mvkm-ed-core-classes)
-  - [Federated Extension](#implementing-the-federated-multi-view-k-means)
-- [Experimental Results](#prepare-data-for-federated-setup)
-  - [Dataset Description](#load-and-simulate-dha-dataset)
+  - [Environment Setup](#getting-started-environment-setup)
+  - [Core Algorithm Implementation](#core-algorithm-implementation)
+  - [Federated Extension](#federated-extension-1)
+- [Experimental Results](#experimental-results)
+  - [Dataset Simulation](#dha-dataset-simulation)
+  - [Federated Setup](#prepare-data-for-federated-setup)
   - [Performance Evaluation](#evaluate-clustering-results)
-- [Conclusions and Key Findings](#conclusions-and-key-findings)
+- [Applications and Deployment](#applications-and-deployment)
+- [Conclusions and Key Findings](#conclusions)
+- [Future Directions](#future-directions)
 - [References](#references)
+- [Acknowledgments](#acknowledgments)
 
 <div class="section-nav" style="display: flex; justify-content: space-between; background-color: #f8f9fa; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
   <a href="#introduction">Introduction</a>
-  <a href="#what-youll-learn">Learning Path</a>
-  <a href="#getting-started-environment-setup">Implementation</a>
-  <a href="#evaluate-clustering-results">Results</a>
-  <a href="#conclusions-and-key-findings">Conclusions</a>
+  <a href="#theoretical-foundation">Theory</a>
+  <a href="#implementation-guide">Implementation</a>
+  <a href="#experimental-results">Results</a>
+  <a href="#applications-and-deployment">Applications</a>
+  <a href="#conclusions">Conclusions</a>
+  <a href="#applications-and-deployment">Applications</a>
+  <a href="#future-directions">Future Work</a>
+  <a href="#references">References</a>
 </div>
 
 ---
@@ -213,11 +227,17 @@ The notation $[m]$ indicates parameters specific to client $m$. This federated o
 
 ---
 
-## 🚀 **Getting Started: Environment Setup**
+<div style="text-align: right; margin-top: 20px;">
+  <a href="#" style="display: inline-block; background-color: #f0f0f0; color: #333; padding: 5px 10px; text-decoration: none; border-radius: 5px; font-size: 0.8em;">↑ Back to Top</a>
+</div>
+
+# Implementation Guide {#implementation-guide}
+
+## Environment Setup {#getting-started-environment-setup}
 
 Let's begin by importing all necessary libraries and modules for our federated multi-view clustering implementation.
 
-```ts
+```python
 # Import Required Libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -236,8 +256,9 @@ plt.style.use('seaborn-v0_8')
 plt.rcParams['figure.figsize'] = (12, 8)
 ```
 
-```ts
+```python
 print("✅ Libraries imported successfully!")
+```
 print("Note: For this demonstration, we'll simulate the DHA dataset since the actual dataset")
 print("requires specific download and preprocessing steps.")
 ```
@@ -968,7 +989,7 @@ print("\n✅ Parameters configured successfully!")
 
 ---
 
-## 🚀 **Initialize and Train Federated Model**
+## Training the Federated Model {#training-the-federated-model}
 
 Time to train our federated multi-view clustering model! This process involves multiple communication rounds where each client trains locally and then shares updates with the global model.
 
@@ -1023,7 +1044,9 @@ Now we'll evaluate the quality of our federated clustering algorithm using stand
   </ul>
 </div>
 
-### Quantitative Performance Evaluation
+# Experimental Results {#experimental-results}
+
+## Quantitative Performance Evaluation {#evaluate-clustering-results}
 
 ```python
 # Get global clustering results
@@ -1277,6 +1300,8 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
   </div>
 </div>
 
+# Applications and Deployment {#applications-and-deployment}
+
 ## Real-World Applications
 
 <div class="applications-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
@@ -1298,14 +1323,16 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
     <div style="margin-top: 10px; font-style: italic; font-size: 0.9em;">Example: Pharmaceutical research across multiple laboratories.</div>
   </div>
 
-<div class="application-card" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #fff;">
+  <div class="application-card" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #fff;">
     <h3 style="color: #6f42c1;">🎬 Action Recognition</h3>
     <p>Improve human activity recognition by combining multi-modal data (video, depth, motion) from different capture devices and locations.</p>
     <div style="margin-top: 10px; font-style: italic; font-size: 0.9em;">Example: Assistive technologies for elderly care across multiple facilities.</div>
   </div>
 </div>
 
-## Practical Deployment Considerations
+<div style="text-align: right; margin-top: 20px;">
+  <a href="#" style="display: inline-block; background-color: #f0f0f0; color: #333; padding: 5px 10px; text-decoration: none; border-radius: 5px; font-size: 0.8em;">↑ Back to Top</a>
+</div>## Practical Deployment Considerations {#deployment-considerations}
 
 <div class="deployment-considerations" style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
   <h3>Scaling to Larger Networks</h3>
@@ -1333,7 +1360,7 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
   </ul>
 </div>
 
-## Future Directions
+# Future Directions {#future-directions}
 
 <div class="future-research" style="display: flex; gap: 20px; margin-bottom: 30px;">
   <div style="flex-basis: 50%; background: linear-gradient(to right bottom, #f9f9f9, #f0f0ff); padding: 20px; border-radius: 8px;">
@@ -1393,7 +1420,7 @@ This Fed-MVKM-ED approach is particularly valuable for:
 
 ---
 
-# References
+# References {#references}
 
 <div class="references-container" style="background-color: #f8f9fa; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
 
@@ -1451,9 +1478,34 @@ This Fed-MVKM-ED approach is particularly valuable for:
 }
 ```
 
-```
+# Conclusions and Key Findings {#conclusions}
 
-# Acknowledgments
+<div style="background-color: #f7f7ff; padding: 20px; border-radius: 8px; margin: 30px 0;">
+  <h2 style="color: #4a4a4a; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Key Findings:</h2>
+  
+  <ol style="padding-left: 25px;">
+    <li><strong>Privacy Preservation</strong>: Fed-MVKM enables collaborative model training without sharing raw data, addressing privacy concerns in sensitive applications.</li>
+    <li><strong>Enhanced Clustering Quality</strong>: By leveraging multiple views of data, Fed-MVKM achieves more robust clustering compared to single-view methods.</li>
+    <li><strong>Communication Efficiency</strong>: The algorithm minimizes communication overhead by sharing only cluster centers and membership matrices rather than raw data.</li>
+    <li><strong>Scalability</strong>: Our experiments demonstrate Fed-MVKM's ability to scale with increasing numbers of clients while maintaining performance.</li>
+    <li><strong>Practical Applicability</strong>: The diverse applications presented highlight Fed-MVKM's versatility across domains including healthcare, multimedia analysis, and network security.</li>
+  </ol>
+
+  <h2 style="color: #4a4a4a; margin: 20px 0 15px 0; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Future Directions:</h2>
+  
+  <ul style="list-style-type: square; padding-left: 25px;">
+    <li>Integration with differential privacy techniques to provide stronger privacy guarantees</li>
+    <li>Extension to handle non-Euclidean distance metrics for specialized domains</li>
+    <li>Optimization for resource-constrained edge devices</li>
+    <li>Exploration of dynamic view weighting mechanisms to handle varying data quality</li>
+  </ul>
+</div>
+
+<div style="text-align: right; margin-top: 20px;">
+  <a href="#" style="display: inline-block; background-color: #f0f0f0; color: #333; padding: 5px 10px; text-decoration: none; border-radius: 5px; font-size: 0.8em;">↑ Back to Top</a>
+</div>
+
+# Acknowledgments {#acknowledgments}
 
 <div class="acknowledgments" style="background-color: #f7f7ff; padding: 20px; border-radius: 8px; margin: 30px 0;">
   <h3>Support and Funding</h3>
