@@ -385,10 +385,6 @@ baseline_model, baseline_loss, baseline_acc = run_centralised(epochs=3)
 
 In federated learning, we need to split our dataset among multiple clients. Let's create realistic data partitions:
 
-## 🌐 **Federated Data Partitioning**
-
-In federated learning, we need to split our dataset among multiple clients. Let's create realistic data partitions:
-
 ```python
 def prepare_dataset(num_partitions: int, batch_size: int = 32, val_ratio: float = 0.1):
     """
@@ -462,10 +458,6 @@ def prepare_dataset(num_partitions: int, batch_size: int = 32, val_ratio: float 
 
 Let's examine how data is distributed across clients:
 
-### 📊 **Analyzing Data Distribution**
-
-Let's examine how data is distributed across clients:
-
 ```python
 # Create federated partitions
 trainloaders, valloaders, testloader = prepare_dataset(
@@ -527,10 +519,6 @@ print(f"   • Data distribution: IID (Identical & Independent)")
 
 Now comes the heart of federated learning - defining our Flower client! A Flower client is elegantly simple with four key methods:
 
-## 🌸 **Defining the Flower Client**
-
-Now comes the heart of federated learning - defining our Flower client! A Flower client is elegantly simple with four key methods:
-
 ### 🔑 **Core Client Methods**
 
 | Method               | Purpose                          | Description                                       |
@@ -555,8 +543,6 @@ print(f"   • Device: {DEVICE}")
 print(f"   • Framework: PyTorch")
 print(f"   • Ready for federated learning!")
 ```
-
-### 🏗️ **Implementing the FlowerClient Class**
 
 ### 🏗️ **Implementing the FlowerClient Class**
 
@@ -792,10 +778,6 @@ print(f"   • Learning rate: 0.01")
 
 We need a factory function to create clients dynamically during simulation:
 
-### 🏭 **Client Factory Function**
-
-We need a factory function to create clients dynamically during simulation:
-
 ```python
 def generate_client_fn(trainloaders, valloaders):
     """
@@ -887,10 +869,6 @@ print(f"🏆 Federated learning finished successfully!")
 > - Scales efficiently with more clients! 🚀
 
 ---
-
-## 📊 **Results Analysis and Visualization**
-
-Let's analyze the performance of our federated learning experiment:
 
 ## 📊 **Results Analysis and Visualization**
 
