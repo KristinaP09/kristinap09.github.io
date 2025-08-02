@@ -1261,7 +1261,7 @@ This Fed-MVKM-ED approach is particularly valuable for:
   <div style="font-weight: bold;">Rectified Gaussian Kernel Multi-View K-Means Clustering</div>
   <div>Sinaga, Kristina P.</div>
   <div><em>arXiv preprint</em>, 2024</div>
-  <div>URL: <a href="https://arxiv.org/abs/2405.12345">arXiv:2405.12345</a></div>
+  <div>URL: <a href="https://arxiv.org/pdf/2405.05619</a></div>
 </div>
 
 <h3>Related Work</h3>
