@@ -986,7 +986,7 @@ This Fed-MVKM-ED approach is particularly valuable for:
 
 @article{sinaga2024rectified,
   title={Rectified Gaussian Kernel Multi-View K-Means Clustering},
-  author={Sinaga, Kristina P. and others},
+  author={Sinaga, Kristina P},
   journal={arXiv},
   year={2024}
 }
