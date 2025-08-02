@@ -2,9 +2,9 @@
 layout: post
 title: "🌈 Fed-MVKM: Federated Multi-View K-Means Clustering"
 date: 2025-08-02 09:30
-author: "Kristina P.Sinaga"
+author: "Kristina P. Sinaga"
 mathjax: true
-last_modified_at: 2025-08-02 12:41 CEST
+last_modified_at: 2025-08-02 14:45 CEST
 tags:
   - Federated Learning
   - Multi-View Clustering
@@ -12,6 +12,17 @@ tags:
   - DHA Dataset
   - Privacy-Preserving ML
   - Python
+head:
+  - <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  - <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        },
+        "HTML-CSS": { availableFonts: ["TeX"] }
+      });
+    </script>
 ---
 # <font color='purple'>🌟F</font><font color='blue'>e</font><font color='green'>d</font><font color='red'>-</font><font color='orange'>M</font><font color='teal'>V</font><font color='magenta'>K</font><font color='navy'>M</font>
 
