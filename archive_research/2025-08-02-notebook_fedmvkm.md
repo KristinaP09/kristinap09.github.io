@@ -13,7 +13,7 @@ tags:
   - Privacy-Preserving ML
   - Python
 ---
-# `<font color='purple'>`🌟F`</font><font color='blue'>`e`</font><font color='green'>`d`</font><font color='red'>`-`</font><font color='orange'>`M`</font><font color='teal'>`V`</font><font color='magenta'>`K`</font><font color='navy'>`M`</font>`
+`<font color='purple'>`🌟F `</font><font color='blue'>`e `</font><font color='green'>`d `</font><font color='red'>`-`</font><font color='orange'>`M `</font><font color='teal'>`V `</font><font color='magenta'>`K `</font><font color='navy'>`M `</font>`
 
 ## A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel
 
@@ -82,7 +82,7 @@ Traditional clustering approaches require centralizing all this data, creating s
   <em>Figure: Fed-MVKM enables privacy-preserving collaborative clustering across distributed sites and multiple data views</em>
 </div>
 
-This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework`</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
+This tutorial demonstrates how our **`<font color='green'>`Fed-MVKM framework `</font>`** enables privacy-preserving multi-view clustering with enhanced discriminative power through rectified Gaussian kernels.
 
 ---
 
@@ -192,6 +192,7 @@ J_{\text{Fed-MVKM}} = \sum_{m=1}^{M} \sum_{h=1}^{s(m)} v_{[m]h}^{\alpha} \sum_{i
 $$
 
 Where:
+
 - $M$ is the number of participating clients (federated sites)
 - $s(m)$ refers to the number of views client $m$ holds
 - $n(m)$ is the number of samples or data points held by client $m$
@@ -307,7 +308,7 @@ class MVKMED:
         self.index = None  # Cluster assignments
         self.param_beta = None
         self.objective_values = []
-      
+  
     def _initialize_centers(self, X: List[np.ndarray]) -> List[np.ndarray]:
         """Initialize cluster centers using random selection."""
         data_n = X[0].shape[0]
@@ -353,14 +354,14 @@ class MVKMED:
             for k in range(self.params.cluster_num):
                 numerator = np.zeros(X[h].shape[1])
                 denominator = 0
-              
+          
                 dist = np.sum((X[h] - self.A[h][k])**2, axis=1)
                 kernel_val = np.exp(-self.param_beta[h] * dist)
                 weighted_kernel = (self.V[h]**self.params.alpha) * kernel_val
-              
+          
                 numerator = np.sum(weighted_kernel[:, None] * self.U[:, k][:, None] * X[h], axis=0)
                 denominator = np.sum(weighted_kernel * self.U[:, k])
-              
+          
                 if denominator > 0:
                     centers[k] = numerator / denominator
                 else:
@@ -402,29 +403,29 @@ class MVKMED:
     def fit(self, X: List[np.ndarray]) -> 'MVKMED':
         """Fit the MVKM-ED model to the data."""
         logger.info("Starting MVKM-ED algorithm...")
-      
+  
         # Initialize parameters
         self.A = self._initialize_centers(X)
         self.V = np.ones(self.params.points_view) / self.params.points_view
-      
+  
         for time in range(1, self.params.max_iterations + 1):
             # Update parameters
             self.param_beta = self._compute_beta(X, time)
             self.U = self._update_memberships(X)
             self.A = self._update_centers(X)
             self.V = self._update_weights(X)
-          
+      
             # Compute objective
             obj = self._compute_objective(X)
             self.objective_values.append(obj)
-          
+      
             # Check convergence
             if time > 1:
                 diff = abs(self.objective_values[-1] - self.objective_values[-2])
                 if diff <= self.params.convergence_threshold:
                     logger.info(f"Algorithm converged after {time} iterations")
                     break
-      
+  
         # Get final cluster assignments
         self.index = np.argmax(self.U, axis=1)
         return self
@@ -477,7 +478,7 @@ class FedMVKMED:
     def __init__(self, params: FedMVKMEDParams):
         """
         Initialize the federated learning model
-      
+  
         Args:
             params: Configuration parameters for the federated clustering
         """
@@ -486,7 +487,7 @@ class FedMVKMED:
         self.global_centers = None  # Global cluster centers
         self.global_weights = None  # Global view weights
         self.global_objective_values = []  # Track convergence
-      
+  
     def _initialize_global_model(self, sample_data: List[np.ndarray]):
         """Initialize global model parameters."""
         # Initialize global centers randomly
@@ -495,16 +496,16 @@ class FedMVKMED:
         for view_dim in data_shapes:
             centers = np.random.randn(self.params.cluster_num, view_dim)
             self.global_centers.append(centers)
-      
+  
         # Initialize global view weights
         self.global_weights = np.ones(self.params.points_view) / self.params.points_view
-      
+  
     def _add_privacy_noise(self, data: np.ndarray, privacy_level: float) -> np.ndarray:
         """Add differential privacy noise to data."""
         noise_scale = (1 - privacy_level) * 0.1
         noise = np.random.laplace(0, noise_scale, data.shape)
         return data + noise
-      
+  
     def _aggregate_models(self, client_models: Dict) -> None:
         """Aggregate client models to update global model."""
         # Aggregate centers
@@ -512,54 +513,54 @@ class FedMVKMED:
         for view_idx in range(self.params.points_view):
             view_centers = np.zeros_like(self.global_centers[view_idx])
             total_weight = 0
-          
+      
             for client_id, model in client_models.items():
                 client_weight = len(self.clients[client_id]['data'][0])  # Data size as weight
                 view_centers += client_weight * model.A[view_idx]
                 total_weight += client_weight
-              
+          
             view_centers /= total_weight
             new_global_centers.append(view_centers)
-          
-        self.global_centers = new_global_centers
       
+        self.global_centers = new_global_centers
+  
         # Aggregate view weights
         new_global_weights = np.zeros(self.params.points_view)
         total_clients = len(client_models)
-      
+  
         for client_id, model in client_models.items():
             new_global_weights += model.V
-          
-        self.global_weights = new_global_weights / total_clients
       
+        self.global_weights = new_global_weights / total_clients
+  
     def fit(self, client_data: Dict[str, List[np.ndarray]]) -> 'FedMVKMED':
         """
         Fit the federated model using client data.
-      
+  
         Parameters
         ----------
         client_data : Dict[str, List[np.ndarray]]
             Dictionary mapping client IDs to their multi-view data
         """
         logger.info("Starting Federated MVKM-ED training...")
-      
+  
         # Store client data
         self.clients = {client_id: {'data': data} for client_id, data in client_data.items()}
-      
+  
         # Initialize global model with first client's data structure
         sample_data = list(client_data.values())[0]
         self._initialize_global_model(sample_data)
-      
+  
         # Federated training rounds
         for round_num in range(self.params.communication_rounds):
             logger.info(f"📡 Communication Round {round_num + 1}/{self.params.communication_rounds}")
-          
+      
             client_models = {}
-          
+      
             # Train each client locally
             for client_id, client_info in self.clients.items():
                 logger.info(f"Training client: {client_id}")
-              
+          
                 # Create local model with current global parameters
                 local_params = MVKMEDParams(
                     cluster_num=self.params.cluster_num,
@@ -569,34 +570,34 @@ class FedMVKMED:
                     max_iterations=10,  # Fewer iterations for federated setting
                     convergence_threshold=self.params.client_tolerance
                 )
-              
+          
                 local_model = MVKMED(local_params)
-              
+          
                 # Initialize with global parameters
                 local_model.A = [center.copy() for center in self.global_centers]
                 local_model.V = self.global_weights.copy()
-              
+          
                 # Apply privacy noise to local data
                 private_data = [
                     self._add_privacy_noise(view_data, self.params.privacy_level)
                     for view_data in client_info['data']
                 ]
-              
+          
                 # Local training
                 local_model.fit(private_data)
                 client_models[client_id] = local_model
-              
+          
             # Aggregate client models
             self._aggregate_models(client_models)
-          
+      
             # Compute global objective (approximate)
             global_obj = 0
             for client_id, model in client_models.items():
                 if model.objective_values:
                     global_obj += model.objective_values[-1]
-          
+      
             self.global_objective_values.append(global_obj / len(client_models))
-          
+      
             # Check global convergence
             if round_num > 0:
                 obj_diff = abs(self.global_objective_values[-1] - self.global_objective_values[-2])
@@ -604,7 +605,7 @@ class FedMVKMED:
                 if obj_diff <= self.params.convergence_threshold:
                     logger.info(f"Federated training converged after {round_num + 1} rounds")
                     break
-                  
+              
         logger.info("✅ Federated training completed!")
         return self
   
@@ -620,7 +621,7 @@ class FedMVKMED:
                     else:
                         all_data[view_idx] = np.vstack([all_data[view_idx], client_info['data'][view_idx]])
             X = all_data
-          
+      
         # Create a temporary model for prediction
         temp_params = MVKMEDParams(
             cluster_num=self.params.cluster_num,
@@ -632,7 +633,7 @@ class FedMVKMED:
         temp_model.A = self.global_centers
         temp_model.V = self.global_weights
         temp_model.param_beta = np.ones(self.params.points_view) * 0.1  # Default beta
-      
+  
         # Get predictions
         U = temp_model._update_memberships(X)
         return np.argmax(U, axis=1)
@@ -642,15 +643,15 @@ class FedMVKMED:
         if y_true is None:
             logger.warning("No ground truth labels provided. Skipping evaluation.")
             return {}
-          
+      
         labels_pred = self.get_global_labels()
         results = {}
-      
+  
         if 'nmi' in metrics:
             results['nmi'] = normalized_mutual_info_score(y_true, labels_pred)
         if 'ari' in metrics:
             results['ari'] = adjusted_rand_score(y_true, labels_pred)
-          
+      
         return results
 
 print("✅ Federated MVKM-ED class implemented successfully!")
@@ -820,7 +821,7 @@ def create_federated_splits(X_dha, y_true, n_sites=3):
         True labels
     n_sites : int
         Number of federated sites
-      
+  
     Returns:
     --------
     client_data : Dict[str, List[np.ndarray]]
@@ -876,7 +877,7 @@ def create_federated_splits(X_dha, y_true, n_sites=3):
         redistribute_from_site1 = site1_indices[:additional_needed]
         site1_indices = site1_indices[additional_needed:]
         site3_indices = np.concatenate([site3_indices, redistribute_from_site1])
-      
+  
         # Update client data
         client_data['research_hospital'] = [X_dha[0][site1_indices], X_dha[1][site1_indices]]
         client_labels['research_hospital'] = y_true[site1_indices]
