@@ -59,7 +59,7 @@ This tutorial demonstrates how our **<font color='green'>Fed-MVKM framework</fon
 
 Let's begin by importing all necessary libraries and modules for our federated multi-view clustering implementation.
 
-```python
+```ts
 # Import Required Libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -76,7 +76,9 @@ np.random.seed(42)
 # Display settings
 plt.style.use('seaborn-v0_8')
 plt.rcParams['figure.figsize'] = (12, 8)
+```
 
+```ts
 print("✅ Libraries imported successfully!")
 print("Note: For this demonstration, we'll simulate the DHA dataset since the actual dataset")
 print("requires specific download and preprocessing steps.")
