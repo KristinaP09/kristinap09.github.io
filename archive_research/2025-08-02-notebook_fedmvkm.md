@@ -2,7 +2,7 @@
 layout: post
 title: "🌈 Fed-MVKM: Federated Multi-View K-Means Clustering"
 date: 2025-08-02 09:30
-author: "Kristina"
+author: "Kristina P. Sinaga"
 mathjax: true
 last_modified_at: 2025-08-02 14:45 CEST
 tags:
