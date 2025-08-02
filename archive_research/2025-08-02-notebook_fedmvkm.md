@@ -1318,7 +1318,6 @@ This Fed-MVKM-ED approach is particularly valuable for:
   <ul>
     <li>Prof. Miin-Shen Yang for his guidance on clustering theory</li>
     <li>The anonymous reviewers for their valuable feedback</li>
-    <li>All research assistants who contributed to the implementation and testing</li>
   </ul>
 </div>
 
