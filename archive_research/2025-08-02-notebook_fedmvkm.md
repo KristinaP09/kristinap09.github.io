@@ -1092,7 +1092,7 @@ plt.title('Data Distribution\nAcross Sites', fontweight='bold')
 
 <div class="conclusion-summary" style="background-color: #f0f7ff; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
 <h3>💡 Executive Summary</h3>
-<p>Our implementation of <strong>Fed-MVKM-ED</strong> demonstrates that privacy-preserving multi-view clustering can achieve <strong>32.7% better performance</strong> than local approaches while preserving data privacy. This represents a significant advancement for collaborative data analysis across institutions without centralizing sensitive information.</p>
+<p>Our implementation of <strong>Fed-MVKM</strong> demonstrates that privacy-preserving multi-view clustering can achieve <strong>32.7% better performance</strong> than local approaches while preserving data privacy. This represents a significant advancement for collaborative data analysis across institutions without centralizing sensitive information.</p>
 </div>
 
 ## Key Achievements
