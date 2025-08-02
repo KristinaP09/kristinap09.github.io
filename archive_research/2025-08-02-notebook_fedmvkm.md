@@ -5,6 +5,10 @@ date: 2025-08-02 09:30
 author: "Kristina P. Sinaga"
 mathjax: true
 last_modified_at: 2025-08-02 14:45 CEST
+css: 
+  - /assets/css/fedmvkm-styles.css
+js:
+  - /assets/js/fedmvkm-scripts.js
 tags:
   - Federated Learning
   - Multi-View Clustering
@@ -13,22 +17,23 @@ tags:
   - Privacy-Preserving ML
   - Python
 ---
-<div style="background: linear-gradient(135deg, #6e8efb, #a777e3); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
-  <h1 style="color: white; text-align: center; font-size: 2.5em; margin-bottom: 10px;">🌟 Fed-MVKM: Federated Multi-View K-Means</h1>
-  <h2 style="color: rgba(255,255,255,0.9); text-align: center; font-weight: 400; font-size: 1.3em;">A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel</h2>
+<div class="title-container">
+  <h1>🌟 Fed-MVKM: Federated Multi-View K-Means</h1>
+  <h2>A Comprehensive Tutorial on Federated Multi-View K-Means Clustering with Rectified Gaussian Kernel</h2>
 </div>
 
 > **📅 Last Updated**: August 2nd, 2025  
 > **📝 Original Publication**: August 2nd, 2025  
 > **✨ Status**: Complete implementation with comprehensive analysis
 
-<div class="executive-summary" style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin-bottom: 20px;">
+<div class="executive-summary">
 <h3>Executive Summary</h3>
 <p>Fed-MVKM is a privacy-preserving clustering algorithm that enables multiple organizations to collaboratively analyze multi-view data without sharing raw information. This implementation achieves 32.7% better clustering quality than local-only approaches while maintaining strong privacy guarantees.</p>
 </div>
 
 ## Table of Contents
 
+<div class="toc">
 - [Introduction](#introduction)
   - [The Problem: Privacy in Multi-View Clustering](#the-problem-privacy-in-multi-view-clustering)
   - [Our Solution: Fed-MVKM Framework](#our-solution-fed-mvkm-framework)
@@ -52,15 +57,15 @@ tags:
 - [Future Directions](#future-directions)
 - [References](#references)
 - [Acknowledgments](#acknowledgments)
+</div>
 
-<div class="section-nav" style="display: flex; justify-content: space-between; background-color: #f8f9fa; padding: 10px; margin-bottom: 20px; border-radius: 5px;">
+<div class="section-nav">
   <a href="#introduction">Introduction</a>
   <a href="#theoretical-foundation">Theory</a>
   <a href="#implementation-guide">Implementation</a>
   <a href="#experimental-results">Results</a>
   <a href="#applications-and-deployment">Applications</a>
   <a href="#conclusions">Conclusions</a>
-  <a href="#applications-and-deployment">Applications</a>
   <a href="#future-directions">Future Work</a>
   <a href="#references">References</a>
 </div>
@@ -166,9 +171,11 @@ Multi-view clustering aims to discover data patterns by leveraging complementary
 
 Our approach uses **rectified Gaussian kernels** to enhance distance measurements:
 
+<div class="math-container">
 $$
 D(x_i^h, a_k^h) = 1 - e^{-\beta_h \|x_i^h - a_k^h\|^2}
 $$
+</div>
 
 Where:
 
@@ -186,9 +193,11 @@ This formulation provides **three key advantages**:
 
 The core MVKM-ED algorithm minimizes:
 
+<div class="math-container">
 $$
 J_{\text{MVKM-ED}} = \sum_{h=1}^{m} \left( v_h^{\alpha} \sum_{k=1}^{c} \sum_{i=1}^{n} \mu_{ik} \cdot (1 - e^{-\beta_h \|x_i^h - a_k^h\|^2}) \right)
 $$
+</div>
 
 Where:
 
@@ -201,9 +210,11 @@ Where:
 
 The federated extension aggregates models across sites while preserving privacy:
 
+<div class="math-container">
 $$
 J_{\text{Fed-MVKM}} = \sum_{m=1}^{M} \sum_{h=1}^{s(m)} v_{[m]h}^{\alpha} \sum_{i=1}^{n(m)} \sum_{k=1}^{c(m)} \mu_{[m]ik} \big( 1 - e^{-\beta_{[m]}^h \|x_{[m]i}^h - a_{[m]k}^h \|^2} \big)
 $$
+</div>
 
 Where:
 
@@ -219,10 +230,9 @@ Where:
 
 The notation $[m]$ indicates parameters specific to client $m$. This federated objective function enables each client to optimize its local clustering while contributing to the global model without sharing raw data.
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/fed_mvkm_algorithm_flowchart.png" alt="Fed-MVKM Algorithm Flowchart" style="max-width: 100%; width: 700px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <br>
-  <em>Figure: Fed-MVKM workflow showing data distribution, local computation, and model aggregation</em>
+<div class="center-image">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/fed_mvkm_algorithm_flowchart.png" alt="Fed-MVKM Algorithm Flowchart" width="700">
+  <div class="image-caption">Figure: Fed-MVKM workflow showing data distribution, local computation, and model aggregation</div>
 </div>
 
 ---
@@ -1480,8 +1490,8 @@ This Fed-MVKM-ED approach is particularly valuable for:
 
 # Conclusions and Key Findings {#conclusions}
 
-<div style="background-color: #f7f7ff; padding: 20px; border-radius: 8px; margin: 30px 0;">
-  <h2 style="color: #4a4a4a; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Key Findings:</h2>
+<div class="conclusions">
+  <h2>Key Findings:</h2>
   
   <ol style="padding-left: 25px;">
     <li><strong>Privacy Preservation</strong>: Fed-MVKM enables collaborative model training without sharing raw data, addressing privacy concerns in sensitive applications.</li>
@@ -1491,7 +1501,7 @@ This Fed-MVKM-ED approach is particularly valuable for:
     <li><strong>Practical Applicability</strong>: The diverse applications presented highlight Fed-MVKM's versatility across domains including healthcare, multimedia analysis, and network security.</li>
   </ol>
 
-  <h2 style="color: #4a4a4a; margin: 20px 0 15px 0; border-bottom: 1px solid #ddd; padding-bottom: 10px;">Future Directions:</h2>
+  <h2>Future Directions:</h2>
   
   <ul style="list-style-type: square; padding-left: 25px;">
     <li>Integration with differential privacy techniques to provide stronger privacy guarantees</li>
@@ -1507,7 +1517,7 @@ This Fed-MVKM-ED approach is particularly valuable for:
 
 # Acknowledgments {#acknowledgments}
 
-<div class="acknowledgments" style="background-color: #f7f7ff; padding: 20px; border-radius: 8px; margin: 30px 0;">
+<div class="acknowledgments">
   <h3>Support and Funding</h3>
   <p>This work was supported by:</p>
   <ul>
@@ -1526,6 +1536,6 @@ This Fed-MVKM-ED approach is particularly valuable for:
 </div>
 
 <div style="text-align: center; margin: 30px 0;">
-  <a href="#" style="display: inline-block; background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Top ↑</a>
+  <a href="#" class="back-to-top" style="background-color: #007bff; color: white; padding: 10px 20px; font-weight: bold;">Back to Top ↑</a>
 </div>
 ```
