@@ -13,7 +13,7 @@ tags:
   - Distributed Computing
   - Privacy-Preserving ML
 ---
-# `<font color='blue'>`🌼🌸F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R 🌼🌸`</font>`
+# <font color='blue'>🌼🌸F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R 🌼🌸</font>
 
 ## A Comprehensive Tutorial on Federated Learning with the Flower Framework
 
@@ -66,11 +66,11 @@ tags:
 
 ---
 
-## `<font color='blue'>`&#x1F33C;&#127800;F `</font><font color='orange'>`L `</font><font color='magenta'>`O `</font><font color='yellow'>`W `</font><font color='green'>`E `</font><font color='black'>`R &#x1F33C;&#127800;`</font>`
+## <font color='blue'>🌼🌸F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R 🌼🌸</font>
 
-`<font color='black'>` The idea behind Federated Learning is to train a model between multiple clients and a server without having to share any data. This is done by letting each client train the model locally on its data and send its parameters back to the server, which then aggregates all the clients’ parameters together using a predefined strategy. This process is made very simple by `</font>` `<font color='green'>`using the Flower framework &#128512;.`</font>`
+<font color='black'> The idea behind Federated Learning is to train a model between multiple clients and a server without having to share any data. This is done by letting each client train the model locally on its data and send its parameters back to the server, which then aggregates all the clients’ parameters together using a predefined strategy. This process is made very simple by </font> <font color='green'>using the Flower framework 😀.</font>
 
-### `<font color='orange'>`Flower: A Friendly Federated Learning Research Framework on MNIST Data.`</font>`
+### <font color='orange'>Flower: A Friendly Federated Learning Research Framework on MNIST Data.</font>
 
 ## 🚀 **Getting Started: Environment Setup**
 
