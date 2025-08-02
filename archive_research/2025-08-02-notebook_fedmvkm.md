@@ -497,8 +497,7 @@ Now let's implement the federated learning extension of our MVKM-ED algorithm. T
 </ol>
 </div>
 
-<details>
-<summary>Click to expand: Full FedMVKMED Implementation</summary>
+<h3>Full FedMVKMED Implementation</h3>
 
 ```python
 class FedMVKMED:
