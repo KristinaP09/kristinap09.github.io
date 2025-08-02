@@ -13,7 +13,7 @@ tags:
   - Distributed Computing
   - Privacy-Preserving ML
 ---
-# <font color='blue'>&#x1F33C;&#127800;F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R &#x1F33C;&#127800;</font>
+# ## 🚀 **Getting Started: Environment Setup**
 
 ## A Comprehensive Tutorial on Federated Learning with the Flower Framework
 
@@ -1137,7 +1137,7 @@ if scalability_results:
 
 ## 🌟 **Conclusion**
 
-**`<font color='blue'>`&#x1F33C;&#127800;F`</font><font color='orange'>`L`</font><font color='magenta'>`O`</font><font color='yellow'>`W`</font><font color='green'>`E`</font><font color='black'>`R &#x1F33C;&#127800;`</font>`** has proven to be an exceptional framework for federated learning research and deployment. Its elegant design makes complex distributed ML accessible while maintaining the flexibility needed for cutting-edge research.
+**<font color='blue'>🌼🌸F</font><font color='orange'>L</font><font color='magenta'>O</font><font color='yellow'>W</font><font color='green'>E</font><font color='black'>R 🌼🌸</font>** has proven to be an exceptional framework for federated learning research and deployment. Its elegant design makes complex distributed ML accessible while maintaining the flexibility needed for cutting-edge research.
 
 > **"Federated learning isn't just about distributing computation—it's about democratizing AI while preserving privacy. Flower makes this vision achievable."** 🌸
 
