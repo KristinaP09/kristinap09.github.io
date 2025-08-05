@@ -1,5 +1,3 @@
-layout: default
-title: Blog
 <!-- Google Fonts for modern typography -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
