@@ -602,6 +602,8 @@
                 <input type="text" id="searchInput" class="search-input" placeholder="Search articles, topics, or keywords..." onkeyup="filterArticles()">
                 <select id="tagFilter" class="tag-filter" onchange="filterArticles()">
                     <option value="all">All Categories</option>
+                    <option value="academic-circus">Academic Circus</option>
+                    <option value="academic-publishing">Academic Publishing</option>
                     <option value="algorithmic-paradox">Algorithmic Paradox</option>
                     <option value="ai-collaboration">AI Collaboration</option>
                     <option value="ai">AI</option>
@@ -615,34 +617,46 @@
                     <option value="critical-thinking">Critical Thinking</option>
                     <option value="digital-identity">Digital Identity</option>
                     <option value="documentary-evidence">Documentary Evidence</option>
+                    <option value="editorial-dysfunction">Editorial Dysfunction</option>
                     <option value="emotional-intelligence">Emotional Intelligence</option>
                     <option value="expat-living">Expat Living</option>
+                    <option value="guest-editor">Guest Editor</option>
                     <option value="human-ai-interaction">Human-AI Interaction</option>
                     <option value="investigative-journalism">Investigative Journalism</option>
+                    <option value="investigative-satire">Investigative Satire</option>
                     <option value="italy">Italy</option>
                     <option value="legal-analysis">Legal Analysis</option>
                     <option value="legal-incompetence">Legal Incompetence</option>
                     <option value="liberation">Liberation</option>
+                    <option value="mdpi">MDPI</option>
                     <option value="mental-health">Mental Health</option>
                     <option value="mental-liberation">Mental Liberation</option>
                     <option value="mindful-living">Mindful Living</option>
                     <option value="morning-ritual">Morning Ritual</option>
+                    <option value="orcid">ORCID</option>
+                    <option value="peer-review">Peer Review</option>
                     <option value="personal-development">Personal Development</option>
                     <option value="personal-freedom">Personal Freedom</option>
                     <option value="personal-growth">Personal Growth</option>
                     <option value="productivity">Productivity</option>
                     <option value="professional-accountability">Professional Accountability</option>
                     <option value="professional-growth">Professional Growth</option>
+                    <option value="professional-incompetence">Professional Incompetence</option>
                     <option value="professional-standards">Professional Standards</option>
                     <option value="psychological-resistance">Psychological Resistance</option>
+                    <option value="publishing-ethics">Publishing Ethics</option>
+                    <option value="quality-control">Quality Control</option>
                     <option value="rental-disputes">Rental Disputes</option>
                     <option value="resilience">Resilience</option>
+                    <option value="satirical-journalism">Satirical Journalism</option>
                     <option value="self-empowerment">Self-Empowerment</option>
                     <option value="self-mastery">Self-Mastery</option>
                     <option value="shared-housing">Shared Housing</option>
                     <option value="social-conformity">Social Conformity</option>
                     <option value="storytelling">Storytelling</option>
+                    <option value="system-validation">System Validation</option>
                     <option value="tax-law">Tax Law</option>
+                    <option value="timeline-analysis">Timeline Analysis</option>
                     <option value="toxic-narratives">Toxic Narratives</option>
                     <option value="transformation">Transformation</option>
                     <option value="triumph">Triumph</option>
@@ -715,6 +729,14 @@
 
         // Article data
         const articles = [
+            {
+                title: "The Academic Circus: When Guest Editors Become Pawns",
+                description: "A satirical exposé of MDPI editorial dysfunction featuring Maria's complaint about a high-quality review AFTER the system had already validated and credited it. Real email documentation reveals the beautiful chaos of academic publishing incompetence, complete with timeline analysis and quality control failures.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/the-academic-circus-guest-editor-chaos.html",
+                date: "2025-08-06",
+                imageUrl: "https://kristinap09.github.io/assets/images/academic_circus.png",
+                tags: ["Academic Publishing", "Editorial Dysfunction", "MDPI", "Satirical Journalism", "Quality Control", "Peer Review", "Documentary Evidence", "Timeline Analysis", "Professional Incompetence", "Academic Circus", "Guest Editor", "ORCID", "System Validation", "Publishing Ethics", "Investigative Satire"]
+            },
             {
                 title: "The Morning Ritual: Taking the Trash Out for Good",
                 description: "The story of one transformative morning that changed everything, and the daily practice that keeps the liberation alive. A powerful journey from mental manipulation to complete freedom through morning rituals and the courage to discard toxic narratives.",
