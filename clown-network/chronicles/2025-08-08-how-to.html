@@ -912,6 +912,9 @@
             <div class="footer">
                 Sincerely,<br>
                 <span class="author">Dr. Kristina P. Sinaga</span>
+                <div style="margin-top: 20px; font-size: 0.8em; color: var(--text-tertiary); font-style: italic;">
+                    🎮 Pro tip: Try the classic gaming sequence on your keyboard... ↑↑↓↓←→←→BA
+                </div>
             </div>
         </div>
     </main>
@@ -1089,48 +1092,183 @@
         // Enhanced Easter egg with more features
         let konamiCode = [];
         const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]; // ↑↑↓↓←→←→BA
+        let debugMode = false; // Set to true to see key presses
+        let lastKeyTime = 0;
+        const keyTimeout = 3000; // 3 seconds tolerance between keys
 
         function konamiEasterEgg() {
             document.addEventListener('keydown', function(e) {
-                konamiCode.push(e.keyCode);
-                if (konamiCode.length > konamiSequence.length) {
-                    konamiCode.shift();
+                const currentTime = Date.now();
+                
+                // Debug: show key presses (remove this in production)
+                if (debugMode) {
+                    console.log('Key pressed:', e.keyCode, 'Current sequence:', konamiCode, 'Time since last key:', currentTime - lastKeyTime);
                 }
                 
-                if (konamiCode.toString() === konamiSequence.toString()) {
-                    activateEasterEgg();
-                    konamiCode = []; // Reset
+                // Reset sequence if too much time has passed since last valid key
+                if (currentTime - lastKeyTime > keyTimeout && konamiCode.length > 0) {
+                    konamiCode = [];
+                    console.log('🕐 Sequence reset due to timeout - try again faster!');
+                }
+                
+                // Only track arrow keys and B/A keys for the sequence
+                if ([38, 40, 37, 39, 66, 65].includes(e.keyCode)) {
+                    konamiCode.push(e.keyCode);
+                    lastKeyTime = currentTime;
+                    
+                    // Show progress indicator
+                    showKeyFeedback(e.keyCode);
+                    
+                    // Keep only the last 10 keys (sequence length)
+                    if (konamiCode.length > konamiSequence.length) {
+                        konamiCode.shift();
+                    }
+                    
+                    // Check for successful sequence
+                    if (konamiCode.toString() === konamiSequence.toString()) {
+                        activateEasterEgg();
+                        konamiCode = []; // Reset
+                    }
+                } else {
+                    // Any other key press resets the sequence (like original Konami code)
+                    if (konamiCode.length > 0) {
+                        konamiCode = [];
+                        console.log('❌ Wrong key pressed - sequence reset!');
+                    }
                 }
             });
         }
 
-        function activateEasterEgg() {
-            // Add dance animation
-            const style = document.createElement('style');
-            style.textContent = `
-                h2::before, .divider::after, .hero-image {
-                    animation: dance 2s infinite ease-in-out;
-                }
-                @keyframes dance {
-                    0%, 100% { transform: rotate(0deg) scale(1); }
-                    25% { transform: rotate(-10deg) scale(1.1); }
-                    50% { transform: rotate(0deg) scale(0.9); }
-                    75% { transform: rotate(10deg) scale(1.1); }
-                }
-                .highlight {
-                    animation: rainbow 3s infinite;
-                }
-                @keyframes rainbow {
-                    0% { color: #ff0000; }
-                    16% { color: #ff8000; }
-                    33% { color: #ffff00; }
-                    50% { color: #00ff00; }
-                    66% { color: #0000ff; }
-                    83% { color: #8000ff; }
-                    100% { color: #ff0000; }
+        function showKeyFeedback(keyCode) {
+            const keyMap = {
+                38: '↑', 40: '↓', 37: '←', 39: '→', 
+                66: 'B', 65: 'A'
+            };
+            
+            const feedback = document.createElement('div');
+            feedback.style.cssText = `
+                position: fixed; top: 20px; right: 50%; transform: translateX(50%);
+                background: rgba(0,0,0,0.8); color: white; padding: 5px 15px;
+                border-radius: 20px; font-size: 1.2em; z-index: 10000;
+                animation: fadeInOut 1s ease-out forwards;
+            `;
+            feedback.textContent = keyMap[keyCode] || String.fromCharCode(keyCode);
+            
+            const fadeStyle = document.createElement('style');
+            fadeStyle.textContent = `
+                @keyframes fadeInOut {
+                    0% { opacity: 0; transform: translateX(50%) translateY(-10px); }
+                    30% { opacity: 1; transform: translateX(50%) translateY(0px); }
+                    100% { opacity: 0; transform: translateX(50%) translateY(10px); }
                 }
             `;
-            document.head.appendChild(style);
+            document.head.appendChild(fadeStyle);
+            document.body.appendChild(feedback);
+            
+            setTimeout(() => {
+                feedback.remove();
+                fadeStyle.remove();
+            }, 1000);
+        }
+
+        function activateEasterEgg() {
+            // MAXIMUM CHAOS MODE - The Unprofessional Experience
+            const chaosStyle = document.createElement('style');
+            chaosStyle.id = 'chaos-mode';
+            chaosStyle.textContent = `
+                /* DANCE PARTY MODE ACTIVATED! */
+                h1, h2, h3, .hero-image, .theme-toggle, .back-to-top {
+                    animation: wildDance 1.5s infinite ease-in-out !important;
+                }
+                
+                .container {
+                    animation: shake 0.5s infinite !important;
+                    border: 5px solid #ff00ff !important;
+                }
+                
+                p, li, blockquote {
+                    animation: wobble 2s infinite ease-in-out !important;
+                }
+                
+                .highlight {
+                    animation: rainbow 0.8s infinite, pulse 1s infinite !important;
+                    font-weight: 900 !important;
+                    text-transform: uppercase !important;
+                }
+                
+                .divider::after {
+                    animation: spin 1s infinite linear !important;
+                    font-size: 2rem !important;
+                }
+                
+                h2::before {
+                    animation: bounce 0.6s infinite alternate !important;
+                    font-size: 3rem !important;
+                }
+                
+                /* MAXIMUM UNPROFESSIONAL KEYFRAMES */
+                @keyframes wildDance {
+                    0% { transform: rotate(0deg) scale(1) skew(0deg); }
+                    20% { transform: rotate(-15deg) scale(1.2) skew(5deg); }
+                    40% { transform: rotate(10deg) scale(0.8) skew(-3deg); }
+                    60% { transform: rotate(-20deg) scale(1.3) skew(8deg); }
+                    80% { transform: rotate(25deg) scale(0.7) skew(-10deg); }
+                    100% { transform: rotate(0deg) scale(1) skew(0deg); }
+                }
+                
+                @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    25% { transform: translateX(-10px) rotate(1deg); }
+                    50% { transform: translateX(10px) rotate(-1deg); }
+                    75% { transform: translateX(-5px) rotate(0.5deg); }
+                }
+                
+                @keyframes wobble {
+                    0%, 100% { transform: translateY(0px) rotate(0deg); }
+                    25% { transform: translateY(-3px) rotate(1deg); }
+                    50% { transform: translateY(2px) rotate(-0.5deg); }
+                    75% { transform: translateY(-1px) rotate(0.8deg); }
+                }
+                
+                @keyframes rainbow {
+                    0% { color: #ff0000; background: rgba(255,0,0,0.1); }
+                    14% { color: #ff8000; background: rgba(255,128,0,0.1); }
+                    28% { color: #ffff00; background: rgba(255,255,0,0.1); }
+                    42% { color: #00ff00; background: rgba(0,255,0,0.1); }
+                    57% { color: #00ffff; background: rgba(0,255,255,0.1); }
+                    71% { color: #0000ff; background: rgba(0,0,255,0.1); }
+                    85% { color: #8000ff; background: rgba(128,0,255,0.1); }
+                    100% { color: #ff0000; background: rgba(255,0,0,0.1); }
+                }
+                
+                @keyframes pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.3); }
+                }
+                
+                @keyframes spin {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                
+                @keyframes bounce {
+                    from { transform: translateY(0px); }
+                    to { transform: translateY(-20px); }
+                }
+                
+                /* EXTRA CHAOS EFFECTS */
+                body {
+                    animation: backgroundFlash 3s infinite !important;
+                }
+                
+                @keyframes backgroundFlash {
+                    0%, 100% { filter: hue-rotate(0deg); }
+                    25% { filter: hue-rotate(90deg); }
+                    50% { filter: hue-rotate(180deg); }
+                    75% { filter: hue-rotate(270deg); }
+                }
+            `;
+            document.head.appendChild(chaosStyle);
             
             // Show enhanced notification
             const notification = document.createElement('div');
@@ -1142,10 +1280,12 @@
                 animation: bounceIn 0.6s ease-out;
             `;
             notification.innerHTML = `
-                <h3 style="margin-bottom: 15px;">🎉 Konami Code Activated! 🎉</h3>
-                <p style="margin-bottom: 15px;">You've unlocked the secret dance mode! Everything is now grooving to the beat of professionalism.</p>
-                <p style="font-size: 0.9em; color: var(--text-secondary); margin-bottom: 20px;">Fun fact: You're one of the few who discovered this easter egg!</p>
-                <button onclick="this.parentElement.remove()" style="padding: 10px 20px; border: none; border-radius: 8px; background: var(--text-accent); color: white; cursor: pointer; font-weight: 600;">Close</button>
+                <h3 style="margin-bottom: 15px;">🎉 CHAOS MODE ACTIVATED! 🎉</h3>
+                <p style="margin-bottom: 15px;"><strong>CONGRATULATIONS!</strong> You've unlocked MAXIMUM UNPROFESSIONALISM MODE! 🤡</p>
+                <p style="margin-bottom: 15px;">This is what happens when academic standards completely break down!</p>
+                <p style="font-size: 0.9em; color: var(--text-secondary); margin-bottom: 20px;">Dance party initiated... Prof. Zhang would be proud! 💃🕺</p>
+                <button onclick="document.getElementById('chaos-mode').remove(); this.parentElement.remove();" style="padding: 10px 20px; border: none; border-radius: 8px; background: #ff4444; color: white; cursor: pointer; font-weight: 600; margin-right: 10px;">STOP THE MADNESS!</button>
+                <button onclick="this.parentElement.remove()" style="padding: 10px 20px; border: none; border-radius: 8px; background: var(--text-accent); color: white; cursor: pointer; font-weight: 600;">Keep Dancing</button>
             `;
             
             const bounceStyle = document.createElement('style');
