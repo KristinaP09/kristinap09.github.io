@@ -637,6 +637,198 @@ No noise. No fluff. Just precision that performs.</p>
       font-size: 1.4em;
     }
   }
+/* Guest Editor Announcement Styles */
+.guest-editor-announcement {
+    background: linear-gradient(135deg, #ff66a6, #ff99cc);
+    color: white;
+    margin: 30px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 102, 166, 0.3);
+    position: relative;
+}
+
+.announcement-banner {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.announcement-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.announcement-content {
+    padding: 30px;
+}
+
+.announcement-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.announcement-highlight {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.call-for-papers {
+    margin: 25px 0;
+}
+
+.call-for-papers h4 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.topic-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.topic-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.submission-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-card h5 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.btn-primary {
+    background: white;
+    color: #ff66a6;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #ff66a6;
+    transform: translateY(-2px);
+}
+
+.benefits-highlight {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.benefit {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .announcement-content {
+        padding: 20px;
+    }
+    
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .submission-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-section .btn-primary,
+    .cta-section .btn-secondary {
+        display: block;
+        margin: 10px auto;
+        max-width: 200px;
+    }
+    
+    .benefits-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+  
 </style>
 
 <!-- Schema.org markup for Google -->
