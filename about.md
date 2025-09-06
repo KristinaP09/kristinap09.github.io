@@ -330,7 +330,8 @@ function updateThemeStatus(text) {
     <div class="profile-title">Ph.D. in Applied Mathematics, Chung Yuan Christian University (CYCU), Taiwan</div>
     <div class="social-links">
       <a href="https://github.com/KristinaP09" class="social-link">GitHub</a>
-      <a href="https://www.linkedin.com/in/kristinasinaga" class="social-link">LinkedIn</a>
+      <a href="www.linkedin.com/in/kristina-p-sinaga-0ba152309" class="social-link">LinkedIn</a>
+      <a href="https://medium.com/@kristinapestaria.sinaga" class="social-link">Medium</a>
       <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=it&oi=ao" class="social-link">Google Scholar</a>
     </div>
   </div>
