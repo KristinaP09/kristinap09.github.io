@@ -11,133 +11,177 @@ tags:
 
 ### Introduction
 
-Artificial Intelligence has transformed rapidly over the past decades. Landmark milestones—IBM's Deep Blue (1997), DeepMind's AlphaGo (2016), and the release of ChatGPT (2022)—demonstrate how models have progressed from game-playing agents to versatile language and multimodal systems. Alongside this progress, privacy and data governance have become critical constraints for real-world ML deployments.
+This note provides an academically oriented exposition of Federated Learning (FL), emphasizing formal definitions, algorithmic structure, and practical considerations for deployment in regulated and heterogeneous environments. Historical milestones in AI (e.g., Deep Blue, AlphaGo, and large-scale pre-trained language models) motivate the need for training paradigms that respect privacy and data locality.
 
-Federated Learning (FL) addresses these constraints by enabling collaborative model training across multiple devices or organizations while keeping raw data local. This document explains the core ideas, practical workflow, and real-world impact of FL and includes a navigable catalog to jump to each section.
+The remainder of the document is organized to (i) introduce the formal concept of FL, (ii) contrast FL with centralized machine learning, (iii) present the canonical FedAvg algorithm with an illustrative diagram and pseudocode, and (iv) discuss categories, deployment challenges, and representative applications.
 
 ---
 
 ## Catalog (Quick navigation)
 
-- [What you'll learn](#what-youll-learn)
-- [Definition](#definition)
-- [Why FL matters](#why-fl-matters)
-- [Centralized vs Federated — quick comparison](#centralized-vs-federated)
-- [FL categories](#fl-categories)
-- [Five-step workflow (concise)](#five-step-workflow-concise)
-- [Practical considerations & challenges](#practical-considerations--challenges)
-- [Real-world use cases](#real-world-use-cases)
-- [Further reading & resources](#further-reading--resources)
+- [Learning objectives](#learning-objectives)
+- [Formal definition](#formal-definition)
+- [Motivation and significance](#motivation-and-significance)
+- [Technical comparison: centralized vs federated](#technical-comparison-centralized-vs-federated)
+- [Federated learning categories](#federated-learning-categories)
+- [FedAvg: algorithm, diagram, and pseudocode](#fedavg-algorithm-diagram-and-pseudocode)
+- [Practical considerations and failure modes](#practical-considerations-and-failure-modes)
+- [Representative applications](#representative-applications)
+- [Further reading](#further-reading)
 - [Changelog](#changelog)
 
 ---
 
-## What you'll learn
+## Learning objectives
 
-- A concise, practical definition of Federated Learning.
-- How FL differs from centralized ML and why that matters.
-- The main FL categories and a five-step federated training workflow.
-- Key challenges and practical considerations for deploying FL.
+After reading this document the reader should be able to:
 
----
-
-## Definition
-
-Federated Learning (FL) is a distributed ML paradigm where multiple clients (mobile devices, edge nodes, or organizations) collaboratively train a global model without sharing their raw data. Clients compute model updates locally and only share model parameters or gradients with a coordinating server or aggregator.
-
-The original FedAvg approach (McMahan et al., 2016) popularized this setup: clients perform several local SGD steps and the server aggregates updates via a weighted average (weighted by client dataset size).
-
-Key properties:
-
-- Data remains on-device (privacy-friendly).
-- Communication cost and heterogeneity (non-i.i.d. data) are central challenges.
-- FL is compatible with privacy techniques such as differential privacy and secure multiparty computation (MPC).
+- State a concise, formal definition of Federated Learning.
+- Describe the FedAvg training loop and identify its principal hyperparameters.
+- Compare centralized and federated paradigms along algorithmic, systems, and privacy dimensions.
+- Enumerate key challenges (statistical, systems, and adversarial) that arise in FL deployments.
 
 ---
 
-## Why FL matters
+## Formal definition {#formal-definition}
 
-- Preserves privacy and reduces regulatory risk by keeping raw data local.
-- Enables collaboration across organizations that cannot share data (healthcare, finance).
-- Reduces the need for large data transfers and central storage.
+Let there be K clients, each with a local dataset D_k and empirical risk R_k(w) = E_{x~D_k}[ell(w; x)]. The objective of (server-mediated) Federated Learning is to minimize the global empirical risk:
 
----
+\[ R(w) = \sum_{k=1}^K p_k R_k(w), \]
 
-## Centralized vs Federated
+where p_k denotes a weighting factor (commonly p_k = n_k / n, with n_k = |D_k| and n = \sum_k n_k). In the canonical federated optimization setting, clients perform local optimization steps (e.g., SGD) and periodically communicate updates to an aggregator which constructs a new global iterate.
 
-| Aspect | Centralized ML (CML) | Federated ML (FML) |
-|---|---:|---:|
-| Data movement | Raw data uploaded to a central server | Data stays on client devices |
-| Assumption | Often assumes i.i.d. data | Handles non-i.i.d. clients and skew |
-| Privacy risk | Higher (centralized storage) | Lower (no raw data transfer) |
-| Communication | Low (one-time upload) | High (many rounds of model updates) |
-| Continual learning | Easier to implement centrally | More complex due to asynchrony and heterogeneity |
+Key assumptions and deviations from classical centralized optimization:
+
+- Data heterogeneity: D_k may be non-i.i.d. and unbalanced in size.
+- Limited communication: clients communicate infrequently relative to local computation.
+- System heterogeneity: clients differ in compute power, availability, and communication bandwidth.
 
 ---
 
-## FL categories {#fl-categories}
+## Motivation and significance {#motivation-and-significance}
 
-- Horizontal Federated Learning (HFL): clients share the same feature space but have different samples (typical cross-device setups; e.g., keyboard next-word prediction).
-- Vertical Federated Learning (VFL): clients hold different features for the same set of users (useful in finance when two institutions want to jointly build a model for shared customers).
-- Federated Transfer Learning (FTL): clients differ in both samples and features; transfer learning techniques bridge feature gaps.
-
-References: McMahan et al., 2016; Yang et al.; Konečný et al.
+FL is motivated by regulatory, privacy, and engineering constraints that preclude centralized pooling of raw data. It enables collaborative model building while mitigating many legal and operational barriers to data sharing. However, FL introduces statistical and systems complexities that require tailored algorithms and rigorous evaluation.
 
 ---
 
-## Five-step workflow (concise)
+## Technical comparison: centralized vs federated {#technical-comparison-centralized-vs-federated}
 
-1. Initialize global model on server (random or from a checkpoint).
-2. Server selects a subset of clients and sends the global model to them.
-3. Each client performs local training on its private data (a few epochs or minibatches).
-4. Clients send model updates (parameters or gradients) back to the server.
-5. Server aggregates updates (FedAvg or other algorithms) to produce a new global model; repeat until convergence.
+The following table presents a more technical comparison suitable for researchers or engineers planning deployments.
 
-Notes:
-
-- Aggregation is commonly a weighted average by client dataset size. Other robust aggregation methods exist to mitigate attacks or Byzantine clients.
-- Client selection strategies, local epochs, and communication compression strongly affect efficiency and performance.
-
----
-
-## Practical considerations & challenges
-
-- Non-i.i.d. data: clients may have highly skewed local distributions, which can slow convergence.
-- Communication efficiency: reduce bytes transferred via quantization, sparsification, or fewer communication rounds.
-- Privacy & security: combine FL with differential privacy, secure aggregation, or MPC to limit information leakage.
-- System heterogeneity: devices differ in compute, storage, connectivity — design protocols to accommodate stragglers and unreliable clients.
-- Incentives & trust: when collaborating across organizations, legal and business incentives must be aligned.
-
-Edge cases and failure modes:
-
-- Very small local datasets or clients with extreme label skew.
-- Model poisoning by malicious clients.
-- Clients with intermittent connectivity or very low bandwidth.
+| Dimension | Centralized ML (CML) | Federated ML (FML) | Implication / Mitigation |
+|---|---|---|---|
+| Data access model | Full access to pooled dataset D = \cup_k D_k | Only local access to D_k; server sees updates only | Use secure aggregation / DP to reduce leakage during updates |
+| Optimization objective | Minimize R(w) directly via centralized SGD | Minimize weighted R(w) via intermittent client-server sync | FedAvg approximates centralized SGD when local steps are small |
+| Communication complexity | One-time data transfer O(n) | Iterative model-update transfers O(T * m * |w|) (T rounds, m clients/round) | Compression, sparsification reduce bytes; fewer rounds trade computation for comms |
+| Statistical heterogeneity | Assumes i.i.d. or can shuffle data | Non-i.i.d. across clients; label and feature skew common | Methods: proximal terms (SCAFFOLD, FedProx), personalized models |
+| Convergence theory | Well-established for SGD under standard assumptions | Convergence depends on local steps, client heterogeneity; bounded divergence analyses exist | Theoretical bounds scale with heterogeneity metrics (e.g., gradient variance across clients) |
+| Robustness to adversaries | Data-centralized, server-side defenses possible | Vulnerable to model poisoning, Sybil attacks; federated defenses needed | Robust aggregation (Krum, median), anomaly detection, secure enclaves |
+| Privacy leakage | Centralized storage risk; standard access controls apply | Leakage via model updates possible (gradient inversion) | DP, secure aggregation, and cryptographic MPC mitigate leakage |
+| System heterogeneity | Controlled cluster or cloud | Wide variance in client capabilities; stragglers and dropouts frequent | Asynchronous updates, client dropout tolerance, adaptive client selection |
+| Deployment complexity | Lower (standard MLOps) | Higher: orchestration, client SDKs, network scheduling, and auditing | Invest in robust orchestration and reproducible pipelines |
 
 ---
 
-## Real-world use cases
+## Federated learning categories {#federated-learning-categories}
 
-- Healthcare: cross-hospital model training for diagnosis without sharing patient records.
-- Finance: fraud detection models trained across institutions.
-- Mobile: on-device personalization (keyboard suggestions, recommendation systems).
-- Privacy-first apps: encrypted or privacy-preserving analytics for sensitive domains.
+- Horizontal (sample-partitioned) FL: Clients share feature space X but have disjoint samples. Typical cross-device use-cases.
+- Vertical (feature-partitioned) FL: Clients hold complementary feature sets for overlapping user populations; secure protocols align features and labels.
+- Federated transfer learning: Combines transfer learning and FL when both sample and feature spaces differ; typically used for small-overlap situations.
 
 ---
 
-## Further reading & resources
+## FedAvg: algorithm, diagram, and pseudocode {#fedavg-algorithm-diagram-and-pseudocode}
 
-- McMahan et al., "Communication-Efficient Learning of Deep Networks from Decentralized Data" (FedAvg): https://arxiv.org/abs/1602.05629
-- Konečný et al., Communication-efficient learning: https://arxiv.org/pdf/1610.05492.pdf
-- Flower: a practical FL framework and tutorials: https://flower.dev/docs/framework/tutorial-series-what-is-federated-learning.html
+FedAvg (McMahan et al., 2016) is the canonical algorithm for server-mediated federated optimization. The high-level loop is:
+
+1. Server initializes global model w^0.
+2. For each communication round t = 0, 1, 2, ...:
+   a. Server samples a subset S_t of clients and distributes w^t.
+   b. Each client k in S_t performs E local epochs of SGD on R_k(w) starting from w^t, producing w_k^{t+1}.
+   c. Clients return updates; server aggregates via weighted average: w^{t+1} = \sum_{k in S_t} (n_k / n_S) w_k^{t+1}.
+
+Diagram (simplified, ASCII):
+
+```
+        Server (w^t)
+           |
+   +-------+-------+   <-- broadcast w^t
+   |       |       |
+ Client1 Client2 ... Clientm
+   |       |       |
+ Local   Local   Local
+  training training training
+   |       |       |
+   +---+---+---+---+
+       |   |   |     <-- clients send updates
+       v   v   v
+     Aggregate (weighted average)
+         produces w^{t+1}
+```
+
+Compact pseudocode (FedAvg):
+
+```python
+# Server
+initialize w
+for t in range(T):
+    S = sample_clients()
+    send w to clients in S
+    updates = [client_update(w) for client in S]
+    w = aggregate_weighted(updates)
+
+# Client k
+def client_update(w):
+    w_local = w
+    for e in range(E):
+        for batch in local_data:
+            w_local = w_local - eta * grad(w_local; batch)
+    return w_local
+```
+
+Comments:
+
+- The algorithm trades communication for computation: increasing E reduces communication rounds but amplifies client drift under heterogeneity.
+- Practical deployments tune E, client sampling fraction, and compression schemes to meet resource constraints.
+
+---
+
+## Practical considerations and failure modes {#practical-considerations-and-failure-modes}
+
+- Statistical challenges: severe class imbalance, non-i.i.d. features, and small local sample sizes can degrade global model quality or necessitate personalization.
+- Systems challenges: intermittent connectivity, heterogeneous compute, and secure software distribution to client devices.
+- Adversarial concerns: poisoned updates, backdoor attacks, and inference attacks on updates.
+
+Mitigations and best practices:
+
+- Combine algorithmic regularizers (FedProx) and control variates (SCAFFOLD) to reduce divergence.
+- Use secure aggregation and differentially private noise to bound information leakage; quantify utility-privacy trade-offs empirically.
+- Implement robust aggregation and anomaly detection to reduce the impact of malicious clients.
+
+---
+
+## Representative applications {#representative-applications}
+
+- Healthcare: multi-institutional model training for diagnostic assistance while preserving patient confidentiality.
+- Finance: collaborative fraud detection across institutions with regulatory constraints on data sharing.
+- Mobile personalization: on-device language models, recommendation systems, and keyboard prediction.
+
+---
+
+## Further reading {#further-reading}
+
+- McMahan, H. B., et al. (2016). Communication-Efficient Learning of Deep Networks from Decentralized Data. arXiv:1602.05629.
+- Konečný, J., et al. (2016). Federated Learning: Strategies for Improving Communication Efficiency. arXiv:1610.05492.
+- Li, T., Sahu, A., Talwalkar, A., & Smith, V. (2020). Federated Learning: Challenges, Methods, and Future Directions. IEEE Signal Processing Magazine.
 
 ---
 
 ## Changelog
 
-- 2025-09-06: Improved structure, added catalog (table of contents), refined wording and practical notes.
+- 2025-09-06: Tone shifted to academic register; added FedAvg diagram and pseudocode; replaced comparison table with advanced technical comparison.
 
 ---
 
-> Federated learning unlocks collaboration across data silos: it’s a practical compromise between centralized performance and privacy-preserving constraints.
+> Federated learning formalizes collaborative optimization with locality constraints: success depends on joint algorithmic and systems design.
 
