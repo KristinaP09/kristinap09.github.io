@@ -71,7 +71,7 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
         </div>
         
         <div class="cta-section">
-            <a href="https://www.mdpi.com/journal/futureinternet" class="btn-primary" target="_blank">
+            <a href="https://www.mdpi.com/journal/futureinternet/special_issues/1UP93P6G94" class="btn-primary" target="_blank">
                 <i class="fas fa-paper-plane"></i> Submit Your Paper
             </a>
             <a href="mailto:kristinapestaria.sinaga@isti.cnr.it" class="btn-secondary">
