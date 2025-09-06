@@ -65,7 +65,7 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
             </div>
             <div class="info-card">
                 <h5>📅 Important Dates</h5>
-                <p><strong>Submission Deadline:</strong> [Insert Date]<br>
+                <p><strong>Submission Deadline:</strong> August 20, 2026<br>
                 <strong>Review Process:</strong> Fast-track available</p>
             </div>
         </div>
