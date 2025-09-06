@@ -33,6 +33,66 @@ description: "Expert in scalable AI models, federated learning, and Edge AI. Ph.
     <p class="subtitle">Where Value-Driven Work Meets Innovation</p>
   </header>
 
+
+  <!-- Guest Editor Announcement -->
+<section class="guest-editor-announcement">
+    <div class="announcement-banner">
+        <i class="fas fa-bullhorn announcement-icon"></i>
+        <h2>🎯 Special Announcement: Call for Papers</h2>
+    </div>
+    <div class="announcement-content">
+        <h3>Guest Editor - MDPI Future Internet Special Issue</h3>
+        <p class="announcement-highlight">I am honored to serve as <strong>Guest Editor</strong> for the prestigious <strong>MDPI Future Internet</strong> journal's special issue on <strong>"Clustered Federated Learning for Networks"</strong>.</p>
+        
+        <div class="call-for-papers">
+            <h4>📢 We Invite Your Contributions!</h4>
+            <p>Submit your groundbreaking research in:</p>
+            <div class="topics-grid">
+                <div class="topic-item">🔗 Clustered Federated Learning Algorithms</div>
+                <div class="topic-item">🌐 Network-Aware Federation Strategies</div>
+                <div class="topic-item">🔒 Privacy-Preserving Clustering Methods</div>
+                <div class="topic-item">⚡ Distributed ML Optimization</div>
+                <div class="topic-item">📱 Edge Computing & IoT Applications</div>
+                <div class="topic-item">🔐 Blockchain-Enhanced Federated Learning</div>
+            </div>
+        </div>
+        
+        <div class="submission-info">
+            <div class="info-card">
+                <h5>📚 Journal Details</h5>
+                <p><strong>MDPI Future Internet</strong> (Impact Factor: 3.4)<br>
+                Open Access • Fast Review • Global Reach</p>
+            </div>
+            <div class="info-card">
+                <h5>📅 Important Dates</h5>
+                <p><strong>Submission Deadline:</strong> [Insert Date]<br>
+                <strong>Review Process:</strong> Fast-track available</p>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <a href="https://www.mdpi.com/journal/futureinternet" class="btn-primary" target="_blank">
+                <i class="fas fa-paper-plane"></i> Submit Your Paper
+            </a>
+            <a href="mailto:kristinapestaria.sinaga@isti.cnr.it" class="btn-secondary">
+                <i class="fas fa-envelope"></i> Contact Guest Editor
+            </a>
+        </div>
+        
+        <div class="benefits-highlight">
+            <p><strong>Why Publish With Us?</strong></p>
+            <div class="benefits-list">
+                <span class="benefit">✅ High-Impact Journal</span>
+                <span class="benefit">✅ Expert Review Process</span>
+                <span class="benefit">✅ International Visibility</span>
+                <span class="benefit">✅ Open Access Publication</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
 <section class="featured-post">
     <h3>Modern Work Philosophy</h3>
     <p><strong>Creating Impact Through Purposeful Innovation</strong></p>
