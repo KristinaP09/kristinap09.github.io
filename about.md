@@ -332,7 +332,7 @@ function updateThemeStatus(text) {
       <a href="https://github.com/KristinaP09" class="social-link">GitHub</a>
       <a href="www.linkedin.com/in/kristina-p-sinaga-0ba152309" class="social-link">LinkedIn</a>
       <a href="https://medium.com/@kristinapestaria.sinaga" class="social-link">Medium</a>
-      <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=it&oi=ao" class="social-link">Google Scholar</a>
+      <a href="https://scholar.google.com/citations?view_op=list_works&hl=it&hl=it&user=XoJ7EkoAAAAJ" class="social-link">Google Scholar</a>
     </div>
   </div>
 </div>
