@@ -124,11 +124,11 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
       <p class="publication-venue">IEEE Access, 2020</p>
       <div>
         <strong class="featured-banner">
-            🌟 Featured as one of the Popular Documents – April 2025 in IEEE Access!
+            🌟 Featured as one of the Popular Documents – August 2025 in IEEE Access! 
         </strong>
         <br>
         <span class="citations-banner">
-          <i class="fas fa-chart-line"></i> Over 2,000+ Citations
+          <i class="fas fa-chart-line"></i> Over 2,500+ Citations
         </span>
         <a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6287639" target="_blank" style="font-size:0.95em; color:#005a87; display: block; margin-top: 0.3em;">
           See the list on IEEE Xplore
@@ -178,7 +178,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
       <p class="publication-authors">Kristina P. Sinaga, Miin-Shen Yang</p>
       <p class="publication-venue">Pattern Recognition, 2021 <!-- Placeholder for Journal Name, Year -->
         <span class="impact-factor">
-          Impact Factor: 7.5
+          Impact Factor: 7.6
         </span>
       </p>
       <p class="publication-abstract">
