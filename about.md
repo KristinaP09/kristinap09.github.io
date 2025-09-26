@@ -376,11 +376,12 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 <div class="card-container">
   <div class="card">
     <h3>Algorithm Design</h3>
-    <p>Designed novel clustering algorithms including E-MVFCM and EB-MVFCM that incorporate heat-kernel coefficients for enhanced performance with heterogeneous data.</p>
+    <p>The core of my work lies in creating scalable solutions that bridge theoretical rigor with practical utility. Over the past eight years, I have specialized in unsupervised learning, developing clustering algorithms that outperform traditional methods when handling diverse, multi-source data. This expertise provides a strong foundation for my current exploration into hybrid models that integrate unsupervised, supervised, and deep learning techniques. This transition represents a paradigm shift, leveraging the strengths of deep learning to enhance efficiency and accuracy in complex data environments, such as real-time analytics in IoT systems or personalized recommendation engines.</p>
   </div>
   <div class="card">
     <h3>Robustness Research</h3>
-    <p>Examined system robustness under noise and manipulation across diverse operational environments, with particular focus on multi-view learning scenarios.</p>
+    <p>A key aspect of this research involves adapting to modern computational tools. Transitioning from MATLAB to Python has been a significant evolution in my workflow, enabling greater flexibility and access to advanced libraries like TensorFlow and PyTorch. This shift is straightforward yet impactful: it begins with formulating core functions and progresses to leveraging Python’s extensive ecosystem of libraries, streamlining algorithm development and deployment. For instance, Python’s versatility supports rapid prototyping for industry applications while maintaining the precision required for academic research.
+This research has broad implications. For academia, it advances the theoretical understanding of clustering and learning paradigms. For industry, it offers practical, scalable solutions for data-driven decision-making in dynamic environments. For the general public, it paves the way for smarter, more reliable technologies that adapt to real-world complexities, from improved medical diagnostics to enhanced user experiences in digital platforms.</p>
   </div>
   <div class="card">
     <h3>NeuralGlow.ai</h3>
