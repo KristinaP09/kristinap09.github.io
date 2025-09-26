@@ -343,12 +343,11 @@ function updateThemeStatus(text) {
 
 ## About Me
 
+As a dedicated researcher and innovator, I approach complex systems with a blend of analytical rigor and creative insight. My work focuses on designing intelligent, efficient, and intuitive AI solutions that bridge theoretical foundations with practical applications. With a commitment to clarity, structure, and precision, I ensure that every project—whether an algorithm or a research paper—reflects a cohesive and impactful narrative.
 
-As a lifelong learner and researcher, I view systems and chaos through a sarcastic lens. I am passionate about developing intelligent, effective, and intuitive AI solutions.
+I am currently a researcher at the Istituto di Scienza e Tecnologie dell’Informazione, Italian National Research Council, where I develop cutting-edge algorithms for complex clustering challenges in data science. My expertise spans applied mathematics, machine learning, and federated learning, with a track record of delivering solutions that advance both academic inquiry and industry innovation.
 
-Clarity, structure, and a strong sense of identity guide everything I create. Whether I'm working on an algorithm or a sentence, I am committed to doing things the right way. My work bridges theory and practice, infusing wit and elegant logic into everything I create.
-
-I am currently affiliated with the Istituto di Scienza e Tecnologie dell'Informazione at the Italian National Research Council, where I develop innovative algorithms for complex clustering problems. My contract officially ends on September 30, 2025, and I will leave Pisa on September 29. If you have an offer, please contact me. I am open to roles as a researcher, associate professor, or data scientist in the field of data science, applied mathematics, machine learning, or federated learning worldwide.
+My contract concludes on September 30, 2025, and I will be relocating from Pisa on September 29. I am actively seeking opportunities as a researcher, associate professor, or data scientist in data science, applied mathematics, machine learning, or federated learning. I am open to global opportunities and eager to contribute to impactful projects. Please feel free to contact me to discuss potential collaborations.
 
 <div class="highlight-box">
   <h3>Research Interests</h3>
