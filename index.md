@@ -221,7 +221,7 @@ No noise. No fluff. Just precision that performs.</p>
 <section id="contact">
     <h2>Contact</h2>
     <div class="contact-card">
-      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:kristinapestaria.sinaga@isti.cnr.it">kristinapestaria.sinaga@isti.cnr.it</a></p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:ndkristinaps25@gmail.com">ndkristinaps25@gmail.com</a></p>
       <p><i class="fas fa-envelope"></i> Email: <a href="mailto:neuralglowai@gmail.com">neuralglowai@gmail.com</a></p>
       <p style="color: #e74c3c; font-weight: bold; margin-top: 15px;">
         <i class="fas fa-exclamation-triangle"></i> 
@@ -846,7 +846,7 @@ No noise. No fluff. Just precision that performs.</p>
         "https://www.linkedin.com/in/kristina-p-sinaga-0ba152309",
         "https://github.com/KristinaP09",
         "https://x.com/Kristina57040",
-        "https://scholar.google.com/citations?user=yNWQLYAAAAAJ"
+        "https://scholar.google.com/citations?view_op=list_works&hl=it&hl=it&user=XoJ7EkoAAAAJ"
     ]
 }
 </script>
