@@ -28,8 +28,10 @@ Read it here: [Copilot Chaos](./clown-network/chronicles/2025-4-29-copilot-chaos
 2. The following email accounts are now <code style="color : Fuchsia">officially retired</code>:
    - Yahoo: <code style="color: red;">kristinasinaga57@yahoo.co.id</code>  
    - Gmail: <code style="color: red;">krist.p.sinaga@gmail.com</code>
+   - Gmail: <code style="color: red;">kristinasinaga41@gmail.com</code>
 
-   I forgot the passwords (yes, both), and apparently I failed the “prove you’re not an impostor” tests. So long, legacy inboxes!
+
+   I forgot the passwords (yes, three of it), and apparently I failed the “prove you’re not an impostor” tests. So long, legacy inboxes!
 
 ---
 
