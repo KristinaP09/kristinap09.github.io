@@ -1,5 +1,5 @@
 # Site settings
-title: "Kristina P. Sinaga | AI Researcher &amp; Applied Mathematics Ph.D."
+title: "Kristina P. Sinaga | Independent Researcher &amp; Applied Mathematics Ph.D."
 description: "Expert in scalable AI models, federated learning, and Edge AI"
 baseurl: ""
 url: "https://kristinap09.github.io"
@@ -16,7 +16,7 @@ plugins:
 # Author information
 author:
   name: Kristina P. Sinaga
-  email: kristinasinaga41@gmail.com
+  email: ndkristinaps25@gmail.com
 
 # Social links
 social:
