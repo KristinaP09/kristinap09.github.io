@@ -439,5 +439,5 @@ Feel free to reach out if you're interested in collaboration, research opportuni
 ---
 
 <p style="text-align: center; color: var(--muted); font-size: 0.9em;">
-© 2025 Kristina P. Sinaga | Last updated: May 2025
+© 2025 Kristina P. Sinaga | Last updated: September 2025
 </p>
