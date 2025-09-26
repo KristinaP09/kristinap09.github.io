@@ -358,6 +358,8 @@ Currently, I am affiliated with the Istituto di Scienza e Tecnologie dell'Inform
 
 <div class="badge-container">
   <span class="badge">Clustering Algorithms</span>
+  <span class="badge">Supervised learning</span>
+  <span class="badge">Deep learning</span>
   <span class="badge">Multi-view learning</span>
   <span class="badge">Fuzzy C-Means</span>
   <span class="badge">Heat-Kernel Methods</span>
