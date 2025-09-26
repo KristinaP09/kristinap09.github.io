@@ -397,12 +397,11 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
 <div class="publication-item">
     <span class="pub-year">2025</span>
     <div class="pub-details">
-      <p class="pub-title">A Globally Collaborative Multi-View k-Means Clustering</p>
-      <p class="pub-authors">Sinaga, K.P., Yang, M.S.</p>
-      <p class="pub-journal"><em>MDPI on Electronics</em></p>
+      <p class="pub-title">Personalized Federated Learning with Heat-Kernel Enhanced Tensorized Multi-View Clustering</p>
+      <p class="pub-authors">Sinaga, K.P.</p>
+      <p class="pub-journal"><em>arXiv</em></p>
       <div class="pub-links">
-        <a href="https://www.mdpi.com/2079-9292/14/11/2129" target="_blank" class="journal-link">Journal</a>
-        <a href="https://github.com/KristinaP09/G-CoMVKM" target="_blank" class="code-link">Code</a>
+        <a href="https://arxiv.org/abs/2509.16101" target="_blank" class="journal-link">Preprint</a>
       </div>
     </div>
     <span class="pub-year">2024</span>
@@ -425,16 +424,15 @@ I focus on unpredictable, real-world settings where systems are truly tested. My
   <h3>Open to New Roles</h3>
   <p>I am currently on the global job market for research-driven or applied roles—starting <strong>October 2025</strong>—with teams that value clarity, autonomy, and creative rigor.</p>
   <p><em>If your work is serious about outcomes (and allergic to nonsense too), let's talk.</em></p>
-  <a href="mailto:kristinapestaria.sinaga@isti.cnr.it" class="cta-button">Get in Touch</a>
+  <a href="mailto:ndkristinaps25@gmail.com" class="cta-button">Get in Touch</a>
 </div>
 
 ## Contact
 
 Feel free to reach out if you're interested in collaboration, research opportunities, or just want to discuss interesting problems in AI and mathematics.
 
-- Email: kristinapestaria.sinaga@isti.cnr.it
-- Office: Istituto di Scienza e Tecnologie dell'Informazione, Italian National Research Council, Italy
-- Previous Affiliation: Chung Yuan Christian University, Taiwan
+- Email: ndkristinaps25@gmail.com
+- Previous Affiliation: ISTI-CNR, Italy
 
 ---
 
