@@ -352,7 +352,8 @@ I am currently affiliated with the Istituto di Scienza e Tecnologie dell'Informa
 
 <div class="highlight-box">
   <h3>Research Interests</h3>
-  <p>My research focuses on developing innovative algorithms for complex systems, with particular emphasis on multi-view clustering, heat-kernel methods, and fuzzy clustering approaches. I specialize in creating solutions that perform robustly under unpredictable conditions with heterogeneous data sources.</p>
+  <p>
+The primary focus of my research endeavors is the development of innovative algorithms for complex systems, with a particular emphasis on multi-view clustering, heat-kernel methods, and fuzzy clustering approaches both in centralized and decentralized environments. My specialization lies in the development of solutions that demonstrate robust performance under conditions of unpredictability, characterized by heterogeneous data sources. The prospect of transitioning from unsupervised to hybrid supervised and deep learning models is currently under consideration. A period of eight years of experience in unsupervised learning is sufficient to transition to the domain of supervised and deep learning. This approach is hypothesized to be more efficient. The transition from unsupervised to supervised learning constitutes a paradigm shift, a phenomenon exemplified by deep learning. The transition from Matlab to Python can be regarded as a substantial modification in one's skill set and software environment. The initial step entails the formulation of functions, followed by the implementation of libraries as the subsequent phase. The process is remarkably straightforward.</p>
 </div>
 
 ## Specializations
