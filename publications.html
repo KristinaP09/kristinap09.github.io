@@ -17,6 +17,10 @@ title: Publications
       "Research contributions in machine learning and clustering algorithms"
     </p>
     
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search publications by title..." aria-label="Search publications">
+    </div>
+    
     <div class="filters">
       <button class="filter-btn active" data-filter="all">All Publications</button>
       <button class="filter-btn" data-filter="journal">Journal Articles</button>
@@ -41,7 +45,7 @@ title: Publications
         <div class="pub-card journal">
           <span class="category-badge journal">Journal</span>
           <h3> A Globally Collaborative Multi-View k-Means Clustering</h3>
-          <div class="pub-authors"
+          <div class="pub-authors">
             <span class="highlight-author">Sinaga, Kristina P.</span> and Yang, Miin-Shen
           </div>
           <div class="pub-venue">Electronics</div>
@@ -53,6 +57,19 @@ title: Publications
             <a href="https://doi.org/10.3390/electronics14112129" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
           </div>
         </div>
+
+          <div class="pub-card preprint">
+          <span class="category-badge preprint">Preprint</span>
+          <h3>Personalized Federated Learning with Heat-Kernel Enhanced Tensorized Multi-View Clustering</h3>
+          <div class="pub-authors">
+            <span class="highlight-author">Sinaga, Kristina P.</span>
+          </div>
+          <div class="pub-venue">arXiv preprint arXiv:2509.16101</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/pdf/2509.16101" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://doi.org/10.48550/arXiv.2509.16101" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
+          </div>
+        </div>  
         
         <div class="pub-card preprint">
           <span class="category-badge preprint">Preprint</span>
@@ -67,10 +84,8 @@ title: Publications
             <a href="https://doi.org/10.48550/arXiv.2503.22932" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="pub-card preprint">
+        
+        <div class="pub-card preprint">
           <span class="category-badge preprint">Preprint</span>
           <h3>Parameter-free entropy-regularized multi-view clustering with hierarchical feature selection</h3>
           <div class="pub-authors">
@@ -82,10 +97,8 @@ title: Publications
             <a href="https://doi.org/10.48550/arXiv.2508.05504" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="pub-card preprint">
+        
+        <div class="pub-card preprint">
           <span class="category-badge preprint">Preprint</span>
           <h3>Disproving the Feasibility of Learned Confidence Calibration Under Binary Supervision: An Information-Theoretic Impossibility</h3>
           <div class="pub-authors">
@@ -97,10 +110,8 @@ title: Publications
             <a href="https://doi.org/10.48550/arXiv.2509.14386" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="pub-card preprint">
+        
+        <div class="pub-card preprint">
           <span class="category-badge preprint">Preprint</span>
           <h3>FedHK-MVFC: Federated Heat Kernel Multi-View Clustering</h3>
           <div class="pub-authors">
@@ -113,22 +124,8 @@ title: Publications
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="pub-card preprint">
-          <span class="category-badge preprint">Preprint</span>
-          <h3>Personalized Federated Learning with Heat-Kernel Enhanced Tensorized Multi-View Clustering</h3>
-          <div class="pub-authors">
-            <span class="highlight-author">Sinaga, Kristina P.</span>
-          </div>
-          <div class="pub-venue">arXiv preprint arXiv:2509.16101</div>
-          <div class="pub-links">
-            <a href="https://arxiv.org/pdf/2509.16101" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-            <a href="https://doi.org/10.48550/arXiv.2509.16101" class="doi-link" target="_blank"><i class="fas fa-link"></i> DOI</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>    
+        
 
     <!-- 2024 Publications -->
     <div class="year-section">
@@ -702,6 +699,29 @@ title: Publications
     text-decoration: underline;
   }
 
+  .search-container {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .search-container input {
+    padding: 0.7rem 1rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fdfdfd;
+    font-size: 1rem;
+  }
+  .search-container input::placeholder {
+    color: #ccc;
+  }
+  .search-container input:focus {
+    outline: none;
+    border-color: #ff99cc;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .pub-card h3 {
@@ -734,10 +754,22 @@ title: Publications
 </script>
 
 <script>
-  // Filter publications
+  // Filter and search publications
   document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const pubCards = document.querySelectorAll('.pub-card');
+    const searchInput = document.getElementById('search-input');
+    let currentFilter = 'all';
+    
+    function filterPublications() {
+      pubCards.forEach(card => {
+        const categoryMatch = currentFilter === 'all' || card.classList.contains(currentFilter);
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const searchQuery = searchInput.value.toLowerCase();
+        const searchMatch = title.includes(searchQuery);
+        card.style.display = categoryMatch && searchMatch ? 'block' : 'none';
+      });
+    }
     
     filterButtons.forEach(button => {
       button.addEventListener('click', function() {
@@ -748,22 +780,14 @@ title: Publications
         this.classList.add('active');
         
         // Get filter value
-        const filterValue = this.getAttribute('data-filter');
+        currentFilter = this.getAttribute('data-filter');
         
-        // Show/hide publications based on filter
-        pubCards.forEach(card => {
-          if (filterValue === 'all') {
-            card.style.display = 'block';
-          } else {
-            if (card.classList.contains(filterValue)) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          }
-        });
+        // Filter publications
+        filterPublications();
       });
     });
+    
+    searchInput.addEventListener('input', filterPublications);
   });
 </script>
 
