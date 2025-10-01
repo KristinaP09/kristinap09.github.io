@@ -345,9 +345,7 @@ function updateThemeStatus(text) {
 
 As a dedicated researcher and innovator, I approach complex systems with a blend of analytical rigor and creative insight. My work focuses on designing intelligent, efficient, and intuitive AI solutions that bridge theoretical foundations with practical applications. With a commitment to clarity, structure, and precision, I ensure that every project—whether an algorithm or a research paper—reflects a cohesive and impactful narrative.
 
-I am currently a researcher at the Istituto di Scienza e Tecnologie dell’Informazione, Italian National Research Council, where I develop cutting-edge algorithms for complex clustering challenges in data science. My expertise spans applied mathematics, machine learning, and federated learning, with a track record of delivering solutions that advance both academic inquiry and industry innovation.
-
-My contract concludes on September 30, 2025, and I will be relocating from Pisa on September 29. I am actively seeking opportunities as a researcher, associate professor, or data scientist in data science, applied mathematics, machine learning, or federated learning. I am open to global opportunities and eager to contribute to impactful projects. Please feel free to contact me to discuss potential collaborations.
+Currently, I am an independent researcher. My expertise spans applied mathematics, machine learning, and federated learning, with a track record of delivering solutions that advance both academic inquiry and industry innovation.
 
 <div class="highlight-box">
   <h3>Research Interests</h3>
