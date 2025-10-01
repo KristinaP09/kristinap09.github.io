@@ -335,7 +335,7 @@ function updateThemeStatus(text) {
       <a href="https://scholar.google.com/citations?view_op=list_works&hl=it&hl=it&user=XoJ7EkoAAAAJ" class="social-link">Google Scholar</a>
     </div>
   </div>
-</div>
+</div> 
 
 <blockquote class="quote">
   "A mind wired for patterns. A soul allergic to nonsense."
@@ -343,9 +343,7 @@ function updateThemeStatus(text) {
 
 ## About Me
 
-As a dedicated researcher and innovator, I approach complex systems with a blend of analytical rigor and creative insight. My work focuses on designing intelligent, efficient, and intuitive AI solutions that bridge theoretical foundations with practical applications. With a commitment to clarity, structure, and precision, I ensure that every project—whether an algorithm or a research paper—reflects a cohesive and impactful narrative.
-
-Currently, I am an independent researcher. My expertise spans applied mathematics, machine learning, and federated learning, with a track record of delivering solutions that advance both academic inquiry and industry innovation.
+As an independent researcher, I specialize in applied mathematics, machine learning, and federated learning, driving advancements at the intersection of academia and industry. With a robust background as a postdoctoral researcher at ISTI-CNR, Italy and Department of Applied Mathematics, CYCU, Taiwan. I have a proven track record of developing innovative solutions that bridge theoretical research and practical applications, delivering impactful results in both domains.
 
 <div class="highlight-box">
   <h3>Research Interests</h3>
