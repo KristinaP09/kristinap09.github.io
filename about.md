@@ -343,7 +343,7 @@ function updateThemeStatus(text) {
 
 ## About Me
 
-As an independent researcher, I specialize in applied mathematics, machine learning, and federated learning, driving advancements at the intersection of academia and industry. With a robust background as a postdoctoral researcher at ISTI-CNR, Italy and Department of Applied Mathematics, CYCU, Taiwan. I have a proven track record of developing innovative solutions that bridge theoretical research and practical applications, delivering impactful results in both domains.
+As an independent researcher, I specialise in applied mathematics, pattern recognition, machine learning and federated learning, driving advancements where academia and industry meet. I acquired a solid background as a postdoc at ISTI-CNR in Italy and the Department of Applied Mathematics at CYCU in Taiwan. I have a proven track record of developing innovative solutions that integrate theoretical research and practical applications, delivering tangible results in both domains. I speak my mind and mean what I say. 
 
 <div class="highlight-box">
   <h3>Research Interests</h3>
@@ -424,18 +424,18 @@ This research has broad implications. For academia, it advances the theoretical 
   <h3>Open to New Roles</h3>
   <p>I am currently on the global job market for research-driven or applied roles—starting <strong>October 2025</strong>—with teams that value clarity, autonomy, and creative rigor.</p>
   <p><em>If your work is serious about outcomes (and allergic to nonsense too), let's talk.</em></p>
-  <a href="mailto:ndkristinaps25@gmail.com" class="cta-button">Get in Touch</a>
+  <a href="mailto:kristinasinaga41@gmail.com" class="cta-button">Get in Touch</a>
 </div>
 
 ## Contact
 
 Feel free to reach out if you're interested in collaboration, research opportunities, or just want to discuss interesting problems in AI and mathematics.
 
-- Email: ndkristinaps25@gmail.com
+- Email: kristinasinaga41@gmail.com
 - Previous Affiliation: ISTI-CNR, Italy
 
 ---
 
 <p style="text-align: center; color: var(--muted); font-size: 0.9em;">
-© 2025 Kristina P. Sinaga | Last updated: September 2025
+© 2025 Kristina P. Sinaga | Last updated: December 2025
 </p>
