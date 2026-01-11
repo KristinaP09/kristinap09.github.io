@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Reflections on the limits of surveillance technology and the importance of accountable enforcement for safer cities and small businesses." />
+    <meta name="author" content="Kristina P. Sinaga" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Surveillance Without Accountability: Why Cameras Alone Can't Fix Broken Systems" />
+    <meta property="og:description" content="Why technology alone doesn't guarantee safety—and what accountable public systems must do." />
+    <meta property="og:type" content="article" />
+    <title>Surveillance Without Accountability: Why Cameras Alone Can't Fix Broken Systems</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --bg-gradient: linear-gradient(145deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            --card: #1e293b;
+            --card-border: #334155;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --heading: #f8fafc;
+            --accent: #8b5cf6;
+            --accent-light: rgba(139, 92, 246, 0.15);
+            --danger: #f43f5e;
+            --danger-light: rgba(244, 63, 94, 0.12);
+            --info: #06b6d4;
+            --info-light: rgba(6, 182, 212, 0.12);
+            --success: #10b981;
+            --success-light: rgba(16, 185, 129, 0.12);
+            --warning: #f59e0b;
+            --warning-light: rgba(245, 158, 11, 0.12);
+            --max-width: 900px;
+            --radius: 16px;
+            --radius-sm: 10px;
+            --gap: 1.75rem;
+            --pad: 1.75rem;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        html, body { height: 100%; }
+
+        body {
+            margin: 0;
+            padding: var(--pad);
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.75;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            text-align: justify;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--max-width);
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            padding: calc(var(--pad) * 2);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+        }
+
+        a.skip-link {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            background: var(--accent);
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            transform: translateY(-150%);
+            transition: transform 0.2s ease;
+            z-index: 1000;
+        }
+
+        a.skip-link:focus {
+            transform: translateY(0);
+            outline: 2px solid var(--info);
+            outline-offset: 2px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--card-border);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--info));
+            border-radius: 2px;
+        }
+
+        header h1 {
+            margin: 0 0 1rem;
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--heading);
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--heading) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        header p.lead {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Navigation Styles */
+        nav.toc {
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: var(--gap);
+        }
+
+        nav.toc h2 {
+            margin: 0 0 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--heading);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: left;
+        }
+
+        nav.toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        nav.toc li {
+            margin: 0;
+        }
+
+        nav.toc a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        nav.toc a:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        nav.toc a:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        nav.toc .nav-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        nav.toc .nav-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Mobile Toggle */
+        .toc-toggle {
+            display: none;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            color: var(--heading);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .toc-toggle svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .toc-toggle[aria-expanded="true"] svg {
+            transform: rotate(180deg);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+        }
+
+        .back-to-top svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        main { display: grid; gap: var(--gap); }
+
+        article section {
+            padding: var(--pad);
+            border-radius: var(--radius);
+            background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 1rem;
+        }
+
+        article section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent), var(--info));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        article section:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+        }
+
+        article section:hover::before {
+            opacity: 1;
+        }
+
+        article section:target {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-light);
+        }
+
+        article section:target::before {
+            opacity: 1;
+        }
+
+        h2 {
+            margin: 0 0 1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            color: var(--heading);
+            text-align: left;
+        }
+
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+            padding-left: 1rem;
+            border-left: 2px solid var(--accent);
+        }
+
+        p { margin: 0.75rem 0; font-size: 1rem; color: var(--text); }
+
+        .quote, blockquote {
+            border-left: 4px solid var(--info);
+            background: var(--info-light);
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-style: italic;
+            color: var(--info);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .note {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: var(--radius-sm);
+            background: var(--warning-light);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-left: 4px solid var(--warning);
+            color: var(--warning);
+            text-align: left;
+        }
+
+        .warning {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: var(--radius-sm);
+            background: var(--danger-light);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            border-left: 4px solid var(--danger);
+            color: var(--danger);
+            text-align: left;
+        }
+
+        .conclusion {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: var(--radius-sm);
+            background: var(--success-light);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-left: 4px solid var(--success);
+            text-align: left;
+        }
+
+        .case-study {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            border-radius: var(--radius-sm);
+            background: var(--accent-light);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-left: 4px solid var(--accent);
+            color: #c4b5fd;
+            text-align: left;
+        }
+
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .comparison-item {
+            padding: 1.25rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--card-border);
+            transition: transform 0.2s ease;
+            text-align: left;
+        }
+
+        .comparison-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .comparison-item.negative {
+            background: var(--danger-light);
+            border-color: rgba(244, 63, 94, 0.3);
+        }
+
+        .comparison-item.positive {
+            background: var(--success-light);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .comparison-item h3 {
+            margin: 0 0 0.75rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--heading);
+        }
+
+        .comparison-item.negative h3 { color: var(--danger); }
+        .comparison-item.positive h3 { color: var(--success); }
+
+        .comparison-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        svg.icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            color: currentColor;
+        }
+
+        h2 svg.icon { color: var(--accent); }
+
+        ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+            text-align: left;
+        }
+
+        li {
+            margin: 0.6rem 0;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        li::marker { color: var(--accent); }
+
+        footer {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: '📡';
+            position: absolute;
+            top: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            background: var(--card);
+            padding: 0 1rem;
+        }
+
+        footer p { margin: 0; }
+
+        @media (max-width: 720px) {
+            :root {
+                --max-width: 100%;
+                --pad: 1.25rem;
+            }
+            header h1 { font-size: 1.5rem; }
+            .wrap { padding: 1.5rem; }
+            svg.icon { width: 20px; height: 20px; }
+            .note, .warning, .conclusion, .case-study { flex-direction: column; gap: 0.75rem; }
+            .comparison { grid-template-columns: 1fr; }
+
+            .toc-toggle {
+                display: flex;
+            }
+
+            nav.toc {
+                display: none;
+                margin-bottom: 0;
+            }
+
+            nav.toc.open {
+                display: block;
+                margin-bottom: var(--gap);
+            }
+
+            nav.toc ul {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 40px;
+                height: 40px;
+            }
+
+            .back-to-top svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="wrap">
+        <header>
+            <h1>Surveillance Without Accountability: Why Cameras Alone Can't Fix Broken Systems</h1>
+            <p class="lead">Why surveillance technology alone cannot guarantee safety—and what accountable public institutions must do to protect communities and small businesses.</p>
+        </header>
+
+        <!-- Mobile Toggle Button -->
+        <button class="toc-toggle" aria-expanded="false" aria-controls="toc-nav" onclick="toggleToc()">
+            <span>📑 Table of Contents</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M6 9l6 6 6-6"/>
+            </svg>
+        </button>
+
+        <!-- Navigation -->
+        <nav class="toc" id="toc-nav" aria-label="Table of Contents">
+            <h2>
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+                Quick Navigation
+            </h2>
+            <ul>
+                <li>
+                    <a href="#exp">
+                        <span class="nav-number">1</span>
+                        Personal Observations
+                    </a>
+                </li>
+                <li>
+                    <a href="#impact">
+                        <span class="nav-number">2</span>
+                        Impact on Livelihoods
+                    </a>
+                </li>
+                <li>
+                    <a href="#root">
+                        <span class="nav-number">3</span>
+                        Root Cause: Weak Accountability
+                    </a>
+                </li>
+                <li>
+                    <a href="#warning">
+                        <span class="nav-number">4</span>
+                        A Warning to Authorities
+                    </a>
+                </li>
+                <li>
+                    <a href="#tech">
+                        <span class="nav-number">5</span>
+                        Limitations of Technology
+                    </a>
+                </li>
+                <li>
+                    <a href="#incentives">
+                        <span class="nav-number">6</span>
+                        When Incentives Are Not Enough
+                    </a>
+                </li>
+                <li>
+                    <a href="#conclude">
+                        <span class="nav-number">7</span>
+                        Conclusion
+                    </a>
+                </li>
+                <li>
+                    <a href="#final">
+                        <span class="nav-number">8</span>
+                        Final Thoughts
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main" role="main">
+            <article>
+                <section id="exp-section" aria-labelledby="exp">
+                    <h2 id="exp">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M12 7a1 1 0 011 1v4a1 1 0 01-2 0V8a1 1 0 011-1zm0 8a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
+                        Personal Observations
+                    </h2>
+                    <p class="meta">Real experiences from Indonesian urban and semi-rural settings</p>
+                    <p>Several years ago, after multiple incidents, CCTV was installed throughout a home to deter disturbances and protect property. The expectation was that visible cameras would change behavior—but they did not. Loud noise late at night, petty mischief, and theft continued unabated.</p>
+                    <p>The small home-based business was even required to close at a certain hour, despite being in a residential-commercial area. The business complied, but new problems emerged: some individuals treated the street like their personal playground—loitering, making noise, and vandalizing property, confident that no one would intervene.</p>
+                    <p>Wrongdoing persisted because enforcement was inconsistent. The cameras recorded, but accountability was absent.</p>
+                    <div class="case-study" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <span><strong>Case Study:</strong> Over three months, individuals who frequently passed a ruko (commercial shop row) appeared aware of camera locations. Footage would be missing, incomplete, or unavailable precisely when they passed—not random technical failure, but knowledge of blind spots and confidence that no one would act.</span>
+                    </div>
+                    <blockquote>This pattern suggests not just technical vulnerability, but systemic follow-through failures that embolden misconduct.</blockquote>
+                </section>
+
+                <section id="impact-section" aria-labelledby="impact">
+                    <h2 id="impact">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                        Impact on Livelihoods
+                    </h2>
+                    <p>The problem extends beyond urban residential areas. Small-scale theft and vandalism threaten farmers, shopkeepers, and service providers across Indonesia.</p>
+                    <div class="case-study" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem"><strong>Rural Impact:</strong> A farmer reported repeated theft of essential farming tools when he briefly left his land unattended—tools critical to his livelihood.</p>
+                            <p style="margin:0"><strong>Urban Impact:</strong> A small barber shop lost essential equipment overnight—clippers and supplies representing years of investment.</p>
+                        </div>
+                    </div>
+                    <div class="note" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1-5a1 1 0 01-2 0V8a1 1 0 012 0v4z"/></svg>
+                        <span>In both cases, the issue was not poverty or opportunity alone—it was <strong>confidence that misconduct would go unpunished</strong>. When consequences vanish, responsibility dies. Citizens, (small) business owners, and working families are left exposed while some individuals operate as if untouchable, shielded by systemic indifference. This isn't random crime—it's <strong>enabled disorder</strong>, born from the certainty that authorities either won't respond or lack the capacity to act. Until that confidence is shattered through consistent enforcement, the cycle perpetuates.</span>
+                    </div>
+                </section>
+
+                <section id="root-section" aria-labelledby="root">
+                    <h2 id="root">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+                        Root Cause: Weak Accountability
+                    </h2>
+                    <p>At the heart of these issues is systemic failure. Laws exist, but they often protect certain individuals while ordinary citizens suffer. Imported technology—CCTV, smart systems, or digital reporting platforms—fails to drive progress because enforcement is inconsistent and selective.</p>
+                    <blockquote>When law serves a few rather than the many, social discipline collapses. Disorder becomes normalized. Cities stagnate—not from lack of resources, but from the erosion of fairness and responsibility.</blockquote>
+                    <ul>
+                        <li>Under-resourced monitoring and rapid-response teams</li>
+                        <li>Insufficient technical capacity to maintain systems or analyze evidence</li>
+                        <li>Bureaucratic hurdles that delay or prevent follow-up actions</li>
+                        <li>Lack of transparent reporting on enforcement outcomes</li>
+                        <li>Cameras record, complaints are filed, but follow-up is sporadic. Worstly, offline or unreported incidents are ignored entirely. Reporting something not only like throwing a stone into the void, but you also need to pay some money to make it disappear (sarcasm 😉)</li>
+                        <li>In some cases, irresponsible authorities or individuals have chosen to replace themselves entirely with incompetent personnel to avoid accountability.</li>
+                        <li>Corruption that undermines the entire system—officers collaborating with criminal elements for personal gain, turning enforcement into a facade.</li>
+                    </ul>
+                </section>
+
+                <section id="warning-section" aria-labelledby="warning">
+                    <h2 id="warning">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        A Warning to Authorities
+                    </h2>
+                    <div class="warning" role="alert">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem"><strong>Critical Warning:</strong> Taxpayers fund public salaries to enforce the law, not overlook misconduct or tolerate disorder. Let me be clear: taxpayers pay you to ensure their safety. They don't pay you to ignore the situation or look the other way. In case you forgot, they're the ones paying your salary. Wake up, and do your job.</p>
+                            <p style="margin:0">When officials fail to act, they are complicit through inaction. <strong>Negligence is not harmless—it becomes a form of exploitation.</strong> Scrutiny will shift to those entrusted with protection but who refuse to act. Thus, public trust erodes, and disorder spreads unchecked.</p>
+                        </div>
+                    </div>
+                    <p>Cameras, reporting systems, and technology only matter when institutions follow through. Otherwise, they merely highlight failures that everyone can see. Having knowledge of distinguishing valid and invalid reports is crucial. If authorities cannot discern genuine reports from false ones, they risk wasting resources and eroding public trust. This inability to differentiate can lead to skepticism among citizens, who may feel that their concerns are not taken seriously.</p>
+                </section>
+
+                <section id="tech-section" aria-labelledby="tech">
+                    <h2 id="tech">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" d="M8 21h8M12 17v4"/></svg>
+                        Limitations of Technology
+                    </h2>
+                    <p>Even the most advanced CCTV system is ineffective without skilled personnel. Technology without capable personnel is symbolic—cameras sit idle, reports go unanswered, and incidents accumulate while public trust erodes.</p>
+                    
+                    <div class="comparison">
+                        <div class="comparison-item negative">
+                            <h3>❌ Current Reality (Indonesia)</h3>
+                            <p>Monitoring centers are chronically understaffed and unable to effectively cover large urban areas. A quick Google search will provide more information, though I don't know the exact statistic. Officers often lack specialized training in CCTV analysis and digital evidence handling. In fact, despite being affordable, CCTV is not widely used. Reports languish for months or years—or are quietly closed as if they never existed. Follow-up is inconsistent at best. As a result, public trust deteriorates, and cameras become mere decorations rather than tools for protection. Here, accountability is the exception, not the norm. Simply put, they are wasted investments. Even worse, they are just for show, pretending that something is being done. It's a tragic waste of resources. The same may be true for other public security officers. </p>
+                        </div>
+                        <div class="comparison-item positive">
+                            <h3>✓ Working Models (Taiwan)</h3>
+                            <p>Police receive systematic technical training and work in adequately staffed control rooms. Response times are measured and publicly reported. Lost items—even expensive electronics—are frequently returned through a reliable lost-and-found system. Accountability is normalized, not exceptional. I ever biked through Zhongli early morning and passing by a police station, I saw officers actively monitoring CCTV feeds and coordinating responses. This proactive approach fosters community trust and deters misconduct. Try to report something there, it will be handled properly like in a minute, everything is so fast and reliable. You don't even notice some incidents because they are resolved so quickly. </p>
+
+                            <p style="margin:0.75rem 0 0"><strong>Key difference:</strong> It's not about budget or technology—it's about institutional culture. When accountability is embedded in daily operations, even modest resources produce reliable outcomes.</p>
+                        </div>
+                    </div>
+
+                    <p>Common systemic limitations include:</p>
+                    <ul>
+                        <li>Insufficient staffing to monitor large urban areas effectively</li>
+                        <li>Limited technical expertise to maintain systems or interpret surveillance data</li>
+                        <li>Bureaucratic procedures that delay or obstruct enforcement actions</li>
+                        <li>Lack of transparency in reporting enforcement outcomes to the public</li>
+                        <li>Inconsistent follow-up on reported incidents, leaving victims without resolution</li>
+                        <li>The case was closed without an investigation or resolution. They treated it as if it never happened. What a display of humanity </li>
+                        <li>Most local Indonesian news is garbage </li>
+                        <li>Growing public skepticism due to repeated failures—citizens often choose silence over reporting to authorities perceived as unresponsive</li>
+                        <li>Technological upgrades without parallel investments in human capacity and training</li>
+                        <li>Corruption that undermines the entire system—instances where officers collaborate with criminal elements for personal gain, turning enforcement into a facade</li>
+                    </ul>
+                </section>
+
+                <section id="incentives-section" aria-labelledby="incentives">
+                    <h2 id="incentives">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                        When Incentives Are Not Enough
+                    </h2>
+                    <p>Even generous fiscal measures cannot compensate for weak accountability and systemic limitations.</p>
+                    <div class="note" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1-5a1 1 0 01-2 0V8a1 1 0 012 0v4z"/></svg>
+                        <span><strong>Example:</strong> Based on my <strong>extensive</strong> personal experience, Indonesia proudly offers tax deductions in the lofty range of 20–35%—which, quite impressively, almost rivals the 10–37% range of a highly advanced, developed nation like the United States (google it yourself). This generosity also comfortably outshines Taiwan’s modest ~7.5% and Italy’s roughly 13%. And yet, somehow, all this fiscal generosity hasn’t translated into meaningful progress—perhaps due to minor details like a shortage of personnel, gaps in technical expertise, and enforcement that occasionally remembers to show up. Naturally, this leads to the inevitable conclusion: the Taiwanese tax system is the best. Based on personal experience (again), Taiwan’s system is clearly the best—efficient, functional, and blissfully lacking the need for excuses.</span>
+                        <span style="margin-top:0.5rem; display:block; font-style:italic;">Regarding Taiwan's tax system, based on my personal experience (including an accident that became a valuable lesson), I can confidently say it's among the most efficient I've encountered—remarkably fast and reliable.</span>
+                    </div>
+                    <p>Citizens witness the consequences: CCTV systems installed but ignored, small businesses left unprotected, complaints unaddressed. Fiscal incentives without accountability create only <strong>cosmetic compliance</strong>—where appearances matter more than outcomes (the real failure).</p>
+                    <p>For real progress, incentives must be paired with:</p>
+                    <ul>
+                        <li><strong>Comprehensive training programs:</strong> Regular, updated training for personnel on surveillance technology, evidence handling, and community engagement</li>
+                        <li><strong>Robust accountability frameworks:</strong> Implement not only performance metrics but also consequences for negligence or misconduct</li>
+                        <li><strong>Transparent reporting mechanisms:</strong> Conduct regular audits with publicly accessible reports on system effectiveness, response times, and case resolution rates</li>
+                        <li><strong>Ethical recruitment standards:</strong> Prioritize hiring personnel genuinely committed to public service and ethical enforcement—not just filling quotas</li>
+                        <li><strong>Modern technological integration:</strong> Embrace AI-driven analytics, community reporting platforms, and smart infrastructure. Clinging to outdated systems in an era of technological advancement is counterproductive—you cannot build a smart city on obsolete foundations, just as you cannot construct durable roads using antiquated methods. Progress demands modern knowledge and tools.</li>
+                        <li><strong>Most importantly, a cultural shift:</strong> Foster a culture of integrity, responsibility, and public service within enforcement agencies. Technology is merely a tool; the true change comes from people committed to making a difference.</li>
+                        <li>You can train people to be more intelligent, competent, and accountable. But you cannot train stupidity, incompetence, and irresponsibility. Manipulators will always find a way to exploit weaknesses. Thus, investing in technology without addressing human and institutional factors is a recipe for wasted resources and continued disorder.</li>
+                    </ul>
+
+                    <div class="warning" role="alert">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem"><strong>Reality Check:</strong> No city becomes "smart" by slapping cameras on poles while running bug-ridden systems from two decades ago.</p>
+                            <p style="margin:0">It's 2026. The world has moved on. <strong>Clinging to broken, outdated infrastructure isn't frugality—it's negligence.</strong> Every glitchy system, every untrained operator, every ignored report is a choice. A choice to maintain the status quo of dysfunction rather than pursue genuine progress. </p>
+                        </div>
+                    </div>
+                    <p><strong>Wake up.</strong> "Smart city" isn't a label you buy—it's a standard you earn through competence, accountability, and systems that actually work. Until then, you're just decorating dysfunction with buzzwords. Remember, technology is a tool—not a substitute for responsibility. Thus, investing in technology without addressing human and institutional factors is a recipe for wasted resources and continued disorder.</p>
+
+                    <div class="case-study" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem"><strong>Personal Note:</strong> After reviewing the facts, I was advised by some that I should stop traveling abroad. An interesting suggestion, considering that travel is what expanded my perspective in the first place.</p>
+                            <p style="margin:0"><strong>My Response:</strong> I’ll keep learning through experience—others are welcome to cling to their opinions. Honey, you and your outdated circle will definitely see me flying again soon. <em>Stay tuned for the next episode: I was born to fly, not to play it safe in the nest.</em> And yes, you’re welcome for this blog post—it’s a public service to those who actually care about progress and social good. Free of charge, naturally (sarcasm intended 😉) </p>
+                        </div>
+                    </div>
+
+                    <h2 id="conclude">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Conclusion: Progress Requires Accountability
+                    </h2>
+                    <p>The issues form a clear chain: weak accountability, selective law enforcement, lack of human capacity, technological stagnation, and ineffective fiscal incentives. Cameras, infrastructure, and imported systems cannot fix governance failures alone. The solution lies in strengthening institutions, training personnel, and embedding accountability into daily operations.</p>
+                    <blockquote>Real progress begins not with technology, but with consequences. Until laws are applied equally, enforcement is predictable, and public workers are fully accountable, every "upgrade" will remain cosmetic—and the decline of public trust will continue. Pretending otherwise is not just foolish—it’s irresponsible (sarcasm intended).</blockquote>
+                    <div class="conclusion" role="region" aria-label="Key recommendation">
+                        <svg class="icon" style="color: var(--success);" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem; color: var(--success);"><strong>Key Takeaway:</strong> Technology can make things “safer,” sure—but real progress comes from predictable enforcement, genuine accountability, and treating citizens as rights-holders, not walking ATMs. In short: control without accountability isn’t order—it’s tyranny in a very polite outfit. Someone has to say it, so the rest can get the wake-up call and a little much-needed training 😉</p>
+                            <p style="margin:0 0 0.5rem; color: var(--text);"><strong>The Path Forward:</strong> Pair investments in monitoring technologies with adequate staffing, transparent procedures, public reporting, and meaningful community engagement. Citizens can innovate, install, and observe—but without consistent enforcement and trained personnel, the system remains broken. Thank me later if you implement this advice 😉</p>
+                            <p style="margin:0; color: var(--text);"><strong>Final Thought:</strong> Transparency and accountability are not optional—they are the foundation for trust, safety, and progress. Who knows somebody is watching, but no one acts? Then web blogpost becomes a call to action for those entrusted with public safety to fulfill their duties responsibly. Thank me later 😉</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="final-section" aria-labelledby="final">
+                    <h2 id="final">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        Final Thoughts – No Sugarcoating Edition
+                    </h2>
+
+                    <p>Think you're sly, creeping around like you're the only one with eyes on me? Cute. Newsflash: someone's probably got <em>you</em> in 4K right now too. The watchers are being watched. Always. Layers on layers of surveillance, baby. You think you're the apex predator in this digital jungle? Nah — there's always a bigger, quieter fish with better tech and zero chill. Remember hon, you aren't the one who invent the tech. You're just a user in their grand design (sarcasm intended 😉).</p>
+
+                    <p>The real gut-punch question isn't "Are we being watched?" (duh, yes). It's: <strong>Who's actually getting slapped on the wrist for what those cameras catch?</strong> Without accountability, all this high-tech panopticon is just taxpayer-funded voyeurism with extra steps. Expensive (it is now more affordable and comes in a variety of sizes and shapes—from big to tiny—with advanced features), creepy, and mostly useless. Worstly, it imported as a flashy "solution" while the real problems—lazy enforcement, corrupt officials, clueless operators—get zero attention. The system's broken, and no amount of cameras will fix that in the end (if ever). </p>
+
+                    <div class="note" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1-5a1 1 0 01-2 0V8a1 1 0 012 0v4z"/></svg>
+                        <span><strong>The Savage Irony:</strong> We lose our minds over a few local CCTV cams, but the real puppet masters — manufacturers (hi China), cloud providers, and yes, probably certain state actors — are sipping tea while feasting on every frame, every angle, every dirty little secret. Surveillance isn't a pyramid… it's turtles all the way up. And the top turtle doesn't blink. Sarcasm intended 😉</span>
+                    </div>
+
+                    <p>Here's the part that makes my blood boil: You can snag a decent Chinese CCTV kit these days for peanuts — around IDR 100k (~$6–7), sometimes even cheaper in 2026. Yet here? Good luck. I tried buying and installing one myself. Payment? Smooth as butter. After that? Pure circus. Endless drama, ghosted messages, delayed deliveries, instructions written by sadists, the works. It felt like the system was literally designed to make sure you give up. Sarcasm intended and well-delivered 😉</p>
+
+                    <p>This isn't about money or tech — it's about people and institutions being allergic to actual responsibility. They love the shiny "smart city" slogan, but when it comes time to implement, maintain, or — heaven forbid — be held accountable? Suddenly everyone's hiding behind bureaucratic curtains thicker than a Jakarta traffic jam. Full of excuses, zero action.</p>
+
+                    <div class="case-study" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem"><strong>The Dirty Truth – The Hidden Wall:</strong> The blockers aren't cash or gadgets — they're institutional cowardice and laziness. My CCTV order was a masterclass in sabotage:</p>
+                            <p style="margin:0.5rem 0"><strong>Post-payment hell:</strong> Vague instructions, radio silence from support, shipping that moved slower than a sloth on sedatives, and a process that screamed "please quit and go away."</p>
+                            <p style="margin:0"><strong>The real culprits:</strong></p>
+                            <ul style="margin:0.5rem 0 0 1.25rem; padding:0; list-style: disc inside;">
+                                <li>Customer support that treats paying citizens like irritants—responses are automated, generic, and to be honest, talking to wall better than talking to them. Again you report something and they just ignore you or silent completely.</li>
+                                <li>Bureaucratic black holes where transparency goes to die and requests vanish into endless loops.</li>
+                                <li>A cultural resistance to meaningful change that lets outdated habits persist under the guise of stability.</li>
+                                <li>Zero accountability at every level, so every failure gets passed along as someone else’s "not my problem."</li>
+                                <li>They think you're crazy if you speak up or expect decent service. Welcome to the land of silent suffering and shrugged shoulders. I'm proud to say that I dedicated this to my country, even though I wasn't paid.</li>
+                            </ul>
+                            <p style="margin:0.75rem 0 0"><strong>The Brutal Paradox:</strong> Government screams "Smart City! Nusantara! Future!" while the same old broken systems and mindsets stay comfortably in place. Instead of fixing shit, everyone just points fingers. Classic.</p>
+                            <p style="margin:0.5rem 0 0"><strong>My Hot Take Prediction:</strong> If we keep this up, that shiny new capital in Kalimantan won't be a "smart city." It'll be a very expensive, very photogenic <strong>failure city</strong> — all cameras, no brains, no accountability, just fancy gadgets rotting on obsolete foundations. My prediction may seem immature, but you'll thank me for it later. </p>
+                        </div>
+                    </div>
+
+                    <p>Bottom line: Tech alone won't save us. You need institutions with actual spines — transparent, responsible, and willing to serve people instead of egos and photo-ops.</p>
+
+                    <div class="warning" role="alert">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        <div>
+                            <p style="margin:0 0 0.5rem"><strong>Red Flag Alert:</strong> You can't build a smart city with dumb, outdated systems and even dumber mindsets — no matter how many cameras you glue everywhere.</p>
+                            <p style="margin:0">They're hyping this mega "smart city" in Kalimantan… but if we repeat the same garbage mistakes, we'll just end up with a glorified ghost town full of dead pixels and broken promises.</p>
+                            <p style="margin:0.5rem 0 0"><strong>Wake up call:</strong> Real smart cities need real accountability, real tech, and real people who give a damn. Otherwise, it's just a pricey cosplay of progress.</p>
+                            <p style="margin:0.5rem 0 0"><strong>Final Mic Drop:</strong> If we don't ditch these prehistoric mindsets, we'll be left in the dust while the rest of the world zooms ahead. Time to get serious or get left behind.</p>
+                            <p style="margin:0.5rem 0 0"><strong>PS:</strong> Send your people abroad to learn how real smart cities work. Copy what actually functions. Build systems that serve citizens, not just make politicians look busy.</p>
+                            <p style="margin:0.5rem 0 0"><strong>End of Rant.</strong> Thanks for sticking through my tirade. Now, let's hope someone in power actually reads this and does something about it.</p>
+                            <p style="margin:0.5rem 0 0"><strong>Well, I fear nothing except wasting my time.</strong> If you found this rant enlightening, share it. If not, well, at least I got it off my chest.</p>
+                            </strong></p>
+                                                        <blockquote style="margin: 0.75rem 0 0; border-color: var(--accent);">
+                                                            <p style="margin: 0 0 0.75rem;"><strong>On Sharing and Attribution:</strong> Feel free to copy, share, or redistribute this—just don't try to pass it off as your "brilliant insight." Knowledge exists to be used, not hoarded like some sacred relic.</p>
+                                                            
+                                                            <p style="margin: 0 0 0.75rem;"><strong>On Honesty and Accountability:</strong> Honesty? Supposedly a virtue. In practice? Optional for most. Belief doesn't magically make you accountable—it's usually just a convenient excuse.</p>
+                                                            
+                                                            <p style="margin: 0 0 0.75rem;"><strong>On Labels:</strong> I won't label myself a saint or a sinner based on what I believe or don't believe. Disbelief, like belief, is no guarantee of decency either. As for atheists and the religious alike—neither category has a monopoly on virtue.</p>
+                                                            
+                                                            <p style="margin: 0;"><strong>The Bottom Line:</strong> Volume and virtue are wildly overrated—and frequently confused. So, cheers 🥂—and wake up, it's been a long time coming.</p>
+                                                        </blockquote>
+                            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--card-border);">
+                                <p style="margin: 0 0 0.75rem; font-weight: 600; color: var(--heading);">Share this article:</p>
+                                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                                    <a href="https://twitter.com/intent/tweet?text=Life%20in%20a%20City%20Where%20Cameras%20Watch%20but%20No%20One%20Acts&url=" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #1DA1F2; color: white; text-decoration: none; border-radius: 6px; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;">
+                                        <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                        X / Twitter
+                                    </a>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #1877F2; color: white; text-decoration: none; border-radius: 6px; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;">
+                                        <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                        Facebook
+                                    </a>
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=&title=Life%20in%20a%20City%20Where%20Cameras%20Watch%20but%20No%20One%20Acts" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #0A66C2; color: white; text-decoration: none; border-radius: 6px; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;">
+                                        <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                        LinkedIn
+                                    </a>
+                                    <a href="https://wa.me/?text=Life%20in%20a%20City%20Where%20Cameras%20Watch%20but%20No%20One%20Acts" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: #25D366; color: white; text-decoration: none; border-radius: 6px; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;">
+                                        <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                        WhatsApp
+                                    </a>
+                                    <button onclick="navigator.clipboard.writeText(window.location.href).then(()=>alert('Link copied!'))" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: var(--accent); color: white; border: none; cursor: pointer; border-radius: 6px; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s;">
+                                        <svg style="width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                                        Copy Link
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note" role="note">
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1-5a1 1 0 01-2 0V8a1 1 0 012 0v4z"/></svg>
+                        <span><strong>The Only Lesson That Matters:</strong> Use this pathetic small-city circus as a warning. Future development demands tech + accountability + real capacity + people who actually give a damn. Anything less is just expensive cosplay.</span>
+                    </div>
+
+                    <p><strong>Ditch the prehistoric mindsets or get left behind.</strong> Send your people to study abroad, copy what actually works, and for once build systems that serve citizens — not just make politicians look busy.</p>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <p>© 2026 by Kristina P. Sinaga. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script>
+        // Mobile TOC Toggle
+        function toggleToc() {
+            const toggle = document.querySelector('.toc-toggle');
+            const nav = document.getElementById('toc-nav');
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            nav.classList.toggle('open');
+        }
+
+        // Back to Top Button Visibility
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Close mobile nav when clicking a link
+        document.querySelectorAll('.toc a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 720) {
+                    const toggle = document.querySelector('.toc-toggle');
+                    const nav = document.getElementById('toc-nav');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    nav.classList.remove('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
