@@ -8,7 +8,7 @@
   <div class="hero-content">
     <img src="/assets/images/mobius_blog_spinning.png" alt="Mobius Blog Spinner" class="mobius-spin" style="width: 120px; margin: 0 auto 20px auto; display: block;" />
     <h1>Kristina's Blog</h1>
-    <p class="hero-subtitle">Insights, satire, reflections, and notes from the fields of chaos and clarity.</p>
+    <p class="hero-subtitle">You can find thoughts, humor, reflections, and notes about everything in a sarcastic and spicy manner—no sugarcoating.</p>
   </div>
 </section>
 <!--<img src="/assets/images/mobius_blog.png" alt="Mobius Blog Banner" style="width: 120px; float: right; margin: 20px;" />-->
@@ -432,6 +432,7 @@ A must-read for lovers of noise, nuance, and nonsense.
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
