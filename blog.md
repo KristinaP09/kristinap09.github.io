@@ -87,7 +87,7 @@
 <main>
 <section class="intro-section">
   <h2>Welcome to the Blog</h2>
-  <p>Here you can find information about many different topics, presented in a sarcastic and satirical style. This is stronger than the person who taught you to scream 😉. This page shows that words without screaming are more attractive.</p>
+  <p>Here you can find information about many different topics, presented in a sarcastic and satirical style. This is stronger than the person who taught you to scream 😉. This page shows that people are involved, but they also speak up in a way you never would have thought possible 😎.</p>
 </section>
 
 <section class="work-philosophy">
@@ -431,6 +431,7 @@ This blog has a variety of information, including data, sarcasm, and observation
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
