@@ -87,7 +87,7 @@
 <main>
 <section class="intro-section">
   <h2>Welcome to the Blog</h2>
-  <p>Here you'll find insights, satire, reflections, and notes from the field — with a strong focus on patterns, psychology, and systems.</p>
+  <p>Here you can find information about many different topics, presented in a sarcastic and satirical style. This is stronger than the person who taught you to scream 😉. This page shows that words without screaming are more attractive.</p>
 </section>
 
 <section class="work-philosophy">
