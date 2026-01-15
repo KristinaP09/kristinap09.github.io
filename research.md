@@ -1,16 +1,15 @@
 ---
 layout: default
 title: Research
-description: "Explore Kristina P. Sinaga's research in artificial intelligence, optimization, and systems theory, focusing on multi-view clustering, federated learning, edge AI, and anomaly detection. View selected publications, technical skills, and current projects."
-keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view clustering, federated learning, edge AI, anomaly detection, machine learning, data science, publications, technical skills, optimization, systems theory, explainable AI"
+description: ""
 ---
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "headline": "Research - Kristina P. Sinaga",
-  "description": "Explore Kristina P. Sinaga's research at the intersection of artificial intelligence, optimization, and systems theory. Focus areas include multi-view clustering, federated learning, edge AI, and anomaly detection. Discover selected publications, technical skills, and current projects.",
-  "keywords": "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view clustering, federated learning, edge AI, anomaly detection, machine learning, data science, publications, technical skills, optimization, systems theory, explainable AI",
+  "description": "Take a look at Kristina's studies on optimization and systems theory. She focuses on multi-view clustering, federated learning, edge AI, and anomaly detection. You can also view selected publications, technical skills, and current projects.",
+  "keywords": "Kristina P. Sinaga, research, multi-view clustering, federated learning, edge AI, anomaly detection, machine learning, data science, publications, technical skills, optimization, systems theory, explainable AI",
   "mainEntity": {
     "@type": "Person",
     "name": "Kristina P. Sinaga",
