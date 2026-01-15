@@ -95,7 +95,7 @@
   <p>In today's evolving workplace, success is measured by outcomes, not time spent at a desk. I focus on creating tangible value through purposeful work and strategic thinking.</p>
   <blockquote>"It's not about being seen working—it's about delivering something worth seeing."</blockquote>
   <p>I don't subscribe to outdated models of productivity rooted in clock-ins, noise, and endless meetings. I believe in intentional, outcome-driven work guided by deep focus and systems thinking.</p>
-  <div class="highlight">Real work happens when distractions are minimized, and purpose is clear. I strive to build meaningful solutions that align with long-term impact rather than short-term visibility.</div>
+  <div class="highlight">You'll get real work done if you treat it like a hobby. Is there anything else besides that? That's a lie!</div>
   <p>If you're someone who values sharp thinking over surface performance, results over rituals, and depth over noise—we're probably aligned.</p>
   <div class="audio-player">
     <p class="audio-title">Hear my thoughts on modern work culture:</p>
