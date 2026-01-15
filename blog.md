@@ -117,6 +117,16 @@
       <p>Quality work requires uninterrupted concentration and deliberate thinking without constant distractions.</p>
     </div>
     <div class="principle-card">
+      <div class="principle-icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+      <h4>Try and See</h4>
+      <p>I believe in experimenting and iterating quickly to find effective solutions rather than over-planning.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
+      <h4>Continuous Learning</h4>
+      <p>I am committed to lifelong learning and regularly updating my skills to stay ahead in my field.</p>
+    </div>
+    <div class="principle-card">
       <div class="principle-icon"><i class="fas fa-sitemap" aria-hidden="true"></i></div>
       <h4>Systems Approach</h4>
       <p>I build scalable systems and frameworks rather than one-off solutions to create lasting value.</p>
