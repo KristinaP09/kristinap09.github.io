@@ -71,7 +71,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
     </div>
     <div class="publication-content">
       <h3>
-        <a href="https://ieeexplore.ieee.org/abstract/document/10810504" target="_blank">
+          <a href="https://ieeexplore.ieee.org/abstract/document/10810504" target="_blank" rel="noopener noreferrer">
           Federated Multi-View K-Means Clustering
         </a>
       </h3>
@@ -92,16 +92,16 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         <em>Impact:</em> This approach bridges the gap between multi-view learning and federated analytics, making collaborative clustering feasible for sensitive domains such as healthcare, finance, and cross-organization research, where data cannot be centralized due to privacy or regulatory constraints.
       </p>
       <div class="publication-links">
-        <a href="https://ieeexplore.ieee.org/abstract/document/10810504" target="_blank" class="pub-link">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10810504" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/federated-mview-kmeans" target="_blank" class="pub-link">
+        <a href="https://github.com/KristinaP09/federated-mview-kmeans" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fab fa-github"></i> Matlab Functions
         </a>
-        <a href="https://github.com/KristinaP09/Fed-MVKM" target="_blank" class="pub-link">
+        <a href="https://github.com/KristinaP09/Fed-MVKM" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fa-brands fa-python"></i> Python Package
         </a>
-        <a href="/research/2025-Federated_Multi-View_K-Means_Clustering.pdf" target="_blank" class="pub-link">
+        <a href="/research/2025-Federated_Multi-View_K-Means_Clustering.pdf" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fas fa-file-pdf"></i> PDF
         </a>
       </div>
@@ -116,7 +116,7 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
     </div>
     <div class="publication-content">
       <h3>
-        <a href="https://ieeexplore.ieee.org/abstract/document/9072123" target="_blank">
+          <a href="https://ieeexplore.ieee.org/abstract/document/9072123" target="_blank" rel="noopener noreferrer">
           Unsupervised K-means clustering algorithm
         </a>
       </h3>
@@ -150,13 +150,13 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         This article has made a significant mark in the machine learning community, with over 2,000 citations since publication. Its exceptional citation rate demonstrates the paper's foundational contribution to clustering algorithms and its widespread adoption across multiple domains. The article's clarity, technical depth, and practical relevance have established it as one of the most influential works on K-means clustering in recent years, providing both theoretical foundations and implementation guidance that continue to shape research and applications in data mining, pattern recognition, and unsupervised learning.
       </p>
       <div class="publication-links">
-        <a href="https://ieeexplore.ieee.org/abstract/document/9072123" target="_blank" class="pub-link">
+        <a href="https://ieeexplore.ieee.org/abstract/document/9072123" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/unsupervised-kmeans" class="pub-link">
+        <a href="https://github.com/KristinaP09/unsupervised-kmeans" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fab fa-github"></i> Code
         </a>
-        <a href="https://xplorestaging.ieee.org/ielx7/6287639/8948470/09072123.pdf?arnumber=9072123" target="_blank" class="pub-link">
+        <a href="https://xplorestaging.ieee.org/ielx7/6287639/8948470/09072123.pdf?arnumber=9072123" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fas fa-file-pdf"></i> PDF
         </a>
       </div>
@@ -192,13 +192,13 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
         <em>Impact:</em> This method provides a more nuanced approach to multi-view clustering by allowing for fine-grained control over feature importance, leading to better discovery of underlying data structures in complex, heterogeneous datasets.
       </p>
       <div class="publication-links">
-        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" target="_blank" class="pub-link"> <!-- Placeholder for article link -->
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" target="_blank" rel="noopener noreferrer" class="pub-link"> <!-- Placeholder for article link -->
           <i class="fas fa-external-link-alt"></i> Article
         </a>
-        <a href="https://github.com/KristinaP09/collaborative-feature-weighted-fcm" target="_blank" class="pub-link"> <!-- Placeholder for code link -->
+        <a href="https://github.com/KristinaP09/collaborative-feature-weighted-fcm" target="_blank" rel="noopener noreferrer" class="pub-link"> <!-- Placeholder for code link -->
           <i class="fab fa-github"></i> Code
         </a>
-        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" target="_blank" class="pub-link">
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S003132032100251X" target="_blank" rel="noopener noreferrer" class="pub-link">
           <i class="fas fa-file-pdf"></i> PDF
         </a>
       </div>
@@ -255,23 +255,22 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
 
 <div class="projects-container">
     <div class="project-item">
-      <h3><i class="fas fa-project-diagram"></i> Cross-Modal Learning for Healthcare Applications</h3>
+      <h3><i class="fas fa-project-diagram" aria-hidden="true"></i> Cross-Modal Learning for Healthcare Applications</h3>
       <p>Developing AI systems that can integrate diverse healthcare data modalities (imaging, text reports, vitals) to improve diagnostic accuracy while maintaining interpretability.</p>
     </div>
 
     `<div class="project-item">`
-      `<h3><i class="fas fa-network-wired">``</i>` Distributed Optimization for Edge Computing `</h3>`
+      `<h3><i class="fas fa-network-wired" aria-hidden="true">``</i>` Distributed Optimization for Edge Computing`</h3>`
       `<p>`Creating novel optimization algorithms that enable efficient distributed computation across edge devices with heterogeneous capabilities and unreliable connectivity.`</p>`
     `</div>`
 
     `<div class="project-item">`
-      `<h3><i class="fas fa-shield-alt">``</i>` Privacy-Preserving Machine Learning `</h3>`
+      `<h3><i class="fas fa-shield-alt" aria-hidden="true">``</i>` Privacy-Preserving Machine Learning`</h3>`
       `<p>`Building learning frameworks that maintain data privacy while enabling collaborative model development across organizations and institutions.`</p>`
     `</div>`
 
 </div>
 </div>
-
 
 
 
@@ -387,8 +386,8 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
   }
   
   .publications-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 2em;
     margin: 2em 0;
   }
@@ -415,6 +414,12 @@ keywords: "Kristina P. Sinaga, research, AI, artificial intelligence, multi-view
     justify-content: center;
     /* Ensure the div still takes up space if needed, or adjust flex/height as desired */
     min-height: 100px; /* Example: maintain a minimum height */
+  }
+
+  /* If a publication icon image is missing, show a simple document glyph */
+  .publication-icon::before {
+    content: "📄";
+    font-size: 2.2rem;
   }
   
   .publication-content {
