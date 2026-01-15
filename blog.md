@@ -134,7 +134,7 @@
 
 ## Featured Archive
 
-Looking for something louder than words?
+Do you need a stronger way to express your emotions than words?
 Explore the full **Clown Network Chronicles** — a live archive of chair-dragging opera, machine-humming mysteries, and unlicensed psychological experiments from above.
 
 <div style="margin: 2em 0; text-align: center;">
