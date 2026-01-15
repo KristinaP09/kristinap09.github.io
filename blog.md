@@ -135,7 +135,7 @@
 ## Featured Archive
 
 Do you need a stronger way to express your emotions than words?
-Explore the full **Clown Network Chronicles** — a live archive of chair-dragging opera, machine-humming mysteries, and unlicensed psychological experiments from above.
+Check out the full **Clown Network Chronicles**, which is like an online library with information on all kinds of topics.
 
 <div style="margin: 2em 0; text-align: center;">
   <a href="/clown-network/chronicles/" class="cta-button">
