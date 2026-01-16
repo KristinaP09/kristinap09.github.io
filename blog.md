@@ -40,6 +40,12 @@
   <ol>
     <li>
       <span class="post-icon" aria-hidden="true">🎪</span>
+      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Why_Im_Done_with_Nosy_Protectors_Messing_with_My_Familys_CCTV.html">Why I'm Done with Nosy "Protectors" Messing with My Family's CCTV – A Rant from Someone Who's Had Enough</a>
+      <span class="badge new">NEW</span>
+      <p class="excerpt">A candid exposé on the intrusive behavior of self-appointed 'protectors' meddling with private CCTV footage, highlighting the importance of respecting personal boundaries and privacy.</p>
+    </li>
+    <li>
+      <span class="post-icon" aria-hidden="true">🎪</span>
       <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Unfiltered_and_Unbothered_v2.html">Unfiltered and Unbothered 2.0: A Masterclass in Eye-Rolling and Emotional Evasion</a>
       <span class="badge new">NEW</span>
       <p class="excerpt">A sharpened rerelease that pairs uncompromising honesty with concrete examples—why bluntness can be a tool for accountability rather than mere spectacle.</p>
@@ -441,6 +447,7 @@ This blog has a variety of information, including data, sarcasm, and observation
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
