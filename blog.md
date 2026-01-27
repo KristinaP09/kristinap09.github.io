@@ -50,17 +50,6 @@
       <span class="badge new">NEW</span>
       <p class="excerpt">A candid exposé on the intrusive behavior of self-appointed 'protectors' meddling with private CCTV footage, highlighting the importance of respecting personal boundaries and privacy.</p>
     </li>
-    <li>
-      <span class="post-icon" aria-hidden="true">🎪</span>
-      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Unfiltered_and_Unbothered_v2.html">Unfiltered and Unbothered 2.0: A Masterclass in Eye-Rolling and Emotional Evasion</a>
-      <span class="badge new">NEW</span>
-      <p class="excerpt">A sharpened rerelease that pairs uncompromising honesty with concrete examples—why bluntness can be a tool for accountability rather than mere spectacle.</p>
-    </li>
-    <li>
-      <span class="post-icon" aria-hidden="true">📷</span>
-      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Life_in_a_City_Where_Cameras_Watch_but_No_One_Acts.html">Surveillance Without Accountability: Why Cameras Alone Can't Fix Broken Systems</a>
-      <p class="excerpt">An evidence-backed look at how surveillance tech substitutes for oversight, and what communities actually need to demand for meaningful safety.</p>
-    </li>
   </ol>
 </section>
 
@@ -453,6 +442,7 @@ This blog has a variety of information, including data, sarcasm, and observation
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
