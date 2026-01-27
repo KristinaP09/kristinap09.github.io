@@ -39,6 +39,12 @@
   <h2 id="recent-posts-title">Most Recent Posts</h2>
   <ol>
     <li>
+    <span class="post-icon" aria-hidden="true">🎪</span>
+    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Service_Excellence_vs_Local_Realities.html">Service Excellence vs. Local Realities: A Deep Dive into "SUMUT" and Operational Challenges</a>
+    <span class="badge new">NEW</span>
+    <p class="excerpt">An investigative exploration of the discrepancies between promised service standards and actual operational realities in the context of 'SUMUT', highlighting systemic issues and potential solutions.</p>
+    </li>    
+    <li>
       <span class="post-icon" aria-hidden="true">🎪</span>
       <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Why_Im_Done_with_Nosy_Protectors_Messing_with_My_Familys_CCTV.html">Why I'm Done with Nosy "Protectors" Messing with My Family's CCTV – A Rant from Someone Who's Had Enough</a>
       <span class="badge new">NEW</span>
@@ -447,6 +453,7 @@ This blog has a variety of information, including data, sarcasm, and observation
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
