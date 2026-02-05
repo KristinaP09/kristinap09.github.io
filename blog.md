@@ -44,18 +44,18 @@
     <span class="badge new">NEW</span>
     <p class="excerpt">Family and community are seasonal props—paraded on Sundays, discarded by Monday. Decency only made me free labor in a patriarchy that rewards men for breathing. Silence is my shield now; faith, family, and community are expired placebos.</p>
     </li>    
+     <li>
+      <span class="post-icon" aria-hidden="true">🎪</span>
+      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Systemic_Dysfunction_Indonesia.html">Systemic Dysfunction in Indonesia: Corruption, Pollution, Bureaucratic Mystique, and Fragile Power Structures</a>
+      <span class="badge new">NEW</span>
+      <p class="excerpt">Local dominance offers no guarantee of global power. Cheap labour, political support, and cultivated mystique may postpone challenges, but a single leak or audit can shatter the illusion and reveal the truth: “We are vulnerable.</p>
+    </li>
        <li>
     <span class="post-icon" aria-hidden="true">🎪</span>
     <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Service_Excellence_vs_Local_Realities.html">Service Excellence vs. Local Realities: A Deep Dive into "SUMUT" and Operational Challenges</a>
     <span class="badge new">NEW</span>
     <p class="excerpt">An investigative exploration of the discrepancies between promised service standards and actual operational realities in the context of 'SUMUT', highlighting systemic issues and potential solutions.</p>
     </li>    
-    <li>
-      <span class="post-icon" aria-hidden="true">🎪</span>
-      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Why_Im_Done_with_Nosy_Protectors_Messing_with_My_Familys_CCTV.html">Why I'm Done with Nosy "Protectors" Messing with My Family's CCTV – A Rant from Someone Who's Had Enough</a>
-      <span class="badge new">NEW</span>
-      <p class="excerpt">A candid exposé on the intrusive behavior of self-appointed 'protectors' meddling with private CCTV footage, highlighting the importance of respecting personal boundaries and privacy.</p>
-    </li>
   </ol>
 </section>
 
@@ -448,6 +448,7 @@ This blog has a variety of information, including data, sarcasm, and observation
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
