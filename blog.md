@@ -40,7 +40,7 @@
   <ol>
     <li>
     <span class="post-icon" aria-hidden="true">🎪</span>
-    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Service_Excellence_vs_Local_Realities.html">The Weight of Faith and Family</a>
+    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/the-weight-of-faith-and-family-enhanced-full.html">The Weight of Faith and Family</a>
     <span class="badge new">NEW</span>
     <p class="excerpt">Family and community are seasonal props—paraded on Sundays, discarded by Monday. Decency only made me free labor in a patriarchy that rewards men for breathing. Silence is my shield now; faith, family, and community are expired placebos.</p>
     </li>    
@@ -448,6 +448,7 @@ This blog has a variety of information, including data, sarcasm, and observation
   .badge.new { background: #ff3b82; box-shadow: 0 2px 8px rgba(179,0,89,0.12); }
   .dark-mode .badge { background: #ff99cc; color: #2a2a3a; }
 </style>
+
 
 
 
