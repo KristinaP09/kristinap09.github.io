@@ -324,7 +324,7 @@ function updateThemeStatus(text) {
 </script>
 
 <div class="profile-container">
-  <img src="https://avatars.githubusercontent.com/u/169865712?s=400&u=d8100f51fd1a68806cb9a7201621e3ab96f6534c&v=4](https://kristinap09.github.io/assets/images/IMG_0249.jpeg" alt="Kristina P. Sinaga" class="profile-image">
+  <img src="https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/IMG_0249.jpeg" alt="Kristina P. Sinaga" class="profile-image">
   <div class="profile-info">
     <h1>Kristina P. Sinaga</h1>
     <div class="profile-title">Ph.D. in Applied Mathematics, Chung Yuan Christian University (CYCU), Taiwan</div>
