@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oh, What a Symphony of Genius</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+```
+:root {
+  --ink: #1a1510;
+  --paper: #f5f0e8;
+  --aged: #e8e0cc;
+  --rust: #c0392b;
+  --gold: #b8860b;
+  --muted: #7a6f5e;
+  --rule: #c8bfa8;
+  --sidebar-bg: #1a1510;
+  --sidebar-text: #f5f0e8;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  padding: 12px 20px 8px;
+  border-bottom: 3px double var(--gold);
+  animation: fadeDown 0.6s ease both;
+}
+.masthead .dateline {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.masthead .pub-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 4vw, 2.1rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.masthead .pub-tagline {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-size: 0.72rem;
+  color: var(--aged);
+  margin-top: 4px;
+  letter-spacing: 0.08em;
+}
+
+/* ── NAV BAR ── */
+.topnav {
+  background: var(--paper);
+  border-bottom: 2px solid var(--ink);
+  padding: 8px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  animation: fadeDown 0.6s 0.1s ease both;
+}
+.topnav a {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.topnav a:hover { color: var(--rust); }
+
+/* ── HERO HEADER ── */
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 52px 24px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.8s 0.2s ease both;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 28px,
+    rgba(255,255,255,0.03) 28px,
+    rgba(255,255,255,0.03) 29px
+  );
+  pointer-events: none;
+}
+.hero .category-tag {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: var(--rust);
+  color: #fff;
+  padding: 4px 12px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  max-width: 820px;
+  margin: 0 auto 20px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.4);
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero .hero-rule {
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 18px auto;
+}
+.hero .byline-block {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--aged);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.hero .byline-block span { color: var(--gold); }
+
+/* ── DECORATIVE IMAGE BAND ── */
+.image-band {
+  width: 100%;
+  height: clamp(180px, 28vw, 340px);
+  overflow: hidden;
+  position: relative;
+}
+.image-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(60%) contrast(1.1) brightness(0.85);
+  display: block;
+  animation: zoomIn 12s ease-in-out infinite alternate;
+}
+.image-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(26,21,16,0.5) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(26,21,16,0.7) 100%
+  );
+}
+.image-band .caption {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: rgba(245,240,232,0.7);
+  letter-spacing: 0.1em;
+}
+
+/* ── LAYOUT WRAPPER ── */
+.page-body {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 0;
+  align-items: start;
+}
+
+/* ── MAIN ARTICLE ── */
+main {
+  padding: 44px 48px 44px 32px;
+  border-right: 1px solid var(--rule);
+  animation: fadeIn 0.7s 0.35s ease both;
+}
+
+.drop-cap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 0.82;
+  float: left;
+  margin-right: 8px;
+  margin-top: 6px;
+  color: var(--rust);
+}
+
+.article-body p {
+  margin-bottom: 1.5em;
+  font-size: 1.02rem;
+  color: #2a2318;
+}
+
+.article-body em { font-style: italic; }
+
+/* pull quote */
+.pull-quote {
+  border-left: 4px solid var(--rust);
+  border-right: 4px solid var(--rust);
+  padding: 20px 28px;
+  margin: 36px 0;
+  text-align: center;
+  background: rgba(192,57,43,0.04);
+}
+.pull-quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--ink) !important;
+  margin: 0 !important;
+}
+.pull-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* inline image */
+.inline-img {
+  margin: 32px 0;
+}
+.inline-img img {
+  width: 100%;
+  display: block;
+  filter: sepia(40%) contrast(1.05) brightness(0.9);
+}
+.inline-img figcaption {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  padding: 8px 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+/* section divider */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 40px 0;
+}
+.section-rule::before, .section-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+.section-rule .ornament {
+  font-size: 1rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+/* ── TAGS & SHARING ── */
+.article-footer {
+  border-top: 2px solid var(--ink);
+  margin-top: 40px;
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.tag:hover { background: var(--ink); color: var(--paper); }
+.share-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.share-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.share-btn {
+  width: 32px; height: 32px;
+  border: 1px solid var(--ink);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  color: var(--ink);
+  text-decoration: none;
+}
+.share-btn:hover { background: var(--ink); color: var(--paper); }
+
+/* author bio */
+.author-bio {
+  margin-top: 36px;
+  padding: 24px;
+  background: var(--aged);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border-left: 4px solid var(--gold);
+}
+.author-avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--ink);
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  font-weight: 900;
+}
+.author-info h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.author-info .role {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 8px;
+}
+.author-info p {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #3a3228;
+  margin: 0 !important;
+}
+
+/* ── SIDEBAR ── */
+aside {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  animation: fadeIn 0.7s 0.4s ease both;
+}
+
+.sidebar-section {
+  padding: 28px 24px;
+  border-bottom: 1px solid rgba(245,240,232,0.1);
+}
+.sidebar-section:last-child { border-bottom: none; }
+
+.sidebar-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sidebar-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(184,134,11,0.3);
+}
+
+/* related posts */
+.related-post {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(245,240,232,0.08);
+  transition: opacity 0.2s;
+}
+.related-post:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.related-post:hover { opacity: 0.75; }
+.related-post .rp-cat {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rust);
+  margin-bottom: 5px;
+}
+.related-post .rp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+.related-post .rp-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  color: rgba(245,240,232,0.45);
+  letter-spacing: 0.1em;
+}
+
+/* categories */
+.cat-list { list-style: none; }
+.cat-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(245,240,232,0.07);
+}
+.cat-list li:last-child { border-bottom: none; }
+.cat-list a {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.82rem;
+  color: var(--sidebar-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.cat-list a:hover { color: var(--gold); }
+.cat-count {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: rgba(245,240,232,0.3);
+}
+
+/* about widget */
+.about-widget p {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: rgba(245,240,232,0.72);
+}
+
+/* newsletter */
+.newsletter-widget p {
+  font-size: 0.8rem;
+  color: rgba(245,240,232,0.6);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.nl-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(245,240,232,0.07);
+  border: 1px solid rgba(245,240,232,0.2);
+  color: var(--paper);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.nl-input::placeholder { color: rgba(245,240,232,0.3); }
+.nl-input:focus { border-color: var(--gold); }
+.nl-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--rust);
+  border: none;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.nl-btn:hover { background: #a93226; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: var(--paper);
+  border-top: 3px double var(--gold);
+}
+.footer-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-bottom: 1px solid rgba(245,240,232,0.1);
+}
+.footer-col {
+  padding: 40px 32px;
+  border-right: 1px solid rgba(245,240,232,0.08);
+}
+.footer-col:last-child { border-right: none; }
+.footer-col h5 {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+.footer-col p, .footer-col li {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.55);
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { padding: 3px 0; }
+.footer-col ul a {
+  color: rgba(245,240,232,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col ul a:hover { color: var(--gold); }
+.footer-bottom {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom .copyright {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: rgba(245,240,232,0.3);
+}
+.footer-pub {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+  from { transform: scale(1); }
+  to { transform: scale(1.06); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .page-body {
+    grid-template-columns: 1fr;
+  }
+  aside {
+    position: static;
+    min-height: auto;
+    border-top: 3px double rgba(245,240,232,0.15);
+  }
+  main {
+    padding: 32px 20px;
+    border-right: none;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-col {
+    border-right: none;
+    border-bottom: 1px solid rgba(245,240,232,0.08);
+    padding: 28px 20px;
+  }
+  .footer-col:last-child { border-bottom: none; }
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.55rem; }
+  .author-bio { flex-direction: column; }
+  .article-footer { flex-direction: column; align-items: flex-start; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+
+<header class="masthead">
+  <div class="dateline">Tuesday, 14 April 2026 &nbsp;·&nbsp; Est. amid chaos</div>
+  <div class="pub-name">The Reluctant Observer</div>
+  <div class="pub-tagline">Dispatches from a society on eternal backorder</div>
+</header>
+
+<!-- TOP NAV -->
+
+<nav class="topnav">
+  <a href="#">Home</a>
+  <a href="#">Chronicles</a>
+  <a href="#">Civic Absurdities</a>
+  <a href="#">Domestic Disasters</a>
+  <a href="#">Letters to No One</a>
+  <a href="#">About</a>
+</nav>
+
+<!-- HERO -->
+
+<div class="hero">
+  <div class="category-tag">Civic Absurdities · Long Read</div>
+  <h1>Oh, What a <em>Symphony of Genius</em>:<br>My Neighbours' Spiritual Honk-Fest<br>and Other Masterpieces of Modern Enlightenment</h1>
+  <div class="hero-rule"></div>
+  <div class="byline-block">
+    <span>By Kristina</span>
+    &nbsp;·&nbsp;
+    April 14, 2026
+    &nbsp;·&nbsp;
+    9 min read
+    &nbsp;·&nbsp;
+    <span>☕ Best consumed with headphones off</span>
+  </div>
+</div>
+
+<!-- DECORATIVE IMAGE BAND -->
+
+<div class="image-band">
+  <img
+    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80"
+    alt="Empty street at 3am"
+    loading="lazy"
+  />
+  <div class="caption">Stock photo. Not my street. My street is louder. — Ed.</div>
+</div>
+
+<!-- PAGE BODY: ARTICLE + SIDEBAR -->
+
+<div class="page-body">
+
+  <!-- MAIN ARTICLE -->
+
+  <main>
+    <article class="article-body">
+
+```
+  <p class="drop-cap">I have finally cracked the code, dear readers. After careful observation, I now fully comprehend the dazzling pattern of behavior exhibited by these absolute visionaries. These paragons of subtlety linger with the dedication of true artists, crafting needless disruptions through their exquisitely intrusive performances.</p>
+
+  <p>Their "spiritual approaches"? Pure poetry. Nothing says "inner peace" quite like a triumphant honk explosion the second their rituals wrap up. When they're not laying on the horn like it's the climax of a Bollywood finale, they coordinate stunning vehicular ballets — cars, motorcycles, and various attention-seeking props — day and night. Truly, a 24/7 immersive theatre experience.</p>
+
+  <div class="pull-quote">
+    <p>"Why bother with something as boring as direct, constructive dialogue when you can achieve the same results through disruptive, brain-melting tactics?"</p>
+    <cite>— The Author, currently awake at 03:01 AM</cite>
+  </div>
+
+  <p>And let's be clear: these aren't the clumsy acts of lone amateurs. No, this is a meticulously orchestrated ensemble production. They deploy cameras that emit the most charming little beeps from my own rooftop — how thoughtful to include me so intimately — while their motorcycles roar at volumes that perfectly match the intellectual depth of the entire operation. It's almost moving how they prioritise spectacle over anything resembling substance. What commitment to the aesthetic!</p>
+
+  <p>This, my friends, represents a revolutionary breakthrough in communication. Why bother with something as boring as direct, constructive dialogue when you can achieve the same results through disruptive, brain-melting tactics? It's no wonder progress in this society moves at the speed of a particularly unambitious snail. A culture that swaps reason for noise and clarity for chaos is clearly onto something the rest of the world is too primitive to appreciate.</p>
+
+  <div class="section-rule"><span class="ornament">✦</span></div>
+
+  <p>The endless ritualistic honking and synchronised vehicle choreography paint a beautiful picture of a virtuous cycle — of empty gestures. These displays foster neither improvement nor respect, but they do make for excellent white noise while I question my life choices. Genuine progress, after all, requires thoughtful action, practical skill, and quality. How quaint. How very last century.</p>
+
+  <p>Another brilliant touch I've noticed: they're not just blessing me with this enlightenment — they've generously extended it to my mother as well. After their "spiritual approach" (designed, one assumes, to provoke some specific reaction), one might naively expect results. Instead, the sheer incompetence is so breathtaking it deserves its own award category. Who on earth approved this master plan? In my humble opinion, the government should immediately replace these geniuses with people capable of basic competence. But that would be far too logical, wouldn't it?</p>
+
+  <figure class="inline-img">
+    <img
+      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80"
+      alt="A road in perpetual disrepair"
+      loading="lazy"
+    />
+    <figcaption>Illustration: The road in question. Condition: unchanged. Honking: ongoing. — Staff photographer</figcaption>
+  </figure>
+
+  <p>Picture this: you're supposed to fix a road. Important officials are coming. Do you actually repair it properly? Of course not — that would be amateur hour. Instead, you unleash a glorious cacophony of honking, sirens, and random revving to distract everyone from the potholes. <em>Chef's kiss.</em> Truly, a society that chooses noise and superficial spectacle over actual effort is destined for greatness. Or at least very loud mediocrity.</p>
+
+  <p>Once again, I believe these creative souls should face legal consequences for their actions. Their behaviour shows such a profound, almost sacred ignorance of lawful conduct. But in a nation where meaningful legal protections are apparently decorative, why let something as trivial as the law interrupt this beautiful performance?</p>
+
+  <div class="section-rule"><span class="ornament">✦</span></div>
+
+  <p>It seems much of the population shares this same refreshingly reckless and ill-informed mindset. Why use rational solutions when you can deploy misguided rituals and empty "spiritual" theatre? These methods aren't just ineffective — they're performance art.</p>
+
+  <p>An outside observer from a sane country would probably nod sagely and say, "You have described it perfectly, Kristina." Then they'd book the next flight home while quietly weeping for humanity. The reality isn't comical; it's a never-ending tragicomedy. Without a shift toward actual intelligence, respect for law, and basic functionality, this glorious cycle of chaos and incompetence will keep spinning.</p>
+
+  <div class="pull-quote">
+    <p>"The same ones, incidentally, that once contributed to the profound loss of my father. How comforting to hear them still echoing at 03:01 AM through empty streets, like a particularly tone-deaf lullaby."</p>
+  </div>
+
+  <p>To this country, I extend my most cautious, reluctant, and heavily sarcastic hope for improvement — despite the stubborn persistence of these misguided, hollow "spiritual" practices. The same ones, incidentally, that once contributed to the profound loss of my father. How comforting to hear them still echoing at 03:01 AM through empty streets, like a particularly tone-deaf lullaby.</p>
+
+  <p>Equally inspiring is the conduct of certain military personnel, whose sensitivity and competence are nothing short of legendary. Asking for a video conference to confirm my deceased father's passing? <em>Brilliant.</em> An absolutely inspired touch. All while the nocturnal honking continues as I type this. Peak professionalism.</p>
+
+  <p>This nation, so richly blessed with systemic incompetence and a national addiction to spectacle over substance, will surely reap the rewards of its choices. Real progress could only come from thoughtful action, respect for law, and purposeful effort — qualities currently on backorder. Until that miraculous day arrives, the cycle of noise, ritual, and glorious senselessness will continue, echoing through the empty roads like a sad, loud reminder of what happens when a society picks commotion over reason.</p>
+
+  <p><strong>Bravo, everyone. Encore. Just maybe turn down the volume a notch. My ears — and my sanity — salute you.</strong></p>
+
+  <!-- Tags + Share -->
+  <div class="article-footer">
+    <div class="tags">
+      <a href="#" class="tag">Civic Life</a>
+      <a href="#" class="tag">Neighbours</a>
+      <a href="#" class="tag">Satire</a>
+      <a href="#" class="tag">Sleepless</a>
+      <a href="#" class="tag">Road Infrastructure</a>
+    </div>
+    <div class="share-row">
+      <span class="share-label">Share</span>
+      <a href="#" class="share-btn" title="Twitter/X">𝕏</a>
+      <a href="#" class="share-btn" title="Copy link">🔗</a>
+      <a href="#" class="share-btn" title="Print">⎙</a>
+    </div>
+  </div>
+
+  <!-- Author Bio -->
+  <div class="author-bio">
+    <div class="author-avatar">K</div>
+    <div class="author-info">
+      <h4>Kristina</h4>
+      <div class="role">Staff Chronicler · Night Shift</div>
+      <p>Kristina writes about the intersection of civic dysfunction, domestic life, and the stubborn human instinct to find dark comedy in everything. She is currently awake. She did not choose to be.</p>
+    </div>
+  </div>
+
+</article>
+```
+
+  </main>
+
+  <!-- SIDEBAR -->
+
+  <aside>
+
+```
+<div class="sidebar-section">
+  <div class="sidebar-heading">Also on this site</div>
+
+  <a href="#" class="related-post">
+    <div class="rp-cat">Domestic Disasters</div>
+    <div class="rp-title">The Great WiFi Dispute: A Multi-Chapter Tragedy in Three Acts</div>
+    <div class="rp-meta">March 2026 · 12 min read</div>
+  </a>
+
+  <a href="#" class="related-post">
+    <div class="rp-cat">Consumer Affairs</div>
+    <div class="rp-title">An Open Letter to Gojek, Written in the Spirit of Genuine Public Service</div>
+    <div class="rp-meta">February 2026 · 7 min read</div>
+  </a>
+
+  <a href="#" class="related-post">
+    <div class="rp-cat">Civic Absurdities</div>
+    <div class="rp-title">On Potholes, Politics, and the Art of the Distraction Honk</div>
+    <div class="rp-meta">January 2026 · 5 min read</div>
+  </a>
+
+  <a href="#" class="related-post">
+    <div class="rp-cat">Letters to No One</div>
+    <div class="rp-title">Dear Upstairs Neighbour: A Formal Correspondence Regarding Your Footsteps</div>
+    <div class="rp-meta">December 2025 · 4 min read</div>
+  </a>
+</div>
+
+<div class="sidebar-section">
+  <div class="sidebar-heading">Categories</div>
+  <ul class="cat-list">
+    <li><a href="#">Civic Absurdities</a><span class="cat-count">14</span></li>
+    <li><a href="#">Domestic Disasters</a><span class="cat-count">9</span></li>
+    <li><a href="#">Consumer Affairs</a><span class="cat-count">6</span></li>
+    <li><a href="#">Letters to No One</a><span class="cat-count">11</span></li>
+    <li><a href="#">Chronicles</a><span class="cat-count">22</span></li>
+    <li><a href="#">Field Reports</a><span class="cat-count">4</span></li>
+  </ul>
+</div>
+
+<div class="sidebar-section about-widget">
+  <div class="sidebar-heading">About</div>
+  <p><em>The Reluctant Observer</em> is a personal essay blog for people who have given up on polite silence. Updated irregularly, usually after midnight. Caffeine-dependent. No comment section — we've already been through enough.</p>
+</div>
+
+<div class="sidebar-section newsletter-widget">
+  <div class="sidebar-heading">Dispatch</div>
+  <p>New essays, delivered to your inbox when the author has finally slept and the anger has composted into prose.</p>
+  <input class="nl-input" type="email" placeholder="your@email.com" />
+  <button class="nl-btn">Subscribe</button>
+</div>
+```
+
+  </aside>
+
+</div><!-- /.page-body -->
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>The Publication</h5>
+      <p>Personal essays written from the frontlines of a neighbourhood at war with itself. Strongly worded. Occasionally cathartic. Not responsible for any resemblance to actual geniuses, living or revving.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">All Essays</a></li>
+        <li><a href="#">Civic Absurdities</a></li>
+        <li><a href="#">Domestic Disasters</a></li>
+        <li><a href="#">Consumer Affairs</a></li>
+        <li><a href="#">About the Author</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Fine Print</h5>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Press Inquiries</a></li>
+      </ul>
+      <p style="margin-top:16px;">All content © Kristina. Republication without permission is frowned upon and will be documented in future essays.</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-pub">The Reluctant Observer</div>
+    <div class="copyright">© 2026 · Dispatches from a society on eternal backorder · All rights reserved</div>
+  </div>
+</footer>
+
+</body>
+</html>
