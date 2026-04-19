@@ -1,262 +1,93 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Another Glorious Day in the Neighborhood Surveillance State</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg: #0e0d0b;
-      --surface: #161410;
-      --ink: #e8e0d0;
-      --ink-muted: #9a9080;
-      --ink-faint: #3a3630;
-      --accent: #c8a96e;
-      --accent-dim: #7a6440;
-      --red: #c0504a;
-    }
-
-```
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { font-size: 18px; scroll-behavior: smooth; }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: 'DM Serif Text', Georgia, serif;
-  line-height: 1.8;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Grain overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 100;
-  opacity: 0.4;
-}
-
-.masthead {
-  border-bottom: 1px solid var(--ink-faint);
-  padding: 1.2rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards 0.1s;
-}
-
-.blog-name {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-
-.date-stamp {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.68rem;
-  color: var(--ink-muted);
-  letter-spacing: 0.1em;
-}
-
-/* Hero */
-.hero {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 5rem 2rem 3rem;
-  opacity: 0;
-  animation: fadeUp 0.9s ease forwards 0.3s;
-}
-
-.eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.4rem;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--ink);
-  margin-bottom: 0.5rem;
-}
-
-h1 em {
-  font-style: italic;
-  color: var(--accent);
-}
-
-.subtitle {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--ink-muted);
-  margin-top: 0.8rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.5;
-}
-
-.divider {
-  width: 48px;
-  height: 2px;
-  background: var(--accent-dim);
-  margin-bottom: 3rem;
-}
-
-/* Body */
-.content {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 2rem 6rem;
-  opacity: 0;
-  animation: fadeUp 1s ease forwards 0.6s;
-}
-
-p {
-  margin-bottom: 1.7rem;
-  color: var(--ink);
-  font-size: 1rem;
-}
-
-p.lead {
-  font-size: 1.12rem;
-  color: #d4c9b4;
-  font-style: italic;
-}
-
-/* Pull quote */
-blockquote {
-  border-left: 3px solid var(--accent);
-  margin: 2.5rem 0 2.5rem 0;
-  padding: 0.5rem 0 0.5rem 1.8rem;
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.18rem;
-  color: var(--accent);
-  line-height: 1.6;
-}
-
-/* Inline emphasis */
-em { font-style: italic; color: #d4c9b4; }
-strong {
-  font-weight: 700;
-  color: var(--ink);
-  font-style: normal;
-}
-
-/* Section break */
-.section-break {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 3rem 0;
-  color: var(--ink-faint);
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-}
-.section-break::before,
-.section-break::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: var(--ink-faint);
-}
-
-/* Closing note */
-.closing {
-  margin-top: 3.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--ink-faint);
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
-  color: var(--ink-muted);
-  letter-spacing: 0.06em;
-  line-height: 1.9;
-}
-
-.closing span {
-  color: var(--accent);
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 600px) {
-  h1 { font-size: 1.8rem; }
-  .hero, .content { padding-left: 1.2rem; padding-right: 1.2rem; }
-}
-```
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemic Dysfunction in Indonesia</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; max-width: 900px; background-color: #f9f9f9; color: #222; }
+        h1, h2, h3 { color: #c62828; }
+        h1 { border-bottom: 2px solid #c62828; padding-bottom: 10px; }
+        h2 { margin-top: 30px; }
+        code { background: #eee; padding: 2px 5px; border-radius: 3px; }
+        blockquote { border-left: 4px solid #c62828; padding-left: 15px; color: #555; margin: 20px 0; }
+        ul { margin: 10px 0 20px 20px; }
+        .highlight { color: #c62828; font-weight: bold; }
+        footer { margin-top: 50px; font-size: 0.9em; color: #555; }
+    </style>
 </head>
 <body>
+    <h1>Systemic Dysfunction in Indonesia: Corruption, Pollution, Bureaucratic Mystique, and Fragile Power Structures</h1>
 
-  <header class="masthead">
-    <span class="blog-name">Personal Journal — Public Edition</span>
-    <span class="date-stamp">Pematangsiantar, 2026</span>
-  </header>
+    <h2>Abstract</h2>
+    <p>Indonesia continues to thrive in systemic chaos: entrenched corruption (<span class="highlight">KKN</span>), toxic air, collapsing public services, grotesque fiscal strain, and dysfunctional logistics are <span class="highlight">not accidents—they are policy by default</span>. From petty bribery in Pematangsiantar to the <span class="highlight">Rp 193–968 trillion PertaminaGate scandal</span>, elites exploit loopholes while citizens pay the price. <span class="highlight">STTC</span>, a cigarette company observed in person, exemplifies corporate mystique: protected for over 30 years, it contributes to chronic pollution while politically “backing up” government in exchange for impunity. This analysis treats the culture of mystique, overconfidence, and denial as central to Indonesia’s governance dysfunction, highlighting how the system survives until it inevitably doesn’t.</p>
 
-  <div class="hero">
-    <p class="eyebrow">Journal Entry · April 11, 2026</p>
-    <h1>Six Months of<br/><em>This.</em></h1>
-    <p class="subtitle">A record of what I have been living with, Pematangsiantar.</p>
-    <div class="divider"></div>
-  </div>
+    <h2>1. Introduction: Governance Measured in Noise and Denial</h2>
+    <p>Indonesia’s chronic chaos—endless honking, arbitrary hospital closures, expensive and slow EV deliveries, and persistent pollution—is not a quirk. It is a <span class="highlight">reliable indicator of systemic rot</span>. Leaders cling to mystique and overconfidence: “everything is fine” becomes national policy. This blog updates 2025–2026 data to show that micro-level dysfunctions, meso-level bottlenecks, and macro-level scandals all stem from the same underlying <span class="highlight">ego-driven denial and weak oversight</span>.</p>
 
-  <div class="content">
+    <h2>2. Micro-Level Dysfunction: Everyday Corruption and STTC’s Role</h2>
+    <h3>Cigarette Industry: STTC and Three Decades of Impunity</h3>
+    <p><span class="highlight">STTC</span>, a cigarette company seen in person, perfectly illustrates how mystique and political protection combine. For over <span class="highlight">30 years</span>, the company has contributed to local air pollution while <span class="highlight">receiving political cover</span>:</p>
+    <ul>
+        <li>Environmental complaints ignored</li>
+        <li>Monitoring visits scheduled and watered down</li>
+        <li>Illegal emissions overlooked</li>
+        <li>Reports vanish into bureaucratic black holes</li>
+    </ul>
+    <p>The result: public health suffers, regulatory credibility erodes, and a culture of impunity persists. STTC’s mystique functions exactly like Indonesia’s broader governance culture: <span class="highlight">confidence theater that masks incompetence and corruption</span>.</p>
 
-```
-<p class="lead">This morning, I woke up and noticed my neighbour — the one known for suspicious activities — entering or leaving his house. Almost immediately, a chorus of noises began from the surrounding area, as if a group of self-proclaimed guardians were monitoring my every move.</p>
+    <h3>Healthcare and Logistics Failures</h3>
+    <p>The <span class="highlight">Mobile JKN app</span> promises digital efficiency but collapses in real use:</p>
+    <ul>
+        <li>Quotas vanish in minutes</li>
+        <li>OTPs fail</li>
+        <li>Patients forced back to lines that close arbitrarily</li>
+    </ul>
+    <p>EV delivery from Jakarta to smaller cities like Pematangsiantar costs IDR 2 million, arrives scratched, and may malfunction within a week. Micro-level chaos mirrors <span class="highlight">macro-level failures</span>: limited budgets, untrained staff, and profit-first culture.</p>
 
-<p>It felt like they were deliberately creating a disturbance whenever I stirred, as though my mere presence caused them discomfort. The entire scene gave me the impression that these individuals might be working in concert with my neighbour.</p>
+    <h2>3. Meso-Level Chaos: Traffic, Pollution, and Infrastructure</h2>
+    <h3>Traffic as a Proxy for Weak Institutions</h3>
+    <p>Indonesia fails the <span class="highlight">“Honk Test”</span>: aggressive honking, lane chaos, and survival-mode driving reflect eroded rule adherence. Bribery, nepotism, and selective enforcement allow disorder to flourish.</p>
 
-<div class="section-break">✦</div>
+    <h3>Air Pollution and STTC’s Complicity</h3>
+    <p>Indonesia ranks <span class="highlight">15th worst globally (2024)</span>, with PM2.5 at <span class="highlight">35.5 µg/m³</span>—7x WHO standards. Jakarta averages <span class="highlight">30–55 µg/m³</span>, with life expectancy losses up to <span class="highlight">2.6+ years</span>. STTC’s emissions, along with coal, vehicles, and palm oil fires, illustrate chronic regulatory failure. Activists like <span class="highlight">Gustina Salim Rambe</span> are jailed for protesting pollution near schools, while polluters enjoy impunity.</p>
+    <p>Mystique as a cultural feature amplifies this: <span class="highlight">appearances over reality, confidence theater over accountability, and denial as policy</span>.</p>
 
-<p>And then there is the neighbour himself — the one I know deals in drugs — who seems to mirror my every movement. Whenever I stir, he appears, stepping outside as if summoned by my waking. His timing is uncanny, almost deliberate, as though my life has become a silent cue for his own ritual of emergence.</p>
+    <h3>Infrastructure and Logistics Bottlenecks</h3>
+    <p>Logistics costs remain <span class="highlight">23–24% of GDP</span>, among ASEAN’s highest. EV incentives (0% import duties) do little outside Jakarta, highlighting how infrastructure gaps persist while the government <span class="highlight">pretends the system is modernized</span>.</p>
 
-<p>Alone in the house, I began to understand why my mother used to cough so often — perhaps she, too, could sense or hear the constant, oppressive presence of these unseen watchers. Something that never seemed to happen before.</p>
+    <h2>4. Macro-Level Failures: Corruption and Fiscal Pressure</h2>
+    <h3>PertaminaGate and Elite Overconfidence</h3>
+    <p>The 2025 <span class="highlight">PertaminaGate scandal</span> caused Rp 193.7–968.5 trillion in losses via adulterated fuel and collusion. Suspects included executives and tycoons like <span class="highlight">Riza Chalid</span>, some pardoned or rehabilitated. Palm oil bribery rings involving Wilmar and Musim Mas, and weak judicial accountability, confirm systemic elite protection.</p>
 
-<blockquote>
-  Who are these elusive figures who haunt the edges of my life? Why do they linger in my surroundings, clinging to the air like shadows that refuse to dissipate?
-</blockquote>
+    <h3>Fiscal Strain</h3>
+    <p>Government debt: Rp 9,000+ trillion (~41% GDP), 2025 deficit: 2.92%, 2026 borrowing: Rp 832 trillion. Official statements claim stability; citizens experience structural drag.</p>
 
-<div class="section-break">✦</div>
+    <h2>5. Discussion: Ego, Mystique, and Fragility</h2>
+    <p>Dysfunction persists because:</p>
+    <ul>
+        <li>Leaders defend mystique instead of admitting failure</li>
+        <li>Oversight bodies are weakened (KPK defanged, KASN dismantled)</li>
+        <li>Meritocracy remains theoretical</li>
+    </ul>
+    <p><span class="highlight">Mystique</span> is both a cultural norm and a survival strategy: it silences the uninformed, confuses the dependent, and masks incompetence. But as history shows, mystique eventually <span class="highlight">eats itself</span>. Overconfidence in untouchability is a fragile shield—anyone with information access, patience, and perspective can expose vulnerabilities.</p>
+    <p>Even globally small players like STTC operate under borrowed protection. They are not the <span class="highlight">elites who control global capital</span>, meaning collapse is always possible, even if unpredictable.</p>
 
-<p>Their presence is unbroken — a constant weight pressing against my awareness. For months, I have observed them lingering in the area, ever-present, yet when real issues arise, they remain apathetic. Unresolved and unresponsive.</p>
+    <h2>6. Conclusion</h2>
+    <p>Indonesia’s governance system thrives on mystique, denial, and selective enforcement. Micro-level corruption, meso-level chaos, and macro-level scandals are <span class="highlight">symptoms of the same cultural and institutional patterns</span>. Companies like STTC survive decades of pollution impunity due to political backing and cultural mystique—but history, information access, and structural pressures ensure that <span class="highlight">no protection is permanent</span>. Collapse may happen tomorrow, or decades later—but confidence theater is never immortal.</p>
+    <p>The real lesson: systems that rely on <span class="highlight">appearances over accountability</span> will eventually be undone—by the very culture they cultivated.</p>
 
-<p>Who could be so inconsiderate as to blare their horn at this hour of the night? Such reckless disruption is intolerable. As I moved, cars, trucks, and motorcycles also seemed to stir in motion, their engines revving as if in response to my presence. Who are these people behaving so recklessly and thoughtlessly?</p>
+    <h2>References</h2>
+    <ul>
+        <li>IQAir World Air Quality Report 2024; AQLI 2025 update</li>
+        <li>Jakarta Globe, Tempo, Reuters (2025) — Pertamina corruption and debt figures</li>
+        <li>World Bank Logistics Performance Index 2023; reports 2025–2026 on EV logistics and illicit trade</li>
+        <li>Mongabay (2024–2025) — Pollution activism, STTC, and palm oil impacts</li>
+    </ul>
 
-<p>I cannot help but wonder: are they the true source of the disturbances — the silent architects of the problems that have plagued this neighbourhood? Their movements feel deliberate, their presence heavy.</p>
-
-<blockquote>
-  Are these merely coincidences, or am I surrounded by a web of watchers, tethered to my every breath — something far more insidious?
-</blockquote>
-
-<div class="closing">
-  <span>Filed under:</span> neighbourhood disturbances, six months and counting<br/>
-  <span>Location:</span> Pematangsiantar, North Sumatra<br/>
-  <span>Mood:</span> observing, questioning, exhausted
-</div>
-```
-
-  </div>
-
+    <footer>
+        <p>&copy; 2026 — Systemic Dysfunction Analysis. All observations are based on publicly available data and field reporting.</p>
+    </footer>
 </body>
 </html>
