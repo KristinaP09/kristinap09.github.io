@@ -61,11 +61,11 @@
 
 <!-- Floating Emojis (improved animation) -->
 
-<div class="float-emoji" style="left: 10%; animation-delay: 0s;">🌞</div>
-<div class="float-emoji" style="left: 25%; animation-delay: 2s;">🌞</div>
-<div class="float-emoji" style="left: 40%; animation-delay: 4s;">🌞</div>
-<div class="float-emoji" style="left: 60%; animation-delay: 6s;">🌞</div>
-<div class="float-emoji" style="left: 80%; animation-delay: 8s;">🌞</div>
+<div class="float-emoji" style="left: 10%; animation-delay: 0s;">🤡</div>
+<div class="float-emoji" style="left: 25%; animation-delay: 2s;">🍿</div>
+<div class="float-emoji" style="left: 40%; animation-delay: 4s;">🧑‍💻</div>
+<div class="float-emoji" style="left: 60%; animation-delay: 6s;">🌎</div>
+<div class="float-emoji" style="left: 80%; animation-delay: 8s;">👽</div>
 
 <!-- Preserved Background Music Player -->
 
