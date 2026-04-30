@@ -55,16 +55,17 @@
     <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Patience_is_for_losers.html">On Patience, Bureaucracy, and the Quiet Arrogance of Systems That Don't Work</a>
     <span class="badge new">NEW</span>
     <p class="excerpt">How we human misinterpret patience as a virtue, when in reality it's often just a way to endure and accept broken systems without demanding change. This post explores the quiet arrogance of systems that don't work and the need to challenge them rather than passively waiting for them to improve.</p>
+      </li> 
   </ol>
 </section>
 
 <!-- Floating Emojis (improved animation) -->
 
-<div class="float-emoji" style="left: 10%; animation-delay: 0s;">👽</div>
-<div class="float-emoji" style="left: 25%; animation-delay: 2s;">👽</div>
-<div class="float-emoji" style="left: 40%; animation-delay: 4s;">👽</div>
-<div class="float-emoji" style="left: 60%; animation-delay: 6s;">👽</div>
-<div class="float-emoji" style="left: 80%; animation-delay: 8s;">👽</div>
+<div class="float-emoji" style="left: 10%; animation-delay: 0s;">🌞</div>
+<div class="float-emoji" style="left: 25%; animation-delay: 2s;">🌞</div>
+<div class="float-emoji" style="left: 40%; animation-delay: 4s;">🌞</div>
+<div class="float-emoji" style="left: 60%; animation-delay: 6s;">🌞</div>
+<div class="float-emoji" style="left: 80%; animation-delay: 8s;">🌞</div>
 
 <!-- Preserved Background Music Player -->
 
