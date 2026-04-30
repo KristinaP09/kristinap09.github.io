@@ -39,6 +39,11 @@
   <h2 id="recent-posts-title">Most Recent Posts</h2>
   <ol>
     <li>
+     <span class="post-icon" aria-hidden="true">🎪</span>The Invisible Hand: Phone Bot Farming and the New Shape of Digital Deception </a>
+     <span class="badge new">NEW</span>
+     <p class="excerpt">In this post, I explore the rise of phone bot farming—a shadowy industry where individuals use smartphones to create fake social media accounts and generate fraudulent engagement. I delve into how this practice is reshaping online influence, the ethical implications, and what it means for the future of digital trust.</p>
+    </li> 
+    <li>
     <span class="post-icon" aria-hidden="true">🎪</span>
     <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_IDR173984_settlement_nobody_asked_for.html">The Rp173.914 Settlement Nobody Asked For</a>
     <span class="badge new">NEW</span>
@@ -50,12 +55,6 @@
       <span class="badge new">NEW</span>
       <p class="excerpt">A simple basic example of "tiny mistakes" that can lead to catastrophic consequences, illustrating how a seemingly minor error can trigger a chain reaction resulting in the collapse of an entire system.</p>
     </li>
-       <li>
-    <span class="post-icon" aria-hidden="true">🎪</span>
-    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Patience_is_for_losers.html">On Patience, Bureaucracy, and the Quiet Arrogance of Systems That Don't Work</a>
-    <span class="badge new">NEW</span>
-    <p class="excerpt">How we human misinterpret patience as a virtue, when in reality it's often just a way to endure and accept broken systems without demanding change. This post explores the quiet arrogance of systems that don't work and the need to challenge them rather than passively waiting for them to improve.</p>
-      </li> 
   </ol>
 </section>
 
