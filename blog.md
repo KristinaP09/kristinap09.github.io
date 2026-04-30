@@ -38,8 +38,9 @@
 <section class="recent-posts callout" aria-labelledby="recent-posts-title">
   <h2 id="recent-posts-title">Most Recent Posts</h2>
   <ol>
-    <li>
-     <span class="post-icon" aria-hidden="true">🎪</span>The Invisible Hand: Phone Bot Farming and the New Shape of Digital Deception </a>
+        <li>
+     <span class="post-icon" aria-hidden="true">🎪</span>
+     <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_phone_bot_farming.html">The Invisible Hand: Phone Bot Farming and the New Shape of Digital Deception</a>
      <span class="badge new">NEW</span>
      <p class="excerpt">In this post, I explore the rise of phone bot farming—a shadowy industry where individuals use smartphones to create fake social media accounts and generate fraudulent engagement. I delve into how this practice is reshaping online influence, the ethical implications, and what it means for the future of digital trust.</p>
     </li> 
