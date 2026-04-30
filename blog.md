@@ -40,22 +40,21 @@
   <ol>
     <li>
     <span class="post-icon" aria-hidden="true">🎪</span>
-    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/the-weight-of-faith-and-family-enhanced-full.html">The Weight of Faith and Family</a>
+    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_IDR173984_settlement_nobody_asked_for.html">The Rp173.914 Settlement Nobody Asked For</a>
     <span class="badge new">NEW</span>
-    <p class="excerpt">Family and community are seasonal props—paraded on Sundays, discarded by Monday. Decency only made me free labor in a patriarchy that rewards men for breathing. Silence is my shield now; faith, family, and community are expired placebos.</p>
+    <p class="excerpt">This is the story of a tiny mistake that resulted in an e-commerce company offering me a settlement of just 173,914 Indonesian rupiah — an insultingly small amount which wouldn't even cover the cost of a cup of coffee. Not only was this settlement insulting, it also highlighted the system's lack of accountability and transparency, leaving sellers feeling frustrated and powerless.</p>
     </li>    
      <li>
       <span class="post-icon" aria-hidden="true">🎪</span>
-      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Systemic_Dysfunction_Indonesia.html">Systemic Dysfunction in Indonesia: Corruption, Pollution, Bureaucratic Mystique, and Fragile Power Structures</a>
+      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles//The_Three_Dollar_Collapse_of_Civilisation.html">The Three-Dollar Collapse of Civilisation</a>
       <span class="badge new">NEW</span>
-      <p class="excerpt">Local dominance offers no guarantee of global power. Cheap labour, political support, and cultivated mystique may postpone challenges, but a single leak or audit can shatter the illusion and reveal the truth: “We are vulnerable.</p>
+      <p class="excerpt">A simple basic example of "tiny mistakes" that can lead to catastrophic consequences, illustrating how a seemingly minor error can trigger a chain reaction resulting in the collapse of an entire system.</p>
     </li>
        <li>
     <span class="post-icon" aria-hidden="true">🎪</span>
-    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Service_Excellence_vs_Local_Realities.html">Service Excellence vs. Local Realities: A Deep Dive into "SUMUT" and Operational Challenges</a>
+    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/Patience_is_for_losers.html">On Patience, Bureaucracy, and the Quiet Arrogance of Systems That Don't Work</a>
     <span class="badge new">NEW</span>
-    <p class="excerpt">An investigative exploration of the discrepancies between promised service standards and actual operational realities in the context of 'SUMUT', highlighting systemic issues and potential solutions.</p>
-    </li>    
+    <p class="excerpt">How we human misinterpret patience as a virtue, when in reality it's often just a way to endure and accept broken systems without demanding change. This post explores the quiet arrogance of systems that don't work and the need to challenge them rather than passively waiting for them to improve.</p>
   </ol>
 </section>
 
