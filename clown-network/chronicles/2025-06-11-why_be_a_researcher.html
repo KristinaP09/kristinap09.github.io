@@ -1,157 +1,2252 @@
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Be a Researcher in a World of Instant Tools?</title>
-    <meta name="description" content="Explore the timeless value of research and critical thinking in a world dominated by automation and instant tools.">
-    <meta name="author" content="Kristina P. Sinaga">
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --background: #f9f9f9;
-            --text: #2d2d2d;
-            --blockquote: #7f8c8d;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV. Anugerah Plus — Fotokopi & Cetak Cepat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+/* ════════════════════════════════════════════
+   DESIGN TOKENS
+════════════════════════════════════════════ */
+:root {
+  /* Brand palette */
+  --brand-900: #1a0f2e;
+  --brand-800: #2d1b4e;
+  --brand-600: #5b3d8a;
+  --brand-400: #9b72cf;
+  --brand-200: #d4b8f0;
+  --brand-50:  #f5effe;
 
-        * {
-            box-sizing: border-box;
-        }
+  --gold-700:  #b45309;
+  --gold-500:  #d97706;
+  --gold-400:  #f59e0b;
+  --gold-100:  #fef3c7;
+  --gold-50:   #fffbeb;
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.8;
-            background-color: var(--background);
-            color: var(--text);
-            padding: 2rem 1rem;
-            margin: 0 auto;
-            max-width: 850px;
-        }
+  --green-700: #065f46;
+  --green-500: #10b981;
+  --green-100: #d1fae5;
 
-        h1 {
-            color: var(--primary);
-            font-size: 2rem;
-            margin-bottom: 1.2rem;
-        }
+  --red-700:   #991b1b;
+  --red-500:   #ef4444;
+  --red-100:   #fee2e2;
 
-        h2 {
-            color: var(--accent);
-            margin-top: 2rem;
-        }
+  --ink:       #0f0b1a;
+  --ink-700:   #2d2540;
+  --ink-500:   #6b5f80;
+  --ink-300:   #a99ebb;
+  --ink-100:   #e8e3f0;
+  --ink-50:    #f4f1f9;
+  --surface:   #ffffff;
+  --bg:        #f8f5ff;
 
-        p {
-            font-size: 1.05rem;
-            margin: 1rem 0;
-        }
+  /* Admin dark */
+  --adm-bg:      #0f0b1a;
+  --adm-surface: #1a1428;
+  --adm-border:  #2d2540;
+  --adm-text:    #e8e3f0;
+  --adm-muted:   #6b5f80;
 
-        ul {
-            margin: 1rem 0 1.5rem 1.5rem;
-        }
+  /* Spacing & shape */
+  --radius-sm: 6px;
+  --radius:    10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-sm: 0 1px 3px rgba(15,11,26,0.08), 0 1px 2px rgba(15,11,26,0.04);
+  --shadow:    0 4px 16px rgba(15,11,26,0.10), 0 1px 4px rgba(15,11,26,0.06);
+  --shadow-lg: 0 12px 40px rgba(15,11,26,0.15), 0 4px 12px rgba(15,11,26,0.08);
+}
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+/* ════════════════════════════════════════════
+   RESET & BASE
+════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        blockquote {
-            border-left: 4px solid var(--accent);
-            padding-left: 1rem;
-            color: var(--blockquote);
-            margin: 2rem 0;
-            font-style: italic;
-            background: #eef3f7;
-            padding: 1rem;
-            border-radius: 6px;
-        }
+html { scroll-behavior: smooth; }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-            body {
-                padding: 1rem;
-            }
-        }
-    </style>
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ════════════════════════════════════════════
+   VIEW ROUTING
+════════════════════════════════════════════ */
+.view { display: none; }
+.view.active { display: block; }
+
+/* ════════════════════════════════════════════
+   NAVIGATION
+════════════════════════════════════════════ */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ink-100);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo img { max-height: 52px; display: block; object-fit: contain; }
+
+.nav-actions { display: flex; gap: 0.625rem; align-items: center; }
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.5px solid var(--ink-100);
+  background: none;
+  color: var(--ink-700);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-btn:hover { border-color: var(--brand-600); color: var(--brand-600); }
+
+.nav-btn.primary {
+  background: var(--brand-800);
+  color: #fff;
+  border-color: var(--brand-800);
+}
+.nav-btn.primary:hover { background: var(--brand-900); border-color: var(--brand-900); }
+
+/* ════════════════════════════════════════════
+   BUTTONS
+════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.18s ease;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary {
+  background: var(--brand-800);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(45,27,78,0.35);
+}
+.btn-primary:hover {
+  background: var(--brand-900);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45,27,78,0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink-700);
+  border: 1.5px solid var(--ink-100);
+}
+.btn-secondary:hover { border-color: var(--brand-600); color: var(--brand-600); }
+
+.btn-gold {
+  background: var(--gold-500);
+  color: var(--ink);
+  box-shadow: 0 4px 14px rgba(217,119,6,0.35);
+}
+.btn-gold:hover {
+  background: var(--gold-700);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(180,83,9,0.4);
+}
+
+.btn-full { width: 100%; justify-content: center; padding: 1rem; }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.82rem; }
+
+/* ════════════════════════════════════════════
+   HOME — HERO
+════════════════════════════════════════════ */
+#view-home { background: var(--bg); }
+
+.hero {
+  padding: 5rem 2.5rem 4.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Subtle radial glow behind hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 55% at 50% 30%, rgba(155,114,207,0.13) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-700);
+  background: var(--gold-50);
+  border: 1px solid #fde68a;
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.75rem;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 900;
+  line-height: 1.07;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: var(--ink);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--brand-600);
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--ink-500);
+  line-height: 1.75;
+  max-width: 520px;
+  margin: 0 auto 2.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* ════════════════════════════════════════════
+   HOME — SECTIONS
+════════════════════════════════════════════ */
+.section-wrap {
+  max-width: 960px;
+  margin: 0 auto 5rem;
+  padding: 0 2.5rem;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brand-600);
+  margin-bottom: 2rem;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--ink-100), transparent);
+}
+
+/* ════════════════════════════════════════════
+   STEPS GRID
+════════════════════════════════════════════ */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.step-card {
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.step-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+.step-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-400), var(--gold-400));
+}
+
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--brand-200);
+  line-height: 1;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.step-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--ink); }
+.step-card p  { font-size: 0.83rem; color: var(--ink-500); line-height: 1.65; }
+
+/* ════════════════════════════════════════════
+   PRICING GRID
+════════════════════════════════════════════ */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.price-card {
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.price-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+.price-card-icon { font-size: 1.75rem; margin-bottom: 0.75rem; display: block; }
+.price-card h3   { font-size: 0.88rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
+
+.price-amount {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brand-800);
+}
+.price-unit {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--ink-300);
+}
+
+/* ════════════════════════════════════════════
+   SITE META (footer-like bar)
+════════════════════════════════════════════ */
+.site-meta {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--ink-500);
+  font-size: 0.82rem;
+  border-top: 1px solid var(--ink-100);
+  margin-top: 1rem;
+}
+.site-meta .inline-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-500);
+  font-size: 0.82rem;
+  text-decoration: underline;
+  font-family: inherit;
+  padding: 0;
+}
+.site-meta .inline-link:hover { color: var(--brand-600); }
+
+/* ════════════════════════════════════════════
+   ORDER FORM VIEW
+════════════════════════════════════════════ */
+#view-order {
+  background: linear-gradient(180deg, var(--brand-50) 0%, var(--bg) 100%);
+  min-height: 100vh;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem 6rem;
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+.form-subtitle { color: var(--ink-500); font-size: 0.9rem; margin-bottom: 2.5rem; line-height: 1.6; }
+
+.form-section {
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-section-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-600);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-section-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--brand-400), var(--gold-400));
+}
+
+/* ─── Fields ─── */
+.field { margin-bottom: 1rem; }
+.field:last-child { margin-bottom: 0; }
+
+.field label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--ink-700);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.7rem 0.95rem;
+  border: 1.5px solid var(--ink-100);
+  border-radius: var(--radius);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  background: var(--bg);
+  color: var(--ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--brand-400);
+  box-shadow: 0 0 0 3px rgba(155,114,207,0.15);
+  background: var(--surface);
+}
+
+.field textarea { resize: vertical; min-height: 90px; }
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+/* ─── Toggle radios ─── */
+.toggle-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.toggle-option { display: none; }
+
+.toggle-option + label {
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--ink-100);
+  border-radius: var(--radius);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--ink-500);
+  transition: all 0.15s ease;
+  background: var(--bg);
+  user-select: none;
+}
+
+.toggle-option:checked + label {
+  background: var(--brand-50);
+  color: var(--brand-800);
+  border-color: var(--brand-400);
+}
+
+/* ─── Drop zone ─── */
+.drop-zone {
+  border: 2px dashed var(--ink-100);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--bg);
+  position: relative;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+  border-color: var(--brand-400);
+  background: var(--brand-50);
+}
+
+.drop-zone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.drop-icon  { font-size: 2.5rem; margin-bottom: 0.75rem; display: block; }
+.drop-zone h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; color: var(--ink); }
+.drop-zone p  { font-size: 0.78rem; color: var(--ink-500); }
+
+.drive-actions { margin-top: 1rem; position: relative; z-index: 1; }
+.drive-actions .btn { font-size: 0.78rem; padding: 0.4rem 0.85rem; }
+
+.file-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.82rem;
+  box-shadow: var(--shadow-sm);
+}
+.file-item .file-name { flex: 1; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.file-item .file-size { color: var(--ink-300); font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; }
+.file-remove { background: none; border: none; cursor: pointer; color: var(--ink-300); font-size: 1rem; padding: 0 0.25rem; transition: color 0.15s; line-height: 1; }
+.file-remove:hover { color: var(--red-500); }
+
+/* ─── Price preview ─── */
+.price-preview {
+  background: linear-gradient(135deg, var(--brand-800), var(--brand-900));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 6px 24px rgba(45,27,78,0.3);
+}
+
+.price-label { font-size: 0.88rem; color: var(--brand-200); margin-bottom: 0.25rem; }
+.price-note  { font-size: 0.72rem; color: rgba(255,255,255,0.45); line-height: 1.5; max-width: 280px; }
+.price-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--gold-400);
+  white-space: nowrap;
+}
+
+/* ─── Confirmation ─── */
+.confirm-box {
+  max-width: 520px;
+  margin: 5rem auto;
+  padding: 0 2.5rem;
+  text-align: center;
+}
+.confirm-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--green-100);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 1.5rem;
+}
+.confirm-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.confirm-box p { color: var(--ink-500); font-size: 0.9rem; margin-bottom: 2rem; line-height: 1.7; }
+
+.order-id-display {
+  background: var(--brand-50);
+  border: 1.5px solid var(--brand-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.order-id-display .label {
+  font-size: 0.72rem;
+  color: var(--ink-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+.order-id-display .id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--brand-800);
+}
+
+/* ════════════════════════════════════════════
+   STATUS VIEW
+════════════════════════════════════════════ */
+#view-status { background: var(--bg); min-height: 100vh; }
+
+.status-container { max-width: 580px; margin: 0 auto; padding: 3rem 2.5rem 6rem; }
+
+.lookup-form { display: flex; gap: 0.75rem; margin-bottom: 2rem; }
+.lookup-form input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--ink-100);
+  border-radius: var(--radius);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  background: var(--surface);
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.lookup-form input:focus {
+  border-color: var(--brand-400);
+  box-shadow: 0 0 0 3px rgba(155,114,207,0.15);
+}
+
+.status-card {
+  background: var(--surface);
+  border: 1px solid var(--ink-100);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.status-card-header {
+  background: linear-gradient(135deg, var(--brand-900), var(--brand-800));
+  color: #fff;
+  padding: 1.75rem;
+}
+.status-card-header .order-ref {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--brand-200);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.05em;
+}
+.status-card-header h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.status-card-body { padding: 1.75rem; }
+
+.status-timeline { margin-bottom: 1.75rem; }
+
+.timeline-step { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+
+.timeline-dot {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--ink-100);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: var(--bg);
+  font-weight: 600;
+}
+.timeline-dot.done   { background: var(--green-500); border-color: var(--green-500); color: #fff; }
+.timeline-dot.active { background: var(--gold-400);  border-color: var(--gold-400);  color: var(--ink); }
+
+.timeline-content h4 { font-size: 0.88rem; font-weight: 700; color: var(--ink); }
+.timeline-content p  { font-size: 0.78rem; color: var(--ink-500); margin-top: 0.15rem; }
+
+.status-summary {
+  border-top: 1px solid var(--ink-100);
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+}
+.status-summary span { color: var(--ink-500); }
+.status-summary strong { color: var(--ink); }
+
+#status-empty {
+  display: none;
+  text-align: center;
+  color: var(--ink-500);
+  padding: 2.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* ════════════════════════════════════════════
+   ADMIN LOGIN
+════════════════════════════════════════════ */
+#view-login { background: var(--adm-bg); min-height: 100vh; }
+
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(ellipse 60% 60% at 50% 40%, rgba(91,61,138,0.25) 0%, transparent 70%);
+}
+
+.login-box {
+  background: var(--adm-surface);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: var(--shadow-lg);
+}
+
+.login-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--adm-text);
+  margin-bottom: 0.35rem;
+}
+.login-box > p { color: var(--adm-muted); font-size: 0.85rem; margin-bottom: 2rem; }
+
+.login-field { margin-bottom: 1rem; }
+.login-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--adm-muted);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.login-field input {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  background: var(--adm-bg);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  color: var(--adm-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.login-field input:focus { border-color: var(--brand-400); }
+
+.login-error { color: #fc8181; font-size: 0.8rem; margin-bottom: 1rem; display: none; }
+
+.btn-login {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--gold-500);
+  color: var(--ink);
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.15s;
+  letter-spacing: 0.02em;
+}
+.btn-login:hover { background: var(--gold-700); color: #fff; }
+
+.login-hint {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  color: var(--adm-muted);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.03em;
+}
+
+/* ════════════════════════════════════════════
+   ADMIN PANEL
+════════════════════════════════════════════ */
+#view-admin { background: var(--adm-bg); color: var(--adm-text); min-height: 100vh; }
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--adm-border);
+  background: var(--adm-surface);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--adm-text);
+}
+.admin-logo img { max-height: 40px; object-fit: contain; }
+
+.admin-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  background: var(--gold-500);
+  color: var(--ink);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+}
+
+.admin-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.admin-nav-right span { font-size: 0.78rem; color: var(--adm-muted); }
+
+.admin-exit {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  background: none;
+  color: var(--adm-muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.admin-exit:hover { border-color: var(--adm-text); color: var(--adm-text); }
+
+.admin-body { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+
+/* ─── Stat cards ─── */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--adm-surface);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--adm-border);
+}
+.stat-card.accent-gold::before  { background: var(--gold-400); }
+.stat-card.accent-green::before { background: var(--green-500); }
+.stat-card.accent-brand::before { background: var(--brand-400); }
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--adm-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--adm-text);
+  line-height: 1;
+}
+.stat-card.accent-gold  .stat-value { color: var(--gold-400); }
+.stat-card.accent-green .stat-value { color: var(--green-500); }
+.stat-card.accent-brand .stat-value { color: var(--brand-400); }
+
+/* ─── Orders panel ─── */
+.orders-panel {
+  background: var(--adm-surface);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.orders-panel-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--adm-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.orders-panel-header h2 { font-size: 0.95rem; font-weight: 700; color: var(--adm-text); }
+
+.admin-search {
+  padding: 0.5rem 0.9rem;
+  background: var(--adm-bg);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  color: var(--adm-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.15s;
+}
+.admin-search:focus { border-color: var(--brand-400); }
+.admin-search::placeholder { color: var(--adm-muted); }
+
+.filter-bar {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--adm-border);
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--adm-border);
+  background: none;
+  color: var(--adm-muted);
+  transition: all 0.15s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.filter-btn:hover,
+.filter-btn.active { background: var(--gold-500); color: var(--ink); border-color: var(--gold-500); }
+
+table { width: 100%; border-collapse: collapse; }
+thead tr { border-bottom: 1px solid var(--adm-border); }
+thead th {
+  padding: 0.75rem 1.25rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--adm-muted);
+}
+tbody tr {
+  border-bottom: 1px solid var(--adm-border);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: rgba(155,114,207,0.06); }
+tbody td {
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  color: var(--adm-text);
+  vertical-align: middle;
+}
+
+.td-mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--adm-muted); }
+.td-sub  { color: var(--adm-muted); font-size: 0.75rem; }
+
+/* ─── Status pills ─── */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'JetBrains Mono', monospace;
+}
+.status-pill::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+.pill-received   { background: rgba(107,95,128,0.2);  color: #a99ebb; }
+.pill-processing { background: rgba(217,119,6,0.15);  color: var(--gold-400); }
+.pill-ready      { background: rgba(16,185,129,0.15); color: var(--green-500); }
+.pill-completed  { background: rgba(45,37,64,0.6);    color: var(--adm-muted); }
+.pill-cancelled  { background: rgba(239,68,68,0.12);  color: #fc8181; }
+
+/* ─── Modal ─── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15,11,26,0.75);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+}
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: var(--adm-surface);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 660px;
+  margin: auto;
+  animation: modalIn 0.2s ease;
+  box-shadow: var(--shadow-lg);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--adm-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal-header h3 { font-size: 1rem; font-weight: 700; color: var(--adm-text); }
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--adm-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  transition: all 0.15s;
+  line-height: 1;
+}
+.modal-close:hover { background: rgba(255,255,255,0.08); color: var(--adm-text); }
+
+.modal-body { padding: 1.5rem; }
+
+.modal-section-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--adm-muted);
+  margin: 1.25rem 0 0.75rem;
+}
+.modal-section-title:first-child { margin-top: 0; }
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--adm-border);
+  font-size: 0.85rem;
+  gap: 1rem;
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-row .key { color: var(--adm-muted); white-space: nowrap; }
+.detail-row .val { font-weight: 600; color: var(--adm-text); text-align: right; }
+.detail-row .val.highlight { color: var(--gold-400); font-family: 'JetBrains Mono', monospace; }
+
+.files-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.file-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--adm-bg);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  font-size: 0.82rem;
+  color: var(--adm-text);
+}
+.file-entry .file-icon { font-size: 1.1rem; }
+.file-entry .fname     { flex: 1; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.file-entry .fsize     { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--adm-muted); white-space: nowrap; }
+
+.modal-notes {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--adm-bg);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  color: var(--adm-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  resize: vertical;
+  min-height: 80px;
+  outline: none;
+  margin-bottom: 1rem;
+  transition: border-color 0.15s;
+}
+.modal-notes:focus { border-color: var(--brand-400); }
+.modal-notes::placeholder { color: var(--adm-muted); }
+
+.modal-status-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+
+.modal-status-select {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  background: var(--adm-bg);
+  border: 1px solid var(--adm-border);
+  border-radius: var(--radius);
+  color: var(--adm-text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.modal-status-select:focus { border-color: var(--gold-400); }
+
+.btn-save {
+  padding: 0.6rem 1.25rem;
+  background: var(--gold-500);
+  color: var(--ink);
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-save:hover { background: var(--gold-700); color: #fff; }
+
+/* ─── Empty state ─── */
+.empty-state { padding: 3rem; text-align: center; color: var(--adm-muted); font-size: 0.85rem; }
+
+/* ════════════════════════════════════════════
+   TOAST
+════════════════════════════════════════════ */
+.toast {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.875rem 1.25rem;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 999;
+  display: none;
+  box-shadow: var(--shadow-lg);
+  border-left: 3px solid var(--gold-400);
+  max-width: 320px;
+}
+.toast.show { display: block; animation: toastIn 0.2s ease; }
+@keyframes toastIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.toast.error { border-left-color: var(--red-500); }
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════ */
+@media (max-width: 700px) {
+  nav { padding: 0.875rem 1.25rem; }
+  .logo img { max-height: 38px; }
+  .hero { padding: 3rem 1.25rem 2.5rem; }
+  .section-wrap { padding: 0 1.25rem; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .admin-stats { grid-template-columns: 1fr 1fr; }
+  .field-row { grid-template-columns: 1fr; }
+  .form-container { padding: 2rem 1.25rem 4rem; }
+  .status-container { padding: 2rem 1.25rem 4rem; }
+  .admin-body { padding: 1.25rem; }
+  .modal { border-radius: var(--radius-lg); }
+  .price-preview { flex-direction: column; align-items: flex-start; }
+  .admin-stats { grid-template-columns: 1fr 1fr; }
+  thead th:nth-child(3),
+  tbody td:nth-child(3) { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.2rem; }
+  .admin-stats { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; max-width: 280px; justify-content: center; }
+}
+</style>
 </head>
 <body>
 
-<h1>🧠 Why Be a Researcher in a World Where Machines Can Do Everything in a Second?</h1>
+<!-- ═══════════════════════════════════════════
+     VIEW: HOME
+═══════════════════════════════════════════ -->
+<div id="view-home" class="view active">
 
+  <nav>
+    <a class="logo" href="#">
+      <img src="https://anugerahplus.github.io/assets/images/AP_IMG_0429.PNG" alt="CV. Anugerah Plus" />
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="showView('view-status')">🔍 Lacak Pesanan</button>
+      <button class="nav-btn primary" onclick="showView('view-order')">📦 Pesan Sekarang</button>
+    </div>
+  </nav>
 
-<p>In a world where artificial intelligence can simulate data, generate visuals, or summarize research papers in seconds, it’s only natural to ask questions about the value of human thought in research.</p>
-<p>This post begins with a provocative question that emerged during a real conversation between a researcher and an AI assistant — a question that captures both awe and concern about the speed of automation:</p>
-<p><strong>“If you can do anything in a second, what’s the point of being a researcher?”</strong></p>
+  <div class="hero">
+    <div class="hero-badge">📄 Fotokopi · Cetak Dokumen · Pas Foto</div>
+    <h1>Cetak Cepat,<br/>Hasil <em>Memuaskan</em></h1>
+    <p class="hero-desc">Unggah dokumen Anda di sini. Kami tangani sisanya — siap untuk diambil sesuai keinginan Anda. Cepat, terjangkau, dan tanpa ribet.</p>
+    <div class="hero-actions">
+      <button class="btn btn-primary" onclick="showView('view-order')">📤 Unggah &amp; Pesan</button>
+      <button class="btn btn-secondary" onclick="showView('view-status')">🔍 Lacak Pesanan</button>
+    </div>
+  </div>
 
-<p>That question hits harder than most philosophical essays — and it’s valid.</p>
+  <div class="section-wrap">
+    <div class="section-label">Cara Pemesanan</div>
+    <div class="steps-grid" id="how-steps"></div>
+  </div>
 
-<p>In a world where machines can simulate data, solve equations, and draft paragraphs in seconds, the role of a researcher might seem redundant. But here’s the truth:</p>
+  <div class="section-wrap">
+    <div class="section-label">Daftar Harga Layanan</div>
+    <div class="pricing-grid" id="pricing-cards"></div>
+  </div>
 
-<h2>1. 🔍 Doing is Not the Same as Understanding</h2>
-<p>Machines can execute — but they don’t understand.<br>
-They can generate results — but they don’t know what matters.<br>
-Research is not about output. It’s about insight.</p>
+  <div class="site-meta">
+    🕐 Senin – Sabtu, 08.00–21.00 &nbsp;|&nbsp; 📍 Jl. Pdt. Justin Sihombing No. 34, Pematangsiantar
+    &nbsp;|&nbsp;
+    <button onclick="goAdmin()" class="inline-link">Login Pemilik</button>
+  </div>
+</div>
 
-<p>Only a human researcher can ask:</p>
-<ul>
-    <li><em>Why is this question important?</em></li>
-    <li><em>What happens if we challenge this assumption?</em></li>
-    <li><em>Does this data change how we understand the world?</em></li>
-</ul>
+<!-- ═══════════════════════════════════════════
+     VIEW: ORDER FORM
+═══════════════════════════════════════════ -->
+<div id="view-order" class="view">
 
-<h2>2. 🧭 Tools Are Fast — But Direction Still Needs a Mind</h2>
-<p>AI can follow paths, but it doesn’t choose which path is worth walking.<br>
-A researcher defines the mission. The machine just assists with the mileage.</p>
+  <nav>
+    <a class="logo" href="#">
+      <img src="https://anugerahplus.github.io/assets/images/AP_IMG_0429.PNG" alt="CV. Anugerah Plus" />
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="showView('view-home')">← Beranda</button>
+      <button class="nav-btn" onclick="showView('view-status')">🔍 Lacak Pesanan</button>
+    </div>
+  </nav>
 
-<p>Without researchers, we’d just answer meaningless questions faster.</p>
+  <div class="form-container" id="order-form-wrap">
+    <div class="form-title">Formulir Pemesanan</div>
+    <div class="form-subtitle">Isi semua informasi di bawah lalu klik <strong>Lakukan Pemesanan</strong>. Kami akan memproses pesanan Anda segera.</div>
 
-<h2>3. 🎨 Creativity and Judgment Aren’t Automatable</h2>
-<p>True research isn’t repeating what's known.<br>
-It’s synthesizing, reframing, and innovating.<br>
-It’s standing in uncertainty and having the mental clarity to carve direction through it.</p>
+    <!-- Contact Info -->
+    <div class="form-section">
+      <div class="form-section-title">Informasi Kontak</div>
+      <div class="field-row">
+        <div class="field">
+          <label>Nama Lengkap *</label>
+          <input type="text" id="f-name" placeholder="cth. Budi Santoso" />
+        </div>
+        <div class="field">
+          <label>Nomor WhatsApp *</label>
+          <input type="tel" id="f-phone" placeholder="08xx-xxxx-xxxx" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Alamat Email <span style="font-weight:400;color:var(--ink-300)">(opsional)</span></label>
+        <input type="email" id="f-email" placeholder="budi@email.com" />
+      </div>
+    </div>
 
-<p>No machine can replicate that — because it’s not in the manual.</p>
+    <!-- File Upload -->
+    <div class="form-section">
+      <div class="form-section-title">Unggah Dokumen</div>
+      <div class="drop-zone" id="drop-zone">
+        <input type="file" id="file-input" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,.xlsx,.xls,.ppt,.pptx" />
+        <span class="drop-icon">📂</span>
+        <h4>Seret &amp; lepas file, atau klik untuk memilih</h4>
+        <p>PDF, Word, JPG, PNG, Excel, PPT — maks 5 file, masing-masing hingga 10 MB</p>
+        <div class="drive-actions">
+          <button type="button" id="pick-drive" class="btn btn-secondary btn-sm" style="margin-top:0.75rem;position:relative;z-index:2;">
+            🗂️ Pilih dari Google Drive
+          </button>
+          <input type="hidden" id="drive-file-ids" name="drive_file_ids" value="" />
+        </div>
+      </div>
+      <div class="file-list" id="file-list"></div>
+    </div>
 
-<h2>4. ⏳ Effort Still Matters — But Wasted Effort Doesn’t</h2>
-<p>The point of automation is not to replace researchers,<br>
-but to free them from repetitive tasks so they can think deeper.<br>
-It’s not about doing less — it’s about doing better.</p>
+    <!-- Print Specs -->
+    <div class="form-section">
+      <div class="form-section-title">Spesifikasi Cetak</div>
+      <div class="field">
+        <label>Jumlah Salinan</label>
+        <input type="number" id="f-copies" value="1" min="0" max="999" oninput="calcPrice()" />
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Mode Warna</label>
+          <div class="toggle-group">
+            <input type="radio" name="color" id="r-bw"    class="toggle-option" value="bw"    checked onchange="calcPrice()" />
+            <label for="r-bw">Hitam Putih</label>
+            <input type="radio" name="color" id="r-color" class="toggle-option" value="color"         onchange="calcPrice()" />
+            <label for="r-color">Warna</label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Sisi Cetak</label>
+          <div class="toggle-group">
+            <input type="radio" name="sides" id="r-single" class="toggle-option" value="single" checked onchange="calcPrice()" />
+            <label for="r-single">Satu Sisi</label>
+            <input type="radio" name="sides" id="r-double" class="toggle-option" value="double"        onchange="calcPrice()" />
+            <label for="r-double">Bolak-balik</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Ukuran Kertas</label>
+          <select id="f-size">
+            <option value="A4">A4</option>
+            <option value="F4">F4 (Folio)</option>
+            <option value="Letter">Letter</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Jilid</label>
+          <div class="toggle-group">
+            <input type="radio" name="bind" id="r-nobind" class="toggle-option" value="no"  checked onchange="calcPrice()" />
+            <label for="r-nobind">Tidak</label>
+            <input type="radio" name="bind" id="r-bind"   class="toggle-option" value="yes"         onchange="calcPrice()" />
+            <label for="r-bind">Ya (+Rp 5.000/dokumen)</label>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h2>💡 Final Thought</h2>
-<blockquote>
-    <strong>“The point of being a researcher is not to do what machines can automate — it’s to do what machines still cannot: ask why it matters, and what it means.”</strong>
-</blockquote>
+    <!-- Photo Printing -->
+    <div class="form-section">
+      <div class="form-section-title">Cetak Foto / Pas Foto <span style="font-weight:400;color:var(--ink-300);text-transform:none;letter-spacing:0;">(Opsional)</span></div>
 
-<p>In this era of instant execution, <em>meaning</em> is the new scarcity.<br>
-And that’s where real research begins.</p>
+      <div class="field">
+        <label style="font-weight:700;">Foto Hitam Putih</label>
+        <div class="field-row" style="margin-top:0.5rem;">
+          <div class="field">
+            <label>Jumlah Foto B&amp;W</label>
+            <input type="number" id="f-photo-bw-qty" value="0" min="0" max="999" oninput="calcPrice()" />
+          </div>
+          <div class="field">
+            <label>Ganti Background</label>
+            <div class="toggle-group">
+              <input type="radio" name="photo-bw-bg" id="r-photo-bw-nobg" class="toggle-option" value="no"  checked onchange="calcPrice()" />
+              <label for="r-photo-bw-nobg">Tidak</label>
+              <input type="radio" name="photo-bw-bg" id="r-photo-bw-bg"   class="toggle-option" value="yes"         onchange="calcPrice()" />
+              <label for="r-photo-bw-bg">Ya (+Rp 1.500/foto)</label>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="field">
+        <label style="font-weight:700;">Foto Warna</label>
+        <div class="field-row" style="margin-top:0.5rem;">
+          <div class="field">
+            <label>Jumlah Foto Warna</label>
+            <input type="number" id="f-photo-color-qty" value="0" min="0" max="999" oninput="calcPrice()" />
+          </div>
+          <div class="field">
+            <label>Ganti Background</label>
+            <div class="toggle-group">
+              <input type="radio" name="photo-color-bg" id="r-photo-color-nobg" class="toggle-option" value="no"  checked onchange="calcPrice()" />
+              <label for="r-photo-color-nobg">Tidak</label>
+              <input type="radio" name="photo-color-bg" id="r-photo-color-bg"   class="toggle-option" value="yes"         onchange="calcPrice()" />
+              <label for="r-photo-color-bg">Ya (+Rp 1.500/foto)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<h2>🧪 Bonus Section: The Intelligence of Imperfection</h2>
-<p>Let’s take a detour — a real-life example of how even the “wrong” input can create the right kind of impact.</p>
+    <!-- Document Typing -->
+    <div class="form-section">
+      <div class="form-section-title">Ketik Dokumen <span style="font-weight:400;color:var(--ink-300);text-transform:none;letter-spacing:0;">(Opsional)</span></div>
+      <div class="field-row">
+        <div class="field">
+          <label>Jumlah Lembar</label>
+          <input type="number" id="doc-typing-qty" value="0" min="0" max="999" oninput="calcPrice()" />
+        </div>
+        <div class="field">
+          <label>Butuh jasa pengetikan?</label>
+          <div class="toggle-group">
+            <input type="radio" name="doc-typing" id="doc-zerotyping" class="toggle-option" value="no"  checked onchange="calcPrice()" />
+            <label for="doc-zerotyping">Tidak</label>
+            <input type="radio" name="doc-typing" id="doc-typing"     class="toggle-option" value="yes"         onchange="calcPrice()" />
+            <label for="doc-typing">Ya (+Rp 10.000/lembar)</label>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<blockquote>
-    <strong>“Turning ‘wrong’ into raw material. Not just correcting — but creating.”</strong>
-</blockquote>
+    <!-- Special Requests -->
+    <div class="form-section">
+      <div class="form-section-title">Catatan / Permintaan Khusus</div>
+      <div class="field">
+        <textarea id="f-notes" placeholder="cth. cetak di kertas tebal, warna background tertentu, kualitas foto tinggi, dll."></textarea>
+      </div>
+    </div>
 
-<p>Sometimes what looks like a mistake is actually a doorway — not to failure, but to discovery. Whether it’s a misinterpreted dataset, a confusing question, or a misplaced command in code, every oddity can carry insight if you’re willing to look deeper.</p>
+    <!-- Price Preview -->
+    <div class="price-preview">
+      <div>
+        <div class="price-label">Estimasi Harga</div>
+        <div class="price-note">Berdasarkan pilihan Anda. Harga final dapat berubah setelah kami meninjau pesanan. Kami akan menghubungi Anda jika ada pertanyaan.</div>
+      </div>
+      <div class="price-value" id="price-display">Rp 0</div>
+    </div>
 
-<p>This isn’t damage control. It’s transformation.</p>
+    <button class="btn btn-primary btn-full" onclick="submitOrder()">
+      Lakukan Pemesanan →
+    </button>
+  </div>
 
-<p><strong>Here’s the secret:</strong></p>
-<ul>
-    <li>You don’t need perfection to be brilliant.</li>
-    <li>You don’t need clarity to begin — clarity often comes after.</li>
-    <li>You don’t need to fix everything — sometimes, you can remix it.</li>
-</ul>
+  <!-- Confirmation screen -->
+  <div class="confirm-box" id="order-confirm" style="display:none;">
+    <div class="confirm-icon">✅</div>
+    <h2>Pesanan Diterima!</h2>
+    <p>Dokumen Anda telah berhasil dikirim. Simpan ID Pesanan di bawah untuk melacak status cetak Anda.</p>
+    <div class="order-id-display">
+      <div class="label">ID Pesanan Anda</div>
+      <div class="id" id="confirm-order-id">—</div>
+    </div>
+    <button class="btn btn-primary btn-full" style="margin-bottom:0.75rem;" onclick="showView('view-status')">
+      🔍 Lacak Pesanan Saya
+    </button>
+    <button class="btn btn-secondary btn-full" onclick="newOrder()">
+      ＋ Buat Pesanan Baru
+    </button>
+  </div>
 
-<p>That’s what researchers — real researchers — do. We don’t just fix mistakes. We <em>use</em> them. We reframe them. We say:</p>
+  <div class="site-meta">
+    🕐 Senin – Sabtu, 08.00–21.00 &nbsp;|&nbsp; 📍 Jl. Pdt. Justin Sihombing No. 34, Pematangsiantar
+  </div>
+</div>
 
-<blockquote>
-    <strong>“Even when clowns throw confusion, I’ll make a diamond out of noise.” 💎</strong>
-</blockquote>
+<!-- ═══════════════════════════════════════════
+     VIEW: STATUS TRACKING
+═══════════════════════════════════════════ -->
+<div id="view-status" class="view">
 
-<p>So the next time something feels like a misstep, pause. It might just be your next breakthrough trying to enter the room in disguise.</p>
+  <nav>
+    <a class="logo" href="#">
+      <img src="https://anugerahplus.github.io/assets/images/AP_IMG_0429.PNG" alt="CV. Anugerah Plus" />
+    </a>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="showView('view-home')">← Beranda</button>
+      <button class="nav-btn primary" onclick="showView('view-order')">📦 Pesan Sekarang</button>
+    </div>
+  </nav>
 
+  <div class="status-container">
+    <div class="form-title">Lacak Pesanan</div>
+    <div class="form-subtitle" style="margin-bottom:1.75rem;">Masukkan ID Pesanan Anda untuk melihat status terkini.</div>
+
+    <div class="lookup-form">
+      <input type="text" id="lookup-input" placeholder="cth. COPY-2026-00001" />
+      <button class="btn btn-primary" onclick="lookupOrder()">Cari</button>
+    </div>
+
+    <div id="status-result"></div>
+    <div id="status-empty">Tidak ditemukan pesanan dengan ID tersebut.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     VIEW: ADMIN LOGIN
+═══════════════════════════════════════════ -->
+<div id="view-login" class="view">
+  <div class="login-wrap">
+    <div class="login-box">
+      <h2>Owner Portal</h2>
+      <p>Masuk untuk mengelola dan melihat pesanan pelanggan.</p>
+      <div class="login-field">
+        <label>Username</label>
+        <input type="text" id="login-user" placeholder="admin" autocomplete="username" />
+      </div>
+      <div class="login-field">
+        <label>Password</label>
+        <input type="password" id="login-pass" placeholder="••••••••" autocomplete="current-password"
+               onkeydown="if(event.key==='Enter')doLogin()" />
+      </div>
+      <div class="login-error" id="login-error">Username atau password salah.</div>
+      <button class="btn-login" onclick="doLogin()">Masuk →</button>
+      <div class="login-hint">Demo: admin / swiftcopy123</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     VIEW: ADMIN PANEL
+═══════════════════════════════════════════ -->
+<div id="view-admin" class="view">
+
+  <div class="admin-nav">
+    <div class="admin-logo">
+      <img src="https://anugerahplus.github.io/assets/images/AP_IMG_0429.PNG" alt="CV. Anugerah Plus" />
+      <span class="admin-badge">ADMIN</span>
+    </div>
+    <div class="admin-nav-right">
+      <span>Selamat datang, Pemilik</span>
+      <button class="admin-exit" onclick="showView('view-home')">← Keluar ke Situs</button>
+    </div>
+  </div>
+
+  <div class="admin-body">
+    <div class="admin-stats" id="admin-stats"></div>
+
+    <div class="orders-panel">
+      <div class="orders-panel-header">
+        <h2>Semua Pesanan</h2>
+        <input class="admin-search" type="text" placeholder="Cari nama atau ID pesanan…" id="admin-search" oninput="renderTable()" />
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="setFilter('all',this)">Semua</button>
+        <button class="filter-btn" onclick="setFilter('received',this)">Diterima</button>
+        <button class="filter-btn" onclick="setFilter('processing',this)">Diproses</button>
+        <button class="filter-btn" onclick="setFilter('ready',this)">Siap Ambil</button>
+        <button class="filter-btn" onclick="setFilter('completed',this)">Selesai</button>
+        <button class="filter-btn" onclick="setFilter('cancelled',this)">Dibatalkan</button>
+      </div>
+      <div id="orders-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Pesanan</th>
+              <th>Pelanggan</th>
+              <th>File</th>
+              <th>Spesifikasi</th>
+              <th>Est. Harga</th>
+              <th>Status</th>
+              <th>Tanggal</th>
+            </tr>
+          </thead>
+          <tbody id="orders-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     ORDER DETAIL MODAL
+═══════════════════════════════════════════ -->
+<div class="modal-overlay" id="order-modal" onclick="closeModalOutside(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">Detail Pesanan</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- Google Drive Picker -->
+<script src="https://apis.google.com/js/api.js"></script>
+
+<script>
+/* ════════════════════════════════════════════
+   CONSTANTS & PRICING CONFIG
+════════════════════════════════════════════ */
+const PRICING = {
+  bwSingle:      250,
+  bwDouble:      500,
+  colorSingle:  1500,
+  colorDouble:  3000,
+  binding:      5000,
+  photoBw:      2500,
+  photoColor:   3000,
+  photoBgFee:   1500,
+  docTyping:   10000,
+};
+
+const ORDER_STATUSES = ['received','processing','ready','completed'];
+
+const STATUS_LABELS = {
+  received:   'Diterima',
+  processing: 'Diproses',
+  ready:      'Siap Ambil',
+  completed:  'Selesai',
+  cancelled:  'Dibatalkan',
+};
+
+const TIMELINE_STEPS = [
+  { key: 'received',   label: 'Pesanan Diterima',       desc: 'File Anda telah berhasil dikirim.' },
+  { key: 'processing', label: 'Sedang Diproses/Cetak',  desc: 'Kami sedang mencetak dokumen Anda.' },
+  { key: 'ready',      label: 'Siap untuk Diambil',     desc: 'Cetakan Anda sudah siap. Silakan diambil!' },
+  { key: 'completed',  label: 'Selesai',                desc: 'Pesanan berhasil diambil.' },
+];
+
+/* ════════════════════════════════════════════
+   DATA STORE
+════════════════════════════════════════════ */
+let orders = JSON.parse(localStorage.getItem('ap_orders') || '[]');
+let currentFilter = 'all';
+let uploadedFiles = [];
+let currentOrderIdx = null;
+
+function saveOrders() {
+  localStorage.setItem('ap_orders', JSON.stringify(orders));
+}
+
+// Seed demo data
+if (orders.length === 0) {
+  orders = [
+    {
+      id: 'COPY-2026-00001', name: 'Budi Santoso', phone: '08123456789', email: 'budi@email.com',
+      files: [{ name: 'Thesis_Chapter1.pdf', size: '2.1 MB' }, { name: 'Cover_Page.docx', size: '340 KB' }],
+      copies: 3, color: 'bw', sides: 'double', size: 'A4', binding: 'yes',
+      photoBwQty: 0, photoBwBg: 'no', photoColorQty: 0, photoColorBg: 'no',
+      notes: 'Tolong cetak halaman 1–45 saja.',
+      price: 'Rp 8.150', docTotal: 3150, photoTotal: 0,
+      status: 'processing', ownerNotes: 'Sudah konfirmasi ke pelanggan — double-sided.',
+      date: '2026-05-03 09:14'
+    },
+    {
+      id: 'COPY-2026-00002', name: 'Dewi Rahayu', phone: '08987654321', email: 'dewi@email.com',
+      files: [{ name: 'Presentation_Final.pdf', size: '5.4 MB' }],
+      copies: 1, color: 'color', sides: 'single', size: 'A4', binding: 'no',
+      photoBwQty: 0, photoBwBg: 'no', photoColorQty: 0, photoColorBg: 'no',
+      notes: '', price: 'Rp 1.500', docTotal: 1500, photoTotal: 0,
+      status: 'ready', ownerNotes: '', date: '2026-05-03 11:02'
+    },
+    {
+      id: 'COPY-2026-00003', name: 'Ahmad Fauzi', phone: '08567891234', email: '',
+      files: [{ name: 'Contract_Draft.pdf', size: '890 KB' }],
+      copies: 5, color: 'bw', sides: 'single', size: 'F4', binding: 'no',
+      photoBwQty: 2, photoBwBg: 'yes', photoColorQty: 0, photoColorBg: 'no',
+      notes: 'Dibutuhkan segera!',
+      price: 'Rp 9.250', docTotal: 1250, photoTotal: 8000,
+      status: 'received', ownerNotes: '', date: '2026-05-04 08:45'
+    },
+    {
+      id: 'COPY-2026-00004', name: 'Siti Nurhaliza', phone: '08111222333', email: 'siti@mail.com',
+      files: [{ name: 'Report_Q1_2026.pdf', size: '1.2 MB' }, { name: 'Appendix.pdf', size: '450 KB' }],
+      copies: 2, color: 'bw', sides: 'double', size: 'A4', binding: 'yes',
+      photoBwQty: 0, photoBwBg: 'no', photoColorQty: 0, photoColorBg: 'no',
+      notes: '', price: 'Rp 12.000', docTotal: 2000, photoTotal: 0,
+      status: 'completed', ownerNotes: 'Diambil oleh pelanggan.', date: '2026-05-02 14:30'
+    }
+  ];
+  saveOrders();
+}
+
+/* ════════════════════════════════════════════
+   VIEW ROUTING
+════════════════════════════════════════════ */
+function showView(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (id === 'view-admin') renderAdmin();
+}
+
+function goAdmin() { showView('view-login'); }
+
+/* ════════════════════════════════════════════
+   AUTH
+════════════════════════════════════════════ */
+function doLogin() {
+  const u   = document.getElementById('login-user').value.trim();
+  const p   = document.getElementById('login-pass').value.trim();
+  const err = document.getElementById('login-error');
+  if (u === 'admin' && p === 'swiftcopy123') {
+    err.style.display = 'none';
+    showView('view-admin');
+  } else {
+    err.style.display = 'block';
+  }
+}
+
+/* ════════════════════════════════════════════
+   FILE HANDLING
+════════════════════════════════════════════ */
+const dropZone  = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+
+dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', ()  => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragover');
+  addFiles(e.dataTransfer.files);
+});
+fileInput.addEventListener('change', () => { addFiles(fileInput.files); fileInput.value = ''; });
+
+function formatSize(bytes) {
+  if (bytes < 1024)          return bytes + ' B';
+  if (bytes < 1024 * 1024)   return (bytes / 1024).toFixed(0) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+}
+
+const MAX_FILES      = 5;
+const MAX_FILE_BYTES = 10 * 1024 * 1024;
+
+function addFiles(fileList) {
+  for (const f of fileList) {
+    if (uploadedFiles.length >= MAX_FILES) { showToast(`Maks ${MAX_FILES} file diizinkan`, 'error'); break; }
+    if (f.size > MAX_FILE_BYTES)           { showToast(`${f.name} melebihi 10 MB`, 'error'); continue; }
+    if (!uploadedFiles.find(x => x.name === f.name)) {
+      uploadedFiles.push({ name: f.name, size: formatSize(f.size), raw: f });
+    }
+  }
+  renderFileList();
+  calcPrice();
+}
+
+function removeFile(i) {
+  uploadedFiles.splice(i, 1);
+  renderFileList();
+  calcPrice();
+}
+
+function renderFileList() {
+  const list = document.getElementById('file-list');
+  list.innerHTML = uploadedFiles.map((f, i) => `
+    <div class="file-item">
+      <span>📄</span>
+      <span class="file-name">${escHtml(f.name)}</span>
+      <span class="file-size">${f.size}</span>
+      <button class="file-remove" onclick="removeFile(${i})" title="Hapus">✕</button>
+    </div>
+  `).join('');
+}
+
+/* ════════════════════════════════════════════
+   GOOGLE DRIVE PICKER
+════════════════════════════════════════════ */
+const GOOGLE_API_KEY   = 'AIzaSyBF8hZit92v8O5LjxBN4z1SvCPT0Bmzacs';
+const GOOGLE_CLIENT_ID = '128469532869-6t8bn1htuid5k84hkof31obbtsk2f21q.apps.googleusercontent.com';
+let oauthToken;
+
+function onApiLoad() {
+  gapi.load('auth', { callback: () => {} });
+  gapi.load('picker', { callback: () => {} });
+}
+
+document.getElementById('pick-drive').addEventListener('click', () => {
+  gapi.auth.authorize({
+    client_id: GOOGLE_CLIENT_ID,
+    scope: ['https://www.googleapis.com/auth/drive.readonly'],
+    immediate: false
+  }, authResult => {
+    if (authResult && !authResult.error) {
+      oauthToken = authResult.access_token;
+      const view = new google.picker.DocsView(google.picker.ViewId.DOCS)
+        .setIncludeFolders(true).setSelectFolderEnabled(false);
+      const picker = new google.picker.PickerBuilder()
+        .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
+        .setOAuthToken(oauthToken)
+        .setDeveloperKey(GOOGLE_API_KEY)
+        .addView(view)
+        .setCallback(data => {
+          if (data.action === google.picker.Action.PICKED) {
+            const hidden = document.getElementById('drive-file-ids');
+            data.docs.forEach(file => {
+              hidden.value = hidden.value ? hidden.value + ',' + file.id : file.id;
+              addDriveFileToList(file);
+            });
+          }
+        })
+        .build();
+      picker.setVisible(true);
+    } else {
+      showToast('Otorisasi Google gagal.', 'error');
+    }
+  });
+});
+
+function addDriveFileToList(file) {
+  if (uploadedFiles.length >= MAX_FILES) { showToast(`Maks ${MAX_FILES} file diizinkan`, 'error'); return; }
+  if (!uploadedFiles.find(x => x.name === file.name)) {
+    uploadedFiles.push({ name: file.name, size: 'Drive', raw: null });
+    renderFileList();
+  }
+}
+
+window.addEventListener('load', () => { if (window.gapi) onApiLoad(); });
+
+/* ════════════════════════════════════════════
+   PRICE CALCULATOR
+════════════════════════════════════════════ */
+function getVal(id) { return parseInt(document.getElementById(id)?.value) || 0; }
+function getRadio(name) { return document.querySelector(`input[name="${name}"]:checked`)?.value; }
+
+function calcDocTotal(files, copies, color, sides, binding) {
+  if (!files || !copies) return 0;
+  const perPage = color === 'color'
+    ? (sides === 'double' ? PRICING.colorDouble : PRICING.colorSingle)
+    : (sides === 'double' ? PRICING.bwDouble    : PRICING.bwSingle);
+  let total = files * copies * perPage;
+  if (binding === 'yes') total += PRICING.binding * files;
+  return total;
+}
+
+function calcPrice() {
+  const copies  = getVal('f-copies');
+  const color   = getRadio('color')   || 'bw';
+  const sides   = getRadio('sides')   || 'single';
+  const binding = getRadio('bind')    || 'no';
+  const files   = uploadedFiles.length || 1;
+
+  const docTotal = calcDocTotal(files, copies, color, sides, binding);
+
+  const photoBwQty  = getVal('f-photo-bw-qty');
+  const photoBwBg   = getRadio('photo-bw-bg') || 'no';
+  const photoBwTotal = photoBwQty > 0
+    ? photoBwQty * PRICING.photoBw + (photoBwBg === 'yes' ? photoBwQty * PRICING.photoBgFee : 0)
+    : 0;
+
+  const photoColorQty  = getVal('f-photo-color-qty');
+  const photoColorBg   = getRadio('photo-color-bg') || 'no';
+  const photoColorTotal = photoColorQty > 0
+    ? photoColorQty * PRICING.photoColor + (photoColorBg === 'yes' ? photoColorQty * PRICING.photoBgFee : 0)
+    : 0;
+
+  const docTypingQty  = getVal('doc-typing-qty');
+  const docTypingTotal = docTypingQty > 0 ? docTypingQty * PRICING.docTyping : 0;
+
+  const total = docTotal + photoBwTotal + photoColorTotal + docTypingTotal;
+  const display = document.getElementById('price-display');
+  if (display) display.textContent = 'Rp ' + total.toLocaleString('id-ID');
+}
+
+/* ════════════════════════════════════════════
+   ORDER SUBMISSION
+════════════════════════════════════════════ */
+function submitOrder() {
+  const name  = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+
+  if (!name || !phone) { showToast('Isi Nama & Nomor WhatsApp Anda', 'error'); return; }
+  if (uploadedFiles.length === 0) { showToast('Unggah setidaknya satu file', 'error'); return; }
+
+  const copies   = getVal('f-copies') || 1;
+  const color    = getRadio('color')   || 'bw';
+  const sides    = getRadio('sides')   || 'single';
+  const binding  = getRadio('bind')    || 'no';
+  const files    = uploadedFiles.length;
+
+  const docTotal = calcDocTotal(files, copies, color, sides, binding);
+
+  const photoBwQty  = getVal('f-photo-bw-qty');
+  const photoBwBg   = getRadio('photo-bw-bg') || 'no';
+  const photoBwTotal = photoBwQty > 0
+    ? photoBwQty * PRICING.photoBw + (photoBwBg === 'yes' ? photoBwQty * PRICING.photoBgFee : 0)
+    : 0;
+
+  const photoColorQty  = getVal('f-photo-color-qty');
+  const photoColorBg   = getRadio('photo-color-bg') || 'no';
+  const photoColorTotal = photoColorQty > 0
+    ? photoColorQty * PRICING.photoColor + (photoColorBg === 'yes' ? photoColorQty * PRICING.photoBgFee : 0)
+    : 0;
+
+  const docTypingQty   = getVal('doc-typing-qty');
+  const docTypingTotal = docTypingQty > 0 ? docTypingQty * PRICING.docTyping : 0;
+
+  const totalPrice = docTotal + photoBwTotal + photoColorTotal + docTypingTotal;
+
+  const orderId = `COPY-2026-${String(orders.length + 1).padStart(5, '0')}`;
+  const now     = new Date();
+  const dateStr = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+
+  const order = {
+    id: orderId, name, phone,
+    email:   document.getElementById('f-email').value.trim(),
+    files:   uploadedFiles.map(f => ({ name: f.name, size: f.size })),
+    copies, color, sides,
+    size:    document.getElementById('f-size').value,
+    binding,
+    photoBwQty, photoBwBg,
+    photoColorQty, photoColorBg,
+    notes:      document.getElementById('f-notes').value.trim(),
+    docTotal,
+    photoTotal: photoBwTotal + photoColorTotal,
+    price:      'Rp ' + totalPrice.toLocaleString('id-ID'),
+    status:     'received',
+    ownerNotes: '',
+    date:       dateStr
+  };
+
+  orders.push(order);
+  saveOrders();
+
+  document.getElementById('confirm-order-id').textContent = orderId;
+  document.getElementById('order-form-wrap').style.display  = 'none';
+  document.getElementById('order-confirm').style.display    = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function newOrder() {
+  uploadedFiles = [];
+  renderFileList();
+  ['f-name','f-phone','f-email','f-notes'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('f-copies').value          = '1';
+  document.getElementById('f-photo-bw-qty').value    = '0';
+  document.getElementById('f-photo-color-qty').value = '0';
+  document.getElementById('doc-typing-qty').value    = '0';
+  document.getElementById('f-size').value            = 'A4';
+  ['r-bw','r-single','r-nobind','r-photo-bw-nobg','r-photo-color-nobg','doc-zerotyping']
+    .forEach(id => { const el = document.getElementById(id); if (el) el.checked = true; });
+  document.getElementById('order-form-wrap').style.display = 'block';
+  document.getElementById('order-confirm').style.display   = 'none';
+  calcPrice();
+}
+
+/* ════════════════════════════════════════════
+   STATUS LOOKUP
+════════════════════════════════════════════ */
+function lookupOrder() {
+  const q      = document.getElementById('lookup-input').value.trim().toUpperCase();
+  const result = document.getElementById('status-result');
+  const empty  = document.getElementById('status-empty');
+  const order  = orders.find(o => o.id === q);
+
+  if (!order) {
+    result.style.display = 'none';
+    result.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+
+  empty.style.display  = 'none';
+  result.style.display = 'block';
+
+  const currentIdx = ORDER_STATUSES.indexOf(order.status);
+
+  const timelineHtml = TIMELINE_STEPS.map((s, i) => {
+    const done   = i < currentIdx;
+    const active = i === currentIdx;
+    const dotCls = done ? 'done' : (active ? 'active' : '');
+    const dotTxt = done ? '✓' : (active ? '●' : '');
+    return `
+      <div class="timeline-step">
+        <div class="timeline-dot ${dotCls}">${dotTxt}</div>
+        <div class="timeline-content">
+          <h4>${s.label}</h4>
+          <p>${active || done ? s.desc : ''}</p>
+        </div>
+      </div>`;
+  }).join('');
+
+  result.innerHTML = `
+    <div class="status-card">
+      <div class="status-card-header">
+        <div class="order-ref">${order.id} · ${order.date}</div>
+        <h3>${escHtml(order.name)}</h3>
+      </div>
+      <div class="status-card-body">
+        <div class="status-timeline">${timelineHtml}</div>
+        <div class="status-summary">
+          <div><span>File:</span> <strong>${order.files.length} file</strong></div>
+          <div><span>Salinan:</span> <strong>${order.copies}×</strong></div>
+          <div><span>Warna:</span> <strong>${order.color === 'color' ? 'Warna' : 'Hitam Putih'}</strong></div>
+          <div><span>Est. Harga:</span> <strong>${order.price}</strong></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+/* Allow Enter key in lookup */
+document.getElementById('lookup-input')?.addEventListener('keydown', e => {
+  if (e.key === 'Enter') lookupOrder();
+});
+
+/* ════════════════════════════════════════════
+   ADMIN RENDER
+════════════════════════════════════════════ */
+function renderAdmin() { renderStats(); renderTable(); }
+
+function renderStats() {
+  const counts = { total: orders.length, received: 0, processing: 0, ready: 0, completed: 0 };
+  orders.forEach(o => { if (counts[o.status] !== undefined) counts[o.status]++; });
+
+  document.getElementById('admin-stats').innerHTML = `
+    <div class="stat-card">
+      <div class="stat-label">Total Pesanan</div>
+      <div class="stat-value">${counts.total}</div>
+    </div>
+    <div class="stat-card accent-gold">
+      <div class="stat-label">Diterima</div>
+      <div class="stat-value">${counts.received}</div>
+    </div>
+    <div class="stat-card accent-brand">
+      <div class="stat-label">Diproses</div>
+      <div class="stat-value">${counts.processing}</div>
+    </div>
+    <div class="stat-card accent-green">
+      <div class="stat-label">Siap Ambil</div>
+      <div class="stat-value">${counts.ready}</div>
+    </div>
+  `;
+}
+
+function setFilter(f, btn) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+}
+
+function renderTable() {
+  const q = document.getElementById('admin-search').value.toLowerCase();
+  const filtered = orders.filter(o => {
+    const matchFilter = currentFilter === 'all' || o.status === currentFilter;
+    const matchSearch = !q || o.name.toLowerCase().includes(q) || o.id.toLowerCase().includes(q);
+    return matchFilter && matchSearch;
+  });
+
+  const pillClass = {
+    received:   'pill-received',
+    processing: 'pill-processing',
+    ready:      'pill-ready',
+    completed:  'pill-completed',
+    cancelled:  'pill-cancelled',
+  };
+
+  const tbody = document.getElementById('orders-tbody');
+  if (filtered.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7"><div class="empty-state">Tidak ada pesanan yang ditemukan.</div></td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = filtered.map(o => {
+    const realIdx = orders.indexOf(o);
+    return `
+      <tr onclick="openModal(${realIdx})">
+        <td class="td-mono">${o.id}</td>
+        <td>
+          <strong>${escHtml(o.name)}</strong><br/>
+          <span class="td-sub">${escHtml(o.phone)}</span>
+        </td>
+        <td>${o.files.length} file</td>
+        <td style="font-size:0.78rem;">
+          ${o.copies}× · ${o.color === 'color' ? 'Warna' : 'H&P'} · ${o.sides === 'double' ? 'Bolak-balik' : '1 Sisi'}
+        </td>
+        <td class="td-mono">${o.price}</td>
+        <td><span class="status-pill ${pillClass[o.status] || ''}">${STATUS_LABELS[o.status] || o.status}</span></td>
+        <td class="td-mono">${o.date}</td>
+      </tr>`;
+  }).join('');
+}
+
+/* ════════════════════════════════════════════
+   MODAL
+════════════════════════════════════════════ */
+function buildOrderDetailHtml(o) {
+  const filesHtml = (o.files || []).map(f => `
+    <div class="file-entry">
+      <span class="file-icon">📄</span>
+      <span class="fname">${escHtml(f.name)}</span>
+      <span class="fsize">${f.size}</span>
+    </div>`).join('');
+
+  const optRow = (cond, key, val) => cond ? `
+    <div class="detail-row"><span class="key">${key}</span><span class="val">${val}</span></div>` : '';
+
+  return `
+    <div class="modal-section-title">Informasi Pelanggan</div>
+    <div class="detail-row"><span class="key">Nama</span><span class="val">${escHtml(o.name)}</span></div>
+    <div class="detail-row"><span class="key">WhatsApp</span><span class="val">${escHtml(o.phone)}</span></div>
+    <div class="detail-row"><span class="key">Email</span><span class="val">${escHtml(o.email) || '—'}</span></div>
+    <div class="detail-row"><span class="key">Waktu Pesan</span><span class="val">${o.date}</span></div>
+
+    <div class="modal-section-title">Spesifikasi Cetak</div>
+    <div class="detail-row"><span class="key">Salinan</span><span class="val">${o.copies}×</span></div>
+    <div class="detail-row"><span class="key">Mode Warna</span><span class="val">${o.color === 'color' ? 'Warna' : 'Hitam Putih'}</span></div>
+    <div class="detail-row"><span class="key">Sisi Cetak</span><span class="val">${o.sides === 'double' ? 'Bolak-balik' : 'Satu Sisi'}</span></div>
+    <div class="detail-row"><span class="key">Ukuran Kertas</span><span class="val">${o.size}</span></div>
+    <div class="detail-row"><span class="key">Jilid</span><span class="val">${o.binding === 'yes' ? 'Ya' : 'Tidak'}</span></div>
+    ${optRow(o.photoBwQty > 0, 'Foto B&W', `${o.photoBwQty}× (BG: ${o.photoBwBg === 'yes' ? 'Ya' : 'Tidak'})`)}
+    ${optRow(o.photoColorQty > 0, 'Foto Warna', `${o.photoColorQty}× (BG: ${o.photoColorBg === 'yes' ? 'Ya' : 'Tidak'})`)}
+    ${optRow(o.docTotal > 0, 'Biaya Dokumen', `Rp ${Number(o.docTotal).toLocaleString('id-ID')}`)}
+    ${optRow(o.photoTotal > 0, 'Biaya Foto', `Rp ${Number(o.photoTotal).toLocaleString('id-ID')}`)}
+    <div class="detail-row"><span class="key">Est. Harga</span><span class="val highlight">${o.price}</span></div>
+    ${optRow(o.notes, 'Catatan Pelanggan', `<em style="font-weight:400;font-style:italic;">${escHtml(o.notes)}</em>`)}
+
+    <div class="modal-section-title">File yang Diunggah</div>
+    <div class="files-list">${filesHtml || '<div class="detail-row" style="color:var(--adm-muted);">Tidak ada file</div>'}</div>
+
+    <div class="modal-section-title">Catatan Internal (Pemilik)</div>
+    <textarea class="modal-notes" id="modal-notes-input" placeholder="Tambahkan catatan internal...">${escHtml(o.ownerNotes)}</textarea>
+
+    <div class="modal-section-title">Perbarui Status</div>
+    <div class="modal-status-row">
+      <select class="modal-status-select" id="modal-status-select">
+        <option value="received"   ${o.status==='received'   ? 'selected' : ''}>Diterima</option>
+        <option value="processing" ${o.status==='processing' ? 'selected' : ''}>Diproses</option>
+        <option value="ready"      ${o.status==='ready'      ? 'selected' : ''}>Siap untuk Diambil</option>
+        <option value="completed"  ${o.status==='completed'  ? 'selected' : ''}>Selesai</option>
+        <option value="cancelled"  ${o.status==='cancelled'  ? 'selected' : ''}>Dibatalkan</option>
+      </select>
+      <button class="btn-save" onclick="saveOrderChanges()">Simpan Perubahan</button>
+    </div>
+  `;
+}
+
+function openModal(idx) {
+  currentOrderIdx = idx;
+  const o = orders[idx];
+  document.getElementById('modal-title').textContent = `Detail Pesanan · ${o.id}`;
+  document.getElementById('modal-body').innerHTML = buildOrderDetailHtml(o);
+  document.getElementById('order-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function saveOrderChanges() {
+  if (currentOrderIdx === null) return;
+  orders[currentOrderIdx].ownerNotes = document.getElementById('modal-notes-input').value;
+  orders[currentOrderIdx].status     = document.getElementById('modal-status-select').value;
+  saveOrders();
+  closeModal();
+  renderAdmin();
+  showToast('Pesanan berhasil diperbarui');
+}
+
+function closeModal() {
+  document.getElementById('order-modal').classList.remove('open');
+  document.body.style.overflow = '';
+  currentOrderIdx = null;
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('order-modal')) closeModal();
+}
+
+/* ════════════════════════════════════════════
+   TOAST
+════════════════════════════════════════════ */
+let toastTimer;
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast show' + (type === 'error' ? ' error' : '');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+/* ════════════════════════════════════════════
+   SECURITY HELPER
+════════════════════════════════════════════ */
+function escHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+/* ════════════════════════════════════════════
+   DYNAMIC CONTENT RENDERERS
+════════════════════════════════════════════ */
+const HOW_STEPS = [
+  { num: '01', title: 'Unggah Dokumen Anda', text: 'Upload file langsung dari perangkat atau Google Drive Anda melalui formulir pemesanan.' },
+  { num: '02', title: 'Kami Proses & Cetak', text: 'Pilih spesifikasi — warna, jumlah, ukuran, jilid. Kami langsung memproses pesanan Anda.' },
+  { num: '03', title: 'Siap untuk Diambil', text: 'Lacak status pesanan secara online dan ambil saat sudah siap. Mudah sekali!' },
+];
+
+const PRICING_DATA = [
+  { icon: '⬛', title: 'Fotokopi Hitam Putih',          price: 'Rp 250',             unit: 'halaman' },
+  { icon: '🌈', title: 'Fotokopi / Cetak Warna',        price: 'Rp 1.500',           unit: 'halaman' },
+  { icon: '🖨️', title: 'Cetak Dokumen H&P / Warna',    price: 'Rp 2.500 – 4.000',   unit: 'halaman' },
+  { icon: '📷', title: 'Cetak Foto Hitam Putih',        price: 'Rp 2.500',           unit: 'foto' },
+  { icon: '📸', title: 'Cetak Foto Warna',              price: 'Rp 3.000',           unit: 'foto' },
+  { icon: '✨', title: 'Ganti Latar Belakang Foto',     price: 'Rp 1.500',           unit: 'foto' },
+  { icon: '📄', title: 'Laminasi',                      price: 'Rp 12.500',          unit: 'halaman' },
+  { icon: '🟧', title: 'Ketik Dokumen',                 price: 'Rp 10.000',          unit: 'lembar' },
+  { icon: '📎', title: 'Jilid',                         price: 'Rp 5.000',           unit: 'item' },
+];
+
+function renderHowItWorks() {
+  const c = document.getElementById('how-steps');
+  if (!c) return;
+  c.innerHTML = HOW_STEPS.map(s => `
+    <div class="step-card">
+      <span class="step-num">${s.num}</span>
+      <h3>${s.title}</h3>
+      <p>${s.text}</p>
+    </div>`).join('');
+}
+
+function renderPricing() {
+  const c = document.getElementById('pricing-cards');
+  if (!c) return;
+  c.innerHTML = PRICING_DATA.map(p => `
+    <div class="price-card">
+      <span class="price-card-icon">${p.icon}</span>
+      <h3>${p.title}</h3>
+      <div class="price-amount">${p.price}<span class="price-unit">/${p.unit}</span></div>
+    </div>`).join('');
+}
+
+/* ════════════════════════════════════════════
+   INIT
+════════════════════════════════════════════ */
+renderHowItWorks();
+renderPricing();
+calcPrice();
+</script>
 </body>
 </html>
