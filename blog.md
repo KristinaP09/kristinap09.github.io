@@ -38,24 +38,24 @@
 <section class="recent-posts callout" aria-labelledby="recent-posts-title">
   <h2 id="recent-posts-title">Most Recent Posts</h2>
   <ol>
-        <li>
-     <span class="post-icon" aria-hidden="true">🎪</span>
-     <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_phone_bot_farming.html">The Invisible Hand: Phone Bot Farming and the New Shape of Digital Deception</a>
-     <span class="badge new">NEW</span>
-     <p class="excerpt">In this post, I explore the rise of phone bot farming—a shadowy industry where individuals use smartphones to create fake social media accounts and generate fraudulent engagement. I delve into how this practice is reshaping online influence, the ethical implications, and what it means for the future of digital trust.</p>
+    <li>
+      <span class="post-icon" aria-hidden="true">🎪</span>
+      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/2026-05-24-great-gallon-heist.html">The Great Gallon Heist of 2026</a>
+      <span class="badge new">NEW</span>
+      <p class="excerpt">There's a Ph.D. graduate, a missing gallon of water, CCTV footage, a master's program director who likes to record things, a South Korean interview panel with an unclear headcount, and an entire continent that somehow refuses to connect the dots. </p>
+    </li>    
+    <li>
+      <span class="post-icon" aria-hidden="true">🎪</span>
+      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_phone_bot_farming.html">The Invisible Hand: Phone Bot Farming and the New Shape of Digital Deception</a>
+      <span class="badge new">NEW</span>
+      <p class="excerpt">In this post, I explore the rise of phone bot farming—a shadowy industry where individuals use smartphones to create fake social media accounts and generate fraudulent engagement. I delve into how this practice is reshaping online influence, the ethical implications, and what it means for the future of digital trust.</p>
     </li> 
     <li>
-    <span class="post-icon" aria-hidden="true">🎪</span>
-    <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_IDR173984_settlement_nobody_asked_for.html">The Rp173.914 Settlement Nobody Asked For</a>
-    <span class="badge new">NEW</span>
-    <p class="excerpt">This is the story of a tiny mistake that resulted in an e-commerce company offering me a settlement of just 173,914 Indonesian rupiah — an insultingly small amount which wouldn't even cover the cost of a cup of coffee. Not only was this settlement insulting, it also highlighted the system's lack of accountability and transparency, leaving sellers feeling frustrated and powerless.</p>
+     <span class="post-icon" aria-hidden="true">🎪</span>
+     <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles/The_IDR173984_settlement_nobody_asked_for.html">The Rp173.914 Settlement Nobody Asked For</a>
+     <span class="badge new">NEW</span>
+     <p class="excerpt">This is the story of a tiny mistake that resulted in an e-commerce company offering me a settlement of just 173,914 Indonesian rupiah — an insultingly small amount which wouldn't even cover the cost of a cup of coffee. Not only was this settlement insulting, it also highlighted the system's lack of accountability and transparency, leaving sellers feeling frustrated and powerless.</p>
     </li>    
-     <li>
-      <span class="post-icon" aria-hidden="true">🎪</span>
-      <a class="post-link" href="https://kristinap09.github.io/clown-network/chronicles//The_Three_Dollar_Collapse_of_Civilisation.html">The Three-Dollar Collapse of Civilisation</a>
-      <span class="badge new">NEW</span>
-      <p class="excerpt">A simple basic example of "tiny mistakes" that can lead to catastrophic consequences, illustrating how a seemingly minor error can trigger a chain reaction resulting in the collapse of an entire system.</p>
-    </li>
   </ol>
 </section>
 
