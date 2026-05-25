@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A no-holds-barred rant on global stupidity and professional incompetence from an academic who’s done with the nonsense." />
+  <meta name="keywords" content="stupidity, professionalism, global academia, unfiltered rant, academic frustrations" />
+  <meta name="author" content="Pissed-Off Academic" />
+  <title>Stupidity’s Global Tour: My Unfiltered Rant</title>
+
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #e74c3c;
+      --text-color: #222;
+      --light-bg: #f8f9fa;
+      --border-color: #e9ecef;
+      --shadow: 0 2px 10px rgba(0,0,0,0.15);
+      --highlight-start: #ff7675;
+      --highlight-end: #d63031;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.7;
+      color: var(--text-color);
+      background-color: #fff;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 3rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      position: relative;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 0 40px;
+      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+      color: white;
+      margin: 0 -20px 50px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .date {
+      background-color: var(--light-bg);
+      color: var(--primary-color);
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      font-weight: 600;
+      border: 2px solid var(--border-color);
+      font-size: 1rem;
+    }
+
+    main {
+      background: white;
+      box-shadow: var(--shadow);
+      border-radius: 15px;
+      padding: 50px 60px;
+      margin-bottom: 50px;
+    }
+
+    article > section {
+      margin-bottom: 50px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    article > section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.9rem;
+      margin-bottom: 30px;
+      position: relative;
+      padding-left: 25px;
+      font-weight: 600;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 32px;
+      background: linear-gradient(to bottom, var(--accent-color), var(--primary-color));
+      border-radius: 3px;
+    }
+
+    p {
+      margin-bottom: 22px;
+      text-align: justify;
+      font-size: 1.13rem;
+      color: var(--text-color);
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, var(--highlight-start) 0%, var(--highlight-end) 100%);
+      padding: 25px 30px;
+      border-radius: 10px;
+      margin: 35px 0;
+      border-left: 6px solid var(--accent-color);
+      font-weight: 600;
+      font-size: 1.12rem;
+      color: #fff;
+      text-align: left;
+    }
+
+    blockquote.quote {
+      font-style: italic;
+      font-size: 1.35rem;
+      text-align: center;
+      color: var(--primary-color);
+      margin: 45px 0;
+      padding: 30px;
+      background: var(--light-bg);
+      border-radius: 15px;
+      border: 2px dashed var(--accent-color);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+    }
+
+    .conclusion {
+      background: linear-gradient(135deg, #c0392b, #8e44ad);
+      color: white;
+      padding: 45px 45px;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 50px;
+      font-weight: 500;
+    }
+
+    .conclusion h2 {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    .conclusion h2::before {
+      background: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    /* Accessibility Skip Link */
+    .accessibility-skip {
+      position: absolute;
+      top: -40px;
+      left: 10px;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      z-index: 100;
+      transition: top 0.3s ease;
+    }
+    .accessibility-skip:focus {
+      top: 10px;
+      outline: 2px solid white;
+      outline-offset: 2px;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #ddd;
+    }
+    body.dark-mode main {
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.8);
+    }
+    body.dark-mode header {
+      background: linear-gradient(135deg, #1a2634, #992d22);
+      color: #ccc;
+    }
+    body.dark-mode .date {
+      background-color: #2a3a59;
+      color: #e74c3c;
+      border-color: #335588;
+    }
+    body.dark-mode h2 {
+      color: #e74c3c;
+    }
+    body.dark-mode h2::before {
+      background: linear-gradient(to bottom, #e74c3c, #992d22);
+    }
+    body.dark-mode .highlight {
+      background: linear-gradient(120deg, #992d22 0%, #6b2020 100%);
+      color: #eee;
+      border-left-color: #e74c3c;
+    }
+    body.dark-mode blockquote.quote {
+      background: #292929;
+      border-color: #e74c3c;
+      color: #ff8787;
+    }
+    body.dark-mode .conclusion {
+      background: linear-gradient(135deg, #992d22, #6b2980);
+      color: #eee;
+    }
+    body.dark-mode footer {
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 0 15px 2rem;
+        max-width: 100%;
+      }
+      header {
+        margin: 0 -15px 40px;
+        padding: 45px 15px 35px;
+      }
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 12px;
+      }
+      .date {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+      }
+      main {
+        padding: 30px 25px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+      }
+      h2 {
+        font-size: 1.6rem;
+        padding-left: 18px;
+      }
+      h2::before {
+        width: 5px;
+        height: 26px;
+      }
+      p, .highlight {
+        font-size: 1rem;
+      }
+      blockquote.quote {
+        font-size: 1.1rem;
+        padding: 25px 20px;
+      }
+      .conclusion {
+        padding: 35px 25px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="accessibility-skip">Skip to main content</a>
+
+  <header role="banner">
+    <h1>Stupidity’s Global Tour: My Unfiltered Rant</h1>
+    <p class="subtitle" style="text-align:center;"><strong>No fluff, just raw truth about idiots in academia and beyond.</strong></p>
+    <div class="date">September 23, 2025</div>
+  </header>
+
+  <main id="main-content" role="main">
+    <article>
+      <section>
+        <h2>Done Arguing with Idiots</h2>
+        <p>
+          I’m over arguing with morons. And no, I don’t just mean the uneducated. Stupidity runs rampant among “professionals” worshipped by clueless fans and students at every university, from Ivy League to dumpster-tier. Some scream their ignorance; others are sneakily brain-dead.
+        </p>
+        <p>
+          The only way to stay sane is to ditch the fight and let these clowns hog the stage. They think they’ve won when you go quiet, but really, you’re just done with their nonsense. You can’t fix stupid—it’s a global plague, infecting both backwater towns and shiny cities.
+        </p>
+      </section>
+
+      <section>
+        <h2>Degrees Are Just Paper</h2>
+        <p>
+          The absolute worst are degree-holding idiots who act like they’re gods but deliver zero. I’ve worked at top universities and research centers—Taiwan, Italy, you name it—and “culture” often means loud talk and zero results. People fake teamwork, secretly despising each other, all for a paycheck.
+        </p>
+        <p>
+          Some even consult monks or psychics for career advice or “inner peace.” If those gurus had real power, they’d be fixing the country, not preaching nonsense at knockoff TED Talks. It’s pathetic, and I’ve seen it up close in my own country—people chasing “wisdom” only to act dumber.
+        </p>
+      </section>
+
+      <section>
+        <h2>Public vs. Private Shitshow</h2>
+        <p>
+          Public institutions at least show their mess upfront. Private ones? They’re like sketchy apps running in stealth mode, screwing things up behind the scenes. Therapists and other “pros” often enable these unprofessional clowns, adding fuel to the stupidity fire.
+        </p>
+        <div class="highlight">
+          Fancy degrees are just shiny wrappers for people who contribute nothing but chaos.
+        </div>
+      </section>
+
+      <section>
+        <h2>Italy: A Developed Disaster</h2>
+        <p>
+          Italy blew my mind, and not in a good way. Ancient Rome? Ferrari? Cool, but people can’t even clean a toilet or stop bragging about basic tasks with sticky notes. Degree-holding “royalty” act like they’re above everyone, unaware I’m silently calling them the grossest humans alive.
+        </p>
+        <p>
+          Big institutions flaunt their brands but can’t provide a room or a signed certificate for a visiting researcher. How do you boast about Ferrari when your systems are a total dumpster fire? It’s a broken country riding on its ancestors’ coattails.
+        </p>
+      </section>
+
+      <section>
+        <h2>No More Awe for Elites</h2>
+        <p>
+          I used to respect graduates from top Eastern and Western schools. Now? They’re just hired clowns scraping by with minimal effort and maximum bullshit. But I’m not done yet—I’m still chasing knowledge through the global circus of stupidity.
+        </p>
+        <p>
+          To the haters waiting for me to crash and burn: keep dreaming. You’ll never see it. One day, you might even end up working for me—karma’s a bitch.
+        </p>
+        <blockquote class="quote">
+          "You can’t outsmart stupid, but you can outlast it by walking away."
+        </blockquote>
+      </section>
+
+      <div class="conclusion">
+        <h2>Still Standing, Still Fighting</h2>
+        <p>
+          My head’s pounding from grinding my teeth, but I’m crystal clear: stupidity is universal, and it reeks. I’m not quitting, though. Curiosity and grit keep me moving. Bring on the next mess—I’m ready for it.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2025 - Raw, unfiltered takes on global academia and professional nonsense.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const toggleBtn = document.createElement('button');
+      toggleBtn.id = 'toggleTheme';
+      toggleBtn.textContent = 'Dark Mode';
+      toggleBtn.setAttribute('aria-label', 'Toggle light and dark mode');
+      toggleBtn.style.position = 'fixed';
+      toggleBtn.style.top = '1rem';
+      toggleBtn.style.right = '1rem';
+      toggleBtn.style.zIndex = '1000';
+      toggleBtn.style.backgroundColor = 'var(--accent-color)';
+      toggleBtn.style.color = 'white';
+      toggleBtn.style.border = 'none';
+      toggleBtn.style.padding = '0.5rem 1rem';
+      toggleBtn.style.borderRadius = '6px';
+      toggleBtn.style.cursor = 'pointer';
+      toggleBtn.style.fontWeight = '600';
+      toggleBtn.style.boxShadow = '0 2px 6px rgba(0,0,0,0.2)';
+      toggleBtn.style.transition = 'background-color 0.3s ease';
+      toggleBtn.onmouseover = () => toggleBtn.style.backgroundColor = '#c0392b';
+      toggleBtn.onmouseout = () => toggleBtn.style.backgroundColor = 'var(--accent-color)';
+      document.body.appendChild(toggleBtn);
+
+      const body = document.body;
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        body.classList.add('dark-mode');
+        toggleBtn.textContent = 'Light Mode';
+      }
+
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        toggleBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    })();
+  </script>
+</body>
+</html>

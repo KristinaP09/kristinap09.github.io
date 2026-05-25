@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://kristinap09.github.io/sitemap.xml

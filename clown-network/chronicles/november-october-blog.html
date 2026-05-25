@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Where stupidity is celebrated, idiocy is a national sport, and yet the people keep surviving—and somehow thriving—against all odds.">
+    <meta name="author" content="Kristina P. Sinaga">
+    <meta property="og:title" content="Welcome to the City of Premanisme">
+    <meta property="og:description" content="A personal reflection on noise, chaos, and resilience in urban Indonesia">
+    <meta property="og:type" content="article">
+    <title>Welcome to the City of Premanisme | A Personal Reflection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-color: #ffffff;
+            --bg-alt: #f8f9fa;
+            --border-color: #e1e8ed;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --shadow-hover: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-color);
+            box-shadow: var(--shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="rgba(255,255,255,0.05)" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"/><path fill="rgba(255,255,255,0.05)" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"/><path fill="rgba(255,255,255,0.1)" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"/></svg>') repeat-x bottom;
+            background-size: 1200px 120px;
+            opacity: 0.3;
+        }
+
+        .meta-info {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+            font-weight: 300;
+        }
+
+        .meta-info span {
+            margin: 0 0.5rem;
+        }
+
+        h1 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            opacity: 0.95;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        article {
+            padding: 3rem 2rem;
+        }
+
+        h2 {
+            font-family: 'Merriweather', Georgia, serif;
+            color: var(--primary-color);
+            font-size: 1.75rem;
+            margin-top: 3rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--accent-color);
+            font-weight: 700;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-family: 'Merriweather', Georgia, serif;
+            color: var(--secondary-color);
+            font-size: 1.35rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            color: var(--text-color);
+            text-align: justify;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-alt);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            list-style-type: none;
+        }
+
+        ul li {
+            margin-bottom: 0.75rem;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        em {
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        strong {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        .quote-block {
+            background: var(--bg-alt);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+            font-style: italic;
+            position: relative;
+        }
+
+        .quote-block::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--border-color);
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            font-family: Georgia, serif;
+        }
+
+        hr {
+            margin: 3rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--border-color), transparent);
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 2rem;
+            margin-top: 3rem;
+            border-radius: 8px;
+            border-left: 5px solid #4caf50;
+        }
+
+        .conclusion h2 {
+            border-bottom-color: #4caf50;
+            margin-top: 0;
+        }
+
+        footer {
+            background: var(--bg-alt);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .tags {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--bg-alt);
+            padding: 0.4rem 1rem;
+            margin: 0.25rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .reading-time {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .container {
+                border-radius: 0;
+            }
+
+            header {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            article {
+                padding: 2rem 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p, ul li {
+                font-size: 1rem;
+                text-align: left;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            .tags, footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Welcome to the City of Premanisme</h1>
+            <p class="subtitle">Where stupidity is celebrated, idiocy is a national sport, and yet the people keep surviving—and somehow thriving—against all odds.</p>
+            <div class="meta-info">
+                <span>📅 Published: November 12th, 2025</span>
+                <span>•</span>
+                <span>✍️ By Kristina P. Sinaga</span>
+                <span>•</span>
+                <span class="reading-time">⏱️ 8 min read</span>
+            </div>
+        </header>
+
+        <article>
+            <p class="lead">
+                This is a personal reflection on life in an urban Indonesian neighborhood—where noise is currency, chaos is governance, and resilience is the only constant. It's a candid, sometimes satirical look at the daily absurdities and remarkable endurance of a community that refuses to quit, even when logic suggests it should.
+            </p>
+
+    <h2>Italy vs. Indonesia: A Noise Comparison</h2>
+    
+    <p>I used to think Italy would be just like Indonesia—noisy, messy, and full of people who treat chaos as a national hobby. But to my surprise, Italy is actually an improvement. Sure, it's loud and dramatic, but at least the chaos there comes with better coffee, prettier architecture, and a touch of style.</p>
+    
+    <p>In Italy, people argue passionately in the streets, yes—but there's a certain elegance to it. The gesticulations are theatrical, the language melodic even in anger. When an Italian raises their voice, it feels like opera. When my neighbors do it, it sounds like a poorly tuned motorcycle with anger management issues.</p>
+    
+    <div class="quote-block">
+        <p>Let's just say, if noise were an art form, Italy would be the refined version of Indonesia's unfinished sketch.</p>
+    </div>
+    
+    <p>The difference isn't just volume—it's context. Italian cities have mastered the art of <em>structured chaos</em>. There's noise, but it follows patterns: market hours, meal times, siesta silence. Here? It's a 24-hour symphony with no conductor, no sheet music, and half the instruments are broken but still being played with enthusiasm.</p>
+
+    <h2>Midnight Shouting, Morning Drills</h2>
+    <p>For more than twenty-five years, I didn’t actually live across this street. But since my father passed away, we’ve been spending more time here than in the house we used to call home.</p>
+    <p>So yes—hell yes—I’m still not used to this mess of noise and dust. The streets transform into an open-air stadium, with young people shouting past midnight as if they’re being paid by the decibel.</p>
+    <p>Come morning, the noise simply changes tune: drills, hammers, and the mysterious art of fixing things that were never broken in the first place. Who knows? Only they do. I’m just here, observing quietly in my corner, trying to stay sane.</p>
+    <p>Despite all the racket, centuries-old problems remain conveniently unsolved—though everyone acts as if they’re reinventing civilization one espresso at a time.</p>
+    <p>Work hours? Either 9 to 5 or 9 to 9, because apparently, moderation is a foreign concept. Back home, I could hear a faint hum through the walls; here, people perform full concerts past midnight.</p>
+    
+    <p>To be fair, it's actually better now than it was two or three years ago—back then, it was absolute chaos. The streets felt lawless, a free-for-all where the loudest person won by default. Whoever's responsible for the improvement—whether it's neighborhood intervention, police presence, or sheer exhaustion—I sincerely hope they keep it up.</p>
+
+    <h2>Neighborhood Soap Opera</h2>
+    
+    <p>Just the other day, while hanging my laundry—a mundane task that somehow becomes a front-row seat to neighborhood theater—I overheard what sounded like an afterparty for a festival that never ended:</p>
+    <ul>
+        <li>A few fake coughs (the universal signal for "I'm pretending to be productive")</li>
+        <li>Classic "I'm-totally-working" noises (hammering air, apparently)</li>
+        <li>And the usual midnight madness (because sleep is for the weak)</li>
+    </ul>
+    
+    <p>As for the religious leaders—well, let's just say sainthood doesn't pay the bills. Everyone's just trying to survive in their own way, some with more noise than grace.</p>
+    
+    <h3>The Cast of Characters</h3>
+    
+    <p>Meanwhile, the neighborhood could easily double as a live-action soap opera, complete with recurring characters and plot lines that go nowhere:</p>
+    
+    <ul>
+        <li>People calling each other crazy (pot, meet kettle)</li>
+        <li>Girls laughing and screaming for attention at volumes that challenge the sound barrier</li>
+        <li>Boys howling into the night like they're auditioning for a horror movie—and somehow convinced they'll get the part</li>
+    </ul>
+    
+    <p>One girl keeps asking for help from someone she simultaneously calls crazy—ah, romance in the modern age. They all seem to enjoy group projects in stupidity, collaborative efforts in making poor life choices. Everyone's obsessed with everyone else's business, treating privacy as an outdated concept, and some folks lower their standards so often it's practically an Olympic event.</p>
+
+    <h2>Adults, Children, and Bad Examples</h2>
+    
+    <p>And just when you think you've seen it all—when you believe the absurdity has peaked—the adults send forth the children. Wide-eyed and clueless, these tiny ambassadors are deployed to play the part of innocence itself. A flawless performance, really, if the goal is to deflect responsibility.</p>
+    
+    <p>It's a pattern as old as the neighborhood itself: use the kids as shields, as distractions, as proof that "we're just a nice family trying to get by." Meanwhile, the same adults demonstrate exactly the behaviors they'd punish their children for—yelling, disrupting, disrespecting boundaries.</p>
+    
+    <div class="highlight-box">
+        <p><strong>No wonder they've never managed to upgrade;</strong> they're too busy giving bad examples to the toddlers. The cycle perpetuates itself, one generation teaching the next that chaos is normal, that noise equals presence, that volume is victory.</p>
+    </div>
+
+    <h2>Premanisme Disguised as Progress</h2>
+    
+    <p>It's all starting to make sense now. There's no evolution here, just <em>premanisme</em> disguised as progress. <em>Premanisme</em>—that uniquely Indonesian brand of thuggery and intimidation, dressed up in the language of community and tradition. They even call it <em>the city of premanisme,</em> and people say it with a strange mix of pride and resignation.</p>
+    
+    <p>As someone born and raised here, I honestly don't know whether to be proud of that label or deeply concerned. Perhaps both. Pride in survival, concern for what we've become in the process of surviving.</p>
+    
+    <h3>The Survival Toolkit</h3>
+    
+    <p><strong>Earplugs? Don't bother—they'd melt from overuse.</strong> I've tried every brand, every material. Foam, silicone, wax, even custom-molded ones. They all eventually surrender to the relentless assault of ambient noise. The real solution isn't blocking it out; it's recalibrating your expectations of what "quiet" means.</p>
+    
+    <p>So, embrace the chaos! Welcome to a place where stupidity is treasured, idiocy isn't just accepted—it's celebrated, and the ability to endure becomes your most valuable asset. Here, resilience isn't a choice; it's the price of admission.</p>
+
+    <hr>
+
+    <div class="conclusion">
+        <h2>A Note to Authorities</h2>
+        
+        <p>It's easy to point out the chaos, to catalog the absurdities and shake my head at the dysfunction. But beneath all the noise, there's something remarkable about the people here. They are genuinely independent, capable, and resilient—often achieving more with less and relying on their own creativity to survive when institutions fail them.</p>
+        
+        <p>They build businesses with minimal capital. They solve problems with improvised solutions. They support each other in ways that government programs never reach. In many ways, their skills, persistence, and adaptability quietly contribute to the nation's global image—the reputation for resourcefulness that Indonesia carries abroad.</p>
+        
+        <h3>A Call for True Leadership</h3>
+        
+        <p>So, to those in positions of authority—across every sector, from local neighborhood heads to national policymakers—perhaps it's time to truly listen, observe, and nurture what's already strong among the people. Support them not with empty slogans or temporary fixes, but with understanding, trust, and consistency.</p>
+        
+        <p>Create systems that respect their ingenuity rather than stifle it. Provide infrastructure that enables their productivity rather than complicates it. Establish rules that promote fairness without crushing flexibility.</p>
+        
+        <p><strong>Because despite everything</strong>—despite the noise, the chaos, the seemingly endless cycles of dysfunction—the people here remain the heart that keeps this place alive. They deserve better—not as charity, but as recognition of their strength. Not as subjects to be managed, but as citizens to be empowered.</p>
+        
+        <p>The potential is here. The talent is here. The determination is undeniable. What's missing is the structural support to channel all that energy into something that benefits everyone, not just the loudest voices in the room.</p>
+    </div>
+
+    <div class="tags">
+        <strong>Tags:</strong>
+        <span class="tag">#UrbanLife</span>
+        <span class="tag">#Indonesia</span>
+        <span class="tag">#CulturalReflection</span>
+        <span class="tag">#Premanisme</span>
+        <span class="tag">#NoiseComplaint</span>
+        <span class="tag">#Resilience</span>
+        <span class="tag">#PersonalEssay</span>
+        <span class="tag">#SocialCommentary</span>
+    </div>
+        </article>
+
+        <footer>
+            <p><strong>About the Author:</strong> Kristina P. Sinaga is a mathematician, independent researcher, an amateur  writer, and observer to wherever she goes. Her web-blogpost documents the complexities of community, culture, and survival with candor and occasional satire.</p>
+            <p style="margin-top: 1rem; font-size: 0.85rem;">&copy; 2025 Kristina P. Sinaga. All thoughts and observations are personal reflections based on lived experience.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">💌 Have similar experiences? Want to share your thoughts? This blog welcomes dialogue and different perspectives.</p>
+        </footer>
+    </div>
+</body>
+</html>

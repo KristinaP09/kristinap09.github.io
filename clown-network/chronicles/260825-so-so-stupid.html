@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A candid expat’s journey through Italian bureaucracy and retail absurdity" />
+    <meta name="keywords" content="bureaucracy, MediaWorld, residence card, Italy, expat, humor" />
+    <meta name="author" content="Kristina P. Sinaga" />
+    <meta property="og:title" content="The Sheer Absurdity of Clown Performances: €1000, No Receipt, and Bureaucratic Comedy" />
+    <meta property="og:description" content="A candid expat’s journey through Italian bureaucracy and retail absurdity" />
+    <meta property="og:type" content="article" />
+    <title>🎪 The Sheer Absurdity of Clown Performances: €1000, No Receipt, and Bureaucratic Comedy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- Theme variables --- */
+        :root{
+            --bg-primary:#fafbfc;
+            --bg-secondary:#ffffff;
+            --bg-tertiary:#f8f9fa;
+            --text-primary:#1a202c;
+            --text-secondary:#4a5568;
+            --text-accent:#2563eb;
+            --border-color:#e2e8f0;
+            --highlight-bg:#fef3c7;
+            --highlight-border:#f59e0b;
+            --blockquote-bg:#eff6ff;
+            --blockquote-border:#3b82f6;
+            --shadow-sm:0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md:0 4px 6px rgba(0,0,0,0.08);
+            --radius-md:8px;
+            --radius-lg:12px;
+            --spacing-sm:8px;
+            --spacing-md:16px;
+            --spacing-lg:24px;
+            --font-base:16px;
+        }
+        [data-theme="dark"]{
+            --bg-primary:#0f172a;
+            --bg-secondary:#121827;
+            --bg-tertiary:#1e293b;
+            --text-primary:#f1f5f9;
+            --text-secondary:#cbd5e1;
+            --text-accent:#60a5fa;
+            --border-color:#334155;
+            --blockquote-bg:#0b1220;
+            --blockquote-border:#60a5fa;
+        }
+        /* --- Reset / base --- */
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{font-size:16px;scroll-behavior:smooth}
+        body{
+            font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:var(--bg-primary);
+            color:var(--text-primary);
+            line-height:1.6;
+            -webkit-font-smoothing:antialiased;
+        }
+        a{color:var(--text-accent);text-decoration:none}
+        a:hover{text-decoration:underline}
+        /* --- Utility / skip link --- */
+        .skip-link{
+            position:absolute;
+            left:6px;top:-48px;
+            background:var(--text-accent);
+            color:#fff;padding:8px 12px;border-radius:6px;z-index:1000;
+        }
+        .skip-link:focus{top:6px}
+        /* --- Layout --- */
+        .nav-toggle{display:none}
+        .theme-toggle{
+            position:fixed;right:20px;top:20px;
+            background:var(--bg-secondary);border:1px solid var(--border-color);
+            padding:8px 12px;border-radius:10px;box-shadow:var(--shadow-md);cursor:pointer;z-index:1000;
+        }
+        .back-to-top{
+            position:fixed;right:20px;bottom:20px;width:52px;height:52px;border-radius:50%;
+            background:var(--text-accent);color:#fff;border:none;display:flex;align-items:center;justify-content:center;
+            box-shadow:var(--shadow-md);cursor:pointer;opacity:0;transform:translateY(10px);transition:all .25s;z-index:1000;
+        }
+        .back-to-top.visible{opacity:1;transform:none}
+        .reading-progress{
+            position:fixed;left:0;top:0;height:4px;background:linear-gradient(90deg,var(--text-accent),#10b981);width:0%;z-index:1100;
+        }
+        .table-of-contents{
+            position:fixed;left:-320px;top:0;width:300px;height:100vh;background:var(--bg-secondary);
+            border-right:1px solid var(--border-color);padding:32px;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,0.06);transition:left .28s;z-index:1050;
+        }
+        .table-of-contents.open{left:0}
+        .table-of-contents h3{color:var(--text-accent);margin-bottom:12px;font-weight:700}
+        main.container{
+            max-width:900px;margin:48px auto;padding:32px;background:var(--bg-secondary);border-radius:14px;
+            box-shadow:0 10px 30px rgba(16,24,40,0.06);border:1px solid var(--border-color);
+        }
+        .hero-image{
+            width:100%;height:220px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+            color:#fff;font-weight:700;font-size:1.25rem;margin-bottom:20px;
+            background:linear-gradient(135deg,#667eea 0%,#764ba2 50%,#f093fb 100%);
+            position:relative;overflow:hidden;box-shadow:var(--shadow-md)
+        }
+        .hero-image::before{
+            content:"";position:absolute;left:-100%;top:0;width:100%;height:100%;
+            background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);animation:shimmer 4s linear infinite;
+        }
+        @keyframes shimmer{0%{left:-100%}100%{left:100%}}
+        header{ text-align:center;border-bottom:2px solid var(--border-color);padding-bottom:18px;margin-bottom:18px;position:relative}
+        header h1{font-family:Georgia, serif;font-size:clamp(1.5rem,3.6vw,2.25rem);margin-bottom:8px;color:var(--text-primary)}
+        .subtitle{color:var(--text-secondary);font-style:italic}
+        .date{color:var(--text-secondary);font-size:0.95rem;margin-top:8px}
+        h2{font-size:1.25rem;margin-top:28px;margin-bottom:12px;color:var(--text-primary);position:relative;padding-left:34px}
+        h2::before{position:absolute;left:0;top:0;font-size:1.1rem}
+        h2:nth-of-type(1)::before{content:"🎯"} /* decorative */
+        h2:nth-of-type(2)::before{content:"🛒"}
+        h2:nth-of-type(3)::before{content:"💻"}
+        h2:nth-of-type(4)::before{content:"🏛️"}
+        h2:nth-of-type(5)::before{content:"🎭"}
+        h3,h4{color:var(--text-primary);margin-top:18px;margin-bottom:8px}
+        p{color:var(--text-secondary);margin-bottom:14px;text-align:justify}
+        .lead{font-size:1.05rem;color:var(--text-primary);margin-bottom:18px}
+        .highlight{
+            background:var(--highlight-bg);border:1px solid var(--highlight-border);padding:4px 8px;border-radius:6px;font-weight:700;color:#6b3d00;
+            transition:all .18s;display:inline-block;cursor:default;
+        }
+        .highlight:hover{transform:scale(1.03)}
+        blockquote{
+            background:var(--blockquote-bg);border-left:4px solid var(--blockquote-border);padding:18px;border-radius:8px;margin:18px 0;color:var(--text-primary);
+            font-style:italic;box-shadow:var(--shadow-sm)
+        }
+        blockquote::before{content:"“";font-family:Georgia,serif;font-size:2.2rem;color:var(--blockquote-border);position:absolute;opacity:.08;transform:translateY(-10px)}
+        .section{margin-bottom:28px;opacity:0;transform:translateY(18px);animation:fadeInUp .7s forwards}
+        @keyframes fadeInUp{to{opacity:1;transform:none}}
+        .divider{border-top:2px dashed var(--border-color);margin:28px 0;position:relative;opacity:.7}
+        .divider::after{content:"⚡";position:absolute;left:50%;top:-14px;transform:translateX(-50%);background:var(--bg-secondary);padding:0 12px;color:var(--text-accent)}
+        .footer{margin-top:22px;padding:18px;border-top:1px solid var(--border-color);color:var(--text-secondary);text-align:center;border-radius:8px;background:var(--bg-tertiary);margin-bottom:8px}
+        .author{font-weight:700;color:var(--text-accent);display:block;margin-top:8px}
+        .image-placeholder{
+            width:100%;height:160px;border-radius:8px;border:2px dashed var(--border-color);
+            display:flex;align-items:center;justify-content:center;color:var(--text-secondary);font-weight:700;margin:16px 0;background:repeating-linear-gradient(45deg,var(--bg-tertiary) 0 10px,transparent 10px 20px);
+        }
+        .article-stats{display:flex;justify-content:center;gap:18px;padding:12px;background:var(--bg-tertiary);border-radius:8px;margin-bottom:18px;color:var(--text-secondary)}
+        @media (max-width:1024px){ .table-of-contents{left:-320px} .nav-toggle{display:block;position:fixed;left:20px;top:20px;z-index:1000} .theme-toggle{right:16px;top:16px} }
+        @media (max-width:768px){ .hero-image{height:140px} main.container{margin:18px;padding:18px} h2{padding-left:26px} }
+        /* Accessibility */
+        :focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px}
+        ::selection{background:var(--text-accent);color:#fff}
+        @media (prefers-reduced-motion:reduce){ *{animation-duration:.001ms!important;transition-duration:.001ms!important} }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="reading-progress" role="progressbar" aria-label="Reading progress"></div>
+    <button class="nav-toggle" onclick="toggleTableOfContents()" aria-label="Toggle table of contents">📚</button>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+    <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+    <nav class="table-of-contents" role="navigation" aria-label="Table of contents">
+        <h3>Contents</h3>
+        <ul class="toc-list">
+            <li><a class="toc-link" href="#journal">Day 237: Bureaucratic Bliss</a></li>
+            <li><a class="toc-link" href="#mediaworld">Act I: The MediaWorld €1000 Comedy</a></li>
+            <li><a class="toc-link" href="#keyboard">French AZERTY Keyboard Fiasco</a></li>
+            <li><a class="toc-link" href="#laptop">Act II: The Free Laptop Fiasco</a></li>
+            <li><a class="toc-link" href="#museum">Bureaucracy Ballet</a></li>
+            <li><a class="toc-link" href="#hall">Hall of Eternal Processes</a></li>
+            <li><a class="toc-link" href="#strategic">Strategic Surrender</a></li>
+            <li><a class="toc-link" href="#micdrop">Mic Drop</a></li>
+            <li><a class="toc-link" href="#final">Final Thoughts</a></li>
+        </ul>
+    </nav>
+    <main class="container" id="main-content" tabindex="-1" role="main">
+        <article>
+            <div class="hero-image" role="img" aria-label="Hero: Bureaucracy and retail comedy">
+                🎪 The Sheer Absurdity of Clown Performances
+            </div>
+            <header>
+                <h1>The Sheer Absurdity of Clown Performances: €1000, No Receipt, and Bureaucratic Comedy</h1>
+                <p class="subtitle">A candid expat’s journey through Italian bureaucracy and retail absurdity</p>
+                <div class="date">August — Day 237</div>
+            </header>
+            <div class="article-stats" aria-hidden="true">
+                <div>📊 ~1,300 words</div>
+                <div>🛠️ Retail & Bureaucracy</div>
+                <div>🎭 Satire</div>
+            </div>
+            <section id="journal" class="section">
+                <h2>Day 237: Bureaucratic Bliss – A Journal Entry</h2>
+                <p><strong>To:</strong> Italian Immigration Office</p>
+                <p><strong>Subject:</strong> The Residence Card That Time Forgot</p>
+                <p>Dear Immigration Team,</p>
+                <p>
+                    Please keep my residence card safe in your archives. It’s clearly found a new home among the stacks of paperwork and elusive requests. If it’s become a cherished office artifact, I wouldn’t dream of disturbing its peace.
+                </p>
+                <p>
+                    Frame it, name it, take it out for a spritz on Fridays. As for me, I’ll be here—undocumented, but thriving.
+                </p>
+                <p>
+                    With all the affection bureaucracy can muster,<br>
+                    <span style="color:#888;">Kristina P. Sinaga</span>
+                </p>
+                <p><em>P.S. If you ever send it, I’ll act surprised. No promises.</em></p>
+            </section>
+            <section id="mediaworld" class="section">
+                <h2>Act I: The MediaWorld €1000 Comedy</h2>
+                <p class="lead">Ever made a “smart” purchase? That was me at MediaWorld Italy.</p>
+                <p>
+                    I spent nearly <span class="highlight">€1000</span> on electronics. The result? A <strong class="highlight">€0 receipt</strong>. Not a misprint—just a bold statement: <em>proof of purchase is optional.</em> It was as if the product was given for free—ha!
+                </p>
+                <blockquote>“Go to Apple.”</blockquote>
+                <p>
+                    MediaWorld’s solution to a password issue was to send me to their competitor Apple. A €1000, zero-receipt, password-free adventure.
+                </p>
+                <p>
+                    What makes this even more surreal is that MediaWorld now belongs to JD.com, a massive Chinese e-commerce giant. This means the company’s operations in Italy and across Europe are under Chinese ownership and influence. The reality of this ownership comes with its own share of bureaucracy blunders and awkward integration challenges, as I painfully experienced first-hand.
+                </p>
+            </section>
+            <section id="keyboard" class="section">
+                <h2>French AZERTY Keyboard Fiasco</h2>
+                <p>
+                    The keyboard was in French AZERTY layout, making it incredibly difficult to input my newly registered account's somewhat complex password. In less than two hours, I returned to MediaWorld to request a return.
+                </p>
+                <p>
+                    The employee’s solution? Direct me to the Apple Store for keyboard support, as MediaWorld apparently couldn’t handle such a basic issue. It is surprising and disappointing that an electronics store can’t provide basic support for a keyboard layout problem.
+                </p>
+            </section>
+            <section id="laptop" class="section">
+                <h2>Act II: The Free Laptop Fiasco</h2>
+                <p>
+                    My institution promised a laptop—still not delivered after 11 months. When mentioned, both MediaWorld and the institution awkwardly called it “free,” as if that explained everything. The coordinated absurdity? Impressive.
+                </p>
+            </section>
+            <section id="museum" class="section">
+                <h2>Bureaucracy Ballet: The Museum of Administrative Artifacts</h2>
+                <h3>Exhibit 547-B: The Elusive Residence Card</h3>
+                <p>
+                    On indefinite loan from the Italian Immigration Office, the Permesso di Soggiorno is a mythical artifact rumored to grant legal residency and mild peace of mind. This specimen is generously withheld from its owner, now immortalized in administrative history.
+                </p>
+                <p>
+                    Admire its glossy surface. Touching is prohibited—much like ever receiving it.
+                </p>
+                <p><em>Interpretation:</em> A tribute to the eternal dance between hope and institutional indifference.</p>
+            </section>
+            <section id="hall" class="section">
+                <h2>Hall of Eternal Processes: The Italian Experience</h2>
+                <h4>Main Exhibit: The Residency Card – A Saga of Hope, Paper, and Despair</h4>
+                <h5>Act I: The Healthcare Hustle</h5>
+                <p>Countless visits, promises, and nothing. A number exists, but nobody knows its purpose.</p>
+                <h5>Act II: The Registered Contract Riddle</h5>
+                <p>Submitted to the Agenzia delle Entrate, then vanished. Stamped upside down—modern performance art.</p>
+                <h5>Act III: The Residence Card Revival (Unreleased Cut)</h5>
+                <p>Months of effort, fingerprinting, promises… and silence. Now a permanent resident in “Artifacts That Never Fulfilled Their Destiny.”</p>
+                <p><em>Curator’s Note:</em> A masterclass in circular logic: do everything right, get nothing.</p>
+                <p><strong>Interactive Experience:</strong> Press the red button to hear: “Your request is being processed.” It’s like the real thing—just less emotionally damaging.</p>
+            </section>
+            <section id="strategic" class="section">
+                <h2>Strategic Surrender: ISTI-CNR Holds the Documents</h2>
+                <p>
+                    The three crucial documents for collecting the residence card—registered mail receipt (<em>assicurata</em>), payment attestation, and the Questura appointment sheet—are safely with ISTI-CNR.
+                </p>
+                <p>
+                    The Italian Immigration Office in Pisa directed me to the police station to report these documents as lost, although they are known to exist and are in safe keeping. I pretended to have lost them just to highlight systemic shortcomings.
+                </p>
+                <p>
+                    What’s really baffling is that I possess the <em>edilizia privata</em> from the Comune di Pisa, a document more authoritative than those three. The edilizia privata cannot be obtained without those documents, so why require them again? This shows a notable lack of mutual trust and poor coordination between authorities.
+                </p>
+                <p>
+                    Passport, invitation message, and <em>edilizia privata</em> should suffice as proof of residence. Instead, the tangled web of bureaucracy continues.
+                </p>
+                <p>
+                    No chasing, no more bureaucracy games. Let them muse on their inefficiencies. My pride and humor remain intact.
+                </p>
+            </section>
+            <section id="micdrop" class="section">
+                <h2>Mic Drop: Bureaucratic Comedy</h2>
+                <p>
+                    To the architects of bureaucracy: your elusive residency card means nothing to me. Keep it, museum it, admire it under dramatic lighting—my pride, sanity, and humor are untouchable.
+                </p>
+            </section>
+            <section id="final" class="section">
+                <h2>Final Thoughts & Viral Punchline</h2>
+                <p>
+                    With MediaWorld now under Chinese ownership via JD.com, my frustration reached a new level of clarity. Italy’s collaboration with a Chinese tech powerhouse made me want to shout, <em>"Well done, Italy!"</em> It’s no surprise your services have suffered—both parties seem perfectly matched in their coordinated stupidity. This feels like deja vu, another experience with Chinese leadership stumbling through the complexities of managing a developed foreign market.
+                </p>
+                <p>
+                    In the midst of my own convoluted experiences, my mom recently shared her concerns about how badly workers from my country are treated in places like China and Cambodia. Recent reports confirm these abuses—forced labor, slavery, torture, and trafficking tied to state complicity and criminal groups. This adds another painful layer to my frustrations dealing with Chinese leadership and outsourcing here in Italy.
+                </p>
+                <p>
+                    It’s like connecting the dots. Italy, the land of rich culture and history, slowly overshadowed by a foreign giant whose leadership style sometimes feels like it’s from another planet—one where confusion and inefficiency reign supreme. Humorous yet painfully true.
+                </p>
+                <p>
+                    <strong class="highlight">
+                        Hahaha, it's like trying to generate a zero receipt as if I received it for free from Chinese outsourcing to Italian!
+                    </strong>
+                </p>
+                <blockquote>“They didn’t outsmart me—they bureaucrat’d themselves. I kept my pride, my sanity, and my sense of humor. Who really won?”</blockquote>
+                <p><strong>€1000 gone. Receipt = 0. Tech support = Apple. Logic = nonexistent. #SoSoStupid</strong></p>
+                <div class="footer" role="contentinfo">
+                    Sincerely,<br>
+                    <span class="author">Kristina P. Sinaga</span>
+                    <div style="margin-top:12px;font-size:0.85rem;color:var(--text-secondary);font-style:italic">
+                        🎮 Pro tip: Try the classic gaming sequence on your keyboard... ↑↑↓↓←→←→BA
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <script>
+        /* --- UI: TOC toggle, theme, progress, back-to-top, soft animations --- */
+        function toggleTableOfContents(){
+            const toc = document.querySelector('.table-of-contents');
+            toc.classList.toggle('open');
+        }
+        function toggleTheme(){
+            const body = document.body;
+            if(body.getAttribute('data-theme') === 'dark'){
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme','light');
+            } else {
+                body.setAttribute('data-theme','dark');
+                localStorage.setItem('theme','dark');
+            }
+        }
+        function loadTheme(){
+            const saved = localStorage.getItem('theme');
+            if(saved === 'dark') document.body.setAttribute('data-theme','dark');
+        }
+        function updateReadingProgress(){
+            const article = document.querySelector('article');
+            const progress = document.querySelector('.reading-progress');
+            if(!article || !progress) return;
+            const rect = article.getBoundingClientRect();
+            const height = article.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+            const percent = Math.min(100, Math.max(0, (scrolled / Math.max(1, height)) * 100));
+            progress.style.width = percent + '%';
+            progress.setAttribute('aria-valuenow', String(Math.round(percent)));
+        }
+        function scrollToTop(){
+            window.scrollTo({top:0,behavior:'smooth'});
+            document.querySelector('h1')?.focus();
+        }
+        function toggleBackToTop(){
+            const btn = document.querySelector('.back-to-top');
+            if(window.pageYOffset > 400) btn.classList.add('visible'); else btn.classList.remove('visible');
+        }
+        // Smooth anchor scroll and history update
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if(!a) return;
+            const target = document.querySelector(a.getAttribute('href'));
+            if(target){
+                e.preventDefault();
+                target.scrollIntoView({behavior:'smooth',block:'start'});
+                history.pushState(null,'',a.getAttribute('href'));
+            }
+        });
+        // Activate accessible highlights
+        function makeHighlightsInteractive(){
+            document.querySelectorAll('.highlight').forEach(el=>{
+                el.setAttribute('tabindex','0');
+                el.setAttribute('role','note');
+            });
+        }
+        // Reveal sections with slight stagger
+        function revealSections(){
+            document.querySelectorAll('.section').forEach((s,i)=>{
+                s.style.animationDelay = (i*80)+'ms';
+            });
+        }
+        // Basic TOC active link tracking
+        function updateActiveTOC(){
+            const links = document.querySelectorAll('.toc-link');
+            const offset = 140;
+            links.forEach(link=>{
+                const target = document.querySelector(link.getAttribute('href'));
+                if(!target) return;
+                const top = target.getBoundingClientRect().top + window.scrollY;
+                const bottom = top + target.offsetHeight;
+                const pos = window.scrollY + offset;
+                if(pos >= top && pos <= bottom){
+                    links.forEach(l=>l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        }
+        // Konami mini Easter egg (keystroke sequence unlocks a playful notification)
+        (function konami(){
+            const seq = [38,38,40,40,37,39,37,39,66,65];
+            let buffer = [];
+            let last = Date.now();
+            document.addEventListener('keydown', (e)=>{
+                if(Date.now()-last > 3000) buffer = [];
+                last = Date.now();
+                if([38,40,37,39,66,65].includes(e.keyCode)){
+                    buffer.push(e.keyCode);
+                    if(buffer.length > seq.length) buffer.shift();
+                    if(buffer.toString() === seq.toString()){
+                        const n = document.createElement('div');
+                        n.style.cssText = 'position:fixed;left:50%;top:20%;transform:translateX(-50%);background:var(--bg-secondary);padding:18px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.2);z-index:9999';
+                        n.innerHTML = '<strong>🎉 CHAOS MODE (friendly)</strong><div style="margin-top:8px;color:var(--text-secondary)">You found the easter egg. Calm down and enjoy the satire.</div><div style="margin-top:12px;text-align:right"><button style="padding:6px 12px;border-radius:8px;border:none;background:var(--text-accent);color:white;cursor:pointer" onclick="this.parentElement.parentElement.remove()">Close</button></div>';
+                        document.body.appendChild(n);
+                        buffer = [];
+                    }
+                } else buffer = [];
+            });
+        })();
+        // Init
+        document.addEventListener('DOMContentLoaded', ()=>{
+            loadTheme();
+            makeHighlightsInteractive();
+            revealSections();
+            updateReadingProgress();
+            updateActiveTOC();
+            // scroll events with light throttling
+            let t;
+            window.addEventListener('scroll', ()=>{
+                if(t) return;
+                t = setTimeout(()=>{
+                    updateReadingProgress();
+                    toggleBackToTop();
+                    updateActiveTOC();
+                    t = null;
+                }, 50);
+            }, {passive:true});
+            // Close TOC when clicking outside
+            document.addEventListener('click', (e)=>{
+                const toc = document.querySelector('.table-of-contents');
+                const nav = document.querySelector('.nav-toggle');
+                if(toc.classList.contains('open') && !toc.contains(e.target) && !nav.contains(e.target)){
+                    toc.classList.remove('open');
+                }
+            });
+            // keyboard: Esc closes TOC
+            document.addEventListener('keydown', (e)=>{
+                if(e.key === 'Escape'){
+                    document.querySelector('.table-of-contents')?.classList.remove('open');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

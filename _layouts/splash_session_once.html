@@ -1,0 +1,37 @@
+<!-- Homepage Splash Animation -->
+<div id="splash" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #1f1f2e, #ff66a6); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column;
+  color: white; font-family: 'Inter', sans-serif; font-size: 1.8em;">
+
+  <div style="text-align: center;">
+    <div style="animation: pulse 2s infinite;">
+      Möbius Loop Activated...
+    </div>
+    <div style="font-size: 0.6em; margin-top: 10px;">
+      Welcome to Kristina's World of Chaos-Controlled Precision
+    </div>
+  </div>
+</div>
+
+<script>
+  // Only show splash if not shown this session
+  if (sessionStorage.getItem('mobiusSplashShown')) {
+    document.getElementById('splash').style.display = 'none';
+  } else {
+    sessionStorage.setItem('mobiusSplashShown', 'true');
+    setTimeout(() => {
+      const splash = document.getElementById('splash');
+      splash.style.transition = 'opacity 1.5s ease-out';
+      splash.style.opacity = '0';
+      setTimeout(() => splash.style.display = 'none', 1500);
+    }, 2500);
+  }
+</script>
+
+<style>
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+</style>

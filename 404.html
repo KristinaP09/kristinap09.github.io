@@ -1,0 +1,76 @@
+---
+permalink: /404.html
+layout: default
+---
+
+<style>
+  .error-container {
+    text-align: center;
+    padding: 80px 20px;
+    color: #ff99cc;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .error-title {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    color: #ff66a6;
+  }
+
+  .error-message {
+    font-size: 1.4em;
+    margin-bottom: 2em;
+  }
+
+  .back-home {
+    display: inline-block;
+    background-color: #1f1f2e;
+    color: #ff66a6;
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-home:hover {
+    background-color: #333;
+  }
+
+  @keyframes blink {
+    0%, 100% { r: 4; }
+    50% { r: 1; }
+  }
+
+  .mobius-404 {
+    margin: 30px auto;
+    display: block;
+  }
+</style>
+
+<div class="error-container">
+  <h1 class="error-title">404</h1>
+  <p class="error-message">Oops... you’ve wandered into the Möbius strip of broken links.</p>
+
+  <!-- Animated Möbius SVG -->
+  <svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="mobius-404">
+    <title>Lost in a Loop of Logic</title>
+    <defs>
+      <radialGradient id="glow404" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ff99cc" />
+        <stop offset="100%" stop-color="#1f1f2e" />
+      </radialGradient>
+    </defs>
+    <g>
+      <ellipse cx="50" cy="50" rx="35" ry="20" fill="url(#glow404)" stroke="#ff66a6" stroke-width="2">
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite"/>
+      </ellipse>
+      <circle cx="65" cy="45" r="4" fill="#ff66a6">
+        <animate attributeName="r" values="4;1;4" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </svg>
+
+  <a href="/" class="back-home">Return to Reality</a>
+</div>

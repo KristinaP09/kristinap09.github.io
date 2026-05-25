@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systems, Truth, and the Mathematics of Dysfunction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.85;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            font-size: 16px;
+        }
+        
+        .wrapper {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007acc, #0056b3);
+            width: 0%;
+            z-index: 1000;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid #007acc;
+        }
+        
+        header h1 {
+            font-size: 3.2em;
+            color: #0a1f2e;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            color: #555;
+            font-size: 1.15em;
+            font-style: italic;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        
+        .meta {
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 2px solid #e5e5e5;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .toc-section {
+            background: linear-gradient(135deg, #f0f4f8 0%, #e8ecf1 100%);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 5px solid #007acc;
+        }
+        
+        .toc-section h3 {
+            color: #0a1f2e;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        
+        .toc-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .toc-list li {
+            padding: 8px 0;
+        }
+        
+        .toc-list a {
+            color: #007acc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-list a:hover {
+            color: #0056b3;
+            padding-left: 8px;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, #fff9f0 0%, #fff5e6 100%);
+            border-left: 5px solid #ff9800;
+            padding: 25px;
+            margin-bottom: 35px;
+            border-radius: 6px;
+            font-style: italic;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        article {
+            background: white;
+            padding: 60px 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+        
+        article > h2 {
+            font-size: 2.2em;
+            color: #0a1f2e;
+            margin-top: 55px;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 4px solid #007acc;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        
+        article > h2:first-child {
+            margin-top: 0;
+        }
+        
+        article h3 {
+            font-size: 1.5em;
+            color: #34495e;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        p {
+            margin-bottom: 22px;
+            text-align: justify;
+            word-break: break-word;
+            font-size: 1em;
+        }
+        
+        .intro-paragraph {
+            font-size: 1.15em;
+            line-height: 1.95;
+            color: #222;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 50px 0;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+            font-size: 0.95em;
+        }
+        
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin: 20px 0;
+            line-height: 1.5;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+            border-radius: 0;
+        }
+        
+        .highlight-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        .key-takeaway {
+            background-color: #d1ecf1;
+            border-left: 5px solid #0c5460;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #0c5460;
+        }
+        
+        .insight-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
+            border-left: 5px solid #007acc;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+            font-style: italic;
+            color: #333;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #1a252f;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        .quote {
+            border-left: 4px solid #007acc;
+            padding-left: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .part-header {
+            background: linear-gradient(135deg, #007acc 0%, #0056b3 100%);
+            color: white;
+            padding: 20px;
+            margin: 30px 0 25px 0;
+            border-radius: 6px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .read-time {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            article {
+                padding: 30px 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            article > h2 {
+                font-size: 1.5em;
+            }
+            
+            .wrapper {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Systems, Truth, and the Mathematics of Dysfunction</h1>
+            <p class="subtitle">A Comprehensive Exploration of Systemic Failures, Institutional Barriers, and the Art of Personal Resilience</p>
+            <div class="meta">
+                <span>December 2025</span>
+                <span class="read-time">• 15 minute read</span>
+            </div>
+        </header>
+
+        <article>
+            <h2>The Paradox of Identity: When Data Contradicts Reality</h2>
+            
+            <p class="intro-paragraph">The arXiv database shows "Philien," but the email arrives from "Philip Relien." This discrepancy, seemingly trivial at first glance, serves as a microcosm for how systemic inconsistencies erode institutional integrity and breed distrust in information systems.</p>
+            
+            <p>I found myself compelled to respect the arXiv's moderation team for their decisive action. Their stringent filtering protocols for author endorsements demonstrate an institutional commitment to research integrity. The landscape of academic publishing has become cluttered with individuals seeking credibility without substantive contributions—a phenomenon both disturbing and increasingly common.</p>
+            
+            <p>When I contributed endorsement notes, I acted in good faith. Yet the manuscripts in question lacked the authenticity their purported author claimed. The confidence in presentation did not align with the intellectual rigor evident in the work itself.</p>
+
+            <div class="part-header">⚙️ Part 1: The Mathematics of Data Inconsistency</div>
+            
+            <h3>When Information Systems Fail</h3>
+            
+            <p>In machine learning and data science, such inconsistencies represent fundamental preprocessing challenges. A simple string mismatch—"Philien" versus "Philip Relien"—cascades through prediction models, compromising accuracy and introducing systematic bias.</p>
+            
+            <p><strong>The ML Parallel:</strong> Consider a supervised learning model trained on corrupted labels. When training data contains inconsistent identifiers, the model learns erratic patterns, leading to poor generalization:</p>
+            
+<pre><code>def clean_data(data):
+    """
+    Clean dataset by removing inconsistencies (e.g., 'Philien' vs 'Philip Relien')
+    """
+    for i in range(len(data)):
+        if data[i]['author_name'] != correct_name(data[i]['author_name']):
+            data[i]['author_name'] = correct_name(data[i]['author_name'])
+    return data</code></pre>
+            
+            <div class="key-takeaway">
+                <strong>Key Insight:</strong> Data preprocessing is not merely an administrative step—it is foundational. Inconsistent data leads to corrupted training, poor predictions, and ultimately, failed systems.
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>The Imitation Konoha: A System Optimized for Failure</h2>
+            
+            <p class="intro-paragraph">Imagine a country that runs on centuries-old failed methodologies, continuously patching problems without ever addressing root causes. This is the "Imitation Konoha"—a metaphorical representation of institutional stagnation.</p>
+            
+            <h3>Legacy Systems and Stagnant Optimization</h3>
+            
+            <p>The fundamental architecture of this system relies on outdated problem-solving approaches that demonstrably failed generations ago. Leadership prioritizes volume over logic; loudness substitutes for competence; and critical thinking is treated as an optional luxury rather than a necessity.</p>
+            
+            <p>Picture this scenario: A delivery worker, responsible for operational failure, deflects accountability by saying, "Lucky you're a woman." He believes invoking divine will solves systemic incompetence. This reflects a deeper institutional pathology—accountability is optional; defensiveness is mandatory.</p>
+            
+            <h3>Mathematical Metaphor: Stagnant Optimization Algorithms</h3>
+            
+            <p>In optimization theory, gradient descent can become trapped in local minima when using outdated algorithms or insufficient learning rates. The Imitation Konoha represents exactly such a system—continuously optimizing locally without ever exploring the global solution space.</p>
+            
+<pre><code># Gradient descent stuck in local minimum due to poor methodology
+def stagnant_optimization(model, data, learning_rate=0.0001, max_epochs=1000):
+    for epoch in range(max_epochs):
+        loss = model.compute_loss(data)
+        gradients = model.compute_gradients(data)
+        
+        # Minimal updates due to outdated methods
+        for param in model.parameters():
+            param -= learning_rate * gradients[param]
+        
+        # Check if stuck (loss plateau indicates local minimum)
+        if epoch > 100 and abs(loss - prev_loss) < 1e-8:
+            print("System stuck in local minimum - outdated methods detected")
+            break</code></pre>
+            
+            <div class="insight-box">
+                <strong>The Core Problem:</strong> When a system repeatedly applies failed solutions, it descends into a deterministic cycle of incompetence. Innovation requires departing from historical methods, but institutional inertia prevents such departure.
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>Institutional Corruption: When Incentives Reward Failure</h2>
+            
+            <h3>Memory of Elementary School: A Case Study in Systemic Dysfunction</h3>
+            
+            <p>My grandmother was taken to a police station because a drug dealer had stored enormous quantities of drugs in her house. She has since passed away, but the memory remains crystalline—a vivid illustration of systemic dysfunction.</p>
+            
+            <p>This was among the largest cases on record, yet the incompetence matched the scale. The system rewarded failure more generously than responsibility. Officers were paid more for poor performance than for diligent work. This creates a perverse incentive structure.</p>
+            
+            <p>I have always been straightforward. If others dislike my honesty, I accept that consequence. I am exceptionally skilled at avoiding mistakes. Should institutional actors pursue legal action merely for stating truth, they will face appropriate consequences. Truth is inevitable—it emerges now or later, but it always emerges.</p>
+            
+            <h3>Data Corruption as Institutional Incentive</h3>
+            
+            <p>This scenario mirrors a supervised learning problem with corrupted labels. When the training labels are fundamentally wrong—when failing performance receives rewards and correct behavior receives punishment—the model learns to perpetuate errors.</p>
+            
+<pre><code>def corrupt_incentive_structure(performance_data):
+    """
+    Simulate a system where poor performance receives higher rewards
+    """
+    for i in range(len(performance_data)):
+        if performance_data[i]['quality'] == 'poor':
+            performance_data[i]['reward'] = 'high'  # Perverse incentive
+        elif performance_data[i]['quality'] == 'excellent':
+            performance_data[i]['reward'] = 'low'   # Penalties for excellence
+    return performance_data</code></pre>
+            
+            <div class="key-takeaway">
+                <strong>Critical Truth:</strong> Corrupt incentive structures cannot be reformed through patches. They require systemic reconstruction. A model trained on corrupted labels will generalize those corruptions to new data.
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>Fake Emergencies and Simulated Competence</h2>
+            
+            <h3>When Performance is Theater</h3>
+            
+            <p>There was once an "emergency" in Jakarta. Sirens wailed, commotion erupted, theatricality reached peak performance—yet nothing substantive occurred. This exemplifies the distinction between simulation and reality.</p>
+            
+            <p>China demonstrates mastery in making simulated systems appear genuine. The Imitation Konoha lacks even this capability. What results from investing in noise rather than knowledge becomes immediately apparent.</p>
+            
+            <p>The irony intensified when external criticism—from individuals of other nationalities pointing out operational failures—transformed the system's incompetence into online sensation. Rather than addressing root causes, the system celebrated the attention itself.</p>
+            
+            <h3>Machine Learning Parallel: Simulation vs. Real-World Performance</h3>
+            
+            <p>A model trained on synthetic data can demonstrate excellent performance on test sets derived from the same synthetic distribution. Yet when deployed against real-world data with genuinely different characteristics, performance collapses catastrophically.</p>
+            
+<pre><code># Model trained on synthetic data performs well in lab
+def train_on_synthetic_data(model):
+    synthetic_data = generate_synthetic_features()
+    model.train(synthetic_data)
+    test_results = model.evaluate(synthetic_data)
+    print(f"Synthetic test performance: {test_results}")  # Appears excellent
+    return model
+
+# But fails on real-world data
+def deploy_in_real_world(model, real_data):
+    real_results = model.evaluate(real_data)
+    print(f"Real-world performance: {real_results}")  # Catastrophic failure</code></pre>
+            
+            <div class="highlight-box">
+                <strong>Critical Lesson:</strong> Simulated environments that fail to capture the true feature space of real-world problems create the illusion of competence while masking fundamental system failure. Performance on fake data provides no predictive value.
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>Personal Resilience and the 5% Rule</h2>
+            
+            <h3>Strategic Effort Allocation in Broken Systems</h3>
+            
+            <p>In 2021, while my father lay dying in another city, I was asked what action I would take. I responded: "If he dies, that will be acceptable." Two days later, he did.</p>
+            
+            <p>The institution treated his illness as a distraction from my productivity. Months later, I resigned and paid the associated penalties. Remarkably, despite my notice period expiring, I never received formal severance documentation. Their bureaucratic systems remain perpetually broken.</p>
+            
+            <p>I have learned a profound truth: workplaces claiming to function as "family" demonstrate this commitment only when convenient. When genuine crisis arrives, such institutions prioritize operational continuity over human welfare.</p>
+            
+            <p>Another institutional absurdity: airport security personnel demanded proof of my father's death before permitting me to enter the departure gate from Jakarta to Medan. A hospital-issued death certificate proved insufficient. Instead, they required my mother to display a photograph of his deceased body via video call—a bureaucratic cruelty masquerading as protocol.</p>
+            
+            <p>These officials possessed the institutional authority to verify death records directly with the hospital or contact colleagues in my home region. They chose theatrical humiliation instead. This exemplifies how broken systems prioritize performative power over functional compassion.</p>
+            <h3>The Strategy of Minimal Resource Allocation</h3>
+            
+            <p>When operating within a fundamentally corrupt system that offers neither trust nor reciprocal support, one strategic response involves allocating minimal effort. I call this the "5% Rule."</p>
+            
+            <p>I provide five percent of my full capacity to environments that have demonstrated they neither deserve nor can effectively utilize greater investment. The remaining ninety-five percent I reserve for endeavors with genuine potential, for people who have proven trustworthy, and for work that genuinely matters.</p>
+            
+            <h3>Mathematical Framing: Resource Optimization Under Adversarial Conditions</h3>
+            
+            <p>This represents a rational optimization strategy analogous to early stopping in deep learning:</p>
+            
+<pre><code>def allocate_effort(system_trust_level):
+    """
+    Strategic effort allocation based on system trustworthiness
+    """
+    if system_trust_level < 0.5:  # Broken system detected
+        effort_allocation = 0.05   # Allocate only 5%
+        reserve_allocation = 0.95  # Reserve 95% for better opportunities
+    else:
+        effort_allocation = 1.0    # Full effort for trustworthy systems
+        reserve_allocation = 0.0
+    
+    return effort_allocation, reserve_allocation</code></pre>
+            
+            <div class="key-takeaway">
+                <strong>Strategic Insight:</strong> Effort is a limited resource. Investing maximal effort in systems demonstrating poor ROI is irrational. Strategic minimum allocation prevents exploitation while preserving capacity for worthwhile endeavors.
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>The Noise Problem: Sensitivity, Resilience, and Personal Boundaries</h2>
+            
+            <h3>On Sensitivity and Systemic Harassment</h3>
+            
+            <p>I possess acute sensitivity to certain types of noise. One and a half years of postdoctoral research at CYCU left this sensitivity unresolved. The disruption persists despite geographic relocation to Italy.</p>
+            
+            <p>This sensitivity carries psychological weight. Encountering individuals from the same ethnic background as those who previously harassed me triggers automatic aversive responses. I recognize this as cognitively irrational, yet it remains viscerally real—a neurological scar from sustained institutional harassment.</p>
+            
+            <h3>Dreams, Dissociation, and Mastery</h3>
+            
+            <p>My first employment in Indonesia triggered an unsettling phenomenon: nightly dreams that persist throughout sleep, creating continuous nocturnal narratives. These dreams are not pleasant fantasies—they are scenarios of pressure, loss of control, and forced engagement in circumstances beyond my agency.</p>
+            
+            <p>Sleep became a performance space for anxiety. I developed the habit of teeth grinding—not from conscious rage, but as an unconscious stress response. A mouth guard resolved this physical manifestation.</p>
+            
+            <p>More importantly, I developed a cognitive reframe: these dreams are not real. When nocturnal scenarios begin, I remind myself of their illusory nature. This recognition collapses the emotional intensity, allowing me to transition past them as though they never occurred.</p>
+            
+            <p>Italy provided refuge—not merely geographic, but psychological. Its people understand the distinction between genuine and performative, authentic and fake. This cultural environment enabled my recovery. By recovery, I mean a gradual restoration of my sense of safety and control over my mental landscape. In other words, a reclaiming of my inner sovereignty.</p>
+            
+            <h3>On Solitude and the Selective Life</h3>
+            
+            <p>I am fundamentally quiet. This is not introversion masquerading as preference—it is genuine disinterest in unnecessary communication. Words are precious; they warrant investment only when meaningful.</p>
+            
+            <p>Over years, I have become exceptionally skilled at filtering individuals worthy of genuine engagement. My life operates through explicit invitation. Those not invited remain external.</p>
+            
+            <div class="quote">
+                "It's better to be alone than with idiots who have no direction. You were born alone. You'll die alone. Everything else is just noise. A distraction. Move forward because when you wake up, you won't waste time on distractions. You'll focus, and you'll win."
+            </div>
+            
+            <p>This is not cynicism. This is clarity earned through hard experience.</p>
+
+            <hr class="section-divider">
+
+            <h2>Institutional Failures and Individual Sovereignty</h2>
+            
+            <h3>The Healthcare System Paradox</h3>
+            
+            <p>In the Imitation Konoha, healthcare workers often gain remuneration through population dysfunction rather than population wellness. The incentive structures are fundamentally misaligned with claimed missions.</p>
+            
+            <p>This city, with its constrained resources and limited institutional capacity, exemplifies this paradox. Security systems are decades out of date. Digital infrastructure lags by generations. The combination creates an environment where basic operational competence becomes remarkable.</p>
+            
+            <p>When I work, disruptions occur with suspicious frequency—power cuts, unexplained noise, interference patterns that suggest deliberate coordination. These are control mechanisms.</p>
+            
+            <h3>The Inverse Relationship Between Truth and Social Acceptance</h3>
+            
+            <p>Intelligent, educated individuals represent genuine threats to systems dependent on population ignorance. Such systems respond to truth with hostility.</p>
+            
+            <p>I refuse to be silenced through intimidation. If bureaucracies initiate legal action for honest speech, they reveal their fundamental illegitimacy. The truth cannot be suppressed indefinitely—in this age of ubiquitous information technology, concealment becomes statistically impossible.</p>
+            
+            <div class="key-takeaway">
+                <strong>Fundamental Truth:</strong> Systems that punish honesty while rewarding deception have lost legitimacy. Institutional actors may threaten consequences, but these threats reflect institutional weakness, not individual vulnerability.
+            </div>
+
+            <hr class="section-divider">
+
+            <h2>Conclusion: The Path Forward Through Clarity</h2>
+            
+            <h3>Personal Mastery and Systemic Acceptance</h3>
+            
+            <p>I have spent years developing mastery over the nocturnal anxiety that institutional dysfunction created. This mastery required recognizing the distinction between legitimate threats and psychological echoes.</p>
+            
+            <p>Institutions will attempt to control, intimidate, and silence. These are inherent characteristics of corrupt systems. But individuals who recognize these patterns possess a profound advantage: <strong>they can choose</strong>.</p>
+            
+            <p>I choose clarity over comfort. I choose honesty over acceptance. I choose my reserved 95% for endeavors worthy of that investment rather than squandering it on systems designed to extract value while providing nothing in return.</p>
+            
+            <h3>The Mathematics of Truth</h3>
+            
+            <p>Systems optimized for deception become increasingly unstable as information accessibility increases. In 2025, concealing truth is not merely unethical—it is computationally implausible. Falsehoods leave traces. Inconsistencies become evident. The "Philien versus Philip Relien" discrepancy illustrates this: institutional actors cannot maintain fabricated narratives indefinitely.</p>
+            
+            <h3>The 5% and the 95%</h3>
+            
+            <p>If you perceive me as lacking effort, remember this: you have received 5%. The remaining 95% remains reserved for endeavors with genuine potential. Should you demand my full commitment while demonstrating institutional untrustworthiness, you misunderstand how rational resource allocation functions.</p>
+            
+            <p>Awards, titles, and bureaucratic recognition hold no value to me. What I cannot purchase—genuine integrity, authentic connection, meaningful contribution—these alone merit sustained investment. Everything else? Noise.</p>
+            
+            <div class="highlight-box">
+                <strong>Final Reflection:</strong> I wrote this essay while maintaining my strategic 5% allocation to dysfunctional environments. The 95% remains available for work of genuine significance. This is not laziness. This is strategy. This is sovereignty.
+            </div>
+        </article>
+
+        <footer>
+            <p><strong>About This Essay</strong></p>
+            <p>This comprehensive analysis integrates personal narrative, institutional critique, and technical frameworks to examine how systemic dysfunction manifests across multiple domains—from academic publishing to corporate environments to national governance.</p>
+            <p>Published December 2025 | A work of critical reflection and analytical depth</p>
+        </footer>
+    </div>
+</body>
+</html>

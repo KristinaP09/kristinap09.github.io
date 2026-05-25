@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kristina P. Sinaga, Ph.D. – CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+    
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2c5282;
+      --accent: #c53030;
+      --accent-light: #e53e3e;
+      --text-dark: #1a202c;
+      --text-medium: #4a5568;
+      --text-light: #718096;
+      --border: #e2e8f0;
+      --bg-light: #f7fafc;
+      --bg-subtle: #edf2f7;
+      --white: #ffffff;
+      --sans: 'Source Sans 3', 'Segoe UI', 'Roboto', Arial, sans-serif;
+      --serif: 'Merriweather', Georgia, serif;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+      --section-spacing: 2.2em;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--sans);
+      color: var(--text-dark);
+      background: var(--bg-light);
+      margin: 0;
+      padding: 2em;
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      padding: 0;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary);
+    }
+    
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 2.5em 3em 2em;
+      background: linear-gradient(180deg, var(--bg-subtle) 0%, var(--white) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    header::after {
+      display: none;
+    }
+    
+    .profile-info {
+      flex: 1 1 60%;
+      padding-right: 2em;
+    }
+    
+    .profile-info h1 {
+      font-family: var(--serif);
+      font-size: 2.2em;
+      color: var(--primary);
+      margin: 0 0 0.2em 0;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    
+    .profile-info .subtitle {
+      font-family: var(--sans);
+      font-size: 1.1em;
+      color: var(--text-medium);
+      font-weight: 400;
+      margin-bottom: 1em;
+      line-height: 1.5;
+    }
+    
+    .profile-info .subtitle a {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+    
+    .contact-icons {
+      display: flex;
+      gap: 0.8em;
+      margin-top: 0.8em;
+    }
+    
+    .contact-icons a {
+      color: var(--primary);
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      padding: 0.6em;
+      border-radius: 50%;
+      background: var(--white);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+    
+    .contact-icons a:hover {
+      color: var(--white);
+      background: var(--primary);
+      border-color: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .profile-photo {
+      flex: 0 0 130px;
+      border: 3px solid var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+      max-width: 130px;
+      max-height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .profile-photo:hover {
+      transform: none;
+    }
+    
+    .profile-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    hr.divider {
+      display: none;
+    }
+    
+    .quote-section {
+      text-align: left;
+      margin: 0;
+      padding: 1.2em 3em;
+      background: var(--bg-subtle);
+      border-left: none;
+      border-radius: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .quote-section blockquote {
+      font-family: var(--serif);
+      font-size: 1em;
+      font-style: italic;
+      color: var(--text-medium);
+      margin: 0;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 1.5em;
+    }
+    
+    .quote-section blockquote:before {
+      content: '"';
+      font-size: 2em;
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+      top: -0.1em;
+      opacity: 0.5;
+      font-family: var(--serif);
+    }
+    
+    .quote-section cite {
+      font-family: var(--sans);
+      font-size: 0.85em;
+      color: var(--text-light);
+      font-weight: 500;
+      font-style: normal;
+      display: block;
+      margin-top: 0.5em;
+      padding-left: 1.8em;
+    }
+    
+    section {
+      margin: 0;
+      padding: 1.8em 3em;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    section:last-of-type {
+      border-bottom: none;
+    }
+    
+    .cvsection {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
+      padding-bottom: 0.5em;
+      border-bottom: 2px solid var(--primary);
+    }
+    
+    .cvsection-bar {
+      display: none;
+    }
+    
+    .cvsection-title {
+      font-family: var(--sans);
+      font-size: 1.15em;
+      color: var(--primary);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    .section-rule {
+      display: none;
+    }
+    
+    ul {
+      padding-left: 0;
+      margin: 0.8em 0;
+    }
+    
+    ul li {
+      margin-bottom: 0.6em;
+      list-style: none;
+      position: relative;
+      padding-left: 1.5em;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+    
+    ul li:before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--primary-light);
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+    
+    ul li:nth-child(odd):before,
+    ul li:nth-child(even):before {
+      background: none;
+      box-shadow: none;
+    }
+    
+    .twocols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5em;
+      margin-top: 0.5em;
+    }
+    
+    .twocols > div > b {
+      font-family: var(--sans);
+      color: var(--primary);
+      font-size: 0.95em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      display: block;
+      margin-bottom: 0.5em;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .tabular-section {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 0;
+    }
+    
+    .tabular-section td {
+      vertical-align: top;
+      padding-bottom: 1.8em;
+      border: none;
+    }
+    
+    .tabular-section tr:last-child td {
+      padding-bottom: 0;
+    }
+    
+    .tabular-section .date {
+      font-family: var(--sans);
+      color: var(--text-light);
+      font-weight: 600;
+      width: 7em;
+      white-space: nowrap;
+      padding: 0;
+      padding-right: 1.5em;
+      font-size: 0.9em;
+      background: none;
+      border-radius: 0;
+      margin-right: 0;
+      text-align: left;
+      line-height: 1.5;
+      box-shadow: none;
+      border: none;
+    }
+    
+    .tabular-section .role {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 1.05em;
+      margin-bottom: 0.15em;
+      display: inline;
+      background: none;
+      -webkit-text-fill-color: var(--text-dark);
+    }
+    
+    .tabular-section .institution {
+      color: var(--primary-light);
+      font-weight: 500;
+      font-size: 0.95em;
+      margin-bottom: 0.6em;
+      display: block;
+      background: none;
+      -webkit-text-fill-color: var(--primary-light);
+    }
+    
+    .tabular-section ul {
+      margin-top: 0.5em;
+    }
+    
+    .tabular-section ul li {
+      font-size: 0.95em;
+      margin-bottom: 0.4em;
+    }
+    
+    .languages-table {
+      width: 100%;
+      margin: 0.5em 0;
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    
+    .languages-table td {
+      padding: 0.6em 0;
+      border: none;
+      font-size: 0.95em;
+      background: none;
+      border-radius: 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .languages-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .languages-table td:first-child {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--text-medium);
+      width: 25%;
+    }
+    
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin-top: 0.5em;
+    }
+    
+    .language-item {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1em;
+      transition: all 0.2s ease;
+    }
+    
+    .language-item:nth-child(1),
+    .language-item:nth-child(2),
+    .language-item:nth-child(3) {
+      background: var(--bg-light);
+    }
+    
+    .language-item:hover {
+      background: var(--white);
+      border-color: var(--primary-light);
+      transform: none;
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .language-name {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 1em;
+      margin-bottom: 0.2em;
+      background: none;
+      -webkit-text-fill-color: var(--text-dark);
+    }
+    
+    .language-level {
+      color: var(--text-medium);
+      font-size: 0.85em;
+      font-weight: 400;
+      background: none;
+      -webkit-text-fill-color: var(--text-medium);
+    }
+    
+    .references {
+      color: var(--text-medium);
+      font-style: italic;
+      text-align: center;
+      padding: 1.5em 3em;
+      margin: 0;
+      font-size: 0.95em;
+      font-family: var(--sans);
+      font-weight: 400;
+      background: var(--bg-subtle);
+    }
+    
+    /* Enhanced link styling */
+    a {
+      color: var(--primary-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    
+    a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    
+    /* Core competencies two-column layout */
+    ul[style*="columns"] {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      column-gap: 2em;
+    }
+    
+    ul[style*="columns"] li {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        font-size: 11pt;
+      }
+      
+      .container {
+        box-shadow: none;
+        max-width: 100%;
+      }
+      
+      section {
+        page-break-inside: avoid;
+      }
+    }
+    
+    /* Improved responsive design */
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+      }
+      
+      .container { 
+        border-radius: 0;
+      }
+      
+      header {
+        flex-direction: column;
+        padding: 2em 1.5em;
+        gap: 1.5em;
+      }
+      
+      section {
+        padding: 1.5em;
+      }
+      
+      .profile-info {
+        padding-right: 0;
+      }
+      
+      .profile-info h1 {
+        font-size: 1.8em;
+      }
+      
+      .profile-photo { 
+        margin: 0;
+        align-self: center;
+      }
+      
+      .twocols { 
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+      }
+      
+      .languages-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-icons {
+        justify-content: flex-start;
+      }
+      
+      .tabular-section .date {
+        width: auto;
+        display: block;
+        margin-bottom: 0.3em;
+      }
+      
+      .quote-section {
+        padding: 1em 1.5em;
+      }
+      
+      .references {
+        padding: 1.5em;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .profile-info h1 {
+        font-size: 1.5em;
+      }
+      
+      .cvsection-title {
+        font-size: 1em;
+      }
+      
+      ul[style*="columns"] {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="profile-info">
+      <h1>Kristina P. Sinaga, Ph.D.</h1>
+      <div class="subtitle">Independent Researcher | Founder, <a href="http://neuralglow.ai/" style="color:var(--swish-blue);font-weight:bold;" target="_blank">NeuralGlow.AI</a></div>
+      <div class="contact-icons">
+        <a href="mailto:kristinasinaga41@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/Kristinap09" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://kristinap09.github.io/" title="Website"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </div>
+    <div class="profile-photo">
+      <img src="https://avatars.githubusercontent.com/u/169865712?s=400&u=d8100f51fd1a68806cb9a7201621e3ab96f6534c&v=4" alt="Kristina P. Sinaga portrait">
+    </div>
+  </header>
+
+  <!-- Inspirational Quote -->
+  <div class="quote-section">
+    <blockquote>
+      "Better to be a meaningful specific than a wandering generality."
+    </blockquote>
+    <cite>— Personal Philosophy</cite>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Enhanced Professional Summary with Career Objective and Keywords -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Professional Summary</span>
+    </div>
+    <hr class="section-rule">
+    <ul>
+      <li>Results-driven <b>Applied Mathematics Ph.D.</b> and <b>Independent Researcher</b> with 7+ years of experience in <b>machine learning</b>, <b>data science</b>, <b>multi-view clustering</b>, and <b>federated learning</b> for heterogeneous data systems.</li>
+      <li>Expert in <b>privacy-preserving machine learning</b>, <b>algorithm development</b>, and <b>statistical modeling</b> for large-scale, multi-client environments.</li>
+      <li>Proven track record of publishing in top-tier journals (IEEE, Elsevier, MDPI) and leading international research collaborations.</li>
+      <li>Career Objective: To leverage advanced mathematical and AI expertise to drive innovation in data-driven organizations, focusing on <b>AI research</b>, <b>data science</b>, and <b>applied machine learning</b> roles.</li>
+      <li>Life-long learner committed to continuous professional development and staying at the forefront of emerging technologies.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Facts at a Glance</span>
+    </div>
+    <hr class="section-rule">
+    <table class="languages-table">
+      <tr>
+        <td><b>Location:</b></td>
+        <td>Earth (Available for Remote/Onsite Worldwide)</td>
+      </tr>
+      <tr>
+        <td><b>Availability:</b></td>
+        <td>A month notice preferred; Immediate for Remote Roles</td>
+      </tr>
+      <tr>
+        <td><b>Work Authorization:</b></td>
+        <td>Citizen of Indonesia; Eligible to Work in EU (Italy), Taiwan, and Remote/Onsite Worldwide (with Visa Sponsorship)</td>
+      </tr>
+      <tr>
+        <td><b>LinkedIn:</b></td>
+        <td><a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309" style="color:var(--swish-blue);font-weight:bold;">linkedin.com/in/kristina-p-sinaga-0ba152309/</a></td>
+      </tr>
+      <tr>
+        <td><b>Google Scholar:</b></td>
+        <td><a href="https://scholar.google.com/citations?user=XoJ7EkoAAAAJ" style="color:var(--swish-blue);font-weight:bold;">scholar.google.com/citations?user=XoJ7EkoAAAAJ</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Core Competencies / Keywords Section for LLM/ATS -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Core Competencies</span>
+    </div>
+    <hr class="section-rule">
+    <ul style="columns:2;-webkit-columns:2;-moz-columns:2;">
+      <li>Machine Learning</li>
+      <li>Data Science</li>
+      <li>Federated Learning</li>
+      <li>Multi-View Clustering</li>
+      <li>Algorithm Development</li>
+      <li>Statistical Analysis</li>
+      <li>Dimensionality Reduction</li>
+      <li>Python, R, MATLAB</li>
+      <li>TensorFlow, PyTorch, scikit-learn</li>
+      <li>Cloud Computing</li>
+      <li>Docker, Git</li>
+      <li>Data Integration</li>
+      <li>Privacy-Preserving AI</li>
+      <li>Research Leadership</li>
+    </ul>
+  </section>
+
+  <!-- Standardized Experience Section -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Professional Experience</span>
+    </div>
+    <hr class="section-rule">
+    <table class="tabular-section">
+      <tr>
+        <td class="date">Oct 2025 –<br>Present</td>
+        <td>
+          <span class="role">Independent Researcher</span>, <span class="institution">Not Affiliated</span>
+          <ul>
+            <li>Spearheading independent research in advanced clustering algorithms and privacy-preserving machine learning techniques.</li>
+            <li>Publishing findings in reputable journals and preprint servers, contributing to the academic community.</li>
+            <li>Collaborating with global researchers on innovative projects in machine learning and data science.</li>
+            <li>Reviewing manuscripts for leading journals and conferences in the field of machine learning and data science.</li>
+            <li>Guest editor for special issues on "Clustered Federated Learning for Networks" in MDPI Future Internet journal, co-editing with Prof. Miin-Shen Yang from Chung Yuan Christian University</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Oct 2024 –<br>Sept 2025</td>
+        <td>
+          <span class="role">Postdoctoral Researcher</span>, <span class="institution">ISTI-CNR, Italy</span>
+          <ul>
+            <li>Developed advanced clustering algorithms for heterogeneous data analysis and privacy-preserving machine learning frameworks.</li>
+            <li>Led research on federated learning for multi-view data with focus on novel algorithmic approaches and theoretical foundations.</li>
+            <li>Actively collaborated with international research teams on cutting-edge projects in machine learning and data science.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Apr 2024 –<br>Sep 2024</td>
+        <td>
+          <span class="role">Independent Researcher</span>, <span class="institution">Self-Directed Research</span>
+          <ul>
+            <li>Conducted independent research in machine learning and clustering algorithms, demonstrating self-motivation and research autonomy.</li>
+            <li>Successfully secured arXiv endorsement and published preprint, showcasing ability to produce quality research without institutional support.</li>
+            <li>Maintained active research productivity during career transition, contributing to the advancement of algorithmic methodologies.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Mar 2023 –<br>Mar 2024</td>
+        <td>
+          <span class="role">Postdoctoral Fellow</span>, <span class="institution">Department of Applied Mathematics, Chung Yuan Christian University (CYCU), Taiwan</span>
+          <ul>
+            <li>Developed breakthrough single and multi-view clustering algorithms in both federated and non-federated environments, resulting in publication in IEEE TPAMI.</li>
+            <li>Advanced theoretical foundations of privacy-preserving machine learning and federated clustering methodologies.</li>
+            <li>Established novel algorithmic frameworks that significantly improved clustering performance in heterogeneous data environments.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">Apr 2022 –<br>Feb 2023</td>
+        <td>
+          <span class="role">Professional Development & Continuous Learning</span>, <span class="institution">Self-Directed Professional Development</span>
+          <ul>
+            <li>Completed Machine Learning Specialization and DeepLearning.AI TensorFlow Developer Specialization on Coursera, strengthening foundation in modern AI frameworks.</li>
+            <li>Pursued multiple specialized courses in machine learning, data science, and emerging technologies through continuous online learning.</li>
+            <li>Engaged in strategic career planning and professional development, preparing for transition to advanced research positions.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+
+        <td class="date">Nov 2020 –<br>March 2022</td>
+        <td>
+          <span class="role">Lecturer Specialist S3</span>, <span class="institution">Bina Nusantara University, Indonesia</span>
+          <ul>
+            <li>Delivered courses in Mathematics and Data Analysis to 200+ students, achieving a 35% increase in student engagement and improved completion rates.</li>
+            <li>Supervised 10+ student research projects, fostering critical thinking and innovative problem-solving.</li>
+            <li>Developed and updated curriculum materials to align with industry standards and emerging technologies.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+
+        <td class="date">Sep 2016 –<br>Jun 2020</td>
+        <td>
+          <span class="role">PhD Research Student</span>, <span class="institution">Chung Yuan Christian University, Taiwan</span>
+          <ul>
+            <li>Developed novel multi-view fuzzy clustering algorithms, published 6 journal articles, 2 preprints, and 4 conference papers (2,500+ citations).</li>
+            <li>Presented research at 2 international conferences, building global academic networks.</li>
+            <li>Collaborated with interdisciplinary teams to advance algorithmic optimization and data integration methods.</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Education Section (standardized heading) -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Education</span>
+    </div>
+    <hr class="section-rule">
+    <table class="tabular-section">
+      <tr>
+        <td class="date">2016 –<br>2020</td>
+        <td>
+          <span class="role">Ph.D., Applied Mathematics</span>, <span class="institution">Chung Yuan Christian University, Taiwan</span>
+          <ul>
+            <li><b>Research Focus:</b> Multi-view clustering, dimensionality reduction, and algorithmic optimization</li>
+            <li><b>Distinction:</b> Graduated with honors; research published in multiple high-impact journals</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">2013 –<br>2015</td>
+        <td>
+          <span class="role">M.Sc., Mathematics</span>, <span class="institution">University of Sumatera Utara, Indonesia</span>
+          <ul>
+            <li><b>Achievement:</b> Developed novel stochastic optimization model for emergency service location problems</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="date">2008 –<br>2013</td>
+        <td>
+          <span class="role">B.Sc., Mathematics</span>, <span class="institution">University of Sumatera Utara, Indonesia</span>
+          <ul>
+            <li><b>Achievement:</b> Graduation with academic distinction; regional economic analysis research</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Technical Skills Section (explicit listing) -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Technical Skills</span>
+    </div>
+    <hr class="section-rule">
+    <div class="twocols">
+      <div>
+        <b style="font-family:var(--sans);">Programming &amp; Tools</b>
+        <ul>
+          <li>Python (NumPy, Pandas, SciPy, scikit-learn, TensorFlow, PyTorch)</li>
+          <li>MATLAB, R, LaTeX</li>
+          <li>Git, Docker, Cloud Computing (AWS, GCP)</li>
+          <li>Linux, Bash, Jupyter</li>
+        </ul>
+      </div>
+      <div>
+        <b style="font-family:var(--sans);">Research &amp; Data Science</b>
+        <ul>
+          <li>Clustering Algorithm Development</li>
+          <li>Privacy-Preserving Machine Learning</li>
+          <li>Statistical Analysis &amp; Modeling</li>
+          <li>Multi-view Data Integration</li>
+          <li>Dimensionality Reduction</li>
+          <li>Federated Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Awards Section (placeholder) -->
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Certifications &amp; Awards</span>
+    </div>
+    <hr class="section-rule">
+    <ul>
+      <li>Reviewer for leading journals and conferences in machine learning and data science.</li>
+      <li><a href="https://www.mdpi.com/about/announcements/11806" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Mathematics Exceptional Reviewers List 2025</a> – Selected by MDPI for outstanding peer review contributions in mathematics journals.</li>
+      <li><a href="https://www.coursera.org/account/accomplishments/specialization/SRMA3U26GNXP?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Machine Learning Specialization – Coursera (October 2022)</a> – Comprehensive certification in machine learning fundamentals and applications.</li>
+      <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/DT3TSXGLVW3Z?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof" target="_blank" style="color:var(--swish-blue);font-weight:bold;">DeepLearning.AI TensorFlow Developer Specialization – Coursera (November 2022)</a> – Advanced certification in TensorFlow and deep learning implementation.</li>
+      <li>Graduated with Honors, Ph.D. in Applied Mathematics (2020) – Awarded for academic excellence and high-impact research at Chung Yuan Christian University.</li>
+      <li><a href="https://ieeexplore.ieee.org/xpl/topAccessedArticles.jsp?punumber=6287639" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Featured as one of the Popular Documents in IEEE Access (2020–Present)</a> – Recognized for significant readership and influence in the IEEE Access journal.</li>
+      <li><a href="https://scholar.google.com/citations?user=XoJ7EkoAAAAJ&hl=it" target="_blank" style="color:var(--swish-blue);font-weight:bold;">Google Scholar Profile</a> – Over 2,500 citations and an h-index of 7, reflecting impactful contributions to the field of machine learning and clustering algorithms.</li>
+      <li>Additional certifications and awards available upon request.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Selected Publications</span>
+    </div>
+    <hr class="section-rule">
+    <ul>
+      <li><b>Federated Multi-View K-Means Clustering</b>, <i>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</i> (2024)</li>
+      <li><b>Unsupervised k-means clustering algorithm</b>, <i>IEEE Access</i> (2020)</li>
+      <li>Complete list available on <a href="https://scholar.google.com/citations?view_op=list_works&hl=it&hl=it&user=XoJ7EkoAAAAJ" style="color:var(--swish-blue);font-weight:bold;">Google Scholar</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="cvsection">
+      <span class="cvsection-bar"></span>
+      <span class="cvsection-title">Languages</span>
+    </div>
+    <hr class="section-rule">
+    <div class="languages-grid">
+      <div class="language-item">
+        <div class="language-name">English</div>
+        <div class="language-level">Advanced Professional (CEFR C1)</div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">Bahasa Indonesia</div>
+        <div class="language-level">Native (CEFR C2)</div>
+      </div>
+      <div class="language-item">
+        <div class="language-name">Mandarin</div>
+        <div class="language-level">Basic (CEFR A1)</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="references">
+    References available upon request
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A comprehensive academic guide to Federated Learning, covering formal definitions, algorithms, and practical deployment considerations." />
+  <meta name="keywords" content="federated learning, machine learning, privacy, FedAvg, distributed computing" />
+  <meta name="author" content="Kristina P. Sinaga" />
+  <title>Federated Learning: A Comprehensive Academic Guide — Kristina P. Sinaga</title>
+  
+  <!-- External Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --text-muted: #9ca3af;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f9fafb;
+      --bg-tertiary: #f3f4f6;
+      --border-light: #e5e7eb;
+      --border-medium: #d1d5db;
+      --success-color: #10b981;
+      --warning-color: #f59e0b;
+      --error-color: #ef4444;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --transition: all 0.2s ease-in-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text-primary);
+      background: var(--bg-primary);
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 4rem 0 3rem;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+      opacity: 0.3;
+    }
+
+    header .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    header .subtitle {
+      font-size: 1.25rem;
+      font-weight: 300;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+
+    header .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.95rem;
+      opacity: 0.8;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+    }
+
+    .meta-icon {
+      width: 16px;
+      height: 16px;
+      opacity: 0.8;
+    }
+
+    /* Navigation TOC */
+    nav.toc {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: var(--shadow-sm);
+      position: sticky;
+      top: 2rem;
+      z-index: 10;
+    }
+
+    nav.toc h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    nav.toc ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.5rem;
+    }
+
+    nav.toc li {
+      margin: 0;
+    }
+
+    nav.toc a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    nav.toc a:hover {
+      background: var(--bg-tertiary);
+      color: var(--primary-color);
+      transform: translateX(4px);
+    }
+
+    nav.toc a:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Main Content */
+    main {
+      padding-bottom: 4rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      scroll-margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 0 0 1.5rem 0;
+      color: var(--text-primary);
+      line-height: 1.2;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+      color: var(--text-primary);
+    }
+
+    p {
+      margin: 0 0 1.5rem 0;
+      color: var(--text-primary);
+      line-height: 1.7;
+    }
+
+    /* Code Styling */
+    pre {
+      background: #1a1b26;
+      color: #a9b1d6;
+      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      overflow-x: auto;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    pre::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #7aa2f7, #bb9af7, #7dcfff);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+      background: var(--bg-tertiary);
+      color: var(--primary-color);
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.875em;
+      font-weight: 500;
+    }
+
+    pre code {
+      background: none;
+      color: inherit;
+      padding: 0;
+      border-radius: 0;
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    /* Lists */
+    ul, ol {
+      margin: 0 0 1.5rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+
+    li::marker {
+      color: var(--primary-color);
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 2rem 0;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-primary);
+      font-size: 0.9rem;
+    }
+
+    table th {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      border: none;
+    }
+
+    table th:first-child {
+      border-top-left-radius: var(--radius-lg);
+    }
+
+    table th:last-child {
+      border-top-right-radius: var(--radius-lg);
+    }
+
+    table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+
+    table tr:hover {
+      background: var(--bg-secondary);
+    }
+
+    table tr:last-child td:first-child {
+      border-bottom-left-radius: var(--radius-lg);
+    }
+
+    table tr:last-child td:last-child {
+      border-bottom-right-radius: var(--radius-lg);
+    }
+
+    /* Blockquotes */
+    blockquote {
+      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+      border-left: 4px solid var(--primary-color);
+      margin: 2rem 0;
+      padding: 2rem;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      font-style: italic;
+      font-size: 1.125rem;
+      color: var(--text-primary);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    blockquote::before {
+      content: '"';
+      font-size: 4rem;
+      color: var(--primary-color);
+      position: absolute;
+      top: -0.5rem;
+      left: 1rem;
+      opacity: 0.3;
+      font-family: Georgia, serif;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-light);
+      padding: 3rem 0;
+      margin-top: 4rem;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
+      }
+
+      header {
+        padding: 3rem 0 2rem;
+        margin-bottom: 2rem;
+      }
+
+      header h1 {
+        font-size: 2.25rem;
+      }
+
+      header .subtitle {
+        font-size: 1.125rem;
+      }
+
+      nav.toc {
+        position: static;
+        padding: 1.5rem;
+      }
+
+      nav.toc ul {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+      }
+
+      section {
+        margin-bottom: 3rem;
+      }
+
+      pre {
+        padding: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Print styles */
+    @media print {
+      header {
+        background: none !important;
+        color: black !important;
+        padding: 1rem 0 !important;
+      }
+      
+      nav.toc {
+        display: none;
+      }
+      
+      .container {
+        max-width: none;
+        padding: 0;
+      }
+    }
+  </style>
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$','$'], ['\\(','\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script"></script>
+  
+  <script>
+    // Smooth scrolling for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add scroll-to-top button
+      const scrollButton = document.createElement('button');
+      scrollButton.innerHTML = '↑';
+      scrollButton.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1000;
+        box-shadow: var(--shadow-lg);
+      `;
+      document.body.appendChild(scrollButton);
+
+      // Show/hide scroll button based on scroll position
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          scrollButton.style.opacity = '1';
+        } else {
+          scrollButton.style.opacity = '0';
+        }
+      });
+
+      // Scroll to top when button is clicked
+      scrollButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Highlight current section in TOC
+      const sections = document.querySelectorAll('section[id]');
+      const tocLinks = document.querySelectorAll('nav.toc a');
+      
+      function highlightTOC() {
+        let currentSection = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 100;
+          if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        tocLinks.forEach(link => {
+          link.style.background = '';
+          link.style.color = '';
+          if (link.getAttribute('href') === '#' + currentSection) {
+            link.style.background = 'var(--bg-tertiary)';
+            link.style.color = 'var(--primary-color)';
+          }
+        });
+      }
+
+      window.addEventListener('scroll', highlightTOC);
+      highlightTOC(); // Initial call
+
+      // Reading progress indicator
+      const progressBar = document.createElement('div');
+      progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        z-index: 9999;
+        transition: width 0.1s ease;
+      `;
+      document.body.appendChild(progressBar);
+
+      window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + '%';
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre code').forEach(block => {
+        const button = document.createElement('button');
+        button.innerHTML = 'Copy';
+        button.style.cssText = `
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+          font-size: 0.75rem;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        `;
+        
+        const pre = block.closest('pre');
+        pre.style.position = 'relative';
+        pre.appendChild(button);
+        
+        pre.addEventListener('mouseenter', () => button.style.opacity = '1');
+        pre.addEventListener('mouseleave', () => button.style.opacity = '0');
+        
+        button.addEventListener('click', () => {
+          navigator.clipboard.writeText(block.textContent);
+          button.innerHTML = 'Copied!';
+          setTimeout(() => button.innerHTML = 'Copy', 2000);
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Federated Learning</h1>
+      <p class="subtitle">A comprehensive academic guide to privacy-preserving distributed machine learning</p>
+      <div class="meta">
+        <div class="meta-item">
+          <svg class="meta-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+          </svg>
+          <span>Kristina P. Sinaga</span>
+        </div>
+        <div class="meta-item">
+          <svg class="meta-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"/>
+          </svg>
+          <span>April 18, 2024</span>
+        </div>
+        <div class="meta-item">
+          <svg class="meta-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+          </svg>
+          <span>Last updated: Sep 6, 2025</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="toc">
+      <h3>
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"/>
+        </svg>
+        Table of Contents
+      </h3>
+      <ul>
+        <li><a href="#learning-objectives">📝 Learning objectives</a></li>
+        <li><a href="#formal-definition">🧮 Formal definition</a></li>
+        <li><a href="#motivation-and-significance">💡 Motivation and significance</a></li>
+        <li><a href="#technical-comparison-centralized-vs-federated">⚖️ Technical comparison</a></li>
+        <li><a href="#federated-learning-categories">📊 FL categories</a></li>
+        <li><a href="#fedavg-algorithm-diagram-and-pseudocode">🔄 FedAvg algorithm</a></li>
+        <li><a href="#practical-considerations-and-failure-modes">⚠️ Practical considerations</a></li>
+        <li><a href="#representative-applications">🏥 Applications</a></li>
+        <li><a href="#further-reading">📚 Further reading</a></li>
+        <li><a href="#changelog">📋 Changelog</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>In an era where data privacy regulations like GDPR and CCPA reshape how organizations handle personal information, traditional machine learning approaches face unprecedented challenges. The conventional paradigm of centralizing data for model training—while effective—increasingly conflicts with privacy requirements, regulatory compliance, and organizational boundaries.</p>
+        
+        <p><strong>Federated Learning</strong> emerges as a revolutionary approach that fundamentally reimagines how we train machine learning models. Instead of moving data to computation, FL moves computation to data, enabling collaborative learning while preserving privacy and data locality.</p>
+        
+        <p>This comprehensive guide provides an academically rigorous yet practical exposition of Federated Learning, emphasizing:</p>
+        <ul>
+          <li>📊 <strong>Formal mathematical foundations</strong> and algorithmic structures</li>
+          <li>🔒 <strong>Privacy-preserving mechanisms</strong> and security considerations</li>
+          <li>⚙️ <strong>Practical deployment challenges</strong> in regulated environments</li>
+          <li>🏥 <strong>Real-world applications</strong> across healthcare, finance, and mobile computing</li>
+        </ul>
+        
+        <p>Whether you're a researcher exploring distributed optimization, an engineer implementing FL systems, or a practitioner evaluating FL for your organization, this guide provides the theoretical depth and practical insights needed to navigate the federated learning landscape effectively.</p>
+      </section>
+        <h2>Learning objectives</h2>
+        <p>This comprehensive guide is designed to provide readers with both theoretical understanding and practical insights into federated learning. Upon completion, you will have mastered the following key concepts:</p>
+        <ul>
+          <li><strong>Theoretical Foundation:</strong> State a concise, formal definition of Federated Learning and understand its mathematical formulation.</li>
+          <li><strong>Algorithmic Understanding:</strong> Describe the FedAvg training loop, identify its principal hyperparameters, and understand the trade-offs involved.</li>
+          <li><strong>Comparative Analysis:</strong> Compare centralized and federated paradigms along algorithmic, systems, and privacy dimensions with practical implications.</li>
+          <li><strong>Challenge Assessment:</strong> Enumerate and analyze key challenges (statistical, systems, and adversarial) that arise in FL deployments with mitigation strategies.</li>
+          <li><strong>Practical Implementation:</strong> Understand deployment considerations, best practices, and real-world application scenarios.</li>
+        </ul>
+      </section>
+
+    <section id="formal-definition">
+      <h2>Formal definition</h2>
+      <p>Let there be <em>K</em> clients, each with a local dataset <code>D<sub>k</sub></code> and empirical risk <code>R<sub>k</sub>(w) = E_{x~D_k}[ℓ(w; x)]</code>. The objective of (server-mediated) Federated Learning is to minimize the global empirical risk:</p>
+      <p>\[ R(w) = \sum_{k=1}^K p_k R_k(w), \]</p>
+      <p>where <code>p_k</code> denotes a weighting factor (commonly <code>p_k = n_k / n</code>, with <code>n_k = |D_k|</code> and <code>n = \sum_k n_k</code>). In the canonical federated optimization setting, clients perform local optimization steps (e.g., SGD) and periodically communicate updates to an aggregator which constructs a new global iterate.</p>
+
+      <h3>Key assumptions and deviations</h3>
+      <ul>
+        <li>Data heterogeneity: <code>D_k</code> may be non-i.i.d. and unbalanced in size.</li>
+        <li>Limited communication: clients communicate infrequently relative to local computation.</li>
+        <li>System heterogeneity: clients differ in compute power, availability, and communication bandwidth.</li>
+      </ul>
+    </section>
+
+    <section id="motivation-and-significance">
+      <h2>Motivation and significance</h2>
+      <p>FL is motivated by regulatory, privacy, and engineering constraints that preclude centralized pooling of raw data. It enables collaborative model building while mitigating many legal and operational barriers to data sharing. However, FL introduces statistical and systems complexities that require tailored algorithms and rigorous evaluation.</p>
+    </section>
+
+    <section id="technical-comparison-centralized-vs-federated">
+      <h2>Technical comparison: centralized vs federated</h2>
+      <p>The following table presents a detailed technical comparison for researchers and engineers planning deployments.</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Dimension</th><th>Centralized ML (CML)</th><th>Federated ML (FML)</th><th>Implication / Mitigation</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Data access model</strong></td><td>Full access to pooled dataset \(D=\cup_k D_k\)</td><td>Only local access to <code>D_k</code>; server sees updates only</td><td>Use secure aggregation / DP to reduce leakage during updates</td></tr>
+            <tr><td><strong>Optimization objective</strong></td><td>Minimize <code>R(w)</code> directly via centralized SGD</td><td>Minimize weighted <code>R(w)</code> via intermittent client-server sync</td><td>FedAvg approximates centralized SGD when local steps are small</td></tr>
+            <tr><td><strong>Communication complexity</strong></td><td>One-time data transfer \(O(n)\)</td><td>Iterative model-update transfers \(O(T \cdot m \cdot |w|)\) (T rounds, m clients/round)</td><td>Compression, sparsification reduce bytes; fewer rounds trade computation for comms</td></tr>
+            <tr><td><strong>Statistical heterogeneity</strong></td><td>Assumes i.i.d. or can shuffle data</td><td>Non-i.i.d. across clients; label and feature skew common</td><td>Methods: proximal terms (FedProx), control variates (SCAFFOLD), personalization</td></tr>
+            <tr><td><strong>Convergence theory</strong></td><td>Well-established for SGD under standard assumptions</td><td>Convergence depends on local steps, client heterogeneity; bounded divergence analyses exist</td><td>Theoretical bounds scale with heterogeneity metrics (e.g., gradient variance across clients)</td></tr>
+            <tr><td><strong>Robustness to adversaries</strong></td><td>Data-centralized, server-side defenses possible</td><td>Vulnerable to model poisoning, Sybil attacks; federated defenses needed</td><td>Robust aggregation (Krum, median), anomaly detection, secure enclaves</td></tr>
+            <tr><td><strong>Privacy leakage</strong></td><td>Centralized storage risk</td><td>Leakage via model updates possible (gradient inversion)</td><td>DP, secure aggregation, cryptographic MPC mitigate leakage</td></tr>
+            <tr><td><strong>System heterogeneity</strong></td><td>Controlled cluster or cloud</td><td>Wide variance in client capabilities; stragglers and dropouts frequent</td><td>Asynchronous updates, client dropout tolerance, adaptive client selection</td></tr>
+            <tr><td><strong>Deployment complexity</strong></td><td>Lower (standard MLOps)</td><td>Higher: orchestration, client SDKs, network scheduling, and auditing</td><td>Invest in robust orchestration and reproducible pipelines</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="federated-learning-categories">
+      <h2>Federated learning categories</h2>
+      <ul>
+        <li><strong>Horizontal (sample-partitioned) FL</strong>: Clients share feature space X but have disjoint samples. Typical cross-device use-cases.</li>
+        <li><strong>Vertical (feature-partitioned) FL</strong>: Clients hold complementary feature sets for overlapping user populations; secure protocols align features and labels.</li>
+        <li><strong>Federated transfer learning</strong>: Combines transfer learning and FL when both sample and feature spaces differ; typically used for small-overlap situations.</li>
+      </ul>
+    </section>
+
+    <section id="fedavg-algorithm-diagram-and-pseudocode">
+      <h2>FedAvg: algorithm, diagram, and pseudocode</h2>
+      <p>FedAvg (McMahan et al., 2016) is the canonical algorithm for server-mediated federated optimization. The high-level loop is:</p>
+      <ol>
+        <li>Server initializes global model <code>w<sup>0</sup></code>.</li>
+        <li>For each communication round <code>t = 0, 1, 2, ...</code>:
+          <ol type="a">
+            <li>Server samples a subset <code>S_t</code> of clients and distributes <code>w^t</code>.</li>
+            <li>Each client <code>k</code> in <code>S_t</code> performs <code>E</code> local epochs of SGD on <code>R_k(w)</code> starting from <code>w^t</code>, producing <code>w_k^{t+1}</code>.</li>
+            <li>Clients return updates; server aggregates via weighted average: <code>w^{t+1} = \sum_{k \in S_t} (n_k / n_S) w_k^{t+1}</code>.</li>
+          </ol>
+        </li>
+      </ol>
+
+      <h3>Diagram (simplified)</h3>
+      <pre>
+        Server (w^t)
+           |
+   +-------+-------+   <-- broadcast w^t
+   |       |       |
+ Client1 Client2 ... Clientm
+   |       |       |
+ Local   Local   Local
+  training training training
+   |       |       |
+   +---+---+---+---+
+       |   |   |     <-- clients send updates
+       v   v   v
+     Aggregate (weighted average)
+         produces w^{t+1}
+      </pre>
+
+      <h3>Compact pseudocode (FedAvg)</h3>
+      <pre><code># Server
+initialize w
+for t in range(T):
+    S = sample_clients()
+    send w to clients in S
+    updates = [client_update(w) for client in S]
+    w = aggregate_weighted(updates)
+
+# Client k
+def client_update(w):
+    w_local = w
+    for e in range(E):
+        for batch in local_data:
+            w_local = w_local - eta * grad(w_local; batch)
+    return w_local</code></pre>
+
+      <p><strong>Comments</strong></p>
+      <ul>
+        <li>The algorithm trades communication for computation: increasing <code>E</code> reduces communication rounds but amplifies client drift under heterogeneity.</li>
+        <li>Practical deployments tune <code>E</code>, client sampling fraction, and compression schemes to meet resource constraints.</li>
+      </ul>
+    </section>
+
+    <section id="practical-considerations-and-failure-modes">
+      <h2>Practical considerations and failure modes</h2>
+      <ul>
+        <li>Statistical challenges: severe class imbalance, non-i.i.d. features, and small local sample sizes can degrade global model quality or necessitate personalization.</li>
+        <li>Systems challenges: intermittent connectivity, heterogeneous compute, and secure software distribution to client devices.</li>
+        <li>Adversarial concerns: poisoned updates, backdoor attacks, and inference attacks on updates.</li>
+      </ul>
+
+      <h3>Mitigations and best practices</h3>
+      <ul>
+        <li>Combine algorithmic regularizers (FedProx) and control variates (SCAFFOLD) to reduce divergence.</li>
+        <li>Use secure aggregation and differentially private noise to bound information leakage; quantify utility-privacy trade-offs empirically.</li>
+        <li>Implement robust aggregation and anomaly detection to reduce the impact of malicious clients.</li>
+      </ul>
+    </section>
+
+      <section id="representative-applications">
+        <h2>Representative applications</h2>
+        <p>Federated Learning has demonstrated remarkable success across diverse domains where privacy, regulatory compliance, and data sensitivity are paramount concerns. Here are detailed examples of FL implementations:</p>
+        
+        <h3>🏥 Healthcare & Medical Research</h3>
+        <ul>
+          <li><strong>Multi-institutional model training:</strong> Hospitals collaborate to train diagnostic AI models without sharing patient records, enabling larger effective dataset sizes while maintaining HIPAA compliance.</li>
+          <li><strong>Drug discovery:</strong> Pharmaceutical companies pool computational insights without revealing proprietary compound data or clinical trial results.</li>
+          <li><strong>Medical imaging:</strong> Radiological AI trained across institutions improves diagnostic accuracy while preserving patient confidentiality.</li>
+        </ul>
+        
+        <h3>🏦 Financial Services</h3>
+        <ul>
+          <li><strong>Fraud detection:</strong> Banks collaborate to identify sophisticated fraud patterns without sharing sensitive transaction data or customer information.</li>
+          <li><strong>Credit risk assessment:</strong> Financial institutions improve risk models by learning from collective data patterns while maintaining competitive confidentiality.</li>
+          <li><strong>Market analysis:</strong> Investment firms enhance trading algorithms through federated insights while protecting proprietary strategies.</li>
+        </ul>
+        
+        <h3>📱 Mobile & Edge Computing</h3>
+        <ul>
+          <li><strong>On-device personalization:</strong> Smartphones collaboratively improve keyboard prediction, voice recognition, and recommendation systems without uploading personal data.</li>
+          <li><strong>IoT optimization:</strong> Smart devices learn collective behavior patterns for energy efficiency and performance optimization while maintaining user privacy.</li>
+          <li><strong>Autonomous vehicles:</strong> Self-driving cars share learning experiences about road conditions and driving patterns without revealing location data.</li>
+        </ul>
+        
+        <h3>🌐 Emerging Applications</h3>
+        <ul>
+          <li><strong>Supply chain optimization:</strong> Companies improve logistics and inventory management through federated insights without revealing trade secrets.</li>
+          <li><strong>Environmental monitoring:</strong> Distributed sensor networks collaborate on climate models while maintaining data sovereignty.</li>
+          <li><strong>Cybersecurity:</strong> Organizations share threat intelligence through federated learning without exposing network vulnerabilities.</li>
+        </ul>
+      </section>
+
+    <section id="further-reading">
+      <h2>Further reading</h2>
+      <ul>
+        <li>McMahan, H. B., et al. (2016). Communication-Efficient Learning of Deep Networks from Decentralized Data. arXiv:1602.05629.</li>
+        <li>Konečný, J., et al. (2016). Federated Learning: Strategies for Improving Communication Efficiency. arXiv:1610.05492.</li>
+        <li>Li, T., Sahu, A., Talwalkar, A., & Smith, V. (2020). Federated Learning: Challenges, Methods, and Future Directions. IEEE Signal Processing Magazine.</li>
+      </ul>
+    </section>
+
+    <section id="changelog">
+      <h2>Changelog</h2>
+      <ul>
+        <li>2025-09-06: Tone shifted to academic register; added FedAvg diagram and pseudocode; replaced comparison table with advanced technical comparison.</li>
+      </ul>
+    </section>
+
+    <blockquote>Federated learning formalizes collaborative optimization with locality constraints: success depends on joint algorithmic and systems design.</blockquote>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>
+        <strong>Federated Learning: A Comprehensive Academic Guide</strong><br>
+        Generated from markdown • Created with ❤️ for the research community<br>
+        <small>© 2024-2025 Kristina P. Sinaga • All rights reserved</small>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

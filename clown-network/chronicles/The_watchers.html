@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Another Glorious Day in the Neighborhood Surveillance State</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0e0d0b;
+      --surface: #161410;
+      --ink: #e8e0d0;
+      --ink-muted: #9a9080;
+      --ink-faint: #3a3630;
+      --accent: #c8a96e;
+      --accent-dim: #7a6440;
+      --red: #c0504a;
+    }
+
+```
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 18px; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'DM Serif Text', Georgia, serif;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.4;
+}
+
+.masthead {
+  border-bottom: 1px solid var(--ink-faint);
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards 0.1s;
+}
+
+.blog-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.date-stamp {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.1em;
+}
+
+/* Hero */
+.hero {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards 0.3s;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.4rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  margin-top: 0.8rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: var(--accent-dim);
+  margin-bottom: 3rem;
+}
+
+/* Body */
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+  opacity: 0;
+  animation: fadeUp 1s ease forwards 0.6s;
+}
+
+p {
+  margin-bottom: 1.7rem;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+p.lead {
+  font-size: 1.12rem;
+  color: #d4c9b4;
+  font-style: italic;
+}
+
+/* Pull quote */
+blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 2.5rem 0 2.5rem 0;
+  padding: 0.5rem 0 0.5rem 1.8rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.18rem;
+  color: var(--accent);
+  line-height: 1.6;
+}
+
+/* Inline emphasis */
+em { font-style: italic; color: #d4c9b4; }
+strong {
+  font-weight: 700;
+  color: var(--ink);
+  font-style: normal;
+}
+
+/* Section break */
+.section-break {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+  color: var(--ink-faint);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+}
+.section-break::before,
+.section-break::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--ink-faint);
+}
+
+/* Closing note */
+.closing {
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ink-faint);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+}
+
+.closing span {
+  color: var(--accent);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  .hero, .content { padding-left: 1.2rem; padding-right: 1.2rem; }
+}
+```
+
+  </style>
+</head>
+<body>
+
+  <header class="masthead">
+    <span class="blog-name">Personal Journal — Public Edition</span>
+    <span class="date-stamp">Pematangsiantar, 2025</span>
+  </header>
+
+  <div class="hero">
+    <p class="eyebrow">Journal Entry · April 11, 2026</p>
+    <h1>Six Months of<br/><em>This.</em></h1>
+    <p class="subtitle">A record of what I have been living with, Pematangsiantar.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="content">
+
+```
+<p class="lead">This morning, I woke up and noticed my neighbour — the one known for suspicious activities — entering or leaving his house. Almost immediately, a chorus of noises began from the surrounding area, as if a group of self-proclaimed guardians were monitoring my every move.</p>
+
+<p>It felt like they were deliberately creating a disturbance whenever I stirred, as though my mere presence caused them discomfort. The entire scene gave me the impression that these individuals might be working in concert with my neighbour.</p>
+
+<div class="section-break">✦</div>
+
+<p>And then there is the neighbour himself — the one I know deals in drugs — who seems to mirror my every movement. Whenever I stir, he appears, stepping outside as if summoned by my waking. His timing is uncanny, almost deliberate, as though my life has become a silent cue for his own ritual of emergence.</p>
+
+<p>Alone in the house, I began to understand why my mother used to cough so often — perhaps she, too, could sense or hear the constant, oppressive presence of these unseen watchers. Something that never seemed to happen before.</p>
+
+<blockquote>
+  Who are these elusive figures who haunt the edges of my life? Why do they linger in my surroundings, clinging to the air like shadows that refuse to dissipate?
+</blockquote>
+
+<div class="section-break">✦</div>
+
+<p>Their presence is unbroken — a constant weight pressing against my awareness. For months, I have observed them lingering in the area, ever-present, yet when real issues arise, they remain apathetic. Unresolved and unresponsive.</p>
+
+<p>Who could be so inconsiderate as to blare their horn at this hour of the night? Such reckless disruption is intolerable. As I moved, cars, trucks, and motorcycles also seemed to stir in motion, their engines revving as if in response to my presence. Who are these people behaving so recklessly and thoughtlessly?</p>
+
+<p>I cannot help but wonder: are they the true source of the disturbances — the silent architects of the problems that have plagued this neighbourhood? Their movements feel deliberate, their presence heavy.</p>
+
+<blockquote>
+  Are these merely coincidences, or am I surrounded by a web of watchers, tethered to my every breath — something far more insidious?
+</blockquote>
+
+<div class="closing">
+  <span>Filed under:</span> neighbourhood disturbances, six months and counting<br/>
+  <span>Location:</span> Pematangsiantar, North Sumatra<br/>
+  <span>Mood:</span> observing, questioning, exhausted
+</div>
+```
+
+  </div>
+
+</body>
+</html>

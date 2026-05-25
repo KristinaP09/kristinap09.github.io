@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Clown Network Chronicles Archive</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #334155;
+            --accent-color: #6366f1;
+            --accent-light: #8b5cf6;
+            --background: #ffffff;
+            --background-light: #f8fafc;
+            --background-dark: #1e293b;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --gradient-bg: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--gradient-bg);
+            font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header & Navigation */
+        .main-header {
+            background: var(--background);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Crimson Text', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+            background: var(--background-light);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--background);
+            margin-bottom: 3rem;
+        }
+
+        .hero-title {
+            font-family: 'Crimson Text', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Analytics Dashboard */
+        .analytics-section {
+            margin-bottom: 3rem;
+        }
+
+        .analytics-dashboard {
+            background: var(--background);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric-card {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(30px, -30px);
+        }
+
+        .metric-card h3 {
+            font-size: 0.875rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-change {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .chart-container {
+            background: var(--background-light);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            height: 350px;
+            position: relative;
+        }
+
+        /* Social Sharing */
+        .social-section {
+            margin-bottom: 3rem;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .social-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            color: white;
+        }
+
+        .facebook { background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%); }
+        .linkedin { background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%); }
+        .twitter { background: linear-gradient(135deg, #1da1f2 0%, #0084b4 100%); }
+
+        /* Filter Section */
+        .filter-section {
+            background: var(--background);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .filter-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-controls {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: end;
+        }
+
+        .search-input {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 0.75rem;
+            background: var(--background-light);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            background: var(--background);
+        }
+
+        .tag-filter {
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 0.75rem;
+            background: var(--background-light);
+            color: var(--text-primary);
+            font-family: inherit;
+            min-width: 200px;
+            transition: all 0.2s ease;
+        }
+
+        .tag-filter:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            background: var(--background);
+        }
+
+        /* Articles Grid */
+        .articles-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .article-card {
+            background: var(--background);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--background-light);
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .article-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .article-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .article-date {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--background-light);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag:hover {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--background-dark);
+            color: var(--text-muted);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-menu {
+                gap: 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .filter-controls {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-buttons {
+                flex-direction: column;
+            }
+            
+            .social-button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+            
+            .analytics-dashboard,
+            .filter-section {
+                padding: 1.5rem;
+            }
+            
+            .article-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">Clown Network Chronicles</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="https://kristinap09.github.io/" class="nav-link">Home</a></li>
+                        <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                        <li><a href="#articles" class="nav-link">Articles</a></li>
+                        <li><a href="https://kristinap09.github.io/about" class="nav-link">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Clown Network Chronicles</h1>
+            <p class="hero-subtitle">Sarcastic field notes from above and below — chaos, culture, clowns, and commentary.</p>
+            <p class="hero-description">Filter by keyword or tag to explore the full range of documented dysfunction.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Analytics Dashboard -->
+        <section class="analytics-section" id="analytics">
+            <div class="analytics-dashboard">
+                <div class="dashboard-header">
+                    <h2 class="dashboard-title">Visitor Analytics</h2>
+                    <span class="dashboard-subtitle">Real-time insights</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Today's Visitors</h3>
+                        <div class="metric-value" id="daily-visitors">0</div>
+                        <div class="metric-change">+12% from yesterday</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>This Week</h3>
+                        <div class="metric-value" id="weekly-visitors">0</div>
+                        <div class="metric-change">+8% from last week</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>This Year</h3>
+                        <div class="metric-value" id="yearly-visitors">0</div>
+                        <div class="metric-change">+23% from last year</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="visitorChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Sharing -->
+        <section class="social-section">
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" class="social-button facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Share on Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" class="social-button linkedin" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>Share on LinkedIn</span>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/clown-network/chronicles/&text=Check out the Clown Network Chronicles!" class="social-button twitter" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <span>Tweet</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-header">
+                <h3 class="filter-title">Explore Articles</h3>
+                <p>Search and filter through our collection of insights and commentary.</p>
+            </div>
+            <div class="filter-controls">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search articles, topics, or keywords..." onkeyup="filterArticles()">
+                <select id="tagFilter" class="tag-filter" onchange="filterArticles()">
+                    <option value="all">All Categories</option>
+                    <option value="academic-circus">Academic Circus</option>
+                    <option value="academic-publishing">Academic Publishing</option>
+                    <option value="algorithmic-paradox">Algorithmic Paradox</option>
+                    <option value="ai-collaboration">AI Collaboration</option>
+                    <option value="ai">AI</option>
+                    <option value="boundaries">Boundaries</option>
+                    <option value="breaking-free">Breaking Free</option>
+                    <option value="blog">Blog</option>
+                    <option value="clarity">Clarity</option>
+                    <option value="clown-network">Clown Network</option>
+                    <option value="conflict-resolution">Conflict Resolution</option>
+                    <option value="contract-law">Contract Law</option>
+                    <option value="critical-thinking">Critical Thinking</option>
+                    <option value="digital-identity">Digital Identity</option>
+                    <option value="documentary-evidence">Documentary Evidence</option>
+                    <option value="editorial-dysfunction">Editorial Dysfunction</option>
+                    <option value="emotional-intelligence">Emotional Intelligence</option>
+                    <option value="expat-living">Expat Living</option>
+                    <option value="guest-editor">Guest Editor</option>
+                    <option value="human-ai-interaction">Human-AI Interaction</option>
+                    <option value="investigative-journalism">Investigative Journalism</option>
+                    <option value="investigative-satire">Investigative Satire</option>
+                    <option value="italy">Italy</option>
+                    <option value="legal-analysis">Legal Analysis</option>
+                    <option value="legal-incompetence">Legal Incompetence</option>
+                    <option value="liberation">Liberation</option>
+                    <option value="mdpi">MDPI</option>
+                    <option value="mental-health">Mental Health</option>
+                    <option value="mental-liberation">Mental Liberation</option>
+                    <option value="mindful-living">Mindful Living</option>
+                    <option value="morning-ritual">Morning Ritual</option>
+                    <option value="orcid">ORCID</option>
+                    <option value="peer-review">Peer Review</option>
+                    <option value="personal-development">Personal Development</option>
+                    <option value="personal-freedom">Personal Freedom</option>
+                    <option value="personal-growth">Personal Growth</option>
+                    <option value="productivity">Productivity</option>
+                    <option value="professional-accountability">Professional Accountability</option>
+                    <option value="professional-growth">Professional Growth</option>
+                    <option value="professional-incompetence">Professional Incompetence</option>
+                    <option value="professional-standards">Professional Standards</option>
+                    <option value="psychological-resistance">Psychological Resistance</option>
+                    <option value="publishing-ethics">Publishing Ethics</option>
+                    <option value="quality-control">Quality Control</option>
+                    <option value="rental-disputes">Rental Disputes</option>
+                    <option value="resilience">Resilience</option>
+                    <option value="satirical-journalism">Satirical Journalism</option>
+                    <option value="self-empowerment">Self-Empowerment</option>
+                    <option value="self-mastery">Self-Mastery</option>
+                    <option value="shared-housing">Shared Housing</option>
+                    <option value="social-conformity">Social Conformity</option>
+                    <option value="storytelling">Storytelling</option>
+                    <option value="system-validation">System Validation</option>
+                    <option value="tax-law">Tax Law</option>
+                    <option value="timeline-analysis">Timeline Analysis</option>
+                    <option value="toxic-narratives">Toxic Narratives</option>
+                    <option value="transformation">Transformation</option>
+                    <option value="triumph">Triumph</option>
+                    <option value="work-culture">Work Culture</option>
+                    <option value="Urban Life">option value</option>
+                    <option value="Indonesia">Indonesia</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles-section" id="articles">
+            <h2 class="section-title">Latest Chronicles</h2>
+            <div class="articles-grid" id="articles-container">
+                <!-- Articles will be dynamically populated here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Clown Network Chronicles. All rights reserved.</p>
+                <p>Documenting the beautiful chaos of modern culture, one chronicle at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simulated visitor data - In a real implementation, this would come from a backend
+        const visitorData = {
+            daily: Math.floor(Math.random() * 500) + 100,
+            weekly: Math.floor(Math.random() * 2000) + 1000,
+            yearly: Math.floor(Math.random() * 50000) + 10000
+        };
+
+        // Update metrics
+        document.getElementById('daily-visitors').textContent = visitorData.daily.toLocaleString();
+        document.getElementById('weekly-visitors').textContent = visitorData.weekly.toLocaleString();
+        document.getElementById('yearly-visitors').textContent = visitorData.yearly.toLocaleString();
+
+        // Create visitor trend chart
+        const ctx = document.getElementById('visitorChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Monthly Visitors',
+                    data: [12000, 19000, 15000, 25000, 22000, 30000, 35000],
+                    borderColor: '#2c5282',
+                    backgroundColor: 'rgba(66, 153, 225, 0.1)',
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Article data
+        const articles = [
+            {title: "Service Excellence vs Local Realities: A Deep Dive into SUMUT and Operational Challenges",
+            description: "An investigative exploration of the discrepancies between promised service standards and actual operational realities in the context of 'SUMUT', highlighting systemic issues and potential solutions.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Service_Excellence_vs_Local_Realities.html",
+            date: "2026-01-27",
+            imageUrl: "https://kristinap09.github.io/assets/images/47630139-8C55-434F-A339-DD1BCDF9A112.png",
+            tags: ["Service Excellence", "Operational Challenges", "Systemic Issues", "SUMUT", "Investigative Journalism"]
+            },
+            {title: "Why I'm Done with Nosy Protectors Messing with My Family's CCTV – A Rant from Someone Who's Had Enough",
+            description: "A candid exposé on the intrusive behavior of self-appointed 'protectors' meddling with private CCTV footage, highlighting the importance of respecting personal boundaries and privacy.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Why_Im_Done_with_Nosy_Protectors_Messing_with_My_Familys_CCTV.html",
+            date: "2026-01-17",
+            imageUrl: "https://kristinap09.github.io/assets/images/Why_Im_Done_with_Nosy_Protectors_Messing_with_My_Familys_CCTV_image.jpg",
+            tags: ["Privacy", "CCTV", "Boundaries", "Personal Freedom", "Rant"]
+            },
+            {title: "Unfiltered and Unbothered 2.0: A Masterclass in Eye-Rolling and Emotional Evasion",
+            description: "Dive into the art of dodging accountability with flair and finesse in this satirical guide to mastering the unbothered life.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Unfiltered_and_Unbothered_v2.html",
+            date: "2026-01-15",
+            imageUrl: "https://kristinap09.github.io/assets/images/Unfiltered_and_Unbothered_v2_image.jpg",
+            tags: ["Emotional Intelligence", "Accountability", "Satire", "Personal Growth", "Resilience"]
+            },
+            {title: "Surveillance Without Accountability: Why Cameras Alone Can't Fix Broken Systems",
+            description: "Why surveillance technology alone cannot guarantee safety—and what accountable public institutions must do to protect communities and small businesses effectively.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Life_in_a_City_Where_Cameras_Watch_but_No_One_Acts.html",
+            date: "2026-01-11",
+            imageUrl: "https://kristinap09.github.io/assets/images/smart-city-surveillance.jpg",
+            tags: ["Public Safety", "Surveillance", "Accountability", "Community Protection", "Small Businesses"]
+            },
+            {title: "Standing Alone in a Crowded Society",
+            description: "Exploring the challenges and triumphs of maintaining individuality and personal freedom in a world that often pressures conformity.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Standing_Alone_in_a_Crowded_Society.html",
+            date: "2026-01-04",
+            imageUrl: "https://kristinap09.github.io/assets/images/Standing_Alone_in_a_Crowded_Society.jpeg",
+            tags: ["Personal Freedom", "Individuality", "Societal Pressure", "Conformity", "Self-Empowerment"]
+            },
+            {title: "Systems, Truth, and the Mathematics of Dysfunction",
+            description: "A Comprehensive Exploration of Systemic Failures, Institutional Barriers, and the Art of Personal Resilience of Navigating Bureaucratic Chaos in Modern Society.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Systems_Truth_and_the_Mathematics_of_Dysfunction.html",
+            date: "2025-12-09",
+            imageUrl: "https://kristinap09.github.io/assets/images/pexels-jadson-thomas-164235-542556.jpg",
+            tags: ["Bureaucracy", "Systems Thinking", "Resilience", "Institutional Barriers", "Personal Growth" ]
+            },
+            {title: "Of Ferraris, Facebook Feeds, and Foolish Systems",
+            description: "A satirical exploration of how flashy appearances often mask deeper systemic issues, using the metaphor of a Ferrari to critique social media algorithms and bureaucratic inefficiencies.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/ferrari-facebook-feeds-foolish-systems.html",
+            date: "2025-11-16",
+            imageUrl: "https://kristinap09.github.io/assets/images/pexels-suzyhazelwood-2955032.jpg",
+            tags: ["Bureaucracy", "Social Media", "Algorithmic Paradox", "Satire", "Systems Thinking"]
+            },
+            {title: "Welcome to the City of Premanisme",
+            description: "Where stupidity is celebrated, idiocy is a national sport, and yet the people keep surviving—and somehow thriving—against all odds.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/november-october-blog.html",
+            date: "2025-11-12",
+            imageUrl: "https://images.pexels.com/photos/7008911/pexels-photo-7008911.jpeg",
+            tags:["Urban Life", "Indonesia", "Community", "Culture", "Survival", "Satire"]
+            },
+            {
+            title: "Stupidity’s Global Tour: My Unfiltered Rant",
+            description: "No fluff, just raw truth about idiots in academia and beyond.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/Dealing_with_Stupidity_Everywhere-v3.html",
+            date: "2025-09-23",
+            imageUrl: "https://quotefancy.com/media/wallpaper/3840x2160/443247-Albert-Einstein-Quote-Stupidity-is-a-personal-achievement-which.jpg",
+            tags: ["Academia", "Society", "Developed vs developing countries", "Adaptability", "Bureaucratic culture"]
+            },
+            {
+            title: "The Ferrari, the Noisy Engine, and the Circus of Bureaucracy",
+            description: "Explore how luxury appearances mask dysfunctional bureaucracy in developed countries, using the metaphor of a flashy Ferrari with a noisy, broken engine. Discover insights into real progress through practical understanding and systemic efficiency.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/02092025-ferrari-noisy-edition-kristinap09.html",
+            date: "2025-09-02",
+            imageUrl: "https://kristinap09.github.io/assets/images/Ferrari_chaos_image.png",
+            tags: ["Bureaucracy", "Ferrari metaphor", "Inefficiency", "Systems thinking", "Developed vs developing countries", "Adaptability", "Chinese progress", "Bureaucratic culture"]
+            },
+            {
+            title: "The Sheer Absurdity of Clown Performances: €1000, No Receipt, and Bureaucratic Comedy",
+            description: "A €1000 purchase that came with a €0 receipt, a residency card lost to the abyss of Italian bureaucracy, and a laptop promised after nearly a year. This is not just a story—it’s a satirical museum of inefficiency, absurdity, and the unshakable pride of refusing to play along. Welcome to Italy’s greatest performance art: bureaucracy disguised as daily life.",
+            url: "https://kristinap09.github.io/clown-network/chronicles/260825-so-so-stupid.html",
+            date: "2025-08-26",
+            imageUrl: "https://kristinap09.github.io/assets/images/absurdity.png",
+            tags: ["Consumer Rights", "Tech Support", "Apple", "Absurdity", "Receipt", "Documentation", "Accountability", "Satirical Journalism"]
+            },
+            {
+                title: "How to Raise a Professional (and Avoid Raising a Chaoning Jr.)",
+                description: "A satirical guide to professional development that explores the difference between genuine competence and performative professionalism. Features a hidden Konami code easter egg that transforms the serious academic tone into pure chaos - because sometimes the best way to discuss unprofessionalism is to demonstrate what happens when standards completely break down.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/2025-08-08-How-to-Raise-a-Professional-and-Avoid-Raising-a-Chaoning-Jr",
+                date: "2025-08-08",
+                imageUrl: "https://kristinap09.github.io/assets/images/professional-development.png",
+                tags: ["Professional Development", "Satirical Commentary", "Academic Standards", "Workplace Ethics", "Character Development", "Professional Growth", "Leadership", "Accountability", "Work Culture", "Career Development", "Easter Egg", "Interactive Content", "Konami Code", "Professional Competence", "Chaoning Prevention"]
+            },
+            {
+                title: "The Anatomy of Professional Failure: A Diagnostic Study",
+                description: "A clinical examination of how credentials become shields for incompetence, deception masquerades as confusion, and professional accountability vanishes in plain sight. A comprehensive diagnostic study featuring a lawyer's tax law failures, a healthcare worker's calculated deception, and an academic administrator's information hoarding - all documented with surgical precision.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/20250806-the-anatomy-of-professional-failure.html",
+                date: "2025-08-06",
+                imageUrl: "https://kristinap09.github.io/assets/images/20250806-failure.png",
+                tags: ["Professional Accountability", "Legal Incompetence", "Tenant Rights", "Diagnostic Analysis", "Behavioral Patterns", "Italian Bureaucracy", "Clinical Study", "Professional Malpractice", "Information Withholding", "Deception Strategy", "Documentary Evidence", "Timeline Analysis", "Professional Standards", "Investigative Analysis", "Systemic Failure"]
+            },
+            {
+                title: "The Academic Circus: When Guest Editors Become Pawns",
+                description: "A satirical exposé of MDPI editorial dysfunction featuring Maria's complaint about a high-quality review AFTER the system had already validated and credited it. Real email documentation reveals the beautiful chaos of academic publishing incompetence, complete with timeline analysis and quality control failures.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/the-academic-circus-guest-editor-chaos.html",
+                date: "2025-08-06",
+                imageUrl: "https://kristinap09.github.io/assets/images/academic_circus.png",
+                tags: ["Academic Publishing", "Editorial Dysfunction", "MDPI", "Satirical Journalism", "Quality Control", "Peer Review", "Documentary Evidence", "Timeline Analysis", "Professional Incompetence", "Academic Circus", "Guest Editor", "ORCID", "System Validation", "Publishing Ethics", "Investigative Satire"]
+            },
+            {
+                title: "The Morning Ritual: Taking the Trash Out for Good",
+                description: "The story of one transformative morning that changed everything, and the daily practice that keeps the liberation alive. A powerful journey from mental manipulation to complete freedom through morning rituals and the courage to discard toxic narratives.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/the-morning-ritual-taking-trash-out.html",
+                date: "2025-08-06",
+                imageUrl: "https://kristinap09.github.io/assets/images/toxic_narrative.png",
+                tags: ["Mental Liberation", "Morning Ritual", "Personal Freedom", "Psychological Resistance", "Self-Empowerment", "Breaking Free", "Toxic Narratives", "Daily Practice", "Liberation", "Mental Health", "Personal Growth", "Boundaries", "Clarity", "Transformation", "Mindful Living"]
+            },
+            {
+                title: "The Unauthorized Registration: When Consent Becomes Optional",
+                description: "The shocking discovery of how a 'senior lawyer' registered a contract without tenant signature - a violation of consent and legal process. Part IV of the Italian Landlord Chronicles featuring maximum rage and the demand for unforgettable accountability lessons.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/20250805-unauthorized-contract-registration.html",
+                date: "2025-08-05",
+                imageUrl: "https://kristinap09.github.io/assets/images/20250725-image.png",
+                tags: ["Unauthorized Contract", "Consent Violation", "Legal Fraud", "Italian Rental Law", "Tenant Rights", "Professional Misconduct", "Contract Registration", "Authorization Abuse", "Legal Incompetence", "Accountability", "Italy", "Rental Disputes", "Documentary Evidence", "Rage"]
+            },
+            {
+                title: "The Lawyer Who Failed Law: A Case Study in Professional Incompetence",
+                description: "An investigative analysis of how legal credentials don't guarantee competence, featuring a landlord's contractual contradictions and tax law misunderstandings. When professional deflection meets documentary evidence.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/20250728_Clause_14_and_the_case_of_the_lawyer_who_failed_law_enhanced.html",
+                date: "2025-07-28",
+                imageUrl: "https://kristinap09.github.io/assets/images/20250725-image.png",
+                tags: ["Legal Incompetence", "Professional Accountability", "Cedolare Secca", "Contract Law", "Italy", "Rental Disputes", "Tax Law", "Professional Standards", "Legal Analysis", "Investigative Journalism", "Documentary Evidence", "Clause 14"]
+            },
+            {
+                title: "My Experience with a Senior Lawyer Landlord in Pisa",
+                description: "A cautionary tale of rental negligence, legal double standards, and the danger of mistaking credentials for integrity.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/20250725-landlord-experience-blog.html",
+                date: "2025-07-26",
+                imageUrl: "https://kristinap09.github.io/assets/images/20250725-image.png",
+                tags: ["Rental Fraud", "Tenant Rights", "Legal Compliance", "Italy", "Expat Living", "Professional Misconduct", "Pisa", "Contract Registration", "Cedolare Secca", "Landlord Issues", "Personal Experience", "Documentation"]
+            },
+
+            {
+                title: "Shared Walls, Mosquitoes, and the Art of Staying Calm",
+                description: "A tale of roommate dynamics, Italian bureaucracy, and finding peace in chaos.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/20250722-The-art-of-staying-calm.html",
+                date: "2025-07-22",
+                imageUrl: "https://picsum.photos/1000/300?random=42",
+                tags: ["Expat Living", "Conflict Resolution", "Shared Housing", "Italy", "Personal Development", "Mindful Living", "Emotional Intelligence"]
+            },
+            {
+                title: "The Algorithmic Paradox: When AI Decides You're Not Adult Enough",
+                description: "A deep dive into digital identity, systemic absurdity, and the curious case of being 'algorithmically infantilized' by Google at age 34. From design help to philosophical inquiry through human-AI collaboration.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/2025-07-01_digital-adulthood-paradox-blog-post.html",
+                date: "2025-07-01",
+                imageUrl: "https://kristinap09.github.io/assets/images/algorithmic-paradox.PNG",
+                tags: ["algorithmic-paradox", "digital-identity", "AI-collaboration", "Google", "human-AI-interaction", "critical-thinking", "blog", "clown-network"]
+            },
+            {
+                title: "\"ChatGPT Is Making You Lazy,\" Says MIT. Aww, You Mad?",
+                description: "My thoughts on the MIT study about AI and 'lazy brains' - why I think they missed the point about AI-human collaboration and why being 'cognitively lazy' might actually be evolution.",
+                url: "2025-06-30_AI_Cognition_Personal.html",
+                date: "2025-06-30",
+                imageUrl: "https://kristinap09.github.io/assets/images/AI-Cognition.PNG",
+                tags: ["AI", "cognitive-science", "MIT-study", "technology", "human-AI-collaboration", "opinion", "blog"]
+            },
+            {
+                title: "The Unbreakable: A Story of Learning, Power, and Rising Above",
+                description: "A powerful story of resilience, learning, and triumph over those who sought to break an unbreakable spirit. Sometimes the most powerful stories are born from the deepest struggles.",
+                url: "https://kristinap09.github.io/clown-network/chronicles/2025-06-28-cracked_never_storyteller.html",
+                date: "2025-06-28",
+                imageUrl: "https://kristinap09.github.io/assets/images/cracked_never.PNG",
+                tags: ["resilience", "storytelling", "personal-growth", "triumph", "self-mastery", "blog"]
+            },
+            {
+                title: "Modern Clarity: Navigating Social Conformity in the 21st Century",
+                description: "What happens when maintaining personal boundaries and refusing to participate in social scripts leads to being labeled as 'dangerous' or 'problematic'?",
+                url: "2025-06-08-Modern_Clarity_Professional_Blog.html",
+                date: "2025-06-08",
+                imageUrl: "https://kristinap09.github.io/assets/images/IMG_1504.png",
+                tags: ["clarity", "social-conformity", "boundaries", "psychological-resistance", "clown-network"]
+            },
+            {
+                title: "Reflections from the Quiet Lane",
+                description: "A thoughtful reflection on fast-paced cultures, spontaneous living, and the wisdom of slowing down.",
+                url: "reflections-from-the-quiet-lane-mobile.html",
+                date: "2025-05-23",
+                imageUrl: "https://kristinap09.github.io/assets/images/E9303DC0-9830-4393-AF35-8768B5289DA0.png",
+                tags: ["mindfulness", "work-culture", "professional-growth", "blog"]
+            },
+            {
+                title: "Beyond Perception: When Engineered Systems Require Belief",
+                url: "/clown-network/chronicles/supernatural_engineered_merged_blog.html",
+                date: "2025-05-19",
+                imageUrl: "https://kristinap09.github.io/assets/images/7D7D60A5-B092-4E28-8154-67C63182E2F7.png",
+                tags: ["perception", "critical-thinking", "psychological-analysis", "belief-systems"]
+            },
+            {
+                title: "Your Time, Your Rules: Confronting the Architects of Synchronized Schedules",
+                url: "/clown-network/chronicles/2025-05-10-Your-Time-Is-Not-My-Time-Final.html",
+                date: "2025-05-10",
+                imageUrl: "https://kristinap09.github.io/assets/images/D348B05F-D9CC-4F27-BC53-3BB49492080F.png",
+                tags: ["temporal-autonomy", "chronobiology-resistance", "digital-boundary-ethics"]
+            },
+            {
+                title: "Value-Driven Work: Delivering Impact Beyond Hours",
+                url: "/clown-network/chronicles/homepage_with_links_resume.html",
+                date: "2025-05-08",
+                tags: ["productivity", "work-culture", "professional-growth"]
+            },
+            {
+                title: "Dream Warriors: Why Digital Manipulation Fails in Our Subconscious Mind",
+                url: "/clown-network/chronicles/2025-05-03-Even-in-Dreams-They-Lose-Enriched.html",
+                date: "2025-05-03",
+                imageUrl: "https://kristinap09.github.io/assets/images/0F474B9F-F7B7-4505-A7FD-E8526FC85580.png",
+                tags: ["Loser", "blog", "clown-network"]
+            },
+            {
+                title: "Best Times to Mow Grass: A Regional and Seasonal Guide",
+                url: "/clown-network/chronicles/2025-05-02-Complete_Best_Time_to_Mow_Grass_Guide.html",
+                date: "2025-05-02",
+                imageUrl: "https://kristinap09.github.io/assets/images/24F6E3B8-02F3-43C6-A493-5336189E48B5.png",
+                tags: ["Mowing", "blog", "clown-network"]
+            },
+            {
+                title: "I Predicted This Chaos: The Rise of AI-Driven Coding",
+                url: "/clown-network/chronicles/2025-4-29-copilot-chaos.html",
+                date: "2025-04-29",
+                imageUrl: "https://kristinap09.github.io/assets/images/3C6A7B56-3668-4985-9F1C-53F42C90BD3B.png",
+                tags: ["AI", "blog", "copilot"]
+            },
+            {
+                title: "Clown Network Teaser — The Science of Stupidity",
+                url: "/clown-network/chronicles/2025-4-21-Clown_Network_Science_of_Stupidity_GitHub_Ready.html",
+                date: "2025-04-21",
+                imageUrl: "https://raw.githubusercontent.com/KristinaP09/kristinap09.github.io/master/assets/images/Clown_Network_Activity_Frequency_Chart.png",
+                tags: ["satire", "blog", "clown-network"]
+            },
+            {
+                title: "The Silent Revolution: How a Tax Refund Shattered a Misinformation Empire",
+                url: "/clown-network/chronicles/2025-04-11-when-the-system-worked.html",
+                date: "2025-04-11",
+                imageUrl: "https://kristinap09.github.io/assets/images/3987BB44-D5FF-4197-844A-3ADAA9E4651F.png",
+                tags: ["Systematic Exposure", "Bureaucratic Justice", "Clown Network"]
+            },
+            {
+                title: "Toxic Support: When Help Becomes Harm",
+                url: "/clown-network/chronicles/toxic-support-when-help-becomes-harm/",
+                date: "2025-04-08",
+                imageUrl: "https://kristinap09.github.io/assets/images/DCD6665B-5539-4FFD-9788-145DBE227E1A.png",
+                tags: ["Toxicity", "Fake support", "Truth"]
+            },
+        ];
+
+        // Populate articles
+        function displayArticles(filteredArticles = articles) {
+            const container = document.getElementById('articles-container');
+            container.innerHTML = '';
+            
+            filteredArticles.forEach(article => {
+                const articleElement = document.createElement('div');
+                articleElement.className = 'article-card';
+                
+                articleElement.innerHTML = `
+                    ${article.imageUrl ? `<img src="${article.imageUrl}" alt="${article.title}" class="article-image">` : ''}
+                    <div class="article-content">
+                        <h3 class="article-title">
+                            <a href="${article.url}">${article.title}</a>
+                        </h3>
+                        ${article.description ? `<p class="article-description">${article.description}</p>` : ''}
+                        <div class="article-meta">
+                            <span class="article-date">${new Date(article.date).toLocaleDateString('en-US', { 
+                                year: 'numeric', 
+                                month: 'long', 
+                                day: 'numeric' 
+                            })}</span>
+                        </div>
+                        <div class="article-tags">
+                            ${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(articleElement);
+            });
+        }
+
+        // Filter articles
+        function filterArticles() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const tagFilter = document.getElementById('tagFilter').value.toLowerCase();
+            
+            const filtered = articles.filter(article => {
+                const matchesSearch = article.title.toLowerCase().includes(searchTerm) || 
+                                   article.description.toLowerCase().includes(searchTerm) ||
+                                   article.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                
+                const matchesTag = tagFilter === 'all' || article.tags.some(tag => tag.toLowerCase() === tagFilter);
+                
+                return matchesSearch && matchesTag;
+            });
+            
+            displayArticles(filtered);
+        }
+
+        // Initial display
+        displayArticles();
+    </script>
+</body>
+</html>
+
+

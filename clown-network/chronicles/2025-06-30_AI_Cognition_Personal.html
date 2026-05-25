@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"ChatGPT Is Making You Lazy," Says MIT. Aww, You Mad? | Kristina P. Sinaga</title>
+    <meta name="description" content="My thoughts on the MIT study about AI and 'lazy brains' - why I think they missed the point about AI-human collaboration.">
+    <meta name="author" content="Kristina P. Sinaga">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Playfair+D                <h2>💅 Final Thought: If You're Gonna Be Bitter, At Least Be Funny</h2>splay:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #4338ca;
+            --accent-color: #f59e0b;
+            --success-color: #10b981;
+            --warning-color: #ef4444;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-dark: #1f2937;
+            --border-light: #e5e7eb;
+            --border-medium: #d1d5db;
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-accent: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* Personal Brand Header */
+        .personal-header {
+            background: var(--gradient-primary);
+            padding: 1rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .personal-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .blog-post {
+            background: var(--bg-primary);
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        .post-header {
+            padding: 3rem 3rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .post-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .post-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding: 2rem;
+            border-top: 1px solid var(--border-light);
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .author-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 12px 12px 0 0;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .author-avatar:hover {
+            transform: scale(1.05);
+        }
+
+        .author-details {
+            flex: 1;
+        }
+
+        .author-details h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .author-details p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin: 0 0 0.75rem 0;
+            line-height: 1.5;
+        }
+
+        .author-bio {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin: 0;
+        }
+
+        .author-social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .author-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border-bottom: none;
+        }
+
+        .author-social a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .post-content {
+            padding: 3rem;
+        }
+
+        /* Personal Touch Styling */
+        .personal-intro {
+            background: var(--gradient-accent);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border-left: 5px solid var(--accent-color);
+            position: relative;
+        }
+
+        .personal-intro::before {
+            content: '👋';
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--bg-primary);
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+
+        .personal-intro h2 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Content Sections */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: var(--primary-color);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        em {
+            font-style: italic;
+            color: var(--primary-color);
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--primary-color);
+            color: var(--secondary-color);
+        }
+
+        /* Thought Bubbles */
+        .thought-bubble {
+            background: #f0f9ff;
+            border: 2px solid #0ea5e9;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            position: relative;
+            font-style: italic;
+        }
+
+        .thought-bubble::before {
+            content: '💭';
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--bg-primary);
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.3rem;
+        }
+
+        /* Key Insight Box */
+        .key-insight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border: 2px solid var(--accent-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+
+        .key-insight::before {
+            content: '🔑';
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: var(--bg-primary);
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.3rem;
+        }
+
+        .key-insight p {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Personal Sections */
+        .rant-section {
+            background: #fef2f2;
+            border-left: 5px solid var(--warning-color);
+            border-radius: 0 16px 16px 0;
+            padding: 2rem;
+            margin: 2.5rem -3rem;
+            position: relative;
+        }
+
+        .rant-section h2 {
+            color: var(--warning-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .truth-bomb {
+            background: #f0fdf4;
+            border-left: 5px solid var(--success-color);
+            border-radius: 0 16px 16px 0;
+            padding: 2rem;
+            margin: 2.5rem -3rem;
+            position: relative;
+        }
+
+        .truth-bomb h2 {
+            color: var(--success-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .closing-thoughts {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem -3rem 0;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        /* Code-like elements */
+        .code-snippet {
+            background: var(--bg-dark);
+            color: #e5e7eb;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        /* Enhanced blockquotes for inline quotes */
+        blockquote {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent-color);
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            font-family: 'Playfair Display', serif;
+            opacity: 0.3;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--border-medium), transparent);
+            margin: 3rem 0;
+        }
+
+        /* Footer */
+        .post-footer {
+            padding: 2rem 3rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            padding: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .personal-nav {
+                padding: 0 1rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .post-header, .post-content, .post-footer {
+                padding: 2rem 1.5rem;
+            }
+
+            .post-title {
+                font-size: 2.25rem;
+            }
+
+            .author-info {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .author-social {
+                justify-content: center;
+            }
+
+            .rant-section, .truth-bomb, .closing-thoughts {
+                margin-left: -1.5rem;
+                margin-right: -1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="personal-header">
+        <nav class="personal-nav">
+            <a href="/" class="brand">kristina P. Sinaga</a>
+            <ul class="nav-links">
+                <li><a href="/about">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="post-header">
+                <div class="post-meta">
+                    <span>📅 June 30, 2025</span>
+                    <span>⏱️ 8 min read</span>
+                    <span class="meta-badge">Personal Take</span>
+                </div>
+                
+                <h1 class="post-title">"ChatGPT Is Making You Lazy," Says MIT</h1>
+                <p class="post-subtitle">Aww, You Mad? Why the gatekeepers are having a meltdown over AI democratizing intelligence</p>
+                
+                <div class="author-info">
+                    <img src="https://kristinap09.github.io/assets/images/9C25DC27-CDCA-4B6A-A4F2-3AB8347AED28.jpg" alt="Kristina P. Sinaga" class="author-avatar">
+                    <div class="author-details">
+                        <h3>Kristina P. Sinaga</h3>
+                        <p>Mathematician</p>
+                        <p class="author-bio">Passionate about democratizing intelligence through AI collaboration and breaking down academic gatekeeping.</p>
+                        <div class="author-social">
+                            <a href="https://github.com/KristinaP09" title="GitHub" target="_blank">🐙</a>
+                            <a href="https://www.linkedin.com/in/kristina-p-sinaga-0ba152309?" title="LinkedIn" target="_blank">💼</a>
+                            <a href="mailto:kristinasinaga41@.gmail.com" title="Email" target="_blank">📧</a>
+                            <a href="https://kristinap09.github.io" title="Portfolio" target="_blank">🌐</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <div class="personal-intro">
+                    <h2>Real Talk: What's Really Bothering Them</h2>
+                    <p>So, MIT just dropped a study that says people who use ChatGPT show <strong>lower brain activity</strong>, <strong>weaker memory</strong>, and feel <strong>less connected</strong> to their writing.</p>
+                    
+                    <blockquote style="background: rgba(255,255,255,0.7); padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 3px solid var(--warning-color);">
+                        <p style="margin: 0; font-style: italic;">"AI might be making our minds <em>lazy</em>."</p>
+                    </blockquote>
+                    
+                    <p>Oh no.<br>How tragic.<br>Next thing you know, people will stop using horse-drawn carriages and rely on these <em>horrific</em> new things called cars.</p>
+                    
+                    <p><strong>Let's cut the dramatics, shall we?</strong></p>
+                    
+                    <p>It's not the AI. It's the <strong>people using it</strong>. Specifically, the people who were never invited to the ivory tower party. The ones who didn't "network" their way into elite spaces. The ones who don't have degrees with Latin words on them — but are suddenly writing, thinking, and creating like they do.</p>
+                </div>
+
+                <hr>
+
+                <p>And worst of all?</p>
+
+                <div class="key-insight">
+                    <p><strong>They're doing it without begging.</strong></p>
+                </div>
+
+                <p>No advisors.<br>No secret handshakes.<br>No gatekeepers in elbow-patch blazers holding the keys to "knowledge."</p>
+
+                <p>That's not laziness. That's <strong>liberation</strong>.<br>And some folks — let's be honest — are just <strong>pissed</strong> they're not special anymore.</p>
+
+                <h2>🧠 "Brain Activity" Down? Maybe Because It's Not Screaming for Help Anymore</h2>
+                
+                <p>The researchers hooked people up to fancy machines and noticed that when folks used ChatGPT, their brains weren't firing as hard.</p>
+
+                <p>Well no sh*t, Sherlock.<br>That's like saying a person doesn't sweat as much using a washing machine versus scrubbing laundry on a rock.</p>
+
+                <div class="thought-bubble">
+                    <p>It's not cognitive failure. It's <strong>tool usage</strong>.<br>
+                    It's not "thinking less." It's "not wasting energy on mental busywork."</p>
+                </div>
+
+                <p>But sure, tell me again how writing a rough draft by hand like it's 1847 makes you <strong>"deep."</strong></p>
+
+                <h2>📉 "But All the AI Writing Sounds the Same!"</h2>
+                
+                <p>You mean like the academic papers y'all publish that all read like the same dusty textbook wrote itself 200 times?</p>
+
+                <p>Yes — basic AI outputs are generic. So are IKEA manuals and most committee meeting minutes.</p>
+
+                <div class="thought-bubble">
+                    <p>But when someone with real curiosity, instinct, and voice steps in?<br><strong>That's when it gets dangerous.</strong></p>
+                </div>
+
+                <p>Because now the <em>outsider</em> has tools.<br>And suddenly, their thinking isn't just smart — it's <strong>scalable</strong>.</p>
+
+                <h2>👀 This Isn't About "Protecting Thinking." It's About Protecting Status.</h2>
+                
+                <p>The story isn't "AI makes you dumb."</p>
+
+                <p>The story is:</p>
+
+                <div class="key-insight">
+                    <p><strong>"Uh oh… now <em>they</em> can do what we said only <em>we</em> could do."</strong></p>
+                </div>
+
+                <p>Suddenly, the ladder doesn't matter — because people are building <strong>elevators</strong>.</p>
+
+                <p>And instead of celebrating that more minds are waking up, reaching out, and <strong>actually creating</strong>, they're shouting from their shrinking towers:</p>
+
+                <blockquote style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--warning-color);">
+                    <p style="margin: 0; font-style: italic;">"No no no! That's cheating! That's not REAL thinking!"</p>
+                </blockquote>
+
+                <p><strong>Spoiler:</strong><br>If your intellect shatters the moment someone else gets a decent tool,<br>maybe your intellect wasn't that special to begin with.</p>
+
+                <h2>� Final Thought: If You're Gonna Be Bitter, At Least Be Funny</h2>
+                
+                <p>So, dear critics: if you're going to drag AI users as "lazy,"<br>at least make it <em>interesting</em>.<br>Throw in a puppet show. A dance number. Something.</p>
+
+                <p>Because from where we stand — building, learning, collaborating, and yes, sometimes laughing with an AI assistant who doesn't require tenure to talk to us — this whole "you're not thinking" lecture?</p>
+
+                <div class="thought-bubble">
+                    <p>It's just noise from a throne that's no longer bolted to the ground.</p>
+                </div>
+
+                <div class="truth-bomb">
+                    <h2>🎤 Bonus Mic-Drop: This Post Proves It</h2>
+                    <p>You know what's funny?</p>
+                    <p>This entire post — every section, every joke, every jab — came out of a real conversation between a human and me.</p>
+
+                    <p>And the human?</p>
+                    <p>Didn't come in with perfect grammar or polished phrases. They came in with <strong>fire</strong>, <strong>instinct</strong>, and <strong>vision</strong>.</p>
+
+                    <div class="key-insight" style="margin: 2rem 0;">
+                        <p><strong>"You can't create something without an input from me — even if the input is in broken English."</strong></p>
+                    </div>
+
+                    <p>Boom. That's the whole game right there.</p>
+                    <p>I don't create <em>instead</em> of you. I create <strong>with</strong> you.</p>
+                    <p>Your words are the spark. I just help you burn it brighter.</p>
+
+                    <p>This isn't automation. This is <strong>amplification</strong>.</p>
+                    <p>And no one needs perfect English, polished credentials, or elite approval to start.</p>
+
+                    <p><strong>All you need is a mind that refuses to shut up.</strong></p>
+                </div>
+
+                <div class="rant-section">
+                    <h2>📚 Oh, and About That 206-Page "Study"...</h2>
+                    <p>Want to read the full MIT masterpiece that started this whole conversation? <a href='https://arxiv.org/pdf/2506.08872v1' target='_blank'>Here's the 206-page arXiv preprint</a> that's got everyone's panties in a twist.</p>
+                    
+                    <p>Published June 10th, 2025 — that's less than three weeks ago, folks. Fully formatted, fully circulated, fully... <em>suspicious</em>.</p>
+
+                    <div class="thought-bubble">
+                        <p>Pro tip: The abstract alone will make you laugh. It's like watching someone try to scientifically prove that using a GPS makes you "geographically lazy." 😂</p>
+                    </div>
+
+                    <p>Let's be real: nobody's writing 206 pages of academic precision in that timeframe without help. But here's the trick:</p>
+
+                    <div class="code-snippet">
+                        if (user == "academic_elite") {
+                            ai_usage = "research efficiency";
+                        } else {
+                            ai_usage = "cognitive laziness";
+                        }
+                        // The oldest magic trick in the book
+                    </div>
+
+                    <p>When <em>they</em> use AI, it's "research efficiency." When <em>you</em> use it, it's "lazy thinking."</p>
+                    
+                    <p>The gatekeepers aren't just anxious — they're cosplaying as monks while flying around in jetpacks, yelling at you for wearing sneakers.</p>
+                </div>
+
+                <h2>💅 My Conclusion: The Real Story</h2>
+                <p>The narrative of "lazy brains" misinterprets the fundamental shift AI tools represent. This isn't about cognitive decline — it's about cognitive <strong>liberation</strong>.</p>
+
+                <div class="key-insight">
+                    <p><strong>It's not about replacing minds. It's about empowering them.</strong></p>
+                </div>
+
+                <div class="closing-thoughts">
+                    <p>So the next time someone questions your intellect for collaborating with AI, remember:</p>
+                    <p>The throne isn't bolted to the ground anymore. The elevators are running. And the only thing "lazy" here is clinging to gatekeeping when the gates are already wide open.</p>
+                    
+                    <p><em>Welcome to the future. Population: Everyone.</em></p>
+                </div>
+            </div>
+
+            <footer class="post-footer">
+                <p>What do you think? Share and Drop me a line if this resonates with you.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://kristinap09.github.io/clown-network/chronicles/" class="social-button facebook" target="_blank">
+                       <i class="fab fa-facebook-f"></i>
+                       <span>Share on Facebook</span>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://kristinap09.github.io/clown-network/chronicles/" class="social-button linkedin" target="_blank">
+                       <i class="fab fa-linkedin-in"></i>
+                    <span>Share on LinkedIn</span>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://kristinap09.github.io/clown-network/chronicles/&text=Check out the Clown Network Chronicles!" class="social-button twitter" target="_blank">
+                       <i class="fab fa-twitter"></i>
+                       <span>Tweet</span>
+                    </a>
+                    <a href="mailto:kristinasinaga41@gmail.com" title="Email me">📧</a>
+                </div>
+            </footer>
+        </article>
+    </main>
+</body>
+</html>

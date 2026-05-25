@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standing Alone in a Crowded Society</title>
+
+  <style>
+    :root{
+      --bg0:#070a13;
+      --bg1:#0b1224;
+      --card:#0a1022cc;
+      --border:#1e293b;
+      --text:#e5e7eb;
+      --muted:#9aa6b2;
+      --title:#f8fafc;
+      --accent:#38bdf8;
+      --accent2:#a78bfa;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius: 16px;
+      --max: 980px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(56,189,248,.18), transparent 55%),
+        radial-gradient(900px 600px at 80% 0%, rgba(167,139,250,.14), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      line-height:1.65;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    a:hover{ color:#7dd3fc; }
+    a:focus-visible{
+      outline:2px solid var(--accent);
+      outline-offset:3px;
+      border-radius:8px;
+    }
+
+    .skip-link{
+      position:absolute;
+      top:10px; left:10px;
+      padding:10px 12px;
+      background:#0b1224;
+      border:1px solid var(--border);
+      border-radius:10px;
+      color:var(--text);
+      transform: translateY(-200%);
+      transition: transform .2s ease;
+      z-index:10;
+    }
+    .skip-link:focus{ transform: translateY(0); }
+
+    .shell{
+      max-width: var(--max);
+      margin: 56px auto;
+      padding: 0 18px;
+    }
+
+    .paper{
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(2,6,23,.92), rgba(2,6,23,.75));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: clip;
+    }
+
+    header.hero{
+      padding: 38px 26px 18px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(900px 360px at 10% 20%, rgba(56,189,248,.10), transparent 60%),
+        radial-gradient(700px 280px at 90% 10%, rgba(167,139,250,.10), transparent 55%);
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(56,189,248,.35);
+      background: rgba(56,189,248,.08);
+      color: #cfefff;
+      border-radius: 999px;
+      font-size: .9rem;
+      letter-spacing: .2px;
+    }
+    .dot{
+      width:9px; height:9px;
+      border-radius:50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(56,189,248,.12);
+    }
+
+    h1{
+      margin: 14px 0 8px;
+      font-size: clamp(1.9rem, 1.1rem + 2.2vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--title);
+      letter-spacing: -0.02em;
+    }
+
+    .meta{
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+    }
+    .meta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .meta .pill{
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,.25);
+      background: rgba(148,163,184,.06);
+      color: #cbd5e1;
+      font-size: .9rem;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1fr;
+    }
+
+    nav.toc{
+      padding: 18px 18px 0;
+      border-bottom: 1px solid var(--border);
+      background: rgba(15,23,42,.35);
+    }
+    nav.toc strong{
+      display:block;
+      color: var(--title);
+      font-size: .95rem;
+      margin: 4px 0 10px;
+      letter-spacing:.2px;
+    }
+    .toc ul{
+      list-style:none;
+      margin: 0 0 14px;
+      padding: 0;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .toc a{
+      display:inline-flex;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(30,41,59,.9);
+      background: rgba(2,6,23,.45);
+      color: #dbeafe;
+      text-decoration:none;
+      font-size: .95rem;
+    }
+    .toc a:hover{
+      border-color: rgba(56,189,248,.55);
+      background: rgba(56,189,248,.10);
+    }
+
+    main{
+      padding: 26px;
+    }
+
+    article{
+      max-width: 78ch;
+    }
+
+    h2{
+      margin: 34px 0 10px;
+      font-size: 1.45rem;
+      color: var(--title);
+      letter-spacing: -0.01em;
+    }
+
+    h3{
+      margin: 20px 0 8px;
+      font-size: 1.1rem;
+      color: #e2e8f0;
+    }
+
+    p{
+      margin: 0 0 16px;
+      color: var(--text);
+      font-size: 1.02rem;
+    }
+
+    .lead{
+      font-size: 1.08rem;
+      color: #eaf2ff;
+    }
+
+    .callout{
+      margin: 22px 0;
+      padding: 16px 16px 16px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(56,189,248,.35);
+      background: linear-gradient(180deg, rgba(56,189,248,.10), rgba(56,189,248,.05));
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .callout .bar{
+      width: 5px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--accent), var(--accent2));
+      margin-top: 3px;
+      flex: 0 0 auto;
+      height: calc(100% - 6px);
+    }
+    .callout p{ margin: 0; color:#e6f6ff; }
+    .callout small{ display:block; margin-top:8px; color: var(--muted); }
+
+    .divider{
+      margin: 28px 0 10px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(148,163,184,.28), transparent);
+    }
+
+    footer.note{
+      margin-top: 34px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* desktop enhancement: sticky TOC */
+    @media (min-width: 980px){
+      .layout{
+        grid-template-columns: 280px 1fr;
+      }
+      nav.toc{
+        border-bottom: 0;
+        border-right: 1px solid var(--border);
+        padding: 18px;
+        position: sticky;
+        top: 18px;
+        align-self: start;
+        height: fit-content;
+        border-top-left-radius: var(--radius);
+        border-bottom-left-radius: var(--radius);
+      }
+      .toc ul{
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 0;
+      }
+      .toc a{
+        border-radius: 12px;
+        justify-content: space-between;
+      }
+      main{
+        padding: 28px 34px;
+      }
+    }
+
+    @media print{
+      body{ background:#fff; color:#000; }
+      .paper{ box-shadow:none; border: 1px solid #ddd; background:#fff; }
+      nav.toc{ display:none; }
+      a{ color:#000; text-decoration: underline; }
+    }
+
+  p{
+    margin: 0 0 16px;
+    color:var(--text);
+    font-size: 1.02rem;
+
+    /* paragraph alignment */
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  /* optional: keep the lead paragraph left-aligned (remove if you want it justified too) */
+  .lead{
+    text-align: left;
+  }  
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="shell">
+    <div class="paper">
+      <header class="hero">
+        <div class="kicker"><span class="dot"></span> Opinion / Personal essay</div>
+        <h1>Standing Alone in a Crowded Society</h1>
+        <p class="meta">
+          <span class="pill">Long-form</span>
+          <span class="pill">Accountability & culture</span>
+          <span class="pill">Reflection</span>
+        </p>
+      </header>
+
+      <div class="layout">
+        <nav class="toc" aria-label="Table of contents">
+          <strong>On this page</strong>
+          <ul>
+            <li><a href="#context">Context</a></li>
+            <li><a href="#decline">When Society Glorifies Decline</a></li>
+            <li><a href="#consequences">Consequences</a></li>
+            <li><a href="#system">To the System</a></li>
+            <li><a href="#commentary">Personal Commentary</a></li>
+          </ul>
+        </nav>
+
+        <main id="content">
+          <article>
+            <!-- INTRO (synchronized and tightened) -->
+            <section id="context" aria-label="Context">
+              <p class="lead">
+                A minor incident revealed a much larger issue—one that reflects a pattern of complacency,
+                misplaced priorities, and avoidance of responsibility.
+              </p>
+
+              <p>
+                When questionable behavior becomes normalized, society pays the price. Laws exist, yet
+                enforcement often feels selective. The result is erosion of trust.
+              </p>
+
+              <div class="callout" role="note" aria-label="Key takeaway">
+                <div class="bar" aria-hidden="true"></div>
+                <div>
+                  <p>
+                    I don’t need to raise my voice, threaten, or retaliate. Writing is enough.
+                    Accountability begins with exposure and truth.
+                  </p>
+                  <small>Key takeaway: critique is most useful when it stays concrete and evidence-based.</small>
+                </div>
+              </div>
+
+              <p>
+                Many people fear independent thought. Conformity is safer. But progress has never come
+                from silence or obedience.
+              </p>
+
+              <p>
+                This is not about ego—it is about refusing to accept a status quo that harms communities.
+                When accountability disappears, silence becomes permission—and I’m not interested in granting it.
+              </p>
+
+              <div class="divider" aria-hidden="true"></div>
+            </section>
+
+            <!-- SECTION 1 -->
+            <section id="decline">
+              <h2>When Society Glorifies Decline</h2>
+
+              <p>
+                There are moments when a single experience crystallizes everything that feels wrong about a place.
+                Finding out that a neighbor is involved in drug dealing isn’t just a personal shock; it becomes a
+                metaphor for a wider decay in values, systems, and responsibility. It forces me to ask a difficult
+                question: when did society stop striving for improvement and start tolerating—or even glorifying—decline?
+              </p>
+
+              <h3>A City Numb to Wrongdoing</h3>
+              <p>
+                Living in a city where drug dealing has almost become a normal part of daily life changes the way
+                you view your surroundings. What should be a simple neighborhood interaction is instead a reminder
+                that illegal activities are embedded in the fabric of society. Even something as straightforward as
+                receiving a CCTV delivery can be clouded by suspicion and confusion, further eroding trust.
+              </p>
+              <p>
+                In such an environment, it can feel like everyone is either complicit, indifferent, or too worn down
+                to care. The dangerous mindset becomes: “This is just how things are.” And that acceptance of the
+                unacceptable? It’s what really allows wrongdoing to thrive.
+              </p>
+
+              <h3>A System That Fails Its People</h3>
+              <p>
+                Frustration with individuals often leads to frustration with institutions. When laws are inconsistently
+                enforced, or when it becomes clear that those who should be upholding the law may be involved in the
+                very issues they are meant to combat, it creates a sense of disillusionment. Why bother doing things
+                the “right” way when so much happens in the shadows?
+              </p>
+              <p>
+                Religion, which should ideally serve as a moral compass, is sometimes hijacked to justify unethical
+                behavior. When sacred words are twisted to cover up corruption, it doesn’t just break the rules—it
+                breaks the trust that binds society together. This contradiction only deepens the sense of living in
+                a society that has lost its moral center.
+              </p>
+
+              <p>
+                Think of the developed countries as examples of what strong institutions can achieve. They maintain order,
+                enforce laws fairly, and provide a framework where individuals can thrive without resorting to unethical means.
+                When institutions are weak or compromised, the entire social fabric begins to fray, leading to widespread distrust 
+                and instability. You think they reach that robust state overnight? No, it takes consistent effort, transparency, and accountability over time.
+                Mistakes are corrected, and systems are improved to prevent future failures. This is the opposite of what happens when corruption is ignored or excused. Honesty and integrity are not just ideals; they are practical necessities for a society to function effectively.
+              </p>
+
+              <p>
+                That's why strong institutions matter. They are the backbone of a functioning society, ensuring that rules are applied fairly and that individuals can rely on systems to protect their rights and interests. Not the other way around. 
+              </p>
+
+              <h3>The Burden on Parents and the Myth of Adulthood</h3>
+              <p>
+                Another sign of societal dysfunction is how responsibility is handled within families. It’s increasingly
+                common for adults in their thirties to still rely on their parents to manage their personal problems.
+                This isn’t just a quirky family dynamic; it’s a broader reflection of delayed maturity and avoidance of
+                accountability.
+              </p>
+              <p>
+                Rather than allowing elderly parents to enjoy their hard-earned retirement, society often expects them to
+                step in as problem-solvers for their grown children. Whether it’s mediating conflicts or fixing problems,
+                the underlying message is clear: responsibility can be outsourced to the previous generation. It sends a
+                troubling signal that adulthood doesn’t necessarily mean independence.
+              </p>
+              <p>
+                This dynamic places undue stress on older adults and perpetuates a cycle in which younger generations fail to develop the skills and resilience necessary to independently navigate life's challenges. When adulthood is redefined as perpetual dependence, the concepts of personal growth and responsibility become meaningless. To change this broken norm and dysfunctional culture, hold people accountable for their actions and decisions. Not just the kids, but the parents too. 
+              </p>
+
+              <h3>A Culture at a Crossroads</h3>
+              <p>
+                All of these issues—normalizing illegal activities, misusing religion, weak institutions, and the failure
+                to transition into adulthood—lead to one uncomfortable conclusion: society is standing at a crossroads.
+                We are at a point where we must choose between growth and decay. When irresponsibility and avoidance have
+                been the norm for so long, questioning them can get you labeled as “crazy” or “difficult.”
+              </p>
+              <p>
+                But criticism isn’t an attack on society; it’s a desire to see it improve. The real tragedy isn’t that
+                problems exist, but that they continue to repeat themselves, defended and passed down as if nothing better
+                is possible. True progress requires breaking these cycles and building something stronger.
+              </p>
+              <p>
+                The question remains: will we choose to confront these issues head-on, or will we continue down a path
+                of complacency and decline? The answer will define not just the present, but the future of our communities
+                and societies at large. Stop tolerating and continuing the cycle of irresponsibility. It's not funny anymore. It's just sad and pathetic.
+              </p>
+
+              <div class="divider" aria-hidden="true"></div>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section id="consequences">
+              <h2>Consequences of Celebrating Irresponsibility</h2>
+
+              <p>
+                When a society begins to accept and even celebrate irresponsibility, the consequences ripple through every
+                aspect of life. It creates an environment where trust is eroded, accountability is scarce, and progress
+                stalls. The normalization of such behavior leads to a culture where individuals feel empowered to shirk
+                their duties, knowing that others will pick up the slack or that their actions will go unchallenged.
+              </p>
+
+              <p>
+                Knowledge was once a prized currency, and intellect was synonymous with progress. Today, however, we face a
+                different reality. Ignorance is not just a lack of knowledge; it is the absence of a desire for it. When
+                ignorance becomes the norm, society stagnates or even regresses. Without innovative and critical thinkers,
+                industries decline and the collective potential of a society diminishes. I'll give you one simple example that happened to me recently. We got christmast/new year parcels from a Bank. Inside the parcel, there were some snacks with great and nice packaging. My expectation was the snacks weight around 1 KG each. But when I opened it, the weights was not even close to 100 grams. I felt cheated and disappointed. It made me think, if a big bank can do this kind of cheap marketing stunt, what else are they hiding? This is just one example of how ignorance and deception can lead to a loss of trust in institutions that are supposed to serve the public good. 
+              </p>
+
+              <p>
+                As observed in discussions regarding
+                <a href="https://www.sergioaoun.com/the-death-of-intelligence-modern-societys-celebration-of-stupidity/" target="_blank" rel="noopener noreferrer">
+                  The Death of Intelligence &amp; Modern Society’s Celebration of Stupidity
+                </a>,
+                the pursuit of innovation and discovery has largely given way to the pursuit of convenience and instant
+                gratification. Education has shifted from fostering independent thought to producing conformity.
+              </p>
+
+              <p>
+                Stupidity isn’t just tolerated; it’s commercialized. Reality TV, clickbait, and meaningless social media
+                challenges now dominate public consciousness. The celebration of ignorance has led to a society where
+                superficiality is prized over substance, and where the loudest voices often drown out the most thoughtful ones.
+              </p>
+
+              <div class="divider" aria-hidden="true"></div>
+            </section>
+
+            <!-- BONUS SECTION -->
+            <section id="system">
+              <h2>To the System That Fails Its People</h2>
+
+              <p>
+                To those in positions of authority who turn a blind eye to wrongdoing: your inaction speaks volumes. By failing
+                to enforce laws and uphold ethical standards, you contribute to a culture of impunity. This isn’t just about
+                individual misdeeds; it’s about the systemic issues that allow such behavior to flourish unchecked. Your
+                reluctance to address these problems head-on only perpetuates the cycle of irresponsibility and decay. It’s
+                time to recognize that true leadership involves accountability, transparency, and a commitment to the greater
+                good—not just maintaining the status quo. That's when the culture is embaracing of hiring people based on
+                relatives, connections, and money rather than merit and qualifications.
+              </p>
+
+              <p>
+                If you continue to ignore these issues, you will find that the best and brightest will seek opportunities elsewhere,
+                leaving behind a society that is increasingly defined by its failures. The cost of inaction is too high, and the time
+                for change is now. Other countries and cities are watching, and they will not hesitate to learn from your mistakes.
+                The world is moving forward, and those who refuse to adapt will be left behind.
+              </p>
+
+              <p>
+                Performing is less than doing. The appearance of action is not the same as actual progress. Thus, stop pretending to
+                care when you clearly do not. If you can't maintain your duties in a right and proper manner, then step aside and let
+                someone else take over who can. If you like real progress. Not the fake kind.
+              </p>
+
+              <div class="divider" aria-hidden="true"></div>
+            </section>
+
+            <!-- SECTION 4 (reframed + better structure) -->
+            <section id="commentary">
+              <h2>Personal Commentary: Standing Apart, Speaking Out</h2>
+
+              <p class="lead">
+              Writing is how I process conflict without escalating it. I don't scream or threaten; I document and expose. Accountability starts with truth. An elegant solution to wrongdoing is transparency, not retaliation. 
+              </p>
+
+              <h3>Why I’m Writing This</h3>
+              <p>
+              Criticism rooted in observation isn’t about superiority; it’s about refusing to normalize behavior that harms
+              communities. When accountability disappears, silence becomes permission—and I’m not interested in granting it.
+              </p>
+
+              <div class="callout" role="note" aria-label="Personal standards">
+              <div class="bar" aria-hidden="true"></div>
+              <div>
+                <p>
+                I choose clarity over chaos: document what happens, name the impact, and insist on responsibility—without
+                threats, insults, or performative outrage.
+                </p>
+                <small>Standard: stay specific, stay fair, and keep the focus on actions and consequences.</small>
+              </div>
+              </div>
+
+              <h3>Living Outside the Herd</h3>
+              <p>
+              In places where conformity is treated as safety, independent thinking is often mistaken for arrogance. But the
+              ability to question “how things are” is the only way “how things are” ever improves.
+              </p>
+
+              <p>
+              I’ve learned that being underestimated is common—until results are visible. The constant curiosity about other
+              people’s private lives is distracting at best and corrosive at worst. I’d rather spend energy building skills,
+              relationships, and work that hold up anywhere.
+              </p>
+
+              <div class="callout" role="note" aria-label="Boundaries and accountability">
+              <div class="bar" aria-hidden="true"></div>
+              <div>
+                <p>
+                Boundaries matter. If someone crosses a line, my response is to record, report, and speak with evidence—not to
+                escalate. Accountability should be institutional, not personal.
+                </p>
+                <small>Principle: address problems through proper channels and transparent documentation.</small>
+              </div>
+              </div>
+
+              <h3>Questions for the Reader</h3>
+              <p>
+              What do you think would make responsibility the default again—at home, at work, and in public institutions?
+              </p>
+
+              <details>
+              <summary>Discussion prompts</summary>
+              <ul>
+                <li>What should fair enforcement look like in everyday neighborhood disputes?</li>
+                <li>How do we discourage “connections over competence” without punishing the innocent?</li>
+                <li>Where should the line be between community awareness and invasive gossip?</li>
+                <li>What does healthy accountability look like for adults and families?</li>
+              </ul>
+              </details>
+
+              <footer class="note">
+                Opinion piece — Views expressed are solely my own.
+              </footer>
+            </section>
+          </article>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

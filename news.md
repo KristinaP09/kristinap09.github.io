@@ -1,31 +1,65 @@
 ---
-layout: page
+layout: default
 title: News
-permalink: /news/
+---
+
+# News
+
+## <span style="color: blue;">[Update] New Blog Post</span>
+
+
+I said coding would become accessible to everyone — no CS degree required — and now the world is catching up.  
+My latest post dives into the rise of GitHub Copilot, the fall of gatekeeping, and the comedic beauty of watching the tech world panic.  
+Read it here: [Copilot Chaos](./clown-network/chronicles/2025-4-29-copilot-chaos.html)
 
 ---
 
----
 
-## <span style="color: #2FC10B;">[Update]</span>
----
 
-**<span style="color: red;">Notice:</span>** 
 
-1. My <code style="color : red">old personal webpages</code>, hosted via two forgotten and inaccessible GitHub accounts, <code style="color : magenta">are still viewable</code> [here](https://patternkps.github.io) and [here](https://kpnaga08.github.io/about/). For my latest work and updates, please continue browsing this new site.
+### <span style="color: red;">Notice</span>
 
-2. My old Yahoo account (<code style="color : red">kristinasinaga57@yahoo.co.id</code>) and Gmail account (<code style="color : red">krist.p.sinaga@gmail.com</code>) are <code style="color : Fuchsia">officially retired</code> -- I forgot my passwords, and apparently, I'm too suspicious to prove I'm me 😉.
+1. My <code style="color : red">old personal webpages</code>—created long ago under two now-lost GitHub accounts—<code style="color : magenta">are still viewable</code>:
+   - [patternkps.github.io](https://patternkps.github.io)
+   - [kpnaga08.github.io/about](https://kpnaga08.github.io/about)
+
+   But for everything current, shiny, and accurate, you’re already in the right place—this new site!
+
+2. The following email accounts are now <code style="color : Fuchsia">officially retired</code>:
+   - Yahoo: <code style="color: red;">kristinasinaga57@yahoo.co.id</code>  
+   - Gmail: <code style="color: red;">krist.p.sinaga@gmail.com</code>
+   - Gmail: <code style="color: red;">kristinasinaga41@gmail.com</code>
+
+
+   I forgot the passwords (yes, three of it), and apparently I failed the “prove you’re not an impostor” tests. So long, legacy inboxes!
 
 ---
 
 ## <span style="color: #2FC10B;">Exciting News: New Publication in IEEE TPAMI!</span>
+
 ---
 
-I am delighted to share my latest research, <span style="color: red;">"Federated Multi-View K-Means Clustering,"</span> recently published in the prestigious journal <span style="color: #1E7509;">[IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2025](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)</span>.
+<p align="justify">
+I’m absolutely thrilled to announce that my latest research paper,  
+<span style="color: red;"><strong>“Federated Multi-View K-Means Clustering”</strong></span>,  
+was recently published in the prestigious  
+<a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34" style="color: #1E7509;"><strong>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2025</strong></a>.
 
-This paper introduces an innovative federated multi-view clustering algorithm designed to enhance scalable, decentralized AI applications. Our method effectively handles diverse and distributed data sources, addressing critical challenges such as privacy, computational efficiency, and robustness.
+This work introduces a federated clustering framework tailored for multi-view, decentralized environments—where privacy matters, communication is limited, and chaos thrives. It bridges theory and practice in a beautifully noisy world.
 
-I am particularly proud of this work as it is significantly advances federated learning and clustering techniques, opening new avenues for trustworthy AI in cyber-physical systems and edge computing.
+A simplified blog post is in the works—because yes, you deserve an explanation that doesn’t sound like a conference talk at 8 a.m.
+</p>
 
+---
 
-Read more about the paper <span style="color: #B31E9A;">[here](https://ieeexplore.ieee.org/abstract/document/10810504)
+## <span style="color: #2FC10B;">What’s Next?</span>
+
+---
+
+<p align="justify">
+This page will serve as an evolving space for sharing major updates, surprising collaborations, small victories, and a sprinkle of rants (maybe). Expect a mix of academic milestones, research projects, and the occasional sarcastic commentary on the madness of tech life.
+</p>
+
+Stay tuned—and if you’re curious about my publications,  
+you can always visit my <a href="https://scholar.google.com/citations?user=yNWQLYAAAAAJ&hl=en&oi=ao" style="color: #8A2BE2;"><strong>Google Scholar</strong></a> profile.
+
